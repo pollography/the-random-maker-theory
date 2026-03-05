@@ -1,9 +1,4 @@
-<!-- The Random Maker Theory — Card Component (Svelte 5)
-     Versatile container with multiple variants
-     Usage:
-       <Card variant="default">Content</Card>
-       <Card variant="interactive" href="/post">Clickable</Card>
--->
+<!-- The Random Maker Theory — Card Component (Svelte 5) -->
 
 <script>
 	let {
@@ -13,28 +8,46 @@
 		children,
 		onclick,
 	} = $props();
-
-	let variantClass = $derived(`card card-${variant} rounded-lg border border-border shadow-card backdrop-blur-sm p-4 transition-all duration-normal hover:shadow-elevated ${className}`);
 </script>
 
-<!-- svelte-ignore a11y_no_interactive_element_to_noninteractive_role -->
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 {#if href}
-	<a {href} class={variantClass} {onclick}>
+	<a {href} class="card {variant === 'interactive' ? 'interactive' : ''} {className}" {onclick}>
 		{@render children?.()}
 	</a>
 {:else}
-	<div class={variantClass} {onclick}>
+	<div class="card {className}" {onclick}>
 		{@render children?.()}
 	</div>
 {/if}
 
 <style>
-	/* Card styles inherit from tokens */
-	:global(.card) {
+	.card {
 		background-color: var(--card-bg);
-		border: var(--card-border);
+		border: 1px solid var(--color-border);
 		border-radius: var(--card-radius);
+		box-shadow: var(--shadow-card);
+		padding: 24px;
+		transition: all var(--transition-normal);
+		text-decoration: none;
+		display: block;
+		color: inherit;
+	}
+
+	.card.interactive:hover {
+		transform: translateY(-2px);
+		box-shadow: var(--shadow-elevated);
+		border-color: var(--color-accent-honey-subtle);
+	}
+
+	:global([data-theme='light']) .card {
+		background: var(--gradient-card-bg);
+		border: none;
+		box-shadow: var(--shadow-neo-sm);
+		backdrop-filter: blur(20px);
+	}
+
+	:global([data-theme='light']) .card.interactive:hover {
+		box-shadow: var(--shadow-neo);
+		transform: translateY(-2px);
 	}
 </style>
