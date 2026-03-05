@@ -1,0 +1,418 @@
+/**
+ * Life OS Design System - CSS Design Tokens
+ * ==========================================
+ *
+ * Two themes: Dark (Deep Honey + Full Cinematic Gradient) & Light (Warm Neomorphism)
+ * Default: Dark theme
+ *
+ * Import fonts (add to HTML <head>):
+ * @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+ */
+
+/* ============================================================================
+   ROOT (DEFAULT: DARK THEME)
+   ========================================================================== */
+
+:root {
+  /* DARK THEME - Colors */
+  --color-bg: #0b0b0b;
+  --color-surface: #1a1a1a;
+  --color-surface-raised: #222220;
+  --color-border: #2a2520;
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-text: #ede8e0;
+  --color-text-muted: #7a7268;
+  --color-text-dim: #5a5348;
+
+  /* Accent Colors - Honey (70% of accent usage) */
+  --color-accent-honey: #d4893e;
+  --color-accent-honey-hover: #e0a55a;
+  --color-accent-honey-glow: rgba(212, 137, 62, 0.35);
+  --color-accent-honey-subtle: rgba(212, 137, 62, 0.14);
+
+  /* Accent Colors - Teal (30% of accent usage) */
+  --color-accent-teal: #3ab0a2;
+  --color-accent-teal-hover: #5cc4b8;
+  --color-accent-teal-glow: rgba(58, 176, 162, 0.35);
+  --color-accent-teal-subtle: rgba(58, 176, 162, 0.12);
+
+  /* Semantic Colors */
+  --color-danger: #ff6b6b;
+  --color-danger-subtle: rgba(255, 70, 70, 0.12);
+  --color-success: #3ab0a2;
+  --color-warning: #d4893e;
+
+  /* Text on Accent Backgrounds */
+  --color-on-accent: #111111;
+
+  /* DARK THEME - Shadows */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow-honey: 0 0 12px rgba(212, 137, 62, 0.2);
+  --shadow-glow-teal: 0 0 12px rgba(58, 176, 162, 0.2);
+
+  /* DARK THEME - Card */
+  --card-bg: #1a1a1a;
+  --card-border: 1px solid #2a2520;
+  --card-radius: 12px;
+
+  /* DARK THEME - Inputs */
+  --input-bg: #1a1a1a;
+  --input-border: 1px solid #2a2520;
+  --input-focus-border: #d4893e;
+  --input-focus-ring: 0 0 0 2px rgba(212, 137, 62, 0.15);
+
+  /* DARK THEME - Gradient Background (Full Cinematic) */
+  --gradient-bg: radial-gradient(
+      ellipse at 82% 8%,
+      rgba(228, 150, 60, 0.22) 0%,
+      transparent 42%
+    ),
+    radial-gradient(
+      ellipse at 8% 92%,
+      rgba(58, 180, 168, 0.18) 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 50% 40%,
+      rgba(180, 120, 50, 0.04) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 30% 20%,
+      rgba(58, 176, 162, 0.06) 0%,
+      transparent 50%
+    );
+
+  /* DARK THEME - Grain Texture */
+  --grain-opacity: 0.4;
+  --grain-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+
+  /* SHARED - Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Montserrat', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font Sizes */
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+  --font-size-4xl: 48px;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line Heights */
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.65;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.03em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.06em;
+  --letter-spacing-wider: 0.12em;
+
+  /* SHARED - Spacing (8px base grid) */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 56px;
+  --space-11: 64px;
+  --space-12: 80px;
+  --space-16: 128px;
+
+  /* SHARED - Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-full: 99px;
+
+  /* SHARED - Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* SHARED - Z-index Scale */
+  --z-base: 0;
+  --z-card: 1;
+  --z-dropdown: 10;
+  --z-sticky: 50;
+  --z-overlay: 100;
+  --z-modal: 200;
+  --z-toast: 300;
+
+  /* SHARED - Bento Grid */
+  --bento-columns: 4;
+  --bento-gap: 12px;
+  --bento-gap-mobile: 10px;
+}
+
+/* ============================================================================
+   LIGHT THEME (Warm Neomorphism)
+   ========================================================================== */
+
+[data-theme='light'] {
+  /* LIGHT THEME - Colors (Film Noir Light / Variant C) */
+  --color-bg: #E2D8C6;
+  --color-surface: rgba(230, 222, 208, 0.75);
+  --color-surface-raised: rgba(235, 228, 215, 0.85);
+  --color-border: transparent;
+  --color-border-subtle: rgba(0, 0, 0, 0.04);
+  --color-text: #2d2a26;
+  --color-text-muted: #6b635b;
+  --color-text-dim: #8a8078;
+
+  /* Accent Colors - Honey (70% of accent usage) */
+  --color-accent-honey: #c4854c;
+  --color-accent-honey-hover: #d4a06a;
+  --color-accent-honey-glow: rgba(196, 133, 76, 0.25);
+  --color-accent-honey-subtle: rgba(196, 133, 76, 0.08);
+
+  /* Accent Colors - Teal (30% of accent usage) */
+  --color-accent-teal: #4a9b90;
+  --color-accent-teal-hover: #6bb5aa;
+  --color-accent-teal-glow: rgba(74, 155, 144, 0.25);
+  --color-accent-teal-subtle: rgba(74, 155, 144, 0.08);
+
+  /* Semantic Colors */
+  --color-danger: #c85038;
+  --color-danger-subtle: rgba(200, 80, 60, 0.08);
+  --color-success: #4a9b90;
+  --color-warning: #c4854c;
+
+  /* Text on Accent Backgrounds (ALWAYS dark for light theme) */
+  --color-on-accent: #2d2a26;
+
+  /* LIGHT THEME - Neomorphic Shadows (Film Noir Light) */
+  --shadow-neo: 8px 8px 18px rgba(160,145,125,0.6), -5px -5px 12px rgba(245,238,225,0.7);
+  --shadow-neo-sm: 6px 6px 12px rgba(160,145,125,0.4), -4px -4px 8px rgba(245,238,225,0.5);
+  --shadow-neo-inset: inset 3px 3px 6px rgba(160,145,125,0.4), inset -3px -3px 6px rgba(245,238,225,0.5);
+  --shadow-card: 8px 8px 18px rgba(160,145,125,0.6), -5px -5px 12px rgba(245,238,225,0.7);
+  --shadow-elevated: 10px 10px 24px rgba(160,145,125,0.7), -7px -7px 16px rgba(245,238,225,0.8);
+
+  /* LIGHT THEME - Card (Film Noir Light: glassmorphism) */
+  --card-bg: rgba(230, 222, 208, 0.75);
+  --card-border: none;
+  --card-backdrop: blur(20px);
+  --card-radius: 16px;
+
+  /* LIGHT THEME - Inputs */
+  --input-bg: rgba(230, 222, 208, 0.75);
+  --input-border: none;
+  --input-shadow: inset 3px 3px 6px #cfc7ba, inset -3px -3px 6px #f5eddf;
+  --input-focus-ring: inset 3px 3px 6px #cfc7ba, inset -3px -3px 6px #f5eddf,
+    0 0 0 2px rgba(196, 133, 76, 0.25);
+
+  /* LIGHT THEME - Gradient Background (Film Noir Light) */
+  --gradient-bg: radial-gradient(
+      ellipse 1300px 650px at 88% 18%,
+      rgba(235, 132, 46, 0.45) 0%,
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse 1100px 850px at 8% 88%,
+      rgba(74, 155, 144, 0.35) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 900px 700px at 50% 25%,
+      rgba(220, 140, 60, 0.12) 0%,
+      transparent 65%
+    );
+  --gradient-card-bg: rgba(230, 222, 208, 0.75);
+  --gradient-card-shadow: 8px 8px 18px rgba(160, 145, 125, 0.6),
+    -5px -5px 12px rgba(245, 238, 225, 0.7);
+
+  /* LIGHT THEME - Grain Texture (Film Noir Light: heavy grain) */
+  --grain-opacity: 0.65;
+
+  /* LIGHT THEME - Bento Grid (wider gap for neomorphism breathing room) */
+  --bento-gap: 20px;
+}
+
+/* ============================================================================
+   UTILITY CLASSES & BASE STYLES (Optional, for quick reference)
+   ========================================================================== */
+
+/* Grain texture overlay mixin - apply to backgrounds */
+.has-grain::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--grain-image);
+  background-size: 256px 256px;
+  opacity: var(--grain-opacity);
+  pointer-events: none;
+  z-index: var(--z-base);
+}
+
+/* Card styling helper - dark theme */
+.card {
+  background-color: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-card);
+}
+
+/* Input styling helper - dark theme */
+.input {
+  background-color: var(--input-bg);
+  border: var(--input-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  padding: var(--space-3) var(--space-4);
+  transition: border-color var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--input-focus-border);
+  box-shadow: var(--input-focus-ring);
+}
+
+/* Light theme input (neomorphic) */
+[data-theme='light'] .input {
+  box-shadow: var(--input-shadow);
+}
+
+[data-theme='light'] .input:focus {
+  box-shadow: var(--input-focus-ring);
+}
+
+/* Button helper - honey accent */
+.btn-primary {
+  background-color: var(--color-accent-honey);
+  color: var(--color-on-accent);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  transition: background-color var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-honey-hover);
+  box-shadow: var(--shadow-glow-honey);
+}
+
+/* Button helper - teal accent */
+.btn-secondary {
+  background-color: var(--color-accent-teal);
+  color: var(--color-on-accent);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  transition: background-color var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent-teal-hover);
+  box-shadow: var(--shadow-glow-teal);
+}
+
+/* Text hierarchy helpers */
+.text-xs {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-tight);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-snug);
+}
+
+.text-base {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-2xl {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-3xl {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-4xl {
+  font-size: var(--font-size-4xl);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Text color helpers */
+.text-primary {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-dim {
+  color: var(--color-text-dim);
+}
+
+/* Bento grid helper */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--bento-columns), 1fr);
+  gap: var(--bento-gap);
+}
+
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--bento-gap-mobile);
+  }
+}
+
+@media (max-width: 480px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: var(--bento-gap-mobile);
+  }
+}
