@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCP & NotebookLM: Das Power-Duo — The Random Maker Theory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS — Dark Theme (Default)
+   ============================================================ */
+:root {
+  --color-bg: #0b0b0b;
+  --color-surface: #1a1a1a;
+  --color-surface-raised: #222220;
+  --color-border: #2a2520;
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-text: #ede8e0;
+  --color-text-muted: #7a7268;
+  --color-text-dim: #5a5348;
+  --color-accent-honey: #d4893e;
+  --color-accent-honey-hover: #e0a55a;
+  --color-accent-honey-glow: rgba(212, 137, 62, 0.35);
+  --color-accent-honey-subtle: rgba(212, 137, 62, 0.14);
+  --color-accent-teal: #3ab0a2;
+  --color-accent-teal-hover: #5cc4b8;
+  --color-accent-teal-glow: rgba(58, 176, 162, 0.35);
+  --color-accent-teal-subtle: rgba(58, 176, 162, 0.12);
+  --color-danger: #ff6b6b;
+  --color-on-accent: #111111;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.35);
+  --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow-honey: 0 0 20px rgba(212, 137, 62, 0.25);
+  --card-bg: #1a1a1a;
+  --card-border: 1px solid #2a2520;
+  --card-radius: 12px;
+  --gradient-bg: radial-gradient(ellipse at 82% 8%, rgba(228, 150, 60, 0.22) 0%, transparent 42%),
+    radial-gradient(ellipse at 8% 92%, rgba(58, 180, 168, 0.18) 0%, transparent 38%),
+    radial-gradient(ellipse at 50% 40%, rgba(180, 120, 50, 0.04) 0%, transparent 60%);
+  --grain-opacity: 0.4;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Montserrat', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ============================================================
+   LIGHT THEME
+   ============================================================ */
+[data-theme='light'] {
+  --color-bg: #E2D8C6;
+  --color-surface: rgba(230, 222, 208, 0.75);
+  --color-surface-raised: rgba(235, 228, 215, 0.85);
+  --color-border: transparent;
+  --color-border-subtle: rgba(0, 0, 0, 0.04);
+  --color-text: #2d2a26;
+  --color-text-muted: #6b635b;
+  --color-text-dim: #8a8078;
+  --color-accent-honey: #c4854c;
+  --color-accent-honey-hover: #d4a06a;
+  --color-accent-honey-glow: rgba(196, 133, 76, 0.25);
+  --color-accent-honey-subtle: rgba(196, 133, 76, 0.08);
+  --color-accent-teal: #4a9b90;
+  --color-accent-teal-hover: #6bb5aa;
+  --color-accent-teal-glow: rgba(74, 155, 144, 0.25);
+  --color-accent-teal-subtle: rgba(74, 155, 144, 0.08);
+  --color-on-accent: #2d2a26;
+  --shadow-card: 8px 8px 18px rgba(160,145,125,0.6), -5px -5px 12px rgba(245,238,225,0.7);
+  --shadow-elevated: 10px 10px 24px rgba(160,145,125,0.7), -7px -7px 16px rgba(245,238,225,0.8);
+  --shadow-glow-honey: 0 0 20px rgba(196, 133, 76, 0.3);
+  --card-bg: rgba(230, 222, 208, 0.75);
+  --card-border: none;
+  --card-radius: 16px;
+  --gradient-bg: radial-gradient(ellipse 1300px 650px at 88% 18%, rgba(235, 132, 46, 0.45) 0%, transparent 45%),
+    radial-gradient(ellipse 1100px 850px at 8% 88%, rgba(74, 155, 144, 0.35) 0%, transparent 55%),
+    radial-gradient(ellipse 900px 700px at 50% 25%, rgba(220, 140, 60, 0.12) 0%, transparent 65%);
+  --grain-opacity: 0.55;
+}
+
+/* ============================================================
+   BASE RESET
+   ============================================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.65;
+  font-size: 16px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* ============================================================
+   GRADIENT BACKGROUND + GRAIN OVERLAY
+   ============================================================ */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: var(--gradient-bg);
+  z-index: 0;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  opacity: var(--grain-opacity);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Everything on top of grain */
+.page-wrapper { position: relative; z-index: 2; }
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(11, 11, 11, 0.7);
+  border-bottom: 1px solid var(--color-border-subtle);
+  transition: background 0.3s ease;
+}
+[data-theme='light'] .site-header {
+  background: rgba(226, 216, 198, 0.7);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--color-text);
+  text-decoration: none;
+  letter-spacing: -0.03em;
+}
+.logo-sub {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-accent-honey);
+  margin-left: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+.nav-links a:hover { color: var(--color-accent-honey); }
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.25s ease;
+  line-height: 1;
+}
+.theme-toggle:hover { background: var(--color-surface-raised); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 24px 48px;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--color-accent-honey-subtle);
+  color: var(--color-accent-honey);
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--color-text-muted);
+  max-width: 640px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 13px;
+  color: var(--color-text-dim);
+}
+.hero-meta-divider { color: var(--color-border); }
+
+/* ============================================================
+   ARTICLE CONTENT
+   ============================================================ */
+.article-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.article-content h2 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 56px 0 20px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.article-content h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 40px 0 16px;
+  letter-spacing: -0.01em;
+}
+
+.article-content p {
+  margin-bottom: 20px;
+  color: var(--color-text);
+  opacity: 0.88;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.article-content strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.article-content a {
+  color: var(--color-accent-honey);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-honey-subtle);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.25s;
+}
+.article-content a:hover {
+  text-decoration-color: var(--color-accent-honey);
+}
+
+.article-content ul, .article-content ol {
+  margin: 0 0 24px 24px;
+  color: var(--color-text);
+  opacity: 0.88;
+}
+.article-content li {
+  margin-bottom: 10px;
+  line-height: 1.65;
+}
+
+.article-content hr {
+  border: none;
+  height: 1px;
+  background: var(--color-border);
+  margin: 48px 0;
+}
+
+/* CODE BLOCKS */
+.article-content pre {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+  padding: 20px 24px;
+  overflow-x: auto;
+  margin: 24px 0;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+[data-theme='light'] .article-content pre {
+  background: rgba(230, 222, 208, 0.6);
+  border: none;
+  box-shadow: inset 3px 3px 6px rgba(160,145,125,0.3), inset -3px -3px 6px rgba(245,238,225,0.4);
+}
+
+.article-content code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--color-accent-honey-subtle);
+  color: var(--color-accent-honey);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.article-content pre code {
+  background: none;
+  color: var(--color-text);
+  padding: 0;
+}
+
+/* BLOCKQUOTE */
+.article-content blockquote {
+  border-left: 3px solid var(--color-accent-honey);
+  padding: 16px 20px;
+  margin: 24px 0;
+  background: var(--color-accent-honey-subtle);
+  border-radius: 0 var(--card-radius) var(--card-radius) 0;
+  font-size: 14px;
+}
+.article-content blockquote p { margin-bottom: 8px; }
+.article-content blockquote p:last-child { margin-bottom: 0; }
+
+/* TABLE */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 24px 0;
+  border-radius: var(--card-radius);
+  border: 1px solid var(--color-border);
+}
+[data-theme='light'] .table-wrapper {
+  border: none;
+  box-shadow: var(--shadow-card);
+}
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.article-content thead {
+  background: var(--color-surface-raised);
+}
+.article-content th {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-honey);
+  border-bottom: 2px solid var(--color-border);
+}
+.article-content td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  color: var(--color-text);
+  opacity: 0.88;
+}
+.article-content tbody tr:hover {
+  background: var(--color-accent-honey-subtle);
+}
+
+/* ============================================================
+   CALLOUT / WARNING BOX
+   ============================================================ */
+.callout {
+  display: flex;
+  gap: 14px;
+  padding: 20px;
+  border-radius: var(--card-radius);
+  margin: 24px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.callout-warning {
+  background: rgba(212, 137, 62, 0.1);
+  border: 1px solid rgba(212, 137, 62, 0.25);
+}
+.callout-info {
+  background: var(--color-accent-teal-subtle);
+  border: 1px solid rgba(58, 176, 162, 0.25);
+}
+.callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.callout-title { font-weight: 700; margin-bottom: 6px; }
+
+/* ============================================================
+   TAG PILLS
+   ============================================================ */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--color-accent-honey-subtle);
+  color: var(--color-accent-honey);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.tag:hover {
+  background: var(--color-accent-honey);
+  color: var(--color-on-accent);
+}
+.tag-teal {
+  background: var(--color-accent-teal-subtle);
+  color: var(--color-accent-teal);
+}
+.tag-teal:hover {
+  background: var(--color-accent-teal);
+  color: var(--color-on-accent);
+}
+
+/* ============================================================
+   CTA BOX
+   ============================================================ */
+.cta-box {
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 32px;
+  margin: 48px 0;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+}
+[data-theme='light'] .cta-box {
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-card);
+  border: none;
+}
+.cta-box h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.cta-box p { color: var(--color-text-muted); margin-bottom: 20px; font-size: 15px; }
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-accent-honey);
+  color: var(--color-on-accent);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.cta-btn:hover {
+  background: var(--color-accent-honey-hover);
+  box-shadow: var(--shadow-glow-honey);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   TAKEAWAY BOX
+   ============================================================ */
+.takeaway-box {
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  padding: 28px;
+  margin: 32px 0;
+  box-shadow: var(--shadow-card);
+}
+[data-theme='light'] .takeaway-box {
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-card);
+  border: none;
+}
+.takeaway-box h3 { margin-top: 0 !important; }
+.takeaway-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.takeaway-item:last-child { border-bottom: none; }
+.takeaway-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--color-accent-honey-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+.takeaway-text { font-size: 15px; line-height: 1.5; }
+.takeaway-label {
+  font-weight: 700;
+  color: var(--color-accent-honey);
+  font-size: 13px;
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  border-top: 1px solid var(--color-border-subtle);
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-dim);
+}
+.footer-inner { max-width: 1100px; margin: 0 auto; }
+.footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; }
+.footer-links a { color: var(--color-text-muted); text-decoration: none; font-size: 13px; }
+.footer-links a:hover { color: var(--color-accent-honey); }
+
+/* ============================================================
+   READING PROGRESS BAR
+   ============================================================ */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent-honey), var(--color-accent-teal));
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 640px) {
+  .hero { padding: 48px 16px 32px; }
+  .hero-meta { flex-wrap: wrap; gap: 12px; }
+  .article-container { padding: 0 16px 60px; }
+  .article-content h2 { font-size: 24px; margin-top: 40px; }
+  .nav-links { gap: 16px; }
+  .nav-links a { font-size: 13px; }
+}
+
+/* Smooth theme transition */
+* { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="page-wrapper">
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">TRMT <span class="logo-sub">TRMT</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/podcast">Podcast</a></li>
+        <li><a href="/about">Ueber uns</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Theme wechseln">&#127769;</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-badge">&#9889; Tutorial &middot; Deep Dive</div>
+  <h1>MCP & NotebookLM: Das Power-Duo fuer deinen AI-Workflow</h1>
+  <p class="hero-subtitle">Schluss mit Halluzinationen! So verbindest du Claude mit deinem gesamten Wissen und machst aus einem Chatbot einen echten Agenten.</p>
+  <div class="hero-meta">
+    <span>5. Maerz 2026</span>
+    <span class="hero-meta-divider">&middot;</span>
+    <span>8 min Lesezeit</span>
+    <span class="hero-meta-divider">&middot;</span>
+    <span>&#127911; Episode #002</span>
+  </div>
+  <div class="tags" style="justify-content:center; margin-top:20px;">
+    <a href="#" class="tag">#mcp</a>
+    <a href="#" class="tag">#notebooklm</a>
+    <a href="#" class="tag-teal tag">#tutorial</a>
+    <a href="#" class="tag-teal tag">#workflow</a>
+  </div>
+</section>
+
+<!-- ==================== ARTICLE ==================== -->
+<main class="article-container">
+  <article class="article-content">
+
+    <p><strong>Kennst du das Problem?</strong> Deine KI ist zwar brillant, hat aber den &bdquo;Context Gap&ldquo;: Sie weiss nichts ueber deine lokalen Dateien, aktuellen Projektstaende oder spezifisches Nischenwissen. Du verbringst Stunden mit Copy-Paste-Marathons zwischen PDFs, Webseiten und dem Chat-Fenster, nur um Claude oder GPT auf den neuesten Stand zu bringen.</p>
+
+    <p>Heute zeige ich dir, wie wir dieses Problem endgueltig loesen. Mit dem <strong>Model Context Protocol (MCP)</strong> und der Integration von <strong>Google NotebookLM</strong> heben wir deinen AI-Workflow auf ein Level, das bisher Enterprise-Teams mit Millionenbudget vorbehalten war.</p>
+
+    <hr>
+
+    <h2>Was ist das Model Context Protocol (MCP)?</h2>
+
+    <p>Das MCP ist ein offener Standard, der die Art und Weise revolutioniert, wie KI-Modelle mit der Aussenwelt kommunizieren. Stell es dir wie einen <strong>USB-C-Anschluss fuer kuenstliche Intelligenz</strong> vor: Einmal angeschlossen, versteht die KI sofort, wie sie auf ein Tool oder eine Datenquelle zugreifen kann.</p>
+
+    <p>In der MCP-Architektur gibt es drei zentrale Rollen:</p>
+
+    <ul>
+      <li><strong>Host:</strong> Die Anwendung, in der die KI &bdquo;lebt&ldquo; (z.B. Claude Desktop oder Cursor).</li>
+      <li><strong>Client:</strong> Der Connector im Host, der die Bruecke zum Server schlaegt.</li>
+      <li><strong>Server:</strong> Ein modularer Wrapper um eine API oder Datenbank.</li>
+    </ul>
+
+    <div class="takeaway-box">
+      <h3>Warum MCP ein Game-Changer ist</h3>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">&#128260;</div>
+        <div class="takeaway-text">
+          <span class="takeaway-label">Modell-Agnostisch</span>
+          Du kannst morgen von Claude zu GPT oder Gemini wechseln &mdash; deine MCP-Tools funktionieren einfach weiter.
+        </div>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">&#129513;</div>
+        <div class="takeaway-text">
+          <span class="takeaway-label">Modularitaet</span>
+          Verbinde Wetterdaten, Google Sheets und deine lokale Codebase nach dem Baukasten-Prinzip.
+        </div>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">&#128274;</div>
+        <div class="takeaway-text">
+          <span class="takeaway-label">Sicherheit</span>
+          Du entscheidest, welche Ordner oder APIs der Server freigibt. Nichts verlaesst dein System ohne Erlaubnis.
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>Das Highlight: NotebookLM als MCP-Server</h2>
+
+    <p>Das absolute Kraftpaket in diesem Oekosystem ist das Projekt von Jacob (<a href="#">@jacob-bd</a>). Seit dem grossen <strong>Update im Januar 2026</strong> wurden das MCP und das CLI im Paket <code>notebooklm-mcp-cli</code> vereint.</p>
+
+    <h3>Vergleich: Standard-Websuche vs. NotebookLM MCP</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Standard Web-Suche</th>
+            <th>NotebookLM MCP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Zuverlaessigkeit</strong></td>
+            <td>Risiko von veralteten Infos & Halluzinationen</td>
+            <td style="color: var(--color-accent-teal); font-weight: 600;">Zero-Hallucination</td>
+          </tr>
+          <tr>
+            <td><strong>Quellennachweis</strong></td>
+            <td>Oft unklar oder allgemein</td>
+            <td style="color: var(--color-accent-teal); font-weight: 600;">Praezise Zitate aus deinen Dokumenten</td>
+          </tr>
+          <tr>
+            <td><strong>Token-Kosten</strong></td>
+            <td>Hoch (staendiges Re-Reading)</td>
+            <td style="color: var(--color-accent-teal); font-weight: 600;">Minimal (Pre-processed)</td>
+          </tr>
+          <tr>
+            <td><strong>Agentic Power</strong></td>
+            <td>Nur Information</td>
+            <td style="color: var(--color-accent-teal); font-weight: 600;">Aktion (Mind Maps, Infographics)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr>
+
+    <h2>Tutorial: Deinen eigenen MCP-Server bauen</h2>
+
+    <p>Bevor wir zur Notebook-Integration kommen, schauen wir uns an, wie einfach du eigene Tools baust. Wir nutzen <code>FastMCP</code> &mdash; ein SDK, das deine Python-Funktionen magisch in KI-Tools verwandelt.</p>
+
+    <pre><code># uv installieren
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Projekt erstellen
+uv init weather
+cd weather
+
+# Abhaengigkeiten hinzufuegen
+uv add "mcp[cli]" httpx</code></pre>
+
+    <div class="callout callout-warning">
+      <span class="callout-icon">&#9888;&#65039;</span>
+      <div>
+        <div class="callout-title">WICHTIG FUER WINDOWS-USER</div>
+        In der JSON-Datei musst du Pfade zwingend mit <strong>doppelten Backslashes (<code>\\</code>)</strong> angeben (z.B. <code>C:\\Tools\\mcp</code>), da der Server sonst nicht startet.
+      </div>
+    </div>
+
+    <h3>Claude Desktop konfigurieren</h3>
+
+    <p>Die <code>claude_desktop_config.json</code> findest du hier:</p>
+    <ul>
+      <li><strong>Windows:</strong> <code>%APPDATA%\Claude</code></li>
+      <li><strong>macOS:</strong> <code>~/Library/Application Support/Claude</code></li>
+    </ul>
+
+    <pre><code>{
+  "mcpServers": {
+    "weather": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\Users\\DeinName\\weather",
+        "run",
+        "weather.py"
+      ]
+    }
+  }
+}</code></pre>
+
+    <hr>
+
+    <h2>Best Practices: Logging, Sicherheit & Performance</h2>
+
+    <div class="callout callout-warning">
+      <span class="callout-icon">&#9888;&#65039;</span>
+      <div>
+        <div class="callout-title">STDOUT-FALLSTRICK</div>
+        Bei Servern, die ueber STDIO kommunizieren, darfst du niemals <code>print()</code> fuer Debugging nutzen. Das korrumpiert das Protokoll. Nutze stattdessen <strong>immer</strong> <code>sys.stderr</code> fuer Logs!
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <span class="callout-icon">&#128161;</span>
+      <div>
+        <div class="callout-title">Performance-Tipp</div>
+        NotebookLM-MCP bietet ueber 29 Tools. Nutze <code>npx notebooklm-mcp config set profile minimal</code> wenn du nur Fragen stellen willst. Spart massiv Tokens!
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>Die Zukunft: Creator & Gamer Szenarien</h2>
+
+    <ol>
+      <li><strong>Code-Vibing 2.0:</strong> Lade die gesamte API-Dokumentation in NotebookLM. Dein KI-Agent greift via MCP darauf zu. Ergebnis: Fehlerfreier Code, der exakt die neuesten Library-Versionen nutzt.</li>
+      <li><strong>Der ultimative Lore-Master:</strong> Packe Spiel-Wikis und Lore-PDFs in NotebookLM. Claude erstellt direkt Infografiken oder Mind Maps von komplexen Charakter-Beziehungen.</li>
+      <li><strong>Agentic Analytics:</strong> Verbinde einen Dremio MCP-Server mit NotebookLM. Die KI zieht Daten, analysiert sie und schickt Ergebnisse als personalisierten Report an dein Team.</li>
+    </ol>
+
+    <hr>
+
+    <!-- TAKEAWAYS -->
+    <div class="takeaway-box">
+      <h3>&#127919; Deine Takeaways</h3>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">&#9889;</div>
+        <div class="takeaway-text">
+          <span class="takeaway-label">Effizienz</span>
+          Keine manuellen Uploads mehr &mdash; die KI bedient sich selbst in deiner NotebookLM-Bibliothek.
+        </div>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">&#127919;</div>
+        <div class="takeaway-text">
+          <span class="takeaway-label">Genauigkeit</span>
+          Gemini 2.5 sorgt fuer quellengestuetzte Fakten ohne Wenn und Aber.
+        </div>
+      </div>
+      <div class="takeaway-item">
+        <div class="takeaway-icon">&#9881;&#65039;</div>
+        <div class="takeaway-text">
+          <span class="takeaway-label">Modularitaet</span>
+          Nutze Profile (<code>minimal</code>/<code>standard</code>), um dein System lean und schnell zu halten.
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <h3>&#127911; Hoer dir die Episode an!</h3>
+      <p>Diesen Artikel gibt es auch als Podcast-Episode. Perfekt fuer unterwegs.</p>
+      <a href="#" class="cta-btn">&#9654;&#65039; Auf Spotify anhoeren</a>
+    </div>
+
+    <pre><code># Starte jetzt:
+uv tool install notebooklm-mcp-cli
+
+# Setup fuer Claude Desktop:
+nlm setup add claude-desktop
+
+# Fertig! Frag Claude: "Welche Notebooks habe ich?"</code></pre>
+
+  </article>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="/blog">Blog</a>
+      <a href="/podcast">Podcast</a>
+      <a href="/about">Ueber uns</a>
+      <a href="/rss.xml">RSS</a>
+    </div>
+    <p>&copy; 2026 The Random Maker Theory. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+</div><!-- /page-wrapper -->
+
+<script>
+// Theme Toggle
+const toggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+let currentTheme = localStorage.getItem('trmt-theme') || 'dark';
+
+function applyTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  html.classList.toggle('dark', theme === 'dark');
+  toggle.textContent = theme === 'dark' ? '\u{1F319}' : '\u{2600}\u{FE0F}';
+  localStorage.setItem('trmt-theme', theme);
+  currentTheme = theme;
+}
+
+applyTheme(currentTheme);
+
+toggle.addEventListener('click', () => {
+  applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+});
+
+// Reading Progress Bar
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  progressBar.style.width = progress + '%';
+});
+</script>
+
+</body>
+</html>
