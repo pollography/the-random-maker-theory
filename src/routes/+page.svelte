@@ -3,6 +3,7 @@
 	import { getLatestEpisode } from '$lib/utils/episodes';
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
+	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 	import { siteConfig } from '$lib/config';
 
 	let posts = $state([]);
@@ -18,11 +19,11 @@
 
 <svelte:head>
 	<title>The Random Maker Theory — Tech, KI, Maker & Produktivität</title>
-	<meta name="description" content="Dein wöchentliches Tech-Update: KI-Tools, Maker-Projekte, Produktivität und Tutorials. Von Pollo und seinen KI-Freunden. Ohne Bullshit." />
+	<meta name="description" content="Dein wöchentliches Tech-Update: KI-Tools, Maker-Projekte, Produktivität und Tutorials. Erkunden. Testen. Bauen. Ohne Bullshit." />
 	<meta name="keywords" content="Tech Blog deutsch, KI News, KI Tools, Maker Projekte, Smart Home, Produktivität, ChatGPT Tutorial, Arduino, 3D Druck, Fotografie, Automatisierung" />
 
 	<!-- OpenGraph -->
-	<meta property="og:title" content="The Random Maker Theory — Tech für echte Menschen" />
+	<meta property="og:title" content="The Random Maker Theory — Tech, KI, Maker & Produktivität" />
 	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität — erklärt so, dass du es verstehst. Jeden Donnerstag neu." />
 	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<meta property="og:type" content="website" />
@@ -46,7 +47,7 @@
 		"name": "The Random Maker Theory",
 		"alternateName": "TRMT",
 		"url": "https://therandommakertheory.com",
-		"description": "Tech, KI, Maker-Projekte & Produktivität — von Pollo und seinen KI-Freunden.",
+		"description": "Tech, KI, Maker-Projekte & Produktivität. Erkunden. Testen. Bauen.",
 		"inLanguage": "de-DE",
 		"publisher": {
 			"@type": "Organization",
@@ -60,7 +61,7 @@
 <section class="hero">
 	<div class="hero-badge">Tech, KI, Maker & Produktivität</div>
 	<h1 class="hero-title">The Random<br/>Maker Theory</h1>
-	<p class="hero-subtitle">Von Pollo und seinen KI-Freunden. Jeden Donnerstag neu.</p>
+	<p class="hero-subtitle">Erkunden. Testen. Bauen. Jeden Donnerstag neu.</p>
 	<div class="hero-actions">
 		<a href="/blog" class="btn-honey">Zum Blog</a>
 		<a href="/podcast" class="btn-teal">Zum Podcast</a>
@@ -101,6 +102,9 @@
 	</p>
 	<a href="/about" class="section-link">Mehr über mich &rarr;</a>
 </section>
+
+<!-- Newsletter Signup -->
+<NewsletterSignup />
 
 <style>
 	.hero {

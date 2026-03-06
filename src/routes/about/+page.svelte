@@ -6,7 +6,7 @@
 	<title>Über mich — The Random Maker Theory</title>
 	<meta name="description" content="Wer steckt hinter TRMT? Ich erkläre Tech, KI, Maker-Projekte und Produktivität in echten Worten. Ohne Buzzword-Bullshit." />
 	<meta property="og:title" content="Über The Random Maker Theory" />
-	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität — von Pollo und seinen KI-Freunden." />
+	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität. Erkunden. Testen. Bauen." />
 	<meta property="og:url" content="https://therandommakertheory.com/about" />
 	<link rel="canonical" href="https://therandommakertheory.com/about" />
 </svelte:head>
@@ -40,7 +40,7 @@
 				Wer steckt dahinter?
 			</h2>
 			<p style="color: var(--color-text-muted); line-height: var(--line-height-relaxed); margin: 0; font-size: var(--font-size-base);">
-				Ich bin Pollo. 15 Jahre Erfahrung in Fotografie, Social Media und Community. Ich baue digitale Produkte, automatisiere Workflows und teste jeden Tag neue Tech-Tools. TRMT ist mein Solo-Projekt, unterstützt von meinen KI-Freunden.
+				15 Jahre Erfahrung in Fotografie, Social Media und Community. Ich bau digitale Produkte, automatisiere Workflows und teste jeden Tag neue Tech-Tools. TRMT ist mein Solo-Projekt, unterstützt von KI als Werkzeug.
 			</p>
 		</div>
 

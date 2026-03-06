@@ -72,9 +72,13 @@
 			</div>
 		</div>
 
-		<!-- Copyright -->
-		<div style="border-top: 1px solid var(--color-border-subtle); padding-top: 2rem; margin-top: 2rem; text-align: center; color: var(--color-text-dim); font-size: var(--font-size-sm);">
-			<p style="margin: 0;">
+		<!-- Legal Links -->
+		<div style="border-top: 1px solid var(--color-border-subtle); padding-top: 2rem; margin-top: 2rem; display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+			<div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
+				<a href="/impressum" class="footer-link">Impressum</a>
+				<a href="/datenschutz" class="footer-link">Datenschutz</a>
+			</div>
+			<p style="margin: 0; color: var(--color-text-dim); font-size: var(--font-size-sm);">
 				&copy; {new Date().getFullYear()} {siteConfig.name}. Alle Rechte vorbehalten.
 			</p>
 		</div>

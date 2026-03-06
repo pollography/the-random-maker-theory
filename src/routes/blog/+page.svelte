@@ -28,7 +28,7 @@
 			Blog
 		</h1>
 		<p style="font-size: var(--font-size-lg); color: var(--color-text-muted); margin: 0.5rem 0 0 0; line-height: var(--line-height-relaxed);">
-			KI-News, Tools und Tutorials — neu jede Woche.
+			Tech, KI, Maker-Projekte & Produktivität — neu jede Woche.
 		</p>
 	</div>
 </section>
@@ -49,15 +49,5 @@
 </section>
 
 <style>
-	:global(body) {
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-
-	@media (max-width: 768px) {
-		:global(body) {
-			padding-left: 1rem;
-			padding-right: 1rem;
-		}
-	}
+	/* no global body overrides needed — layout handles padding */
 </style>

@@ -22,7 +22,7 @@ Ich mach das für Menschen wie dich. Keine Informatiker, keine Nerds (naja, okay
 
 ## Wer steckt dahinter?
 
-Ich bin Pollo. Seit 15 Jahren in Fotografie, Social Media und Community unterwegs. Mit Active Fungus Studios baue ich digitale Produkte, und jetzt auch The Random Maker Theory.
+Seit 15 Jahren in Fotografie, Social Media und Community unterwegs. Ich bau digitale Produkte und jetzt auch The Random Maker Theory.
 
 Mein Setup:
 - **KI-Tools**, die mir helfen, bessere Inhalte zu erstellen
@@ -53,4 +53,4 @@ Schau dir den Blog an, hör den Podcast, folg mir auf Social Media. Oder abonnie
 
 Viel Spaß hier!
 
-— Pollo
+— TRMT
