@@ -12,6 +12,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"dependencies": {
+		"@google/genai": "^1.44.0",
 		"feed": "^4.2.2"
 	},
 	"devDependencies": {

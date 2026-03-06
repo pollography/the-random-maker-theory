@@ -14,6 +14,9 @@ Stell dir vor, du baust dir einen digitalen Assistenten, der deine nervigsten Au
 
 Das ist n8n. Und seit dem 2.0-Release im März 2026 ist das Ding richtig erwachsen geworden.
 
+<!-- TODO: Bild — Screenshot: n8n Workflow-Editor mit einem RSS-to-Telegram Flow -->
+<!-- Alt: "n8n Workflow-Editor mit verbundenen Nodes: Schedule, RSS Read, Telegram" -->
+
 ## Was ist n8n?
 
 n8n ist eine Open-Source-Plattform für Workflow-Automatisierung. Gegründet 2019 in Berlin. Du verbindest Blöcke (Nodes) miteinander und baust dir Abläufe zusammen. Visuell, wie Lego.
@@ -31,6 +34,9 @@ Das März-2026-Release bringt drei Dinge, die richtig was ändern:
 **SQLite-Performance.** 30-80% schneller beim Laden von Workflows. Spürbar.
 
 Plus: 70+ neue KI-Nodes sind 2025 dazugekommen. LLMs, Embeddings, Vector-Datenbanken, Sprach- und Bilderkennung.
+
+<!-- TODO: Bild — Screenshot: n8n 2.0 Draft & Live States Feature -->
+<!-- Alt: "n8n 2.0 Draft und Live States nebeneinander im Editor" -->
 
 ## 5 Automationen, die du heute bauen kannst
 
@@ -86,6 +92,9 @@ services:
 ```
 
 Drei Befehle und n8n läuft. Nicht schwerer als einen Blog aufzusetzen.
+
+<!-- TODO: Bild — Infografik: n8n vs Zapier vs Make Vergleich -->
+<!-- Alt: "Vergleichstabelle n8n, Zapier und Make mit Preis, Features und Self-Hosting" -->
 
 ## n8n vs Zapier vs Make
 

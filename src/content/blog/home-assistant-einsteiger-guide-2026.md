@@ -14,6 +14,9 @@ Alexa hört mit. Google speichert alles. Und wenn der Cloud-Server down ist, geh
 
 Home Assistant macht das anders. Open Source, lokal, keine Cloud nötig. Deine Daten bleiben bei dir. Und seit Version 2026.3 ist der Einstieg so einfach wie noch nie.
 
+<!-- TODO: Bild — Screenshot: Home Assistant Dashboard mit Sensoren und Automationen -->
+<!-- Alt: "Home Assistant Dashboard: Temperatur, Licht, Bewegungssensor und Automationen" -->
+
 ## Was ist Home Assistant?
 
 Eine Open-Source-Plattform für Heimautomation. Läuft lokal auf einem Raspberry Pi oder Mini-PC. Verbindet sich mit über 2.000 Geräten und Diensten. Kostet null Euro Software-Gebühren.
@@ -27,6 +30,9 @@ Release 2026.3 bringt Vacuum-Automationen (Staubsauger per Zone steuern), Androi
 **Komfort-Setup (150-300€):** Raspberry Pi 5 oder Intel NUC. Schneller, mehr RAM, zukunftssicher. Wenn du mehr als 20 Geräte planst oder viele Add-ons nutzen willst.
 
 **Faustregel:** Unter 5 Geräte → Pi 4 reicht. 5-20 Geräte → Pi 5. 20+ Geräte → Mini-PC.
+
+<!-- TODO: Bild — Foto: Raspberry Pi mit Zigbee Dongle und Smart Home Sensoren -->
+<!-- Alt: "Raspberry Pi 4 mit Sonoff Zigbee Dongle und Aqara Sensoren" -->
 
 ## Die ersten 3 Geräte
 
@@ -65,6 +71,9 @@ Letzter Bewohner verlässt das Haus (Geofence via Handy) → Alle Lichter aus, T
 Fenstersensor meldet "offen" + Heizung läuft → Heizung aus, Notification: "Fenster zu, du heizt die Straße!"
 
 Nervig? Ja. Spart Geld? Absolut.
+
+<!-- TODO: Bild — Screenshot: Home Assistant Automation Editor -->
+<!-- Alt: "Home Assistant Automation Editor: Bewegungssensor triggert Licht an" -->
 
 ## Was kostet der Spaß?
 

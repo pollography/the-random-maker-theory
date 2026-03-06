@@ -16,6 +16,9 @@ Der Markt ist 2026 richtig gut für Einsteiger. Unter 300€ bekommst du Drucker
 
 Hier mein Breakdown.
 
+<!-- TODO: Bild — Foto: 3D-Drucker Setup auf Schreibtisch mit fertigen Prints -->
+<!-- Alt: "Bambu Lab A1 Mini auf Schreibtisch mit verschiedenen fertigen 3D-Drucken" -->
+
 ## FDM vs Resin: Was passt zu dir?
 
 **FDM (Filament-Drucker):** Plastikfaden wird geschmolzen und Schicht für Schicht aufgetragen. Das ist, was du als Einsteiger willst.
@@ -27,6 +30,9 @@ Günstig in Anschaffung und Betrieb. Robuste Teile. Kein Chemie-Setup nötig. Gr
 Aber: Du brauchst Handschuhe, eine Maske, gute Belüftung. Die Teile sind spröde. Nachbearbeitung (Waschen + UV-Aushärten) nervt. Und das Harz stinkt.
 
 **Mein Take:** FDM für Einsteiger. Immer. Resin nur, wenn du Miniaturen oder Schmuck drucken willst und bereit bist, dich mit Chemie auseinanderzusetzen.
+
+<!-- TODO: Bild — Vergleichsfoto: FDM vs Resin Print desselben Modells -->
+<!-- Alt: "Vergleich: Dasselbe Modell gedruckt mit FDM (links) und Resin (rechts)" -->
 
 ## Die 3 besten Budget-Drucker unter 300€
 
@@ -63,6 +69,9 @@ Der Slicer nimmt dein 3D-Modell und macht druckfertige Anweisungen draus.
 **MakerWorld.com** — Von Bambu Lab. Spezialisiert auf Multi-Color-Modelle. Sauberes Interface.
 
 **Thingiverse.com** — Der Klassiker. Riesige Auswahl, aber auch viel Müll dazwischen. Der Customizer ist trotzdem geil: Parameter anpassen, individuelles Modell generieren.
+
+<!-- TODO: Bild — Screenshot: Cura Slicer mit geladenem 3D Benchy Modell -->
+<!-- Alt: "Cura Slicer Software mit 3D Benchy auf der Build Plate" -->
 
 ## Deine ersten Projekte
 

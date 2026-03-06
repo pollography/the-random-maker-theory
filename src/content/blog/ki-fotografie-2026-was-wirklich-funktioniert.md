@@ -14,6 +14,9 @@ Ich fotografiere seit 15 Jahren. Von Spiegelreflex über Mirrorless bis Smartpho
 
 Nicht komplett. Nicht in allem. Aber in den richtigen Bereichen spart mir KI Stunden pro Woche. Hier mein ehrlicher Erfahrungsbericht.
 
+<!-- TODO: Bild — Vorher/Nachher: Gleiches Foto mit und ohne KI-Bearbeitung -->
+<!-- Alt: "Vorher/Nachher Vergleich: Landschaftsfoto vor und nach KI-Bearbeitung in Lightroom" -->
+
 ## Lightroom 2026: KI als Standard
 
 Adobe hat KI nicht mehr als Feature, sondern als Default integriert. Drei Dinge, die richtig gut funktionieren:
@@ -23,6 +26,9 @@ Adobe hat KI nicht mehr als Feature, sondern als Default integriert. Drei Dinge,
 **AI Masking.** Himmel, Personen, Hintergrund — ein Klick und die Maske sitzt. Vorher hab ich 10 Minuten mit dem Pinsel rumgemalt. Jetzt 3 Sekunden.
 
 **Denoise.** High-ISO-Rauschen weg, Details bleiben. Non-destruktiv direkt im Detail-Panel. Kein separater DNG-Export mehr nötig. Das allein hat meinen Workflow um 20% beschleunigt.
+
+<!-- TODO: Bild — Screenshot: Lightroom AI Masking mit Himmel-Auswahl -->
+<!-- Alt: "Lightroom AI Masking: Himmel automatisch erkannt und separat bearbeitbar" -->
 
 ## Photoshop 2026: Generative Fill wird erwachsen
 
@@ -53,6 +59,9 @@ Nachteil: Seit Oktober 2025 nur noch als Subscription (~17-33$/Monat). Das nervt
 240€ Einmal-Kauf. Beste RAW-Engine auf dem Markt. DeepPRIME Noise Reduction ist legendär. Optik-Korrekturen basierend auf echten Labortest-Daten deines Objektivs.
 
 Neu in Version 9: AI Masking für Himmel, Personen, Hintergründe. Endlich.
+
+<!-- TODO: Bild — Screenshot: Photoshop Generative Fill mit Reference Image -->
+<!-- Alt: "Photoshop 2026 Generative Fill mit Referenzbild für konsistente Ergebnisse" -->
 
 ## Mein Workflow: Vorher vs Nachher
 
@@ -96,6 +105,9 @@ Neu in Version 9: AI Masking für Himmel, Personen, Hintergründe. Endlich.
 **Over-Polishing.** KI trainiert auf "perfekt". Das Ergebnis: sterile, emotionslose Bilder. 2026 ist der Trend zurück zu Authentizität und Imperfektion. KI kann das nicht.
 
 **Transparenz.** Smartphones ersetzen Details mit KI-generierten Pixeln, ohne dir Bescheid zu sagen. Dein iPhone "verbessert" dein Foto, indem es Dinge erfindet, die nicht da waren.
+
+<!-- TODO: Bild — Infografik: Workflow-Vergleich Vorher (2023) vs Nachher (2026) -->
+<!-- Alt: "Workflow-Vergleich: Bildbearbeitung 2023 (6 Schritte) vs 2026 mit KI (5 Schritte, 50% schneller)" -->
 
 ## Preisvergleich
 
