@@ -13,8 +13,12 @@
 </script>
 
 <svelte:head>
-	<title>Blog — {siteConfig.name}</title>
-	<meta name="description" content="Lese alle Blog-Posts von {siteConfig.name}" />
+	<title>Blog — Tech, KI, Maker & Produktivität | TRMT</title>
+	<meta name="description" content="Alle Blog-Posts von The Random Maker Theory: Tech-News, KI-Tools, Maker-Projekte, Produktivitäts-Tutorials und Deep Dives. Jeden Donnerstag neu." />
+	<meta property="og:title" content="Blog — The Random Maker Theory" />
+	<meta property="og:description" content="Tech, KI, Maker & Produktivität — verständlich erklärt." />
+	<meta property="og:url" content="https://therandommakertheory.com/blog" />
+	<link rel="canonical" href="https://therandommakertheory.com/blog" />
 </svelte:head>
 
 <!-- Header -->

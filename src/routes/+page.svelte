@@ -17,15 +17,50 @@
 </script>
 
 <svelte:head>
-	<title>{siteConfig.name}</title>
-	<meta name="description" content={siteConfig.description} />
+	<title>The Random Maker Theory — Tech, KI, Maker & Produktivität</title>
+	<meta name="description" content="Dein wöchentliches Tech-Update: KI-Tools, Maker-Projekte, Produktivität und Tutorials. Von Pollo und seinen KI-Freunden. Ohne Bullshit." />
+	<meta name="keywords" content="Tech Blog deutsch, KI News, KI Tools, Maker Projekte, Smart Home, Produktivität, ChatGPT Tutorial, Arduino, 3D Druck, Fotografie, Automatisierung" />
+
+	<!-- OpenGraph -->
+	<meta property="og:title" content="The Random Maker Theory — Tech für echte Menschen" />
+	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität — erklärt so, dass du es verstehst. Jeden Donnerstag neu." />
+	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://therandommakertheory.com" />
+	<meta property="og:locale" content="de_DE" />
+	<meta property="og:site_name" content="The Random Maker Theory" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="The Random Maker Theory" />
+	<meta name="twitter:description" content="Tech, KI, Maker & Produktivität — ohne Bullshit. Jeden Donnerstag neu." />
+	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
+
+	<!-- Canonical -->
+	<link rel="canonical" href="https://therandommakertheory.com" />
+
+	<!-- JSON-LD Schema -->
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"name": "The Random Maker Theory",
+		"alternateName": "TRMT",
+		"url": "https://therandommakertheory.com",
+		"description": "Tech, KI, Maker-Projekte & Produktivität — von Pollo und seinen KI-Freunden.",
+		"inLanguage": "de-DE",
+		"publisher": {
+			"@type": "Organization",
+			"name": "The Random Maker Theory",
+			"url": "https://therandommakertheory.com"
+		}
+	})}</script>`}
 </svelte:head>
 
 <!-- Hero Section -->
 <section class="hero">
-	<div class="hero-badge">KI-News, Tools & Tutorials</div>
+	<div class="hero-badge">Tech, KI, Maker & Produktivität</div>
 	<h1 class="hero-title">The Random<br/>Maker Theory</h1>
-	<p class="hero-subtitle">Von Menschen und ihren KI-Freunden. Jeden Donnerstag neu.</p>
+	<p class="hero-subtitle">Von Pollo und seinen KI-Freunden. Jeden Donnerstag neu.</p>
 	<div class="hero-actions">
 		<a href="/blog" class="btn-honey">Zum Blog</a>
 		<a href="/podcast" class="btn-teal">Zum Podcast</a>
@@ -60,11 +95,11 @@
 
 <!-- About Card -->
 <section class="about-card">
-	<h2 class="about-title">Ueber TRMT</h2>
+	<h2 class="about-title">Über TRMT</h2>
 	<p class="about-text">
-		The Random Maker Theory ist dein woechentliches Update zu KI-Tools, Breaking News und praktischen Tutorials. Wir erklaeren komplexe Themen verstaendlich, ohne Bullshit. Von Pollo & Friends.
+		The Random Maker Theory ist dein wöchentliches Update zu Tech, KI, Maker-Projekten und Produktivität. Ich erkläre komplexe Themen verständlich, ohne Bullshit.
 	</p>
-	<a href="/about" class="section-link">Mehr ueber uns &rarr;</a>
+	<a href="/about" class="section-link">Mehr über mich &rarr;</a>
 </section>
 
 <style>

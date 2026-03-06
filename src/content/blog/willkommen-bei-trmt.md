@@ -2,7 +2,7 @@
 title: "Willkommen bei The Random Maker Theory"
 slug: "willkommen-bei-trmt"
 date: "2026-03-05"
-description: "Wer wir sind, was wir machen und warum KI-News so wichtig sind."
+description: "Wer ich bin, was ich hier mache und warum Tech-Content so wichtig ist."
 tags: ["ankündigung", "willkommen"]
 category: "news"
 draft: false
@@ -10,30 +10,30 @@ draft: false
 
 # Willkommen bei The Random Maker Theory
 
-Hey! 👋
+Hey!
 
 Das ist es. The Random Maker Theory ist live.
 
 ## Was ist das hier?
 
-The Random Maker Theory ist dein wöchentliches Update zur Welt der KI. Blog-Posts über die neuesten Tools, ein Podcast, in dem wir über News sprechen, und Tutorials, die dir helfen, KI in dein Arbeitslife zu integrieren.
+The Random Maker Theory ist dein wöchentliches Update zu Tech, KI, Maker-Projekten und Produktivität. Blog-Posts über die neuesten Tools, ein Podcast, in dem ich über News rede, und Tutorials, die dir helfen, Tech in dein Leben zu integrieren.
 
-Wir machen das für Menschen wie dich — keine Informatiker, keine Nerds (naja, okay, ein bisschen), sondern echte Menschen, die verstehen möchten, was gerade mit KI passiert.
+Ich mach das für Menschen wie dich. Keine Informatiker, keine Nerds (naja, okay, ein bisschen). Echte Menschen, die verstehen wollen, was grad in der Tech-Welt passiert.
 
 ## Wer steckt dahinter?
 
-Ich bin Pollo, 40 Jahre alt, ENFP (ja, ich weiß), seit 15 Jahren in Fotografie, Social Media und Community unterwegs. Mit Active Fungus Studios baue ich digitale Produkte, und jetzt auch The Random Maker Theory.
+Ich bin Pollo. Seit 15 Jahren in Fotografie, Social Media und Community unterwegs. Mit Active Fungus Studios baue ich digitale Produkte, und jetzt auch The Random Maker Theory.
 
-Begleitet mich:
-- **Dein Team**, das täglich News liest und Filter setzt
-- **KI-Tools**, die uns helfen, bessere Inhalte zu erstellen
-- **Du**, der Community
+Mein Setup:
+- **KI-Tools**, die mir helfen, bessere Inhalte zu erstellen
+- **Maker-Projekte**, die ich selbst baue und dokumentiere
+- **Du**, die Community
 
 ## Was erwartest du hier?
 
 Jeden Donnerstag gibt es neue Inhalte:
 
-- **Blog-Posts** über KI-Tools, Trends und Tutorials
+- **Blog-Posts** über Tech-Tools, KI, Maker-Projekte und Produktivität
 - **Podcast-Episoden**, kurz und knackig (15-30 Min)
 - **Tipps & Tricks** zum praktischen Einsatz
 - **News**, gefiltert und erklärt
@@ -42,14 +42,14 @@ Alle Inhalte sind auf Deutsch, durchsuchbar und frei zugänglich.
 
 ## Die Philosophie
 
-- **Echte Inhalte**: Keine AI-generierte Scheiße
-- **Keine Hype**: Nur Tools, die wirklich funktionieren
+- **Echte Inhalte**: Kein generischer Schrott
+- **Kein Hype**: Nur Tools, die wirklich funktionieren
 - **Deine Zeit respektieren**: Kurz, prägnant, actionable
 - **Community first**: Feedback, Fragen, Diskussionen willkommen
 
 ## Los geht's
 
-Schau dir den Blog an, höre den Podcast, folge uns auf Social Media. Oder abonniere den RSS Feed.
+Schau dir den Blog an, hör den Podcast, folg mir auf Social Media. Oder abonnier den RSS Feed.
 
 Viel Spaß hier!
 

@@ -2,7 +2,7 @@ export const siteConfig = {
 	name: 'The Random Maker Theory',
 	shortName: 'TRMT',
 	description:
-		'KI-News, Tools und Tutorials — von Menschen und ihren KI-Freunden.',
+		'Tech, KI, Maker-Projekte & Produktivität — von Pollo und seinen KI-Freunden.',
 	url: 'https://therandommakertheory.com',
 	language: 'de',
 	author: 'Pollo',
@@ -15,7 +15,7 @@ export const siteConfig = {
 	podcast: {
 		showName: 'The Random Maker Theory',
 		showDescription:
-			'Deine wöchentliche Dosis KI-News, Tools und Tutorials. Smart, lustig, kein Bullshit.',
+			'Deine wöchentliche Dosis Tech, KI und Maker-Content. Smart, locker, kein Bullshit.',
 		author: 'Pollo',
 		email: 'hello@therandommakertheory.com',
 	},

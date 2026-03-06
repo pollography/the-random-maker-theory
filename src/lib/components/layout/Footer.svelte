@@ -28,7 +28,7 @@
 				<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
 					<li><a href="/blog" class="footer-link">Blog</a></li>
 					<li><a href="/podcast" class="footer-link">Podcast</a></li>
-					<li><a href="/about" class="footer-link">Über uns</a></li>
+					<li><a href="/about" class="footer-link">Über mich</a></li>
 				</ul>
 			</div>
 
