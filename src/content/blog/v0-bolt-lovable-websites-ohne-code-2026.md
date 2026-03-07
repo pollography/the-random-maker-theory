@@ -15,8 +15,7 @@ readingTime: 11
 
 Ich hab alle drei getestet. Die ehrliche Antwort: Ja, du kriegst in 20 Minuten eine funktionierende App. Aber "funktionierend" und "production-ready" sind zwei verschiedene Dinge.
 
-<!-- TODO: Bild — Screenshot-Vergleich: gleiche App in v0, Bolt, Lovable -->
-<!-- Alt: "Dieselbe Todo-App gebaut in v0, Bolt.new und Lovable" -->
+![Dieselbe Todo-App gebaut in v0, Bolt.new und Lovable](/images/blog/v0-bolt-1.png)
 
 ## v0 von Vercel: Der Code-Qualitäts-König
 
@@ -26,8 +25,7 @@ v0 generiert React/Next.js-Komponenten aus natürlicher Sprache. Mit Tailwind un
 
 **Was fehlt:** v0 macht nur Frontend. Kein Backend, keine Datenbank, keine Auth. Du brauchst deine eigene Infrastruktur für alles, was hinter den Buttons passiert.
 
-<!-- TODO: Bild — Screenshot v0 Interface mit generierter Komponente -->
-<!-- Alt: "v0 Interface: React-Komponente aus Text-Prompt generiert" -->
+![v0 Interface: React-Komponente aus Text-Prompt generiert](/images/blog/v0-bolt-2.png)
 
 **Pricing:** Free (5$ Credits), Premium 20$/Mo, Team 30$/User.
 
@@ -55,8 +53,7 @@ Lovable (ehemals GPT Engineer) baut Apps für Leute, die nicht coden können. Un
 
 **Neu in 2.0 (Feb 2026):** Multi-User Collaboration (bis 20 User), Chat Mode Agent, und die Designs sind nochmal besser geworden.
 
-<!-- TODO: Bild — Screenshot Lovable generierte App -->
-<!-- Alt: "Lovable 2.0: automatisch generierte App mit Supabase Backend" -->
+![Lovable 2.0: automatisch generierte App mit Supabase Backend](/images/blog/v0-bolt-3.png)
 
 **Das Problem:** Supabase RLS (Row Level Security) Policies. Die KI erstellt die Datenbank, aber die Sicherheitsregeln musst du selbst konfigurieren. "Ich hab 3 Tage damit verbracht" ist ein häufiger Erfahrungsbericht.
 

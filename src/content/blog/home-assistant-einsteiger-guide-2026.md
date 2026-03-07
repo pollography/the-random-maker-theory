@@ -14,8 +14,7 @@ Alexa hört mit. Google speichert alles. Und wenn der Cloud-Server down ist, geh
 
 Home Assistant macht das anders. Open Source, lokal, keine Cloud nötig. Deine Daten bleiben bei dir. Und seit Version 2026.3 ist der Einstieg so einfach wie noch nie.
 
-<!-- TODO: Bild — Screenshot: Home Assistant Dashboard mit Sensoren und Automationen -->
-<!-- Alt: "Home Assistant Dashboard: Temperatur, Licht, Bewegungssensor und Automationen" -->
+![Home Assistant Dashboard: Temperatur, Licht, Bewegungssensor und Automationen](/images/blog/home-assistant-1.png)
 
 ## Was ist Home Assistant?
 
@@ -31,8 +30,7 @@ Release 2026.3 bringt Vacuum-Automationen (Staubsauger per Zone steuern), Androi
 
 **Faustregel:** Unter 5 Geräte → Pi 4 reicht. 5-20 Geräte → Pi 5. 20+ Geräte → Mini-PC.
 
-<!-- TODO: Bild — Foto: Raspberry Pi mit Zigbee Dongle und Smart Home Sensoren -->
-<!-- Alt: "Raspberry Pi 4 mit Sonoff Zigbee Dongle und Aqara Sensoren" -->
+![Raspberry Pi 4 mit Sonoff Zigbee Dongle und Aqara Sensoren](/images/blog/home-assistant-2.png)
 
 ## Die ersten 3 Geräte
 
@@ -72,8 +70,7 @@ Fenstersensor meldet "offen" + Heizung läuft → Heizung aus, Notification: "Fe
 
 Nervig? Ja. Spart Geld? Absolut.
 
-<!-- TODO: Bild — Screenshot: Home Assistant Automation Editor -->
-<!-- Alt: "Home Assistant Automation Editor: Bewegungssensor triggert Licht an" -->
+![Home Assistant Automation Editor: Bewegungssensor triggert Licht an](/images/blog/home-assistant-3.png)
 
 ## Was kostet der Spaß?
 

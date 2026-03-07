@@ -17,8 +17,7 @@ Oder du lässt die KI auf deinem eigenen Rechner laufen. Lokal. Privat. Offline.
 
 2026 ist das erstmals wirklich praktisch.
 
-<!-- TODO: Bild — Setup-Foto: Monitor mit Ollama Terminal + LM Studio nebeneinander -->
-<!-- Alt: "Ollama CLI und LM Studio Desktop-App auf einem Monitor" -->
+![Ollama CLI und LM Studio Desktop-App auf einem Monitor](/images/blog/lokale-ki-1.png)
 
 ## Ollama vs LM Studio vs Jan.ai
 
@@ -75,8 +74,7 @@ Läuft sogar auf CPU (mit gemma.cpp). Perfekt für Systeme ohne dedizierte GPU.
 
 MIT-Lizenz. Multimodal (Text + Bild).
 
-<!-- TODO: Bild — Benchmark-Grafik: Modelle im Vergleich -->
-<!-- Alt: "Benchmark-Vergleich: Llama 3.1, DeepSeek V3, Mistral Large 3, Qwen 3.5" -->
+![Benchmark-Vergleich: Llama 3.1, DeepSeek V3, Mistral Large 3, Qwen 3.5](/images/blog/lokale-ki-2.png)
 
 ## Welche Hardware brauchst du?
 
@@ -135,8 +133,7 @@ Strom: 30-50€/Monat. Sonst nichts.
 
 **Break-Even:** 2-6 Monate bei Heavy Usage. Danach ist lokal praktisch gratis.
 
-<!-- TODO: Bild — Kostenvergleich-Chart: Cloud vs Local über 12 Monate -->
-<!-- Alt: "Kostenvergleich Cloud-KI vs lokale KI über 12 Monate" -->
+![Kostenvergleich Cloud-KI vs lokale KI über 12 Monate](/images/blog/lokale-ki-3.png)
 
 ## Integration: So nutzt du lokale KI im Alltag
 

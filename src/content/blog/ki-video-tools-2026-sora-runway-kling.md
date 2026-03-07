@@ -15,8 +15,7 @@ Text rein, Video raus. Das ist der Pitch. Aber wie gut ist die Realität?
 
 Ich hab Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5 getestet. Spoiler: Die Qualität ist 2026 absurd gut. Aber jedes Tool hat seine Schwächen.
 
-<!-- TODO: Bild — Vergleichsgrid: gleicher Prompt in allen 4 Tools -->
-<!-- Alt: "Vergleich desselben Prompts in Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5" -->
+![Vergleich desselben Prompts in Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5](/images/blog/ki-video-1.png)
 
 ## Das Feld im Überblick
 
@@ -33,8 +32,7 @@ Ich hab Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5 getestet. Spoiler: Die Qu
 
 OpenAIs Sora 2 produziert die fotorealistischsten Videos. Punkt. Die Physik stimmt, Gesichter sind konsistent, die narrativen Sequenzen sind beeindruckend.
 
-<!-- TODO: Bild — Sora 2 Output-Beispiel: fotorealistische Szene -->
-<!-- Alt: "Sora 2 generiertes Video: fotorealistische Stadtszene mit korrekter Physik" -->
+![Sora 2 generiertes Video: fotorealistische Stadtszene mit korrekter Physik](/images/blog/ki-video-2.png)
 
 **Was geil ist:** Synchronisierter Audio, Videos bis 25 Sekunden, Disney-Partnership (200+ Charaktere).
 
@@ -52,8 +50,7 @@ Runway ist seit Januar 2026 bei Gen-4.5 und hat den höchsten Elo-Score (1.247) 
 
 **Spatial Understanding** sorgt dafür, dass Kamerabewegungen durch 3D-Räume realistisch aussehen. Objekte haben echtes Gewicht und Momentum.
 
-<!-- TODO: Bild — Runway Gen-4.5 Character Consistency Beispiel -->
-<!-- Alt: "Runway Gen-4.5: gleicher Charakter in drei verschiedenen Szenen" -->
+![Runway Gen-4.5: gleicher Charakter in drei verschiedenen Szenen](/images/blog/ki-video-3.png)
 
 **Preise:** Standard 12$/Mo (625 Credits), Pro 28$/Mo, Unlimited 76-95$/Mo.
 

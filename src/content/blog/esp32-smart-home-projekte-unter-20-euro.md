@@ -15,8 +15,7 @@ Ein ESP32 Board kostet 3€. Ein Temperatursensor 1,50€. Zusammen mit ESPHome 
 
 Hier sind 5 Projekte, die alle unter 20€ kosten. Mit exakten Teilelisten, ESPHome-Configs und Anfänger-Tipps.
 
-<!-- TODO: Bild — Flatlay: ESP32 Board + Sensoren + Kabel auf dunklem Hintergrund -->
-<!-- Alt: "ESP32 Board mit DHT22 Sensor, Reed Switch und Jumper-Kabeln" -->
+![ESP32 Board mit DHT22 Sensor, Reed Switch und Jumper-Kabeln](/images/blog/esp32-1.png)
 
 ## Welches Board?
 
@@ -48,8 +47,7 @@ Das ist die Basis. Jedes Projekt baut darauf auf.
 
 ## Projekt 1: Temperatur & Luftfeuchte (5€)
 
-<!-- TODO: Bild — Fritzing-Schaltplan: ESP32 + DHT22 -->
-<!-- Alt: "Schaltplan: DHT22 Sensor an ESP32 GPIO4 angeschlossen" -->
+![Schaltplan: DHT22 Sensor an ESP32 GPIO4 angeschlossen](/images/blog/esp32-2.png)
 
 **Teileliste:**
 
@@ -81,8 +79,7 @@ Home Assistant zeigt dir automatisch einen Live-Graph mit History. Perfekt für 
 
 ## Projekt 2: Bewegungsmelder mit Notification (6€)
 
-<!-- TODO: Bild — Foto: HC-SR501 PIR Sensor montiert an Wand -->
-<!-- Alt: "HC-SR501 PIR Bewegungssensor an der Wand montiert" -->
+![HC-SR501 PIR Bewegungssensor an der Wand montiert](/images/blog/esp32-3.png)
 
 **Teileliste:**
 
@@ -140,8 +137,7 @@ Der `delayed_on` Filter ignoriert Prellen (elektrisches Rauschen).
 
 ## Projekt 4: Automatische Pflanzenbewässerung (10€)
 
-<!-- TODO: Bild — Foto: ESP32 + Bodenfeuchte-Sensor + Wasserpumpe Setup -->
-<!-- Alt: "ESP32 mit kapazitivem Bodenfeuchte-Sensor und Mini-Wasserpumpe" -->
+![ESP32 mit kapazitivem Bodenfeuchte-Sensor und Mini-Wasserpumpe](/images/blog/esp32-4.png)
 
 **Teileliste:**
 
@@ -178,8 +174,7 @@ switch:
 
 ## Projekt 5: LED-Strip Controller mit WLED (11€)
 
-<!-- TODO: Bild — Foto: WS2812B LED Strip leuchtend, warm-weiß -->
-<!-- Alt: "WS2812B LED Strip mit ESP32 Controller, warmes Licht" -->
+![WS2812B LED Strip mit ESP32 Controller, warmes Licht](/images/blog/esp32-5.png)
 
 **Teileliste:**
 
@@ -202,8 +197,7 @@ WLED ist eine Firmware speziell für LED-Strips. Installation über den Browser:
 
 Du brauchst nicht für jedes Projekt ein eigenes Board. Mit einem ESP32-C3 (3€) + DHT22 (1,50€) + HC-SR501 (1€) + Reed Switch (0,80€) + Kabel (1€) hast du drei funktionierende Smart-Home-Sensoren für **7,30€ total**.
 
-<!-- TODO: Bild — Kostenvergleich-Grafik: DIY vs kommerzielle Smart Home Sensoren -->
-<!-- Alt: "Kostenvergleich: ESP32 DIY Sensoren vs Aqara vs Hue" -->
+![Kostenvergleich: ESP32 DIY Sensoren vs Aqara vs Hue](/images/blog/esp32-6.png)
 
 Zum Vergleich: Ein einzelner Aqara Temperatursensor kostet 15-20€. Du baust drei Sensoren für die Hälfte.
 

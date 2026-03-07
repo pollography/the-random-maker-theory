@@ -15,8 +15,7 @@ readingTime: 12
 
 Aber welches Tool lohnt sich wirklich? Ich hab alle drei im Alltag getestet. Plus Windsurf als Dark Horse.
 
-<!-- TODO: Bild — Hero-Grafik: Logos der 4 Tools nebeneinander, dunkler Hintergrund -->
-<!-- Alt: "Claude Code, Cursor, GitHub Copilot und Windsurf Logos im Vergleich" -->
+![Claude Code, Cursor, GitHub Copilot und Windsurf Logos im Vergleich](/images/blog/claude-code-1.png)
 
 ## Die Kurzversion
 
@@ -34,8 +33,7 @@ Keine Lust auf den ganzen Artikel? Hier die Zusammenfassung:
 
 Seit dem Opus 4.6 Release im Februar 2026 ist Claude Code ein anderes Tier.
 
-<!-- TODO: Bild — Screenshot Claude Code Terminal mit Agent Teams -->
-<!-- Alt: "Claude Code Terminal-Interface mit parallelen Agent Teams" -->
+![Claude Code Terminal-Interface mit parallelen Agent Teams](/images/blog/claude-code-2.png)
 
 **Was kann's:** Du gibst Claude Code einen Task ("Refactore das Auth-System, schreib Tests, mach einen PR") und es arbeitet autonom. Liest dein Repo, versteht die Architektur, macht die Änderungen, führt Tests aus.
 
@@ -57,8 +55,7 @@ Seit dem Opus 4.6 Release im Februar 2026 ist Claude Code ein anderes Tier.
 
 Cursor ist ein VSCode-Fork mit eingebautem KI-Gehirn. Seit dem 2.0 Update im Februar 2026 mit eigenem Coding-Modell und Multi-Agent.
 
-<!-- TODO: Bild — Screenshot Cursor Composer mit Multi-File Edit -->
-<!-- Alt: "Cursor Composer editiert gleichzeitig mehrere Dateien in einem Projekt" -->
+![Cursor Composer editiert gleichzeitig mehrere Dateien in einem Projekt](/images/blog/claude-code-3.png)
 
 **Composer 2.0** ist der Star. Du beschreibst eine Änderung in natürlicher Sprache und Composer editiert alle betroffenen Dateien koordiniert. Routes, Controller, Tests, Docs — alles in einem Durchgang.
 
@@ -80,8 +77,7 @@ Cursor ist ein VSCode-Fork mit eingebautem KI-Gehirn. Seit dem 2.0 Update im Feb
 
 Copilot hat im Februar 2026 den Model-Picker bekommen. Du wählst jetzt zwischen Claude Opus 4.6, GPT-5.3-Codex und anderen Modellen. Direkt in deiner IDE.
 
-<!-- TODO: Bild — Screenshot GitHub Copilot Model-Picker Dropdown -->
-<!-- Alt: "GitHub Copilot Model-Picker mit Claude und GPT Optionen" -->
+![GitHub Copilot Model-Picker mit Claude und GPT Optionen](/images/blog/claude-code-4.png)
 
 **Workspace Agent** analysiert dein Repo, plant Änderungen, schreibt Code, führt Tests aus und fixt Fehler in einer Loop. Assign einen Bug → Copilot liefert einen PR.
 

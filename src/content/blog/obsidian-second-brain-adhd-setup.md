@@ -14,8 +14,7 @@ Ich hab ADHD. Mein Gehirn ist brillant darin, Dinge zu vergessen. Termine, Ideen
 
 Obsidian rettet mich. Aber nur, weil ich ein System hab, das mit meinem Gehirn arbeitet, nicht dagegen.
 
-<!-- TODO: Bild — Screenshot: Obsidian Vault mit PARA-Ordnerstruktur und Daily Note -->
-<!-- Alt: "Obsidian Vault mit 5 Ordnern (PARA) und offener Daily Note" -->
+![Obsidian Vault mit 5 Ordnern (PARA) und offener Daily Note](/images/blog/obsidian-1.png)
 
 ## Warum Obsidian und nicht Notion?
 
@@ -92,8 +91,7 @@ Statt langer Tag-Namen nutze ich Emojis. Mein ADHD-Gehirn scannt visuell, nicht 
 
 Ein Blick auf die Notiz und ich weiß sofort, was Sache ist.
 
-<!-- TODO: Bild — Screenshot: Obsidian Daily Note Template mit Top 3 und Quick Wins -->
-<!-- Alt: "Obsidian Daily Note mit Top 3 Aufgaben und Quick Wins Sektion" -->
+![Obsidian Daily Note mit Top 3 Aufgaben und Quick Wins Sektion](/images/blog/obsidian-2.png)
 
 ## Die 5 Plugins, die du brauchst
 
@@ -109,8 +107,7 @@ Nicht 40. Fünf.
 
 **5. Periodic Notes.** Automatische Daily, Weekly, Monthly Notes. Das Rückgrat des Systems.
 
-<!-- TODO: Bild — Screenshot: Dataview Query Output mit offenen Tasks -->
-<!-- Alt: "Obsidian Dataview Query zeigt offene Tasks aus allen Projekten sortiert nach Deadline" -->
+![Obsidian Dataview Query zeigt offene Tasks aus allen Projekten sortiert nach Deadline](/images/blog/obsidian-3.png)
 
 ## Dataview-Query: Mein Dashboard
 
