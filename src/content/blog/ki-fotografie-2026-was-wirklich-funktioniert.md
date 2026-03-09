@@ -2,13 +2,13 @@
 title: "KI in der Fotografie 2026: Was funktioniert, was nicht"
 slug: "ki-fotografie-2026-was-wirklich-funktioniert"
 date: "2026-03-06"
-description: "15 Jahre Fotografie-Erfahrung treffen auf KI-Tools. Lightroom, Photoshop, Luminar, Topaz — was mein Workflow wirklich verändert hat."
+description: "15 Jahre Fotografie-Erfahrung treffen auf KI-Tools. Lightroom, Photoshop, Luminar, Topaz , was mein Workflow wirklich verändert hat."
 tags: ["fotografie", "lightroom", "tools", "workflow", "tutorial"]
 category: "fotografie"
 draft: false
+heroImage: "/images/blog/ki-fotografie-1.png"
+readingTime: 4
 ---
-
-# KI in der Fotografie 2026: Was funktioniert, was nicht
 
 Ich fotografiere seit 15 Jahren. Von Spiegelreflex über Mirrorless bis Smartphone. Und die letzten zwei Jahre hat KI meinen Workflow grundlegend verändert.
 
@@ -22,7 +22,7 @@ Adobe hat KI nicht mehr als Feature, sondern als Default integriert. Drei Dinge,
 
 **Generative Remove.** Objekt markieren, KI füllt den Hintergrund auf. Nicht mehr stumpfes Klonen, sondern echte Content-Generierung. Funktioniert bei einfachen Hintergründen perfekt. Bei komplexen Szenen? Manchmal weird.
 
-**AI Masking.** Himmel, Personen, Hintergrund — ein Klick und die Maske sitzt. Vorher hab ich 10 Minuten mit dem Pinsel rumgemalt. Jetzt 3 Sekunden.
+**AI Masking.** Himmel, Personen, Hintergrund, ein Klick und die Maske sitzt. Vorher hab ich 10 Minuten mit dem Pinsel rumgemalt. Jetzt 3 Sekunden.
 
 **Denoise.** High-ISO-Rauschen weg, Details bleiben. Non-destruktiv direkt im Detail-Panel. Kein separater DNG-Export mehr nötig. Das allein hat meinen Workflow um 20% beschleunigt.
 
@@ -38,21 +38,21 @@ Und du hast jetzt die Wahl zwischen mehreren KI-Modellen: Firefly, Gemini, FLUX.
 
 ## Die Alternativen: Topaz, Luminar, DxO
 
-### Luminar Neo — Bestes Preis-Leistungs-Verhältnis
+### Luminar Neo. Bestes Preis-Leistungs-Verhältnis
 
 119€ Einmal-Kauf. Kein Abo. Portrait Bokeh AI, Face AI, Skin AI, Relight AI. Für Portrait-Fotografen richtig stark.
 
-Der neue AI Assistant (2026) lässt dich per Text beschreiben, was du willst. "Mach den Himmel dramatischer, die Haut weicher" — und Luminar setzt es um.
+Der neue AI Assistant (2026) lässt dich per Text beschreiben, was du willst. "Mach den Himmel dramatischer, die Haut weicher", und Luminar setzt es um.
 
 Schwäche: Die RAW-Engine kommt nicht an Lightroom oder DxO ran.
 
-### Topaz Photo AI — Der Spezialist
+### Topaz Photo AI. Der Spezialist
 
 Denoise und Upscaling auf einem Level, das Lightroom nicht erreicht. Plus: Super Focus rettet unscharfe Bilder, die eigentlich Müll wären.
 
 Nachteil: Seit Oktober 2025 nur noch als Subscription (~17-33$/Monat). Das nervt. Vorher gab's eine Einmal-Lizenz.
 
-### DxO PhotoLab 9 — Für Technik-Nerds
+### DxO PhotoLab 9. Für Technik-Nerds
 
 240€ Einmal-Kauf. Beste RAW-Engine auf dem Markt. DeepPRIME Noise Reduction ist legendär. Optik-Korrekturen basierend auf echten Labortest-Daten deines Objektivs.
 
@@ -85,7 +85,7 @@ Neu in Version 9: AI Masking für Himmel, Personen, Hintergründe. Endlich.
 
 **Denoise:** 10/10. Rauschen weg, Details bleiben. Das ist Magie.
 
-**Culling/Sortierung:** 10/10. Unscharfe Bilder, geschlossene Augen, Duplikate — KI erkennt das sofort.
+**Culling/Sortierung:** 10/10. Unscharfe Bilder, geschlossene Augen, Duplikate. KI erkennt das sofort.
 
 **Sky Masking:** 9/10. Nur bei feinen Haaren gegen Himmel wird es fuzzy.
 
@@ -121,7 +121,7 @@ Neu in Version 9: AI Masking für Himmel, Personen, Hintergründe. Endlich.
 
 Lustige Situation 2026: Dein iPhone macht computational photography besser als deine 3.000€-Kamera.
 
-Multi-Frame-Stacking, AI Scene Detection, Real-Time Denoise — das passiert alles im Smartphone live. Canon, Sony, Nikon? Ignorieren das komplett. Kein In-Camera-Stacking, kein AI-HDR, nix.
+Multi-Frame-Stacking, AI Scene Detection, Real-Time Denoise, das passiert alles im Smartphone live. Canon, Sony, Nikon? Ignorieren das komplett. Kein In-Camera-Stacking, kein AI-HDR, nix.
 
 OM System (Olympus) ist die Ausnahme. Die machen Computational Photography. Alle anderen? Schlafen.
 
@@ -129,10 +129,8 @@ OM System (Olympus) ist die Ausnahme. Die machen Computational Photography. Alle
 
 KI ersetzt keinen Fotografen. Aber KI erledigt 70% des technischen Handwerks. Denoise, Culling, Masking, Baseline-Edits. Das Zeug, das früher Stunden gedauert hat.
 
-Die restlichen 30% — Kreativität, Storytelling, den richtigen Moment finden — das bleibt bei dir. Und das ist der Teil, der Spaß macht.
+Die restlichen 30%. Kreativität, Storytelling, den richtigen Moment finden, das bleibt bei dir. Und das ist der Teil, der Spaß macht.
 
 ---
 
-Welche KI-Tools nutzt du bei der Bearbeitung?
-
-— TRMT
+Welche KI-Tools nutzt du bei der Bearbeitung?. TRMT

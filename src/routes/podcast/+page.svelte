@@ -13,18 +13,21 @@
 </script>
 
 <svelte:head>
-	<title>Podcast — {siteConfig.name}</title>
-	<meta name="description" content="Höre alle Episoden von {siteConfig.podcast.showName}" />
+	<title>Zum Hoeren — Audio-Zusammenfassungen | {siteConfig.name}</title>
+	<meta name="description" content="Keine Zeit zum Lesen? Hoer dir die Zusammenfassungen der Blog-Inhalte an. Perfekt fuer unterwegs." />
 </svelte:head>
 
 <!-- Header -->
 <section style="padding: 3rem 0; display: flex; flex-direction: column; gap: 1.5rem;">
 	<div>
 		<h1 style="font-size: clamp(2.5rem, 8vw, 3.5rem); font-family: var(--font-display); font-weight: var(--font-weight-extrabold); line-height: var(--line-height-tight); margin: 0; color: var(--color-text);">
-			Podcast
+			Zum Hoeren
 		</h1>
 		<p style="font-size: var(--font-size-lg); color: var(--color-text-muted); margin: 0.5rem 0 0 0; line-height: var(--line-height-relaxed);">
-			{siteConfig.podcast.showDescription}
+			Keine Zeit zum Lesen? Hier findest du Audio-Zusammenfassungen der Blog-Inhalte. Perfekt fuer unterwegs, beim Autofahren oder nebenbei.
+		</p>
+		<p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin: 0.75rem 0 0 0;">
+			Die Zusammenfassungen werden KI-gestuetzt generiert und fassen die wichtigsten Punkte der Artikel zusammen.
 		</p>
 	</div>
 
@@ -36,7 +39,7 @@
 			rel="noreferrer"
 			class="spotify-btn"
 		>
-			🎙️ Auf Spotify anhören
+			🎧 Auf Spotify anhoeren
 		</a>
 	</div>
 </section>
@@ -51,7 +54,7 @@
 		{/each}
 	{:else}
 		<div style="text-align: center; padding: 3rem; color: var(--color-text-muted); font-size: var(--font-size-lg);">
-			Keine Episoden gefunden.
+			Noch keine Episoden vorhanden. Kommt bald!
 		</div>
 	{/if}
 </section>

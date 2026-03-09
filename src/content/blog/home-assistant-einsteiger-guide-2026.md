@@ -6,9 +6,9 @@ description: "Dein Smart Home, deine Daten. Home Assistant 2026 macht den Einsti
 tags: ["smart-home", "home-assistant", "tutorial", "diy", "open-source"]
 category: "maker-projekt"
 draft: false
+heroImage: "/images/blog/home-assistant-1.png"
+readingTime: 3
 ---
-
-# Home Assistant 2026: Smart Home ohne Cloud-Zwang
 
 Alexa hört mit. Google speichert alles. Und wenn der Cloud-Server down ist, geht dein Licht nicht an.
 
@@ -108,6 +108,4 @@ Nach einem Nachmittag hast du ein funktionierendes Smart Home. Lokal, privat, er
 
 ---
 
-Welches Gerät automatisierst du als Erstes?
-
-— TRMT
+Welches Gerät automatisierst du als Erstes?. TRMT

@@ -1,15 +1,14 @@
 ---
-title: "ESP32 Projekte für dein Smart Home — 5 Builds unter 20€"
+title: "ESP32 Projekte für dein Smart Home , 5 Builds unter 20€"
 slug: "esp32-smart-home-projekte-unter-20-euro"
 date: "2026-03-06"
 description: "5 ESP32-Projekte mit ESPHome und Home Assistant. Temperatur-Sensor, Bewegungsmelder, Pflanzen-Bewässerung. Alle unter 20€. Mit Teilelisten und Code."
 tags: ["smart-home", "home-assistant", "arduino", "esp32", "diy", "maker"]
 category: "maker-projekt"
 draft: false
-readingTime: 15
+heroImage: "/images/blog/esp32-1.png"
+readingTime: 4
 ---
-
-# ESP32 Projekte für dein Smart Home — 5 Builds unter 20€
 
 Ein ESP32 Board kostet 3€. Ein Temperatursensor 1,50€. Zusammen mit ESPHome und Home Assistant hast du in 20 Minuten einen smarten Raumsensor, der keine Cloud braucht.
 
@@ -232,6 +231,4 @@ Das erste Projekt dauert 30 Minuten. Danach bist du süchtig.
 
 ---
 
-Welches Projekt baust du zuerst? Temperatur-Sensor oder direkt die Pflanzenbewässerung?
-
-— TRMT
+Welches Projekt baust du zuerst? Temperatur-Sensor oder direkt die Pflanzenbewässerung?. TRMT

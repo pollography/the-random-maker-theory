@@ -13,10 +13,9 @@
 		<div class="legal-block">
 			<h2>1. Verantwortlicher</h2>
 			<p>
-				<!-- WICHTIG: Vor Go-Live mit echten Daten befüllen -->
-				[Vorname Nachname]<br />
-				[Straße Hausnummer]<br />
-				[PLZ Ort]<br />
+				Christoph Poloczek<br />
+				Sakrower Landstraße 59A<br />
+				14089 Berlin<br />
 				E-Mail: hello@therandommakertheory.com
 			</p>
 		</div>
@@ -76,7 +75,17 @@
 		</div>
 
 		<div class="legal-block">
-			<h2>8. Änderungen</h2>
+			<h2>8. Einsatz von kuenstlicher Intelligenz</h2>
+			<p>
+				Diese Website nutzt KI-Werkzeuge (u.a. Claude, ChatGPT, Google Gemini) zur Unterstuetzung bei der Inhaltserstellung. Dazu gehoeren Recherche, Text-Zusammenfassungen, Bildgenerierung und Audio-Generierung. Es werden keine personenbezogenen Daten der Websitebesucher an KI-Dienste uebermittelt.
+			</p>
+			<p>
+				Die KI-generierten Inhalte werden redaktionell geprueft. Die redaktionelle Verantwortung verbleibt beim Betreiber.
+			</p>
+		</div>
+
+		<div class="legal-block">
+			<h2>9. Aenderungen</h2>
 			<p>
 				Ich behalte mir vor, diese Datenschutzerklärung bei Bedarf anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.
 			</p>

@@ -7,7 +7,7 @@
 	<div class="confirm-icon">✓</div>
 	<h1 class="confirm-title">Du bist drin.</h1>
 	<p class="confirm-text">
-		Deine E-Mail ist bestätigt. Ab jetzt kriegst du jeden Donnerstag das Beste aus Tech, KI und Maker-Welt direkt in dein Postfach.
+		Deine E-Mail ist bestätigt. Ab jetzt kriegst du das Beste aus Tech, KI und Maker-Welt direkt in dein Postfach.
 	</p>
 	<a href="/" class="confirm-btn">Zurück zur Startseite</a>
 </section>

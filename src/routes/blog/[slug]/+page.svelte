@@ -26,6 +26,11 @@
 	<meta name="description" content={data.post.description} />
 	<meta property="og:title" content={data.post.title} />
 	<meta property="og:description" content={data.post.description} />
+	{#if data.post.heroImage}
+		<meta property="og:image" content={`https://therandommakertheory.com${data.post.heroImage}`} />
+		<meta name="twitter:image" content={`https://therandommakertheory.com${data.post.heroImage}`} />
+		<meta name="twitter:card" content="summary_large_image" />
+	{/if}
 	<meta name="twitter:title" content={data.post.title} />
 	<meta name="twitter:description" content={data.post.description} />
 </svelte:head>
@@ -60,6 +65,13 @@
 		{/if}
 	</header>
 
+	<!-- Hero Image -->
+	{#if data.post.heroImage}
+		<div class="hero-image">
+			<img src={data.post.heroImage} alt={data.post.title} loading="eager" />
+		</div>
+	{/if}
+
 	<!-- Content -->
 	<div class="prose prose-invert max-w-none article-content">
 		{#if data.content}
@@ -91,8 +103,10 @@
 	}
 
 	.article-content {
-		color: var(--color-text);
-		line-height: var(--line-height-relaxed);
+		color: var(--color-text-muted, hsl(0 0% 78%));
+		line-height: 1.8;
+		font-size: 1.0625rem;
+		max-width: 65ch;
 	}
 
 	:global(.prose code) {
@@ -143,13 +157,15 @@
 	:global(.prose h4) {
 		font-family: var(--font-display);
 		color: var(--color-text);
-		margin-top: 2rem;
+		margin-top: 2.5rem;
 		margin-bottom: 1rem;
 	}
 
 	:global(.prose h2) {
 		font-size: var(--font-size-2xl);
 		font-weight: var(--font-weight-bold);
+		padding-bottom: 0.5rem;
+		border-bottom: 1px solid var(--color-border-subtle, hsla(0, 0%, 100%, 0.06));
 	}
 
 	:global(.prose h3) {
@@ -158,17 +174,48 @@
 	}
 
 	:global(.prose p) {
-		margin-bottom: 1.25rem;
+		margin-bottom: 1.5rem;
 	}
 
 	:global(.prose ul),
 	:global(.prose ol) {
-		margin-bottom: 1.25rem;
+		margin-bottom: 1.5rem;
 		padding-left: 2rem;
 	}
 
 	:global(.prose li) {
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.625rem;
+		line-height: 1.7;
+	}
+
+	:global(.prose strong) {
+		color: var(--color-text);
+		font-weight: 600;
+	}
+
+	:global(.prose img) {
+		border-radius: var(--radius-lg);
+		margin: 2rem 0;
+		max-width: 100%;
+		height: auto;
+	}
+
+	:global(.prose hr) {
+		border: none;
+		border-top: 1px solid var(--color-border-subtle, hsla(0, 0%, 100%, 0.06));
+		margin: 2.5rem 0;
+	}
+
+	.hero-image {
+		margin-bottom: 2.5rem;
+		border-radius: var(--radius-xl);
+		overflow: hidden;
+	}
+
+	.hero-image img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 
 	@media (max-width: 768px) {

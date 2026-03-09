@@ -13,10 +13,9 @@
 		<div class="legal-block">
 			<h2>Verantwortlich für den Inhalt</h2>
 			<p>
-				<!-- WICHTIG: Vor Go-Live mit echten Daten befüllen -->
-				[Vorname Nachname]<br />
-				[Straße Hausnummer]<br />
-				[PLZ Ort]<br />
+				Christoph Poloczek<br />
+				Sakrower Landstraße 59A<br />
+				14089 Berlin<br />
 				Deutschland
 			</p>
 		</div>
@@ -25,6 +24,13 @@
 			<h2>Kontakt</h2>
 			<p>
 				E-Mail: hello@therandommakertheory.com
+			</p>
+		</div>
+
+		<div class="legal-block">
+			<h2>Hinweis zu KI-gestuetzten Inhalten</h2>
+			<p>
+				Diese Website nutzt kuenstliche Intelligenz als Werkzeug bei der Erstellung von Inhalten. Dazu gehoeren Recherche-Unterstuetzung, Text-Zusammenfassungen, Audio-Generierung und Bildgenerierung. Alle Inhalte werden redaktionell geprueft und kuratiert. Die redaktionelle Verantwortung liegt beim Betreiber.
 			</p>
 		</div>
 

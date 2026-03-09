@@ -6,9 +6,9 @@ description: "Bambu Lab, Creality oder Elegoo? FDM oder Resin? Ich zeig dir, wel
 tags: ["3d-druck", "maker", "diy", "kaufberatung", "tutorial"]
 category: "maker-projekt"
 draft: false
+heroImage: "/images/blog/3d-druck-1.png"
+readingTime: 3
 ---
-
-# 3D-Druck 2026: Welcher Drucker für Maker-Einsteiger?
 
 Du willst dir Sachen drucken. Handy-Halter, Kabelorganizer, Ersatzteile, vielleicht ein Custom-Gehäuse für dein Projekt. Geil. Aber welchen Drucker kaufst du?
 
@@ -34,19 +34,19 @@ Aber: Du brauchst Handschuhe, eine Maske, gute Belüftung. Die Teile sind spröd
 
 ## Die 3 besten Budget-Drucker unter 300€
 
-### Bambu Lab A1 Mini — Plug and Play
+### Bambu Lab A1 Mini. Plug and Play
 
 Auspacken, anschalten, drucken. Automatisches Bed-Leveling, Belt-Tension, Flow-Adjustment. Alles automatisch.
 
 Optional mit AMS Lite für Multi-Color-Druck. Wenn du keinen Bock auf Kalibrierung hast: das ist dein Drucker.
 
-### Creality Ender 3 V3 — Der Allrounder (~189€)
+### Creality Ender 3 V3. Der Allrounder (~189€)
 
 Der Volkswagen unter den 3D-Druckern. Zuverlässig, riesige Community, endlos moddbar. Wenn du gerne rumschraubst und optimierst: perfekt.
 
 Gibt es auch in verschiedenen Varianten. Der V3 ist der aktuelle Sweet Spot zwischen Preis und Features.
 
-### Elegoo Centauri Carbon — Der Schnelle
+### Elegoo Centauri Carbon. Der Schnelle
 
 500mm/s maximale Druckgeschwindigkeit. Vollgehäuse, automatische Kalibrierung, eingebaute Kamera. Wenn dir Speed wichtig ist.
 
@@ -54,19 +54,19 @@ Gibt es auch in verschiedenen Varianten. Der V3 ist der aktuelle Sweet Spot zwis
 
 Der Slicer nimmt dein 3D-Modell und macht druckfertige Anweisungen draus.
 
-**Cura** — Kostenlos, einfach, unterstützt 100+ Drucker. Bester Einstieg.
+**Cura**. Kostenlos, einfach, unterstützt 100+ Drucker. Bester Einstieg.
 
-**OrcaSlicer** — Für Fortgeschrittene. Basiert auf PrusaSlicer, aber moderner. Optimiert für Bambu Lab und CoreXY-Drucker.
+**OrcaSlicer**. Für Fortgeschrittene. Basiert auf PrusaSlicer, aber moderner. Optimiert für Bambu Lab und CoreXY-Drucker.
 
-**Bambu Studio** — Nur für Bambu-Drucker. Multi-Color-Automation. Wenn du einen Bambu hast: nimm das.
+**Bambu Studio**. Nur für Bambu-Drucker. Multi-Color-Automation. Wenn du einen Bambu hast: nimm das.
 
 ## Wo findest du kostenlose 3D-Modelle?
 
-**Printables.com** — 1,5 Millionen+ Modelle. Von Prusa Research. Gut kuratiert, aktive Community. Mein Go-to.
+**Printables.com** , 1,5 Millionen+ Modelle. Von Prusa Research. Gut kuratiert, aktive Community. Mein Go-to.
 
-**MakerWorld.com** — Von Bambu Lab. Spezialisiert auf Multi-Color-Modelle. Sauberes Interface.
+**MakerWorld.com**. Von Bambu Lab. Spezialisiert auf Multi-Color-Modelle. Sauberes Interface.
 
-**Thingiverse.com** — Der Klassiker. Riesige Auswahl, aber auch viel Müll dazwischen. Der Customizer ist trotzdem geil: Parameter anpassen, individuelles Modell generieren.
+**Thingiverse.com**. Der Klassiker. Riesige Auswahl, aber auch viel Müll dazwischen. Der Customizer ist trotzdem geil: Parameter anpassen, individuelles Modell generieren.
 
 ![Cura Slicer Software mit 3D Benchy auf der Build Plate](/images/blog/3d-druck-3.png)
 
@@ -112,6 +112,4 @@ Laufende Kosten danach: 30-80€ pro Monat für Filament, je nachdem wie viel du
 
 ---
 
-Was druckst du als Erstes? Praktisch oder Fun?
-
-— TRMT
+Was druckst du als Erstes? Praktisch oder Fun?. TRMT

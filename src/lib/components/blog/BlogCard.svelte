@@ -15,6 +15,13 @@
 
 <Card href="/blog/{post.slug}" variant="interactive">
 	<div class="space-y-3">
+		<!-- Thumbnail -->
+		{#if post.heroImage}
+			<div class="card-thumbnail">
+				<img src={post.heroImage} alt={post.title} loading="lazy" />
+			</div>
+		{/if}
+
 		<!-- Date and reading time -->
 		<div class="flex items-center justify-between text-xs text-text-muted">
 			<time datetime={post.date}>{formattedDate}</time>
@@ -53,5 +60,23 @@
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+	}
+
+	.card-thumbnail {
+		border-radius: var(--radius-lg, 0.75rem);
+		overflow: hidden;
+		aspect-ratio: 16 / 9;
+		margin: -1.5rem -1.5rem 0 -1.5rem;
+	}
+
+	.card-thumbnail img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	:global(.card:hover) .card-thumbnail img {
+		transform: scale(1.03);
 	}
 </style>

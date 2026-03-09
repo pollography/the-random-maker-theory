@@ -1,15 +1,14 @@
 ---
-title: "KI-Video-Tools 2026: Sora, Runway, Kling — was taugt wirklich?"
+title: "KI-Video-Tools 2026: Sora, Runway, Kling , was taugt wirklich?"
 slug: "ki-video-tools-2026-sora-runway-kling"
 date: "2026-03-06"
 description: "Sora 2, Runway Gen-4.5, Kling 3.0, Pika 2.5 im Praxistest. Welches KI-Video-Tool lohnt sich für Creator? Preise, Qualität, ehrliche Bewertung."
 tags: ["tools", "tutorial", "fotografie", "workflow"]
 category: "ki-tools"
 draft: false
-readingTime: 14
+heroImage: "/images/blog/ki-video-1.png"
+readingTime: 4
 ---
-
-# KI-Video-Tools 2026: Sora, Runway, Kling — was taugt wirklich?
 
 Text rein, Video raus. Das ist der Pitch. Aber wie gut ist die Realität?
 
@@ -82,7 +81,7 @@ Pika generiert Videos in 30-90 Sekunden. Turbo-Modus: 12 Sekunden. Das ist 10x s
 
 **Preis:** Ab 8$/Mo. Free Tier nutzbar.
 
-**Fazit:** Perfekt für Social Media. TikTok, Reels, Shorts — schnell generieren, schnell posten.
+**Fazit:** Perfekt für Social Media. TikTok, Reels, Shorts, schnell generieren, schnell posten.
 
 ## Qualitäts-Ranking
 
@@ -148,6 +147,4 @@ Das ist +30-50% Pricing für deine Kunden, ohne zusätzliche Hardware.
 
 ---
 
-Welches KI-Video-Tool nutzt du? Oder ist das alles noch zu "uncanny valley" für dich?
-
-— TRMT
+Welches KI-Video-Tool nutzt du? Oder ist das alles noch zu "uncanny valley" für dich?. TRMT

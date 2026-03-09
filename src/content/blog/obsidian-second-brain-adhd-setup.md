@@ -1,14 +1,14 @@
 ---
-title: "Obsidian als Second Brain — Mein ADHD-Setup 2026"
+title: "Obsidian als Second Brain , Mein ADHD-Setup 2026"
 slug: "obsidian-second-brain-adhd-setup"
 date: "2026-03-06"
 description: "Obsidian ist geil, aber mit ADHD auch schnell chaotisch. Mein Setup mit Daily Notes, Emoji-Tags und Dataview-Queries. Copy-Paste-ready."
 tags: ["obsidian", "produktivitaet", "workflow", "notion", "tools"]
 category: "produktivitaet"
 draft: false
+heroImage: "/images/blog/obsidian-1.png"
+readingTime: 4
 ---
-
-# Obsidian als Second Brain — Mein ADHD-Setup 2026
 
 Ich hab ADHD. Mein Gehirn ist brillant darin, Dinge zu vergessen. Termine, Ideen, wo ich letzte Woche aufgehört hab. Alles weg.
 
@@ -97,7 +97,7 @@ Ein Blick auf die Notiz und ich weiß sofort, was Sache ist.
 
 Nicht 40. Fünf.
 
-**1. Dataview.** Queries über deinen Vault. "Zeig mir alle offenen Tasks aus Projects" — automatisch, immer aktuell.
+**1. Dataview.** Queries über deinen Vault. "Zeig mir alle offenen Tasks aus Projects", automatisch, immer aktuell.
 
 **2. Templater.** Templates mit Logik. Daily Notes, Projekt-Templates, Meeting-Notes. Immer gleicher Aufbau, null Aktivierungsenergie.
 
@@ -157,6 +157,4 @@ Das perfekte System gibt es nicht. Aber ein funktionierendes System schlägt kei
 
 ---
 
-Wie organisierst du dein Wissen? Notion-Fan? Zettelkasten-Nerd? Oder einfach Chaos?
-
-— TRMT
+Wie organisierst du dein Wissen? Notion-Fan? Zettelkasten-Nerd? Oder einfach Chaos?. TRMT

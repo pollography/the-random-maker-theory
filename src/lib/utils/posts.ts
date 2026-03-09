@@ -33,7 +33,7 @@ export async function getPosts(): Promise<Post[]> {
 				category: metadata.category || 'general',
 				heroImage: metadata.heroImage,
 				draft: metadata.draft || false,
-				readingTime: calculateReadingTime(module.default?.toString() || ''),
+				readingTime: metadata.readingTime || calculateReadingTime(module.default?.toString() || ''),
 			});
 		}
 	}

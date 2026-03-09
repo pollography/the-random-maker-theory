@@ -2,14 +2,13 @@
 title: "Lokale KI auf deinem Rechner: Ollama, LM Studio und Open-Source-Modelle 2026"
 slug: "lokale-ki-ollama-lm-studio-2026"
 date: "2026-03-06"
-description: "DeepSeek, Llama, Mistral, Qwen — alles lokal, alles privat, alles kostenlos nach Setup. Welche Hardware du brauchst und wie du loslegst."
+description: "DeepSeek, Llama, Mistral, Qwen , alles lokal, alles privat, alles kostenlos nach Setup. Welche Hardware du brauchst und wie du loslegst."
 tags: ["tools", "open-source", "tutorial"]
 category: "ki-tools"
 draft: false
-readingTime: 13
+heroImage: "/images/blog/lokale-ki-1.png"
+readingTime: 4
 ---
-
-# Lokale KI auf deinem Rechner: Ollama, LM Studio und Open-Source-Modelle 2026
 
 Jeder Prompt, den du an ChatGPT schickst, landet auf einem Server in den USA. Jedes Code-Snippet, jeder private Text, jede Geschäftsidee.
 
@@ -36,13 +35,13 @@ Oder du lässt die KI auf deinem eigenen Rechner laufen. Lokal. Privat. Offline.
 
 ## Die besten Open-Source-Modelle 2026
 
-### Meta Llama 3.x — Der Allrounder
+### Meta Llama 3.x. Der Allrounder
 
 Llama 3.1 in 8B, 70B und 405B Parametern. Das 8B-Modell läuft auf praktisch jedem Gaming-PC mit 6GB VRAM. 128K Context Window.
 
 Bestes Allround-Modell für Coding, Writing, Reasoning. Quasi der "GPT-3.5 Killer" in Open Source.
 
-### DeepSeek V3.2 — Der Game-Changer
+### DeepSeek V3.2. Der Game-Changer
 
 685 Milliarden Parameter, 128K Context, MIT-Lizenz. Das Modell aus China, das die gesamte KI-Branche wachgerüttelt hat.
 
@@ -50,25 +49,25 @@ Bestes Allround-Modell für Coding, Writing, Reasoning. Quasi der "GPT-3.5 Kille
 
 **Lokal:** Braucht erhebliche Hardware (70B+ Quantized Version ist machbar mit 40GB VRAM).
 
-### Mistral Large 3 — Der Europäer
+### Mistral Large 3. Der Europäer
 
 41B aktive Parameter (675B total, Sparse MoE). Apache 2.0 Lizenz. Dezember 2025 Release.
 
 Trainiert auf 3000 NVIDIA H200 GPUs. Top-Performance unter den frei verfügbaren Modellen.
 
-### Qwen 3.5 — Der Preisbrecher
+### Qwen 3.5. Der Preisbrecher
 
 Von Alibaba. 0.5B bis 72B. Das 7B und 14B Modell sind der Sweet Spot für Consumer-Hardware.
 
 Kostenlos, kommerziell nutzbar, GPT-3.5-Level. Für Coding und multilinguales Arbeiten stark.
 
-### Google Gemma 2 — Der Kompakte
+### Google Gemma 2. Der Kompakte
 
 9B und 27B Parameter. Das 27B-Modell schlägt Modelle, die doppelt so groß sind.
 
 Läuft sogar auf CPU (mit gemma.cpp). Perfekt für Systeme ohne dedizierte GPU.
 
-### Microsoft Phi-4 — Der Spezialist
+### Microsoft Phi-4. Der Spezialist
 
 15B Parameter mit Reasoning-Focus. Stark in Mathe, Wissenschaft, Chart-Analyse.
 
@@ -91,11 +90,11 @@ MIT-Lizenz. Multimodal (Text + Bild).
 
 ### GPU-Empfehlungen
 
-**NVIDIA RTX 4090** (24 GB) — Top für Single-GPU. Alle Modelle bis 34B in voller Qualität.
+**NVIDIA RTX 4090** (24 GB). Top für Single-GPU. Alle Modelle bis 34B in voller Qualität.
 
-**AMD RX 7900 XTX** (24 GB) — Günstiger als NVIDIA, ROCm-Support wird 2026 besser.
+**AMD RX 7900 XTX** (24 GB). Günstiger als NVIDIA, ROCm-Support wird 2026 besser.
 
-**Apple Silicon M3 Pro/Max** — Unified Memory Advantage. 36 GB+ reicht für 70B Modelle.
+**Apple Silicon M3 Pro/Max**. Unified Memory Advantage. 36 GB+ reicht für 70B Modelle.
 
 ### Der Quantization-Trick
 
@@ -206,6 +205,4 @@ Kosten nach GPU-Investment: ~40€/Monat Strom. Dafür: unbegrenzte, private, of
 
 ---
 
-Hast du schon mal lokale KI ausprobiert? Oder ist Cloud noch bequemer?
-
-— TRMT
+Hast du schon mal lokale KI ausprobiert? Oder ist Cloud noch bequemer?. TRMT

@@ -12,10 +12,10 @@ export const siteConfig = {
 		instagram: 'https://instagram.com/therandommakertheory',
 		twitter: 'https://x.com/randommakertheory',
 	},
-	podcast: {
-		showName: 'The Random Maker Theory',
+	audio: {
+		showName: 'TRMT Audio',
 		showDescription:
-			'Deine wöchentliche Dosis Tech, KI und Maker-Content. Smart, locker, kein Bullshit.',
+			'Keine Zeit zum Lesen? Audio-Zusammenfassungen der Blog-Inhalte. Perfekt fuer unterwegs.',
 		author: 'TRMT',
 		email: 'hello@therandommakertheory.com',
 	},

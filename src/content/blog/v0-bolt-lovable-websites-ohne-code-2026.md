@@ -1,15 +1,14 @@
 ---
-title: "v0, Bolt, Lovable & Co — Websites bauen ohne Code 2026"
+title: "v0, Bolt, Lovable & Co , Websites bauen ohne Code 2026"
 slug: "v0-bolt-lovable-websites-ohne-code-2026"
 date: "2026-03-06"
 description: "Text rein, App raus. v0, Bolt.new und Lovable im Vergleich. Was können die KI-App-Builder wirklich? Preise, Limits, ehrliche Bewertung."
 tags: ["tools", "tutorial", "automatisierung"]
 category: "ki-tools"
 draft: false
-readingTime: 11
+heroImage: "/images/blog/v0-bolt-1.png"
+readingTime: 4
 ---
-
-# v0, Bolt, Lovable & Co — Websites bauen ohne Code 2026
 
 "Beschreibe deine App und wir bauen sie." Das ist der Pitch von v0, Bolt und Lovable. Und 2026 funktioniert das tatsächlich. Irgendwie.
 
@@ -124,6 +123,4 @@ Niemals KI-generierten Code direkt in Production deployen. Besonders nicht für 
 
 ---
 
-Hast du schon mal mit einem KI-App-Builder was gebaut? Was kam dabei raus?
-
-— TRMT
+Hast du schon mal mit einem KI-App-Builder was gebaut? Was kam dabei raus?. TRMT

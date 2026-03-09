@@ -1,14 +1,14 @@
 ---
-title: "n8n: Automatisierung ohne Code — Der Anfänger-Guide 2026"
+title: "n8n: Automatisierung ohne Code , Der Anfänger-Guide 2026"
 slug: "n8n-automatisierung-fuer-anfaenger"
 date: "2026-03-06"
 description: "n8n 2.0 ist da. Ich zeig dir 5 Automationen, die du heute Abend noch aufsetzen kannst. Kostenlos, self-hosted, kein Code nötig."
 tags: ["n8n", "automatisierung", "tools", "tutorial", "open-source"]
 category: "automatisierung"
 draft: false
+heroImage: "/images/blog/n8n-automatisierung-1.png"
+readingTime: 3
 ---
-
-# n8n: Automatisierung ohne Code — Der Anfänger-Guide 2026
 
 Stell dir vor, du baust dir einen digitalen Assistenten, der deine nervigsten Aufgaben erledigt. RSS-Feeds checken, Social-Media-Posts vorbereiten, Formulare in Tabellen schieben. Alles automatisch. Ohne eine Zeile Code.
 
@@ -118,6 +118,4 @@ Die Lernkurve ist fair. Nach zwei Stunden hast du das Prinzip verstanden. Nach e
 
 ---
 
-Welche nervige Aufgabe automatisierst du als Erstes?
-
-— TRMT
+Welche nervige Aufgabe automatisierst du als Erstes?. TRMT

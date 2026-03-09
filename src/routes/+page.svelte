@@ -24,7 +24,7 @@
 
 	<!-- OpenGraph -->
 	<meta property="og:title" content="The Random Maker Theory — Tech, KI, Maker & Produktivität" />
-	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität — erklärt so, dass du es verstehst. Jeden Donnerstag neu." />
+	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität. Erkunden. Testen. Bauen. Immer up to date." />
 	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://therandommakertheory.com" />
@@ -34,7 +34,7 @@
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="The Random Maker Theory" />
-	<meta name="twitter:description" content="Tech, KI, Maker & Produktivität — ohne Bullshit. Jeden Donnerstag neu." />
+	<meta name="twitter:description" content="Tech, KI, Maker & Produktivität. Erkunden. Testen. Bauen. Immer up to date." />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 
 	<!-- Canonical -->
@@ -61,10 +61,10 @@
 <section class="hero">
 	<div class="hero-badge">Tech, KI, Maker & Produktivität</div>
 	<h1 class="hero-title">The Random<br/>Maker Theory</h1>
-	<p class="hero-subtitle">Erkunden. Testen. Bauen. Jeden Donnerstag neu.</p>
+	<p class="hero-subtitle">Erkunden. Testen. Bauen. Immer up to date.</p>
 	<div class="hero-actions">
 		<a href="/blog" class="btn-honey">Zum Blog</a>
-		<a href="/podcast" class="btn-teal">Zum Podcast</a>
+		<a href="/podcast" class="btn-teal">Zum Hoeren</a>
 	</div>
 </section>
 

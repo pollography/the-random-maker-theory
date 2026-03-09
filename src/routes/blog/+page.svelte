@@ -14,7 +14,7 @@
 
 <svelte:head>
 	<title>Blog — Tech, KI, Maker & Produktivität | TRMT</title>
-	<meta name="description" content="Alle Blog-Posts von The Random Maker Theory: Tech-News, KI-Tools, Maker-Projekte, Produktivitäts-Tutorials und Deep Dives. Jeden Donnerstag neu." />
+	<meta name="description" content="Alle Blog-Posts von The Random Maker Theory: Tech-News, KI-Tools, Maker-Projekte, Produktivitäts-Tutorials und Deep Dives. Immer aktuell." />
 	<meta property="og:title" content="Blog — The Random Maker Theory" />
 	<meta property="og:description" content="Tech, KI, Maker & Produktivität — verständlich erklärt." />
 	<meta property="og:url" content="https://therandommakertheory.com/blog" />

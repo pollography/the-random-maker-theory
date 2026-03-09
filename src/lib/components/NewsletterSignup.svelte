@@ -38,7 +38,7 @@
 		<div class="newsletter-content">
 			<h3 class="newsletter-title">Newsletter</h3>
 			<p class="newsletter-desc">
-				Jeden Donnerstag: Die besten Tech-Finds der Woche. Kein Spam. Kein Bullshit.
+				Die besten Tech-Finds, direkt in dein Postfach. Kein Spam. Kein Bullshit.
 			</p>
 		</div>
 

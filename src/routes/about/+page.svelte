@@ -3,10 +3,10 @@
 </script>
 
 <svelte:head>
-	<title>Über mich — The Random Maker Theory</title>
-	<meta name="description" content="Wer steckt hinter TRMT? Ich erkläre Tech, KI, Maker-Projekte und Produktivität in echten Worten. Ohne Buzzword-Bullshit." />
+	<title>Über TRMT — Tech, KI, Maker-Projekte & mehr</title>
+	<meta name="description" content="Hier erfährst du mehr über Tech, KI-News, Maker-Projekte, Tutorials und Produktivitäts-Hacks. Ein Solo-Projekt, gebaut aus echtem Interesse." />
 	<meta property="og:title" content="Über The Random Maker Theory" />
-	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität. Erkunden. Testen. Bauen." />
+	<meta property="og:description" content="Tech, KI, Maker-Projekte und Produktivität. Erkunden. Testen. Bauen." />
 	<meta property="og:url" content="https://therandommakertheory.com/about" />
 	<link rel="canonical" href="https://therandommakertheory.com/about" />
 </svelte:head>
@@ -15,52 +15,95 @@
 	<!-- Header -->
 	<div style="margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border);">
 		<h1 style="font-size: clamp(2rem, 6vw, 3.5rem); font-family: var(--font-display); font-weight: var(--font-weight-extrabold); line-height: var(--line-height-tight); margin: 0 0 1rem 0; color: var(--color-text);">
-			Über The Random Maker Theory
+			Was ist The Random Maker Theory?
 		</h1>
 		<p style="font-size: var(--font-size-lg); color: var(--color-text-muted); margin: 0; line-height: var(--line-height-relaxed);">
-			Ich erkläre Tech, KI und Maker-Projekte in echten Worten.
+			Tech, KI, Maker-Projekte und Produktivität. Verständlich aufbereitet, ehrlich bewertet.
 		</p>
 	</div>
 
 	<!-- Content -->
 	<div style="display: flex; flex-direction: column; gap: 2.5rem;">
-		<!-- Section 1 -->
+		<!-- Section 1: Die Story -->
 		<div>
 			<h2 style="font-size: var(--font-size-2xl); font-family: var(--font-display); font-weight: var(--font-weight-bold); margin: 0 0 1rem 0; color: var(--color-text);">
-				Was ist TRMT?
+				Die kurze Version
 			</h2>
+			<p style="color: var(--color-text-muted); line-height: var(--line-height-relaxed); margin: 0 0 1rem 0; font-size: var(--font-size-base);">
+				Ich hab diese Seite gebaut, weil ich sowas gebuendelt einfach nirgendwo gefunden hab. Nicht in meinem Stil, nicht in meiner Sprache, nicht mit dem Fokus auf die Sachen, die mich wirklich interessieren.
+			</p>
 			<p style="color: var(--color-text-muted); line-height: var(--line-height-relaxed); margin: 0; font-size: var(--font-size-base);">
-				The Random Maker Theory ist dein wöchentliches Update zu Tech, KI, Maker-Projekten und Produktivität. Ich schreibe über neue Tools, teste Workflows und zeige dir praktische Tutorials. Ohne Buzzword-Bullshit.
+				Also hab ich es halt selber gemacht. TRMT ist mein persoenliches Tech-Notizbuch, das ich oeffentlich fuehre. Ich recherchiere, teste, bewerte und schreibe alles zusammen, damit ich selber immer up to date bleibe. Und weil es wahrscheinlich anderen genauso geht, hab ich beschlossen, das Ganze nicht nur fuer mich zu behalten.
 			</p>
 		</div>
 
-		<!-- Section 2 -->
+		<!-- Section 2: Was du hier findest -->
+		<div>
+			<h2 style="font-size: var(--font-size-2xl); font-family: var(--font-display); font-weight: var(--font-weight-bold); margin: 0 0 1rem 0; color: var(--color-text);">
+				Was du hier findest
+			</h2>
+			<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+				<div class="pillar-card">
+					<div class="pillar-icon">🤖</div>
+					<div class="pillar-title">KI & Tech-News</div>
+					<div class="pillar-desc">Tool-Reviews, Vergleiche und News-Roundups. Was funktioniert, was nicht.</div>
+				</div>
+				<div class="pillar-card">
+					<div class="pillar-icon">⚡</div>
+					<div class="pillar-title">Automatisierung</div>
+					<div class="pillar-desc">n8n, Obsidian, Notion und andere Workflows, die dir Zeit sparen.</div>
+				</div>
+				<div class="pillar-card">
+					<div class="pillar-icon">🔧</div>
+					<div class="pillar-title">DIY & Maker</div>
+					<div class="pillar-desc">ESP32, Home Assistant, 3D-Druck. Hands-on Projekte.</div>
+				</div>
+				<div class="pillar-card">
+					<div class="pillar-icon">📸</div>
+					<div class="pillar-title">Fotografie & Kreatives</div>
+					<div class="pillar-desc">KI in der Fotografie, Lightroom Workflows, Bildbearbeitung.</div>
+				</div>
+				<div class="pillar-card">
+					<div class="pillar-icon">🧠</div>
+					<div class="pillar-title">Learnings</div>
+					<div class="pillar-desc">ADHS-Hacks, Produktivitaet, Freelancer-Alltag.</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Section 3: Wer dahinter steckt -->
 		<div>
 			<h2 style="font-size: var(--font-size-2xl); font-family: var(--font-display); font-weight: var(--font-weight-bold); margin: 0 0 1rem 0; color: var(--color-text);">
 				Wer steckt dahinter?
 			</h2>
+			<p style="color: var(--color-text-muted); line-height: var(--line-height-relaxed); margin: 0 0 1rem 0; font-size: var(--font-size-base);">
+				Ich bin Pollo. 15 Jahre Fotograf, seit immer Tech-Enthusiast, ADHS als Feature. Ich komme aus der Ecke Social Media, Community und Content. Ich bin kein Programmierer im klassischen Sinne, aber ich bau Sachen. Mit KI, mit Tools, mit whatever funktioniert.
+			</p>
 			<p style="color: var(--color-text-muted); line-height: var(--line-height-relaxed); margin: 0; font-size: var(--font-size-base);">
-				15 Jahre Erfahrung in Fotografie, Social Media und Community. Ich bau digitale Produkte, automatisiere Workflows und teste jeden Tag neue Tech-Tools. TRMT ist mein Solo-Projekt, unterstützt von KI als Werkzeug.
+				TRMT ist ein Solo-Projekt. Kein Team, kein Publisher, keine Agenda. Einfach ehrliches Interesse an Tech und der Drang, Dinge auszuprobieren und darueber zu schreiben.
 			</p>
 		</div>
 
-		<!-- Section 3 -->
-		<div>
+		<!-- Section 4: Transparenz -->
+		<div style="padding: 1.5rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl);">
 			<h2 style="font-size: var(--font-size-2xl); font-family: var(--font-display); font-weight: var(--font-weight-bold); margin: 0 0 1rem 0; color: var(--color-text);">
-				Warum TRMT?
+				Transparenz: KI als Werkzeug
 			</h2>
+			<p style="color: var(--color-text-muted); line-height: var(--line-height-relaxed); margin: 0 0 1rem 0; font-size: var(--font-size-base);">
+				Ich arbeite aktiv mit KI. Recherche, Zusammenfassungen, Bilder, Code. Ich nutze Claude, ChatGPT, Gemini und andere Tools als Werkzeuge. Genau wie ein Fotograf Lightroom nutzt oder ein Entwickler eine IDE.
+			</p>
 			<p style="color: var(--color-text-muted); line-height: var(--line-height-relaxed); margin: 0; font-size: var(--font-size-base);">
-				Die Tech-Landschaft ändert sich täglich. Ich mach das verständlich. Nicht für Hardcore-Devs, sondern für Menschen, die einfach wissen wollen, was grad los ist und wie sie Tech praktisch nutzen können.
+				Aber: Ich kontrolliere, bewerte und kuratiere alles selbst. Die Meinungen sind meine, die Fehler auch. KI ist das Werkzeug, nicht der Autor.
 			</p>
 		</div>
 
-		<!-- Section 4 -->
+		<!-- Section 5: Audio -->
 		<div>
 			<h2 style="font-size: var(--font-size-2xl); font-family: var(--font-display); font-weight: var(--font-weight-bold); margin: 0 0 1rem 0; color: var(--color-text);">
-				Meine Mission
+				Keine Zeit zum Lesen?
 			</h2>
 			<p style="color: var(--color-text-muted); line-height: var(--line-height-relaxed); margin: 0; font-size: var(--font-size-base);">
-				Tech und KI für alle zugänglich machen. Jede Woche neuer Content. Blog-Posts, Podcast-Episoden, Tutorials. Alles transparent, hilfreich und locker.
+				Zu den meisten Themen gibt es Audio-Zusammenfassungen. Kein Podcast im klassischen Sinne, sondern KI-generierte Zusammenfassungen der Blog-Inhalte. Perfekt fuer unterwegs, beim Autofahren oder nebenbei. Du findest sie unter <a href="/podcast" style="color: var(--color-accent-teal);">Zum Hoeren</a>.
 			</p>
 		</div>
 	</div>
@@ -71,41 +114,17 @@
 			Folge mir
 		</h2>
 		<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
-			<a
-				href={siteConfig.social.twitter}
-				target="_blank"
-				rel="noreferrer"
-				class="social-card"
-			>
-				<div style="font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: 0.25rem;">Twitter</div>
+			<a href={siteConfig.social.twitter} target="_blank" rel="noreferrer" class="social-card">
+				<div style="font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: 0.25rem;">Twitter/X</div>
 				<div style="color: var(--color-text-muted); font-size: var(--font-size-sm);">@randommakertheory</div>
 			</a>
-			<a
-				href={siteConfig.social.instagram}
-				target="_blank"
-				rel="noreferrer"
-				class="social-card"
-			>
+			<a href={siteConfig.social.instagram} target="_blank" rel="noreferrer" class="social-card">
 				<div style="font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: 0.25rem;">Instagram</div>
 				<div style="color: var(--color-text-muted); font-size: var(--font-size-sm);">@therandommakertheory</div>
 			</a>
-			<a
-				href={siteConfig.social.youtube}
-				target="_blank"
-				rel="noreferrer"
-				class="social-card"
-			>
+			<a href={siteConfig.social.youtube} target="_blank" rel="noreferrer" class="social-card">
 				<div style="font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: 0.25rem;">YouTube</div>
 				<div style="color: var(--color-text-muted); font-size: var(--font-size-sm);">@therandommakertheory</div>
-			</a>
-			<a
-				href={siteConfig.social.spotify}
-				target="_blank"
-				rel="noreferrer"
-				class="social-card"
-			>
-				<div style="font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: 0.25rem;">Spotify</div>
-				<div style="color: var(--color-text-muted); font-size: var(--font-size-sm);">Podcast</div>
 			</a>
 		</div>
 	</div>
@@ -128,6 +147,38 @@
 		border-color: var(--color-accent-honey);
 		transform: translateY(-2px);
 		box-shadow: var(--shadow-card);
+	}
+
+	.pillar-card {
+		padding: 1.25rem;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-lg);
+		transition: all var(--transition-normal);
+	}
+
+	.pillar-card:hover {
+		border-color: var(--color-accent-honey);
+		transform: translateY(-2px);
+	}
+
+	.pillar-icon {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.pillar-title {
+		font-family: var(--font-display);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-text);
+		margin-bottom: 0.375rem;
+		font-size: var(--font-size-base);
+	}
+
+	.pillar-desc {
+		color: var(--color-text-muted);
+		font-size: var(--font-size-sm);
+		line-height: var(--line-height-relaxed);
 	}
 
 	@media (max-width: 768px) {

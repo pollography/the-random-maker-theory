@@ -1,0 +1,5 @@
+Führe bitte den Inhalt der Textdatei aus! Bezüglich Designsystem für die Homepage passt das prinzipiell schon ok, aber hier waren meine bisher schon erarbeiteten sachen bzw. sind auch nochmal als html datein hinterlegt! check beides aus, je nachdem, was du noch zum erledigen der aufgaben brauchst!!! C:\Users\User\Documents\Claude_Code\design-system
+
+
+
+Ich möchte zudem ein Projekt bei Claude Desktop zu TRMT anlegen! Erstelle mir dafür bitte alles nötigste, damit ich damit auch im chatmodus arbeiten könnte und du maximal guten Kontext hast, um an dem projekt zu arbeiten! (aslo Custom Instructions, Datein anhängen, beschreibungen, Richtilinine etc! Also wirklich alles, was du über das Projekt weiß und so!). Ideal auch so in einem Ordner geschrieben, das eine andere Ki da auch aufgaben übernehmen könnte, und diese auf anhieb 1:1 weiß, was getan werden muss und so!

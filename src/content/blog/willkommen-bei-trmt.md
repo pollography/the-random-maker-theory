@@ -6,9 +6,8 @@ description: "Wer ich bin, was ich hier mache und warum Tech-Content so wichtig 
 tags: ["ankündigung", "willkommen"]
 category: "news"
 draft: false
+readingTime: 1
 ---
-
-# Willkommen bei The Random Maker Theory
 
 Hey!
 
@@ -31,7 +30,7 @@ Mein Setup:
 
 ## Was erwartest du hier?
 
-Jeden Donnerstag gibt es neue Inhalte:
+Hier gibt es regelmässig neue Inhalte:
 
 - **Blog-Posts** über Tech-Tools, KI, Maker-Projekte und Produktivität
 - **Podcast-Episoden**, kurz und knackig (15-30 Min)
@@ -51,6 +50,4 @@ Alle Inhalte sind auf Deutsch, durchsuchbar und frei zugänglich.
 
 Schau dir den Blog an, hör den Podcast, folg mir auf Social Media. Oder abonnier den RSS Feed.
 
-Viel Spaß hier!
-
-— TRMT
+Viel Spaß hier!. TRMT

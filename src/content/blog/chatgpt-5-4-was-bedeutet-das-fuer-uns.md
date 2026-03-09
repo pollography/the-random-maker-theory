@@ -1,15 +1,13 @@
 ---
-title: "GPT-5.4 ist da — Was bedeutet das für uns, für KI-Agents und für Claude Cowork?"
+title: "GPT-5.4 ist da , Was bedeutet das für uns, für KI-Agents und für Claude Cowork?"
 slug: "chatgpt-5-4-was-bedeutet-das-fuer-uns"
 date: "2026-03-06"
 description: "OpenAI hat GPT-5.4 released. Computer Use, 1M Context, Tool Search, Finance-Plugins. Ich ordne ein: Was ist neu, was ist Hype, und was heißt das für Claude Cowork User wie uns?"
 tags: ["ki-tools", "news", "analyse", "automatisierung"]
 category: "ki-news"
 draft: false
-readingTime: 14
+readingTime: 8
 ---
-
-# GPT-5.4 ist da — Was bedeutet das für uns, für KI-Agents und für Claude Cowork?
 
 Gestern Abend hat OpenAI GPT-5.4 released. Nicht einfach ein Update. Sondern der Versuch, alles in ein Model zu packen: Coding, Reasoning, Computer Use, Agent-Workflows, Finance-Plugins. Das ambitionierteste Release seit GPT-4.
 
@@ -43,25 +41,25 @@ OpenAI hat hier erstmals alles konsolidiert, was vorher über separate Modelle v
 
 ### Die sechs Kernverbesserungen
 
-1. **Coding + Document Understanding** — Besseres Tool Use, besseres Instruction Following
-2. **Multimodal Perception** — Verbesserte Bilderkennung
-3. **Agent Workflows** — Bessere Ausführung von Multi-Step-Tasks
-4. **Token Efficiency** — Optimiert für Tool-Heavy Workloads
-5. **Agentic Web Search** — Multi-Source-Synthese, besonders für schwer auffindbare Informationen
-6. **Business Automation** — Spreadsheet- und Dokument-lastige Workflows für Finance, Analytics, Kundenservice
+1. **Coding + Document Understanding**. Besseres Tool Use, besseres Instruction Following
+2. **Multimodal Perception**. Verbesserte Bilderkennung
+3. **Agent Workflows**. Bessere Ausführung von Multi-Step-Tasks
+4. **Token Efficiency**. Optimiert für Tool-Heavy Workloads
+5. **Agentic Web Search**. Multi-Source-Synthese, besonders für schwer auffindbare Informationen
+6. **Business Automation**. Spreadsheet- und Dokument-lastige Workflows für Finance, Analytics, Kundenservice
 
-## Die Benchmarks — Wie gut ist GPT-5.4 wirklich?
+## Die Benchmarks. Wie gut ist GPT-5.4 wirklich?
 
 Hier wird's spannend. Ich hab die Benchmarks gegen Claude Opus 4.6 und Gemini 3.1 Pro gestellt:
 
 | Benchmark | GPT-5.4 | Claude Opus 4.6 | Gemini 3.1 Pro |
 |---|---|---|---|
 | SWE-bench Verified (Coding) | 77.2% | **79.2%** | 80.6% |
-| SWE-bench Pro (Hard) | **57.7%** | ~45-46% | — |
-| OSWorld-Verified (Desktop) | **75.0%** | 72.7% | — |
-| GPQA Diamond (Science) | 92.8% | — | **94.3%** |
-| GDPval (Knowledge Work) | **83%** | 78% | — |
-| ARC-AGI-2 (Reasoning) | ~52.9%* | **68.8%** | — |
+| SWE-bench Pro (Hard) | **57.7%** | ~45-46% | , |
+| OSWorld-Verified (Desktop) | **75.0%** | 72.7% | , |
+| GPQA Diamond (Science) | 92.8% | , | **94.3%** |
+| GDPval (Knowledge Work) | **83%** | 78% | , |
+| ARC-AGI-2 (Reasoning) | ~52.9%* | **68.8%** | , |
 
 *GPT-5.2-Wert, GPT-5.4 Wert noch nicht separat veröffentlicht
 
@@ -69,7 +67,7 @@ Hier wird's spannend. Ich hab die Benchmarks gegen Claude Opus 4.6 und Gemini 3.
 
 Kein Modell gewinnt überall. Das ist die Realität 2026.
 
-## Computer Use — Das eigentliche Game-Changer-Feature
+## Computer Use. Das eigentliche Game-Changer-Feature
 
 Die größte Neuerung: GPT-5.4 ist das erste allgemeine OpenAI-Modell mit nativer Computer-Steuerung. Das bedeutet: Screenshots machen, Maus bewegen, Tastatur bedienen, Software starten.
 
@@ -90,7 +88,7 @@ OpenAI hat parallel ChatGPT-Plugins für Microsoft Excel und Google Sheets in de
 
 Das ist ein direkter Angriff auf den Enterprise-Markt. Stell dir vor: GPT-5.4 sitzt in deiner Excel-Zelle und analysiert dein Finanzmodell. Nicht als Copy-Paste aus einem Chat. Nativ.
 
-## Tool Search — Warum Entwickler aufhorchen sollten
+## Tool Search. Warum Entwickler aufhorchen sollten
 
 Ein Feature, das unter dem Radar fliegt, aber technisch brillant ist: **Tool Search**.
 
@@ -114,14 +112,14 @@ Xpert.digital formuliert es direkt: Bürojobs stehen unter Druck. GPT-5.4 agiert
 
 Das betrifft:
 
-- **Sachbearbeitung** — Formulare ausfüllen, Daten zwischen Systemen übertragen
-- **Finanzanalyse** — Excel-Modelle bauen, Daten aggregieren, Reports erstellen
-- **Content-Erstellung** — Dokumente, Präsentationen, Spreadsheets automatisiert generieren
-- **IT-Administration** — Software bedienen, Konfigurationen vornehmen
+- **Sachbearbeitung**. Formulare ausfüllen, Daten zwischen Systemen übertragen
+- **Finanzanalyse**. Excel-Modelle bauen, Daten aggregieren, Reports erstellen
+- **Content-Erstellung**. Dokumente, Präsentationen, Spreadsheets automatisiert generieren
+- **IT-Administration**. Software bedienen, Konfigurationen vornehmen
 
 Meine Einschätzung: Die Frage ist nicht mehr ob KI-Agents Büroarbeit übernehmen, sondern wie schnell. Und ob du derjenige bist, der die Agents steuert, oder derjenige, dessen Job von ihnen erledigt wird.
 
-## GPT-5.4 vs Claude Cowork — Was heißt das für uns?
+## GPT-5.4 vs Claude Cowork. Was heißt das für uns?
 
 Jetzt die Frage, die mich am meisten interessiert: Was ändert sich für Claude Cowork User?
 
@@ -140,12 +138,12 @@ Jetzt die Frage, die mich am meisten interessiert: Was ändert sich für Claude 
 
 ### Wo Claude Cowork stärker ist
 
-- **Lokaler File-Zugriff** — Cowork liest und schreibt direkt auf deinem Rechner
-- **Native Dokument-Erstellung** — echte DOCX, PPTX, XLSX Dateien, nicht nur Chat-Output
-- **Abstraktes Reasoning** — Claude Opus 4.6 dominiert bei ARC-AGI-2 (68.8% vs ~53%)
-- **Datenschutz** — Deine Dateien bleiben auf deiner Maschine, nicht in OpenAIs Cloud
-- **Skills-System** — Spezialisierte Skills für jeden Workflow, erweiterbar
-- **Scheduling** — Automatisierte, wiederkehrende Tasks
+- **Lokaler File-Zugriff**. Cowork liest und schreibt direkt auf deinem Rechner
+- **Native Dokument-Erstellung**, echte DOCX, PPTX, XLSX Dateien, nicht nur Chat-Output
+- **Abstraktes Reasoning**. Claude Opus 4.6 dominiert bei ARC-AGI-2 (68.8% vs ~53%)
+- **Datenschutz**. Deine Dateien bleiben auf deiner Maschine, nicht in OpenAIs Cloud
+- **Skills-System**. Spezialisierte Skills für jeden Workflow, erweiterbar
+- **Scheduling**. Automatisierte, wiederkehrende Tasks
 
 ### Mein Fazit: Verschiedene Stärken, kein Killer
 
@@ -155,7 +153,7 @@ Für mich persönlich bleibt Cowork mein Daily Driver. Diesen Blog hier? Schreib
 
 GPT-5.4 wäre besser, wenn ich Finance-Modelle in Excel bauen müsste. Aber das ist nicht mein Use Case.
 
-## Die Marktlage — Wer gewinnt das AI Race 2026?
+## Die Marktlage. Wer gewinnt das AI Race 2026?
 
 Die Zahlen erzählen eine interessante Geschichte:
 
@@ -177,7 +175,7 @@ Die Zahlen erzählen eine interessante Geschichte:
 - Anthropic: $380 Milliarden (nach $30B Funding-Runde im Februar 2026)
 - OpenAI: Die letzte bekannte Bewertung lag bei ~$300 Milliarden
 
-## Safety — Das unbequeme Thema
+## Safety. Das unbequeme Thema
 
 Man muss auch über Safety reden. Und die Bilanz ist gemischt.
 
