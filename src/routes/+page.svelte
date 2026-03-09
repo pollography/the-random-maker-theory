@@ -112,9 +112,9 @@
 <!-- ═══════ INTRO ═══════ -->
 <section class="intro-section">
 	<div class="intro-inner">
-		<h2 class="intro-headline">Entdecken. Verstehen. Frei Schnauze.</h2>
+		<h2 class="intro-headline">Entdecken. Verstehen. Und alles Frei Schnauze.</h2>
 		<p class="intro-text">
-			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Alles selbst getestet, ehrlich aufbereitet und so erklärt, dass es hängen bleibt. Für alle, die mehr wissen wollen als das, was der Algorithmus vorschlägt.
+			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
 		</p>
 		<div class="intro-stats">
 			<div class="stat">
@@ -381,12 +381,11 @@
 	}
 
 	.pillar-title {
-		font-family: var(--font-display);
-		font-weight: 400;
+		font-family: var(--font-sans);
+		font-weight: 700;
 		font-size: var(--font-size-md);
 		color: var(--color-text);
 		margin: 0 0 6px;
-		opacity: 0.95;
 	}
 
 	.pillar-desc {
@@ -407,12 +406,12 @@
 	}
 
 	.section-title {
-		font-family: var(--font-display);
-		font-weight: 400;
+		font-family: var(--font-sans);
+		font-weight: 700;
 		font-size: var(--font-size-2xl);
 		color: var(--color-text);
 		margin: 0;
-		opacity: 0.95;
+		font-style: normal;
 	}
 
 	.section-link {

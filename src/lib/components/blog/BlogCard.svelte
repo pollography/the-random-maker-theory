@@ -35,7 +35,7 @@
 		</div>
 
 		<!-- Title -->
-		<h3 class="font-display font-bold text-xl text-text line-clamp-2">
+		<h3 class="card-title line-clamp-2">
 			{post.title}
 		</h3>
 
@@ -52,6 +52,15 @@
 </Card>
 
 <style>
+	.card-title {
+		font-family: var(--font-sans);
+		font-weight: 600;
+		font-size: var(--font-size-xl);
+		color: var(--color-text);
+		line-height: var(--line-height-snug);
+		margin: 0;
+	}
+
 	.line-clamp-2 {
 		display: -webkit-box;
 		-webkit-line-clamp: 2;

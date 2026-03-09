@@ -45,7 +45,7 @@
 	<!-- Metadata -->
 	<header class="article-header">
 		<div>
-			<h1 style="font-size: clamp(2rem, 6vw, 3.5rem); font-family: var(--font-display); font-weight: var(--font-weight-extrabold); line-height: var(--line-height-tight); margin: 0 0 1.5rem 0; color: var(--color-text);">
+			<h1 style="font-size: clamp(2rem, 6vw, 3.5rem); font-family: var(--font-display); font-weight: 400; line-height: var(--line-height-tight); margin: 0 0 1.5rem 0; color: var(--color-text); opacity: 0.95;">
 				{data.post.title}
 			</h1>
 			<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; color: var(--color-text-muted); font-size: var(--font-size-sm);">
@@ -145,32 +145,58 @@
 
 	:global(.prose blockquote) {
 		border-left: 3px solid var(--color-accent-honey);
-		padding-left: 1.5rem;
-		color: var(--color-text-muted);
-		font-style: italic;
+		padding: 1.25rem 1.5rem;
+		background: var(--color-accent-honey-subtle);
+		border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+		color: var(--color-text);
+		font-style: normal;
 		margin-left: 0;
+		margin-bottom: 2rem;
+	}
+
+	:global(.prose blockquote strong) {
+		color: var(--color-accent-honey);
+		font-size: 0.9rem;
+		letter-spacing: 0.05em;
+	}
+
+	:global(.prose blockquote ul) {
+		margin-bottom: 0;
+	}
+
+	:global(.prose blockquote li) {
+		color: var(--color-text);
+		font-size: 0.9375rem;
 	}
 
 	:global(.prose h1),
 	:global(.prose h2),
 	:global(.prose h3),
 	:global(.prose h4) {
-		font-family: var(--font-display);
-		color: var(--color-text);
 		margin-top: 2.5rem;
 		margin-bottom: 1rem;
 	}
 
 	:global(.prose h2) {
-		font-size: var(--font-size-2xl);
-		font-weight: var(--font-weight-bold);
-		padding-bottom: 0.5rem;
-		border-bottom: 1px solid var(--color-border-subtle, hsla(0, 0%, 100%, 0.06));
+		font-family: var(--font-display);
+		font-size: 2rem;
+		font-weight: 400;
+		font-style: italic;
+		color: var(--color-accent-honey);
 	}
 
 	:global(.prose h3) {
+		font-family: var(--font-sans);
 		font-size: var(--font-size-xl);
-		font-weight: var(--font-weight-bold);
+		font-weight: 700;
+		color: var(--color-text);
+	}
+
+	:global(.prose h4) {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-md);
+		font-weight: 500;
+		color: var(--color-text-muted);
 	}
 
 	:global(.prose p) {
