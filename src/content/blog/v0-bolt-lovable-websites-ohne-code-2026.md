@@ -6,6 +6,7 @@ description: "Text rein, App raus. v0, Bolt.new und Lovable im Vergleich. Was k√
 tags: ["tools", "tutorial", "automatisierung"]
 category: "ki-tools"
 draft: false
+titleAccent: "ohne Code"
 heroImage: "/images/blog/v0-bolt-1.webp"
 readingTime: 4
 ---

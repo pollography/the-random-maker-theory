@@ -10,6 +10,21 @@
 		day: 'numeric',
 	}));
 
+	let titleParts = $derived(() => {
+		const accent = data.post.titleAccent;
+		if (!accent) return [{ text: data.post.title, isAccent: false }];
+
+		const idx = data.post.title.indexOf(accent);
+		if (idx === -1) return [{ text: data.post.title, isAccent: false }];
+
+		const parts = [];
+		if (idx > 0) parts.push({ text: data.post.title.slice(0, idx), isAccent: false });
+		parts.push({ text: accent, isAccent: true });
+		const after = data.post.title.slice(idx + accent.length);
+		if (after) parts.push({ text: after, isAccent: false });
+		return parts;
+	});
+
 	let scrollProgress = $state(0);
 
 	function handleScroll() {
@@ -45,8 +60,14 @@
 	<!-- Metadata -->
 	<header class="article-header">
 		<div>
-			<h1 style="font-size: clamp(2rem, 6vw, 3.5rem); font-family: var(--font-display); font-weight: 400; line-height: var(--line-height-tight); margin: 0 0 1.5rem 0; color: var(--color-text); opacity: 0.95;">
-				{data.post.title}
+			<h1 class="article-title">
+				{#each titleParts() as part}
+					{#if part.isAccent}
+						<span class="title-accent">{part.text}</span>
+					{:else}
+						{part.text}
+					{/if}
+				{/each}
 			</h1>
 			<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; color: var(--color-text-muted); font-size: var(--font-size-sm);">
 				<time datetime={data.post.date}>{formattedDate}</time>
@@ -88,6 +109,21 @@
 		height: 3px;
 		z-index: var(--z-sticky);
 		transition: width 0.1s ease-out;
+	}
+
+	.article-title {
+		font-size: clamp(2rem, 6vw, 3.5rem);
+		font-family: var(--font-display);
+		font-weight: 400;
+		line-height: var(--line-height-tight);
+		margin: 0 0 1.5rem 0;
+		color: var(--color-text);
+		opacity: 0.95;
+	}
+
+	.title-accent {
+		color: var(--color-accent-honey);
+		font-style: italic;
 	}
 
 	.article-container {
@@ -152,6 +188,10 @@
 		font-style: normal;
 		margin-left: 0;
 		margin-bottom: 2rem;
+		max-width: 48rem;
+		width: calc(100% + 2rem);
+		margin-left: -1rem;
+		margin-right: -1rem;
 	}
 
 	:global(.prose blockquote strong) {

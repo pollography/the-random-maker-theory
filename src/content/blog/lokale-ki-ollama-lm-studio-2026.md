@@ -6,6 +6,7 @@ description: "DeepSeek, Llama, Mistral, Qwen , alles lokal, alles privat, alles 
 tags: ["tools", "open-source", "tutorial"]
 category: "ki-tools"
 draft: false
+titleAccent: "Lokale KI"
 heroImage: "/images/blog/lokale-ki-1.webp"
 readingTime: 4
 ---

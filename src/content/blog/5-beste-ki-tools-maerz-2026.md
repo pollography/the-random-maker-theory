@@ -6,6 +6,7 @@ description: "Meine Top 5 KI-Tools für Content Creator, Maker und Entwickler , 
 tags: ["tools", "tutorial", "tipps"]
 category: "tools"
 draft: false
+titleAccent: "KI-Tools"
 readingTime: 2
 ---
 

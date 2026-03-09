@@ -6,6 +6,7 @@ description: "Opus 4.6, Cursor Multi-Agent, Copilot Model-Picker. Ich hab alle g
 tags: ["tools", "tutorial", "open-source", "automatisierung"]
 category: "ki-tools"
 draft: false
+titleAccent: "Claude Code"
 heroImage: "/images/blog/claude-code-1.webp"
 readingTime: 4
 ---

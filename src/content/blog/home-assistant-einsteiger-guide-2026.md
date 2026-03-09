@@ -6,6 +6,7 @@ description: "Dein Smart Home, deine Daten. Home Assistant 2026 macht den Einsti
 tags: ["smart-home", "home-assistant", "tutorial", "diy", "open-source"]
 category: "maker-projekt"
 draft: false
+titleAccent: "Home Assistant"
 heroImage: "/images/blog/home-assistant-1.webp"
 readingTime: 3
 ---

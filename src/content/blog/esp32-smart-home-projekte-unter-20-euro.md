@@ -6,6 +6,7 @@ description: "5 ESP32-Projekte mit ESPHome und Home Assistant. Temperatur-Sensor
 tags: ["smart-home", "home-assistant", "arduino", "esp32", "diy", "maker"]
 category: "maker-projekt"
 draft: false
+titleAccent: "ESP32"
 heroImage: "/images/blog/esp32-1.webp"
 readingTime: 4
 ---

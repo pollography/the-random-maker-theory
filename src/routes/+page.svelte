@@ -21,31 +21,36 @@
 		{
 			icon: '🤖',
 			title: 'KI & Tech',
-			desc: 'Tool-Reviews, News, Tutorials. Was wirklich funktioniert.',
+			desc: 'Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere Tools im Praxistest. Dazu aktuelle KI-News, Vergleiche und Tutorials.',
+			highlights: ['Tool-Reviews', 'KI-News', 'Prompt-Guides', 'Vergleiche'],
 			tag: 'ki-tools'
 		},
 		{
 			icon: '🔧',
 			title: 'Maker & DIY',
-			desc: 'Arduino, ESP32, 3D-Druck, Home Assistant. Hands-on.',
+			desc: 'Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Smart Home Sensoren, LED-Strips, eigene Gadgets. Alles mit Teileliste und Code.',
+			highlights: ['Arduino-Projekte', 'ESP32', '3D-Druck', 'Smart Home'],
 			tag: 'maker'
 		},
 		{
 			icon: '⚡',
 			title: 'Automatisierung',
-			desc: 'n8n, Workflows, Scripting. Weniger Arbeit, mehr Output.',
+			desc: 'Workflows bauen mit n8n, Make und Zapier. Shell-Scripts, Cron-Jobs, API-Anbindungen. Alles was repetitive Arbeit erspart und im Hintergrund laufen kann.',
+			highlights: ['n8n-Workflows', 'API-Guides', 'Shell-Scripts', 'Cron-Jobs'],
 			tag: 'automatisierung'
 		},
 		{
 			icon: '📸',
 			title: 'Fotografie',
-			desc: 'KI in der Bildbearbeitung. Lightroom, Luminar, Topaz.',
+			desc: 'KI trifft Bildbearbeitung. Lightroom AI Masking, Topaz Denoise, Luminar Neo, Generative Fill. Plus Gear-Reviews und Editing-Workflows fuer Fotografen.',
+			highlights: ['Lightroom-KI', 'Editing-Workflows', 'Gear-Reviews', 'Topaz & Luminar'],
 			tag: 'fotografie'
 		},
 		{
 			icon: '🧠',
 			title: 'Produktivität',
-			desc: 'Obsidian, ADHD-Hacks, Second Brain. Systeme statt Disziplin.',
+			desc: 'Obsidian als Second Brain, Notion-Setups, PARA-Methode, Fokus-Strategien. Systeme die funktionieren, auch wenn die Motivation mal fehlt.',
+			highlights: ['Obsidian-Setups', 'Second Brain', 'Fokus-Hacks', 'Tool-Vergleiche'],
 			tag: 'produktivitaet'
 		}
 	];
@@ -112,30 +117,38 @@
 <!-- ═══════ INTRO ═══════ -->
 <section class="intro-section">
 	<div class="intro-inner">
-		<h2 class="intro-headline">Entdecken. Verstehen. Und alles Frei Schnauze.</h2>
+		<h2 class="intro-headline">Entdecken. Verstehen. Und alles <span class="intro-accent">Frei Schnauze.</span></h2>
 		<p class="intro-text">
 			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
 		</p>
-		<div class="intro-stats">
-			<div class="stat">
-				<span class="stat-number">{posts.length}</span>
-				<span class="stat-label">Artikel</span>
-			</div>
+		<div class="article-counter">
+			<span class="counter-number">{posts.length}</span>
+			<span class="counter-text">Artikel online</span>
+			<span class="counter-sub">und es werden mehr</span>
 		</div>
 	</div>
 </section>
 
 <!-- ═══════ 5 CONTENT-SÄULEN ═══════ -->
-<section class="section">
+<section class="section pillars-section">
 	<div class="section-header">
 		<h2 class="section-title">Was dich hier erwartet</h2>
 	</div>
-	<div class="pillars-grid">
-		{#each pillars as pillar}
-			<a href="/blog?tag={pillar.tag}" class="pillar-card">
-				<span class="pillar-icon">{pillar.icon}</span>
-				<h3 class="pillar-title">{pillar.title}</h3>
-				<p class="pillar-desc">{pillar.desc}</p>
+	<div class="pillars-list">
+		{#each pillars as pillar, i}
+			<a href="/blog?tag={pillar.tag}" class="pillar-row" class:pillar-row-reverse={i % 2 !== 0}>
+				<div class="pillar-icon-col">
+					<span class="pillar-icon-large">{pillar.icon}</span>
+				</div>
+				<div class="pillar-content">
+					<h3 class="pillar-title">{pillar.title}</h3>
+					<p class="pillar-desc">{pillar.desc}</p>
+					<div class="pillar-highlights">
+						{#each pillar.highlights as tag}
+							<span class="pillar-tag">{tag}</span>
+						{/each}
+					</div>
+				</div>
 			</a>
 		{/each}
 	</div>
@@ -174,7 +187,7 @@
 	/* ── HERO ── */
 	.hero {
 		text-align: center;
-		padding: 100px 0 80px;
+		padding: 120px 0 60px;
 		position: relative;
 	}
 
@@ -282,7 +295,7 @@
 
 	/* ── INTRO SECTION ── */
 	.intro-section {
-		padding: 40px 0 60px;
+		padding: 80px 0 60px;
 	}
 
 	.intro-inner {
@@ -295,104 +308,141 @@
 		font-family: var(--font-display);
 		font-weight: 400;
 		font-size: clamp(24px, 4vw, 36px);
-		color: var(--color-accent-honey);
+		color: var(--color-text);
 		margin: 0 0 20px;
 		letter-spacing: -0.01em;
 		opacity: 0.95;
+	}
+
+	.intro-accent {
+		color: var(--color-accent-honey);
 	}
 
 	.intro-text {
 		font-size: var(--font-size-md);
 		color: var(--color-text-muted);
 		line-height: 1.75;
-		margin: 0 0 32px;
+		margin: 0 0 40px;
 	}
 
-	.intro-stats {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 32px;
-	}
-
-	.stat {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 4px;
-	}
-
-	.stat-number {
-		font-family: var(--font-display);
-		font-weight: 400;
-		font-size: var(--font-size-2xl);
-		color: var(--color-text);
-		opacity: 0.95;
-	}
-
-	.stat-label {
-		font-size: var(--font-size-sm);
-		color: var(--color-text-dim);
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
-	}
-
-	.stat-divider {
-		width: 1px;
-		height: 40px;
-		background: var(--color-border-subtle);
-	}
-
-	/* ── PILLARS GRID ── */
-	.pillars-grid {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		gap: 16px;
-	}
-
-	.pillar-card {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		padding: 24px 16px;
+	/* ── ARTICLE COUNTER ── */
+	.article-counter {
+		display: inline-flex;
+		align-items: baseline;
+		gap: 10px;
+		padding: 12px 28px;
 		background: var(--color-surface);
 		border: 1px solid var(--color-border-subtle);
-		border-radius: var(--radius-lg);
-		text-decoration: none;
-		transition: all 0.2s ease;
+		border-radius: var(--radius-full);
 	}
 
-	.pillar-card:hover {
+	.counter-number {
+		font-family: var(--font-display);
+		font-weight: 400;
+		font-size: var(--font-size-3xl);
+		color: var(--color-accent-honey);
+		line-height: 1;
+	}
+
+	.counter-text {
+		font-family: var(--font-sans);
+		font-weight: 600;
+		font-size: var(--font-size-base);
+		color: var(--color-text);
+	}
+
+	.counter-sub {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-dim);
+		font-style: italic;
+	}
+
+	/* ── PILLARS (Staggered List) ── */
+	.pillars-section {
+		padding: 64px 0 48px;
+	}
+
+	.pillars-list {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.pillar-row {
+		display: grid;
+		grid-template-columns: 80px 1fr;
+		gap: 24px;
+		align-items: start;
+		padding: 32px;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-xl);
+		text-decoration: none;
+		transition: all 0.25s ease;
+	}
+
+	.pillar-row:hover {
 		border-color: var(--color-accent-honey-subtle);
 		transform: translateY(-2px);
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 	}
 
-	:global([data-theme='light']) .pillar-card {
+	.pillar-row-reverse {
+		margin-left: 60px;
+	}
+
+	:global([data-theme='light']) .pillar-row {
 		background: var(--gradient-card-bg);
 		border: none;
 		box-shadow: var(--shadow-neo);
 	}
 
-	.pillar-icon {
-		font-size: 2rem;
-		margin-bottom: 12px;
+	.pillar-icon-col {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.pillar-icon-large {
+		font-size: 3rem;
+	}
+
+	.pillar-content {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
 	}
 
 	.pillar-title {
 		font-family: var(--font-sans);
 		font-weight: 700;
-		font-size: var(--font-size-md);
+		font-size: var(--font-size-xl);
 		color: var(--color-text);
-		margin: 0 0 6px;
+		margin: 0;
 	}
 
 	.pillar-desc {
-		font-size: var(--font-size-sm);
-		color: var(--color-text-dim);
-		line-height: 1.5;
+		font-size: var(--font-size-base);
+		color: var(--color-text-muted);
+		line-height: 1.7;
 		margin: 0;
+	}
+
+	.pillar-highlights {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 4px;
+	}
+
+	.pillar-tag {
+		font-size: var(--font-size-xs);
+		font-family: var(--font-mono);
+		color: var(--color-accent-teal);
+		background: var(--color-accent-teal-subtle);
+		padding: 3px 10px;
+		border-radius: var(--radius-full);
+		letter-spacing: 0.02em;
 	}
 
 	/* ── SECTIONS ── */
@@ -433,25 +483,29 @@
 	.episode-wrap { max-width: 640px; }
 
 	/* ── RESPONSIVE ── */
-	@media (max-width: 1024px) {
-		.pillars-grid {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-
 	@media (max-width: 768px) {
-		.hero { padding: 64px 0 56px; }
+		.hero { padding: 80px 0 40px; }
+		.intro-section { padding: 60px 0 40px; }
 		.posts-grid { grid-template-columns: 1fr; }
-		.pillars-grid {
-			grid-template-columns: repeat(2, 1fr);
+		.pillar-row {
+			grid-template-columns: 60px 1fr;
+			padding: 24px;
+			gap: 16px;
 		}
-		.intro-stats { gap: 20px; }
-		.stat-number { font-size: var(--font-size-xl); }
+		.pillar-row-reverse {
+			margin-left: 0;
+		}
+		.pillar-icon-large { font-size: 2.25rem; }
+		.pillar-title { font-size: var(--font-size-lg); }
+		.counter-number { font-size: var(--font-size-2xl); }
 	}
 
 	@media (max-width: 480px) {
-		.pillars-grid {
-			grid-template-columns: 1fr 1fr;
+		.pillar-row {
+			grid-template-columns: 1fr;
+			text-align: center;
 		}
+		.pillar-icon-col { justify-content: center; }
+		.pillar-highlights { justify-content: center; }
 	}
 </style>

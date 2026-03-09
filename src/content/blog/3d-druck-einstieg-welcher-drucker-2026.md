@@ -6,6 +6,7 @@ description: "Bambu Lab, Creality oder Elegoo? FDM oder Resin? Ich zeig dir, wel
 tags: ["3d-druck", "maker", "diy", "kaufberatung", "tutorial"]
 category: "maker-projekt"
 draft: false
+titleAccent: "3D-Druck"
 heroImage: "/images/blog/3d-druck-1.webp"
 readingTime: 3
 ---

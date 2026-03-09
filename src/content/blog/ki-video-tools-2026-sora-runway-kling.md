@@ -6,6 +6,7 @@ description: "Sora 2, Runway Gen-4.5, Kling 3.0, Pika 2.5 im Praxistest. Welches
 tags: ["tools", "tutorial", "fotografie", "workflow"]
 category: "ki-tools"
 draft: false
+titleAccent: "KI-Video-Tools"
 heroImage: "/images/blog/ki-video-1.webp"
 readingTime: 4
 ---

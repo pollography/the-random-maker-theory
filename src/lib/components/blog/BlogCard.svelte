@@ -15,6 +15,19 @@
 		month: 'long',
 		day: 'numeric',
 	}));
+
+	let titleParts = $derived(() => {
+		const accent = post.titleAccent;
+		if (!accent) return [{ text: post.title, isAccent: false }];
+		const idx = post.title.indexOf(accent);
+		if (idx === -1) return [{ text: post.title, isAccent: false }];
+		const parts = [];
+		if (idx > 0) parts.push({ text: post.title.slice(0, idx), isAccent: false });
+		parts.push({ text: accent, isAccent: true });
+		const after = post.title.slice(idx + accent.length);
+		if (after) parts.push({ text: after, isAccent: false });
+		return parts;
+	});
 </script>
 
 <Card href="/blog/{post.slug}" variant="interactive">
@@ -36,7 +49,9 @@
 
 		<!-- Title -->
 		<h3 class="card-title line-clamp-2">
-			{post.title}
+			{#each titleParts() as part}
+				{#if part.isAccent}<span class="card-accent">{part.text}</span>{:else}{part.text}{/if}
+			{/each}
 		</h3>
 
 		<!-- Description -->
@@ -59,6 +74,10 @@
 		color: var(--color-text);
 		line-height: var(--line-height-snug);
 		margin: 0;
+	}
+
+	.card-accent {
+		color: var(--color-accent-honey);
 	}
 
 	.line-clamp-2 {

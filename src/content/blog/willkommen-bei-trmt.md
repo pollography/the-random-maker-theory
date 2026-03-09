@@ -6,6 +6,7 @@ description: "Wer ich bin, was ich hier mache und warum Tech-Content so wichtig 
 tags: ["ankündigung", "willkommen"]
 category: "news"
 draft: false
+titleAccent: "Random"
 readingTime: 1
 ---
 

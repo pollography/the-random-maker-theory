@@ -6,6 +6,7 @@ description: "15 Jahre Fotografie-Erfahrung treffen auf KI-Tools. Lightroom, Pho
 tags: ["fotografie", "lightroom", "tools", "workflow", "tutorial"]
 category: "fotografie"
 draft: false
+titleAccent: "Fotografie"
 heroImage: "/images/blog/ki-fotografie-1.webp"
 readingTime: 4
 ---

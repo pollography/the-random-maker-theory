@@ -6,6 +6,7 @@ description: "Obsidian ist geil, aber mit ADHD auch schnell chaotisch. Mein Setu
 tags: ["obsidian", "produktivitaet", "workflow", "notion", "tools"]
 category: "produktivitaet"
 draft: false
+titleAccent: "Obsidian"
 heroImage: "/images/blog/obsidian-1.webp"
 readingTime: 4
 ---

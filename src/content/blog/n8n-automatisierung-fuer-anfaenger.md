@@ -6,6 +6,7 @@ description: "n8n 2.0 ist da. Ich zeig dir 5 Automationen, die du heute Abend no
 tags: ["n8n", "automatisierung", "tools", "tutorial", "open-source"]
 category: "automatisierung"
 draft: false
+titleAccent: "n8n"
 heroImage: "/images/blog/n8n-automatisierung-1.webp"
 readingTime: 3
 ---
