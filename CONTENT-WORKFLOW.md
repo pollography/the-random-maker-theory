@@ -88,9 +88,6 @@ Der Prompt-Transformer wandelt jede Beschreibung automatisch in einen Style um,
 der zu 100% funktioniert. "Screenshot: XY" wird zu einer atmosphärischen
 Workspace-Szene, "Infografik: ABC" zu einer abstrakten Visualisierung.
 
-Bilder landen in `static/images/blog/[slug]-[nr].png`
-TODOs werden automatisch durch `![alt](/images/blog/file.png)` ersetzt.
-
 ### API-Provider
 
 | Provider | Modell | Preis | Free Tier |
@@ -111,3 +108,58 @@ Setup: `GEMINI_API_KEY` in `.env` eintragen (Key holen: https://aistudio.google.
 
 **Design-System wird automatisch angewendet:**
 Dark BG, Honey/Amber Key-Light, Teal Accent, Film Grain, 16:9
+
+---
+
+## Bild-Optimierung (Pflicht nach Generierung!)
+
+### Format & Größen
+Alle generierten Bilder MÜSSEN vor dem Einbau optimiert werden:
+
+| Variante | Größe | Format | Qualität | Ziel-KB | Verwendung |
+|---|---|---|---|---|---|
+| **Full** | 1200x675px | WebP | 85 | 50-150KB | Hero-Image, Inline im Blog |
+| **Thumbnail** | 400x225px | WebP | 80 | 8-25KB | BlogCard-Grid auf Übersichtsseite |
+
+### Datei-Benennung
+```
+static/images/blog/[blog-slug]-[nummer].webp        # Full-Size
+static/images/blog/[blog-slug]-[nummer]-thumb.webp   # Thumbnail
+```
+
+### Gemini AI-Logo entfernen
+Gemini-generierte Bilder haben ein 4-Stern-Logo unten rechts. Muss rausgepatcht werden (Bereich mit umgebender Hintergrundfarbe füllen) BEVOR resized wird.
+
+### Optimierungs-Script (Python/Pillow)
+```bash
+python3 optimize-images.py
+# Macht alles in einem Schritt: Logo entfernen, 16:9 croppen, WebP konvertieren, Thumbnails erstellen
+```
+
+---
+
+## Hero-Image Regel (WICHTIG!)
+
+**Das heroImage aus dem Frontmatter wird automatisch als Header über dem Artikel angezeigt.**
+
+Deshalb: Das erste Bild eines Posts (heroImage) darf NICHT nochmal als Inline-Bild im Markdown-Body vorkommen. Sonst sieht der Leser dasselbe Bild zweimal.
+
+**Richtig:**
+```markdown
+heroImage: "/images/blog/slug-1.webp"
+---
+
+Text text text...
+
+![Zweites Bild](/images/blog/slug-2.webp)
+```
+
+**Falsch:**
+```markdown
+heroImage: "/images/blog/slug-1.webp"
+---
+
+Text text text...
+
+![Erstes Bild nochmal](/images/blog/slug-1.webp)  ← DOPPELT!
+```

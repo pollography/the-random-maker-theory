@@ -20,8 +20,6 @@ Ein ESP32 Board kostet 3€. Ein Temperatursensor 1,50€. Zusammen mit ESPHome 
 
 Hier sind 5 Projekte, die alle unter 20€ kosten. Mit exakten Teilelisten, ESPHome-Configs und Anfänger-Tipps.
 
-![ESP32 Board mit DHT22 Sensor, Reed Switch und Jumper-Kabeln](/images/blog/esp32-1.webp)
-
 ## Welches Board?
 
 | Modell | Core | Preis | Best für |

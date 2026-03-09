@@ -22,8 +22,6 @@ Der Markt ist 2026 richtig gut für Einsteiger. Unter 300€ bekommst du Drucker
 
 Hier mein Breakdown.
 
-![Bambu Lab A1 Mini auf Schreibtisch mit verschiedenen fertigen 3D-Drucken](/images/blog/3d-druck-1.webp)
-
 ## FDM vs Resin: Was passt zu dir?
 
 **FDM (Filament-Drucker):** Plastikfaden wird geschmolzen und Schicht für Schicht aufgetragen. Das ist, was du als Einsteiger willst.

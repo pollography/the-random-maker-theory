@@ -20,8 +20,6 @@ Stell dir vor, du baust dir einen digitalen Assistenten, der deine nervigsten Au
 
 Das ist n8n. Und seit dem 2.0-Release im März 2026 ist das Ding richtig erwachsen geworden.
 
-![n8n Workflow-Editor mit verbundenen Nodes: Schedule, RSS Read, Telegram](/images/blog/n8n-automatisierung-1.webp)
-
 ## Was ist n8n?
 
 n8n ist eine Open-Source-Plattform für Workflow-Automatisierung. Gegründet 2019 in Berlin. Du verbindest Blöcke (Nodes) miteinander und baust dir Abläufe zusammen. Visuell, wie Lego.

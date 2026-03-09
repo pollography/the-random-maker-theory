@@ -14,8 +14,6 @@ readingTime: 4
 
 Aber welches Tool lohnt sich wirklich? Ich hab alle drei im Alltag getestet. Plus Windsurf als Dark Horse.
 
-![Claude Code, Cursor, GitHub Copilot und Windsurf Logos im Vergleich](/images/blog/claude-code-1.webp)
-
 ## Die Kurzversion
 
 Keine Lust auf den ganzen Artikel? Hier die Zusammenfassung:

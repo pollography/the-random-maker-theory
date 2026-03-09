@@ -22,8 +22,6 @@ Oder du lässt die KI auf deinem eigenen Rechner laufen. Lokal. Privat. Offline.
 
 2026 ist das erstmals wirklich praktisch.
 
-![Ollama CLI und LM Studio Desktop-App auf einem Monitor](/images/blog/lokale-ki-1.webp)
-
 ## Ollama vs LM Studio vs Jan.ai
 
 | | Ollama | LM Studio | Jan.ai |

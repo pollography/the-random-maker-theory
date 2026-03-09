@@ -20,8 +20,6 @@ readingTime: 4
 
 Ich hab alle drei getestet. Die ehrliche Antwort: Ja, du kriegst in 20 Minuten eine funktionierende App. Aber "funktionierend" und "production-ready" sind zwei verschiedene Dinge.
 
-![Dieselbe Todo-App gebaut in v0, Bolt.new und Lovable](/images/blog/v0-bolt-1.webp)
-
 ## v0 von Vercel: Der Code-Qualitäts-König
 
 v0 generiert React/Next.js-Komponenten aus natürlicher Sprache. Mit Tailwind und shadcn/ui.

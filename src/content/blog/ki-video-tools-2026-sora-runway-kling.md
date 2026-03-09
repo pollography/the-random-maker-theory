@@ -20,8 +20,6 @@ Text rein, Video raus. Das ist der Pitch. Aber wie gut ist die Realität?
 
 Ich hab Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5 getestet. Spoiler: Die Qualität ist 2026 absurd gut. Aber jedes Tool hat seine Schwächen.
 
-![Vergleich desselben Prompts in Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5](/images/blog/ki-video-1.webp)
-
 ## Das Feld im Überblick
 
 | Tool | Preis ab | Max Auflösung | Max Länge | Audio | Speed |

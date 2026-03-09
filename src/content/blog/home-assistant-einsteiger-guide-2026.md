@@ -20,8 +20,6 @@ Alexa hört mit. Google speichert alles. Und wenn der Cloud-Server down ist, geh
 
 Home Assistant macht das anders. Open Source, lokal, keine Cloud nötig. Deine Daten bleiben bei dir. Und seit Version 2026.3 ist der Einstieg so einfach wie noch nie.
 
-![Home Assistant Dashboard: Temperatur, Licht, Bewegungssensor und Automationen](/images/blog/home-assistant-1.webp)
-
 ## Was ist Home Assistant?
 
 Eine Open-Source-Plattform für Heimautomation. Läuft lokal auf einem Raspberry Pi oder Mini-PC. Verbindet sich mit über 2.000 Geräten und Diensten. Kostet null Euro Software-Gebühren.

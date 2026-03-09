@@ -20,8 +20,6 @@ Ich hab ADHD. Mein Gehirn ist brillant darin, Dinge zu vergessen. Termine, Ideen
 
 Obsidian rettet mich. Aber nur, weil ich ein System hab, das mit meinem Gehirn arbeitet, nicht dagegen.
 
-![Obsidian Vault mit 5 Ordnern (PARA) und offener Daily Note](/images/blog/obsidian-1.webp)
-
 ## Warum Obsidian und nicht Notion?
 
 Kurz:

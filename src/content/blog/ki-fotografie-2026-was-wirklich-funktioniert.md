@@ -20,8 +20,6 @@ Ich fotografiere seit 15 Jahren. Von Spiegelreflex über Mirrorless bis Smartpho
 
 Nicht komplett. Nicht in allem. Aber in den richtigen Bereichen spart mir KI Stunden pro Woche. Hier mein ehrlicher Erfahrungsbericht.
 
-![Vorher/Nachher Vergleich: Landschaftsfoto vor und nach KI-Bearbeitung in Lightroom](/images/blog/ki-fotografie-1.webp)
-
 ## Lightroom 2026: KI als Standard
 
 Adobe hat KI nicht mehr als Feature, sondern als Default integriert. Drei Dinge, die richtig gut funktionieren:
