@@ -103,9 +103,9 @@
 <section class="hero">
 	<div class="hero-badge">Tech · KI · Maker · Produktivität</div>
 	<h1 class="hero-title">
-		The Random<br/>Maker Theory
+		The <em class="hero-accent">Random</em> Maker Theory
 	</h1>
-	<p class="hero-subtitle">Erkunden. Testen. Bauen.</p>
+	<p class="hero-subtitle"><em class="hero-accent">Erkunden.</em> Testen. Bauen.</p>
 	<div class="hero-actions">
 		<a href="/blog" class="btn-honey">Zum Blog</a>
 		<a href="/podcast" class="btn-teal">Zum Hoeren</a>
@@ -213,21 +213,29 @@
 
 	.hero-title {
 		font-family: var(--font-display);
-		font-weight: var(--font-weight-extrabold);
+		font-weight: 400;
 		font-size: clamp(44px, 8vw, 80px);
 		line-height: 1.05;
-		letter-spacing: -0.03em;
+		letter-spacing: -0.02em;
 		color: var(--color-text);
 		margin: 0 0 20px;
+		opacity: 0.95;
+	}
+
+	.hero-accent {
+		color: var(--color-accent-honey);
+		font-style: italic;
 	}
 
 	.hero-subtitle {
+		font-family: var(--font-display);
+		font-style: italic;
 		font-size: var(--font-size-xl);
 		color: var(--color-text-muted);
 		max-width: 480px;
 		margin: 0 auto 40px;
 		line-height: var(--line-height-relaxed);
-		letter-spacing: 0.04em;
+		letter-spacing: 0.02em;
 	}
 
 	.hero-actions {
@@ -306,11 +314,12 @@
 
 	.intro-headline {
 		font-family: var(--font-display);
-		font-weight: var(--font-weight-bold);
+		font-weight: 400;
 		font-size: clamp(24px, 4vw, 36px);
 		color: var(--color-accent-honey);
 		margin: 0 0 20px;
 		letter-spacing: -0.01em;
+		opacity: 0.95;
 	}
 
 	.intro-text {
@@ -336,9 +345,10 @@
 
 	.stat-number {
 		font-family: var(--font-display);
-		font-weight: var(--font-weight-extrabold);
+		font-weight: 400;
 		font-size: var(--font-size-2xl);
 		color: var(--color-text);
+		opacity: 0.95;
 	}
 
 	.stat-label {
@@ -393,10 +403,11 @@
 
 	.pillar-title {
 		font-family: var(--font-display);
-		font-weight: var(--font-weight-bold);
-		font-size: var(--font-size-base);
+		font-weight: 400;
+		font-size: var(--font-size-md);
 		color: var(--color-text);
 		margin: 0 0 6px;
+		opacity: 0.95;
 	}
 
 	.pillar-desc {
@@ -418,10 +429,11 @@
 
 	.section-title {
 		font-family: var(--font-display);
-		font-weight: var(--font-weight-bold);
+		font-weight: 400;
 		font-size: var(--font-size-2xl);
 		color: var(--color-text);
 		margin: 0;
+		opacity: 0.95;
 	}
 
 	.section-link {

@@ -54,7 +54,7 @@ export default {
 
 			fontFamily: {
 				sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-				display: ['Montserrat', 'Inter', 'sans-serif'],
+				display: ['Instrument Serif', 'Georgia', 'serif'],
 				mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
 			},
 

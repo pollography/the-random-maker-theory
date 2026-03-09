@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import './lib/design-system/tokens.css';
 
 @tailwind base;
@@ -40,34 +40,38 @@ body {
 /* Text hierarchy */
 h1 {
 	font-family: var(--font-display);
-	font-weight: var(--font-weight-extrabold);
+	font-weight: 400;
 	font-size: var(--font-size-4xl);
 	line-height: var(--line-height-tight);
 	color: var(--color-text);
+	opacity: 0.95;
 }
 
 h2 {
 	font-family: var(--font-display);
-	font-weight: var(--font-weight-bold);
+	font-weight: 400;
 	font-size: var(--font-size-3xl);
 	line-height: var(--line-height-snug);
 	color: var(--color-text);
+	opacity: 0.95;
 }
 
 h3 {
 	font-family: var(--font-display);
-	font-weight: var(--font-weight-bold);
+	font-weight: 400;
 	font-size: var(--font-size-2xl);
 	line-height: var(--line-height-snug);
 	color: var(--color-text);
+	opacity: 0.95;
 }
 
 h4 {
 	font-family: var(--font-display);
-	font-weight: var(--font-weight-semibold);
+	font-weight: 400;
 	font-size: var(--font-size-xl);
 	line-height: var(--line-height-snug);
 	color: var(--color-text);
+	opacity: 0.95;
 }
 
 p {
