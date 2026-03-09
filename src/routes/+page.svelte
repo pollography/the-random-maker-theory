@@ -10,12 +10,6 @@
 	let latestEpisode = $state(null);
 	let scrollY = $state(0);
 
-	// Scroll-driven zoom animation (0 to ~400px scroll range)
-	let introProgress = $derived(Math.min(scrollY / 400, 1));
-	let introScale = $derived(0.88 + introProgress * 0.12);
-	let introOpacity = $derived(0.3 + introProgress * 0.7);
-	let introBlur = $derived((1 - introProgress) * 6);
-
 	async function load() {
 		posts = await getPosts();
 		latestEpisode = await getLatestEpisode();
@@ -61,12 +55,12 @@
 
 <svelte:head>
 	<title>The Random Maker Theory — Tech, KI, Maker & Produktivität</title>
-	<meta name="description" content="Dein Tech-Update: KI-Tools, Maker-Projekte, Produktivität und Tutorials. Erkunden. Testen. Bauen. Ohne Bullshit." />
+	<meta name="description" content="Tech, KI-Tools, Maker-Projekte & Produktivität. News, Reviews, Tutorials und Projekte. Selbst getestet, ehrlich aufbereitet, frei Schnauze geschrieben." />
 	<meta name="keywords" content="Tech Blog deutsch, KI News, KI Tools, Maker Projekte, Smart Home, Produktivität, ChatGPT Tutorial, Arduino, 3D Druck, Fotografie, Automatisierung" />
 
 	<!-- OpenGraph -->
 	<meta property="og:title" content="The Random Maker Theory — Tech, KI, Maker & Produktivität" />
-	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität. Erkunden. Testen. Bauen." />
+	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität. Content, den ich selbst lese." />
 	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://therandommakertheory.com" />
@@ -76,7 +70,7 @@
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="The Random Maker Theory" />
-	<meta name="twitter:description" content="Tech, KI, Maker & Produktivität. Erkunden. Testen. Bauen." />
+	<meta name="twitter:description" content="Tech, KI, Maker & Produktivität. Content, den ich selbst lese." />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 
 	<!-- Canonical -->
@@ -89,7 +83,7 @@
 		"name": "The Random Maker Theory",
 		"alternateName": "TRMT",
 		"url": "https://therandommakertheory.com",
-		"description": "Tech, KI, Maker-Projekte & Produktivität. Erkunden. Testen. Bauen.",
+		"description": "Tech, KI, Maker-Projekte & Produktivität. Content, den ich selbst lese.",
 		"inLanguage": "de-DE",
 		"publisher": {
 			"@type": "Organization",
@@ -101,11 +95,11 @@
 
 <!-- ═══════ HERO ═══════ -->
 <section class="hero">
-	<div class="hero-badge">Tech · KI · Maker · Produktivität</div>
+	<div class="hero-badge">News · Reviews · Tutorials · Projekte</div>
 	<h1 class="hero-title">
 		The <em class="hero-accent">Random</em> Maker Theory
 	</h1>
-	<p class="hero-subtitle"><em class="hero-accent">Erkunden.</em> Testen. Bauen.</p>
+	<p class="hero-subtitle">Content, den ich <em class="hero-accent">selbst</em> lese.</p>
 	<div class="hero-actions">
 		<a href="/blog" class="btn-honey">Zum Blog</a>
 		<a href="/podcast" class="btn-teal">Zum Hoeren</a>
@@ -115,30 +109,17 @@
 	</div>
 </section>
 
-<!-- ═══════ INTRO (Scroll-Zoom-Effekt) ═══════ -->
-<section
-	class="intro-section"
-	style="transform: scale({introScale}); opacity: {introOpacity}; filter: blur({introBlur}px);"
->
+<!-- ═══════ INTRO ═══════ -->
+<section class="intro-section">
 	<div class="intro-inner">
-		<h2 class="intro-headline">Ein Blog. Kein Algorithmus.</h2>
+		<h2 class="intro-headline">Entdecken. Verstehen. Frei Schnauze.</h2>
 		<p class="intro-text">
-			Ich bin Pollo. Fotograf, Maker, Tech-Nerd mit ADHD. Hier schreib ich über alles, was mich grad fasziniert. KI-Tools, die wirklich was taugen. Maker-Projekte für unter 20 Euro. Workflows, die mir den Alltag retten. Ohne Sponsoring, ohne Bullshit. Einfach das, was ich selbst getestet hab.
+			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Alles selbst getestet, ehrlich aufbereitet und so erklärt, dass es hängen bleibt. Für alle, die mehr wissen wollen als das, was der Algorithmus vorschlägt.
 		</p>
 		<div class="intro-stats">
 			<div class="stat">
 				<span class="stat-number">{posts.length}</span>
 				<span class="stat-label">Artikel</span>
-			</div>
-			<div class="stat-divider"></div>
-			<div class="stat">
-				<span class="stat-number">5</span>
-				<span class="stat-label">Themen</span>
-			</div>
-			<div class="stat-divider"></div>
-			<div class="stat">
-				<span class="stat-number">100%</span>
-				<span class="stat-label">Unabhängig</span>
 			</div>
 		</div>
 	</div>
@@ -299,11 +280,9 @@
 		transform: translateY(-1px);
 	}
 
-	/* ── INTRO SECTION (Scroll-Zoom Target) ── */
+	/* ── INTRO SECTION ── */
 	.intro-section {
 		padding: 40px 0 60px;
-		will-change: transform, opacity, filter;
-		transform-origin: center top;
 	}
 
 	.intro-inner {
