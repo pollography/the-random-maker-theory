@@ -22,7 +22,7 @@
 		<nav class="nav">
 			<a href="/blog" class="nav-link" class:active={$page.url.pathname.startsWith('/blog')}>Blog</a>
 			<a href="/podcast" class="nav-link" class:active={$page.url.pathname.startsWith('/podcast')}>Zum Hoeren</a>
-			<a href="/about" class="nav-link" class:active={$page.url.pathname.startsWith('/about')}>Ueber mich</a>
+			<a href="/about" class="nav-link" class:active={$page.url.pathname.startsWith('/about')}>Über TRMT</a>
 		</nav>
 
 		<ThemeToggle variant="icon" />

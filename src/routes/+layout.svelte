@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
+	import CookieBanner from '$lib/components/layout/CookieBanner.svelte';
 	import '../app.css';
 
 	let { children } = $props();
@@ -17,6 +18,7 @@
 		{@render children()}
 	</main>
 	<Footer />
+	<CookieBanner />
 </div>
 
 <style>
