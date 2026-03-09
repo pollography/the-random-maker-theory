@@ -8,6 +8,13 @@
 
 	let posts = $state([]);
 	let latestEpisode = $state(null);
+	let scrollY = $state(0);
+
+	// Scroll-driven zoom animation (0 to ~400px scroll range)
+	let introProgress = $derived(Math.min(scrollY / 400, 1));
+	let introScale = $derived(0.88 + introProgress * 0.12);
+	let introOpacity = $derived(0.3 + introProgress * 0.7);
+	let introBlur = $derived((1 - introProgress) * 6);
 
 	async function load() {
 		posts = await getPosts();
@@ -15,16 +22,51 @@
 	}
 
 	load();
+
+	const pillars = [
+		{
+			icon: '🤖',
+			title: 'KI & Tech',
+			desc: 'Tool-Reviews, News, Tutorials. Was wirklich funktioniert.',
+			tag: 'ki-tools'
+		},
+		{
+			icon: '🔧',
+			title: 'Maker & DIY',
+			desc: 'Arduino, ESP32, 3D-Druck, Home Assistant. Hands-on.',
+			tag: 'maker'
+		},
+		{
+			icon: '⚡',
+			title: 'Automatisierung',
+			desc: 'n8n, Workflows, Scripting. Weniger Arbeit, mehr Output.',
+			tag: 'automatisierung'
+		},
+		{
+			icon: '📸',
+			title: 'Fotografie',
+			desc: 'KI in der Bildbearbeitung. Lightroom, Luminar, Topaz.',
+			tag: 'fotografie'
+		},
+		{
+			icon: '🧠',
+			title: 'Produktivität',
+			desc: 'Obsidian, ADHD-Hacks, Second Brain. Systeme statt Disziplin.',
+			tag: 'produktivitaet'
+		}
+	];
 </script>
+
+<svelte:window bind:scrollY={scrollY} />
 
 <svelte:head>
 	<title>The Random Maker Theory — Tech, KI, Maker & Produktivität</title>
-	<meta name="description" content="Dein wöchentliches Tech-Update: KI-Tools, Maker-Projekte, Produktivität und Tutorials. Erkunden. Testen. Bauen. Ohne Bullshit." />
+	<meta name="description" content="Dein Tech-Update: KI-Tools, Maker-Projekte, Produktivität und Tutorials. Erkunden. Testen. Bauen. Ohne Bullshit." />
 	<meta name="keywords" content="Tech Blog deutsch, KI News, KI Tools, Maker Projekte, Smart Home, Produktivität, ChatGPT Tutorial, Arduino, 3D Druck, Fotografie, Automatisierung" />
 
 	<!-- OpenGraph -->
 	<meta property="og:title" content="The Random Maker Theory — Tech, KI, Maker & Produktivität" />
-	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität. Erkunden. Testen. Bauen. Immer up to date." />
+	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität. Erkunden. Testen. Bauen." />
 	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://therandommakertheory.com" />
@@ -34,7 +76,7 @@
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="The Random Maker Theory" />
-	<meta name="twitter:description" content="Tech, KI, Maker & Produktivität. Erkunden. Testen. Bauen. Immer up to date." />
+	<meta name="twitter:description" content="Tech, KI, Maker & Produktivität. Erkunden. Testen. Bauen." />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 
 	<!-- Canonical -->
@@ -57,36 +99,86 @@
 	})}</script>`}
 </svelte:head>
 
-<!-- Hero Section -->
+<!-- ═══════ HERO ═══════ -->
 <section class="hero">
-	<div class="hero-badge">Tech, KI, Maker & Produktivität</div>
-	<h1 class="hero-title">The Random<br/>Maker Theory</h1>
-	<p class="hero-subtitle">Erkunden. Testen. Bauen. Immer up to date.</p>
+	<div class="hero-badge">Tech · KI · Maker · Produktivität</div>
+	<h1 class="hero-title">
+		The Random<br/>Maker Theory
+	</h1>
+	<p class="hero-subtitle">Erkunden. Testen. Bauen.</p>
 	<div class="hero-actions">
 		<a href="/blog" class="btn-honey">Zum Blog</a>
 		<a href="/podcast" class="btn-teal">Zum Hoeren</a>
 	</div>
+	<div class="scroll-hint" class:hidden={scrollY > 100}>
+		<span class="scroll-arrow">↓</span>
+	</div>
 </section>
 
-<!-- Latest Blog Posts -->
+<!-- ═══════ INTRO (Scroll-Zoom-Effekt) ═══════ -->
+<section
+	class="intro-section"
+	style="transform: scale({introScale}); opacity: {introOpacity}; filter: blur({introBlur}px);"
+>
+	<div class="intro-inner">
+		<h2 class="intro-headline">Ein Blog. Kein Algorithmus.</h2>
+		<p class="intro-text">
+			Ich bin Pollo. Fotograf, Maker, Tech-Nerd mit ADHD. Hier schreib ich über alles, was mich grad fasziniert. KI-Tools, die wirklich was taugen. Maker-Projekte für unter 20 Euro. Workflows, die mir den Alltag retten. Ohne Sponsoring, ohne Bullshit. Einfach das, was ich selbst getestet hab.
+		</p>
+		<div class="intro-stats">
+			<div class="stat">
+				<span class="stat-number">{posts.length}</span>
+				<span class="stat-label">Artikel</span>
+			</div>
+			<div class="stat-divider"></div>
+			<div class="stat">
+				<span class="stat-number">5</span>
+				<span class="stat-label">Themen</span>
+			</div>
+			<div class="stat-divider"></div>
+			<div class="stat">
+				<span class="stat-number">100%</span>
+				<span class="stat-label">Unabhängig</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ═══════ 5 CONTENT-SÄULEN ═══════ -->
+<section class="section">
+	<div class="section-header">
+		<h2 class="section-title">Was dich hier erwartet</h2>
+	</div>
+	<div class="pillars-grid">
+		{#each pillars as pillar}
+			<a href="/blog?tag={pillar.tag}" class="pillar-card">
+				<span class="pillar-icon">{pillar.icon}</span>
+				<h3 class="pillar-title">{pillar.title}</h3>
+				<p class="pillar-desc">{pillar.desc}</p>
+			</a>
+		{/each}
+	</div>
+</section>
+
+<!-- ═══════ NEUESTE POSTS ═══════ -->
 <section class="section">
 	<div class="section-header">
 		<h2 class="section-title">Neueste Posts</h2>
-		<a href="/blog" class="section-link">Alle ansehen &rarr;</a>
+		<a href="/blog" class="section-link">Alle ansehen →</a>
 	</div>
 	<div class="posts-grid">
-		{#each posts.slice(0, 3) as post (post.slug)}
+		{#each posts.slice(0, 6) as post (post.slug)}
 			<BlogCard {post} />
 		{/each}
 	</div>
 </section>
 
-<!-- Latest Podcast Episode -->
+<!-- ═══════ NEUESTE EPISODE ═══════ -->
 {#if latestEpisode}
 	<section class="section">
 		<div class="section-header">
 			<h2 class="section-title">Neueste Episode</h2>
-			<a href="/podcast" class="section-link">Alle Episoden &rarr;</a>
+			<a href="/podcast" class="section-link">Alle Episoden →</a>
 		</div>
 		<div class="episode-wrap">
 			<EpisodeCard episode={latestEpisode} />
@@ -94,22 +186,15 @@
 	</section>
 {/if}
 
-<!-- About Card -->
-<section class="about-card">
-	<h2 class="about-title">Über TRMT</h2>
-	<p class="about-text">
-		The Random Maker Theory ist dein wöchentliches Update zu Tech, KI, Maker-Projekten und Produktivität. Ich erkläre komplexe Themen verständlich, ohne Bullshit.
-	</p>
-	<a href="/about" class="section-link">Mehr über mich &rarr;</a>
-</section>
-
-<!-- Newsletter Signup -->
+<!-- ═══════ NEWSLETTER ═══════ -->
 <NewsletterSignup />
 
 <style>
+	/* ── HERO ── */
 	.hero {
 		text-align: center;
-		padding: 80px 0 64px;
+		padding: 100px 0 80px;
+		position: relative;
 	}
 
 	.hero-badge {
@@ -129,19 +214,20 @@
 	.hero-title {
 		font-family: var(--font-display);
 		font-weight: var(--font-weight-extrabold);
-		font-size: clamp(40px, 7vw, 72px);
-		line-height: var(--line-height-tight);
-		letter-spacing: var(--letter-spacing-tight);
+		font-size: clamp(44px, 8vw, 80px);
+		line-height: 1.05;
+		letter-spacing: -0.03em;
 		color: var(--color-text);
-		margin: 0 0 24px;
+		margin: 0 0 20px;
 	}
 
 	.hero-subtitle {
-		font-size: var(--font-size-lg);
+		font-size: var(--font-size-xl);
 		color: var(--color-text-muted);
 		max-width: 480px;
 		margin: 0 auto 40px;
 		line-height: var(--line-height-relaxed);
+		letter-spacing: 0.04em;
 	}
 
 	.hero-actions {
@@ -151,6 +237,28 @@
 		flex-wrap: wrap;
 	}
 
+	.scroll-hint {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: opacity 0.4s ease;
+	}
+	.scroll-hint.hidden { opacity: 0; }
+
+	.scroll-arrow {
+		display: inline-block;
+		color: var(--color-text-dim);
+		font-size: 1.25rem;
+		animation: bounce 2s infinite;
+	}
+
+	@keyframes bounce {
+		0%, 100% { transform: translateY(0); }
+		50% { transform: translateY(6px); }
+	}
+
+	/* ── BUTTONS ── */
 	.btn-honey, .btn-teal {
 		display: inline-flex;
 		align-items: center;
@@ -183,6 +291,122 @@
 		transform: translateY(-1px);
 	}
 
+	/* ── INTRO SECTION (Scroll-Zoom Target) ── */
+	.intro-section {
+		padding: 40px 0 60px;
+		will-change: transform, opacity, filter;
+		transform-origin: center top;
+	}
+
+	.intro-inner {
+		max-width: 680px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.intro-headline {
+		font-family: var(--font-display);
+		font-weight: var(--font-weight-bold);
+		font-size: clamp(24px, 4vw, 36px);
+		color: var(--color-accent-honey);
+		margin: 0 0 20px;
+		letter-spacing: -0.01em;
+	}
+
+	.intro-text {
+		font-size: var(--font-size-md);
+		color: var(--color-text-muted);
+		line-height: 1.75;
+		margin: 0 0 32px;
+	}
+
+	.intro-stats {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 32px;
+	}
+
+	.stat {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
+	}
+
+	.stat-number {
+		font-family: var(--font-display);
+		font-weight: var(--font-weight-extrabold);
+		font-size: var(--font-size-2xl);
+		color: var(--color-text);
+	}
+
+	.stat-label {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-dim);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+	}
+
+	.stat-divider {
+		width: 1px;
+		height: 40px;
+		background: var(--color-border-subtle);
+	}
+
+	/* ── PILLARS GRID ── */
+	.pillars-grid {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 16px;
+	}
+
+	.pillar-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 24px 16px;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-lg);
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+
+	.pillar-card:hover {
+		border-color: var(--color-accent-honey-subtle);
+		transform: translateY(-2px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+	}
+
+	:global([data-theme='light']) .pillar-card {
+		background: var(--gradient-card-bg);
+		border: none;
+		box-shadow: var(--shadow-neo);
+	}
+
+	.pillar-icon {
+		font-size: 2rem;
+		margin-bottom: 12px;
+	}
+
+	.pillar-title {
+		font-family: var(--font-display);
+		font-weight: var(--font-weight-bold);
+		font-size: var(--font-size-base);
+		color: var(--color-text);
+		margin: 0 0 6px;
+	}
+
+	.pillar-desc {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-dim);
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	/* ── SECTIONS ── */
 	.section { padding: 48px 0; }
 
 	.section-header {
@@ -209,45 +433,35 @@
 	}
 	.section-link:hover { color: var(--color-accent-honey-hover); }
 
+	/* ── POSTS GRID ── */
 	.posts-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 24px;
 	}
 
-	@media (max-width: 768px) {
-		.posts-grid { grid-template-columns: 1fr; }
-	}
-
 	.episode-wrap { max-width: 640px; }
 
-	.about-card {
-		margin-top: 32px;
-		padding: 48px;
-		background: var(--color-surface);
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius-xl);
-		box-shadow: var(--shadow-card);
+	/* ── RESPONSIVE ── */
+	@media (max-width: 1024px) {
+		.pillars-grid {
+			grid-template-columns: repeat(3, 1fr);
+		}
 	}
 
-	:global([data-theme='light']) .about-card {
-		background: var(--gradient-card-bg);
-		border: none;
-		box-shadow: var(--shadow-neo);
+	@media (max-width: 768px) {
+		.hero { padding: 64px 0 56px; }
+		.posts-grid { grid-template-columns: 1fr; }
+		.pillars-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		.intro-stats { gap: 20px; }
+		.stat-number { font-size: var(--font-size-xl); }
 	}
 
-	.about-title {
-		font-family: var(--font-display);
-		font-weight: var(--font-weight-bold);
-		font-size: var(--font-size-2xl);
-		color: var(--color-text);
-		margin: 0 0 16px;
-	}
-
-	.about-text {
-		color: var(--color-text-muted);
-		font-size: var(--font-size-md);
-		line-height: var(--line-height-relaxed);
-		margin: 0 0 24px;
+	@media (max-width: 480px) {
+		.pillars-grid {
+			grid-template-columns: 1fr 1fr;
+		}
 	}
 </style>
