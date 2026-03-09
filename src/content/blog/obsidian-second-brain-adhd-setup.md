@@ -6,15 +6,21 @@ description: "Obsidian ist geil, aber mit ADHD auch schnell chaotisch. Mein Setu
 tags: ["obsidian", "produktivitaet", "workflow", "notion", "tools"]
 category: "produktivitaet"
 draft: false
-heroImage: "/images/blog/obsidian-1.png"
+heroImage: "/images/blog/obsidian-1.webp"
 readingTime: 4
 ---
+
+> **TL;DR**
+> - PARA-System (Projects, Areas, Resources, Archive), 5 Ordner, Inbox default, Minimal Viable System
+> - Daily Note Anchor mit Top 3, Quick Wins, Emoji-Tags für visuelle Scans, 5 Plugins (Dataview, Templater, Tasks, Calendar, Periodic)
+> - Offline, Markdown, Speed, 1.000 Plugins, Obsidian vs Notion, ADHD braucht Anker
+> - Fehler: zu viele Plugins, kein Daily Note, Inbox ignorieren, perfekt vor start, Inbox einmal/Woche sortieren
 
 Ich hab ADHD. Mein Gehirn ist brillant darin, Dinge zu vergessen. Termine, Ideen, wo ich letzte Woche aufgehört hab. Alles weg.
 
 Obsidian rettet mich. Aber nur, weil ich ein System hab, das mit meinem Gehirn arbeitet, nicht dagegen.
 
-![Obsidian Vault mit 5 Ordnern (PARA) und offener Daily Note](/images/blog/obsidian-1.png)
+![Obsidian Vault mit 5 Ordnern (PARA) und offener Daily Note](/images/blog/obsidian-1.webp)
 
 ## Warum Obsidian und nicht Notion?
 
@@ -91,7 +97,7 @@ Statt langer Tag-Namen nutze ich Emojis. Mein ADHD-Gehirn scannt visuell, nicht 
 
 Ein Blick auf die Notiz und ich weiß sofort, was Sache ist.
 
-![Obsidian Daily Note mit Top 3 Aufgaben und Quick Wins Sektion](/images/blog/obsidian-2.png)
+![Obsidian Daily Note mit Top 3 Aufgaben und Quick Wins Sektion](/images/blog/obsidian-2.webp)
 
 ## Die 5 Plugins, die du brauchst
 
@@ -107,7 +113,7 @@ Nicht 40. Fünf.
 
 **5. Periodic Notes.** Automatische Daily, Weekly, Monthly Notes. Das Rückgrat des Systems.
 
-![Obsidian Dataview Query zeigt offene Tasks aus allen Projekten sortiert nach Deadline](/images/blog/obsidian-3.png)
+![Obsidian Dataview Query zeigt offene Tasks aus allen Projekten sortiert nach Deadline](/images/blog/obsidian-3.webp)
 
 ## Dataview-Query: Mein Dashboard
 

@@ -6,15 +6,21 @@ description: "15 Jahre Fotografie-Erfahrung treffen auf KI-Tools. Lightroom, Pho
 tags: ["fotografie", "lightroom", "tools", "workflow", "tutorial"]
 category: "fotografie"
 draft: false
-heroImage: "/images/blog/ki-fotografie-1.png"
+heroImage: "/images/blog/ki-fotografie-1.webp"
 readingTime: 4
 ---
+
+> **TL;DR**
+> - Lightroom Denoise 10/10, AI Masking 9/10, Generative Remove gut, Culling 2h auf 20min
+> - Luminar Neo 119€ Einmal, Topaz nur noch Abo, DxO PhotoLab 240€, Topaz beste Denoise
+> - KI ersetzt nicht dich, erledigt 70% der Technik, die restlichen 30% (Kreativität, Story) sind geil
+> - iPhone macht Computational Photography besser als 3000€-Kameras, Canon, Sony schlafen
 
 Ich fotografiere seit 15 Jahren. Von Spiegelreflex über Mirrorless bis Smartphone. Und die letzten zwei Jahre hat KI meinen Workflow grundlegend verändert.
 
 Nicht komplett. Nicht in allem. Aber in den richtigen Bereichen spart mir KI Stunden pro Woche. Hier mein ehrlicher Erfahrungsbericht.
 
-![Vorher/Nachher Vergleich: Landschaftsfoto vor und nach KI-Bearbeitung in Lightroom](/images/blog/ki-fotografie-1.png)
+![Vorher/Nachher Vergleich: Landschaftsfoto vor und nach KI-Bearbeitung in Lightroom](/images/blog/ki-fotografie-1.webp)
 
 ## Lightroom 2026: KI als Standard
 
@@ -26,7 +32,7 @@ Adobe hat KI nicht mehr als Feature, sondern als Default integriert. Drei Dinge,
 
 **Denoise.** High-ISO-Rauschen weg, Details bleiben. Non-destruktiv direkt im Detail-Panel. Kein separater DNG-Export mehr nötig. Das allein hat meinen Workflow um 20% beschleunigt.
 
-![Lightroom AI Masking: Himmel automatisch erkannt und separat bearbeitbar](/images/blog/ki-fotografie-2.png)
+![Lightroom AI Masking: Himmel automatisch erkannt und separat bearbeitbar](/images/blog/ki-fotografie-2.webp)
 
 ## Photoshop 2026: Generative Fill wird erwachsen
 
@@ -58,7 +64,7 @@ Nachteil: Seit Oktober 2025 nur noch als Subscription (~17-33$/Monat). Das nervt
 
 Neu in Version 9: AI Masking für Himmel, Personen, Hintergründe. Endlich.
 
-![Photoshop 2026 Generative Fill mit Referenzbild für konsistente Ergebnisse](/images/blog/ki-fotografie-3.png)
+![Photoshop 2026 Generative Fill mit Referenzbild für konsistente Ergebnisse](/images/blog/ki-fotografie-3.webp)
 
 ## Mein Workflow: Vorher vs Nachher
 
@@ -103,7 +109,7 @@ Neu in Version 9: AI Masking für Himmel, Personen, Hintergründe. Endlich.
 
 **Transparenz.** Smartphones ersetzen Details mit KI-generierten Pixeln, ohne dir Bescheid zu sagen. Dein iPhone "verbessert" dein Foto, indem es Dinge erfindet, die nicht da waren.
 
-![Workflow-Vergleich: Bildbearbeitung 2023 (6 Schritte) vs 2026 mit KI (5 Schritte, 50% schneller)](/images/blog/ki-fotografie-4.png)
+![Workflow-Vergleich: Bildbearbeitung 2023 (6 Schritte) vs 2026 mit KI (5 Schritte, 50% schneller)](/images/blog/ki-fotografie-4.webp)
 
 ## Preisvergleich
 

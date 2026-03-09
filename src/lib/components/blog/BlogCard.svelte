@@ -6,6 +6,10 @@
 
 	let { post } = $props();
 
+	let thumbnailSrc = $derived(
+		post.heroImage ? post.heroImage.replace('.webp', '-thumb.webp') : null
+	);
+
 	let formattedDate = $derived(new Date(post.date).toLocaleDateString('de-DE', {
 		year: 'numeric',
 		month: 'long',
@@ -18,7 +22,7 @@
 		<!-- Thumbnail -->
 		{#if post.heroImage}
 			<div class="card-thumbnail">
-				<img src={post.heroImage} alt={post.title} loading="lazy" />
+				<img src={thumbnailSrc || post.heroImage} alt={post.title} loading="lazy" width="400" height="225" />
 			</div>
 		{/if}
 

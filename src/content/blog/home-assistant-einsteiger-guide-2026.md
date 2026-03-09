@@ -6,15 +6,21 @@ description: "Dein Smart Home, deine Daten. Home Assistant 2026 macht den Einsti
 tags: ["smart-home", "home-assistant", "tutorial", "diy", "open-source"]
 category: "maker-projekt"
 draft: false
-heroImage: "/images/blog/home-assistant-1.png"
+heroImage: "/images/blog/home-assistant-1.webp"
 readingTime: 3
 ---
+
+> **TL;DR**
+> - Open Source, lokal, keine Cloud, deine Daten bleiben bei dir, 2.000+ Integrationen
+> - Hardware: Pi 4 ab 30€ + Zigbee Dongle 20€, für 5-20 Geräte ausreichend
+> - Start mit Smart Plug (15€), Bewegungssensor (20€), Tür-Sensor (10€), dann Automationen bauen
+> - Erste Automation: Bewegung im Flur, Licht an, nach 10 Min aus, dann wird's Sucht
 
 Alexa hört mit. Google speichert alles. Und wenn der Cloud-Server down ist, geht dein Licht nicht an.
 
 Home Assistant macht das anders. Open Source, lokal, keine Cloud nötig. Deine Daten bleiben bei dir. Und seit Version 2026.3 ist der Einstieg so einfach wie noch nie.
 
-![Home Assistant Dashboard: Temperatur, Licht, Bewegungssensor und Automationen](/images/blog/home-assistant-1.png)
+![Home Assistant Dashboard: Temperatur, Licht, Bewegungssensor und Automationen](/images/blog/home-assistant-1.webp)
 
 ## Was ist Home Assistant?
 
@@ -30,7 +36,7 @@ Release 2026.3 bringt Vacuum-Automationen (Staubsauger per Zone steuern), Androi
 
 **Faustregel:** Unter 5 Geräte → Pi 4 reicht. 5-20 Geräte → Pi 5. 20+ Geräte → Mini-PC.
 
-![Raspberry Pi 4 mit Sonoff Zigbee Dongle und Aqara Sensoren](/images/blog/home-assistant-2.png)
+![Raspberry Pi 4 mit Sonoff Zigbee Dongle und Aqara Sensoren](/images/blog/home-assistant-2.webp)
 
 ## Die ersten 3 Geräte
 
@@ -70,7 +76,7 @@ Fenstersensor meldet "offen" + Heizung läuft → Heizung aus, Notification: "Fe
 
 Nervig? Ja. Spart Geld? Absolut.
 
-![Home Assistant Automation Editor: Bewegungssensor triggert Licht an](/images/blog/home-assistant-3.png)
+![Home Assistant Automation Editor: Bewegungssensor triggert Licht an](/images/blog/home-assistant-3.webp)
 
 ## Was kostet der Spaß?
 

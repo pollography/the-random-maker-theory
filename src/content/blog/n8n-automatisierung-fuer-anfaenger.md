@@ -6,15 +6,21 @@ description: "n8n 2.0 ist da. Ich zeig dir 5 Automationen, die du heute Abend no
 tags: ["n8n", "automatisierung", "tools", "tutorial", "open-source"]
 category: "automatisierung"
 draft: false
-heroImage: "/images/blog/n8n-automatisierung-1.png"
+heroImage: "/images/blog/n8n-automatisierung-1.webp"
 readingTime: 3
 ---
+
+> **TL;DR**
+> - Open Source, self-hosted kostenlos (Hetzner 3€/Mo), 1.000 Integrationen, keine Task-Limits
+> - n8n 2.0: Draft/Live States, Task Runners, 70+ KI-Nodes, 30-80% schneller
+> - 5 Automationen: RSS nach Telegram, Webform nach Sheets, RSS+KI nach Social, Telegram-Blog-Assistant, Meeting-Schedule
+> - Zapier wenn gar kein Bock, Make wenn Budget zählt, n8n wenn volle Kontrolle und Docker-Skills
 
 Stell dir vor, du baust dir einen digitalen Assistenten, der deine nervigsten Aufgaben erledigt. RSS-Feeds checken, Social-Media-Posts vorbereiten, Formulare in Tabellen schieben. Alles automatisch. Ohne eine Zeile Code.
 
 Das ist n8n. Und seit dem 2.0-Release im März 2026 ist das Ding richtig erwachsen geworden.
 
-![n8n Workflow-Editor mit verbundenen Nodes: Schedule, RSS Read, Telegram](/images/blog/n8n-automatisierung-1.png)
+![n8n Workflow-Editor mit verbundenen Nodes: Schedule, RSS Read, Telegram](/images/blog/n8n-automatisierung-1.webp)
 
 ## Was ist n8n?
 
@@ -34,7 +40,7 @@ Das März-2026-Release bringt drei Dinge, die richtig was ändern:
 
 Plus: 70+ neue KI-Nodes sind 2025 dazugekommen. LLMs, Embeddings, Vector-Datenbanken, Sprach- und Bilderkennung.
 
-![n8n 2.0 Draft und Live States nebeneinander im Editor](/images/blog/n8n-automatisierung-2.png)
+![n8n 2.0 Draft und Live States nebeneinander im Editor](/images/blog/n8n-automatisierung-2.webp)
 
 ## 5 Automationen, die du heute bauen kannst
 
@@ -91,7 +97,7 @@ services:
 
 Drei Befehle und n8n läuft. Nicht schwerer als einen Blog aufzusetzen.
 
-![Vergleichstabelle n8n, Zapier und Make mit Preis, Features und Self-Hosting](/images/blog/n8n-automatisierung-3.png)
+![Vergleichstabelle n8n, Zapier und Make mit Preis, Features und Self-Hosting](/images/blog/n8n-automatisierung-3.webp)
 
 ## n8n vs Zapier vs Make
 

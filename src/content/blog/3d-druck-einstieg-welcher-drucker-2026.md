@@ -6,9 +6,15 @@ description: "Bambu Lab, Creality oder Elegoo? FDM oder Resin? Ich zeig dir, wel
 tags: ["3d-druck", "maker", "diy", "kaufberatung", "tutorial"]
 category: "maker-projekt"
 draft: false
-heroImage: "/images/blog/3d-druck-1.png"
+heroImage: "/images/blog/3d-druck-1.webp"
 readingTime: 3
 ---
+
+> **TL;DR**
+> - FDM-Drucker für Anfänger, Resin nur für Details, Miniaturen
+> - Bambu A1 Mini, Creality Ender 3 V3 oder Elegoo Centauri, alle unter 300€
+> - Startup-Kosten 250-450€ (Drucker, Filament, Zubehör), laufend 30-80€/Monat
+> - Mit Cura slicen, Printables/MakerWorld für Modelle, PLA für Anfänger, mit Benchy starten
 
 Du willst dir Sachen drucken. Handy-Halter, Kabelorganizer, Ersatzteile, vielleicht ein Custom-Gehäuse für dein Projekt. Geil. Aber welchen Drucker kaufst du?
 
@@ -16,7 +22,7 @@ Der Markt ist 2026 richtig gut für Einsteiger. Unter 300€ bekommst du Drucker
 
 Hier mein Breakdown.
 
-![Bambu Lab A1 Mini auf Schreibtisch mit verschiedenen fertigen 3D-Drucken](/images/blog/3d-druck-1.png)
+![Bambu Lab A1 Mini auf Schreibtisch mit verschiedenen fertigen 3D-Drucken](/images/blog/3d-druck-1.webp)
 
 ## FDM vs Resin: Was passt zu dir?
 
@@ -30,7 +36,7 @@ Aber: Du brauchst Handschuhe, eine Maske, gute Belüftung. Die Teile sind spröd
 
 **Mein Take:** FDM für Einsteiger. Immer. Resin nur, wenn du Miniaturen oder Schmuck drucken willst und bereit bist, dich mit Chemie auseinanderzusetzen.
 
-![Vergleich: Dasselbe Modell gedruckt mit FDM (links) und Resin (rechts)](/images/blog/3d-druck-2.png)
+![Vergleich: Dasselbe Modell gedruckt mit FDM (links) und Resin (rechts)](/images/blog/3d-druck-2.webp)
 
 ## Die 3 besten Budget-Drucker unter 300€
 
@@ -68,7 +74,7 @@ Der Slicer nimmt dein 3D-Modell und macht druckfertige Anweisungen draus.
 
 **Thingiverse.com**. Der Klassiker. Riesige Auswahl, aber auch viel Müll dazwischen. Der Customizer ist trotzdem geil: Parameter anpassen, individuelles Modell generieren.
 
-![Cura Slicer Software mit 3D Benchy auf der Build Plate](/images/blog/3d-druck-3.png)
+![Cura Slicer Software mit 3D Benchy auf der Build Plate](/images/blog/3d-druck-3.webp)
 
 ## Deine ersten Projekte
 

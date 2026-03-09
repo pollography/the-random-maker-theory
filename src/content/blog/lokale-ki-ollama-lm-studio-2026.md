@@ -6,9 +6,15 @@ description: "DeepSeek, Llama, Mistral, Qwen , alles lokal, alles privat, alles 
 tags: ["tools", "open-source", "tutorial"]
 category: "ki-tools"
 draft: false
-heroImage: "/images/blog/lokale-ki-1.png"
+heroImage: "/images/blog/lokale-ki-1.webp"
 readingTime: 4
 ---
+
+> **TL;DR**
+> - Ollama (CLI), LM Studio (GUI) oder Jan.ai, kostenlos, DeepSeek V3, Llama 3.1, Mistral, Qwen, Gemma
+> - 8-12GB VRAM sweet spot, 7-8B Modelle 40+ Tokens/sec, schneller als Cloud-APIs
+> - Q4_K_M Quantization 75% weniger RAM, minimal schlechter, Dual-Strategie (lokal Standard, Cloud Complex)
+> - Privacy, Zero Data Exfiltration, DSGVO-konform, Break-Even 2-6 Monate, dann praktisch gratis
 
 Jeder Prompt, den du an ChatGPT schickst, landet auf einem Server in den USA. Jedes Code-Snippet, jeder private Text, jede Geschäftsidee.
 
@@ -16,7 +22,7 @@ Oder du lässt die KI auf deinem eigenen Rechner laufen. Lokal. Privat. Offline.
 
 2026 ist das erstmals wirklich praktisch.
 
-![Ollama CLI und LM Studio Desktop-App auf einem Monitor](/images/blog/lokale-ki-1.png)
+![Ollama CLI und LM Studio Desktop-App auf einem Monitor](/images/blog/lokale-ki-1.webp)
 
 ## Ollama vs LM Studio vs Jan.ai
 
@@ -73,7 +79,7 @@ Läuft sogar auf CPU (mit gemma.cpp). Perfekt für Systeme ohne dedizierte GPU.
 
 MIT-Lizenz. Multimodal (Text + Bild).
 
-![Benchmark-Vergleich: Llama 3.1, DeepSeek V3, Mistral Large 3, Qwen 3.5](/images/blog/lokale-ki-2.png)
+![Benchmark-Vergleich: Llama 3.1, DeepSeek V3, Mistral Large 3, Qwen 3.5](/images/blog/lokale-ki-2.webp)
 
 ## Welche Hardware brauchst du?
 
@@ -132,7 +138,7 @@ Strom: 30-50€/Monat. Sonst nichts.
 
 **Break-Even:** 2-6 Monate bei Heavy Usage. Danach ist lokal praktisch gratis.
 
-![Kostenvergleich Cloud-KI vs lokale KI über 12 Monate](/images/blog/lokale-ki-3.png)
+![Kostenvergleich Cloud-KI vs lokale KI über 12 Monate](/images/blog/lokale-ki-3.webp)
 
 ## Integration: So nutzt du lokale KI im Alltag
 

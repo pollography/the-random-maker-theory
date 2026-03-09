@@ -68,7 +68,7 @@
 	<!-- Hero Image -->
 	{#if data.post.heroImage}
 		<div class="hero-image">
-			<img src={data.post.heroImage} alt={data.post.title} loading="eager" />
+			<img src={data.post.heroImage} alt={data.post.title} loading="eager" width="1200" height="675" />
 		</div>
 	{/if}
 

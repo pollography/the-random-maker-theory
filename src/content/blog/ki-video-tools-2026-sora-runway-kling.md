@@ -6,15 +6,21 @@ description: "Sora 2, Runway Gen-4.5, Kling 3.0, Pika 2.5 im Praxistest. Welches
 tags: ["tools", "tutorial", "fotografie", "workflow"]
 category: "ki-tools"
 draft: false
-heroImage: "/images/blog/ki-video-1.png"
+heroImage: "/images/blog/ki-video-1.webp"
 readingTime: 4
 ---
+
+> **TL;DR**
+> - Sora 2 beste Qualität (5-8min wait), Runway Gen-4.5 Allrounder mit Character Consistency, Kling 3.0 Preis-König 4K
+> - Pika 2.5 Speed-King 30-90sec, Veo 2 kostenlos, Hailuo günstig, jedes hat Schwächen
+> - Fotorealismus Sora, Kreativität Runway, Kosten Kling, Speed Pika
+> - Security: "VibeScamming" real, KI-Code hat Löcher, nie ungeprüft in Production
 
 Text rein, Video raus. Das ist der Pitch. Aber wie gut ist die Realität?
 
 Ich hab Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5 getestet. Spoiler: Die Qualität ist 2026 absurd gut. Aber jedes Tool hat seine Schwächen.
 
-![Vergleich desselben Prompts in Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5](/images/blog/ki-video-1.png)
+![Vergleich desselben Prompts in Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5](/images/blog/ki-video-1.webp)
 
 ## Das Feld im Überblick
 
@@ -31,7 +37,7 @@ Ich hab Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5 getestet. Spoiler: Die Qu
 
 OpenAIs Sora 2 produziert die fotorealistischsten Videos. Punkt. Die Physik stimmt, Gesichter sind konsistent, die narrativen Sequenzen sind beeindruckend.
 
-![Sora 2 generiertes Video: fotorealistische Stadtszene mit korrekter Physik](/images/blog/ki-video-2.png)
+![Sora 2 generiertes Video: fotorealistische Stadtszene mit korrekter Physik](/images/blog/ki-video-2.webp)
 
 **Was geil ist:** Synchronisierter Audio, Videos bis 25 Sekunden, Disney-Partnership (200+ Charaktere).
 
@@ -49,7 +55,7 @@ Runway ist seit Januar 2026 bei Gen-4.5 und hat den höchsten Elo-Score (1.247) 
 
 **Spatial Understanding** sorgt dafür, dass Kamerabewegungen durch 3D-Räume realistisch aussehen. Objekte haben echtes Gewicht und Momentum.
 
-![Runway Gen-4.5: gleicher Charakter in drei verschiedenen Szenen](/images/blog/ki-video-3.png)
+![Runway Gen-4.5: gleicher Charakter in drei verschiedenen Szenen](/images/blog/ki-video-3.webp)
 
 **Preise:** Standard 12$/Mo (625 Credits), Pro 28$/Mo, Unlimited 76-95$/Mo.
 

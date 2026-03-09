@@ -6,15 +6,21 @@ description: "Text rein, App raus. v0, Bolt.new und Lovable im Vergleich. Was k�
 tags: ["tools", "tutorial", "automatisierung"]
 category: "ki-tools"
 draft: false
-heroImage: "/images/blog/v0-bolt-1.png"
+heroImage: "/images/blog/v0-bolt-1.webp"
 readingTime: 4
 ---
+
+> **TL;DR**
+> - v0 (React/Tailwind/shadcn) Production-Code, aber nur Frontend, Bolt schnellster MVP 20min mit Live-Debugging
+> - Lovable beste Designs und Auto-Supabase, aber RLS-Security musst du selbst, Replit flexible Agent-Workflows
+> - Marketing-Sites: Framer, Apps: Bolt/Lovable, Tech-Profis: v0 dann selbst weiterbauen
+> - "VibeScamming" real, KI-Code hat Security-Löcher, nie ungeprüft live, Enterprise noch nicht ready
 
 "Beschreibe deine App und wir bauen sie." Das ist der Pitch von v0, Bolt und Lovable. Und 2026 funktioniert das tatsächlich. Irgendwie.
 
 Ich hab alle drei getestet. Die ehrliche Antwort: Ja, du kriegst in 20 Minuten eine funktionierende App. Aber "funktionierend" und "production-ready" sind zwei verschiedene Dinge.
 
-![Dieselbe Todo-App gebaut in v0, Bolt.new und Lovable](/images/blog/v0-bolt-1.png)
+![Dieselbe Todo-App gebaut in v0, Bolt.new und Lovable](/images/blog/v0-bolt-1.webp)
 
 ## v0 von Vercel: Der Code-Qualitäts-König
 
@@ -24,7 +30,7 @@ v0 generiert React/Next.js-Komponenten aus natürlicher Sprache. Mit Tailwind un
 
 **Was fehlt:** v0 macht nur Frontend. Kein Backend, keine Datenbank, keine Auth. Du brauchst deine eigene Infrastruktur für alles, was hinter den Buttons passiert.
 
-![v0 Interface: React-Komponente aus Text-Prompt generiert](/images/blog/v0-bolt-2.png)
+![v0 Interface: React-Komponente aus Text-Prompt generiert](/images/blog/v0-bolt-2.webp)
 
 **Pricing:** Free (5$ Credits), Premium 20$/Mo, Team 30$/User.
 
@@ -52,7 +58,7 @@ Lovable (ehemals GPT Engineer) baut Apps für Leute, die nicht coden können. Un
 
 **Neu in 2.0 (Feb 2026):** Multi-User Collaboration (bis 20 User), Chat Mode Agent, und die Designs sind nochmal besser geworden.
 
-![Lovable 2.0: automatisch generierte App mit Supabase Backend](/images/blog/v0-bolt-3.png)
+![Lovable 2.0: automatisch generierte App mit Supabase Backend](/images/blog/v0-bolt-3.webp)
 
 **Das Problem:** Supabase RLS (Row Level Security) Policies. Die KI erstellt die Datenbank, aber die Sicherheitsregeln musst du selbst konfigurieren. "Ich hab 3 Tage damit verbracht" ist ein häufiger Erfahrungsbericht.
 
