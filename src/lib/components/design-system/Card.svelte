@@ -35,8 +35,8 @@
 
 	.card.interactive:hover {
 		transform: translateY(-2px);
-		box-shadow: var(--shadow-elevated);
-		border-color: var(--color-accent-honey-subtle);
+		box-shadow: var(--shadow-elevated), 0 0 20px rgba(212, 137, 62, 0.12);
+		border-color: rgba(212, 137, 62, 0.35);
 	}
 
 	:global([data-theme='light']) .card {

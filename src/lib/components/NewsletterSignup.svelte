@@ -164,8 +164,8 @@
 
 	.newsletter-btn:hover:not(:disabled) {
 		background: var(--color-accent-honey-hover);
-		box-shadow: var(--shadow-glow-honey);
-		transform: translateY(-1px);
+		box-shadow: 0 0 20px rgba(212, 137, 62, 0.4), 0 0 40px rgba(212, 137, 62, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+		transform: translateY(-2px);
 	}
 
 	.newsletter-btn:disabled {

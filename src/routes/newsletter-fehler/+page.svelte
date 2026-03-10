@@ -70,7 +70,8 @@
 
 	.btn-honey:hover {
 		background: var(--color-accent-honey-hover);
-		transform: translateY(-1px);
+		transform: translateY(-2px);
+		box-shadow: 0 0 20px rgba(212, 137, 62, 0.4), 0 0 40px rgba(212, 137, 62, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
 	}
 
 	.btn-outline {

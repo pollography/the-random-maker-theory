@@ -87,7 +87,8 @@
 
 	:global(.spotify-btn:hover) {
 		background-color: var(--color-accent-teal-hover);
-		box-shadow: var(--shadow-glow-teal);
+		box-shadow: 0 0 20px rgba(58, 176, 162, 0.4), 0 0 40px rgba(58, 176, 162, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+		transform: translateY(-2px);
 		color: #ffffff !important;
 	}
 </style>

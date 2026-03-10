@@ -25,10 +25,9 @@ echo  -------------------
 git status --short
 echo.
 
-:: Alles stagen
+:: Alles stagen + committen ZUERST (vor dem Pull!)
 git add -A
 
-:: Commit mit Timestamp
 for /f "tokens=*" %%i in ('powershell -command "Get-Date -Format 'yyyy-MM-dd HH:mm'"') do set TIMESTAMP=%%i
 git commit -m "content: update %TIMESTAMP%"
 
@@ -37,6 +36,19 @@ if errorlevel 1 (
     echo  Nichts zu deployen - alles aktuell!
     timeout /t 3
     exit /b 0
+)
+
+:: DANN Remote-Aenderungen holen (z.B. Sveltia CMS Commits)
+echo.
+echo  Remote-Aenderungen holen...
+git pull --rebase origin main
+if errorlevel 1 (
+    echo.
+    echo  Pull fehlgeschlagen! Merge-Konflikt?
+    echo  Bitte manuell loesen: git rebase --abort
+    echo  Dann nochmal: deploy.bat
+    pause
+    exit /b 1
 )
 
 :: Push

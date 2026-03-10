@@ -444,23 +444,23 @@
 		color: inherit;
 	}
 
-	/* Alternating subtle backgrounds */
+	/* Alternating subtle backgrounds — markant genug sichtbar */
 	.pillar-honey {
-		background: rgba(212, 137, 62, 0.03);
-		border-color: rgba(212, 137, 62, 0.08);
+		background: rgba(212, 137, 62, 0.06);
+		border-color: rgba(212, 137, 62, 0.15);
 	}
 
 	.pillar-teal {
-		background: rgba(58, 176, 162, 0.03);
-		border-color: rgba(58, 176, 162, 0.08);
+		background: rgba(58, 176, 162, 0.06);
+		border-color: rgba(58, 176, 162, 0.15);
 	}
 
-	/* Hover: lift + deep shadow + darker surface (same as current cards) */
+	/* Hover: lift + honey glow + golden border */
 	.pillar-card:hover {
 		transform: translateY(-4px);
-		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 20px rgba(212, 137, 62, 0.12);
 		background: rgba(0, 0, 0, 0.25);
-		border-color: rgba(212, 137, 62, 0.2);
+		border-color: rgba(212, 137, 62, 0.35);
 	}
 
 	:global([data-theme='light']) .pillar-card {
@@ -553,6 +553,7 @@
 
 	.pillar-card:hover .pillar-cta {
 		transform: translateX(4px);
+		text-shadow: 0 0 12px rgba(212, 137, 62, 0.5);
 	}
 
 	.pillar-honey:hover .pillar-cta {
@@ -561,6 +562,7 @@
 
 	.pillar-teal:hover .pillar-cta {
 		color: var(--color-accent-teal);
+		text-shadow: 0 0 12px rgba(58, 176, 162, 0.5);
 	}
 
 	/* ── SECTIONS ── */
@@ -588,9 +590,15 @@
 		text-decoration: none;
 		font-weight: var(--font-weight-semibold);
 		font-size: var(--font-size-base);
-		transition: color var(--transition-normal);
+		transition: all var(--transition-normal);
+		padding: 6px 14px;
+		border-radius: var(--radius-md);
 	}
-	.section-link:hover { color: var(--color-accent-honey-hover); }
+	.section-link:hover {
+		color: var(--color-accent-honey-hover);
+		text-shadow: 0 0 12px rgba(212, 137, 62, 0.4);
+		transform: translateX(2px);
+	}
 
 	/* ── POSTS GRID ── */
 	.posts-grid {

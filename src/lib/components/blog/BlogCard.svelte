@@ -68,18 +68,20 @@
 
 <style>
 	.card-title {
-		font-family: var(--font-sans);
-		font-weight: 600;
-		font-size: var(--font-size-xl);
+		font-family: var(--font-display);
+		font-weight: 400;
+		font-size: 20px;
 		color: var(--color-text);
-		line-height: var(--line-height-snug);
-		letter-spacing: var(--letter-spacing-tighter);
+		line-height: 1.25;
+		letter-spacing: -0.02em;
 		margin: 0;
-		min-height: calc(var(--font-size-xl) * 1.25 * 3);
+		min-height: calc(20px * 1.25 * 3);
+		opacity: 0.95;
 	}
 
 	.card-accent {
 		color: var(--color-accent-honey);
+		font-style: italic;
 	}
 
 	.line-clamp-2 {
