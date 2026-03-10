@@ -166,19 +166,12 @@
 		<a href="/blog" class="btn-honey">Zum Blog</a>
 		<a href="/podcast" class="btn-teal">Zum Hören</a>
 	</div>
+	<div class="hero-counter" bind:this={counterRef}>
+		<span class="counter-number">{displayCount}</span>
+		<span class="counter-label">Artikel online</span>
+	</div>
 	<div class="scroll-hint" class:hidden={scrollY > 100}>
 		<span class="scroll-arrow">↓</span>
-	</div>
-</section>
-
-<!-- ═══════ INTRO ═══════ -->
-<section class="intro-section">
-	<div class="intro-inner">
-		<div class="article-counter" bind:this={counterRef}>
-			<span class="counter-number">{displayCount}</span>
-			<span class="counter-label">Artikel online</span>
-			<span class="counter-sub">+ wöchentlich neue</span>
-		</div>
 	</div>
 </section>
 
@@ -387,20 +380,23 @@
 		transform: translateY(-2px);
 	}
 
-	/* ── INTRO SECTION (Counter only) ── */
-	.intro-section {
-		padding: 64px 0 32px;
+	/* ── HERO COUNTER (inside hero) ── */
+	.hero-counter {
+		display: inline-flex;
+		align-items: baseline;
+		gap: 10px;
+		margin-top: 40px;
+		opacity: 0.7;
+		transition: opacity 0.3s ease;
 	}
 
-	.intro-inner {
-		max-width: 680px;
-		margin: 0 auto;
-		text-align: center;
+	.hero-counter:hover {
+		opacity: 1;
 	}
 
 	/* ── DISCOVER SECTION (Headline + Text) ── */
 	.discover-section {
-		padding: 48px 0 24px;
+		padding: 80px 0 48px;
 	}
 
 	.discover-inner {
@@ -430,47 +426,20 @@
 		margin: 0;
 	}
 
-	/* ── ARTICLE COUNTER (V5 Honey Glow) ── */
-	.article-counter {
-		display: inline-flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 4px;
-		padding: 32px 52px;
-		margin: 0 0 32px;
-		background: var(--color-surface);
-		border: 1px solid rgba(212, 137, 62, 0.15);
-		border-radius: var(--radius-xl);
-		box-shadow: 0 0 30px rgba(212, 137, 62, 0.05);
-		transition: all 0.3s ease;
-	}
-
-	.article-counter:hover {
-		border-color: rgba(212, 137, 62, 0.3);
-		box-shadow: 0 0 40px rgba(212, 137, 62, 0.1), 0 0 60px rgba(212, 137, 62, 0.05);
-	}
-
+	/* ── COUNTER (inline in hero) ── */
 	.counter-number {
 		font-family: var(--font-display);
 		font-weight: 400;
-		font-size: 4rem;
+		font-size: 1.5rem;
 		color: var(--color-accent-honey);
 		line-height: 1;
-		text-shadow: 0 0 20px rgba(212, 137, 62, 0.2);
 	}
 
 	.counter-label {
 		font-family: var(--font-display);
 		font-style: italic;
-		font-size: 1.15rem;
+		font-size: 1rem;
 		color: var(--color-text-muted);
-	}
-
-	.counter-sub {
-		font-family: var(--font-sans);
-		font-size: 0.75rem;
-		color: var(--color-text-dim);
-		margin-top: 4px;
 	}
 
 	/* ── PILLARS (C+D Hybrid: Teal Category + Alternating Colors) ── */
@@ -817,8 +786,7 @@
 
 	@media (max-width: 768px) {
 		.hero { min-height: 100svh; padding: 56px 0 60px; margin-top: -56px; }
-		.intro-section { padding: 48px 0 24px; }
-		.discover-section { padding: 32px 0 16px; }
+		.discover-section { padding: 48px 0 24px; }
 		.bottom-grid { grid-template-columns: 1fr; }
 		.bottom-card { padding: 24px; }
 		.posts-grid { grid-template-columns: 1fr; }
@@ -829,8 +797,7 @@
 		}
 		.pillar-icon-large { font-size: 2rem; }
 		.pillar-title { font-size: var(--font-size-lg); }
-		.counter-number { font-size: 3rem; }
-		.article-counter { padding: 24px 36px; }
+		.hero-counter { margin-top: 28px; }
 	}
 
 	@media (max-width: 480px) {

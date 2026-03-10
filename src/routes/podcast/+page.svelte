@@ -66,14 +66,14 @@
 	</div>
 </section>
 
-<!-- Episodes List -->
-<section style="padding: 2rem 0; display: flex; flex-direction: column; gap: 1.5rem;">
+<!-- Episodes Grid -->
+<section class="episodes-section">
 	{#if episodes.length > 0}
-		{#each episodes as episode (episode.slug)}
-			<div>
+		<div class="episodes-grid">
+			{#each episodes as episode (episode.slug)}
 				<EpisodeCard {episode} />
-			</div>
-		{/each}
+			{/each}
+		</div>
 	{:else}
 		<div style="text-align: center; padding: 3rem; color: var(--color-text-muted); font-size: var(--font-size-lg);">
 			Noch keine Episoden vorhanden. Kommt bald!
@@ -101,10 +101,25 @@
 
 <style>
 	.podcast-header {
-		padding: 48px 0 24px;
+		padding: 48px 0 32px;
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
+		max-width: 800px;
+	}
+
+	.episodes-section {
+		padding: 2rem 0 3rem;
+	}
+
+	.episodes-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+	}
+
+	@media (max-width: 768px) {
+		.episodes-grid { grid-template-columns: 1fr; }
 	}
 
 	.podcast-title {
@@ -157,8 +172,7 @@
 
 	/* ── FAQ ── */
 	.faq-section {
-		padding: 48px 0 24px;
-		max-width: 800px;
+		padding: 48px 0 48px;
 	}
 
 	.faq-heading {
@@ -177,7 +191,7 @@
 	}
 
 	.faq-item {
-		background: var(--color-surface);
+		background: rgba(26, 26, 26, 0.6);
 		border: 1px solid var(--color-border-subtle);
 		border-radius: var(--radius-lg);
 		overflow: hidden;

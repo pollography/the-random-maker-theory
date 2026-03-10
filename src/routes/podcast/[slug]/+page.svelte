@@ -35,15 +35,17 @@
 		</div>
 	</header>
 
-	<!-- Audio Player -->
-	{#if data.episode.audioUrl}
-		<div class="mb-8">
-			<audio controls class="w-full">
-				<source src={data.episode.audioUrl} type="audio/mpeg" />
-				Dein Browser unterstützt das Audio-Element nicht.
-			</audio>
-		</div>
-	{/if}
+	<!-- Spotify Link -->
+	<div class="mb-8">
+		<a
+			href={siteConfig.social.spotify}
+			target="_blank"
+			rel="noreferrer"
+			class="spotify-listen-btn"
+		>
+			🎧 Auf Spotify anhören
+		</a>
+	</div>
 
 	<!-- Description -->
 	<div class="prose prose-invert max-w-none mb-8">
@@ -94,13 +96,11 @@
 					</a>
 				</p>
 			{/if}
-			{#if data.episode.audioUrl}
-				<p>
-					<a href={data.episode.audioUrl} class="text-honey hover:text-honey-hover font-semibold">
-						Audio herunterladen
-					</a>
-				</p>
-			{/if}
+			<p>
+				<a href={siteConfig.social.spotify} target="_blank" rel="noreferrer" class="text-honey hover:text-honey-hover font-semibold">
+					🎧 Auf Spotify anhören
+				</a>
+			</p>
 			{#if data.episode.videoUrl}
 				<p>
 					<a href={data.episode.videoUrl} target="_blank" rel="noreferrer" class="text-honey hover:text-honey-hover font-semibold">
@@ -128,9 +128,23 @@
 		color: var(--color-accent-honey-hover);
 	}
 
-	audio {
+	.spotify-listen-btn {
+		display: inline-block;
+		padding: 0.875rem 1.75rem;
+		background-color: var(--color-accent-teal);
+		color: #ffffff !important;
 		border-radius: var(--radius-lg);
-		background-color: var(--color-surface-raised);
+		font-weight: var(--font-weight-semibold);
+		text-decoration: none;
+		transition: all var(--transition-normal);
+		box-shadow: var(--shadow-card);
+		font-family: var(--font-sans);
+	}
+
+	.spotify-listen-btn:hover {
+		background-color: var(--color-accent-teal-hover);
+		box-shadow: 0 0 20px rgba(58, 176, 162, 0.4), 0 0 40px rgba(58, 176, 162, 0.15);
+		transform: translateY(-2px);
 	}
 
 	/* ── TRANSCRIPT ── */

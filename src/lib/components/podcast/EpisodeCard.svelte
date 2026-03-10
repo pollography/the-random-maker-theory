@@ -33,7 +33,7 @@
 		<div class="episode-meta">
 			<time datetime={episode.date}>{formattedDate}</time>
 			{#if episode.duration}
-				<span>{episode.duration}</span>
+				<span class="episode-duration">🎧 {episode.duration}</span>
 			{/if}
 		</div>
 	</div>
@@ -87,5 +87,10 @@
 		color: var(--color-text-muted);
 		padding-top: 4px;
 		letter-spacing: -0.01em;
+	}
+
+	.episode-duration {
+		color: var(--color-accent-teal);
+		font-weight: 600;
 	}
 </style>
