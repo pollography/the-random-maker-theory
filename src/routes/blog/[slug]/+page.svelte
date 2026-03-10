@@ -1,5 +1,6 @@
 <script>
 	import TagList from '$lib/components/shared/TagList.svelte';
+	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import { siteConfig } from '$lib/config';
 
 	let { data } = $props();
@@ -143,6 +144,18 @@
 		{/if}
 	</div>
 </article>
+
+<!-- Related Posts -->
+{#if data.relatedPosts && data.relatedPosts.length > 0}
+	<section class="related-section">
+		<h2 class="related-title">Das könnte dich auch interessieren</h2>
+		<div class="related-grid">
+			{#each data.relatedPosts as post (post.slug)}
+				<BlogCard {post} />
+			{/each}
+		</div>
+	</section>
+{/if}
 
 <style>
 	.progress-bar {
@@ -323,6 +336,30 @@
 		display: block;
 	}
 
+	/* Related Posts */
+	.related-section {
+		max-width: 72rem;
+		margin: 0 auto;
+		padding: 0 1rem 4rem;
+	}
+
+	.related-title {
+		font-family: var(--font-display);
+		font-weight: 400;
+		font-style: italic;
+		font-size: var(--font-size-2xl);
+		color: var(--color-accent-honey);
+		margin: 0 0 2rem;
+		padding-top: 3rem;
+		border-top: 1px solid var(--color-border);
+	}
+
+	.related-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 1.5rem;
+	}
+
 	@media (max-width: 768px) {
 		.article-container {
 			padding: 2rem 1rem;
@@ -331,6 +368,14 @@
 		.article-header {
 			margin-bottom: 2rem;
 			padding-bottom: 1.5rem;
+		}
+
+		.related-section {
+			padding: 0 1rem 3rem;
+		}
+
+		.related-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>

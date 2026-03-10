@@ -191,6 +191,7 @@
 							<span class="pillar-tag">{tag}</span>
 						{/each}
 					</div>
+					<span class="pillar-cta">Entdecken →</span>
 				</div>
 			</a>
 		{/each}
@@ -538,6 +539,28 @@
 		padding: 3px 10px;
 		border-radius: var(--radius-full);
 		letter-spacing: 0.02em;
+	}
+
+	.pillar-cta {
+		display: inline-block;
+		margin-top: 8px;
+		font-family: var(--font-sans);
+		font-size: var(--font-size-sm);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-accent-honey);
+		transition: all var(--transition-normal);
+	}
+
+	.pillar-card:hover .pillar-cta {
+		transform: translateX(4px);
+	}
+
+	.pillar-honey:hover .pillar-cta {
+		color: var(--color-accent-honey-hover);
+	}
+
+	.pillar-teal:hover .pillar-cta {
+		color: var(--color-accent-teal);
 	}
 
 	/* ── SECTIONS ── */

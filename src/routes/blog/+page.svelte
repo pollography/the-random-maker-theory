@@ -3,10 +3,22 @@
 	import { getPosts } from '$lib/utils/posts';
 	import { siteConfig } from '$lib/config';
 
-	let posts = $state([]);
+	const POSTS_PER_PAGE = 9;
+
+	let allPosts = $state([]);
+	let currentPage = $state(1);
+
+	let totalPages = $derived(Math.ceil(allPosts.length / POSTS_PER_PAGE));
+	let paginatedPosts = $derived(allPosts.slice(0, currentPage * POSTS_PER_PAGE));
+	let hasMore = $derived(currentPage < totalPages);
 
 	async function load() {
-		posts = await getPosts();
+		allPosts = await getPosts();
+	}
+
+	function loadMore() {
+		currentPage++;
+		// Scroll bleibt wo es ist, neue Cards laden unten nach
 	}
 
 	load();
@@ -31,23 +43,71 @@
 			Tech, KI, Maker-Projekte & Produktivität — neu jede Woche.
 		</p>
 	</div>
+	{#if allPosts.length > 0}
+		<p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin: 0;">
+			{allPosts.length} Artikel
+		</p>
+	{/if}
 </section>
 
 <!-- Posts Grid -->
 <section style="padding: 2rem 0;">
 	<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
-		{#each posts as post (post.slug)}
+		{#each paginatedPosts as post (post.slug)}
 			<BlogCard {post} />
 		{/each}
 	</div>
 
-	{#if posts.length === 0}
+	{#if allPosts.length === 0}
 		<div style="text-align: center; padding: 3rem; color: var(--color-text-muted); font-size: var(--font-size-lg);">
 			Keine Posts gefunden.
+		</div>
+	{/if}
+
+	<!-- Load More -->
+	{#if hasMore}
+		<div class="load-more-container">
+			<button class="load-more-btn" onclick={loadMore}>
+				Mehr laden
+				<span class="load-more-count">({paginatedPosts.length} von {allPosts.length})</span>
+			</button>
 		</div>
 	{/if}
 </section>
 
 <style>
-	/* no global body overrides needed — layout handles padding */
+	.load-more-container {
+		display: flex;
+		justify-content: center;
+		padding: 3rem 0 1rem;
+	}
+
+	.load-more-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.875rem 2rem;
+		background: transparent;
+		border: 1px solid var(--color-accent-honey);
+		color: var(--color-accent-honey);
+		font-family: var(--font-sans);
+		font-size: var(--font-size-base);
+		font-weight: var(--font-weight-semibold);
+		border-radius: var(--radius-lg);
+		cursor: pointer;
+		transition: all var(--transition-normal);
+	}
+
+	.load-more-btn:hover {
+		background: var(--color-accent-honey);
+		color: var(--color-on-accent, #111);
+		transform: translateY(-1px);
+		box-shadow: 0 4px 12px var(--color-accent-honey-glow);
+	}
+
+	.load-more-count {
+		font-size: var(--font-size-sm);
+		opacity: 0.7;
+		font-weight: var(--font-weight-normal);
+	}
 </style>
