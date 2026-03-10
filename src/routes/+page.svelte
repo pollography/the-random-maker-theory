@@ -5,6 +5,18 @@
 	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 	import { siteConfig } from '$lib/config';
+	import { pageFAQs } from '$lib/data/pageFAQs';
+
+	const faqs = pageFAQs.home;
+	const faqSchema = JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": faqs.map(faq => ({
+			"@type": "Question",
+			"name": faq.q,
+			"acceptedAnswer": { "@type": "Answer", "text": faq.a }
+		}))
+	});
 
 	/** @type {any[]} */
 	let posts = $state([]);
@@ -123,6 +135,9 @@
 	<!-- Canonical -->
 	<link rel="canonical" href="https://therandommakertheory.com" />
 
+	<!-- FAQPage Schema -->
+	{@html `<script type="application/ld+json">${faqSchema}</script>`}
+
 	<!-- JSON-LD Schema -->
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		"@context": "https://schema.org",
@@ -223,6 +238,26 @@
 		</div>
 	</section>
 {/if}
+
+<!-- ═══════ FAQ ═══════ -->
+<section class="section faq-section">
+	<div class="section-header">
+		<h2 class="section-title">Häufige Fragen</h2>
+	</div>
+	<div class="faq-list">
+		{#each faqs as faq, i}
+			<details class="faq-item" class:faq-item-teal={i % 3 === 1}>
+				<summary class="faq-question">
+					<span class="faq-q-text">{faq.q}</span>
+					<span class="faq-chevron">›</span>
+				</summary>
+				<div class="faq-answer">
+					<p>{faq.a}</p>
+				</div>
+			</details>
+		{/each}
+	</div>
+</section>
 
 <!-- ═══════ NEWSLETTER ═══════ -->
 <NewsletterSignup />
@@ -608,6 +643,101 @@
 	}
 
 	.episode-wrap { max-width: 640px; }
+
+	/* ── FAQ SECTION ── */
+	.faq-section {
+		max-width: 800px;
+	}
+
+	.faq-list {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.faq-item {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-lg);
+		overflow: hidden;
+		transition: all 0.2s ease;
+	}
+
+	.faq-item:hover {
+		border-color: rgba(212, 137, 62, 0.3);
+	}
+
+	.faq-item-teal:hover {
+		border-color: rgba(58, 176, 162, 0.3);
+	}
+
+	.faq-item[open] {
+		background: rgba(212, 137, 62, 0.03);
+		border-color: rgba(212, 137, 62, 0.2);
+	}
+
+	.faq-item-teal[open] {
+		background: rgba(58, 176, 162, 0.03);
+		border-color: rgba(58, 176, 162, 0.2);
+	}
+
+	.faq-question {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		padding: 18px 24px;
+		cursor: pointer;
+		list-style: none;
+		font-weight: var(--font-weight-semibold);
+		font-size: var(--font-size-base);
+		color: var(--color-text);
+		line-height: 1.5;
+	}
+
+	.faq-question::-webkit-details-marker { display: none; }
+	.faq-question::marker { display: none; content: ''; }
+
+	.faq-chevron {
+		flex-shrink: 0;
+		font-size: 1.25rem;
+		color: var(--color-accent-honey);
+		transition: transform 0.2s ease;
+		font-weight: 700;
+	}
+
+	.faq-item[open] .faq-chevron {
+		transform: rotate(90deg);
+	}
+
+	.faq-item-teal .faq-chevron {
+		color: var(--color-accent-teal);
+	}
+
+	.faq-answer {
+		padding: 0 24px 18px;
+	}
+
+	.faq-answer p {
+		margin: 0;
+		font-size: var(--font-size-base);
+		color: var(--color-text-muted);
+		line-height: 1.75;
+	}
+
+	:global([data-theme='light']) .faq-item {
+		background: var(--gradient-card-bg);
+		border: none;
+		box-shadow: var(--shadow-neo);
+	}
+
+	:global([data-theme='light']) .faq-item[open] {
+		background: rgba(212, 137, 62, 0.04);
+	}
+
+	:global([data-theme='light']) .faq-item-teal[open] {
+		background: rgba(58, 176, 162, 0.04);
+	}
 
 	/* ── RESPONSIVE ── */
 	@media (max-width: 1024px) {

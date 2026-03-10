@@ -9,6 +9,8 @@ export interface Episode {
 	draft: boolean;
 	content?: string;
 	duration?: string;
+	blogSlug?: string;
+	transcript?: string[];
 }
 
 export async function getEpisodes(): Promise<Episode[]> {
@@ -34,6 +36,8 @@ export async function getEpisodes(): Promise<Episode[]> {
 				videoUrl: metadata.videoUrl,
 				draft: metadata.draft || false,
 				duration: metadata.duration,
+				blogSlug: metadata.blogSlug,
+				transcript: metadata.transcript,
 			});
 		}
 	}

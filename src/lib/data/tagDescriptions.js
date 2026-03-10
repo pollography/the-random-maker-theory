@@ -83,7 +83,7 @@ export const tagDescriptions = {
 		icon: '🔧'
 	},
 	'n8n': {
-		title: 'n8n',
+		title: 'n8n Automatisierung',
 		metaDesc: 'n8n-Workflows und Automatisierungen. Self-hosted, open source und ohne monatliche Kosten. Tutorials für Einsteiger und Profis.',
 		intro: 'n8n ist die Open-Source-Alternative zu Zapier und Make, die du selbst hosten kannst. Hier findest du fertige Workflows, Einsteiger-Tutorials und fortgeschrittene Automationen. Von einfachen Webhook-Triggern bis zu komplexen Multi-Step-Workflows mit API-Calls, Datenbanken und Conditional Logic. Alles mit Screenshots und exportierbaren JSON-Files.',
 		icon: '🔗'
