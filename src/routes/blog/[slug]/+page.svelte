@@ -48,6 +48,36 @@
 	{/if}
 	<meta name="twitter:title" content={data.post.title} />
 	<meta name="twitter:description" content={data.post.description} />
+
+	<!-- Canonical -->
+	<link rel="canonical" href={`https://therandommakertheory.com/blog/${data.post.slug}`} />
+
+	<!-- JSON-LD Article Schema -->
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": data.post.title,
+		"description": data.post.description,
+		"url": `https://therandommakertheory.com/blog/${data.post.slug}`,
+		"datePublished": data.post.date,
+		"dateModified": data.post.updated || data.post.date,
+		"author": {
+			"@type": "Person",
+			"name": "Pollo",
+			"url": "https://therandommakertheory.com/about"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "The Random Maker Theory",
+			"url": "https://therandommakertheory.com"
+		},
+		"image": data.post.heroImage ? `https://therandommakertheory.com${data.post.heroImage}` : undefined,
+		"inLanguage": "de-DE",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": `https://therandommakertheory.com/blog/${data.post.slug}`
+		}
+	})}</script>`}
 </svelte:head>
 
 <!-- Reading Progress Bar -->

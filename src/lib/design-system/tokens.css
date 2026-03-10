@@ -94,10 +94,10 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* Font Sizes */
-  --font-size-xs: 10px;
-  --font-size-sm: 12px;
-  --font-size-base: 14px;
-  --font-size-md: 16px;
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-base: 16px;
+  --font-size-md: 18px;
   --font-size-lg: 20px;
   --font-size-xl: 24px;
   --font-size-2xl: 32px;

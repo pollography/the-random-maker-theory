@@ -160,14 +160,14 @@
 <section class="intro-section">
 	<div class="intro-inner">
 		<h2 class="intro-headline">Entdecken. Verstehen. Und alles <span class="intro-accent">Frei Schnauze.</span></h2>
-		<p class="intro-text">
-			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
-		</p>
 		<div class="article-counter" bind:this={counterRef}>
 			<span class="counter-number">{displayCount}</span>
 			<span class="counter-label">Artikel online</span>
 			<span class="counter-sub">+ wöchentlich neue</span>
 		</div>
+		<p class="intro-text">
+			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
+		</p>
 	</div>
 </section>
 
@@ -372,7 +372,7 @@
 		font-size: var(--font-size-md);
 		color: var(--color-text-muted);
 		line-height: 1.75;
-		margin: 0 0 48px;
+		margin: 0;
 	}
 
 	/* ── ARTICLE COUNTER (V5 Honey Glow) ── */
@@ -382,6 +382,7 @@
 		align-items: center;
 		gap: 4px;
 		padding: 32px 52px;
+		margin: 32px 0 36px;
 		background: var(--color-surface);
 		border: 1px solid rgba(212, 137, 62, 0.15);
 		border-radius: var(--radius-xl);
@@ -475,6 +476,12 @@
 		background: rgba(58, 176, 162, 0.04);
 	}
 
+	:global([data-theme='light']) .pillar-card:hover {
+		background: rgba(0, 0, 0, 0.04);
+		box-shadow: 12px 12px 24px rgba(160, 145, 125, 0.5), -6px -6px 12px rgba(245, 238, 225, 0.6);
+		border-color: rgba(196, 133, 76, 0.3);
+	}
+
 	.pillar-icon-col {
 		display: flex;
 		align-items: center;
@@ -503,7 +510,7 @@
 	.pillar-title {
 		font-family: var(--font-sans);
 		font-weight: 700;
-		font-size: var(--font-size-xl);
+		font-size: var(--font-size-lg);
 		color: var(--color-text);
 		margin: 0;
 	}
@@ -545,7 +552,7 @@
 	.section-title {
 		font-family: var(--font-display);
 		font-weight: 400;
-		font-size: var(--font-size-2xl);
+		font-size: clamp(28px, 4vw, 36px);
 		color: var(--color-text);
 		margin: 0;
 		font-style: normal;
@@ -571,6 +578,10 @@
 	.episode-wrap { max-width: 640px; }
 
 	/* ── RESPONSIVE ── */
+	@media (max-width: 1024px) {
+		.posts-grid { grid-template-columns: repeat(2, 1fr); }
+	}
+
 	@media (max-width: 768px) {
 		.hero { min-height: 100svh; padding: 56px 0 60px; margin-top: -56px; }
 		.intro-section { padding: 80px 0 60px; }

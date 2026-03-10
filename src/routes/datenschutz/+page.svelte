@@ -36,7 +36,7 @@
 				Ich verwende Umami Analytics, eine datenschutzfreundliche Analysesoftware. Umami erhebt keine personenbezogenen Daten, setzt keine Cookies und speichert keine IP-Adressen. Alle Daten werden aggregiert und anonym erhoben.
 			</p>
 			<p>
-				Es ist daher kein Cookie-Banner erforderlich, da keine Einwilligung nach § 25 TDDDG (ehemals TTDSG) notwendig ist.
+				Obwohl Umami technisch keine Einwilligung nach § 25 TDDDG erfordert, biete ich dir über den Cookie-Banner die Möglichkeit, auch diese anonyme Analyse zu deaktivieren. Transparenz ist mir wichtig.
 			</p>
 		</div>
 

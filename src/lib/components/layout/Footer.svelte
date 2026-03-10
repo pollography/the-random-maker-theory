@@ -27,7 +27,7 @@
 				</h4>
 				<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
 					<li><a href="/blog" class="footer-link">Blog</a></li>
-					<li><a href="/podcast" class="footer-link">Zum Hoeren</a></li>
+					<li><a href="/podcast" class="footer-link">Zum Hören</a></li>
 					<li><a href="/about" class="footer-link">Über TRMT</a></li>
 				</ul>
 			</div>
@@ -94,7 +94,7 @@
 	}
 
 	.footer-container {
-		max-width: 1440px;
+		max-width: 1152px;
 		margin: 0 auto;
 		padding: 0 1rem;
 	}

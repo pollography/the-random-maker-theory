@@ -63,7 +63,7 @@
 						disabled={status === 'loading'}
 						class="newsletter-btn"
 					>
-						{status === 'loading' ? '...' : 'Dabei'}
+						{status === 'loading' ? '...' : 'Anmelden'}
 					</button>
 				</div>
 				{#if status === 'error'}

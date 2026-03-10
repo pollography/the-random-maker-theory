@@ -106,11 +106,7 @@
   }
 
   function getUmamiId() {
-    // Umami Website-ID aus dem bestehenden Script-Tag lesen oder Fallback
-    const existing = document.querySelector('script[data-website-id]');
-    if (existing) return existing.getAttribute('data-website-id') || '';
-    // Fallback: Wird beim Einbau angepasst
-    return window.__UMAMI_ID || '';
+    return 'baab8505-1eee-4706-adeb-4bfea05b4771';
   }
 </script>
 
