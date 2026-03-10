@@ -239,6 +239,9 @@
 	</section>
 {/if}
 
+<!-- ═══════ NEWSLETTER ═══════ -->
+<NewsletterSignup />
+
 <!-- ═══════ FAQ ═══════ -->
 <section class="section faq-section">
 	<div class="section-header">
@@ -258,9 +261,6 @@
 		{/each}
 	</div>
 </section>
-
-<!-- ═══════ NEWSLETTER ═══════ -->
-<NewsletterSignup />
 
 <style>
 	/* ── HERO ── */

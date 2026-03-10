@@ -10,6 +10,11 @@
 	<div style="height: 1px; background: linear-gradient(90deg, var(--color-accent-honey), var(--color-accent-teal), transparent); width: 100%;"></div>
 
 	<div class="footer-container">
+		<!-- Newsletter -->
+		<div style="padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--color-border-subtle);">
+			<NewsletterSignup />
+		</div>
+
 		<div class="footer-grid">
 			<!-- About Section -->
 			<div>
@@ -71,11 +76,6 @@
 					</li>
 				</ul>
 			</div>
-		</div>
-
-		<!-- Newsletter -->
-		<div style="border-top: 1px solid var(--color-border-subtle); padding-top: 2rem; margin-top: 2rem;">
-			<NewsletterSignup />
 		</div>
 
 		<!-- Legal Links -->
