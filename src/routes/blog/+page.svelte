@@ -48,18 +48,19 @@
 </svelte:head>
 
 <!-- Header -->
-<section style="padding: 3rem 0; display: flex; flex-direction: column; gap: 1.5rem;">
+<section class="blog-header">
 	<div>
-		<h1 style="font-size: clamp(2.5rem, 8vw, 3.5rem); font-family: var(--font-display); font-weight: var(--font-weight-extrabold); line-height: var(--line-height-tight); margin: 0; color: var(--color-text);">
-			Blog
-		</h1>
-		<p style="font-size: var(--font-size-lg); color: var(--color-text-muted); margin: 0.5rem 0 0 0; line-height: var(--line-height-relaxed);">
+		<h1 class="blog-title">Blog</h1>
+		<p class="blog-subtitle">
 			Tech, KI, Maker-Projekte & Produktivität — neu jede Woche.
 		</p>
 	</div>
+	<p class="blog-intro">
+		Ehrliche Reviews, Praxis-Tutorials und Maker-Projekte zum Nachbauen. Von KI-Tools wie ChatGPT, Claude und Midjourney über Arduino- und ESP32-Projekte bis zu Automatisierung mit n8n und Produktivitäts-Systemen mit Obsidian. Alles getestet, alles nachvollziehbar, alles frei Schnauze. Keine gesponserten Bestenlisten, keine aufgeblähten Listicles. Wenn was gut ist, sag ich das. Wenn was kacke ist, auch.
+	</p>
 	{#if allPosts.length > 0}
-		<p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin: 0;">
-			{allPosts.length} Artikel
+		<p class="blog-count">
+			{allPosts.length} Artikel online
 		</p>
 	{/if}
 </section>
@@ -90,6 +91,45 @@
 </section>
 
 <style>
+	.blog-header {
+		padding: 48px 0 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.blog-title {
+		font-size: clamp(2.5rem, 8vw, 3.5rem);
+		font-family: var(--font-display);
+		font-weight: 400;
+		line-height: var(--line-height-tight);
+		margin: 0;
+		color: var(--color-text);
+		opacity: 0.95;
+	}
+
+	.blog-subtitle {
+		font-size: var(--font-size-lg);
+		color: var(--color-text-muted);
+		margin: 0.5rem 0 0 0;
+		line-height: var(--line-height-relaxed);
+	}
+
+	.blog-intro {
+		font-size: var(--font-size-base);
+		color: var(--color-text-muted);
+		line-height: 1.75;
+		margin: 0;
+		max-width: 720px;
+		opacity: 0.8;
+	}
+
+	.blog-count {
+		font-size: var(--font-size-sm);
+		color: var(--color-text-dim);
+		margin: 0;
+	}
+
 	.load-more-container {
 		display: flex;
 		justify-content: center;

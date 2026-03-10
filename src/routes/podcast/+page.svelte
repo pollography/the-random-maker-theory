@@ -28,16 +28,14 @@
 </svelte:head>
 
 <!-- Header -->
-<section style="padding: 3rem 0; display: flex; flex-direction: column; gap: 1.5rem;">
+<section class="podcast-header">
 	<div>
-		<h1 style="font-size: clamp(2.5rem, 8vw, 3.5rem); font-family: var(--font-display); font-weight: var(--font-weight-extrabold); line-height: var(--line-height-tight); margin: 0; color: var(--color-text);">
-			Zum Hören
-		</h1>
-		<p style="font-size: var(--font-size-lg); color: var(--color-text-muted); margin: 0.5rem 0 0 0; line-height: var(--line-height-relaxed);">
+		<h1 class="podcast-title">Zum Hören</h1>
+		<p class="podcast-subtitle">
 			Keine Zeit zum Lesen? Hier findest du Audio-Zusammenfassungen der Blog-Inhalte. Perfekt für unterwegs, beim Autofahren oder nebenbei.
 		</p>
-		<p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin: 0.75rem 0 0 0;">
-			Die Zusammenfassungen werden KI-gestützt generiert und fassen die wichtigsten Punkte der Artikel zusammen.
+		<p class="podcast-intro">
+			Jede Episode fasst einen Blog-Artikel in wenigen Minuten zusammen. Die wichtigsten Punkte, Empfehlungen und Einschätzungen als Audio, damit du auch im Auto, beim Sport oder beim Kochen auf dem Laufenden bleibst. Die Zusammenfassungen werden KI-gestützt generiert und von mir geprüft. Kein Füll-Gelaber, nur das Wesentliche. Verfügbar hier direkt im Browser und auf Spotify.
 		</p>
 	</div>
 
@@ -70,6 +68,39 @@
 </section>
 
 <style>
+	.podcast-header {
+		padding: 48px 0 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.podcast-title {
+		font-size: clamp(2.5rem, 8vw, 3.5rem);
+		font-family: var(--font-display);
+		font-weight: 400;
+		line-height: var(--line-height-tight);
+		margin: 0;
+		color: var(--color-text);
+		opacity: 0.95;
+	}
+
+	.podcast-subtitle {
+		font-size: var(--font-size-lg);
+		color: var(--color-text-muted);
+		margin: 0.5rem 0 0 0;
+		line-height: var(--line-height-relaxed);
+	}
+
+	.podcast-intro {
+		font-size: var(--font-size-base);
+		color: var(--color-text-muted);
+		line-height: 1.75;
+		margin: 0;
+		max-width: 720px;
+		opacity: 0.8;
+	}
+
 	:global(.spotify-btn) {
 		display: inline-block;
 		padding: 0.875rem 1.75rem;
