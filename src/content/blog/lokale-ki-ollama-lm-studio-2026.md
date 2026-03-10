@@ -1,5 +1,5 @@
 ---
-title: "Lokale KI auf deinem Rechner: Ollama, LM Studio und Open-Source-Modelle 2026"
+title: "Lokale KI: Ollama & LM Studio Guide 2026"
 slug: "lokale-ki-ollama-lm-studio-2026"
 date: "2026-03-06"
 description: "DeepSeek, Llama, Mistral, Qwen , alles lokal, alles privat, alles kostenlos nach Setup. Welche Hardware du brauchst und wie du loslegst."

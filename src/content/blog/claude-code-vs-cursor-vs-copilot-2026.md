@@ -1,5 +1,5 @@
 ---
-title: "Claude Code vs Cursor vs GitHub Copilot 2026 , Welcher KI-Coding-Assistent lohnt sich?"
+title: "Claude Code vs Cursor vs Copilot 2026: Der Vergleich"
 slug: "claude-code-vs-cursor-vs-copilot-2026"
 date: "2026-03-06"
 description: "Opus 4.6, Cursor Multi-Agent, Copilot Model-Picker. Ich hab alle getestet. Hier ist mein ehrlicher Vergleich mit Benchmarks, Preisen und konkreten Use Cases."

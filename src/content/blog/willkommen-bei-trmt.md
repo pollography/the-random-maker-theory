@@ -3,7 +3,7 @@ title: "Willkommen bei The Random Maker Theory"
 slug: "willkommen-bei-trmt"
 date: "2026-03-05"
 description: "Wer ich bin, was ich hier mache und warum Tech-Content so wichtig ist."
-tags: ["ankündigung", "willkommen"]
+tags: ["ankuendigung", "willkommen"]
 category: "news"
 draft: false
 titleAccent: "Random"

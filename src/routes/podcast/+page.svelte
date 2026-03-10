@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>Zum Hören — Audio-Zusammenfassungen | {siteConfig.name}</title>
+	<title>Zum Hören — Audio-Zusammenfassungen | TRMT</title>
 	<meta name="description" content="Keine Zeit zum Lesen? Hör dir die Zusammenfassungen der Blog-Inhalte an. Perfekt für unterwegs." />
 	<meta property="og:title" content="Zum Hören — Audio-Zusammenfassungen" />
 	<meta property="og:description" content="Keine Zeit zum Lesen? Hör dir die Zusammenfassungen der Blog-Inhalte an. Perfekt für unterwegs." />

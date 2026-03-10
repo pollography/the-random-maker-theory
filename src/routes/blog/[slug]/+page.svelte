@@ -38,7 +38,7 @@
 <svelte:window onscroll={handleScroll} />
 
 <svelte:head>
-	<title>{data.post.title} — {siteConfig.name}</title>
+	<title>{data.post.title} | TRMT</title>
 	<meta name="description" content={data.post.description} />
 	<meta property="og:title" content={data.post.title} />
 	<meta property="og:description" content={data.post.description} />

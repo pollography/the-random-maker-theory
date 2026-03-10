@@ -16,7 +16,7 @@ export const tagDescriptions = {
 		intro: 'Wenn ein neues Tool, ein Trend oder eine Entwicklung mehr als einen Absatz verdient, landet es hier. Tiefgehende Analysen zu KI-Modellen, Tech-Trends und Marktentwicklungen. Keine heißen Takes nach 5 Minuten Googeln, sondern durchdachte Einordnungen mit Kontext. Wer verstehen will, was hinter den Headlines steckt, ist hier richtig.',
 		icon: '📊'
 	},
-	'ankündigung': {
+	'ankuendigung': {
 		title: 'Ankündigungen',
 		metaDesc: 'Ankündigungen und Updates rund um The Random Maker Theory. Neue Features, Formate und Meilensteine.',
 		intro: 'Was passiert bei TRMT? Neue Formate, Blog-Updates, Community-News und alles was sich hinter den Kulissen tut. Hier erfährst du als Erstes, wenn sich was ändert oder was Neues kommt.',

@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Datenschutzerklärung — The Random Maker Theory</title>
+	<title>Datenschutzerklärung | TRMT</title>
 	<meta name="description" content="Datenschutzerklärung von The Random Maker Theory." />
 	<meta name="robots" content="noindex" />
 	<link rel="canonical" href="https://therandommakertheory.com/datenschutz" />

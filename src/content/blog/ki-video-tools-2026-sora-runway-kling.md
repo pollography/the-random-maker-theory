@@ -1,5 +1,5 @@
 ---
-title: "KI-Video-Tools 2026: Sora, Runway, Kling , was taugt wirklich?"
+title: "KI-Video-Tools 2026: Sora, Runway, Kling im Test"
 slug: "ki-video-tools-2026-sora-runway-kling"
 date: "2026-03-06"
 description: "Sora 2, Runway Gen-4.5, Kling 3.0, Pika 2.5 im Praxistest. Welches KI-Video-Tool lohnt sich für Creator? Preise, Qualität, ehrliche Bewertung."

@@ -101,7 +101,7 @@
 <svelte:window bind:scrollY={scrollY} />
 
 <svelte:head>
-	<title>The Random Maker Theory — Tech, KI, Maker & Produktivität</title>
+	<title>TRMT — Tech, KI, Maker & Produktivität | Blog</title>
 	<meta name="description" content="TRMT — Dein deutsches Tech-Magazin für KI-Tools, Maker-Projekte, Smart Home, Automatisierung und Produktivität. Reviews, Tutorials und News. Wöchentlich neu." />
 	<meta name="keywords" content="Tech Blog deutsch, KI News, KI Tools, Maker Projekte, Smart Home, Produktivität, ChatGPT Tutorial, Arduino, 3D Druck, Fotografie, Automatisierung" />
 

@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.episode.title} — {siteConfig.name}</title>
+	<title>{data.episode.title} | TRMT</title>
 	<meta name="description" content={data.episode.description} />
 	<meta property="og:title" content={data.episode.title} />
 	<meta property="og:description" content={data.episode.description} />

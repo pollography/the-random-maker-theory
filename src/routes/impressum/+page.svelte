@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Impressum — The Random Maker Theory</title>
+	<title>Impressum | TRMT</title>
 	<meta name="description" content="Impressum und Anbieterkennzeichnung von The Random Maker Theory." />
 	<meta name="robots" content="noindex" />
 	<link rel="canonical" href="https://therandommakertheory.com/impressum" />

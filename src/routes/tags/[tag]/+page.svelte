@@ -8,15 +8,15 @@
 </script>
 
 <svelte:head>
-	<title>{tagInfo.title} — Artikel & Guides | {siteConfig.name}</title>
+	<title>{tagInfo.title} — Artikel & Guides | TRMT</title>
 	<meta name="description" content={tagInfo.metaDesc} />
-	<meta property="og:title" content="{tagInfo.title} — {siteConfig.name}" />
+	<meta property="og:title" content="{tagInfo.title} | TRMT" />
 	<meta property="og:description" content={tagInfo.metaDesc} />
 	<meta property="og:url" content="https://therandommakertheory.com/tags/{data.tag}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:title" content="{tagInfo.title} — {siteConfig.name}" />
+	<meta name="twitter:title" content="{tagInfo.title} | TRMT" />
 	<meta name="twitter:description" content={tagInfo.metaDesc} />
 	<link rel="canonical" href="https://therandommakertheory.com/tags/{data.tag}" />
 </svelte:head>

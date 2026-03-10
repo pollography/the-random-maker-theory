@@ -1,5 +1,5 @@
 ---
-title: "GPT-5.4 ist da , Was bedeutet das für uns, für KI-Agents und für Claude Cowork?"
+title: "GPT-5.4 ist da: Was bedeutet das für KI-Agents?"
 slug: "chatgpt-5-4-was-bedeutet-das-fuer-uns"
 date: "2026-03-06"
 description: "OpenAI hat GPT-5.4 released. Computer Use, 1M Context, Tool Search, Finance-Plugins. Ich ordne ein: Was ist neu, was ist Hype, und was heißt das für Claude Cowork User wie uns?"
