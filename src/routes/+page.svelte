@@ -159,12 +159,12 @@
 <!-- ═══════ INTRO ═══════ -->
 <section class="intro-section">
 	<div class="intro-inner">
-		<h2 class="intro-headline">Entdecken. Verstehen. Und alles <span class="intro-accent">Frei Schnauze.</span></h2>
 		<div class="article-counter" bind:this={counterRef}>
 			<span class="counter-number">{displayCount}</span>
 			<span class="counter-label">Artikel online</span>
 			<span class="counter-sub">+ wöchentlich neue</span>
 		</div>
+		<h2 class="intro-headline">Entdecken. Verstehen. Und alles <span class="intro-accent">Frei Schnauze.</span></h2>
 		<p class="intro-text">
 			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
 		</p>
