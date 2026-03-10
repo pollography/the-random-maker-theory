@@ -45,8 +45,8 @@ export const POST: RequestHandler = async ({ request }) => {
 			return json({ error: 'Du bist schon angemeldet!' }, { status: 409 });
 		}
 
-		console.error('Brevo API error:', data);
-		return json({ error: 'Hat nicht geklappt. Versuch es später nochmal.' }, { status: 500 });
+		console.error('Brevo API error:', JSON.stringify(data));
+		return json({ error: 'Hat nicht geklappt. Versuch es später nochmal.', debug: data }, { status: 500 });
 	} catch (err) {
 		console.error('Newsletter signup error:', err);
 		return json({ error: 'Serverfehler. Versuch es später nochmal.' }, { status: 500 });
