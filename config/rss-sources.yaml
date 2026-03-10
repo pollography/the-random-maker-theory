@@ -1,0 +1,177 @@
+# TRMT RSS-Quellen-Datenbank fuer KI-News
+# Verwendet vom Daily News Task und der Content Engine
+# Format: name, url, lang, priority (1=hoch, 3=niedrig), category
+
+# === HERSTELLER (Primaerquellen) ===
+sources:
+  # OpenAI
+  - name: OpenAI Blog
+    url: https://openai.com/blog/rss.xml
+    lang: en
+    priority: 1
+    category: hersteller
+
+  # Anthropic
+  - name: Anthropic News
+    url: https://www.anthropic.com/rss.xml
+    lang: en
+    priority: 1
+    category: hersteller
+
+  # Google DeepMind
+  - name: Google AI Blog
+    url: https://blog.google/technology/ai/rss/
+    lang: en
+    priority: 1
+    category: hersteller
+
+  # Meta AI
+  - name: Meta AI Blog
+    url: https://ai.meta.com/blog/rss/
+    lang: en
+    priority: 1
+    category: hersteller
+
+  # Mistral
+  - name: Mistral AI Blog
+    url: https://mistral.ai/feed.xml
+    lang: en
+    priority: 2
+    category: hersteller
+
+  # Stability AI
+  - name: Stability AI Blog
+    url: https://stability.ai/blog/rss.xml
+    lang: en
+    priority: 2
+    category: hersteller
+
+  # Hugging Face
+  - name: Hugging Face Blog
+    url: https://huggingface.co/blog/feed.xml
+    lang: en
+    priority: 2
+    category: hersteller
+
+  # === TECH-MEDIEN (Kuratiert) ===
+
+  # The Verge AI
+  - name: The Verge AI
+    url: https://www.theverge.com/rss/ai-artificial-intelligence/index.xml
+    lang: en
+    priority: 1
+    category: tech-medien
+
+  # Ars Technica AI
+  - name: Ars Technica AI
+    url: https://arstechnica.com/tag/artificial-intelligence/feed/
+    lang: en
+    priority: 1
+    category: tech-medien
+
+  # TechCrunch AI
+  - name: TechCrunch AI
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+    lang: en
+    priority: 1
+    category: tech-medien
+
+  # MIT Technology Review
+  - name: MIT Technology Review
+    url: https://www.technologyreview.com/feed/
+    lang: en
+    priority: 2
+    category: tech-medien
+
+  # Wired AI
+  - name: Wired AI
+    url: https://www.wired.com/feed/tag/ai/latest/rss
+    lang: en
+    priority: 2
+    category: tech-medien
+
+  # === DEUTSCH ===
+
+  # heise KI
+  - name: heise KI
+    url: https://www.heise.de/thema/Kuenstliche-Intelligenz?view=atom
+    lang: de
+    priority: 1
+    category: deutsch
+
+  # Golem KI
+  - name: Golem KI
+    url: https://rss.golem.de/rss.php?tp=ki&feed=ATOM1.0
+    lang: de
+    priority: 2
+    category: deutsch
+
+  # t3n KI
+  - name: t3n KI
+    url: https://t3n.de/tag/kuenstliche-intelligenz/feed/
+    lang: de
+    priority: 2
+    category: deutsch
+
+  # === INSIDER / NEWSLETTER / COMMUNITY ===
+
+  # Simon Willison (Python/LLM Insider)
+  - name: Simon Willison
+    url: https://simonwillison.net/atom/everything/
+    lang: en
+    priority: 1
+    category: insider
+
+  # The Neuron (Newsletter)
+  - name: The Neuron
+    url: https://www.theneurondaily.com/feed
+    lang: en
+    priority: 2
+    category: insider
+
+  # Ben's Bites (Newsletter)
+  - name: "Ben's Bites"
+    url: https://bensbites.beehiiv.com/feed
+    lang: en
+    priority: 2
+    category: insider
+
+  # AI Supremacy (Substack)
+  - name: AI Supremacy
+    url: https://aisupremacy.substack.com/feed
+    lang: en
+    priority: 3
+    category: insider
+
+  # === RESEARCH ===
+
+  # arXiv AI (Top Papers)
+  - name: arXiv cs.AI
+    url: http://arxiv.org/rss/cs.AI
+    lang: en
+    priority: 3
+    category: research
+
+  # Papers with Code
+  - name: Papers with Code
+    url: https://paperswithcode.com/latest
+    lang: en
+    priority: 3
+    category: research
+
+# === GOOGLE TRENDS KEYWORDS ===
+# Diese Keywords werden taeglich per pytrends gecheckt
+trends_keywords:
+  - "AI"
+  - "KI"
+  - "ChatGPT"
+  - "Claude"
+  - "Gemini"
+  - "Midjourney"
+  - "Sora"
+  - "Copilot"
+  - "LLM"
+  - "AI Agent"
+
+trends_geo: "DE"
+trends_timeframe: "now 1-d"

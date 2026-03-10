@@ -3,7 +3,7 @@ title: "Prompt Engineering: So holst du alles aus ChatGPT, Claude und Gemini"
 slug: "perfekt-prompten-llm-guide"
 date: "2026-03-10"
 description: "Frameworks wie COSTAR und RISEN, Techniken wie Chain-of-Thought und Tree-of-Thought, und praktische Tipps fürs perfekte Prompten bei LLMs."
-audioUrl: ""
+audioUrl: "https://open.spotify.com/show/2gzpv9JphhoWBmjXXP2Pjd"
 duration: ""
 blogSlug: "perfekt-prompten-llm-guide"
 transcript:

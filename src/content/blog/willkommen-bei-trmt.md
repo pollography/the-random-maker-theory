@@ -6,6 +6,8 @@ description: "Wer ich bin, was ich hier mache und warum Tech-Content so wichtig 
 tags: ["ankuendigung", "willkommen"]
 category: "news"
 draft: false
+heroImage: "/images/blog/willkommen-hero.webp"
+heroImageThumb: "/images/blog/willkommen-hero-thumb.webp"
 titleAccent: "Random"
 readingTime: 1
 ---

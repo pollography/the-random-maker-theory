@@ -6,6 +6,8 @@ description: "OpenAI hat GPT-5.4 released. Computer Use, 1M Context, Tool Search
 tags: ["ki-tools", "news", "analyse", "automatisierung"]
 category: "ki-news"
 draft: false
+heroImage: "/images/blog/chatgpt-5-4-hero.webp"
+heroImageThumb: "/images/blog/chatgpt-5-4-hero-thumb.webp"
 titleAccent: "GPT-5.4"
 readingTime: 8
 ---

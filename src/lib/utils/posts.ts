@@ -7,9 +7,13 @@ export interface Post {
 	tags: string[];
 	category: string;
 	heroImage?: string;
+	heroImageThumb?: string;
 	draft: boolean;
 	content?: string;
 	readingTime?: number;
+	podcastSlug?: string;
+	podcastUrl?: string;
+	videoUrl?: string;
 }
 
 export async function getPosts(): Promise<Post[]> {
@@ -34,8 +38,12 @@ export async function getPosts(): Promise<Post[]> {
 				tags: metadata.tags || [],
 				category: metadata.category || 'general',
 				heroImage: metadata.heroImage,
+				heroImageThumb: metadata.heroImageThumb,
 				draft: metadata.draft || false,
 				readingTime: metadata.readingTime || calculateReadingTime(module.default?.toString() || ''),
+				podcastSlug: metadata.podcastSlug,
+				podcastUrl: metadata.podcastUrl,
+				videoUrl: metadata.videoUrl,
 			});
 		}
 	}

@@ -1,6 +1,7 @@
 <script>
 	import TagList from '$lib/components/shared/TagList.svelte';
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
+	import MediaBanner from '$lib/components/blog/MediaBanner.svelte';
 	import { siteConfig } from '$lib/config';
 
 	let { data } = $props();
@@ -136,6 +137,13 @@
 			<img src={data.post.heroImage} alt={data.post.title} loading="eager" width="1200" height="675" />
 		</div>
 	{/if}
+
+	<!-- Media Banner (Podcast/Video) -->
+	<MediaBanner
+		podcastUrl={data.post.podcastUrl}
+		podcastSlug={data.post.podcastSlug}
+		videoUrl={data.post.videoUrl}
+	/>
 
 	<!-- Content -->
 	<div class="prose prose-invert max-w-none article-content">

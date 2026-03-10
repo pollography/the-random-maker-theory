@@ -1,22 +1,57 @@
 # TRMT Content-Workflow
 
+## Content-Engine (Hauptworkflow)
+
+**Skill:** `trmt-content-engine` (Claude Code)
+**Input:** Ein Thema
+**Output:** Blog + Podcast-Seite + Assets, automatisch deployed
+
+### Was passiert automatisch:
+1. NotebookLM Research + Deep Research
+2. Outline + Key Facts generieren
+3. Blog-Artikel schreiben (NotebookLM Report)
+4. Assets parallel: Podcast, Video, Hero-Image, Infocharts, Thumbnail
+5. Anti-AI-Polish + Voice-DNA
+6. SEO + Frontmatter + Crosslinks (podcastSlug, videoUrl)
+7. Export: Blog + Podcast-Seite + Bilder in Projekt-Ordner
+8. Quality Gate (14 Checks)
+9. Auto-Deploy: git add + commit + push → Vercel
+
+### Was du manuell machst:
+1. Podcast MP3 auf Spotify hochladen (aus output/ Ordner)
+2. Video auf YouTube hochladen (aus output/ Ordner)
+3. Spotify-URL + YouTube-URL in Frontmatter nachtragen
+4. Nochmal git commit + push
+
+### Media-Hosting:
+- **Bilder** → GitHub/Vercel (static/images/blog/)
+- **Podcast Audio** → Spotify for Creators (NICHT GitHub)
+- **Video** → YouTube (NICHT GitHub)
+- Grund: GitHub Free = 1 GB Limit, ein Video = 100-500 MB
+
+---
+
 ## Automatischer Daily KI-News Workflow
 
 **Scheduled Task:** `trmt-daily-ki-news`
 **Schedule:** Täglich um 07:00 Uhr
-**Output:** `src/content/blog/ki-news-[YYYY-MM-DD].md` (als Draft)
+**RSS-Quellen:** `config/rss-sources.yaml` (25+ KI-News-Feeds)
+**Output:** `src/content/blog/ki-news-[YYYY-MM-DD].md`
 
 ### Was passiert automatisch:
-1. WebSearch nach KI-News der letzten 24h
-2. 5-10 relevante Stories werden gesammelt
-3. Blogpost-Draft wird im TRMT-Stil geschrieben
-4. Datei wird als `draft: true` gespeichert
+1. RSS-Feeds parsen (letzte 24h)
+2. Google Trends checken (KI-Keywords in DE)
+3. Top 5-10 Stories identifizieren
+4. Blogpost im TRMT-Stil schreiben
+5. Hero-Image generieren
+6. Auto-Deploy
 
-### Was du manuell machst:
-1. Draft reviewen (Fakten, Stil, Vollständigkeit)
-2. `draft: true` → `draft: false` ändern
-3. Bilder/Screenshots hinzufügen wo TODO-Kommentare stehen
-4. Git commit + push → Vercel deployed automatisch
+### RSS-Quellen (Kategorien):
+- **Hersteller:** OpenAI, Anthropic, Google AI, Meta AI, Mistral, Stability AI
+- **Tech-Medien:** The Verge, Ars Technica, TechCrunch, MIT Tech Review, Wired
+- **Deutsch:** heise, Golem, t3n
+- **Insider:** Simon Willison, The Neuron, Ben's Bites
+- **Research:** arXiv cs.AI, Papers with Code
 
 ---
 

@@ -5,11 +5,13 @@ date: "2026-03-10"
 description: "Lerne mit Frameworks wie COSTAR und RISEN, wie du LLMs richtig promptest. Praxistipps, Techniken und konkrete Beispiele für bessere KI-Ergebnisse."
 tags: ["ki-tools", "tutorial", "anfaenger", "tools", "produktivitaet"]
 category: "ki-tools"
-draft: true
+draft: false
 readingTime: 12
 heroImage: "/images/blog/perfekt-prompten-llm-guide-1.webp"
 heroImageThumb: "/images/blog/perfekt-prompten-llm-guide-1-thumb.webp"
 titleAccent: "Prompt"
+podcastSlug: "002-perfekt-prompten-llm-guide"
+podcastUrl: "https://open.spotify.com/show/2gzpv9JphhoWBmjXXP2Pjd"
 ---
 
 Stell dir vor, du springst in ein Taxi und sagst: „Fahr mich mal irgendwohin Schönes." Der Fahrer guckt dich an wie'n Auto. Fährt dich zum nächsten Stadtpark, der nach Frittenfett riecht. Genau das passiert, wenn du ChatGPT, Claude oder Gemini mit vagen Prompts fütterst. Du landest irgendwo — aber halt nicht da, wo du hinwolltest.
