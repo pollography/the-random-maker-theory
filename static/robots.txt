@@ -3,5 +3,6 @@ Allow: /
 Disallow: /api/
 Disallow: /newsletter-bestaetigt
 Disallow: /newsletter-fehler
+Disallow: /admin
 
 Sitemap: https://therandommakertheory.com/sitemap.xml

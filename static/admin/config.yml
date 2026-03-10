@@ -1,0 +1,117 @@
+backend:
+  name: github
+  repo: pollography/the-random-maker-theory
+  branch: main
+  base_url: https://sveltia-cms-auth.fancy-firefly-28cc.workers.dev
+
+media_folder: static/images/blog
+public_folder: /images/blog
+
+site_url: https://therandommakertheory.com
+display_url: https://therandommakertheory.com
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
+collections:
+  - name: blog
+    label: "Blog Posts"
+    folder: src/content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    editor:
+      preview: false
+    sortable_fields:
+      fields: [date, title]
+    summary: "{{title}} — {{date}}"
+    fields:
+      - label: "Titel"
+        name: title
+        widget: string
+        required: true
+
+      - label: "Slug (URL)"
+        name: slug
+        widget: string
+        required: true
+        hint: "URL-freundlich, keine Umlaute. z.B. ki-tools-maerz-2026"
+        pattern:
+          - "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          - "Nur Kleinbuchstaben, Zahlen und Bindestriche"
+
+      - label: "Datum"
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "DD.MM.YYYY"
+        time_format: false
+        required: true
+
+      - label: "Beschreibung (Meta/SEO)"
+        name: description
+        widget: text
+        required: true
+        hint: "Kurze Beschreibung für Google & Social Media. Max 160 Zeichen."
+
+      - label: "Tags"
+        name: tags
+        widget: list
+        required: true
+        hint: "z.B. ki-tools, tutorial, maker, smart-home"
+
+      - label: "Kategorie"
+        name: category
+        widget: select
+        required: true
+        options:
+          - label: "KI-Tools"
+            value: "ki-tools"
+          - label: "KI-News"
+            value: "ki-news"
+          - label: "Maker-Projekt"
+            value: "maker-projekt"
+          - label: "Automatisierung"
+            value: "automatisierung"
+          - label: "Fotografie"
+            value: "fotografie"
+          - label: "Produktivität"
+            value: "produktivitaet"
+          - label: "News"
+            value: "news"
+          - label: "Tools"
+            value: "tools"
+
+      - label: "Entwurf"
+        name: draft
+        widget: boolean
+        default: false
+        hint: "Auf true setzen = wird nicht veröffentlicht"
+
+      - label: "Titel-Akzent (optional)"
+        name: titleAccent
+        widget: string
+        required: false
+        hint: "Teil des Titels der farbig hervorgehoben wird"
+
+      - label: "Hero-Bild (optional)"
+        name: heroImage
+        widget: image
+        required: false
+        hint: "Wird oben im Blogpost groß angezeigt"
+
+      - label: "Lesezeit (Minuten)"
+        name: readingTime
+        widget: number
+        value_type: int
+        min: 1
+        max: 60
+        required: false
+        hint: "Geschätzte Lesezeit in Minuten"
+
+      - label: "Inhalt"
+        name: body
+        widget: markdown
+        required: true
