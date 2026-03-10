@@ -6,9 +6,17 @@
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 	import { siteConfig } from '$lib/config';
 
+	/** @type {any[]} */
 	let posts = $state([]);
+	/** @type {any} */
 	let latestEpisode = $state(null);
 	let scrollY = $state(0);
+
+	// Count-up animation
+	let displayCount = $state(0);
+	/** @type {HTMLDivElement | null} */
+	let counterRef = $state(null);
+	let hasAnimated = false;
 
 	async function load() {
 		posts = await getPosts();
@@ -17,40 +25,74 @@
 
 	load();
 
+	$effect(() => {
+		if (!counterRef) return;
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting && !hasAnimated && posts.length > 0) {
+					hasAnimated = true;
+					animateCount(posts.length);
+				}
+			});
+		}, { threshold: 0.5 });
+		observer.observe(counterRef);
+		return () => observer.disconnect();
+	});
+
+	/** @param {number} target */
+	function animateCount(target) {
+		const duration = 1200;
+		const start = performance.now();
+		/** @param {number} now */
+		function tick(now) {
+			const elapsed = now - start;
+			const progress = Math.min(elapsed / duration, 1);
+			const eased = 1 - Math.pow(1 - progress, 3);
+			displayCount = Math.round(eased * target);
+			if (progress < 1) requestAnimationFrame(tick);
+		}
+		requestAnimationFrame(tick);
+	}
+
 	const pillars = [
 		{
 			icon: '🤖',
 			title: 'KI & Tech',
-			desc: 'Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere Tools im Praxistest. Dazu aktuelle KI-News, Vergleiche und Tutorials.',
-			highlights: ['Tool-Reviews', 'KI-News', 'Prompt-Guides', 'Vergleiche'],
+			category: 'Reviews · News · Tutorials',
+			desc: 'Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere KI-Tools im ehrlichen Praxistest. Keine gesponserten Lobeshymnen, sondern echte Erfahrung nach Wochen der Nutzung. Dazu aktuelle KI-News, wenn was Relevantes passiert. Vergleiche zwischen Tools, Prompt-Engineering Guides und Tutorials, die auch Einsteiger abholen. Von Text-KI über Bildgenerierung bis Audio und Video: hier erfährst du, was sich lohnt und was nur Hype ist.',
+			highlights: ['Tool-Reviews', 'KI-News', 'Prompt-Guides', 'Vergleiche', 'Tutorials'],
 			tag: 'ki-tools'
 		},
 		{
 			icon: '🔧',
 			title: 'Maker & DIY',
-			desc: 'Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Smart Home Sensoren, LED-Strips, eigene Gadgets. Alles mit Teileliste und Code.',
-			highlights: ['Arduino-Projekte', 'ESP32', '3D-Druck', 'Smart Home'],
+			category: 'Projekte · Anleitungen · Hardware',
+			desc: 'Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Von smarten Sensoren fürs Terrarium über LED-Strips mit WLED bis zum eigenen Wetterstation-Dashboard. Jedes Projekt kommt mit Teileliste, Schaltplan und vollständigem Code. Dazu Grundlagen-Tutorials für Einsteiger, die noch nie gelötet haben. 3D-Druck Guides mit Slicer-Settings, Material-Tipps und Design-Workflows. Basteln mit Hirn statt Pinterest-Deko.',
+			highlights: ['Arduino', 'ESP32', '3D-Druck', 'Smart Home', 'Raspberry Pi'],
 			tag: 'maker'
 		},
 		{
 			icon: '⚡',
 			title: 'Automatisierung',
-			desc: 'Workflows bauen mit n8n, Make und Zapier. Shell-Scripts, Cron-Jobs, API-Anbindungen. Alles was repetitive Arbeit erspart und im Hintergrund laufen kann.',
-			highlights: ['n8n-Workflows', 'API-Guides', 'Shell-Scripts', 'Cron-Jobs'],
+			category: 'Workflows · Scripts · DevOps',
+			desc: 'Workflows bauen mit n8n, Make und Zapier. Alles was du einmal einrichtest und nie wieder anfassen musst. Shell-Scripts für den Alltag, Cron-Jobs die im Hintergrund laufen, API-Anbindungen zwischen Tools. Vom simplen Backup-Script bis zur kompletten Content-Pipeline. Dazu Docker-Setups, Self-Hosting Guides und Server-Konfiguration. Repetitive Arbeit ist Zeitverschwendung: automatisiere oder lass es sein.',
+			highlights: ['n8n-Workflows', 'API-Guides', 'Shell-Scripts', 'Docker', 'Self-Hosting'],
 			tag: 'automatisierung'
 		},
 		{
 			icon: '📸',
 			title: 'Fotografie',
-			desc: 'KI trifft Bildbearbeitung. Lightroom AI Masking, Topaz Denoise, Luminar Neo, Generative Fill. Plus Gear-Reviews und Editing-Workflows fuer Fotografen.',
-			highlights: ['Lightroom-KI', 'Editing-Workflows', 'Gear-Reviews', 'Topaz & Luminar'],
+			category: 'KI-Editing · Gear · Workflows',
+			desc: 'Wo KI auf Bildbearbeitung trifft. Lightroom AI Masking, Topaz Photo AI, Luminar Neo, Generative Fill in Photoshop. Ehrliche Tool-Reviews nach Monaten echter Nutzung, nicht nach 5 Minuten Ausprobieren. Dazu Editing-Workflows die wirklich Zeit sparen, Gear-Reviews von Kameras und Objektiven, und Tipps für Fotografen die ihre Arbeit mit KI-Tools aufwerten wollen, ohne dass es fake aussieht.',
+			highlights: ['Lightroom-KI', 'Editing-Workflows', 'Gear-Reviews', 'Topaz & Luminar', 'Photoshop KI'],
 			tag: 'fotografie'
 		},
 		{
 			icon: '🧠',
 			title: 'Produktivität',
-			desc: 'Obsidian als Second Brain, Notion-Setups, PARA-Methode, Fokus-Strategien. Systeme die funktionieren, auch wenn die Motivation mal fehlt.',
-			highlights: ['Obsidian-Setups', 'Second Brain', 'Fokus-Hacks', 'Tool-Vergleiche'],
+			category: 'Systeme · Tools · Mindset',
+			desc: 'Obsidian als Second Brain, Notion-Setups die man tatsächlich nutzt, PARA-Methode in der Praxis. Systeme die funktionieren, auch wenn die Motivation mal komplett fehlt. Fokus-Strategien für Leute mit ADHS-Brain, Tool-Vergleiche zwischen Notion, Obsidian, Logseq und Co. Dazu Tipps für digitale Ordnung, Journaling-Workflows und alles was hilft, den eigenen Kopf zu entlasten und trotzdem nichts zu vergessen.',
+			highlights: ['Obsidian', 'Second Brain', 'PARA-Methode', 'Fokus-Hacks', 'Notion'],
 			tag: 'produktivitaet'
 		}
 	];
@@ -121,10 +163,10 @@
 		<p class="intro-text">
 			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
 		</p>
-		<div class="article-counter">
-			<span class="counter-number">{posts.length}</span>
-			<span class="counter-text">Artikel online</span>
-			<span class="counter-sub">und es werden mehr</span>
+		<div class="article-counter" bind:this={counterRef}>
+			<span class="counter-number">{displayCount}</span>
+			<span class="counter-label">Artikel online</span>
+			<span class="counter-sub">+ wöchentlich neue</span>
 		</div>
 	</div>
 </section>
@@ -136,11 +178,12 @@
 	</div>
 	<div class="pillars-list">
 		{#each pillars as pillar, i}
-			<a href="/blog?tag={pillar.tag}" class="pillar-row" class:pillar-row-reverse={i % 2 !== 0}>
+			<a href="/blog?tag={pillar.tag}" class="pillar-card" class:pillar-honey={i % 2 === 0} class:pillar-teal={i % 2 !== 0}>
 				<div class="pillar-icon-col">
 					<span class="pillar-icon-large">{pillar.icon}</span>
 				</div>
 				<div class="pillar-content">
+					<span class="pillar-category">{pillar.category}</span>
 					<h3 class="pillar-title">{pillar.title}</h3>
 					<p class="pillar-desc">{pillar.desc}</p>
 					<div class="pillar-highlights">
@@ -187,8 +230,13 @@
 	/* ── HERO ── */
 	.hero {
 		text-align: center;
-		padding: 120px 0 60px;
+		min-height: 100svh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		position: relative;
+		padding: 40px 0;
 	}
 
 	.hero-badge {
@@ -279,8 +327,8 @@
 	}
 	.btn-honey:hover {
 		background: var(--color-accent-honey-hover);
-		box-shadow: var(--shadow-glow-honey);
-		transform: translateY(-1px);
+		box-shadow: 0 0 20px rgba(212, 137, 62, 0.4), 0 0 40px rgba(212, 137, 62, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+		transform: translateY(-2px);
 	}
 
 	.btn-teal {
@@ -289,8 +337,8 @@
 	}
 	.btn-teal:hover {
 		background: var(--color-accent-teal-hover);
-		box-shadow: var(--shadow-glow-teal);
-		transform: translateY(-1px);
+		box-shadow: 0 0 20px rgba(58, 176, 162, 0.4), 0 0 40px rgba(58, 176, 162, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+		transform: translateY(-2px);
 	}
 
 	/* ── INTRO SECTION ── */
@@ -325,39 +373,49 @@
 		margin: 0 0 40px;
 	}
 
-	/* ── ARTICLE COUNTER ── */
+	/* ── ARTICLE COUNTER (V5 Honey Glow) ── */
 	.article-counter {
 		display: inline-flex;
-		align-items: baseline;
-		gap: 10px;
-		padding: 12px 28px;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
+		padding: 32px 52px;
 		background: var(--color-surface);
-		border: 1px solid var(--color-border-subtle);
-		border-radius: var(--radius-full);
+		border: 1px solid rgba(212, 137, 62, 0.15);
+		border-radius: var(--radius-xl);
+		box-shadow: 0 0 30px rgba(212, 137, 62, 0.05);
+		transition: all 0.3s ease;
+	}
+
+	.article-counter:hover {
+		border-color: rgba(212, 137, 62, 0.3);
+		box-shadow: 0 0 40px rgba(212, 137, 62, 0.1), 0 0 60px rgba(212, 137, 62, 0.05);
 	}
 
 	.counter-number {
 		font-family: var(--font-display);
 		font-weight: 400;
-		font-size: var(--font-size-3xl);
+		font-size: 4rem;
 		color: var(--color-accent-honey);
 		line-height: 1;
+		text-shadow: 0 0 20px rgba(212, 137, 62, 0.2);
 	}
 
-	.counter-text {
-		font-family: var(--font-sans);
-		font-weight: 600;
-		font-size: var(--font-size-base);
-		color: var(--color-text);
+	.counter-label {
+		font-family: var(--font-display);
+		font-style: italic;
+		font-size: 1.15rem;
+		color: var(--color-text-muted);
 	}
 
 	.counter-sub {
-		font-size: var(--font-size-sm);
+		font-family: var(--font-sans);
+		font-size: 0.75rem;
 		color: var(--color-text-dim);
-		font-style: italic;
+		margin-top: 4px;
 	}
 
-	/* ── PILLARS (Staggered List) ── */
+	/* ── PILLARS (C+D Hybrid: Teal Category + Alternating Colors) ── */
 	.pillars-section {
 		padding: 64px 0 48px;
 	}
@@ -365,12 +423,12 @@
 	.pillars-list {
 		display: flex;
 		flex-direction: column;
-		gap: 24px;
+		gap: 16px;
 	}
 
-	.pillar-row {
+	.pillar-card {
 		display: grid;
-		grid-template-columns: 80px 1fr;
+		grid-template-columns: 64px 1fr;
 		gap: 24px;
 		align-items: start;
 		padding: 32px;
@@ -379,38 +437,65 @@
 		border-radius: var(--radius-xl);
 		text-decoration: none;
 		transition: all 0.25s ease;
+		color: inherit;
 	}
 
-	.pillar-row:hover {
-		border-color: var(--color-accent-honey-subtle);
-		transform: translateY(-2px);
-		box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+	/* Alternating subtle backgrounds */
+	.pillar-honey {
+		background: rgba(212, 137, 62, 0.03);
+		border-color: rgba(212, 137, 62, 0.08);
 	}
 
-	.pillar-row-reverse {
-		margin-left: 60px;
+	.pillar-teal {
+		background: rgba(58, 176, 162, 0.03);
+		border-color: rgba(58, 176, 162, 0.08);
 	}
 
-	:global([data-theme='light']) .pillar-row {
+	/* Hover: lift + deep shadow + darker surface (same as current cards) */
+	.pillar-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 4px 12px rgba(0, 0, 0, 0.2);
+		background: rgba(0, 0, 0, 0.25);
+		border-color: rgba(212, 137, 62, 0.2);
+	}
+
+	:global([data-theme='light']) .pillar-card {
 		background: var(--gradient-card-bg);
 		border: none;
 		box-shadow: var(--shadow-neo);
+	}
+
+	:global([data-theme='light']) .pillar-honey {
+		background: rgba(212, 137, 62, 0.04);
+	}
+
+	:global([data-theme='light']) .pillar-teal {
+		background: rgba(58, 176, 162, 0.04);
 	}
 
 	.pillar-icon-col {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding-top: 4px;
 	}
 
 	.pillar-icon-large {
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 
 	.pillar-content {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
+	}
+
+	.pillar-category {
+		font-family: var(--font-mono);
+		font-size: var(--font-size-xs);
+		color: var(--color-accent-teal);
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
 	}
 
 	.pillar-title {
@@ -424,7 +509,7 @@
 	.pillar-desc {
 		font-size: var(--font-size-base);
 		color: var(--color-text-muted);
-		line-height: 1.7;
+		line-height: 1.75;
 		margin: 0;
 	}
 
@@ -484,24 +569,22 @@
 
 	/* ── RESPONSIVE ── */
 	@media (max-width: 768px) {
-		.hero { padding: 80px 0 40px; }
+		.hero { min-height: 100svh; padding: 40px 0; }
 		.intro-section { padding: 60px 0 40px; }
 		.posts-grid { grid-template-columns: 1fr; }
-		.pillar-row {
-			grid-template-columns: 60px 1fr;
+		.pillar-card {
+			grid-template-columns: 48px 1fr;
 			padding: 24px;
 			gap: 16px;
 		}
-		.pillar-row-reverse {
-			margin-left: 0;
-		}
-		.pillar-icon-large { font-size: 2.25rem; }
+		.pillar-icon-large { font-size: 2rem; }
 		.pillar-title { font-size: var(--font-size-lg); }
-		.counter-number { font-size: var(--font-size-2xl); }
+		.counter-number { font-size: 3rem; }
+		.article-counter { padding: 24px 36px; }
 	}
 
 	@media (max-width: 480px) {
-		.pillar-row {
+		.pillar-card {
 			grid-template-columns: 1fr;
 			text-align: center;
 		}

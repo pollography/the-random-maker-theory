@@ -142,7 +142,6 @@
 		color: var(--color-text-muted, hsl(0 0% 78%));
 		line-height: 1.8;
 		font-size: 1.0625rem;
-		max-width: 65ch;
 	}
 
 	:global(.prose code) {
@@ -187,11 +186,8 @@
 		color: var(--color-text);
 		font-style: normal;
 		margin-left: 0;
+		margin-right: 0;
 		margin-bottom: 2rem;
-		max-width: 48rem;
-		width: calc(100% + 2rem);
-		margin-left: -1rem;
-		margin-right: -1rem;
 	}
 
 	:global(.prose blockquote strong) {
