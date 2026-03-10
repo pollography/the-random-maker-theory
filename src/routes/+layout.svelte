@@ -9,7 +9,6 @@
 
 <svelte:head>
 	<link rel="icon" href="/favicon.svg" />
-	<meta name="theme-color" content="#0b0b0b" />
 </svelte:head>
 
 <div class="flex flex-col min-h-screen">

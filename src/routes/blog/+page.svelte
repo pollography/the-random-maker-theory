@@ -26,11 +26,25 @@
 
 <svelte:head>
 	<title>Blog — Tech, KI, Maker & Produktivität | TRMT</title>
-	<meta name="description" content="Alle Blog-Posts von The Random Maker Theory: Tech-News, KI-Tools, Maker-Projekte, Produktivitäts-Tutorials und Deep Dives. Immer aktuell." />
+	<meta name="description" content="Alle Blog-Posts: KI-Tool-Reviews, Maker-Projekte, Smart Home Tutorials, Automatisierung und Produktivitäts-Hacks. Wöchentlich neue Artikel." />
 	<meta property="og:title" content="Blog — The Random Maker Theory" />
-	<meta property="og:description" content="Tech, KI, Maker & Produktivität — verständlich erklärt." />
+	<meta property="og:description" content="KI-Tool-Reviews, Maker-Projekte, Smart Home Tutorials und Produktivitäts-Hacks. Wöchentlich neu." />
 	<meta property="og:url" content="https://therandommakertheory.com/blog" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Blog — TRMT" />
+	<meta name="twitter:description" content="KI-Tool-Reviews, Maker-Projekte, Smart Home Tutorials und Produktivitäts-Hacks." />
+	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<link rel="canonical" href="https://therandommakertheory.com/blog" />
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "CollectionPage",
+		"name": "Blog — The Random Maker Theory",
+		"description": "Alle Blog-Posts zu Tech, KI, Maker-Projekten und Produktivität.",
+		"url": "https://therandommakertheory.com/blog",
+		"isPartOf": { "@type": "WebSite", "name": "The Random Maker Theory", "url": "https://therandommakertheory.com" }
+	})}</script>`}
 </svelte:head>
 
 <!-- Header -->

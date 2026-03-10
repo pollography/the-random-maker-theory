@@ -19,7 +19,11 @@
 	<meta property="og:description" content="Keine Zeit zum Lesen? Hör dir die Zusammenfassungen der Blog-Inhalte an. Perfekt für unterwegs." />
 	<meta property="og:url" content="https://therandommakertheory.com/podcast" />
 	<meta property="og:type" content="website" />
-	<meta name="twitter:card" content="summary" />
+	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Zum Hören — TRMT Audio" />
+	<meta name="twitter:description" content="Keine Zeit zum Lesen? Hör dir die Zusammenfassungen an. Perfekt für unterwegs." />
+	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<link rel="canonical" href="https://therandommakertheory.com/podcast" />
 </svelte:head>
 

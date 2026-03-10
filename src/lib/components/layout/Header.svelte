@@ -79,9 +79,9 @@
 	}
 
 	.header-inner {
-		max-width: 1152px;
+		max-width: 1024px;
 		margin: 0 auto;
-		padding: 16px;
+		padding: 16px 1rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

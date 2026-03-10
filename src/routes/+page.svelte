@@ -102,12 +102,12 @@
 
 <svelte:head>
 	<title>The Random Maker Theory — Tech, KI, Maker & Produktivität</title>
-	<meta name="description" content="Tech, KI-Tools, Maker-Projekte & Produktivität. News, Reviews, Tutorials und Projekte. Selbst getestet, ehrlich aufbereitet, frei Schnauze geschrieben." />
+	<meta name="description" content="TRMT — Dein deutsches Tech-Magazin für KI-Tools, Maker-Projekte, Smart Home, Automatisierung und Produktivität. Reviews, Tutorials und News. Wöchentlich neu." />
 	<meta name="keywords" content="Tech Blog deutsch, KI News, KI Tools, Maker Projekte, Smart Home, Produktivität, ChatGPT Tutorial, Arduino, 3D Druck, Fotografie, Automatisierung" />
 
 	<!-- OpenGraph -->
 	<meta property="og:title" content="The Random Maker Theory — Tech, KI, Maker & Produktivität" />
-	<meta property="og:description" content="Tech, KI, Maker-Projekte & Produktivität. Content, den ich selbst lese." />
+	<meta property="og:description" content="Dein deutsches Tech-Magazin: KI-Tools, Maker-Projekte, Smart Home und Produktivität. Reviews, Tutorials, News." />
 	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://therandommakertheory.com" />
@@ -117,7 +117,7 @@
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="The Random Maker Theory" />
-	<meta name="twitter:description" content="Tech, KI, Maker & Produktivität. Content, den ich selbst lese." />
+	<meta name="twitter:description" content="Dein deutsches Tech-Magazin: KI-Tools, Maker-Projekte, Smart Home und Produktivität. Reviews, Tutorials, News." />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 
 	<!-- Canonical -->
@@ -130,7 +130,7 @@
 		"name": "The Random Maker Theory",
 		"alternateName": "TRMT",
 		"url": "https://therandommakertheory.com",
-		"description": "Tech, KI, Maker-Projekte & Produktivität. Content, den ich selbst lese.",
+		"description": "Dein deutsches Tech-Magazin: KI-Tools, Maker-Projekte, Smart Home, Automatisierung und Produktivität.",
 		"inLanguage": "de-DE",
 		"publisher": {
 			"@type": "Organization",

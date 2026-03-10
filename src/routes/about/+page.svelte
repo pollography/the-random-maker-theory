@@ -6,9 +6,15 @@
 <svelte:head>
 	<title>Über TRMT — Tech, KI, Maker-Projekte & mehr</title>
 	<meta name="description" content="Hier erfährst du mehr über Tech, KI-News, Maker-Projekte, Tutorials und Produktivitäts-Hacks. Ein Solo-Projekt, gebaut aus echtem Interesse." />
-	<meta property="og:title" content="Über The Random Maker Theory" />
-	<meta property="og:description" content="Tech, KI, Maker-Projekte und Produktivität. Erkunden. Testen. Bauen." />
+	<meta property="og:title" content="Über TRMT — Wer steckt dahinter?" />
+	<meta property="og:description" content="Tech, KI, Maker-Projekte und Produktivität. Ein Solo-Projekt, gebaut aus echtem Interesse." />
 	<meta property="og:url" content="https://therandommakertheory.com/about" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Über TRMT" />
+	<meta name="twitter:description" content="Tech, KI, Maker-Projekte und Produktivität. Ein Solo-Projekt, gebaut aus echtem Interesse." />
+	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<link rel="canonical" href="https://therandommakertheory.com/about" />
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		"@context": "https://schema.org",

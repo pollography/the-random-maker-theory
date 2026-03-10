@@ -85,7 +85,7 @@
 		</div>
 
 		<div class="legal-block">
-			<h2>9. Aenderungen</h2>
+			<h2>9. Änderungen</h2>
 			<p>
 				Ich behalte mir vor, diese Datenschutzerklärung bei Bedarf anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht.
 			</p>
