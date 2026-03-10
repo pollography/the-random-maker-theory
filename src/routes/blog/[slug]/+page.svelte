@@ -38,7 +38,7 @@
 		scrollProgress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 	}
 
-	function openLightbox(src: string, alt: string) {
+	function openLightbox(src, alt) {
 		lightboxSrc = src;
 		lightboxAlt = alt || '';
 		lightboxOpen = true;
@@ -50,14 +50,14 @@
 		document.body.style.overflow = '';
 	}
 
-	function handleKeydown(e: KeyboardEvent) {
+	function handleKeydown(e) {
 		if (e.key === 'Escape' && lightboxOpen) closeLightbox();
 	}
 
 	// Make all prose images clickable after content renders
-	function initProseImages(node: HTMLElement) {
+	function initProseImages(node) {
 		const imgs = node.querySelectorAll('img');
-		imgs.forEach((img: HTMLImageElement) => {
+		imgs.forEach((img) => {
 			img.style.cursor = 'zoom-in';
 			img.loading = 'lazy';
 			img.decoding = 'async';
