@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="de" style="background: #0a0a0b; color: #e8e4df;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRMT — Counter & Pillar Varianten V2</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0a0a0b; color: #e8e4df; padding: 40px 24px; max-width: 900px; margin: 0 auto; }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #3ab0a2;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+  }
+  .section-heading {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #e8e4df;
+    margin-bottom: 48px;
+    opacity: 0.95;
+  }
+  .section-heading em { color: #d4893e; font-style: italic; }
+
+  .variant-block {
+    margin-bottom: 48px;
+    padding: 32px;
+    background: #111113;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .variant-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #d4893e;
+    margin-bottom: 24px;
+    letter-spacing: 0.1em;
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin: 72px 0;
+  }
+
+  .tag-chip {
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #3ab0a2;
+    background: rgba(58, 176, 162, 0.1);
+    padding: 3px 10px;
+    border-radius: 999px;
+    display: inline-block;
+  }
+
+  /* ═══════════════════════════════════ */
+  /* COUNTER VARIANTEN (alle stacked)   */
+  /* ═══════════════════════════════════ */
+
+  /* V1: Classic Stacked Card */
+  .cv1 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 28px 48px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .cv1 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3.5rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .cv1 .txt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+  }
+  .cv1 .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+    margin-top: 4px;
+  }
+
+  /* V2: Big Number + Serif Label + Teal Sub */
+  .cv2 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 32px 52px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .cv2 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 4.5rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .cv2 .txt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+    letter-spacing: 0.02em;
+  }
+  .cv2 .sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: #3ab0a2;
+    margin-top: 8px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* V3: Compact Card + Honey Border Top */
+  .cv3 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 24px 44px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-top: 3px solid #d4893e;
+    border-radius: 16px;
+  }
+  .cv3 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .cv3 .txt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    font-style: italic;
+  }
+  .cv3 .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* V4: Wide Card + Separator Line */
+  .cv4 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 28px 64px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .cv4 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 4rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .cv4 .sep {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+  .cv4 .txt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+  }
+  .cv4 .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* V5: Minimal mit Honey Glow */
+  .cv5 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 32px 52px;
+    background: #16161a;
+    border: 1px solid rgba(212, 137, 62, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(212, 137, 62, 0.05);
+  }
+  .cv5 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 4rem;
+    color: #d4893e;
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(212, 137, 62, 0.2);
+  }
+  .cv5 .txt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+  }
+  .cv5 .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    margin-top: 4px;
+  }
+
+  /* V6: Badge Pill Stacked */
+  .cv6 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 24px 40px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 999px;
+  }
+  .cv6 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .cv6 .txt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+  }
+  .cv6 .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* V7: Square Card with Number Highlight */
+  .cv7 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 32px 48px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .cv7 .num-wrap {
+    background: rgba(212, 137, 62, 0.1);
+    border-radius: 12px;
+    padding: 12px 24px;
+  }
+  .cv7 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .cv7 .txt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.65);
+    font-style: italic;
+  }
+  .cv7 .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #3ab0a2;
+  }
+
+  /* V8: Two-Line Centered */
+  .cv8 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 28px 52px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .cv8 .top {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .cv8 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3.5rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .cv8 .label {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+  }
+  .cv8 .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+    margin-top: 4px;
+  }
+
+  /* V9: Vertical with Dots */
+  .cv9 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 28px 48px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .cv9 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 3.5rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .cv9 .dots {
+    display: flex;
+    gap: 6px;
+  }
+  .cv9 .dot {
+    width: 4px;
+    height: 4px;
+    background: rgba(212, 137, 62, 0.4);
+    border-radius: 50%;
+  }
+  .cv9 .txt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+  }
+  .cv9 .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* V10: Elegant with Bracket Decoration */
+  .cv10 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 28px 56px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    position: relative;
+  }
+  .cv10 .deco {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    color: rgba(212, 137, 62, 0.2);
+    line-height: 1;
+  }
+  .cv10 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 4rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .cv10 .txt {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.6);
+    font-style: italic;
+  }
+  .cv10 .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    margin-top: 2px;
+  }
+
+  /* ═══════════════════════════════════ */
+  /* PILLAR VARIANTEN (V4+V5 Hybrid)    */
+  /* ═══════════════════════════════════ */
+
+  .pillars-new {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pillar-card-new {
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 24px;
+    align-items: start;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s ease;
+  }
+  .pillar-card-new:hover {
+    border-color: rgba(212, 137, 62, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  }
+
+  .pcn-icon { font-size: 2.5rem; padding-top: 4px; }
+  .pcn-title {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #e8e4df;
+    margin-bottom: 10px;
+  }
+  .pcn-desc {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+  .pcn-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  /* Variante A: mit honey border-left */
+  .pv-a .pillar-card-new {
+    border-left: 3px solid #d4893e;
+    border-radius: 0 16px 16px 0;
+  }
+
+  /* Variante B: mit honey glow border */
+  .pv-b .pillar-card-new {
+    border: 1px solid rgba(212, 137, 62, 0.1);
+    box-shadow: 0 0 20px rgba(212, 137, 62, 0.03);
+  }
+  .pv-b .pillar-card-new:hover {
+    border-color: rgba(212, 137, 62, 0.25);
+    box-shadow: 0 0 30px rgba(212, 137, 62, 0.06), 0 12px 32px rgba(0,0,0,0.25);
+  }
+
+  /* Variante C: mit teal accent tag-header */
+  .pv-c .pillar-card-new {
+    padding-top: 20px;
+  }
+  .pv-c .pcn-cat {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: #3ab0a2;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+  }
+
+  /* Variante D: alternating honey/teal subtle bg */
+  .pv-d .pillar-card-new:nth-child(odd) {
+    background: rgba(212, 137, 62, 0.03);
+    border-color: rgba(212, 137, 62, 0.08);
+  }
+  .pv-d .pillar-card-new:nth-child(even) {
+    background: rgba(58, 176, 162, 0.03);
+    border-color: rgba(58, 176, 162, 0.08);
+  }
+
+  /* Variante E: number prefix */
+  .pv-e .pillar-card-new {
+    grid-template-columns: 40px 64px 1fr;
+  }
+  .pv-e .pcn-num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    color: rgba(212, 137, 62, 0.25);
+    line-height: 1;
+    padding-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ -->
+<!-- COUNTER VARIANTEN V2           -->
+<!-- ═══════════════════════════════ -->
+
+<div class="section-label">Article Counter — Round 2</div>
+<h1 class="section-heading">10 Counter-<em>Varianten</em></h1>
+<p style="color: rgba(255,255,255,0.4); margin-bottom: 40px; font-size: 0.9rem;">Alle stacked, in Card mit abgerundeten Ecken. Zahl in Instrument Serif, "Artikel online" auch Serif, Subtext in Inter. Count-Up Animation wird beim Einbauen hinzugefügt.</p>
+
+<!-- V1 -->
+<div class="variant-block">
+  <div class="variant-label">V1 — Classic Stacked</div>
+  <div style="text-align: center;">
+    <div class="cv1">
+      <span class="num">16</span>
+      <span class="txt">Artikel online</span>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<!-- V2 -->
+<div class="variant-block">
+  <div class="variant-label">V2 — Big Number + Teal Badge</div>
+  <div style="text-align: center;">
+    <div class="cv2">
+      <span class="num">16</span>
+      <span class="txt">Artikel online</span>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<!-- V3 -->
+<div class="variant-block">
+  <div class="variant-label">V3 — Honey Border Top</div>
+  <div style="text-align: center;">
+    <div class="cv3">
+      <span class="num">16</span>
+      <span class="txt">Artikel online</span>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<!-- V4 -->
+<div class="variant-block">
+  <div class="variant-label">V4 — Wide Card + Line Separator</div>
+  <div style="text-align: center;">
+    <div class="cv4">
+      <span class="num">16</span>
+      <div class="sep"></div>
+      <span class="txt">Artikel online</span>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<!-- V5 -->
+<div class="variant-block">
+  <div class="variant-label">V5 — Honey Glow Card</div>
+  <div style="text-align: center;">
+    <div class="cv5">
+      <span class="num">16</span>
+      <span class="txt">Artikel online</span>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<!-- V6 -->
+<div class="variant-block">
+  <div class="variant-label">V6 — Pill Shape</div>
+  <div style="text-align: center;">
+    <div class="cv6">
+      <span class="num">16</span>
+      <span class="txt">Artikel online</span>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<!-- V7 -->
+<div class="variant-block">
+  <div class="variant-label">V7 — Number in Highlight Box</div>
+  <div style="text-align: center;">
+    <div class="cv7">
+      <div class="num-wrap"><span class="num">16</span></div>
+      <span class="txt">Artikel online</span>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<!-- V8 -->
+<div class="variant-block">
+  <div class="variant-label">V8 — Number + Label Side by Side (in Card)</div>
+  <div style="text-align: center;">
+    <div class="cv8">
+      <div class="top">
+        <span class="num">16</span>
+        <span class="label">Artikel</span>
+      </div>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<!-- V9 -->
+<div class="variant-block">
+  <div class="variant-label">V9 — Dots Separator</div>
+  <div style="text-align: center;">
+    <div class="cv9">
+      <span class="num">16</span>
+      <div class="dots"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <span class="txt">Artikel online</span>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<!-- V10 -->
+<div class="variant-block">
+  <div class="variant-label">V10 — Elegant mit Decorative Brackets</div>
+  <div style="text-align: center;">
+    <div class="cv10">
+      <span class="deco">❧</span>
+      <span class="num">16</span>
+      <span class="txt">Artikel online</span>
+      <span class="sub">+ wöchentlich neue</span>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════ -->
+<!-- PILLAR VARIANTEN V2            -->
+<!-- ═══════════════════════════════ -->
+
+<div class="section-label">Content-Säulen — Round 2</div>
+<h1 class="section-heading">5 Pillar-<em>Varianten</em></h1>
+<p style="color: rgba(255,255,255,0.4); margin-bottom: 40px; font-size: 0.9rem;">Alle: Full-width untereinander, runde Cards (16px radius), Icon links, mehr SEO-Text (5-6 Sätze). Unterschied ist jeweils der Accent-Stil.</p>
+
+<!-- PA: Honey Border Left -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE A — Honey Border Left</div>
+  <div class="pillars-new pv-a">
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🤖</div>
+      <div>
+        <div class="pcn-title">KI & Tech</div>
+        <div class="pcn-desc">Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere KI-Tools im ehrlichen Praxistest. Keine gesponserten Lobeshymnen, sondern echte Erfahrung nach Wochen der Nutzung. Dazu aktuelle KI-News, wenn was Relevantes passiert. Vergleiche zwischen Tools, Prompt-Engineering Guides und Tutorials, die auch Einsteiger abholen. Von Text-KI über Bildgenerierung bis Audio und Video: hier erfährst du, was sich lohnt und was nur Hype ist.</div>
+        <div class="pcn-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span><span class="tag-chip">Prompt-Guides</span><span class="tag-chip">Vergleiche</span><span class="tag-chip">Tutorials</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🔧</div>
+      <div>
+        <div class="pcn-title">Maker & DIY</div>
+        <div class="pcn-desc">Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Von smarten Sensoren fürs Terrarium über LED-Strips mit WLED bis zum eigenen Wetterstation-Dashboard. Jedes Projekt kommt mit Teileliste, Schaltplan und vollständigem Code. Dazu Grundlagen-Tutorials für Einsteiger, die noch nie gelötet haben. 3D-Druck Guides mit Slicer-Settings, Material-Tipps und Design-Workflows. Basteln mit Hirn statt Pinterest-Deko.</div>
+        <div class="pcn-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span><span class="tag-chip">3D-Druck</span><span class="tag-chip">Smart Home</span><span class="tag-chip">Raspberry Pi</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">⚡</div>
+      <div>
+        <div class="pcn-title">Automatisierung</div>
+        <div class="pcn-desc">Workflows bauen mit n8n, Make und Zapier. Alles was du einmal einrichtest und nie wieder anfassen musst. Shell-Scripts für den Alltag, Cron-Jobs die im Hintergrund laufen, API-Anbindungen zwischen Tools. Vom simplen Backup-Script bis zur kompletten Content-Pipeline. Dazu Docker-Setups, Self-Hosting Guides und Server-Konfiguration. Repetitive Arbeit ist Zeitverschwendung: automatisiere oder lass es sein.</div>
+        <div class="pcn-tags"><span class="tag-chip">n8n-Workflows</span><span class="tag-chip">API-Guides</span><span class="tag-chip">Shell-Scripts</span><span class="tag-chip">Docker</span><span class="tag-chip">Self-Hosting</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">📸</div>
+      <div>
+        <div class="pcn-title">Fotografie</div>
+        <div class="pcn-desc">Wo KI auf Bildbearbeitung trifft. Lightroom AI Masking, Topaz Photo AI, Luminar Neo, Generative Fill in Photoshop. Ehrliche Tool-Reviews nach Monaten echter Nutzung, nicht nach 5 Minuten Ausprobieren. Dazu Editing-Workflows die wirklich Zeit sparen, Gear-Reviews von Kameras und Objektiven, und Tipps für Fotografen die ihre Arbeit mit KI-Tools aufwerten wollen, ohne dass es fake aussieht.</div>
+        <div class="pcn-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Editing-Workflows</span><span class="tag-chip">Gear-Reviews</span><span class="tag-chip">Topaz & Luminar</span><span class="tag-chip">Photoshop KI</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🧠</div>
+      <div>
+        <div class="pcn-title">Produktivität</div>
+        <div class="pcn-desc">Obsidian als Second Brain, Notion-Setups die man tatsächlich nutzt, PARA-Methode in der Praxis. Systeme die funktionieren, auch wenn die Motivation mal komplett fehlt. Fokus-Strategien für Leute mit ADHS-Brain, Tool-Vergleiche zwischen Notion, Obsidian, Logseq und Co. Dazu Tipps für digitale Ordnung, Journaling-Workflows und alles was hilft, den eigenen Kopf zu entlasten und trotzdem nichts zu vergessen.</div>
+        <div class="pcn-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Second Brain</span><span class="tag-chip">PARA-Methode</span><span class="tag-chip">Fokus-Hacks</span><span class="tag-chip">Notion</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- PB: Honey Glow Border -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE B — Subtle Honey Glow</div>
+  <div class="pillars-new pv-b">
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🤖</div>
+      <div>
+        <div class="pcn-title">KI & Tech</div>
+        <div class="pcn-desc">Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere KI-Tools im ehrlichen Praxistest. Keine gesponserten Lobeshymnen, sondern echte Erfahrung nach Wochen der Nutzung. Dazu aktuelle KI-News, wenn was Relevantes passiert. Vergleiche zwischen Tools, Prompt-Engineering Guides und Tutorials, die auch Einsteiger abholen. Von Text-KI über Bildgenerierung bis Audio und Video: hier erfährst du, was sich lohnt und was nur Hype ist.</div>
+        <div class="pcn-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span><span class="tag-chip">Prompt-Guides</span><span class="tag-chip">Vergleiche</span><span class="tag-chip">Tutorials</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🔧</div>
+      <div>
+        <div class="pcn-title">Maker & DIY</div>
+        <div class="pcn-desc">Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Von smarten Sensoren fürs Terrarium über LED-Strips mit WLED bis zum eigenen Wetterstation-Dashboard. Jedes Projekt kommt mit Teileliste, Schaltplan und vollständigem Code. Dazu Grundlagen-Tutorials für Einsteiger, die noch nie gelötet haben. 3D-Druck Guides mit Slicer-Settings, Material-Tipps und Design-Workflows.</div>
+        <div class="pcn-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span><span class="tag-chip">3D-Druck</span><span class="tag-chip">Smart Home</span><span class="tag-chip">Raspberry Pi</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">⚡</div>
+      <div>
+        <div class="pcn-title">Automatisierung</div>
+        <div class="pcn-desc">Workflows bauen mit n8n, Make und Zapier. Alles was du einmal einrichtest und nie wieder anfassen musst. Shell-Scripts für den Alltag, Cron-Jobs die im Hintergrund laufen, API-Anbindungen zwischen Tools. Vom simplen Backup-Script bis zur kompletten Content-Pipeline. Dazu Docker-Setups, Self-Hosting Guides und Server-Konfiguration.</div>
+        <div class="pcn-tags"><span class="tag-chip">n8n-Workflows</span><span class="tag-chip">API-Guides</span><span class="tag-chip">Shell-Scripts</span><span class="tag-chip">Docker</span><span class="tag-chip">Self-Hosting</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">📸</div>
+      <div>
+        <div class="pcn-title">Fotografie</div>
+        <div class="pcn-desc">Wo KI auf Bildbearbeitung trifft. Lightroom AI Masking, Topaz Photo AI, Luminar Neo, Generative Fill in Photoshop. Ehrliche Tool-Reviews nach Monaten echter Nutzung. Dazu Editing-Workflows die wirklich Zeit sparen, Gear-Reviews von Kameras und Objektiven, und Tipps für Fotografen die ihre Arbeit mit KI-Tools aufwerten wollen.</div>
+        <div class="pcn-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Editing-Workflows</span><span class="tag-chip">Gear-Reviews</span><span class="tag-chip">Topaz & Luminar</span><span class="tag-chip">Photoshop KI</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🧠</div>
+      <div>
+        <div class="pcn-title">Produktivität</div>
+        <div class="pcn-desc">Obsidian als Second Brain, Notion-Setups die man tatsächlich nutzt, PARA-Methode in der Praxis. Systeme die funktionieren, auch wenn die Motivation mal komplett fehlt. Fokus-Strategien für Leute mit ADHS-Brain, Tool-Vergleiche zwischen Notion, Obsidian, Logseq und Co. Journaling-Workflows und alles was hilft, den Kopf zu entlasten.</div>
+        <div class="pcn-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Second Brain</span><span class="tag-chip">PARA-Methode</span><span class="tag-chip">Fokus-Hacks</span><span class="tag-chip">Notion</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- PC: Teal Category Label -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE C — Teal Category Header</div>
+  <div class="pillars-new pv-c">
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🤖</div>
+      <div>
+        <div class="pcn-cat">Reviews · News · Tutorials</div>
+        <div class="pcn-title">KI & Tech</div>
+        <div class="pcn-desc">Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere KI-Tools im ehrlichen Praxistest. Keine gesponserten Lobeshymnen, sondern echte Erfahrung nach Wochen der Nutzung. Dazu aktuelle KI-News, wenn was Relevantes passiert. Vergleiche zwischen Tools, Prompt-Engineering Guides und Tutorials, die auch Einsteiger abholen.</div>
+        <div class="pcn-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span><span class="tag-chip">Prompt-Guides</span><span class="tag-chip">Vergleiche</span><span class="tag-chip">Tutorials</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🔧</div>
+      <div>
+        <div class="pcn-cat">Projekte · Anleitungen · Hardware</div>
+        <div class="pcn-title">Maker & DIY</div>
+        <div class="pcn-desc">Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Von smarten Sensoren fürs Terrarium über LED-Strips mit WLED bis zum eigenen Wetterstation-Dashboard. Jedes Projekt kommt mit Teileliste, Schaltplan und vollständigem Code. Grundlagen-Tutorials für Einsteiger inklusive.</div>
+        <div class="pcn-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span><span class="tag-chip">3D-Druck</span><span class="tag-chip">Smart Home</span><span class="tag-chip">Raspberry Pi</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">⚡</div>
+      <div>
+        <div class="pcn-cat">Workflows · Scripts · DevOps</div>
+        <div class="pcn-title">Automatisierung</div>
+        <div class="pcn-desc">Workflows bauen mit n8n, Make und Zapier. Shell-Scripts, Cron-Jobs, API-Anbindungen. Vom simplen Backup bis zur Content-Pipeline. Dazu Docker-Setups, Self-Hosting Guides und Server-Konfiguration. Repetitive Arbeit ist Zeitverschwendung: automatisiere oder lass es sein.</div>
+        <div class="pcn-tags"><span class="tag-chip">n8n-Workflows</span><span class="tag-chip">API-Guides</span><span class="tag-chip">Shell-Scripts</span><span class="tag-chip">Docker</span><span class="tag-chip">Self-Hosting</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">📸</div>
+      <div>
+        <div class="pcn-cat">KI-Editing · Gear · Workflows</div>
+        <div class="pcn-title">Fotografie</div>
+        <div class="pcn-desc">Wo KI auf Bildbearbeitung trifft. Lightroom AI Masking, Topaz Photo AI, Luminar Neo, Generative Fill. Ehrliche Reviews nach Monaten Nutzung. Editing-Workflows die Zeit sparen, Gear-Reviews und Tipps für Fotografen die KI nutzen wollen ohne dass es fake aussieht.</div>
+        <div class="pcn-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Editing-Workflows</span><span class="tag-chip">Gear-Reviews</span><span class="tag-chip">Topaz & Luminar</span><span class="tag-chip">Photoshop KI</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🧠</div>
+      <div>
+        <div class="pcn-cat">Systeme · Tools · Mindset</div>
+        <div class="pcn-title">Produktivität</div>
+        <div class="pcn-desc">Obsidian als Second Brain, Notion-Setups die man tatsächlich nutzt, PARA-Methode in der Praxis. Systeme die funktionieren, auch bei null Motivation. Fokus-Strategien für ADHS-Brains, Tool-Vergleiche, Journaling-Workflows und alles was hilft, den Kopf zu entlasten.</div>
+        <div class="pcn-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Second Brain</span><span class="tag-chip">PARA-Methode</span><span class="tag-chip">Fokus-Hacks</span><span class="tag-chip">Notion</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- PD: Alternating Color Hint -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE D — Alternating Honey/Teal Subtle Backgrounds</div>
+  <div class="pillars-new pv-d">
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🤖</div>
+      <div>
+        <div class="pcn-title">KI & Tech</div>
+        <div class="pcn-desc">Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere KI-Tools im ehrlichen Praxistest. Keine gesponserten Lobeshymnen, sondern echte Erfahrung nach Wochen der Nutzung. Dazu aktuelle KI-News, wenn was Relevantes passiert. Vergleiche zwischen Tools, Prompt-Engineering Guides und Tutorials, die auch Einsteiger abholen. Von Text-KI über Bildgenerierung bis Audio und Video.</div>
+        <div class="pcn-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span><span class="tag-chip">Prompt-Guides</span><span class="tag-chip">Vergleiche</span><span class="tag-chip">Tutorials</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🔧</div>
+      <div>
+        <div class="pcn-title">Maker & DIY</div>
+        <div class="pcn-desc">Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Von smarten Sensoren fürs Terrarium über LED-Strips mit WLED bis zum eigenen Dashboard. Jedes Projekt kommt mit Teileliste, Schaltplan und Code. Grundlagen für Einsteiger, die noch nie gelötet haben. 3D-Druck Guides mit Slicer-Settings und Material-Tipps.</div>
+        <div class="pcn-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span><span class="tag-chip">3D-Druck</span><span class="tag-chip">Smart Home</span><span class="tag-chip">Raspberry Pi</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">⚡</div>
+      <div>
+        <div class="pcn-title">Automatisierung</div>
+        <div class="pcn-desc">Workflows bauen mit n8n, Make und Zapier. Einmal einrichten, nie wieder anfassen. Shell-Scripts, Cron-Jobs, API-Anbindungen. Vom Backup-Script bis zur Content-Pipeline. Docker-Setups, Self-Hosting Guides, Server-Konfiguration. Repetitive Arbeit ist Zeitverschwendung.</div>
+        <div class="pcn-tags"><span class="tag-chip">n8n-Workflows</span><span class="tag-chip">API-Guides</span><span class="tag-chip">Shell-Scripts</span><span class="tag-chip">Docker</span><span class="tag-chip">Self-Hosting</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">📸</div>
+      <div>
+        <div class="pcn-title">Fotografie</div>
+        <div class="pcn-desc">Wo KI auf Bildbearbeitung trifft. Lightroom AI Masking, Topaz Photo AI, Luminar Neo, Generative Fill. Ehrliche Reviews nach Monaten Nutzung. Editing-Workflows die Zeit sparen, Gear-Reviews, Tipps für Fotografen die KI nutzen wollen ohne dass es fake aussieht.</div>
+        <div class="pcn-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Editing-Workflows</span><span class="tag-chip">Gear-Reviews</span><span class="tag-chip">Topaz & Luminar</span><span class="tag-chip">Photoshop KI</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-icon">🧠</div>
+      <div>
+        <div class="pcn-title">Produktivität</div>
+        <div class="pcn-desc">Obsidian als Second Brain, Notion-Setups die man tatsächlich nutzt, PARA-Methode in der Praxis. Systeme die bei null Motivation funktionieren. Fokus-Strategien für ADHS-Brains, Tool-Vergleiche, Journaling-Workflows und alles was hilft den Kopf zu entlasten.</div>
+        <div class="pcn-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Second Brain</span><span class="tag-chip">PARA-Methode</span><span class="tag-chip">Fokus-Hacks</span><span class="tag-chip">Notion</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- PE: Number Prefix -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE E — Numbered with Serif Index</div>
+  <div class="pillars-new pv-e">
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-num">01</div>
+      <div class="pcn-icon">🤖</div>
+      <div>
+        <div class="pcn-title">KI & Tech</div>
+        <div class="pcn-desc">Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere KI-Tools im ehrlichen Praxistest. Keine gesponserten Lobeshymnen, sondern echte Erfahrung nach Wochen der Nutzung. Dazu aktuelle KI-News, wenn was Relevantes passiert. Vergleiche zwischen Tools, Prompt-Engineering Guides und Tutorials für Einsteiger und Fortgeschrittene.</div>
+        <div class="pcn-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span><span class="tag-chip">Prompt-Guides</span><span class="tag-chip">Vergleiche</span><span class="tag-chip">Tutorials</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-num">02</div>
+      <div class="pcn-icon">🔧</div>
+      <div>
+        <div class="pcn-title">Maker & DIY</div>
+        <div class="pcn-desc">Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Von smarten Sensoren über LED-Strips mit WLED bis zum eigenen Dashboard. Jedes Projekt mit Teileliste, Schaltplan und Code. Grundlagen für Einsteiger. 3D-Druck Guides mit Slicer-Settings und Material-Tipps.</div>
+        <div class="pcn-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span><span class="tag-chip">3D-Druck</span><span class="tag-chip">Smart Home</span><span class="tag-chip">Raspberry Pi</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-num">03</div>
+      <div class="pcn-icon">⚡</div>
+      <div>
+        <div class="pcn-title">Automatisierung</div>
+        <div class="pcn-desc">Workflows bauen mit n8n, Make und Zapier. Einmal einrichten, nie wieder anfassen. Shell-Scripts, Cron-Jobs, API-Anbindungen. Vom Backup-Script bis zur Content-Pipeline. Docker-Setups, Self-Hosting und Server-Konfiguration.</div>
+        <div class="pcn-tags"><span class="tag-chip">n8n-Workflows</span><span class="tag-chip">API-Guides</span><span class="tag-chip">Shell-Scripts</span><span class="tag-chip">Docker</span><span class="tag-chip">Self-Hosting</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-num">04</div>
+      <div class="pcn-icon">📸</div>
+      <div>
+        <div class="pcn-title">Fotografie</div>
+        <div class="pcn-desc">Wo KI auf Bildbearbeitung trifft. Lightroom AI Masking, Topaz Photo AI, Luminar Neo. Ehrliche Reviews nach Monaten Nutzung. Editing-Workflows, Gear-Reviews und Tipps für Fotografen die KI nutzen wollen.</div>
+        <div class="pcn-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Editing-Workflows</span><span class="tag-chip">Gear-Reviews</span><span class="tag-chip">Topaz & Luminar</span><span class="tag-chip">Photoshop KI</span></div>
+      </div>
+    </a>
+    <a href="#" class="pillar-card-new">
+      <div class="pcn-num">05</div>
+      <div class="pcn-icon">🧠</div>
+      <div>
+        <div class="pcn-title">Produktivität</div>
+        <div class="pcn-desc">Obsidian als Second Brain, Notion-Setups die man nutzt, PARA-Methode in der Praxis. Systeme für null-Motivation-Tage. Fokus-Strategien, Tool-Vergleiche, Journaling und alles was hilft den Kopf zu entlasten.</div>
+        <div class="pcn-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Second Brain</span><span class="tag-chip">PARA-Methode</span><span class="tag-chip">Fokus-Hacks</span><span class="tag-chip">Notion</span></div>
+      </div>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

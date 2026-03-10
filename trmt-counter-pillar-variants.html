@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="de" style="background: #0a0a0b; color: #e8e4df;">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRMT — Counter & Pillar Varianten</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', sans-serif; background: #0a0a0b; color: #e8e4df; padding: 40px 24px; max-width: 900px; margin: 0 auto; }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #3ab0a2;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+  }
+  .section-heading {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #e8e4df;
+    margin-bottom: 48px;
+    opacity: 0.95;
+  }
+  .section-heading em { color: #d4893e; font-style: italic; }
+
+  .variant-block {
+    margin-bottom: 56px;
+    padding: 32px;
+    background: #111113;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .variant-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #d4893e;
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+  }
+
+  hr.divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin: 64px 0;
+  }
+
+  /* ═══ COUNTER STYLES ═══ */
+
+  /* V1: Pill Minimal */
+  .counter-v1 {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 14px 32px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 999px;
+  }
+  .counter-v1 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .counter-v1 .txt {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #e8e4df;
+  }
+  .counter-v1 .sub {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+    font-style: italic;
+  }
+
+  /* V2: Stacked Center */
+  .counter-v2 {
+    text-align: center;
+  }
+  .counter-v2 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 4rem;
+    color: #d4893e;
+    line-height: 1;
+    display: block;
+  }
+  .counter-v2 .txt {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #e8e4df;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
+  }
+  .counter-v2 .sub {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.35);
+    font-style: italic;
+    display: block;
+    margin-top: 6px;
+  }
+
+  /* V3: Inline Sentence */
+  .counter-v3 {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+  }
+  .counter-v3 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 1.5rem;
+    color: #d4893e;
+    font-weight: 400;
+  }
+  .counter-v3 .highlight {
+    color: #e8e4df;
+    font-weight: 600;
+  }
+
+  /* V4: Badge + Separator */
+  .counter-v4 {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 28px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+  }
+  .counter-v4 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2.5rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .counter-v4 .sep {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,0.1);
+  }
+  .counter-v4 .right {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .counter-v4 .txt {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #e8e4df;
+  }
+  .counter-v4 .sub {
+    font-size: 0.75rem;
+    color: #3ab0a2;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* V5: Minimal Line */
+  .counter-v5 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
+  .counter-v5 .line {
+    width: 40px;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+  }
+  .counter-v5 .center {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .counter-v5 .num {
+    font-family: 'Instrument Serif', serif;
+    font-size: 2rem;
+    color: #d4893e;
+    line-height: 1;
+  }
+  .counter-v5 .txt {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ═══ PILLAR STYLES ═══ */
+
+  .pillar-item {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.25s ease;
+  }
+  .pillar-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .tag-chip {
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #3ab0a2;
+    background: rgba(58, 176, 162, 0.1);
+    padding: 3px 10px;
+    border-radius: 999px;
+    display: inline-block;
+  }
+
+  /* P1: Cards Grid (2 cols top, 3 cols bottom) */
+  .pillars-p1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .pillars-p1 .pillar-card {
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 28px;
+  }
+  .pillars-p1 .pillar-card:nth-child(n+4) {
+    /* Last row items */
+  }
+  .pillars-p1 .p-icon { font-size: 2rem; margin-bottom: 12px; }
+  .pillars-p1 .p-title { font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; color: #e8e4df; }
+  .pillars-p1 .p-desc { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 12px; }
+  .pillars-p1 .p-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  /* P2: Horizontal Scroll Cards */
+  .pillars-p2 {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+  }
+  .pillars-p2::-webkit-scrollbar { height: 4px; }
+  .pillars-p2::-webkit-scrollbar-track { background: transparent; }
+  .pillars-p2::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+  .pillars-p2 .pillar-slide {
+    min-width: 280px;
+    max-width: 280px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 28px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+  .pillars-p2 .p-icon { font-size: 2.5rem; margin-bottom: 14px; }
+  .pillars-p2 .p-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; color: #e8e4df; }
+  .pillars-p2 .p-desc { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 12px; }
+  .pillars-p2 .p-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  /* P3: Accordion / Expandable List */
+  .pillars-p3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .pillars-p3 .pillar-acc {
+    padding: 24px 28px;
+    background: #16161a;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    align-items: center;
+    gap: 20px;
+  }
+  .pillars-p3 .pillar-acc:last-child { border-bottom: none; }
+  .pillars-p3 .p-icon { font-size: 1.75rem; }
+  .pillars-p3 .p-title { font-weight: 700; font-size: 1rem; color: #e8e4df; }
+  .pillars-p3 .p-desc { font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
+  .pillars-p3 .p-arrow { color: rgba(255,255,255,0.2); font-size: 1.25rem; }
+  .pillars-p3 .p-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+
+  /* P4: Full-Width Rows with Honey Left Border */
+  .pillars-p4 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .pillars-p4 .pillar-row {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    padding: 24px 28px;
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-left: 3px solid #d4893e;
+    border-radius: 0 12px 12px 0;
+    align-items: start;
+  }
+  .pillars-p4 .p-icon { font-size: 2rem; text-align: center; padding-top: 2px; }
+  .pillars-p4 .p-title { font-weight: 700; font-size: 1.05rem; color: #e8e4df; margin-bottom: 6px; }
+  .pillars-p4 .p-desc { font-size: 0.875rem; color: rgba(255,255,255,0.45); line-height: 1.65; margin-bottom: 10px; }
+  .pillars-p4 .p-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  /* P5: Bento Grid (mixed sizes) */
+  .pillars-p5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+  }
+  .pillars-p5 .pillar-bento {
+    background: #16161a;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 28px;
+  }
+  .pillars-p5 .pillar-bento.wide {
+    grid-column: span 2;
+  }
+  .pillars-p5 .p-icon { font-size: 2.25rem; margin-bottom: 12px; }
+  .pillars-p5 .p-title { font-weight: 700; font-size: 1.05rem; color: #e8e4df; margin-bottom: 8px; }
+  .pillars-p5 .p-desc { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 12px; }
+  .pillars-p5 .p-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ -->
+<!-- COUNTER VARIANTEN              -->
+<!-- ═══════════════════════════════ -->
+
+<div class="section-label">Article Counter</div>
+<h1 class="section-heading">5 Counter-<em>Varianten</em></h1>
+
+<!-- V1 -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 1 — Pill Minimal (aktuell, aber besser lesbar)</div>
+  <div style="text-align: center;">
+    <div class="counter-v1">
+      <span class="num">16</span>
+      <span class="txt">Artikel online</span>
+      <span class="sub">— Tendenz steigend</span>
+    </div>
+  </div>
+</div>
+
+<!-- V2 -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 2 — Stacked Center (Big Number)</div>
+  <div class="counter-v2">
+    <span class="num">16</span>
+    <span class="txt">Artikel online</span>
+    <span class="sub">Tendenz steigend</span>
+  </div>
+</div>
+
+<!-- V3 -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 3 — Inline Sentence</div>
+  <div class="counter-v3">
+    Aktuell <span class="num">16</span> <span class="highlight">Artikel</span> online — und es kommen laufend neue dazu.
+  </div>
+</div>
+
+<!-- V4 -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 4 — Badge mit Separator</div>
+  <div style="text-align: center;">
+    <div class="counter-v4">
+      <span class="num">16</span>
+      <div class="sep"></div>
+      <div class="right">
+        <span class="txt">Artikel online</span>
+        <span class="sub">+ wöchentlich neue</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- V5 -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 5 — Minimal mit Lines</div>
+  <div class="counter-v5">
+    <div class="line"></div>
+    <div class="center">
+      <span class="num">16</span>
+      <span class="txt">Artikel und es werden mehr</span>
+    </div>
+    <div class="line"></div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════════════════ -->
+<!-- PILLAR VARIANTEN               -->
+<!-- ═══════════════════════════════ -->
+
+<div class="section-label">Content-Säulen</div>
+<h1 class="section-heading">5 Pillar-<em>Varianten</em></h1>
+
+<!-- P1: Cards Grid -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 1 — Cards Grid (2 Spalten)</div>
+  <div class="pillars-p1">
+    <div class="pillar-card pillar-item">
+      <div class="p-icon">🤖</div>
+      <div class="p-title">KI & Tech</div>
+      <div class="p-desc">ChatGPT, Claude, Gemini, Midjourney im Praxistest. KI-News, Vergleiche und Tutorials.</div>
+      <div class="p-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span><span class="tag-chip">Prompt-Guides</span></div>
+    </div>
+    <div class="pillar-card pillar-item">
+      <div class="p-icon">🔧</div>
+      <div class="p-title">Maker & DIY</div>
+      <div class="p-desc">Arduino, ESP32, Raspberry Pi, 3D-Druck. Projekte mit Teileliste und Code.</div>
+      <div class="p-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span><span class="tag-chip">3D-Druck</span></div>
+    </div>
+    <div class="pillar-card pillar-item">
+      <div class="p-icon">⚡</div>
+      <div class="p-title">Automatisierung</div>
+      <div class="p-desc">n8n, Make, Zapier. Shell-Scripts, Cron-Jobs, API-Anbindungen.</div>
+      <div class="p-tags"><span class="tag-chip">n8n</span><span class="tag-chip">API-Guides</span><span class="tag-chip">Scripts</span></div>
+    </div>
+    <div class="pillar-card pillar-item">
+      <div class="p-icon">📸</div>
+      <div class="p-title">Fotografie</div>
+      <div class="p-desc">KI trifft Bildbearbeitung. Lightroom, Topaz, Luminar Neo. Gear-Reviews.</div>
+      <div class="p-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Editing</span><span class="tag-chip">Gear</span></div>
+    </div>
+    <div class="pillar-card pillar-item">
+      <div class="p-icon">🧠</div>
+      <div class="p-title">Produktivität</div>
+      <div class="p-desc">Obsidian, Notion, PARA-Methode. Systeme die funktionieren.</div>
+      <div class="p-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Second Brain</span><span class="tag-chip">Fokus</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- P2: Horizontal Scroll -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 2 — Horizontal Scroll Cards</div>
+  <div class="pillars-p2">
+    <div class="pillar-slide pillar-item">
+      <div class="p-icon">🤖</div>
+      <div class="p-title">KI & Tech</div>
+      <div class="p-desc">ChatGPT, Claude, Gemini, Midjourney im Praxistest. KI-News, Vergleiche und Tutorials.</div>
+      <div class="p-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span></div>
+    </div>
+    <div class="pillar-slide pillar-item">
+      <div class="p-icon">🔧</div>
+      <div class="p-title">Maker & DIY</div>
+      <div class="p-desc">Arduino, ESP32, Raspberry Pi, 3D-Druck. Projekte mit Teileliste und Code.</div>
+      <div class="p-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span></div>
+    </div>
+    <div class="pillar-slide pillar-item">
+      <div class="p-icon">⚡</div>
+      <div class="p-title">Automatisierung</div>
+      <div class="p-desc">n8n, Make, Zapier. Shell-Scripts, Cron-Jobs, API-Anbindungen.</div>
+      <div class="p-tags"><span class="tag-chip">n8n</span><span class="tag-chip">Scripts</span></div>
+    </div>
+    <div class="pillar-slide pillar-item">
+      <div class="p-icon">📸</div>
+      <div class="p-title">Fotografie</div>
+      <div class="p-desc">KI trifft Bildbearbeitung. Lightroom, Topaz, Luminar Neo.</div>
+      <div class="p-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Gear</span></div>
+    </div>
+    <div class="pillar-slide pillar-item">
+      <div class="p-icon">🧠</div>
+      <div class="p-title">Produktivität</div>
+      <div class="p-desc">Obsidian, Notion, PARA-Methode. Systeme die funktionieren.</div>
+      <div class="p-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Fokus</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- P3: Accordion List -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 3 — Compact Accordion List</div>
+  <div class="pillars-p3">
+    <div class="pillar-acc pillar-item">
+      <div class="p-icon">🤖</div>
+      <div>
+        <div class="p-title">KI & Tech</div>
+        <div class="p-desc">ChatGPT, Claude, Gemini, Midjourney im Praxistest.</div>
+        <div class="p-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span><span class="tag-chip">Prompt-Guides</span><span class="tag-chip">Vergleiche</span></div>
+      </div>
+      <div class="p-arrow">→</div>
+    </div>
+    <div class="pillar-acc pillar-item">
+      <div class="p-icon">🔧</div>
+      <div>
+        <div class="p-title">Maker & DIY</div>
+        <div class="p-desc">Arduino, ESP32, Raspberry Pi, 3D-Druck.</div>
+        <div class="p-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span><span class="tag-chip">3D-Druck</span><span class="tag-chip">Smart Home</span></div>
+      </div>
+      <div class="p-arrow">→</div>
+    </div>
+    <div class="pillar-acc pillar-item">
+      <div class="p-icon">⚡</div>
+      <div>
+        <div class="p-title">Automatisierung</div>
+        <div class="p-desc">n8n, Make, Zapier. Shell-Scripts, Cron-Jobs.</div>
+        <div class="p-tags"><span class="tag-chip">n8n</span><span class="tag-chip">API-Guides</span><span class="tag-chip">Shell-Scripts</span><span class="tag-chip">Cron-Jobs</span></div>
+      </div>
+      <div class="p-arrow">→</div>
+    </div>
+    <div class="pillar-acc pillar-item">
+      <div class="p-icon">📸</div>
+      <div>
+        <div class="p-title">Fotografie</div>
+        <div class="p-desc">KI trifft Bildbearbeitung. Lightroom, Topaz, Luminar Neo.</div>
+        <div class="p-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Editing</span><span class="tag-chip">Gear-Reviews</span><span class="tag-chip">Topaz</span></div>
+      </div>
+      <div class="p-arrow">→</div>
+    </div>
+    <div class="pillar-acc pillar-item">
+      <div class="p-icon">🧠</div>
+      <div>
+        <div class="p-title">Produktivität</div>
+        <div class="p-desc">Obsidian, Notion, PARA-Methode. Systeme die funktionieren.</div>
+        <div class="p-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Second Brain</span><span class="tag-chip">Fokus-Hacks</span><span class="tag-chip">Tools</span></div>
+      </div>
+      <div class="p-arrow">→</div>
+    </div>
+  </div>
+</div>
+
+<!-- P4: Full-Width Rows with Honey Border -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 4 — Full-Width Rows mit Honey Border</div>
+  <div class="pillars-p4">
+    <div class="pillar-row pillar-item">
+      <div class="p-icon">🤖</div>
+      <div>
+        <div class="p-title">KI & Tech</div>
+        <div class="p-desc">ChatGPT, Claude, Gemini, Midjourney im Praxistest. KI-News, Vergleiche und Tutorials.</div>
+        <div class="p-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span><span class="tag-chip">Prompt-Guides</span><span class="tag-chip">Vergleiche</span></div>
+      </div>
+    </div>
+    <div class="pillar-row pillar-item">
+      <div class="p-icon">🔧</div>
+      <div>
+        <div class="p-title">Maker & DIY</div>
+        <div class="p-desc">Arduino, ESP32, Raspberry Pi, 3D-Druck. Projekte mit Teileliste und Code.</div>
+        <div class="p-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span><span class="tag-chip">3D-Druck</span><span class="tag-chip">Smart Home</span></div>
+      </div>
+    </div>
+    <div class="pillar-row pillar-item">
+      <div class="p-icon">⚡</div>
+      <div>
+        <div class="p-title">Automatisierung</div>
+        <div class="p-desc">n8n, Make, Zapier. Shell-Scripts, Cron-Jobs, API-Anbindungen.</div>
+        <div class="p-tags"><span class="tag-chip">n8n</span><span class="tag-chip">API-Guides</span><span class="tag-chip">Shell-Scripts</span><span class="tag-chip">Cron-Jobs</span></div>
+      </div>
+    </div>
+    <div class="pillar-row pillar-item">
+      <div class="p-icon">📸</div>
+      <div>
+        <div class="p-title">Fotografie</div>
+        <div class="p-desc">KI trifft Bildbearbeitung. Lightroom, Topaz, Luminar Neo. Gear-Reviews.</div>
+        <div class="p-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Editing</span><span class="tag-chip">Gear-Reviews</span><span class="tag-chip">Topaz & Luminar</span></div>
+      </div>
+    </div>
+    <div class="pillar-row pillar-item">
+      <div class="p-icon">🧠</div>
+      <div>
+        <div class="p-title">Produktivität</div>
+        <div class="p-desc">Obsidian, Notion, PARA-Methode. Systeme die funktionieren, auch ohne Motivation.</div>
+        <div class="p-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Second Brain</span><span class="tag-chip">Fokus-Hacks</span><span class="tag-chip">Tool-Vergleiche</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- P5: Bento Grid -->
+<div class="variant-block">
+  <div class="variant-label">VARIANTE 5 — Bento Grid (mixed sizes)</div>
+  <div class="pillars-p5">
+    <div class="pillar-bento pillar-item wide">
+      <div class="p-icon">🤖</div>
+      <div class="p-title">KI & Tech</div>
+      <div class="p-desc">ChatGPT, Claude, Gemini, Midjourney im Praxistest. KI-News, Vergleiche und Tutorials.</div>
+      <div class="p-tags"><span class="tag-chip">Tool-Reviews</span><span class="tag-chip">KI-News</span><span class="tag-chip">Prompt-Guides</span><span class="tag-chip">Vergleiche</span></div>
+    </div>
+    <div class="pillar-bento pillar-item">
+      <div class="p-icon">🔧</div>
+      <div class="p-title">Maker & DIY</div>
+      <div class="p-desc">Arduino, ESP32, Raspberry Pi, 3D-Druck.</div>
+      <div class="p-tags"><span class="tag-chip">Arduino</span><span class="tag-chip">ESP32</span><span class="tag-chip">3D-Druck</span></div>
+    </div>
+    <div class="pillar-bento pillar-item">
+      <div class="p-icon">⚡</div>
+      <div class="p-title">Automatisierung</div>
+      <div class="p-desc">n8n, Make, Zapier. Shell-Scripts.</div>
+      <div class="p-tags"><span class="tag-chip">n8n</span><span class="tag-chip">Scripts</span><span class="tag-chip">APIs</span></div>
+    </div>
+    <div class="pillar-bento pillar-item">
+      <div class="p-icon">📸</div>
+      <div class="p-title">Fotografie</div>
+      <div class="p-desc">KI trifft Bildbearbeitung. Lightroom, Topaz.</div>
+      <div class="p-tags"><span class="tag-chip">Lightroom-KI</span><span class="tag-chip">Editing</span><span class="tag-chip">Gear</span></div>
+    </div>
+    <div class="pillar-bento pillar-item">
+      <div class="p-icon">🧠</div>
+      <div class="p-title">Produktivität</div>
+      <div class="p-desc">Obsidian, Notion, PARA-Methode.</div>
+      <div class="p-tags"><span class="tag-chip">Obsidian</span><span class="tag-chip">Second Brain</span><span class="tag-chip">Fokus</span></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

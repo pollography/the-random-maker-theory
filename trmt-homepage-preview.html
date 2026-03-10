@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRMT — Homepage Preview (Live)</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #0a0a0b;
+    --color-surface: #16161a;
+    --color-text: #e8e4df;
+    --color-text-muted: rgba(232, 228, 223, 0.6);
+    --color-text-dim: rgba(232, 228, 223, 0.3);
+    --color-accent-honey: #d4893e;
+    --color-accent-honey-hover: #e09a4f;
+    --color-accent-teal: #3ab0a2;
+    --color-accent-teal-hover: #4cc4b6;
+    --color-accent-teal-subtle: rgba(58, 176, 162, 0.1);
+    --color-border-subtle: rgba(255,255,255,0.06);
+    --font-display: 'Instrument Serif', serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: var(--font-sans); background: var(--color-bg); color: var(--color-text); overflow-x: hidden; }
+  body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E"); background-size: 256px 256px; opacity: 0.03; pointer-events: none; z-index: 1; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+  .hero { text-align: center; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; padding: 40px 24px; }
+  .hero-badge { display: inline-block; font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-accent-teal); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px; padding: 6px 16px; border: 1px solid var(--color-accent-teal-subtle); border-radius: 999px; background: var(--color-accent-teal-subtle); }
+  .hero-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(44px, 8vw, 80px); line-height: 1.05; letter-spacing: -0.02em; color: var(--color-text); margin: 0 0 20px; opacity: 0.95; }
+  .hero-accent { color: var(--color-accent-honey); font-style: italic; }
+  .hero-subtitle { font-family: var(--font-display); font-style: italic; font-size: 1.25rem; color: var(--color-text-muted); max-width: 480px; margin: 0 auto 40px; line-height: 1.6; letter-spacing: 0.02em; }
+  .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .scroll-hint { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite; color: var(--color-text-dim); font-size: 1.25rem; }
+  @keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+  .btn-honey, .btn-teal { display: inline-flex; align-items: center; padding: 14px 28px; border-radius: 12px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: all 0.25s ease; border: none; cursor: pointer; }
+  .btn-honey { background: var(--color-accent-honey); color: #1a1a1a; }
+  .btn-honey:hover { background: var(--color-accent-honey-hover); box-shadow: 0 0 20px rgba(212,137,62,0.4), 0 0 40px rgba(212,137,62,0.15), 0 4px 12px rgba(0,0,0,0.2); transform: translateY(-2px); }
+  .btn-teal { background: var(--color-accent-teal); color: #1a1a1a; }
+  .btn-teal:hover { background: var(--color-accent-teal-hover); box-shadow: 0 0 20px rgba(58,176,162,0.4), 0 0 40px rgba(58,176,162,0.15), 0 4px 12px rgba(0,0,0,0.2); transform: translateY(-2px); }
+  .intro-section { padding: 80px 0 60px; }
+  .intro-inner { max-width: 680px; margin: 0 auto; text-align: center; }
+  .intro-headline { font-family: var(--font-display); font-weight: 400; font-size: clamp(24px, 4vw, 36px); color: var(--color-text); margin: 0 0 20px; letter-spacing: -0.01em; opacity: 0.95; }
+  .intro-accent { color: var(--color-accent-honey); }
+  .intro-text { font-size: 1.05rem; color: var(--color-text-muted); line-height: 1.75; margin: 0 0 40px; }
+  .article-counter { display: inline-flex; flex-direction: column; align-items: center; gap: 4px; padding: 32px 52px; background: var(--color-surface); border: 1px solid rgba(212,137,62,0.15); border-radius: 16px; box-shadow: 0 0 30px rgba(212,137,62,0.05); transition: all 0.3s ease; }
+  .article-counter:hover { border-color: rgba(212,137,62,0.3); box-shadow: 0 0 40px rgba(212,137,62,0.1), 0 0 60px rgba(212,137,62,0.05); }
+  .counter-number { font-family: var(--font-display); font-weight: 400; font-size: 4rem; color: var(--color-accent-honey); line-height: 1; text-shadow: 0 0 20px rgba(212,137,62,0.2); }
+  .counter-label { font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: var(--color-text-muted); }
+  .counter-sub { font-family: var(--font-sans); font-size: 0.75rem; color: var(--color-text-dim); margin-top: 4px; }
+  .section { padding: 48px 0; }
+  .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 32px; }
+  .section-title { font-family: var(--font-sans); font-weight: 700; font-size: 1.5rem; color: var(--color-text); margin: 0; }
+  .section-link { color: var(--color-accent-honey); text-decoration: none; font-weight: 600; }
+  .pillars-section { padding: 64px 0 48px; }
+  .pillars-list { display: flex; flex-direction: column; gap: 16px; }
+  .pillar-card { display: grid; grid-template-columns: 64px 1fr; gap: 24px; align-items: start; padding: 32px; border: 1px solid var(--color-border-subtle); border-radius: 16px; text-decoration: none; transition: all 0.25s ease; color: inherit; cursor: pointer; }
+  .pillar-honey { background: rgba(212,137,62,0.03); border-color: rgba(212,137,62,0.08); }
+  .pillar-teal { background: rgba(58,176,162,0.03); border-color: rgba(58,176,162,0.08); }
+  .pillar-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 4px 12px rgba(0,0,0,0.2); background: rgba(0,0,0,0.25); border-color: rgba(212,137,62,0.2); }
+  .pillar-icon { font-size: 2.5rem; padding-top: 4px; text-align: center; }
+  .pillar-content { display: flex; flex-direction: column; gap: 8px; }
+  .pillar-category { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-accent-teal); text-transform: uppercase; letter-spacing: 0.12em; }
+  .pillar-title { font-family: var(--font-sans); font-weight: 700; font-size: 1.2rem; color: var(--color-text); margin: 0; }
+  .pillar-desc { font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.75; margin: 0; }
+  .pillar-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .pillar-tag { font-size: 0.7rem; font-family: var(--font-mono); color: var(--color-accent-teal); background: var(--color-accent-teal-subtle); padding: 3px 10px; border-radius: 999px; }
+  .posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .blog-card { background: var(--color-surface); border: 1px solid var(--color-border-subtle); border-radius: 16px; overflow: hidden; transition: all 0.25s ease; cursor: pointer; }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.35), 0 4px 12px rgba(0,0,0,0.2); background: rgba(0,0,0,0.25); border-color: rgba(212,137,62,0.2); }
+  .card-img { width: 100%; height: 160px; background: linear-gradient(135deg, #1a1a2e, #16213e); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+  .card-body { padding: 20px; }
+  .card-title { font-family: var(--font-sans); font-weight: 600; font-size: 1.05rem; margin-bottom: 8px; line-height: 1.4; }
+  .card-accent { color: var(--color-accent-honey); }
+  .card-desc { font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.6; }
+  .preview-banner { position: fixed; top: 0; left: 0; right: 0; background: var(--color-accent-honey); color: #1a1a1a; text-align: center; padding: 8px; font-family: var(--font-mono); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; z-index: 999; }
+  @media (max-width: 768px) { .posts-grid { grid-template-columns: 1fr; } .pillar-card { grid-template-columns: 48px 1fr; padding: 24px; gap: 16px; } .counter-number { font-size: 3rem; } .article-counter { padding: 24px 36px; } }
+</style>
+</head>
+<body>
+<div class="preview-banner">PREVIEW — So sieht die Homepage nach dem Push aus</div>
+<section class="hero">
+  <div class="hero-badge">News · Reviews · Tutorials · Projekte</div>
+  <h1 class="hero-title">The <em class="hero-accent">Random</em> Maker Theory</h1>
+  <p class="hero-subtitle">Content, den ich <em class="hero-accent">selbst</em> lese.</p>
+  <div class="hero-actions">
+    <a href="#" class="btn-honey">Zum Blog</a>
+    <a href="#" class="btn-teal">Zum Hören</a>
+  </div>
+  <div class="scroll-hint">↓</div>
+</section>
+<section class="intro-section">
+  <div class="container">
+    <div class="intro-inner">
+      <h2 class="intro-headline">Entdecken. Verstehen. Und alles <span class="intro-accent">Frei Schnauze.</span></h2>
+      <p class="intro-text">Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!</p>
+      <div class="article-counter" id="counter">
+        <span class="counter-number" id="counterNum">0</span>
+        <span class="counter-label">Artikel online</span>
+        <span class="counter-sub">+ wöchentlich neue</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section pillars-section">
+  <div class="container">
+    <div class="section-header"><h2 class="section-title">Was dich hier erwartet</h2></div>
+    <div class="pillars-list">
+      <a href="#" class="pillar-card pillar-honey">
+        <div class="pillar-icon">🤖</div>
+        <div class="pillar-content">
+          <span class="pillar-category">Reviews · News · Tutorials</span>
+          <h3 class="pillar-title">KI & Tech</h3>
+          <p class="pillar-desc">Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere KI-Tools im ehrlichen Praxistest. Keine gesponserten Lobeshymnen, sondern echte Erfahrung nach Wochen der Nutzung. Dazu aktuelle KI-News, wenn was Relevantes passiert. Vergleiche zwischen Tools, Prompt-Engineering Guides und Tutorials, die auch Einsteiger abholen. Von Text-KI über Bildgenerierung bis Audio und Video: hier erfährst du, was sich lohnt und was nur Hype ist.</p>
+          <div class="pillar-tags"><span class="pillar-tag">Tool-Reviews</span><span class="pillar-tag">KI-News</span><span class="pillar-tag">Prompt-Guides</span><span class="pillar-tag">Vergleiche</span><span class="pillar-tag">Tutorials</span></div>
+        </div>
+      </a>
+      <a href="#" class="pillar-card pillar-teal">
+        <div class="pillar-icon">🔧</div>
+        <div class="pillar-content">
+          <span class="pillar-category">Projekte · Anleitungen · Hardware</span>
+          <h3 class="pillar-title">Maker & DIY</h3>
+          <p class="pillar-desc">Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Von smarten Sensoren fürs Terrarium über LED-Strips mit WLED bis zum eigenen Wetterstation-Dashboard. Jedes Projekt kommt mit Teileliste, Schaltplan und vollständigem Code. Dazu Grundlagen-Tutorials für Einsteiger, die noch nie gelötet haben. 3D-Druck Guides mit Slicer-Settings, Material-Tipps und Design-Workflows. Basteln mit Hirn statt Pinterest-Deko.</p>
+          <div class="pillar-tags"><span class="pillar-tag">Arduino</span><span class="pillar-tag">ESP32</span><span class="pillar-tag">3D-Druck</span><span class="pillar-tag">Smart Home</span><span class="pillar-tag">Raspberry Pi</span></div>
+        </div>
+      </a>
+      <a href="#" class="pillar-card pillar-honey">
+        <div class="pillar-icon">⚡</div>
+        <div class="pillar-content">
+          <span class="pillar-category">Workflows · Scripts · DevOps</span>
+          <h3 class="pillar-title">Automatisierung</h3>
+          <p class="pillar-desc">Workflows bauen mit n8n, Make und Zapier. Alles was du einmal einrichtest und nie wieder anfassen musst. Shell-Scripts für den Alltag, Cron-Jobs die im Hintergrund laufen, API-Anbindungen zwischen Tools. Vom simplen Backup-Script bis zur kompletten Content-Pipeline. Dazu Docker-Setups, Self-Hosting Guides und Server-Konfiguration. Repetitive Arbeit ist Zeitverschwendung: automatisiere oder lass es sein.</p>
+          <div class="pillar-tags"><span class="pillar-tag">n8n-Workflows</span><span class="pillar-tag">API-Guides</span><span class="pillar-tag">Shell-Scripts</span><span class="pillar-tag">Docker</span><span class="pillar-tag">Self-Hosting</span></div>
+        </div>
+      </a>
+      <a href="#" class="pillar-card pillar-teal">
+        <div class="pillar-icon">📸</div>
+        <div class="pillar-content">
+          <span class="pillar-category">KI-Editing · Gear · Workflows</span>
+          <h3 class="pillar-title">Fotografie</h3>
+          <p class="pillar-desc">Wo KI auf Bildbearbeitung trifft. Lightroom AI Masking, Topaz Photo AI, Luminar Neo, Generative Fill in Photoshop. Ehrliche Tool-Reviews nach Monaten echter Nutzung, nicht nach 5 Minuten Ausprobieren. Dazu Editing-Workflows die wirklich Zeit sparen, Gear-Reviews von Kameras und Objektiven, und Tipps für Fotografen die ihre Arbeit mit KI-Tools aufwerten wollen, ohne dass es fake aussieht.</p>
+          <div class="pillar-tags"><span class="pillar-tag">Lightroom-KI</span><span class="pillar-tag">Editing-Workflows</span><span class="pillar-tag">Gear-Reviews</span><span class="pillar-tag">Topaz & Luminar</span><span class="pillar-tag">Photoshop KI</span></div>
+        </div>
+      </a>
+      <a href="#" class="pillar-card pillar-honey">
+        <div class="pillar-icon">🧠</div>
+        <div class="pillar-content">
+          <span class="pillar-category">Systeme · Tools · Mindset</span>
+          <h3 class="pillar-title">Produktivität</h3>
+          <p class="pillar-desc">Obsidian als Second Brain, Notion-Setups die man tatsächlich nutzt, PARA-Methode in der Praxis. Systeme die funktionieren, auch wenn die Motivation mal komplett fehlt. Fokus-Strategien für Leute mit ADHS-Brain, Tool-Vergleiche zwischen Notion, Obsidian, Logseq und Co. Dazu Tipps für digitale Ordnung, Journaling-Workflows und alles was hilft, den eigenen Kopf zu entlasten und trotzdem nichts zu vergessen.</p>
+          <div class="pillar-tags"><span class="pillar-tag">Obsidian</span><span class="pillar-tag">Second Brain</span><span class="pillar-tag">PARA-Methode</span><span class="pillar-tag">Fokus-Hacks</span><span class="pillar-tag">Notion</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="section-header"><h2 class="section-title">Neueste Posts</h2><a href="#" class="section-link">Alle ansehen →</a></div>
+    <div class="posts-grid">
+      <div class="blog-card"><div class="card-img">🤖</div><div class="card-body"><div class="card-title">Die besten <span class="card-accent">KI-Tools</span> 2026</div><div class="card-desc">Welche KI-Tools sich wirklich lohnen und welche nur Hype sind.</div></div></div>
+      <div class="blog-card"><div class="card-img">🔧</div><div class="card-body"><div class="card-title"><span class="card-accent">3D-Druck</span> für Einsteiger</div><div class="card-desc">Der komplette Guide zum Einstieg in den 3D-Druck.</div></div></div>
+      <div class="blog-card"><div class="card-img">⚡</div><div class="card-body"><div class="card-title">Automatisierung mit <span class="card-accent">n8n</span></div><div class="card-desc">Wie du repetitive Arbeit ein für alle Mal loswirst.</div></div></div>
+    </div>
+  </div>
+</section>
+<div style="height: 100px;"></div>
+<script>
+const counterEl = document.getElementById('counter');
+const numEl = document.getElementById('counterNum');
+let hasAnimated = false;
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting && !hasAnimated) { hasAnimated = true; animateCount(16); }
+  });
+}, { threshold: 0.5 });
+observer.observe(counterEl);
+function animateCount(target) {
+  const duration = 1200;
+  const start = performance.now();
+  function tick(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    numEl.textContent = Math.round(eased * target);
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+</script>
+</body>
+</html>
