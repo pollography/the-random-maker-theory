@@ -26,6 +26,7 @@
 <svelte:head>
 	<title>{tagInfo.title} — Artikel & Guides | TRMT</title>
 	<meta name="description" content={tagInfo.metaDesc} />
+	<meta name="keywords" content="{data.tag}, {tagInfo.title}, TRMT, Tech Blog" />
 	<meta property="og:title" content="{tagInfo.title} | TRMT" />
 	<meta property="og:description" content={tagInfo.metaDesc} />
 	<meta property="og:url" content="https://therandommakertheory.com/tags/{data.tag}" />

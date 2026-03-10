@@ -25,9 +25,10 @@
 </script>
 
 <svelte:head>
-	<title>Zum Hören — Audio-Zusammenfassungen | TRMT</title>
-	<meta name="description" content="Keine Zeit zum Lesen? Hör dir die Zusammenfassungen der Blog-Inhalte an. Perfekt für unterwegs." />
-	<meta property="og:title" content="Zum Hören — Audio-Zusammenfassungen" />
+	<title>Podcast — Audio-Zusammenfassungen zum Hören | TRMT</title>
+	<meta name="description" content="Der TRMT Podcast: Audio-Zusammenfassungen der Blog-Artikel. KI-Tools, Maker-Projekte und Tech-Themen zum Hören. Perfekt für unterwegs." />
+	<meta name="keywords" content="podcast, TRMT, Audio, Zusammenfassungen, Tech Blog deutsch" />
+	<meta property="og:title" content="Podcast — Audio-Zusammenfassungen | TRMT" />
 	<meta property="og:description" content="Keine Zeit zum Lesen? Hör dir die Zusammenfassungen der Blog-Inhalte an. Perfekt für unterwegs." />
 	<meta property="og:url" content="https://therandommakertheory.com/podcast" />
 	<meta property="og:type" content="website" />

@@ -4,8 +4,9 @@
 </script>
 
 <svelte:head>
-	<title>Über TRMT — Tech, KI, Maker-Projekte & mehr</title>
+	<title>About — Über TRMT | Tech, KI, Maker-Projekte & mehr</title>
 	<meta name="description" content="Hier erfährst du mehr über Tech, KI-News, Maker-Projekte, Tutorials und Produktivitäts-Hacks. Ein Solo-Projekt, gebaut aus echtem Interesse." />
+	<meta name="keywords" content="about, über, TRMT, The Random Maker Theory, Tech Blog deutsch" />
 	<meta property="og:title" content="Über TRMT — Wer steckt dahinter?" />
 	<meta property="og:description" content="Tech, KI, Maker-Projekte und Produktivität. Ein Solo-Projekt, gebaut aus echtem Interesse." />
 	<meta property="og:url" content="https://therandommakertheory.com/about" />
