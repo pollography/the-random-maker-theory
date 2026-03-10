@@ -2,6 +2,7 @@
 
 <script>
 	import { siteConfig } from '../../config';
+	import NewsletterSignup from '../NewsletterSignup.svelte';
 </script>
 
 <footer>
@@ -70,6 +71,11 @@
 					</li>
 				</ul>
 			</div>
+		</div>
+
+		<!-- Newsletter -->
+		<div style="border-top: 1px solid var(--color-border-subtle); padding-top: 2rem; margin-top: 2rem;">
+			<NewsletterSignup />
 		</div>
 
 		<!-- Legal Links -->

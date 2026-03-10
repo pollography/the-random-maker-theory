@@ -15,8 +15,8 @@ export const siteConfig = {
 	audio: {
 		showName: 'TRMT Audio',
 		showDescription:
-			'Keine Zeit zum Lesen? Audio-Zusammenfassungen der Blog-Inhalte. Perfekt fuer unterwegs.',
+			'Keine Zeit zum Lesen? Audio-Zusammenfassungen der Blog-Inhalte. Perfekt für unterwegs.',
 		author: 'TRMT',
-		email: 'hello@therandommakertheory.com',
+		email: 'info@therandommakertheory.com',
 	},
 };

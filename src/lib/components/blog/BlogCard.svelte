@@ -48,7 +48,7 @@
 		</div>
 
 		<!-- Title -->
-		<h3 class="card-title line-clamp-2">
+		<h3 class="card-title line-clamp-3">
 			{#each titleParts() as part}
 				{#if part.isAccent}<span class="card-accent">{part.text}</span>{:else}{part.text}{/if}
 			{/each}
@@ -73,7 +73,9 @@
 		font-size: var(--font-size-xl);
 		color: var(--color-text);
 		line-height: var(--line-height-snug);
+		letter-spacing: var(--letter-spacing-tighter);
 		margin: 0;
+		min-height: calc(var(--font-size-xl) * 1.25 * 3);
 	}
 
 	.card-accent {

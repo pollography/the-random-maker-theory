@@ -134,7 +134,7 @@
 		border-radius: var(--radius-lg);
 		color: var(--color-text);
 		font-size: var(--font-size-base);
-		font-family: var(--font-body);
+		font-family: var(--font-sans);
 		transition: all var(--transition-normal);
 		outline: none;
 	}
@@ -156,7 +156,7 @@
 		border-radius: var(--radius-lg);
 		font-weight: var(--font-weight-semibold);
 		font-size: var(--font-size-base);
-		font-family: var(--font-body);
+		font-family: var(--font-sans);
 		cursor: pointer;
 		transition: all var(--transition-normal);
 		white-space: nowrap;
@@ -175,7 +175,7 @@
 
 	.newsletter-hint {
 		color: var(--color-text-dim);
-		font-size: var(--font-size-xs);
+		font-size: var(--font-size-sm);
 		margin: 0;
 	}
 

@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /newsletter-bestaetigt
+Disallow: /newsletter-fehler
 
 Sitemap: https://therandommakertheory.com/sitemap.xml

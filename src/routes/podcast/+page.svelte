@@ -13,21 +13,27 @@
 </script>
 
 <svelte:head>
-	<title>Zum Hoeren — Audio-Zusammenfassungen | {siteConfig.name}</title>
-	<meta name="description" content="Keine Zeit zum Lesen? Hoer dir die Zusammenfassungen der Blog-Inhalte an. Perfekt fuer unterwegs." />
+	<title>Zum Hören — Audio-Zusammenfassungen | {siteConfig.name}</title>
+	<meta name="description" content="Keine Zeit zum Lesen? Hör dir die Zusammenfassungen der Blog-Inhalte an. Perfekt für unterwegs." />
+	<meta property="og:title" content="Zum Hören — Audio-Zusammenfassungen" />
+	<meta property="og:description" content="Keine Zeit zum Lesen? Hör dir die Zusammenfassungen der Blog-Inhalte an. Perfekt für unterwegs." />
+	<meta property="og:url" content="https://therandommakertheory.com/podcast" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<link rel="canonical" href="https://therandommakertheory.com/podcast" />
 </svelte:head>
 
 <!-- Header -->
 <section style="padding: 3rem 0; display: flex; flex-direction: column; gap: 1.5rem;">
 	<div>
 		<h1 style="font-size: clamp(2.5rem, 8vw, 3.5rem); font-family: var(--font-display); font-weight: var(--font-weight-extrabold); line-height: var(--line-height-tight); margin: 0; color: var(--color-text);">
-			Zum Hoeren
+			Zum Hören
 		</h1>
 		<p style="font-size: var(--font-size-lg); color: var(--color-text-muted); margin: 0.5rem 0 0 0; line-height: var(--line-height-relaxed);">
-			Keine Zeit zum Lesen? Hier findest du Audio-Zusammenfassungen der Blog-Inhalte. Perfekt fuer unterwegs, beim Autofahren oder nebenbei.
+			Keine Zeit zum Lesen? Hier findest du Audio-Zusammenfassungen der Blog-Inhalte. Perfekt für unterwegs, beim Autofahren oder nebenbei.
 		</p>
 		<p style="font-size: var(--font-size-sm); color: var(--color-text-dim); margin: 0.75rem 0 0 0;">
-			Die Zusammenfassungen werden KI-gestuetzt generiert und fassen die wichtigsten Punkte der Artikel zusammen.
+			Die Zusammenfassungen werden KI-gestützt generiert und fassen die wichtigsten Punkte der Artikel zusammen.
 		</p>
 	</div>
 
@@ -39,7 +45,7 @@
 			rel="noreferrer"
 			class="spotify-btn"
 		>
-			🎧 Auf Spotify anhoeren
+			🎧 Auf Spotify anhören
 		</a>
 	</div>
 </section>

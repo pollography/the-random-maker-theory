@@ -75,12 +75,12 @@
 		</div>
 
 		<div class="legal-block">
-			<h2>8. Einsatz von kuenstlicher Intelligenz</h2>
+			<h2>8. Einsatz von künstlicher Intelligenz</h2>
 			<p>
-				Diese Website nutzt KI-Werkzeuge (u.a. Claude, ChatGPT, Google Gemini) zur Unterstuetzung bei der Inhaltserstellung. Dazu gehoeren Recherche, Text-Zusammenfassungen, Bildgenerierung und Audio-Generierung. Es werden keine personenbezogenen Daten der Websitebesucher an KI-Dienste uebermittelt.
+				Diese Website nutzt KI-Werkzeuge (u.a. Claude, ChatGPT, Google Gemini) zur Unterstützung bei der Inhaltserstellung. Dazu gehören Recherche, Text-Zusammenfassungen, Bildgenerierung und Audio-Generierung. Es werden keine personenbezogenen Daten der Websitebesucher an KI-Dienste übermittelt.
 			</p>
 			<p>
-				Die KI-generierten Inhalte werden redaktionell geprueft. Die redaktionelle Verantwortung verbleibt beim Betreiber.
+				Die KI-generierten Inhalte werden redaktionell geprüft. Die redaktionelle Verantwortung verbleibt beim Betreiber.
 			</p>
 		</div>
 

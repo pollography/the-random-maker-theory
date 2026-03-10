@@ -119,7 +119,8 @@
   --line-height-relaxed: 1.65;
 
   /* Letter Spacing */
-  --letter-spacing-tight: -0.03em;
+  --letter-spacing-tighter: -0.035em;
+  --letter-spacing-tight: -0.02em;
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.06em;
   --letter-spacing-wider: 0.12em;
@@ -180,8 +181,8 @@
   --color-border: transparent;
   --color-border-subtle: rgba(0, 0, 0, 0.04);
   --color-text: #2d2a26;
-  --color-text-muted: #6b635b;
-  --color-text-dim: #8a8078;
+  --color-text-muted: #5a534b;
+  --color-text-dim: #76706a;
 
   /* Accent Colors - Honey (70% of accent usage) */
   --color-accent-honey: #c4854c;

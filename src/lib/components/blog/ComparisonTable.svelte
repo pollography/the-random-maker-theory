@@ -196,8 +196,8 @@
 		right: 1rem;
 		background: linear-gradient(135deg, var(--color-accent-honey), var(--color-accent-honey-hover));
 		color: var(--color-on-accent, #111);
-		font-size: 0.7rem;
-		font-weight: 700;
+		font-size: var(--font-size-xs);
+		font-weight: var(--font-weight-bold);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		padding: 0.25rem 0.75rem;
@@ -232,7 +232,7 @@
 	}
 
 	.star {
-		font-size: 1rem;
+		font-size: var(--font-size-base);
 		line-height: 1;
 	}
 
@@ -267,7 +267,7 @@
 	}
 
 	.free-badge {
-		font-size: 0.7rem;
+		font-size: var(--font-size-xs);
 		font-weight: 600;
 		text-transform: uppercase;
 		background-color: var(--color-accent-teal-subtle);
@@ -291,7 +291,7 @@
 	}
 
 	.feature-label {
-		font-size: 0.7rem;
+		font-size: var(--font-size-xs);
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		color: var(--color-text-muted);
@@ -350,7 +350,7 @@
 	}
 
 	.affiliate-marker {
-		font-size: 0.7em;
+		font-size: var(--font-size-xs);
 		vertical-align: super;
 	}
 

@@ -149,7 +149,7 @@
 	<p class="hero-subtitle">Content, den ich <em class="hero-accent">selbst</em> lese.</p>
 	<div class="hero-actions">
 		<a href="/blog" class="btn-honey">Zum Blog</a>
-		<a href="/podcast" class="btn-teal">Zum Hoeren</a>
+		<a href="/podcast" class="btn-teal">Zum Hören</a>
 	</div>
 	<div class="scroll-hint" class:hidden={scrollY > 100}>
 		<span class="scroll-arrow">↓</span>
@@ -178,7 +178,7 @@
 	</div>
 	<div class="pillars-list">
 		{#each pillars as pillar, i}
-			<a href="/blog?tag={pillar.tag}" class="pillar-card" class:pillar-honey={i % 2 === 0} class:pillar-teal={i % 2 !== 0}>
+			<a href="/tags/{pillar.tag}" class="pillar-card" class:pillar-honey={i % 2 === 0} class:pillar-teal={i % 2 !== 0}>
 				<div class="pillar-icon-col">
 					<span class="pillar-icon-large">{pillar.icon}</span>
 				</div>
@@ -382,7 +382,7 @@
 		align-items: center;
 		gap: 4px;
 		padding: 32px 52px;
-		margin: 32px 0 36px;
+		margin: 0 0 32px;
 		background: var(--color-surface);
 		border: 1px solid rgba(212, 137, 62, 0.15);
 		border-radius: var(--radius-xl);
@@ -512,6 +512,7 @@
 		font-weight: 700;
 		font-size: var(--font-size-lg);
 		color: var(--color-text);
+		letter-spacing: var(--letter-spacing-tighter);
 		margin: 0;
 	}
 

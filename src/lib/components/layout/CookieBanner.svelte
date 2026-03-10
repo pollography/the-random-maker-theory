@@ -119,7 +119,7 @@
       </div>
 
       <p class="cookie-text">
-        Ich nutze Umami fuer anonyme Besucherstatistiken (keine Werbung, kein Tracking ueber andere Seiten).
+        Ich nutze Umami für anonyme Besucherstatistiken (keine Werbung, kein Tracking über andere Seiten).
         Du kannst selbst entscheiden, was aktiv sein darf.
       </p>
 
@@ -164,7 +164,7 @@
         <button class="btn-accept" onclick={acceptAll}>Alles akzeptieren</button>
       </div>
 
-      <a href="/datenschutz" class="cookie-privacy-link">Datenschutzerklaerung</a>
+      <a href="/datenschutz" class="cookie-privacy-link">Datenschutzerklärung</a>
     </div>
   </div>
 {/if}

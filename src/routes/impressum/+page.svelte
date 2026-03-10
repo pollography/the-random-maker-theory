@@ -28,9 +28,9 @@
 		</div>
 
 		<div class="legal-block">
-			<h2>Hinweis zu KI-gestuetzten Inhalten</h2>
+			<h2>Hinweis zu KI-gestützten Inhalten</h2>
 			<p>
-				Diese Website nutzt kuenstliche Intelligenz als Werkzeug bei der Erstellung von Inhalten. Dazu gehoeren Recherche-Unterstuetzung, Text-Zusammenfassungen, Audio-Generierung und Bildgenerierung. Alle Inhalte werden redaktionell geprueft und kuratiert. Die redaktionelle Verantwortung liegt beim Betreiber.
+				Diese Website nutzt künstliche Intelligenz als Werkzeug bei der Erstellung von Inhalten. Dazu gehören Recherche-Unterstützung, Text-Zusammenfassungen, Audio-Generierung und Bildgenerierung. Alle Inhalte werden redaktionell geprüft und kuratiert. Die redaktionelle Verantwortung liegt beim Betreiber.
 			</p>
 		</div>
 

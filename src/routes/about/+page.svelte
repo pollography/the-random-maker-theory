@@ -1,5 +1,6 @@
 <script>
 	import { siteConfig } from '$lib/config';
+	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 </script>
 
 <svelte:head>
@@ -9,6 +10,23 @@
 	<meta property="og:description" content="Tech, KI, Maker-Projekte und Produktivität. Erkunden. Testen. Bauen." />
 	<meta property="og:url" content="https://therandommakertheory.com/about" />
 	<link rel="canonical" href="https://therandommakertheory.com/about" />
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "AboutPage",
+		"name": "Über The Random Maker Theory",
+		"description": "Tech, KI, Maker-Projekte und Produktivität. Erkunden. Testen. Bauen.",
+		"url": "https://therandommakertheory.com/about",
+		"mainEntity": {
+			"@type": "Person",
+			"name": "TRMT",
+			"url": "https://therandommakertheory.com",
+			"sameAs": [
+				"https://x.com/randommakertheory",
+				"https://instagram.com/therandommakertheory",
+				"https://youtube.com/@therandommakertheory"
+			]
+		}
+	})}</script>`}
 </svelte:head>
 
 <section class="about-page">
@@ -114,6 +132,9 @@
 			</a>
 		</div>
 	</div>
+
+	<!-- Newsletter CTA -->
+	<NewsletterSignup />
 </section>
 
 <style>

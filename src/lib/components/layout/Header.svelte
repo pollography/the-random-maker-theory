@@ -142,8 +142,8 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 5px;
-		width: 28px;
-		height: 28px;
+		width: 44px;
+		height: 44px;
 		background: none;
 		border: none;
 		cursor: pointer;

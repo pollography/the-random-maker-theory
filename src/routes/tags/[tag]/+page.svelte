@@ -7,7 +7,13 @@
 
 <svelte:head>
 	<title>Tag: {data.tag} — {siteConfig.name}</title>
-	<meta name="description" content="Blog-Posts mit Tag: {data.tag}" />
+	<meta name="description" content="Alle Blog-Posts zum Thema {data.tag} auf The Random Maker Theory." />
+	<meta property="og:title" content="Tag: {data.tag} — {siteConfig.name}" />
+	<meta property="og:description" content="Alle Blog-Posts zum Thema {data.tag} auf The Random Maker Theory." />
+	<meta property="og:url" content="https://therandommakertheory.com/tags/{data.tag}" />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<link rel="canonical" href="https://therandommakertheory.com/tags/{data.tag}" />
 </svelte:head>
 
 <!-- Header -->

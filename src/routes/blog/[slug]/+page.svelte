@@ -63,7 +63,7 @@
 		"dateModified": data.post.updated || data.post.date,
 		"author": {
 			"@type": "Person",
-			"name": "Pollo",
+			"name": "TRMT",
 			"url": "https://therandommakertheory.com/about"
 		},
 		"publisher": {
@@ -77,6 +77,17 @@
 			"@type": "WebPage",
 			"@id": `https://therandommakertheory.com/blog/${data.post.slug}`
 		}
+	})}</script>`}
+
+	<!-- Breadcrumb Schema -->
+	{@html `<script type="application/ld+json">${JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "BreadcrumbList",
+		"itemListElement": [
+			{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://therandommakertheory.com" },
+			{ "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://therandommakertheory.com/blog" },
+			{ "@type": "ListItem", "position": 3, "name": data.post.title, "item": `https://therandommakertheory.com/blog/${data.post.slug}` }
+		]
 	})}</script>`}
 </svelte:head>
 
@@ -100,6 +111,8 @@
 				{/each}
 			</h1>
 			<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; color: var(--color-text-muted); font-size: var(--font-size-sm);">
+				<span style="font-weight: var(--font-weight-semibold); color: var(--color-accent-honey);">TRMT</span>
+				<span>·</span>
 				<time datetime={data.post.date}>{formattedDate}</time>
 				{#if data.post.readingTime}
 					<span>·</span>
