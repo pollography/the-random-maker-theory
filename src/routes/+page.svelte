@@ -179,6 +179,12 @@
 			<span class="counter-label">Artikel online</span>
 			<span class="counter-sub">+ wöchentlich neue</span>
 		</div>
+	</div>
+</section>
+
+<!-- ═══════ ENTDECKEN ═══════ -->
+<section class="discover-section">
+	<div class="discover-inner">
 		<h2 class="intro-headline">Entdecken. Verstehen. Und alles <span class="intro-accent">Frei Schnauze.</span></h2>
 		<p class="intro-text">
 			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
@@ -226,27 +232,28 @@
 	</div>
 </section>
 
-<!-- ═══════ NEUESTE EPISODE ═══════ -->
-{#if latestEpisode}
-	<section class="section">
-		<div class="section-header">
-			<h2 class="section-title">Neueste Episode</h2>
-			<a href="/podcast" class="section-link">Alle Episoden →</a>
-		</div>
-		<div class="episode-wrap">
-			<EpisodeCard episode={latestEpisode} />
-		</div>
-	</section>
-{/if}
+<!-- ═══════ BOTTOM SECTIONS ═══════ -->
+<div class="bottom-sections">
+	<!-- Podcast + Newsletter nebeneinander -->
+	<div class="bottom-grid">
+		{#if latestEpisode}
+			<section class="bottom-card">
+				<div class="bottom-card-header">
+					<h2 class="bottom-card-title">Neu zum Anhören</h2>
+					<a href="/podcast" class="section-link">Alle Folgen →</a>
+				</div>
+				<EpisodeCard episode={latestEpisode} />
+			</section>
+		{/if}
 
-<!-- ═══════ NEWSLETTER ═══════ -->
-<NewsletterSignup />
-
-<!-- ═══════ FAQ ═══════ -->
-<section class="section faq-section">
-	<div class="section-header">
-		<h2 class="section-title">Häufige Fragen</h2>
+		<section class="bottom-card newsletter-card-wrap">
+			<NewsletterSignup />
+		</section>
 	</div>
+
+	<!-- FAQ -->
+	<section class="bottom-card faq-card">
+		<h2 class="bottom-card-title" style="margin-bottom: 24px;">Häufige Fragen</h2>
 	<div class="faq-list">
 		{#each faqs as faq, i}
 			<details class="faq-item" class:faq-item-teal={i % 3 === 1}>
@@ -260,7 +267,8 @@
 			</details>
 		{/each}
 	</div>
-</section>
+	</section>
+</div>
 
 <style>
 	/* ── HERO ── */
@@ -379,12 +387,23 @@
 		transform: translateY(-2px);
 	}
 
-	/* ── INTRO SECTION ── */
+	/* ── INTRO SECTION (Counter only) ── */
 	.intro-section {
-		padding: 56px 0 48px;
+		padding: 64px 0 32px;
 	}
 
 	.intro-inner {
+		max-width: 680px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	/* ── DISCOVER SECTION (Headline + Text) ── */
+	.discover-section {
+		padding: 48px 0 24px;
+	}
+
+	.discover-inner {
 		max-width: 680px;
 		margin: 0 auto;
 		text-align: center;
@@ -456,7 +475,7 @@
 
 	/* ── PILLARS (C+D Hybrid: Teal Category + Alternating Colors) ── */
 	.pillars-section {
-		padding: 64px 0 48px;
+		padding: 80px 0 48px;
 	}
 
 	.pillars-list {
@@ -642,12 +661,64 @@
 		gap: 24px;
 	}
 
-	.episode-wrap { max-width: 640px; }
+	/* ── BOTTOM SECTIONS ── */
+	.bottom-sections {
+		padding: 64px 0 48px;
+		margin-top: 32px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.bottom-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+	}
+
+	.bottom-card {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-xl);
+		padding: 32px;
+	}
+
+	.bottom-card-header {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	.bottom-card-title {
+		font-family: var(--font-display);
+		font-weight: 400;
+		font-size: clamp(22px, 3vw, 28px);
+		color: var(--color-text);
+		margin: 0;
+		opacity: 0.95;
+	}
+
+	.newsletter-card-wrap {
+		padding: 0;
+		background: transparent;
+		border: none;
+	}
+
+	.newsletter-card-wrap :global(.newsletter-wrap) {
+		margin-top: 0;
+	}
+
+	.newsletter-card-wrap :global(.newsletter-card) {
+		height: 100%;
+		border-radius: var(--radius-xl);
+	}
+
+	.faq-card {
+		max-width: 100%;
+	}
 
 	/* ── FAQ SECTION ── */
-	.faq-section {
-		max-width: 800px;
-	}
 
 	.faq-list {
 		display: flex;
@@ -656,7 +727,7 @@
 	}
 
 	.faq-item {
-		background: var(--color-surface);
+		background: rgba(26, 26, 26, 0.6);
 		border: 1px solid var(--color-border-subtle);
 		border-radius: var(--radius-lg);
 		overflow: hidden;
@@ -746,7 +817,10 @@
 
 	@media (max-width: 768px) {
 		.hero { min-height: 100svh; padding: 56px 0 60px; margin-top: -56px; }
-		.intro-section { padding: 80px 0 60px; }
+		.intro-section { padding: 48px 0 24px; }
+		.discover-section { padding: 32px 0 16px; }
+		.bottom-grid { grid-template-columns: 1fr; }
+		.bottom-card { padding: 24px; }
 		.posts-grid { grid-template-columns: 1fr; }
 		.pillar-card {
 			grid-template-columns: 48px 1fr;

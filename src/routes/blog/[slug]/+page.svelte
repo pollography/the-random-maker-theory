@@ -59,6 +59,8 @@
 		const imgs = node.querySelectorAll('img');
 		imgs.forEach((img: HTMLImageElement) => {
 			img.style.cursor = 'zoom-in';
+			img.loading = 'lazy';
+			img.decoding = 'async';
 			img.addEventListener('click', () => openLightbox(img.src, img.alt));
 		});
 	}
