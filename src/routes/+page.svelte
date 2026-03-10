@@ -346,7 +346,7 @@
 
 	/* ── INTRO SECTION ── */
 	.intro-section {
-		padding: 100px 0 80px;
+		padding: 56px 0 48px;
 	}
 
 	.intro-inner {
