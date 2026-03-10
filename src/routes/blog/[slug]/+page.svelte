@@ -28,15 +28,43 @@
 	});
 
 	let scrollProgress = $state(0);
+	let lightboxSrc = $state('');
+	let lightboxAlt = $state('');
+	let lightboxOpen = $state(false);
 
 	function handleScroll() {
 		const scrollTop = window.scrollY;
 		const docHeight = document.documentElement.scrollHeight - window.innerHeight;
 		scrollProgress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 	}
+
+	function openLightbox(src: string, alt: string) {
+		lightboxSrc = src;
+		lightboxAlt = alt || '';
+		lightboxOpen = true;
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeLightbox() {
+		lightboxOpen = false;
+		document.body.style.overflow = '';
+	}
+
+	function handleKeydown(e: KeyboardEvent) {
+		if (e.key === 'Escape' && lightboxOpen) closeLightbox();
+	}
+
+	// Make all prose images clickable after content renders
+	function initProseImages(node: HTMLElement) {
+		const imgs = node.querySelectorAll('img');
+		imgs.forEach((img: HTMLImageElement) => {
+			img.style.cursor = 'zoom-in';
+			img.addEventListener('click', () => openLightbox(img.src, img.alt));
+		});
+	}
 </script>
 
-<svelte:window onscroll={handleScroll} />
+<svelte:window onscroll={handleScroll} onkeydown={handleKeydown} />
 
 <svelte:head>
 	<title>{data.post.title} | TRMT</title>
@@ -134,7 +162,17 @@
 	<!-- Hero Image -->
 	{#if data.post.heroImage}
 		<div class="hero-image">
-			<img src={data.post.heroImage} alt={data.post.title} loading="eager" width="1200" height="675" />
+			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+			<img
+				src={data.post.heroImage}
+				alt={data.post.title}
+				loading="eager"
+				width="1920"
+				height="1080"
+				style="cursor: zoom-in;"
+				onclick={() => openLightbox(data.post.heroImage, data.post.title)}
+				onkeydown={(e) => e.key === 'Enter' && openLightbox(data.post.heroImage, data.post.title)}
+			/>
 		</div>
 	{/if}
 
@@ -146,7 +184,7 @@
 	/>
 
 	<!-- Content -->
-	<div class="prose prose-invert max-w-none article-content">
+	<div class="prose prose-invert max-w-none article-content" use:initProseImages>
 		{#if data.content}
 			<data.content />
 		{/if}
@@ -154,6 +192,21 @@
 </article>
 
 <!-- Related Posts -->
+<!-- Lightbox Overlay -->
+{#if lightboxOpen}
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
+	<div class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Bild vergrößert" onclick={closeLightbox} onkeydown={(e) => e.key === 'Escape' && closeLightbox()}>
+		<button class="lightbox-close" onclick={closeLightbox} aria-label="Schließen">&times;</button>
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<img
+			src={lightboxSrc}
+			alt={lightboxAlt}
+			class="lightbox-img"
+			onclick={(e) => e.stopPropagation()}
+		/>
+	</div>
+{/if}
+
 {#if data.relatedPosts && data.relatedPosts.length > 0}
 	<section class="related-section">
 		<h2 class="related-title">Das könnte dich auch interessieren</h2>
@@ -366,6 +419,53 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 		gap: 1.5rem;
+	}
+
+	/* Lightbox */
+	.lightbox-overlay {
+		position: fixed;
+		inset: 0;
+		z-index: 9999;
+		background: rgba(0, 0, 0, 0.92);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: zoom-out;
+		padding: 2rem;
+		animation: lightbox-fade-in 0.2s ease-out;
+	}
+
+	@keyframes lightbox-fade-in {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+
+	.lightbox-img {
+		max-width: 95vw;
+		max-height: 92vh;
+		object-fit: contain;
+		border-radius: 8px;
+		cursor: default;
+		box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+	}
+
+	.lightbox-close {
+		position: absolute;
+		top: 1rem;
+		right: 1.5rem;
+		background: none;
+		border: none;
+		color: white;
+		font-size: 2.5rem;
+		cursor: pointer;
+		opacity: 0.7;
+		transition: opacity 0.2s;
+		z-index: 10000;
+		line-height: 1;
+	}
+
+	.lightbox-close:hover {
+		opacity: 1;
 	}
 
 	@media (max-width: 768px) {
