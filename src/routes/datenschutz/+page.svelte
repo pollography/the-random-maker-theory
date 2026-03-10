@@ -16,7 +16,7 @@
 				Christoph Poloczek<br />
 				Sakrower Landstraße 59A<br />
 				14089 Berlin<br />
-				E-Mail: hello@therandommakertheory.com
+				E-Mail: info@therandommakertheory.com
 			</p>
 		</div>
 
@@ -67,7 +67,7 @@
 		<div class="legal-block">
 			<h2>7. Deine Rechte</h2>
 			<p>
-				Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Wenn du Fragen zum Datenschutz hast oder deine Rechte ausüben möchtest, schreib mir eine E-Mail an hello@therandommakertheory.com.
+				Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Wenn du Fragen zum Datenschutz hast oder deine Rechte ausüben möchtest, schreib mir eine E-Mail an info@therandommakertheory.com.
 			</p>
 			<p>
 				Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.

@@ -23,7 +23,7 @@
 		<div class="legal-block">
 			<h2>Kontakt</h2>
 			<p>
-				E-Mail: hello@therandommakertheory.com
+				E-Mail: info@therandommakertheory.com
 			</p>
 		</div>
 
