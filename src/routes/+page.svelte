@@ -236,7 +236,9 @@
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		padding: 40px 0;
+		padding: 40px 0 80px;
+		margin-top: -56px;
+		padding-top: 56px;
 	}
 
 	.hero-badge {
@@ -343,7 +345,7 @@
 
 	/* ── INTRO SECTION ── */
 	.intro-section {
-		padding: 80px 0 60px;
+		padding: 100px 0 80px;
 	}
 
 	.intro-inner {
@@ -370,7 +372,7 @@
 		font-size: var(--font-size-md);
 		color: var(--color-text-muted);
 		line-height: 1.75;
-		margin: 0 0 40px;
+		margin: 0 0 48px;
 	}
 
 	/* ── ARTICLE COUNTER (V5 Honey Glow) ── */
@@ -541,12 +543,13 @@
 	}
 
 	.section-title {
-		font-family: var(--font-sans);
-		font-weight: 700;
+		font-family: var(--font-display);
+		font-weight: 400;
 		font-size: var(--font-size-2xl);
 		color: var(--color-text);
 		margin: 0;
 		font-style: normal;
+		opacity: 0.95;
 	}
 
 	.section-link {
@@ -569,8 +572,8 @@
 
 	/* ── RESPONSIVE ── */
 	@media (max-width: 768px) {
-		.hero { min-height: 100svh; padding: 40px 0; }
-		.intro-section { padding: 60px 0 40px; }
+		.hero { min-height: 100svh; padding: 56px 0 60px; margin-top: -56px; }
+		.intro-section { padding: 80px 0 60px; }
 		.posts-grid { grid-template-columns: 1fr; }
 		.pillar-card {
 			grid-template-columns: 48px 1fr;
