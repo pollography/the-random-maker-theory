@@ -6,17 +6,15 @@ date: "2026-03-05"
 description: "Die Pilot-Episode. Was TRMT ist, warum ich das mache, und was dich jede Woche erwartet."
 audioUrl: ""
 videoUrl: ""
-duration: "15 min"
+duration: "2 min"
 draft: false
 blogSlug: "willkommen-bei-trmt"
 transcript:
-  - "Willkommen bei The Random Maker Theory, dem deutschsprachigen Tech-Magazin für Leute, die mehr wissen wollen als das, was in den üblichen Bestenlisten steht. Ich bin der Typ hinter TRMT. Über 15 Jahre in der Fotografie, Community-Aufbau und Content-Erstellung. Dazu ein technischer Hintergrund in DevOps und Automatisierung. Und ein Kopf, der ständig neue Sachen ausprobieren will."
-  - "In dieser ersten Episode geht es um die Frage: Was ist TRMT eigentlich? Und warum braucht die Welt noch einen Tech-Blog? Die kurze Antwort: Weil die meisten Tech-Blogs entweder oberflächliche Bestenlisten liefern, die nur auf Affiliate-Einnahmen optimiert sind, oder so technisch schreiben, dass Einsteiger nach drei Sätzen aussteigen. TRMT soll die Lücke füllen. Ehrliche Reviews, verständliche Tutorials und Einordnungen mit Kontext."
-  - "TRMT deckt fünf Bereiche ab. Erstens: KI und Tech. Also alles rund um ChatGPT, Claude, Gemini, Midjourney und Co. Tool-Reviews, Vergleiche, Prompt-Engineering Guides und aktuelle News. Zweitens: Maker und DIY. Arduino-Projekte, ESP32, 3D-Druck und alles was man selbst bauen kann. Jedes Projekt kommt mit Teileliste, Schaltplan und Code."
-  - "Drittens: Automatisierung. Workflows mit n8n, Shell-Scripts, Docker-Setups und alles was repetitive Arbeit eliminiert. Viertens: Fotografie. Wo KI auf Bildbearbeitung trifft. Lightroom AI, Topaz, Luminar und die Frage, wie man KI-Tools in der Fotografie sinnvoll nutzt, ohne dass es fake aussieht. Und fünftens: Produktivität. Obsidian als Second Brain, Notion-Setups, PARA-Methode und Fokus-Strategien. Besonders für Leute mit ADHS-Brain."
-  - "Was TRMT nicht ist: Ein weiterer Blog, der Tools nach 5 Minuten Ausprobieren bewertet. Alles was hier reviewed wird, wurde über Wochen im Alltag genutzt. Keine Pressemitteilungen umgeschrieben, keine gesponserten Rankings, keine aufgeblähten Listicles. Wenn was gut ist, sag ich das. Wenn was schlecht ist, auch. Frei Schnauze halt."
-  - "Der Podcast hier ist übrigens eine Audio-Zusammenfassung der Blog-Artikel. Generiert mit Google NotebookLM, von mir geprüft und freigegeben. Damit du die wichtigsten Inhalte auch hören kannst, wenn du grad keine Zeit zum Lesen hast. Unterwegs, beim Sport, beim Kochen. Jede Episode ist mit dem passenden Blog-Artikel verlinkt, falls du tiefer einsteigen willst."
-  - "Im Blog-Artikel zu dieser Episode findest du noch mehr Details zur Entstehungsgeschichte, zu den geplanten Formaten und zu der Technik hinter TRMT. Link findest du in den Show Notes. Und jetzt: viel Spaß beim Entdecken. Neue Artikel kommen mehrmals pro Woche. Neue Podcast-Episoden zu den wichtigsten davon."
+  - "Hier ist eure knackige Übersicht zu The Random Maker Theory, kurz TRMT. Das Ganze ist ein echt faszinierendes Solo-Projekt und News-Hub eines Tech-Enthusiasten, das genial zeigt, wie man mit künstlicher Intelligenz komplexes Wissen völlig barrierefrei und multimodal aufbereitet."
+  - "Also, erstens: Worum geht es da eigentlich genau? TRMT ist im Grunde so eine Art persönliches Tagebuch und eure neue Wissens-Zentrale für echt alles rund um neue Technologien. Ihr findet da aktuelle KI-Entwicklungen, Smart-Prompting-Hacks, 3D-Druck, Smart-Home-Umbauten und sogar Fotografie. Der Antrieb dahinter ist pure Neugier und der absolute Drang, den eigenen Alltag durch bessere Workflows einfach effizienter zu machen."
+  - "Zweitens, und das ist echter Wahnsinn: Der komplett multimodale Ansatz. Jeder einzelne geschriebene Blog-Artikel wird voll automatisch auch als Audio-Podcast und Video ausgespuckt. Der Macher nutzt dafür total transparent die KI NotebookLM. Und warum das Ganze? Naja, für maximale Barrierefreiheit, weil wir Infos alle unterschiedlich aufnehmen, zum Beispiel ganz bequem als Podcast beim Autofahren."
+  - "Und drittens: Hier ist ADHS mal kein Bug, sondern ein echtes Feature. Dieser krasse multimodale Ansatz und der ständige Hunger nach neuem Tech-Input sind nämlich extrem stark durch die eigene ADHS-Diagnose des Gründers motiviert. Die Plattform ist buchstäblich für genau solche Tech-Enthusiasten gebaut, die schnelle, visuell ansprechende Formate brauchen, weil sie ständig auf der Suche nach dem nächsten Tech-Kick zur Optimierung ihres Lebens sind."
+  - "TRMT beweist also wirklich eindrucksvoll, wie man die eigene Neugier und moderne KI-Tools wie NotebookLM verschmelzen kann, um ein radikal zugängliches Wissens-Universum für die Maker von morgen zu erschaffen."
 ---
 
 # TRMT #001 — Was ist The Random Maker Theory?

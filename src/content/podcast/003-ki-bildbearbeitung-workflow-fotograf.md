@@ -8,7 +8,7 @@ audioUrl: ""
 duration: "12 min"
 draft: false
 blogSlug: "ki-bildbearbeitung-workflow-fotograf-2026"
-videoUrl: ""
+videoUrl: "https://www.youtube.com/watch?v=l-PP-PrOdAs"
 transcript:
   - "In dieser Episode spreche ich über meinen kompletten KI-Bildbearbeitung-Workflow als Hochzeitsfotograf mit 15 Jahren Erfahrung und ADHS. Post-Production war der stille Killer meines Geschäfts, bis KI das komplett gedreht hat."
   - "Ich starte mit AfterShoot für AI Culling. Das Ding analysiert über 30 Bildattribute, erkennt Blinzler, stapelt Duplikate. Ich hab meinen eigenen Look trainiert mit 20 Hochzeiten. Der Stil ist halbwegs okay als Grundlage. Aber ehrlich: Nach mehreren Jahren bin ich unsicher, ob ich es weiter nutze. Culling dauert trotzdem noch lang."
