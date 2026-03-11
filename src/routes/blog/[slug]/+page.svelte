@@ -6,6 +6,13 @@
 
 	let { data } = $props();
 
+	// Ensure ISO 8601 dates with timezone for Schema.org
+	function toISO(dateStr) {
+		if (!dateStr) return '';
+		if (dateStr.includes('T')) return dateStr;
+		return dateStr + 'T00:00:00+01:00';
+	}
+
 	let formattedDate = $derived(new Date(data.post.date).toLocaleDateString('de-DE', {
 		year: 'numeric',
 		month: 'long',
@@ -91,8 +98,8 @@
 		"headline": data.post.title,
 		"description": data.post.description,
 		"url": `https://therandommakertheory.com/blog/${data.post.slug}`,
-		"datePublished": data.post.date,
-		"dateModified": data.post.updated || data.post.date,
+		"datePublished": toISO(data.post.date),
+		"dateModified": toISO(data.post.updated || data.post.date),
 		"author": {
 			"@type": "Person",
 			"name": "TRMT",
