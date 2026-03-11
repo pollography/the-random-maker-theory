@@ -113,6 +113,16 @@ sources:
     priority: 2
     category: deutsch
 
+  # === YOUTUBE CREATORS ===
+
+  # Chase H AI (Claude Code Workflows, Obsidian, NotebookLM, n8n)
+  - name: Chase AI Blog
+    url: https://www.chaseai.io/blog
+    lang: en
+    priority: 1
+    category: youtube-creators
+    note: "YouTube: @Chase-H-AI | Blog: chaseai.io | Top-Quelle fuer Claude Code Hacks"
+
   # === INSIDER / NEWSLETTER / COMMUNITY ===
 
   # Simon Willison (Python/LLM Insider)
