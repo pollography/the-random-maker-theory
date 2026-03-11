@@ -227,6 +227,25 @@
 
 <!-- ═══════ BOTTOM SECTIONS ═══════ -->
 <div class="bottom-sections">
+	<!-- Neuestes Video -->
+	<section class="bottom-card video-card">
+		<div class="bottom-card-header">
+			<h2 class="bottom-card-title">Neuestes Video</h2>
+			<a href="https://www.youtube.com/@therandommakertheory" target="_blank" rel="noopener" class="section-link">YouTube →</a>
+		</div>
+		<div class="video-embed">
+			<iframe
+				src="https://www.youtube.com/embed/KWIH_InMQZ8"
+				title="Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini | TRMT #002"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+				loading="lazy"
+			></iframe>
+		</div>
+		<p class="video-title">Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini</p>
+	</section>
+
 	<!-- Podcast + Newsletter nebeneinander -->
 	<div class="bottom-grid">
 		{#if latestEpisode}
@@ -685,6 +704,38 @@
 
 	.faq-card {
 		max-width: 100%;
+	}
+
+	/* ── VIDEO EMBED ── */
+	.video-card {
+		overflow: hidden;
+	}
+
+	.video-embed {
+		position: relative;
+		width: 100%;
+		padding-bottom: 56.25%; /* 16:9 */
+		border-radius: var(--radius-lg);
+		overflow: hidden;
+		background: rgba(0, 0, 0, 0.3);
+	}
+
+	.video-embed iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+		border-radius: var(--radius-lg);
+	}
+
+	.video-title {
+		margin: 16px 0 0;
+		font-size: var(--font-size-base);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-text);
+		line-height: 1.4;
 	}
 
 	/* ── FAQ SECTION ── */

@@ -28,3 +28,15 @@ static/video/
 
 # Content Engine raw output
 output/
+
+# API Tokens & Secrets (NIEMALS committen!)
+scripts/client_secret.json
+scripts/youtube-token.json
+scripts/gsc-service-account.json
+scripts/.last-indexed-urls.json
+
+# Video files (zu gross fuer Git)
+*.mp4
+*.mov
+*.avi
+*.mkv
