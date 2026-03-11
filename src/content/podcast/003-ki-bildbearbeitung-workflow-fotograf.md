@@ -4,7 +4,7 @@ slug: "003-ki-bildbearbeitung-workflow-fotograf"
 episodeNumber: 3
 date: "2026-03-11"
 description: "15 Jahre Fotografie, ADHS und KI-Tools: AfterShoot, Lightroom, Photoshop, Luminar Neo, Topaz AI und Midjourney im ehrlichen Praxistest eines Hochzeitsfotografen."
-audioUrl: ""
+audioUrl: "https://open.spotify.com/episode/2gg5xxS45Nusk0vC1kknD3"
 duration: "12 min"
 draft: false
 blogSlug: "ki-bildbearbeitung-workflow-fotograf-2026"

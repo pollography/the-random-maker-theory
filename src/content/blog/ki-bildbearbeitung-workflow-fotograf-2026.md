@@ -11,7 +11,7 @@ heroImage: "/images/blog/ki-bildbearbeitung-workflow-fotograf-2026-1.webp"
 heroImageThumb: "/images/blog/ki-bildbearbeitung-workflow-fotograf-2026-1-thumb.webp"
 titleAccent: "Workflow"
 podcastSlug: "003-ki-bildbearbeitung-workflow-fotograf"
-podcastUrl: ""
+podcastUrl: "https://open.spotify.com/episode/2gg5xxS45Nusk0vC1kknD3"
 videoUrl: "https://www.youtube.com/watch?v=l-PP-PrOdAs"
 ---
 
