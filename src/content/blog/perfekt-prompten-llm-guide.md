@@ -12,6 +12,7 @@ heroImageThumb: "/images/blog/perfekt-prompten-llm-guide-1-thumb.webp"
 titleAccent: "Prompt"
 podcastSlug: "002-perfekt-prompten-llm-guide"
 podcastUrl: "https://open.spotify.com/show/2gzpv9JphhoWBmjXXP2Pjd"
+videoUrl: "https://www.youtube.com/watch?v=KWIH_InMQZ8"
 ---
 
 Stell dir vor, du springst in ein Taxi und sagst: „Fahr mich mal irgendwohin Schönes." Der Fahrer guckt dich an wie'n Auto. Fährt dich zum nächsten Stadtpark, der nach Frittenfett riecht. Genau das passiert, wenn du ChatGPT, Claude oder Gemini mit vagen Prompts fütterst. Du landest irgendwo — aber halt nicht da, wo du hinwolltest.

@@ -146,15 +146,13 @@
 
 <style>
 	.about-page {
-		padding: 3rem 1rem;
-		max-width: 48rem;
-		margin: 0 auto;
+		padding: 3rem 0;
 	}
 
 	.about-header {
 		margin-bottom: 3rem;
 		padding-bottom: 2rem;
-		border-bottom: 1px solid var(--color-border);
+		border-bottom: 1px solid var(--color-border-subtle);
 	}
 
 	.about-title {
@@ -164,9 +162,12 @@
 		line-height: var(--line-height-tight);
 		margin: 0 0 1rem 0;
 		color: var(--color-text);
+		opacity: 0.95;
 	}
 
 	.about-subtitle {
+		font-family: var(--font-display);
+		font-style: italic;
 		font-size: var(--font-size-lg);
 		color: var(--color-text-muted);
 		margin: 0;
@@ -176,14 +177,14 @@
 	.about-content {
 		display: flex;
 		flex-direction: column;
-		gap: 2.5rem;
+		gap: 3rem;
 	}
 
 	.about-block p {
 		color: var(--color-text-muted);
-		line-height: var(--line-height-relaxed);
+		line-height: 1.8;
 		margin: 0 0 1rem 0;
-		font-size: var(--font-size-base);
+		font-size: 1.0625rem;
 	}
 
 	.about-block p:last-child {
@@ -194,16 +195,22 @@
 		font-size: var(--font-size-2xl);
 		font-family: var(--font-display);
 		font-weight: 400;
+		font-style: italic;
 		margin: 0 0 1rem 0;
-		color: var(--color-text);
-		font-style: normal;
+		color: var(--color-accent-honey);
 	}
 
 	.about-highlight {
-		padding: 1.5rem;
+		padding: 2rem;
 		background: var(--color-surface);
-		border: 1px solid var(--color-border);
+		border: 1px solid rgba(212, 137, 62, 0.2);
 		border-radius: var(--radius-xl);
+	}
+
+	:global([data-theme='light']) .about-highlight {
+		background: var(--gradient-card-bg);
+		border: none;
+		box-shadow: var(--shadow-neo);
 	}
 
 	/* Pillar Cards */
@@ -215,28 +222,39 @@
 	}
 
 	.about-pillar-card {
-		padding: 1.25rem;
+		padding: 1.5rem;
 		background: var(--color-surface);
-		border: 1px solid var(--color-border);
+		border: 1px solid var(--color-border-subtle);
 		border-radius: var(--radius-lg);
-		transition: all var(--transition-normal);
+		transition: all 0.25s ease;
 	}
 
 	.about-pillar-card:hover {
-		border-color: var(--color-accent-honey);
-		transform: translateY(-2px);
+		border-color: rgba(212, 137, 62, 0.35);
+		transform: translateY(-3px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 12px rgba(212, 137, 62, 0.1);
+	}
+
+	:global([data-theme='light']) .about-pillar-card {
+		background: var(--gradient-card-bg);
+		border: none;
+		box-shadow: var(--shadow-neo-sm);
+	}
+
+	:global([data-theme='light']) .about-pillar-card:hover {
+		box-shadow: var(--shadow-neo);
 	}
 
 	.about-pillar-icon {
-		font-size: 1.5rem;
-		margin-bottom: 0.5rem;
+		font-size: 1.75rem;
+		margin-bottom: 0.75rem;
 	}
 
 	.about-pillar-title {
 		font-family: var(--font-sans);
 		font-weight: var(--font-weight-semibold);
 		color: var(--color-text);
-		margin-bottom: 0.375rem;
+		margin-bottom: 0.5rem;
 		font-size: var(--font-size-base);
 	}
 
@@ -248,33 +266,42 @@
 
 	/* Social Links */
 	.about-social {
-		margin-top: 4rem;
+		margin-top: 3rem;
 		padding-top: 2rem;
-		border-top: 1px solid var(--color-border);
+		border-top: 1px solid var(--color-border-subtle);
 	}
 
 	.social-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-template-columns: repeat(3, 1fr);
 		gap: 1rem;
 	}
 
 	.social-card {
 		display: block;
-		padding: 1.25rem;
-		border: 1px solid var(--color-border);
+		padding: 1.5rem;
+		border: 1px solid var(--color-border-subtle);
 		border-radius: var(--radius-lg);
 		text-align: center;
 		text-decoration: none;
-		transition: all var(--transition-normal);
-		background-color: transparent;
+		transition: all 0.25s ease;
+		background: var(--color-surface);
 	}
 
 	.social-card:hover {
-		background-color: var(--color-surface-raised);
-		border-color: var(--color-accent-honey);
-		transform: translateY(-2px);
-		box-shadow: var(--shadow-card);
+		border-color: rgba(212, 137, 62, 0.35);
+		transform: translateY(-3px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 12px rgba(212, 137, 62, 0.1);
+	}
+
+	:global([data-theme='light']) .social-card {
+		background: var(--gradient-card-bg);
+		border: none;
+		box-shadow: var(--shadow-neo-sm);
+	}
+
+	:global([data-theme='light']) .social-card:hover {
+		box-shadow: var(--shadow-neo);
 	}
 
 	.social-name {
@@ -284,13 +311,17 @@
 	}
 
 	.social-handle {
-		color: var(--color-text-muted);
+		color: var(--color-accent-honey);
 		font-size: var(--font-size-sm);
 	}
 
 	@media (max-width: 768px) {
 		.about-page {
-			padding: 2rem 1rem;
+			padding: 2rem 0;
+		}
+
+		.social-grid {
+			grid-template-columns: 1fr;
 		}
 	}
 </style>

@@ -140,6 +140,8 @@
 	}
 
 	.blog-subtitle {
+		font-family: var(--font-display);
+		font-style: italic;
 		font-size: var(--font-size-lg);
 		color: var(--color-text-muted);
 		margin: 0.5rem 0 0 0;

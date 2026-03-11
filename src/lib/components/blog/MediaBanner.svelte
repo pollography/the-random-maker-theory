@@ -6,6 +6,15 @@
 	let hasAny = $derived(hasPodcast || hasVideo);
 
 	let podcastHref = $derived(podcastUrl || (podcastSlug ? `/podcast/${podcastSlug}` : ''));
+
+	// YouTube Video ID extrahieren fuer Embed
+	let youtubeId = $derived(() => {
+		if (!videoUrl) return '';
+		const match = videoUrl.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+		return match ? match[1] : '';
+	});
+
+	let showEmbed = $state(false);
 </script>
 
 {#if hasAny}
@@ -28,14 +37,38 @@
 				</a>
 			{/if}
 			{#if hasVideo}
-				<a href={videoUrl} class="media-link media-link-video" target="_blank" rel="noreferrer">
-					<svg class="media-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<polygon points="5 3 19 12 5 21 5 3"/>
-					</svg>
-					Video schauen
-				</a>
+				{#if youtubeId() && !showEmbed}
+					<button class="media-link media-link-video" onclick={() => showEmbed = true}>
+						<svg class="media-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polygon points="5 3 19 12 5 21 5 3"/>
+						</svg>
+						Video anzeigen
+					</button>
+				{:else if !youtubeId()}
+					<a href={videoUrl} class="media-link media-link-video" target="_blank" rel="noreferrer">
+						<svg class="media-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polygon points="5 3 19 12 5 21 5 3"/>
+						</svg>
+						Video schauen
+					</a>
+				{/if}
 			{/if}
 		</div>
+
+		<!-- YouTube Inline Embed -->
+		{#if showEmbed && youtubeId()}
+			<div class="video-embed-wrap">
+				<div class="video-embed">
+					<iframe
+						src="https://www.youtube.com/embed/{youtubeId()}?autoplay=1"
+						title="Video"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
+		{/if}
 
 		<p class="media-banner-note">
 			KI-generierte Zusammenfassungen per NotebookLM. Erstellt als barrierefreie Alternative zum Lesen.
@@ -115,6 +148,30 @@
 	.media-link-video:hover {
 		background: rgba(58, 176, 162, 0.18);
 		border-color: rgba(58, 176, 162, 0.4);
+	}
+
+	/* Video Embed */
+	.video-embed-wrap {
+		margin: 1rem 0;
+	}
+
+	.video-embed {
+		position: relative;
+		width: 100%;
+		padding-bottom: 56.25%;
+		border-radius: var(--radius-lg);
+		overflow: hidden;
+		background: rgba(0, 0, 0, 0.3);
+	}
+
+	.video-embed iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+		border-radius: var(--radius-lg);
 	}
 
 	.media-banner-note {
