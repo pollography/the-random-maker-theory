@@ -162,13 +162,14 @@
 		The <em class="hero-accent">Random</em> Maker Theory
 	</h1>
 	<p class="hero-subtitle">Content, den ich <em class="hero-accent">selbst</em> lese.</p>
-	<div class="hero-counter" bind:this={counterRef}>
-		<span class="counter-number">{displayCount}</span>
-		<span class="counter-label">Artikel & Episoden online</span>
-	</div>
 	<div class="hero-actions">
 		<a href="/blog" class="btn-honey">Zum Blog</a>
 		<a href="/podcast" class="btn-teal">Zum Hören</a>
+	</div>
+	<div class="hero-counter" bind:this={counterRef}>
+		<span class="counter-number">{displayCount}</span>
+		<span class="counter-sep">·</span>
+		<span class="counter-label">Artikel & Episoden</span>
 	</div>
 	<div class="scroll-hint" class:hidden={scrollY > 100}>
 		<span class="scroll-arrow">↓</span>
@@ -325,6 +326,15 @@
 	.hero-accent {
 		color: var(--color-accent-honey);
 		font-style: italic;
+		transition: all 0.4s ease;
+	}
+
+	.hero-title:hover .hero-accent {
+		text-shadow:
+			0 0 12px rgba(212, 137, 62, 0.6),
+			0 0 30px rgba(212, 137, 62, 0.3),
+			0 0 60px rgba(212, 137, 62, 0.12);
+		color: hsl(38 85% 58%);
 	}
 
 	.hero-subtitle {
@@ -399,16 +409,17 @@
 		transform: translateY(-2px);
 	}
 
-	/* ── HERO COUNTER (inside hero) ── */
+	/* ── HERO COUNTER (below buttons) ── */
 	.hero-counter {
 		display: inline-flex;
 		align-items: baseline;
-		gap: 10px;
-		margin-bottom: 32px;
-		padding: 8px 20px;
-		border: 1px solid rgba(212, 137, 62, 0.2);
-		border-radius: var(--radius-full);
-		background: rgba(212, 137, 62, 0.05);
+		gap: 8px;
+		margin-top: 32px;
+	}
+
+	.counter-sep {
+		color: var(--color-text-dim);
+		font-size: 1rem;
 	}
 
 	/* ── DISCOVER SECTION (Headline + Text) ── */
@@ -447,7 +458,7 @@
 	.counter-number {
 		font-family: var(--font-display);
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 1.125rem;
 		color: var(--color-accent-honey);
 		line-height: 1;
 	}
@@ -455,8 +466,8 @@
 	.counter-label {
 		font-family: var(--font-display);
 		font-style: italic;
-		font-size: 1rem;
-		color: var(--color-text-muted);
+		font-size: 0.9375rem;
+		color: var(--color-text-dim);
 	}
 
 	/* ── PILLARS (C+D Hybrid: Teal Category + Alternating Colors) ── */
@@ -848,6 +859,68 @@
 		background: rgba(58, 176, 162, 0.04);
 	}
 
+	/* ── LIGHT MODE CLAYMORPHISM ── */
+	:global([data-theme='light']) .bottom-card {
+		background: var(--gradient-card-bg);
+		border: none;
+		box-shadow: var(--shadow-neo);
+	}
+
+	:global([data-theme='light']) .bottom-card:hover {
+		box-shadow: 12px 12px 24px rgba(160, 145, 125, 0.45), -6px -6px 12px rgba(245, 238, 225, 0.6);
+	}
+
+	:global([data-theme='light']) .hero-counter {
+		background: var(--gradient-card-bg);
+		border: none;
+		box-shadow: 6px 6px 14px rgba(160, 145, 125, 0.35), -4px -4px 10px rgba(245, 238, 225, 0.5);
+	}
+
+	:global([data-theme='light']) .hero-badge {
+		background: var(--gradient-card-bg);
+		border: none;
+		box-shadow: 4px 4px 10px rgba(160, 145, 125, 0.3), -3px -3px 8px rgba(245, 238, 225, 0.45);
+		color: var(--color-accent-teal);
+	}
+
+	:global([data-theme='light']) .discover-section {
+		background: transparent;
+	}
+
+	:global([data-theme='light']) .newsletter-card-wrap :global(.newsletter-card) {
+		box-shadow: var(--shadow-neo);
+	}
+
+	:global([data-theme='light']) .section-link {
+		background: var(--gradient-card-bg);
+		box-shadow: 4px 4px 8px rgba(160, 145, 125, 0.25), -2px -2px 6px rgba(245, 238, 225, 0.4);
+		border-radius: var(--radius-lg);
+	}
+
+	:global([data-theme='light']) .section-link:hover {
+		box-shadow: 6px 6px 14px rgba(160, 145, 125, 0.4), -4px -4px 10px rgba(245, 238, 225, 0.55);
+	}
+
+	:global([data-theme='light']) .btn-honey {
+		box-shadow: 6px 6px 14px rgba(160, 145, 125, 0.4), -4px -4px 10px rgba(245, 238, 225, 0.5);
+	}
+
+	:global([data-theme='light']) .btn-teal {
+		box-shadow: 6px 6px 14px rgba(160, 145, 125, 0.4), -4px -4px 10px rgba(245, 238, 225, 0.5);
+	}
+
+	:global([data-theme='light']) .btn-honey:hover,
+	:global([data-theme='light']) .btn-teal:hover {
+		box-shadow: 8px 8px 20px rgba(160, 145, 125, 0.5), -6px -6px 14px rgba(245, 238, 225, 0.6);
+	}
+
+	:global([data-theme='light']) .hero-title:hover .hero-accent {
+		text-shadow:
+			0 0 10px rgba(196, 133, 76, 0.4),
+			0 0 25px rgba(196, 133, 76, 0.2);
+		color: hsl(38 80% 48%);
+	}
+
 	/* ── RESPONSIVE ── */
 	@media (max-width: 1024px) {
 		.posts-grid { grid-template-columns: repeat(2, 1fr); }
@@ -866,7 +939,7 @@
 		}
 		.pillar-icon-large { font-size: 2rem; }
 		.pillar-title { font-size: var(--font-size-lg); }
-		.hero-counter { margin-top: 28px; }
+		.hero-counter { margin-top: 24px; }
 	}
 
 	@media (max-width: 480px) {

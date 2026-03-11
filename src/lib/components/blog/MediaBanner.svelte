@@ -83,11 +83,13 @@
 		border-radius: var(--radius-xl);
 		padding: 1.5rem 2rem;
 		margin-bottom: 2.5rem;
+		text-align: center;
 	}
 
 	.media-banner-header {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 0.5rem;
 		margin-bottom: 1rem;
 	}
@@ -106,6 +108,7 @@
 	.media-banner-links {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap: 0.75rem;
 		margin-bottom: 1rem;
 	}
