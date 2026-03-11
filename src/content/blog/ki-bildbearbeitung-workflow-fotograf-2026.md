@@ -15,11 +15,9 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-## Die Hook: 15 Jahre, tausende Hochzeiten und ein Kopf voller Chaos
+15 Jahre Fotografie. Tausende Hochzeiten. Und ein ADHS-Hirn das nach jedem Shooting vor 4.000 RAW-Dateien sitzt und innerlich stirbt. Kennst du das? Stundenlang Regler schieben, Bilder sortieren, die Konzentration irgendwo zwischen dem dritten Kaffee und nem YouTube-Video über Ameisenfarmen verloren. Das nervt einfach massiv.
 
-Pass auf, ich mache das jetzt seit 15 Jahren. Tausende Hochzeiten. Unzählige Porträts. Gefühlt Millionen Klicks. Und wenn du wie ich eine ADHS-Diagnose hast, weißt du: Das „digitales Dunkelkammer-Gefängnis" ist die absolute Hölle. Stundenlang vor dem Monitor. Konzentration irgendwo zwischen dem dritten Kaffee und einem YouTube-Video über Ameisenfarmen. Das nervt einfach massiv.
-
-Früher war die Post-Production der stille Killer meines Geschäfts und meines Hirns. Nicht mehr Geld verdienen als man wegarbeiten kann. Das ist kein Feature, das ist ein Bug. Aber wir schreiben 2026, und KI hat das komplett gedreht. Das hier ist kein trockenes Tech-Review. Ich bin kein YouTuber, der irgendwelche Plugins testet. Das ist ein echter Erfahrungsbericht von jemandem, der täglich damit arbeitet. Wie **ki bildbearbeitung** mein Gehirn (und meinen Feierabend) gerettet hat. Basically: KI hat mich nicht ersetzt. Sie hat meine Erschöpfung ersetzt.
+Post-Production war der stille Killer meines Geschäfts. Nicht mehr Geld verdienen als man wegarbeiten kann. Das ist kein Feature, das ist ein Bug. Aber 2026 hat KI das komplett gedreht. Das hier ist kein trockenes Tech-Review. Ich bin kein YouTuber der Plugins testet. Das ist ein ehrlicher Erfahrungsbericht von jemandem, der täglich mit **ki bildbearbeitung** arbeitet. Basically: KI hat mich nicht ersetzt. Sie hat meine Erschöpfung ersetzt.
 
 ## Damals vs. Heute: Vom Regler-Sklaven zum Creative Director
 
@@ -35,7 +33,7 @@ Früher: Ich war ein Regler-Sklave. 90 % der Zeit? Belichtung. Sättigung. Weiss
 
 Heute: Ich bin der Creative Director meines eigenen Workflows. Die KI macht die Drecksarbeit. Ich entscheide die Richtung. Das ist echt geil.
 
-## AfterShoot: Der Hirn-Saver für Culling & Looks
+## AfterShoot: Der Brain-Saver für Culling & Looks
 
 Nach einer Hochzeit mit 4.000 RAWs nach Hause kommen. Dein Hirn ist Matsch. Komplett am Ende. Das ist normale Fotografie. Und hier ist AfterShoot mein absoluter Fokus-Retter.
 
@@ -81,7 +79,7 @@ Ich muss nur noch kurz drüber schauen. Basically ein Klick, fertig. Das fummeli
 
 Photoshop nutze ich nicht mehr für den ganzen Schwung, das wäre Overkill. Aber für die wichtigen Einzelbilder? Absolut stark.
 
-### Bilder erweitern statt cropppen
+### Bilder erweitern statt croppen
 
 Stell dir vor: Du hast ein geniales Porträt. Vertical Format. Perfekt. Aber dein Kunde braucht es als horizontales Web-Banner für seine Website. Früher? Croppen oder neu fotografieren. Heute: Photoshop. Generative Expand.
 
@@ -149,6 +147,8 @@ Ein Hochzeitstag ist vorbei. 4.000 RAWs auf der Karte. Das ist mein Workflow Sch
 
 Das ist nicht 2 Wochen Arbeit mehr. Das ist 2 Tage.
 
+![Infochart: Mein KI-Bildbearbeitung Workflow Schritt für Schritt](/images/blog/ki-bildbearbeitung-workflow-fotograf-2026-infochart-workflow.webp)
+
 ## Die Kosten: Ist es das wert?
 
 Ja. Aber **ki bildbearbeitung** ist nicht kostenlos.
@@ -168,6 +168,8 @@ Und ja, alles ist Abo-basiert. Das ist nicht günstig. Du brauchst das Mindset: 
 
 Wenn du 4 Hochzeiten pro Monat machst? ROI ist positiv. Wenn du 1 Hochzeit pro Monat machst? Das musst du selbst rechnen.
 
+![Infochart: KI-Tools Vergleich für Fotografen 2026](/images/blog/ki-bildbearbeitung-workflow-fotograf-2026-infochart-vergleich.webp)
+
 ## Was nervt noch immer
 
 Lüfter. AfterShoot lädt lokal auf deinem Rechner. Das ist super für Datenschutz—deine Hochzeitsfotos gehen nicht auf fremde Server. Aber deine GPU wird beim Culling und beim Look-Training zur Höchsttemperatur gebracht. Meine Lüfter klingen wie nen Düsenflugzeug.
@@ -180,7 +182,7 @@ Und noch etwas: Die Tools sind nicht magisch. Sie machen Fehler. Generative Remo
 
 Das hier wird euch wahrscheinlich nächstes Mal im Blog zu lesen sein, aber: Ich plane gerade ein Python-Script mit Claude Code. Die Idee: AfterShoot exportiert meine 5-Sterne-Auswahl. Das Script spiegelt diese automatisch in einen verschlüsselten Cloud-Backup-Ordner. Das spart mir das manuelle Dateimanagement, das mich früher immer wahnsinnig gemacht hat.
 
-Langfristig? Ich kann mir vorstellen, dass ich ein einfaches Open-Source-Tool baue. Vielleicht nicht full replacement für AfterShoot oder Adobe. Aber ein **ki bildbearbeitung** -Tool das speziell für Fotograf:innen konzipiert ist. Mit Claude. Mit lokaler GPU-Nutzung. Mit Fokus auf Workflow statt Featurecreep.
+Langfristig? Ich kann mir vorstellen, dass ich ein einfaches Open-Source-Tool baue. Vielleicht kein Full Replacement für AfterShoot oder Adobe. Aber ein **ki bildbearbeitung**-Tool das speziell für Fotograf:innen konzipiert ist. Mit Claude. Mit lokaler GPU-Nutzung. Mit Fokus auf Workflow statt Featurecreep.
 
 Das ist noch Zukunftsmusik. Aber das ist die Richtung in der ich denk.
 
