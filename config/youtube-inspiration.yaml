@@ -1,0 +1,173 @@
+# TRMT YouTube Inspiration & Competitor-Liste
+# Kanaele die als Vorbild dienen fuer Content-Ideen
+# Format: name, url, lang, category, style, why
+#
+# USAGE:
+# - Content Engine checkt regelmaessig neue Videos dieser Kanaele
+# - Jedes interessante Video kann als Blog-Post-Brief dienen
+# - "Schau und klau" = Thema uebernehmen, eigene Perspektive schreiben
+
+channels:
+  # === DEUTSCH (KI/Tech) ===
+  - name: "The Morpheus"
+    url: "https://www.youtube.com/@TheMorpheusTutorials"
+    channel_id: "UCLGY6_j7kZfA1dmmjR1J_7w"
+    lang: de
+    category: ki-tech
+    style: "Tutorial, Deep-Dive"
+    why: "Sehr gute deutsche KI-Erklaerungen, technisch fundiert"
+
+  - name: "Programmieren lernen"
+    url: "https://www.youtube.com/@Programmierenlernen"
+    channel_id: ""
+    lang: de
+    category: coding
+    style: "Anfaenger-freundlich"
+    why: "Guter Stil fuer Einsteiger-Content"
+
+  - name: "Florian Dalwigk"
+    url: "https://www.youtube.com/@FlorianDalwigk"
+    channel_id: "UCswWBF6ZkGnLG3sLRR65xRw"
+    lang: de
+    category: ki-tech
+    style: "Kurz, knackig, technisch"
+    why: "Format-Inspiration: kurze Tech-Erklaerungen"
+
+  # === ENGLISH (AI/Tech) ===
+  - name: "Fireship"
+    url: "https://www.youtube.com/@Fireship"
+    channel_id: "UCsBjURrPoezykLs9EqgamOA"
+    lang: en
+    category: ki-tech
+    style: "100 seconds, fast-paced"
+    why: "Meister der kurzen Erklaerungen. Format-Inspiration."
+
+  - name: "Matt Wolfe"
+    url: "https://www.youtube.com/@maboroshi"
+    channel_id: "UChpleBmo18P08aKCIgti38g"
+    lang: en
+    category: ki-tools
+    style: "AI Tool Reviews, Weekly Roundup"
+    why: "Genau unser Format: KI-Tool-Reviews und News-Roundups"
+
+  - name: "All About AI"
+    url: "https://www.youtube.com/@AllAboutAI"
+    channel_id: ""
+    lang: en
+    category: ki-tools
+    style: "AI Tool Tutorials"
+    why: "Hands-on Tool-Demos, gut fuer Tutorial-Inspiration"
+
+  - name: "AI Explained"
+    url: "https://www.youtube.com/@aiexplained-official"
+    channel_id: ""
+    lang: en
+    category: ki-deepdive
+    style: "Deep-Dive, Research-basiert"
+    why: "Sehr fundierte KI-Erklaerungen, Deep-Dive Format"
+
+  - name: "Two Minute Papers"
+    url: "https://www.youtube.com/@TwoMinutePapers"
+    channel_id: "UCbfYPyITQ-7l4upoX8nvctg"
+    lang: en
+    category: ki-research
+    style: "Research-Zusammenfassungen, kurz"
+    why: "Inspiration fuer Research-to-Blog Pipeline"
+
+  - name: "NetworkChuck"
+    url: "https://www.youtube.com/@NetworkChuck"
+    channel_id: "UC9x0AN7BWHpCDHSm9NiJFJQ"
+    lang: en
+    category: maker-tech
+    style: "Hands-on, energetisch"
+    why: "Smart Home, Networking, DIY Server Projekte"
+
+  # === MAKER/DIY ===
+  - name: "Andreas Spiess"
+    url: "https://www.youtube.com/@AndreasSpiess"
+    channel_id: "UCu7_D0o48KbfhpEohoP7YSQ"
+    lang: en
+    category: maker
+    style: "ESP32, IoT, Reviews"
+    why: "Top ESP32/IoT Content. Direkte Saeule-3-Inspiration."
+
+  - name: "The Hookup"
+    url: "https://www.youtube.com/@TheHookUp"
+    channel_id: ""
+    lang: en
+    category: smart-home
+    style: "Home Assistant, Smart Home"
+    why: "Home Assistant Tutorials, direkt verwertbar"
+
+  - name: "Everything Smart Home"
+    url: "https://www.youtube.com/@EverythingSmartHome"
+    channel_id: "UCrVLgIniVg6jW38uVqDRIiQ"
+    lang: en
+    category: smart-home
+    style: "Smart Home Reviews"
+    why: "Produkt-Reviews, Smart Home Setups"
+
+  # === PRODUKTIVITAET ===
+  - name: "Keep Productive"
+    url: "https://www.youtube.com/@keepproductive"
+    channel_id: ""
+    lang: en
+    category: produktivitaet
+    style: "Tool Reviews, Workflows"
+    why: "Notion, Obsidian, Productivity Tools"
+
+  - name: "Thomas Frank"
+    url: "https://www.youtube.com/@ThomasFrankExplains"
+    channel_id: "UCd_WBvzBg1UbHE8j8MIL5Ng"
+    lang: en
+    category: produktivitaet
+    style: "Notion Templates, Systems"
+    why: "Notion/Productivity-Systeme, sehr strukturiert"
+
+  # === FOTOGRAFIE ===
+  - name: "Peter McKinnon"
+    url: "https://www.youtube.com/@PeterMcKinnon"
+    channel_id: "UC3DkFux8Iv-aYnTRWzwaiBA"
+    lang: en
+    category: fotografie
+    style: "Cinematic, Tutorial"
+    why: "Fotografie + Editing, cinematic Stil"
+
+  - name: "Pat Kay"
+    url: "https://www.youtube.com/@PatKay"
+    channel_id: ""
+    lang: en
+    category: fotografie
+    style: "Street Photography, Editing"
+    why: "Foto-Workflow und Editing Tipps"
+
+  # === AUTOMATISIERUNG ===
+  - name: "n8n"
+    url: "https://www.youtube.com/@n8n-io"
+    channel_id: ""
+    lang: en
+    category: automatisierung
+    style: "Workflow Tutorials"
+    why: "Offizielle n8n Tutorials, direkt verwertbar fuer Saeule 2"
+
+# === TRACKING KEYWORDS ===
+# Diese Keywords werden in neuen Videos gesucht
+track_keywords:
+  - "Claude"
+  - "ChatGPT"
+  - "Gemini"
+  - "AI Agent"
+  - "n8n"
+  - "Home Assistant"
+  - "ESP32"
+  - "Obsidian"
+  - "Notion"
+  - "Prompt Engineering"
+  - "AI Coding"
+  - "Cursor"
+  - "Copilot"
+  - "Midjourney"
+  - "Stable Diffusion"
+  - "3D Druck"
+  - "Smart Home"
+  - "Lightroom"

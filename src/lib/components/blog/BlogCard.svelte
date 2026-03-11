@@ -70,12 +70,11 @@
 	.card-title {
 		font-family: var(--font-display);
 		font-weight: 400;
-		font-size: 27px;
+		font-size: 30px;
 		color: var(--color-text);
-		line-height: 1.25;
+		line-height: 1.2;
 		letter-spacing: -0.02em;
 		margin: 0;
-		min-height: calc(27px * 1.25 * 3);
 		opacity: 0.95;
 	}
 
