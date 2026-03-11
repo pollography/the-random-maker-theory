@@ -78,6 +78,21 @@ def header(title):
 # Git Operations
 # ============================================================
 
+def cleanup_git_locks():
+    """Verwaiste .lock Files entfernen (z.B. nach Absturz)."""
+    lock_files = [
+        PROJECT_DIR / ".git" / "HEAD.lock",
+        PROJECT_DIR / ".git" / "index.lock",
+    ]
+    for lock in lock_files:
+        if lock.exists():
+            try:
+                lock.unlink()
+                log_warn(f"Lock-File entfernt: {lock.name}")
+            except Exception as e:
+                log_err(f"Lock-File {lock.name} konnte nicht entfernt werden: {e}")
+
+
 def run_git(*args):
     """Git Command ausfuehren, Output zurueckgeben."""
     result = subprocess.run(
@@ -89,6 +104,9 @@ def run_git(*args):
 
 def git_deploy(dry_run=False):
     """Git add, commit, pull --rebase, push."""
+
+    # 0. Lock-Files aufraeumen
+    cleanup_git_locks()
 
     # 1. Status checken
     code, out, _ = run_git("status", "--porcelain")

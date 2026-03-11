@@ -78,8 +78,16 @@
 		background-color: rgba(226, 216, 198, 0.8);
 	}
 
+	:global([data-theme='light']) .logo-text {
+		text-shadow: none;
+	}
+
+	:global([data-theme='light']) .logo:hover .logo-text {
+		text-shadow: 0 0 12px rgba(196, 133, 76, 0.3);
+	}
+
 	.header-inner {
-		max-width: 1024px;
+		max-width: 1152px;
 		margin: 0 auto;
 		padding: 16px 1rem;
 		display: flex;
@@ -102,11 +110,17 @@
 		color: var(--color-accent-honey);
 		letter-spacing: var(--letter-spacing-wide);
 		transition: all var(--transition-normal);
+		text-shadow:
+			0 0 8px rgba(212, 137, 62, 0.3),
+			0 0 20px rgba(212, 137, 62, 0.15);
 	}
 
 	.logo:hover .logo-text {
 		color: var(--color-accent-honey-hover);
-		text-shadow: 0 0 20px var(--color-accent-honey-glow);
+		text-shadow:
+			0 0 10px rgba(212, 137, 62, 0.6),
+			0 0 25px rgba(212, 137, 62, 0.35),
+			0 0 50px rgba(212, 137, 62, 0.15);
 	}
 
 	/* Desktop Nav */

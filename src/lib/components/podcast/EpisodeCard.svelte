@@ -54,13 +54,14 @@
 	}
 
 	.episode-title {
-		font-family: var(--font-sans);
-		font-weight: 600;
+		font-family: var(--font-display);
+		font-weight: 400;
 		font-size: var(--font-size-lg);
 		color: var(--color-text);
 		line-height: var(--line-height-snug);
-		letter-spacing: -0.02em;
+		letter-spacing: -0.01em;
 		margin: 0;
+		font-style: italic;
 		display: -webkit-box;
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;

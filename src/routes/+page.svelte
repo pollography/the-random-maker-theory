@@ -162,13 +162,13 @@
 		The <em class="hero-accent">Random</em> Maker Theory
 	</h1>
 	<p class="hero-subtitle">Content, den ich <em class="hero-accent">selbst</em> lese.</p>
+	<div class="hero-counter" bind:this={counterRef}>
+		<span class="counter-number">{displayCount}</span>
+		<span class="counter-label">Artikel & Episoden online</span>
+	</div>
 	<div class="hero-actions">
 		<a href="/blog" class="btn-honey">Zum Blog</a>
 		<a href="/podcast" class="btn-teal">Zum Hören</a>
-	</div>
-	<div class="hero-counter" bind:this={counterRef}>
-		<span class="counter-number">{displayCount}</span>
-		<span class="counter-label">Artikel online</span>
 	</div>
 	<div class="scroll-hint" class:hidden={scrollY > 100}>
 		<span class="scroll-arrow">↓</span>
@@ -286,13 +286,13 @@
 	/* ── HERO ── */
 	.hero {
 		text-align: center;
-		min-height: 100svh;
+		min-height: 85svh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		padding: 40px 0 80px;
+		padding: 40px 0 60px;
 		margin-top: -56px;
 		padding-top: 56px;
 	}
@@ -404,18 +404,16 @@
 		display: inline-flex;
 		align-items: baseline;
 		gap: 10px;
-		margin-top: 40px;
-		opacity: 0.7;
-		transition: opacity 0.3s ease;
-	}
-
-	.hero-counter:hover {
-		opacity: 1;
+		margin-bottom: 32px;
+		padding: 8px 20px;
+		border: 1px solid rgba(212, 137, 62, 0.2);
+		border-radius: var(--radius-full);
+		background: rgba(212, 137, 62, 0.05);
 	}
 
 	/* ── DISCOVER SECTION (Headline + Text) ── */
 	.discover-section {
-		padding: 80px 0 48px;
+		padding: 32px 0 24px;
 	}
 
 	.discover-inner {
@@ -463,7 +461,7 @@
 
 	/* ── PILLARS (C+D Hybrid: Teal Category + Alternating Colors) ── */
 	.pillars-section {
-		padding: 80px 0 48px;
+		padding: 48px 0;
 	}
 
 	.pillars-list {
@@ -608,7 +606,7 @@
 	}
 
 	/* ── SECTIONS ── */
-	.section { padding: 48px 0; }
+	.section { padding: 48px 0 56px; }
 
 	.section-header {
 		display: flex;
@@ -651,8 +649,7 @@
 
 	/* ── BOTTOM SECTIONS ── */
 	.bottom-sections {
-		padding: 64px 0 48px;
-		margin-top: 32px;
+		padding: 48px 0;
 		display: flex;
 		flex-direction: column;
 		gap: 24px;
@@ -662,6 +659,7 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 24px;
+		align-items: stretch;
 	}
 
 	.bottom-card {
@@ -669,6 +667,8 @@
 		border: 1px solid var(--color-border-subtle);
 		border-radius: var(--radius-xl);
 		padding: 32px;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.bottom-card-header {
@@ -691,15 +691,31 @@
 		padding: 0;
 		background: transparent;
 		border: none;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.newsletter-card-wrap :global(.newsletter-wrap) {
 		margin-top: 0;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.newsletter-card-wrap :global(.newsletter-card) {
-		height: 100%;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		border-radius: var(--radius-xl);
+	}
+
+	/* Podcast card in bottom-grid: volle Hoehe */
+	.bottom-grid .bottom-card :global(.card) {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.faq-card {
@@ -732,10 +748,12 @@
 
 	.video-title {
 		margin: 16px 0 0;
-		font-size: var(--font-size-base);
-		font-weight: var(--font-weight-semibold);
-		color: var(--color-text);
-		line-height: 1.4;
+		font-family: var(--font-display);
+		font-weight: 400;
+		font-size: clamp(18px, 2.5vw, 22px);
+		color: var(--color-accent-honey);
+		line-height: 1.3;
+		font-style: italic;
 	}
 
 	/* ── FAQ SECTION ── */
@@ -836,8 +854,8 @@
 	}
 
 	@media (max-width: 768px) {
-		.hero { min-height: 100svh; padding: 56px 0 60px; margin-top: -56px; }
-		.discover-section { padding: 48px 0 24px; }
+		.hero { min-height: 85svh; padding: 56px 0 40px; margin-top: -56px; }
+		.discover-section { padding: 24px 0 16px; }
 		.bottom-grid { grid-template-columns: 1fr; }
 		.bottom-card { padding: 24px; }
 		.posts-grid { grid-template-columns: 1fr; }
