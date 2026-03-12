@@ -440,6 +440,235 @@
 		margin: 3rem 0;
 	}
 
+	/* ── Visual Breaks (Grain + Gradient Animations) ── */
+
+	/* Animated gradient bar */
+	:global(.prose .vb-gradient) {
+		height: 4px;
+		background: linear-gradient(90deg, var(--color-accent-honey), var(--color-accent-teal), var(--color-accent-honey));
+		background-size: 200% 100%;
+		animation: vb-gradient-shift 8s ease infinite;
+		border-radius: 2px;
+		margin: 3rem 0;
+	}
+
+	@keyframes vb-gradient-shift {
+		0%, 100% { background-position: 0% 50%; }
+		50% { background-position: 100% 50%; }
+	}
+
+	/* Animated glow divider — light travels across */
+	:global(.prose .vb-glow) {
+		position: relative;
+		height: 1px;
+		margin: 3.5rem 0;
+		background: var(--color-border-subtle);
+		overflow: visible;
+	}
+
+	:global(.prose .vb-glow::after) {
+		content: '';
+		position: absolute;
+		top: -2px;
+		left: 0;
+		width: 60px;
+		height: 5px;
+		background: linear-gradient(90deg, var(--color-accent-honey), var(--color-accent-teal));
+		border-radius: 3px;
+		animation: vb-glow-slide 6s ease-in-out infinite;
+		box-shadow: 0 0 15px var(--color-accent-honey-glow), 0 0 30px rgba(212, 137, 62, 0.15);
+	}
+
+	@keyframes vb-glow-slide {
+		0%, 100% { left: 0; }
+		50% { left: calc(100% - 60px); }
+	}
+
+	/* Highlight box with grain texture */
+	:global(.prose .vb-highlight) {
+		position: relative;
+		margin: 3rem 0;
+		padding: 1.75rem 2rem;
+		background: rgba(212, 137, 62, 0.06);
+		border-left: 3px solid var(--color-accent-honey);
+		border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+		overflow: hidden;
+		font-size: 1.0625rem;
+		line-height: 1.7;
+		color: var(--color-text);
+	}
+
+	:global(.prose .vb-highlight::before) {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: var(--grain-image);
+		background-size: 256px 256px;
+		opacity: 0.15;
+		pointer-events: none;
+	}
+
+	:global(.prose .vb-highlight p),
+	:global(.prose .vb-highlight strong) {
+		position: relative;
+		z-index: 1;
+	}
+
+	:global(.prose .vb-highlight p:last-child) {
+		margin-bottom: 0;
+	}
+
+	/* Teal variant */
+	:global(.prose .vb-highlight-teal) {
+		background: rgba(58, 176, 162, 0.06);
+		border-left-color: var(--color-accent-teal);
+	}
+
+	/* Stats callout — big number + text */
+	:global(.prose .vb-stat) {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin: 3rem 0;
+		padding: 2rem;
+		background: linear-gradient(135deg, rgba(212, 137, 62, 0.08), rgba(58, 176, 162, 0.08));
+		border: 1px solid rgba(212, 137, 62, 0.15);
+		border-radius: var(--radius-xl);
+		position: relative;
+		overflow: hidden;
+	}
+
+	:global(.prose .vb-stat::before) {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: var(--grain-image);
+		background-size: 256px 256px;
+		opacity: 0.2;
+		pointer-events: none;
+	}
+
+	:global(.prose .vb-stat-number) {
+		font-family: var(--font-display);
+		font-size: clamp(2.5rem, 5vw, 3.5rem);
+		font-weight: 400;
+		color: var(--color-accent-honey);
+		line-height: 1;
+		position: relative;
+		z-index: 1;
+		flex-shrink: 0;
+	}
+
+	:global(.prose .vb-stat-text) {
+		position: relative;
+		z-index: 1;
+		color: var(--color-text);
+		font-size: 1.0625rem;
+		line-height: 1.6;
+	}
+
+	/* Gradient card — full-width visual break with grain */
+	:global(.prose .vb-card) {
+		position: relative;
+		margin: 3rem 0;
+		padding: 2rem;
+		background: linear-gradient(135deg, rgba(212, 137, 62, 0.04), rgba(58, 176, 162, 0.06), rgba(212, 137, 62, 0.04));
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-xl);
+		overflow: hidden;
+	}
+
+	:global(.prose .vb-card::before) {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: var(--grain-image);
+		background-size: 256px 256px;
+		opacity: 0.2;
+		pointer-events: none;
+	}
+
+	:global(.prose .vb-card p),
+	:global(.prose .vb-card strong),
+	:global(.prose .vb-card h3),
+	:global(.prose .vb-card h4),
+	:global(.prose .vb-card table) {
+		position: relative;
+		z-index: 1;
+	}
+
+	:global(.prose .vb-card h4:first-child) {
+		margin-top: 0;
+	}
+
+	:global(.prose .vb-card p:last-child) {
+		margin-bottom: 0;
+	}
+
+	/* Shimmer border animation */
+	:global(.prose .vb-shimmer) {
+		position: relative;
+		margin: 3rem 0;
+		padding: 2px;
+		border-radius: var(--radius-xl);
+		background: linear-gradient(90deg, var(--color-accent-honey), var(--color-accent-teal), var(--color-accent-honey));
+		background-size: 200% 100%;
+		animation: vb-gradient-shift 6s ease infinite;
+	}
+
+	:global(.prose .vb-shimmer-inner) {
+		background: var(--color-surface);
+		border-radius: calc(var(--radius-xl) - 2px);
+		padding: 1.75rem 2rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	:global(.prose .vb-shimmer-inner::before) {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: var(--grain-image);
+		background-size: 256px 256px;
+		opacity: 0.15;
+		pointer-events: none;
+	}
+
+	:global(.prose .vb-shimmer-inner p),
+	:global(.prose .vb-shimmer-inner strong) {
+		position: relative;
+		z-index: 1;
+	}
+
+	:global(.prose .vb-shimmer-inner p:last-child) {
+		margin-bottom: 0;
+	}
+
+	/* Light mode adjustments for visual breaks */
+	:global([data-theme='light']) :global(.prose .vb-highlight) {
+		background: rgba(212, 137, 62, 0.04);
+	}
+
+	:global([data-theme='light']) :global(.prose .vb-highlight-teal) {
+		background: rgba(58, 176, 162, 0.04);
+	}
+
+	:global([data-theme='light']) :global(.prose .vb-stat) {
+		background: linear-gradient(135deg, rgba(212, 137, 62, 0.05), rgba(58, 176, 162, 0.05));
+		border-color: rgba(212, 137, 62, 0.12);
+	}
+
+	:global([data-theme='light']) :global(.prose .vb-card) {
+		background: linear-gradient(135deg, rgba(212, 137, 62, 0.03), rgba(58, 176, 162, 0.04), rgba(212, 137, 62, 0.03));
+	}
+
+	@media (max-width: 768px) {
+		:global(.prose .vb-stat) {
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
 	.hero-image {
 		margin-bottom: 2.5rem;
 		border-radius: var(--radius-xl);
