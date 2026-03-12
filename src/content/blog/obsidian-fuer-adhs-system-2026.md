@@ -190,7 +190,7 @@ Mein Ansatz ist absichtlich quick and dirty. Aufschreiben. Grob verlinken. Einma
 
 Hier ist mein Daily-Note-Template zum Nachbauen. Du brauchst dafuer die Plugins Periodic Notes und Tasks. Templater ist optional aber empfohlen.
 
-```markdown
+``````markdown
 # {{date:dddd, DD. MMMM YYYY}}
 
 ## Fokus heute
@@ -220,7 +220,7 @@ sort by priority
 
 ---
 *Erstellt: {{date:YYYY-MM-DD HH:mm}}*
-```
+``````
 
 Das Template gibt es auch als fertiges Obsidian-Vault mit allen 4 Plugins vorkonfiguriert in meinem TRMT Template Pack. Spart dir die Einrichtung und du kannst sofort loslegen.
 
