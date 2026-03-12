@@ -1,8 +1,8 @@
 ---
-title: "GPT-5.4, Codex Security, Siri+Gemini: Die groessten AI-Releases im Maerz 2026"
+title: "GPT-5.4, Codex Security, Siri+Gemini: Die grössten AI-Releases im März 2026"
 slug: "ai-releases-maerz-2026"
 date: "2026-03-12"
-description: "GPT-5.4 kann deinen Computer bedienen, Siri wird von Gemini angetrieben und Qwen laeuft offline auf deinem iPhone. Was die AI-Releases im Maerz 2026 fuer Content Creator bedeuten."
+description: "GPT-5.4 kann deinen Computer bedienen, Siri wird von Gemini angetrieben und Qwen läuft offline auf deinem iPhone. Was die AI-Releases im März 2026 für Content Creator bedeuten."
 tags: ["ki-news", "ki-tools", "gpt-5", "siri", "gemini", "qwen"]
 category: "ki-news"
 draft: false
@@ -13,21 +13,23 @@ titleAccent: "AI-Releases"
 keywords: ["AI Releases März 2026", "GPT-5.4", "Siri Gemini", "Codex Security", "Qwen 3.5", "AI Tools 2026"]
 ---
 
-Dein Computer gehorcht jetzt einem Chatbot. Siri hat ein Google-Gehirn. Und ein Modell das auf dein iPhone passt, schlaegt Riesen die 13 Mal groesser sind. Maerz 2026 halt. Der Monat wo "AI als Agent" aufgehoert hat, Marketing-Gelaber zu sein.
+Dein Computer gehorcht jetzt einem Chatbot. Siri hat ein Google-Gehirn. Ein Modell das auf dein iPhone passt, schlägt Riesen die 13 Mal grösser sind. März 2026 halt. Der Monat wo "AI als Agent" aufgehört hat, Marketing-Gelaber zu sein.
 
-Die letzten zwei Wochen waren echt wild. Ich hab quasi alles verfolgt was rauskam und muss sagen: Das ist einer dieser Monate ueber die wir in zwei Jahren noch reden werden. Nicht weil ein einzelnes Ding alles umgeworfen hat. Sondern weil gefuehlt alle gleichzeitig den Schalter umgelegt haben.
+Wild.
 
-Also. Was ist passiert, was davon taugt, und was bedeutet das fuer uns?
+Die letzten zwei Wochen hab ich quasi alles verfolgt was rauskam. Und ich muss sagen: Das ist einer dieser Monate über die wir in zwei Jahren noch reden. Nicht weil ein einzelnes Ding alles umgeworfen hat. Sondern weil gefühlt alle gleichzeitig den Schalter umgelegt haben. Gleichzeitig. Jedes grosse Lab. Als hätten die alle denselben Kalender.
+
+Also. Was ist passiert, was davon taugt, und was bedeutet das für uns?
 
 ## GPT-5.4: Weniger Chatbot, mehr Agent
 
-OpenAI hat am 5. Maerz GPT-5.4 gedroppt. Und wenn du denkst "ach, wieder ein neues Modell"... nein. Das hier ist echt anders.
+OpenAI hat am 5. März GPT-5.4 gedroppt. Wenn du denkst "ach, wieder ein neues Modell"... nein. Das hier ist echt anders.
 
 ### 1 Million Token Context Window
 
-1 Million Token. Klingt erstmal nach ner Zahl fuer Leute die gern Benchmarks lesen. Aber ueberleg mal kurz: Du kannst damit einen ganzen Roman reinwerfen. Den kompletten Quellcode eines mittleren Projekts. Alle E-Mails deines letzten Jahres. Und das Modell verliert halt einfach nicht den Faden.
+1 Million Token. Klingt erstmal nach ner Zahl für Leute die gern Benchmarks lesen. Aber überleg kurz: Du kannst damit einen ganzen Roman reinwerfen. Den kompletten Quellcode eines mittleren Projekts. Alle E-Mails deines letzten Jahres. Das Modell verliert halt einfach nicht den Faden.
 
-Ich hab mit [Claude Code meine ganze Workflow-Maschine gebaut](/blog/claude-code-ultimate-setup-produktivitaet-2026). Das groesste Problem bei sowas war immer, dass der Kontext irgendwann abgebrochen ist. Mitten in der Arbeit. Einfach weg. 1 Million Token loest das.
+Ich hab mit [Claude Code meine ganze Workflow-Maschine gebaut](/blog/claude-code-ultimate-setup-produktivitaet-2026). Das grösste Problem bei sowas war immer, dass der Kontext irgendwann abgebrochen ist. Mitten in der Arbeit. Einfach weg. 1 Million Token löst das.
 
 <div class="vb-stat">
 <span class="vb-stat-number">1M</span>
@@ -36,62 +38,68 @@ Ich hab mit [Claude Code meine ganze Workflow-Maschine gebaut](/blog/claude-code
 
 ### Native Computer Use
 
-Das hat mich ehrlich gesagt am meisten umgehauen. GPT-5.4 kann Screenshots lesen, Mausbewegungen ausfuehren und auf die Tastatur hauen. Direkt. Nativ. Kein fragiles Python-Script dazwischen.
+Das hat mich am meisten umgehauen, ehrlich gesagt. GPT-5.4 kann Screenshots lesen, Mausbewegungen ausführen und auf die Tastatur hauen. Direkt. Nativ. Kein fragiles Python-Script dazwischen.
 
-Ueberleg dir das mal: Du sagst "Geh auf Canva, erstell mir ein Thumbnail fuer diesen Artikel, exportier es und lad es in den Google Drive Ordner rauf." Und es macht das. Schritt fuer Schritt. Eigenstaendig. Kein Witz.
+Überleg dir das mal. Du sagst: "Geh auf Canva, erstell mir ein Thumbnail für diesen Artikel, exportier es und lad es in den Google Drive Ordner rauf." Und es macht das. Schritt für Schritt. Eigenständig.
+
+Kein Witz.
 
 Weniger Chatbot. Mehr Agent.
 
 ### 33% weniger Halluzinationen
 
-OpenAI sagt GPT-5.4 halluziniert 33% weniger als GPT-5.2. Wer mal erlebt hat wie ein LLM mit Vollueberzeugung kompletten Unsinn behauptet... das ist einfach das nervigste Feature ueberhaupt. Ein Drittel weniger davon? Nehm ich.
+OpenAI sagt GPT-5.4 halluziniert 33% weniger als GPT-5.2. Wer mal erlebt hat wie ein LLM mit Vollüberzeugung kompletten Unsinn behauptet... das ist einfach das nervigste Feature überhaupt. Kein Bug, ein Feature. Buchstäblich. Ein Drittel weniger davon? Nehm ich ohne zu zögern.
 
 <div class="vb-glow"></div>
 
 ### Die Zahlen die nachdenklich machen
 
-83% der getesteten Aufgaben schlaegt GPT-5.4 professionelle Arbeiter in 44 Berufen. Harvey Legal AI hat damit 91% auf dem BigLaw Benchmark erreicht.
+83% der getesteten Aufgaben schlägt GPT-5.4 professionelle Arbeiter in 44 Berufen. Harvey Legal AI hat damit 91% auf dem BigLaw Benchmark erreicht.
 
-Ich sag nicht dass Anwaelte arbeitslos werden. Aber Tools die professionelle Qualitaet liefern, gibt es jetzt fuer 2,50 Dollar pro Million Input-Token. Das veraendert halt schon was moeglich ist. Auch fuer Einzelkaempfer wie uns.
+Ohhh maaaan.
+
+Ich sag nicht dass Anwälte jetzt arbeitslos werden. Aber Tools die professionelle Qualität liefern, gibt es jetzt für 2,50 Dollar pro Million Input-Token. Das verändert halt schon was möglich ist. Auch für Einzelkämpfer wie uns.
 
 <div class="vb-highlight">
 
-**Fuer Content Creator konkret:** Tool Search ist auch dabei. Das Modell entscheidet quasi selbst welche Werkzeuge es nutzt. Kombiniert mit Computer Use heisst das: "Recherchiere mir die letzten 5 AI-Releases, schreib eine Zusammenfassung, erstell ein Social Post Image und poste es auf LinkedIn." Ein Satz. Modell plant, handelt, verifiziert.
+**Für Content Creator konkret:** Tool Search ist auch dabei. Das Modell entscheidet quasi selbst welche Werkzeuge es nutzt. Kombiniert mit Computer Use heisst das: "Recherchiere mir die letzten 5 AI-Releases, schreib eine Zusammenfassung, erstell ein Social Post Image und poste es auf LinkedIn." Ein Satz. Modell plant, handelt, verifiziert.
 
 </div>
 
-## OpenAI Codex Security: AI scannt deinen Code auf Luecken
+## OpenAI Codex Security: AI scannt deinen Code auf Lücken
 
-Einen Tag spaeter, 6. Maerz, kam Codex Security. Ein AI-Agent der Repositories nach Sicherheitsluecken durchsucht. Und zwar nicht mit stumpfen Pattern-Matchern.
+Einen Tag später, 6. März, kam Codex Security. Ein AI-Agent der Repositories nach Sicherheitslücken durchsucht. Nicht mit stumpfen Pattern-Matchern.
 
 ### LLM-Reasoning statt Pattern Matching
 
 Klassische Security-Scanner sind halt ziemlich dumb. Die suchen nach bekannten Mustern. SQL Injection hier, Hardcoded Password dort. Reicht nicht mehr.
 
-Codex Security nutzt LLM-Reasoning. Es *versteht* den Code. Es erkennt Luecken die kein Pattern-Matcher finden wuerde, weil sie erst durch die Interaktion mehrerer Teile entstehen. Das ist schon ne andere Hausnummer.
+Codex Security nutzt LLM-Reasoning. Es *versteht* den Code. Erkennt Lücken die kein Pattern-Matcher finden würde, weil sie erst durch die Interaktion mehrerer Teile entstehen. Das ist ne andere Hausnummer, keine Frage.
 
 <div class="vb-stat">
 <span class="vb-stat-number">10.561</span>
 <span class="vb-stat-text">High-Severity Issues in 1,2 Millionen gescannten Commits. 14 CVEs zugewiesen, unter anderem Probleme in OpenSSH, PHP und Chromium.</span>
 </div>
 
+10.561 High-Severity Issues. In echten, produktiven Repos. Kurz sacken lassen.
+
 ### Kleine Fussnote am Rande
 
-Anthropic hatte 14 Tage vorher "Claude Code Security" gelauncht. Wer die [Claude Code Setup-Serie](/blog/claude-code-ultimate-setup-produktivitaet-2026) kennt: Das ist mein Daily Driver. Beide Ansaetze sind gut fuers Ecosystem. Konkurrenz macht beide besser.
+Anthropic hatte 14 Tage vorher "Claude Code Security" gelauncht. Wer die [Claude Code Setup-Serie](/blog/claude-code-ultimate-setup-produktivitaet-2026) kennt: Das ist mein Daily Driver. Beide Ansätze sind gut fürs Ecosystem. Konkurrenz macht beide besser, so läuft das.
 
-Codex Security ist gratis fuer den ersten Monat, fuer ChatGPT Pro, Enterprise, Business und Edu. Danach? Mal sehen.
+Codex Security ist gratis für den ersten Monat, für ChatGPT Pro, Enterprise, Business und Edu. Danach? Mal sehen.
 
 <div class="vb-gradient"></div>
 
 ## Apple Siri + Google Gemini: Das unwahrscheinlichste Paar des Jahres
 
-Haette ich vor zwei Jahren nicht getippt. Ernsthaft. Apple, die Datenschutz-Fraktion, partnert mit Google fuer Siris Gehirn. Und irgendwie macht es trotzdem Sinn.
+Hätte ich vor zwei Jahren nicht getippt. Ernsthaft. Apple, die Datenschutz-Fraktion, partnert mit Google für Siris Gehirn. Und irgendwie macht es trotzdem Sinn.
 
 ### Was iOS 26.4 mitbringt
 
-Ende Maerz kommt iOS 26.4. Siri wird von Google Gemini angetrieben. 1,2 Billionen Parameter. Das Ganze laeuft auf Apples Private Cloud Compute, also Anfragen gehen ueber Apples Infrastruktur. Nicht direkt zu Google. Der Datenschutz-Pitch steht damit irgendwie noch.
+Ende März kommt iOS 26.4. Siri wird von Google Gemini angetrieben. 1,2 Billionen Parameter. Das Ganze läuft auf Apples Private Cloud Compute, also Anfragen gehen über Apples Infrastruktur. Nicht direkt zu Google. Der Datenschutz-Pitch steht damit irgendwie noch, zumindest auf dem Papier.
 
-On-Screen Awareness ist auch dabei. Siri liest deinen Bildschirm. Du hast ne E-Mail offen? Siri weiss das. Du guckst dir Fotos von nem Restaurant an? Siri kann dir Infos dazu geben ohne dass du nochmal was tippst.
+On-Screen Awareness ist auch dabei. Siri liest deinen Bildschirm. Du hast ne E-Mail offen? Siri weiss das. Du guckst dir Fotos von nem Restaurant an? Siri gibt dir Infos dazu, ohne dass du nochmal was tippst.
 
 <div class="vb-shimmer">
 <div class="vb-shimmer-inner">
@@ -101,73 +109,75 @@ On-Screen Awareness ist auch dabei. Siri liest deinen Bildschirm. Du hast ne E-M
 </div>
 </div>
 
-Fuer mich als ADHS-Mensch ist das eigentlich das Beste was passieren konnte. Kennst du das wenn du fuenf verschiedene Apps aufmachst, den Gedanken mittendrin verlierst und dann halt doch nichts gebucht hast? Ja. Das koennte vorbei sein.
+Als ADHS-Mensch ist das eigentlich das Beste was passieren konnte. Kennst du das, wenn du fünf verschiedene Apps aufmachst, den Gedanken mittendrin verlierst und dann halt doch nichts gebucht hast? Das kenn ich definitiv. Das könnte jetzt vorbei sein.
 
 ### Was ich noch nicht weiss
 
-Wie gut ist die deutsche Sprachqualitaet? Wie tief die Integration in Third-Party Apps? Funktioniert das offline? Alles noch unklar. Klaert sich in den naechsten Wochen wenn iOS 26.4 ausgerollt wird.
+Wie gut ist die deutsche Sprachqualität? Wie tief die Integration in Third-Party Apps? Funktioniert das offline? Alles noch unklar. Klärt sich wenn iOS 26.4 ausgerollt wird.
 
 <div class="vb-glow"></div>
 
 ## Google Gemini in Workspace: Dokumente die sich selbst schreiben
 
-Am 11. Maerz hat Google Gemini tief in Workspace reingebaut. Docs, Sheets, Slides, Drive. Alles kriegt ein KI-Gehirn.
+Am 11. März hat Google Gemini tief in Workspace reingebaut. Docs, Sheets, Slides, Drive. Alles kriegt ein KI-Gehirn.
 
-"Ask Gemini in Drive" hat mich am meisten interessiert. Du kannst quer ueber alle deine Google Drive Dokumente Fragen stellen. Nicht ein Dokument. Alle. "Was hat der Kunde letztes Quartal bestellt?" und Gemini durchsucht alle relevanten Dateien und fasst zusammen.
+"Ask Gemini in Drive" hat mich am meisten interessiert. Du kannst quer über alle deine Google Drive Dokumente Fragen stellen. Nicht ein Dokument. Alle. "Was hat der Kunde letztes Quartal bestellt?" und Gemini durchsucht alle relevanten Dateien und fasst zusammen. Klingt simpel. Ist es aber nicht. Wer mal händisch durch 200 Dokumente gewühlt hat um eine Zahl zu finden, weiss was ich mein.
 
-Bei komplexen Projekten wo du hunderte von Dokumenten, E-Mails und Notizen rumliegen hast: Das koennte echt massiv Zeit sparen. Ich bin gespannt ob es in der Praxis so gut ist wie auf der Buehne.
+Bei komplexen Projekten wo du hunderte von Dokumenten, E-Mails und Notizen rumliegen hast: Das könnte echt massiv Zeit sparen. Ich bin gespannt ob es in der Praxis so gut ist wie auf der Bühne.
 
-Verfuegbar fuer Google AI Ultra und Pro Subscriber. Nicht kostenlos, aber auch nicht astronomisch.
+Verfügbar für Google AI Ultra und Pro Subscriber. Nicht kostenlos, aber auch nicht astronomisch.
 
 <div class="vb-gradient"></div>
 
-## Qwen 3.5 Small: Das unterschaetzte Release des Monats
+## Qwen 3.5 Small: Das unterschätzte Release des Monats
 
-Alibabas Qwen 3.5 Small ist vom 1. Maerz. Ich wette die Haelfte der Leute hat das komplett ignoriert. Fehler.
+Alibabas Qwen 3.5 Small ist vom 1. März. Ich wette die Hälfte der Leute hat das komplett ignoriert. Fehler.
 
-### Die Zahlen die eigentlich nicht stimmen koennen
+### Die Zahlen die eigentlich nicht stimmen können
 
-Vier Modelle: 0,8B, 2B, 4B und 9B Parameter. Klingt klein. Ist klein. Aber das 9B-Modell matched GPT-OSS-120B. Ein Modell das 13 Mal kleiner ist liefert dieselbe Performance. Wie bitte?
+Vier Modelle: 0,8B, 2B, 4B und 9B Parameter. Klingt klein. Ist klein. Aber das 9B-Modell matched GPT-OSS-120B.
 
-Das 2B-Modell laeuft auf einem iPhone offline. 4GB RAM. Kein Internet noetig. Einfach so.
+Ein Modell das 13 Mal kleiner ist liefert dieselbe Performance. Whuuuaht the f.
+
+Das 2B-Modell läuft auf einem iPhone offline. 4GB RAM. Kein Internet nötig. Einfach so.
 
 <div class="vb-highlight-teal">
 
-**Warum mich das als Fotograf interessiert:** Ich bin viel auf Locations ohne Internet unterwegs. Berghuetten, abgelegene Outdoor-Spots. Wenn ich dort KI-Assistenz nutzen will, ging das bisher nicht. Mit Qwen 3.5 Small geht das jetzt. Text und Bilder, komplett lokal. Fuer ESP32-Bastler die lokale Home Assistant Setups bauen auch mega spannend. Edge AI, aber halt wirklich.
+**Warum mich das als Fotograf interessiert:** Ich bin viel auf Locations ohne Internet unterwegs. Berghütten, abgelegene Outdoor-Spots. Wenn ich dort KI-Assistenz nutzen will, ging das bisher nicht. Mit Qwen 3.5 Small geht das jetzt. Text und Bilder, komplett lokal. Für ESP32-Bastler die lokale Home Assistant Setups bauen auch mega spannend. Edge AI, aber halt wirklich.
 
 </div>
 
-## Die grosse Uebersicht: Wer steht wo im Maerz 2026
+## Die grosse Übersicht: Wer steht wo im März 2026
 
 <div class="vb-card">
 
 | Modell | Was es kann | Besonders |
 |--------|-------------|-----------|
 | GPT-5.4 | 1M Context, Computer Use, Tool Search | Computer Use nativ |
-| Claude Sonnet 4.6 | Near-Opus Qualitaet, Sonnet-Preis, 1M Context Beta | Preis-Leistung |
-| Claude Opus 4.6 | Staerkstes Reasoning aktuell verfuegbar | Komplexe Aufgaben |
-| Gemini 3.1 Pro | 77,1% ARC-AGI-2 | Benchmark-Koenig |
+| Claude Sonnet 4.6 | Near-Opus Qualität, Sonnet-Preis, 1M Context Beta | Preis-Leistung |
+| Claude Opus 4.6 | Stärkstes Reasoning aktuell verfügbar | Komplexe Aufgaben |
+| Gemini 3.1 Pro | 77,1% ARC-AGI-2 | Benchmark-König |
 | Grok 4.20 | Multi-Agent Reasoning | Komplexe Ketten |
 | Qwen 3.5 Small | GPT-Level offline | Edge AI, Datenschutz |
 
 </div>
 
-Mein Daily Driver bleibt Claude Sonnet 4.6. Die Preis-Leistung ist fuer mich einfach unschlagbar. GPT-5.4 hat mich mit Computer Use echt beeindruckt, aber preislich ist das nochmal ne ganz andere Liga wenn du da intensiv mit arbeitest.
+Mein Daily Driver bleibt Claude Sonnet 4.6. Die Preis-Leistung ist für mich unschlagbar. GPT-5.4 hat mich mit Computer Use echt beeindruckt, aber preislich ist das nochmal ne ganz andere Liga wenn du da intensiv mit arbeitest.
 
 <div class="vb-glow"></div>
 
-## Was sich grad wirklich veraendert
+## Was sich grad wirklich verändert
 
-Im Maerz 2026 sind zwei Sachen gleichzeitig passiert.
+Im März 2026 sind zwei Sachen gleichzeitig passiert.
 
-AI-Modelle hoeren auf, reine Chatbots zu sein. GPT-5.4 Computer Use, Siri Multi-Step Tasks, Codex Security als autonomer Scanner. Das sind alles Agenten. Dinger die eigenstaendig handeln, nicht nur antworten.
+AI-Modelle hören auf, reine Chatbots zu sein. GPT-5.4 Computer Use, Siri Multi-Step Tasks, Codex Security als autonomer Scanner. Das sind alles Agenten. Dinger die eigenständig handeln, nicht nur antworten. Handeln, planen, verifizieren.
 
-Und gleichzeitig: AI laeuft jetzt auf jedem Device. On-Device. Offline. Nicht in der Cloud. Fuer alle die nicht wollen dass jeder Gedanke durch Server von OpenAI oder Google geht. Das ist halt ein komplett anderes Spiel als noch vor drei Monaten.
+Und parallel dazu: AI läuft jetzt auf jedem Device. On-Device. Offline. Nicht in der Cloud. Für alle die nicht wollen dass jeder Gedanke durch Server von OpenAI oder Google geht. Das ist basically ein komplett anderes Spiel als noch vor drei Monaten.
 
 <div class="vb-shimmer">
 <div class="vb-shimmer-inner">
 
-**Was das fuer uns als Content Creator heisst:** Der Aufwand fuer "normale" Tasks geht gegen null. Recherche, erste Drafts, Social Posts, Code-Checks. Was bleibt ist das was nur wir koennen. Die Perspektive. Die Erfahrung. Das Urteil.
+**Was das für uns als Content Creator heisst:** Der Aufwand für "normale" Tasks geht gegen null. Recherche, erste Drafts, Social Posts, Code-Checks. Was bleibt ist das was nur wir können. Die Perspektive. Die Erfahrung. Das Urteil.
 
 </div>
 </div>
@@ -176,11 +186,11 @@ Und gleichzeitig: AI laeuft jetzt auf jedem Device. On-Device. Offline. Nicht in
 
 Drei Sachen, auf die ich konkret gespannt bin:
 
-1. **GPT-5.4 Computer Use fuer meinen Thumbnail-Workflow.** Wenn das Ding wirklich Canva selbst bedienen kann, spar ich mir ne Stunde pro Artikel. Mindestens.
+1. **GPT-5.4 Computer Use für meinen Thumbnail-Workflow.** Wenn das Ding wirklich Canva selbst bedienen kann, spar ich mir ne Stunde pro Artikel. Mindestens.
 
-2. **iOS 26.4 Siri im Alltag.** Wenn "einen Satz sagen und 10 Aktionen passieren" wirklich funktioniert, ist das ein echtes Lebensqualitaets-Upgrade. Grad mit ADHS.
+2. **iOS 26.4 Siri im Alltag.** Wenn "einen Satz sagen und 10 Aktionen passieren" wirklich funktioniert, ist das ein echtes Lebensqualitäts-Upgrade. Grad mit ADHS.
 
-3. **Qwen 3.5 Small auf meinem alten iPad offline.** Hab noch ein iPad Air das ich fast nicht mehr nutz. Wenn ich dort ein lokales 2B-Modell fuer Recherche laufen lassen kann... ja. Das will ich ausprobieren.
+3. **Qwen 3.5 Small auf meinem alten iPad offline.** Hab noch ein iPad Air das ich fast nicht mehr nutz. Wenn ich dort ein lokales 2B-Modell für Recherche laufen lassen kann... ja. Das will ich ausprobieren.
 
 Ich berichte.
 
@@ -188,9 +198,9 @@ Ich berichte.
 
 ## Fazit: Der Monat wo Agenten real wurden
 
-Maerz 2026 ist der Monat wo "AI als Agent" von der Theorie in die Praxis gerutscht ist. GPT-5.4 plant und handelt. Siri koordiniert Apps. Codex Security scannt eigenstaendig. Das ist kein gradueller Fortschritt. Das ist ein Sprung.
+März 2026 ist der Monat wo "AI als Agent" von der Theorie in die Praxis gerutscht ist. GPT-5.4 plant und handelt. Siri koordiniert Apps. Codex Security scannt eigenständig. Das ist kein gradueller Fortschritt. Das ist ein Sprung.
 
-Die Preise sind dabei nicht explodiert. GPT-5.4 kostet 2,50 Dollar pro Million Input-Token. Qwen 3.5 ist open weight. Siri-Gemini kommt einfach mit dem iOS-Update. Das macht AI-Agenten fuer Einzelkaempfer und kleine Teams zugaenglich. Und das ist eigentlich die groesste Nachricht von allen.
+Die Preise sind dabei nicht explodiert. GPT-5.4 kostet 2,50 Dollar pro Million Input-Token. Qwen 3.5 ist open weight. Siri-Gemini kommt einfach mit dem iOS-Update. Das macht AI-Agenten für Einzelkämpfer und kleine Teams zugänglich. Und das ist eigentlich die grösste Nachricht von allen.
 
 Bleib fokussiert. Oder versuch's zumindest.
 

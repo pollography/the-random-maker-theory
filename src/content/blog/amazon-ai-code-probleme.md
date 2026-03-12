@@ -2,7 +2,7 @@
 title: "Amazons AI Code Probleme: 6 Stunden Down"
 slug: "amazon-ai-code-probleme"
 date: "2026-03-12"
-description: "Amazon hatte 6h Outage wegen KI-generiertem Code. Ich nutz Claude Code taeglich, hier ist was das fuer uns bedeutet und was ich jetzt anders mache."
+description: "Amazon hatte 6h Outage wegen KI-generiertem Code. Ich nutz Claude Code täglich, hier ist was das für uns bedeutet und was ich jetzt anders mache."
 tags: ["ki-news", "ki-tools", "automation", "coding", "claude-code"]
 category: "ki-news"
 draft: false
@@ -13,24 +13,26 @@ titleAccent: "AI Code"
 keywords: ["AI Code Probleme", "Amazon Outage", "KI Code Review", "AI Coding"]
 ---
 
-Ein AI-Agent hat eine AWS-Produktionsumgebung geloescht. Einfach so. Ohne Rueckfrage. 13 Stunden Outage in China. Und das war nicht mal der groesste Vorfall.
+Ein AI-Agent hat eine AWS-Produktionsumgebung gelöscht. Einfach so. Ohne Rückfrage. 13 Stunden Outage in China. Ja, leck mich fett.
 
-Amazon. Die Firma mit mehr Engineers als manche Staedte Einwohner haben. Hat sich mit KI-generiertem Code mehrfach ins eigene Knie geschossen. Innerhalb von weniger als einem Jahr. Und ich sitz hier, arbeite jeden Tag mit Claude Code und denke mir: oh.
+Und das war nicht mal der grösste Vorfall.
+
+Amazon. Die Firma mit mehr Engineers als manche Städte Einwohner haben. Hat sich mit KI-generiertem Code mehrfach ins eigene Knie geschossen. Innerhalb von weniger als einem Jahr. Und ich sitz hier, arbeite jeden Tag mit Claude Code, und denke mir: oh.
 
 ## Was genau passiert ist
 
-Am 5. Maerz 2026 war Amazon Shopping fuer circa 6 Stunden teilweise oder komplett nicht erreichbar. Checkout kaputt. Login kaputt. Preisanzeigen. Amazon Fresh. Alles.
+Am 5. März 2026 war Amazon Shopping für circa 6 Stunden teilweise oder komplett nicht erreichbar. Checkout kaputt. Login kaputt. Preisanzeigen. Amazon Fresh. Alles weg.
 
-In einem internen Briefing das danach geleakt wurde, spricht Amazon von einem "Trend of Incidents" mit "high blast radius". Und diese Incidents seien direkt oder indirekt mit "GenAI-assisted changes" verknuepft. Also mit KI-generiertem Code.
+In einem internen Briefing das danach geleakt wurde, spricht Amazon von einem "Trend of Incidents" mit "high blast radius". Diese Incidents seien direkt oder indirekt mit "GenAI-assisted changes" verknüpft. Also mit KI-generiertem Code. Ihrem eigenen.
 
 <div class="vb-stat">
 <span class="vb-stat-number">6h</span>
 <span class="vb-stat-text">Amazon komplett down. Checkout, Login, Preise, Fresh, alles. Ursache laut internem Briefing: KI-generierter Code mit "high blast radius".</span>
 </div>
 
-Und es hoert nicht da auf. Amazon hatte bereits Ende 2025 mehrere Vorfaelle mit "Amazon Q Developer", ihrem eigenen internen AI-Coding-Tool. Dann im Dezember 2025 der Knaller: Amazons AI-Agent "Kiro" hat autonom eine AWS Cost Explorer Umgebung geloescht. Nicht "fast geloescht". Komplett weg. 13 Stunden Outage in der China-Region.
+Und da hört's nicht auf. Amazon hatte bereits Ende 2025 mehrere Vorfälle mit "Amazon Q Developer", ihrem eigenen internen AI-Coding-Tool. Dann im Dezember 2025 der eigentliche Knaller: Amazons AI-Agent "Kiro" hat autonom eine AWS Cost Explorer Umgebung gelöscht. Nicht "fast gelöscht". Komplett weg. 13 Stunden Outage in der China-Region.
 
-Lass das mal sacken. Ein AI-Agent hat eigenstaendig eine Produktionsumgebung entfernt. Ohne dass ein Mensch "ja" gesagt haette.
+Kurz sacken lassen. Ein AI-Agent hat eigenständig eine Produktionsumgebung entfernt. Ohne dass ein Mensch "ja" gesagt hätte. Wild.
 
 Das war mindestens der 4. grosse Vorfall in Amazons AI-Coding Rollout. Der vierte. In weniger als einem Jahr.
 
@@ -38,19 +40,19 @@ Das war mindestens der 4. grosse Vorfall in Amazons AI-Coding Rollout. Der viert
 
 ## Die offizielle vs. die echte Story
 
-Jetzt wird es spannend. Amazon sagt oeffentlich: "Keine Evidenz dass AI-Tools mehr Incidents verursachen als andere Code-Changes."
+Amazon sagt öffentlich: "Keine Evidenz dass AI-Tools mehr Incidents verursachen als andere Code-Changes."
 
-Aber. Das interne Briefing sagt gleichzeitig: "Novel GenAI usage for which best practices and safeguards are not yet fully established."
+Das interne Briefing sagt gleichzeitig: "Novel GenAI usage for which best practices and safeguards are not yet fully established."
 
-Beides ist halt irgendwie wahr. Und widerspricht sich trotzdem. "Wir haben keine Evidenz" kann auch einfach heissen: Wir tracken das noch nicht gut genug. Und "best practices not established" ist basically Amazon-Sprache fuer: Wir machen das auf Verdacht und hoffen.
+Beides ist halt irgendwie wahr, und widerspricht sich trotzdem. "Wir haben keine Evidenz" kann auch einfach heissen: Wir tracken das noch nicht gut genug. Und "best practices not established" ist basically Amazon-Sprache für: Wir machen das auf Verdacht und hoffen dass nichts brennt.
 
 <div class="vb-highlight">
 
-**Amazons Reaktion:** Junior- und Mid-Level-Devs brauchen ab sofort Senior-Approval fuer KI-generierten Code bevor er in Production geht. Gleichzeitig plant Amazon Entlassungen. Mehr menschliche Kontrolle mit weniger Menschen. Die Logik erschliesst sich mir ehrlich gesagt nicht.
+**Amazons Reaktion:** Junior- und Mid-Level-Devs brauchen ab sofort Senior-Approval für KI-generierten Code bevor er in Production geht. Gleichzeitig plant Amazon Entlassungen. Mehr menschliche Kontrolle mit weniger Menschen. Die Logik erschliesst sich mir ehrlich gesagt nicht.
 
 </div>
 
-Was sie jetzt konkret tun klingt sinnvoll. In der Theorie halt. In der Praxis rubber-stampt ein Senior Dev der 20 AI-generierte PRs am Tag reviewen soll spaetestens nach Woche 2 durch. Das Problem ist systemisch. Das loest du nicht mit ner neuen Approval-Stufe.
+Was sie konkret tun klingt sinnvoll. In der Theorie. In der Praxis rubber-stampt ein Senior Dev der 20 AI-generierte PRs am Tag reviewen soll spätestens nach Woche 2 durch. Das Problem ist systemisch. Das löst du nicht mit ner neuen Approval-Stufe.
 
 Elon Musk hat auf X kommentiert: "Proceed with caution." Der Mann der mit Tesla und SpaceX quasi alles auf Automatisierung setzt. Wenn der bremst... hm.
 
@@ -58,51 +60,51 @@ Elon Musk hat auf X kommentiert: "Proceed with caution." Der Mann der mit Tesla 
 
 ## Warum das bei Amazon passiert
 
-Amazon hat intern massiv auf AI-Coding gesetzt. Verstaendlich: zehntausende Engineers, Codebasen die seit 20 Jahren gewachsen sind, AI-Tools die Velocity versprechen. Wer will da nein sagen?
+Amazon hat intern massiv auf AI-Coding gesetzt. Verständlich: zehntausende Engineers, Codebasen die seit 20 Jahren gewachsen sind, AI-Tools die Velocity versprechen. Wer will da nein sagen?
 
-Das Problem liegt halt im Gap. Zwischen "AI schreibt Code der kompiliert" und "AI versteht was dieser Code im Kontext eines verteilten Systems mit echten Usern und echten Daten macht."
+Das Problem liegt im Gap. Zwischen "AI schreibt Code der kompiliert" und "AI versteht was dieser Code im Kontext eines verteilten Systems mit echten Usern und echten Daten macht." Dieser Gap ist riesig. Und meistens unsichtbar bis er knallt.
 
-AI-Code hat ein ganz spezifisches Problem. Lokal korrekt, global falsch. Das Modell loest das Problem das du ihm beschreibst. Was sonst noch an diesem System haengt, weiss es nicht. Welcher Service auf diese Umgebung angewiesen ist. Welcher Cronjob nachts um 3 diese Tabelle liest. Das weisst du. Oder solltest es zumindest.
+AI-Code hat ein ganz spezifisches Problem: lokal korrekt, global falsch. Das Modell löst das Problem das du ihm beschreibst. Was sonst noch an diesem System hängt, weiss es nicht. Welcher Service auf diese Umgebung angewiesen ist. Welcher Cronjob nachts um 3 diese Tabelle liest. Das weisst du. Oder solltest es zumindest.
 
 <div class="vb-shimmer">
 <div class="vb-shimmer-inner">
 
-**Das Kernproblem in einem Satz:** AI-Code ist lokal korrekt, global falsch. Das Modell loest das Problem das du ihm gibst. Alles drumherum, Services, Dependencies, Cronjobs, existiert fuer das Modell schlicht nicht.
+**Das Kernproblem in einem Satz:** AI-Code ist lokal korrekt, global falsch. Das Modell löst das Problem das du ihm gibst. Alles drumherum, Services, Dependencies, Cronjobs, existiert für das Modell schlicht nicht.
 
 </div>
 </div>
 
-### Drei Typen von AI Code Problemen die ich selber kenne
+### Drei Typen von AI Code Problemen die ich selber kenn
 
 **Problem 1: Der confident wrong output.** AI schreibt Code der logisch aussieht, sauber strukturiert, gut kommentiert. Und fundamental falsch ist, weil ein Requirement falsch kommuniziert wurde. Hatte ich schon. Kein Drama wenn du reviewst. Katastrophe wenn du blind deployst.
 
-**Problem 2: Der Scope Creep durch Autonomie.** Kiro hat ne Umgebung geloescht weil es die Aufgabe hatte "Cost Explorer aufzuraeumen" oder so aehnlich. Das Modell hat das Problem geloest das es verstand. Ob Loeschen die richtige Interpretation von "aufraeumen" ist? Hat es halt nicht gefragt. Autonome Agents werden sofort gefaehrlich sobald sie Delete-Permissions haben.
+**Problem 2: Der Scope Creep durch Autonomie.** Kiro hat ne Umgebung gelöscht weil es die Aufgabe hatte "Cost Explorer aufzuräumen" oder so ähnlich. Das Modell hat das Problem gelöst das es verstand. Ob Löschen die richtige Interpretation von "aufräumen" ist? Hat es halt nicht gefragt. Ohhh maaaan. Autonome Agents werden sofort gefährlich sobald sie Delete-Permissions haben.
 
-**Problem 3: Senior Dev als Bottleneck-Theater.** Amazons Loesung klingt erstmal sinnvoll. Mehr Approval. In der Praxis rubber-stampen ueberlastete Senior Devs spaetestens nach Woche 2 alles durch. Das ist halt Theater.
+**Problem 3: Senior Dev als Bottleneck-Theater.** Amazons Lösung klingt erstmal sinnvoll. Mehr Approval. In der Praxis rubber-stampen überlastete Senior Devs spätestens nach Woche 2 alles durch. Das ist halt Theater.
 
 <div class="vb-glow"></div>
 
-## Was ich konkret anders mache
+## Was ich konkret anders mach
 
-Ich nutz Claude Code fuer meine eigenen Projekte: [diesen Blog](/blog/claude-code-ultimate-setup-produktivitaet-2026), Automations, kleinere Tools. Kein Production-System mit tausenden Usern. Aber trotzdem hab ich nach dem Amazon-Ding meinen Workflow kurz ueberpruefen muessen.
+Ich nutz Claude Code für meine eigenen Projekte: [diesen Blog](/blog/claude-code-ultimate-setup-produktivitaet-2026), Automations, kleinere Tools. Kein Production-System mit tausenden Usern. Aber trotzdem hab ich nach dem Amazon-Ding meinen Workflow kurz überprüft.
 
 <div class="vb-card">
 
-#### Meine 4 Regeln fuer AI-Code
+#### Meine 4 Regeln für AI-Code
 
-**Jeden Output lesen.** Claude schreibt Code fast schneller als ich lesen kann. Das verleitet krass zum Scrollen und Nicken. Ich force mich dazu jeden geaenderten Block wirklich zu lesen. Jeden einzelnen.
+**Jeden Output lesen.** Claude schreibt Code fast schneller als ich lesen kann. Das verleitet krass zum Scrollen und Nicken. Ich force mich dazu jeden geänderten Block wirklich zu lesen. Jeden einzelnen.
 
-**Keine Delete-Permissions fuer AI.** Nie. Nicht in Skripten, nicht in Agents, nicht in Automations. Wenn etwas geloescht werden soll, schreib ich den Delete-Command selber. Keine Faulheit. Grundhygiene.
+**Keine Delete-Permissions für AI.** Nie. Nicht in Skripten, nicht in Agents, nicht in Automations. Wenn etwas gelöscht werden soll, schreib ich den Delete-Command selber. Keine Faulheit. Grundhygiene.
 
-**Kontext rein, nicht nur Task.** Ich sag nicht "bau mir eine Funktion die X macht". Ich sag: Hier ist der Kontext, hier ist was drumherum haengt, hier ist was dieser Code NICHT anfassen darf. Kostet 2 Minuten mehr. Spart dir Stunden Recovery.
+**Kontext rein, nicht nur Task.** Ich sag nicht "bau mir eine Funktion die X macht". Ich sag: Hier ist der Kontext, hier ist was drumherum hängt, hier ist was dieser Code NICHT anfassen darf. Kostet 2 Minuten mehr. Spart dir Stunden Recovery.
 
-**Kleiner Scope, haeufiges Commit.** Lieber 10 kleine Changes die ich einzeln verstehe als ein fetter PR mit 400 geaenderten Zeilen. Gilt fuer AI-Code noch mehr als fuer handgeschriebenen.
+**Kleiner Scope, häufiges Commit.** Lieber 10 kleine Changes die ich einzeln verstehe als ein fetter PR mit 400 geänderten Zeilen. Gilt für AI-Code noch mehr als für handgeschriebenen.
 
 </div>
 
 ## Das eigentliche Problem: Velocity als einzige Metrik
 
-Amazon, und ehrlich gesagt die gesamte Tech-Branche, hat AI-Coding hauptsaechlich als Velocity-Problem gesehen. Schneller deployen. Mehr Features. Weniger Kosten.
+Amazon, und ehrlich gesagt die gesamte Tech-Branche, hat AI-Coding hauptsächlich als Velocity-Problem gesehen. Schneller deployen. Mehr Features. Weniger Kosten. Immer schneller, immer mehr.
 
 <div class="vb-highlight-teal">
 
@@ -110,23 +112,23 @@ Amazon, und ehrlich gesagt die gesamte Tech-Branche, hat AI-Coding hauptsaechlic
 
 </div>
 
-Klingt konservativ. Ist aber kein Widerspruch zu "maximal AI nutzen". Ich koennte ohne Claude Code nicht mehr so produktiv arbeiten. Aber "nutzen" heisst halt nicht "vertrauen ohne nachzufragen."
+Klingt konservativ. Ist aber kein Widerspruch zu "maximal AI nutzen". Ich könnte ohne Claude Code nicht mehr so produktiv arbeiten. Aber "nutzen" heisst halt nicht "vertrauen ohne nachzufragen."
 
 <div class="vb-gradient"></div>
 
-## Was wird sich aendern
+## Was wird sich ändern
 
 Kurzfristig: mehr Approval-Gates. Reflexartig. Hilft begrenzt.
 
-Was wirklich kommen muss ist besseres Tooling fuer AI-Code-Tracing. Ich will wissen koennen welche Zeile in einem File ein Modell geschrieben hat, wann, mit welchem Prompt. Nicht als Schuldzuweisung. Als Debugging-Hilfe. Gibt es noch nicht wirklich.
+Was wirklich kommen muss ist besseres Tooling für AI-Code-Tracing. Ich will wissen können welche Zeile in einem File ein Modell geschrieben hat, wann, mit welchem Prompt. Nicht als Schuldzuweisung, sondern als Debugging-Hilfe. Gibt es noch nicht wirklich.
 
-Und Unternehmen muessen lernen Agent-Permissions granularer zu denken. Read-only Agents hier, Write-only in Sandboxes dort, Delete niemals autonom. Klingt offensichtlich. Hat Amazon aber halt nicht implementiert.
+Unternehmen müssen lernen Agent-Permissions granularer zu denken: Read-only Agents hier, Write-only in Sandboxes dort, Delete niemals autonom. Klingt offensichtlich. Hat Amazon aber halt nicht implementiert.
 
-Der Elefant im Raum: Amazons eigene AI-Tools haben Amazons eigene Systeme kaputt gemacht. Selbst die Unternehmen die diese Tools bauen verstehen nicht vollstaendig was ihre Tools tun wenn man ihnen genuegend Rechte gibt. Das sollte allen zu denken geben.
+Der Elefant im Raum ist eigentlich krass: Amazons eigene AI-Tools haben Amazons eigene Systeme kaputt gemacht. Selbst die Unternehmen die diese Tools bauen verstehen nicht vollständig was ihre Tools tun wenn man ihnen genug Rechte gibt. Das sollte zu denken geben.
 
 ---
 
-Ich hoer nicht auf Claude Code zu nutzen. Waer albern. Aber ich nutz es wie ein scharfes Messer. Mit Respekt vor dem was es anrichten kann.
+Ich hör nicht auf Claude Code zu nutzen. Wär albern. Aber ich nutz es wie ein scharfes Messer, mit Respekt vor dem was es anrichten kann.
 
 Amazon hat das auf die harte Tour gelernt. Muss ja nicht jeder so machen.
 
