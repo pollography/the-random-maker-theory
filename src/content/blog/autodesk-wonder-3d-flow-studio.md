@@ -5,7 +5,7 @@ date: "2026-03-15"
 description: "Autodesk integriert Wonder 3D in Flow Studio — Text-to-3D und Image-to-3D direkt im Browser. Was das Tool kann, was es kostet und fuer wen es sich lohnt."
 tags: ["ki-tools", "tools", "news", "3d-druck", "maker", "vergleich"]
 category: "ki-tools"
-draft: false
+draft: true
 readingTime: 12
 heroImage: "/images/blog/autodesk-wonder-3d-flow-studio-1.webp"
 heroImageThumb: "/images/blog/autodesk-wonder-3d-flow-studio-1-thumb.webp"
