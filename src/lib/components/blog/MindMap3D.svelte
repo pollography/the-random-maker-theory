@@ -17,8 +17,9 @@
 		let dragging = false;
 		let lastMouse = { x: 0, y: 0 };
 		let hoveredIdx = -1;
+		let prevHoveredIdx = -1;
 
-		// ── Build flat node + link lists from tree ──────────────────────────────
+		// ── Build flat node + link lists ─────────────────────────────────────────
 		const nodes = [];
 		const links = [];
 
@@ -36,7 +37,7 @@
 			}
 
 			nodes.push({ idx, name: node.name, depth, parentIdx, x, y, z, px: 0, py: 0, ps: 1 });
-			if (parentIdx >= 0) links.push({ from: parentIdx, to: idx, depth: depth - 1 });
+			if (parentIdx >= 0) links.push({ from: parentIdx, to: idx, depth: depth - 1, pulses: [] });
 
 			if (node.children?.length) {
 				const n = node.children.length;
@@ -58,7 +59,18 @@
 			n.z = 160 * Math.sin(theta);
 		});
 
-		// ── Projection ──────────────────────────────────────────────────────────
+		// ── Particles (screen-space, 2D) ─────────────────────────────────────────
+		const PARTICLE_COUNT = 110;
+		const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+			x: (Math.random() - 0.5) * 800,
+			y: (Math.random() - 0.5) * 500,
+			vx: (Math.random() - 0.5) * 0.3,
+			vy: (Math.random() - 0.5) * 0.3,
+			r: Math.random() * 1.4 + 0.4,
+			baseAlpha: Math.random() * 0.25 + 0.05,
+		}));
+
+		// ── Projection ───────────────────────────────────────────────────────────
 		function project(x, y, z) {
 			const cy = Math.cos(rotY), sy = Math.sin(rotY);
 			const cx2 = Math.cos(rotX), sx = Math.sin(rotX);
@@ -71,9 +83,38 @@
 			return { sx: x1 * s * zoom, sy: y1 * s * zoom, z: z2, s };
 		}
 
+		// ── Pulse helpers ────────────────────────────────────────────────────────
+		function spawnPulse(fromIdx, toIdx, reverse = false) {
+			const link = links.find(l =>
+				reverse ? (l.from === toIdx && l.to === fromIdx) || (l.from === fromIdx && l.to === toIdx)
+					: l.from === fromIdx && l.to === toIdx
+			);
+			if (!link) return;
+			if (link.pulses.length >= 2) return; // max 2 per link
+			link.pulses.push({
+				t: 0,
+				speed: 0.004 + Math.random() * 0.002, // slow: ~200-250 frames
+				reverse,
+			});
+		}
+
+		function triggerPulseCascade(fromIdx, depth = 0) {
+			if (depth > 2) return;
+			links.filter(l => l.from === fromIdx).forEach(l => {
+				spawnPulse(fromIdx, l.to);
+				setTimeout(() => triggerPulseCascade(l.to, depth + 1), 300 + depth * 200);
+			});
+			// Also animate upward to parent
+			const node = nodes[fromIdx];
+			if (node && node.parentIdx >= 0) {
+				spawnPulse(fromIdx, node.parentIdx);
+			}
+		}
+
 		// ── Color helpers ────────────────────────────────────────────────────────
 		const NODE_COLORS = ['#d4893e', '#3ab0a2', 'rgba(255,255,255,0.9)', 'rgba(255,255,255,0.55)'];
 		const LINK_COLORS = ['rgba(212,137,62,', 'rgba(58,176,162,', 'rgba(255,255,255,'];
+		const PULSE_COLORS = ['rgba(255,200,120,', 'rgba(100,230,210,', 'rgba(255,255,255,'];
 
 		// ── Draw ─────────────────────────────────────────────────────────────────
 		function draw() {
@@ -87,9 +128,57 @@
 			// Auto rotate
 			if (isAutoRotating && !dragging) rotY += 0.004;
 
-			// Clear with slight fade for motion trail effect
+			// Clear
 			ctx.fillStyle = '#0d0d0d';
 			ctx.fillRect(0, 0, W, H);
+
+			// ── Particles ──
+			const hovNode = hoveredIdx >= 0 ? nodes[hoveredIdx] : null;
+			const targetX = hovNode ? hovNode.px - cx : null;
+			const targetY = hovNode ? hovNode.py - cy2 : null;
+
+			for (const p of particles) {
+				if (hovNode !== null) {
+					// Attract toward hovered node (gentle)
+					const dx = targetX - p.x;
+					const dy = targetY - p.y;
+					const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+					const force = Math.min(1.2, 60 / dist);
+					p.vx += (dx / dist) * force * 0.018;
+					p.vy += (dy / dist) * force * 0.018;
+					p.vx *= 0.92;
+					p.vy *= 0.92;
+				} else {
+					// Gentle drift
+					p.vx += (Math.random() - 0.5) * 0.015;
+					p.vy += (Math.random() - 0.5) * 0.015;
+					p.vx *= 0.98;
+					p.vy *= 0.98;
+				}
+				p.x += p.vx;
+				p.y += p.vy;
+
+				// Soft boundary bounce
+				const bx = W * 0.52, by = H * 0.52;
+				if (Math.abs(p.x) > bx) p.vx *= -0.6;
+				if (Math.abs(p.y) > by) p.vy *= -0.6;
+				p.x = Math.max(-bx, Math.min(bx, p.x));
+				p.y = Math.max(-by, Math.min(by, p.y));
+
+				// Alpha: brighter near hovered node
+				let alpha = p.baseAlpha;
+				if (hovNode !== null) {
+					const d = Math.sqrt((p.x - targetX) ** 2 + (p.y - targetY) ** 2);
+					if (d < 80) alpha = Math.min(0.7, alpha + (1 - d / 80) * 0.55);
+				}
+
+				ctx.beginPath();
+				ctx.arc(cx + p.x, cy2 + p.y, p.r, 0, Math.PI * 2);
+				ctx.fillStyle = hovNode
+					? `rgba(58,176,162,${alpha})`
+					: `rgba(255,255,255,${alpha})`;
+				ctx.fill();
+			}
 
 			// Project all nodes
 			const proj = nodes.map((n) => {
@@ -97,7 +186,7 @@
 				return { ...n, ...p };
 			});
 
-			// Draw links (sorted back to front)
+			// ── Links (sorted back to front) ──
 			const sortedLinks = [...links].sort(
 				(a, b) => (proj[a.from].z + proj[a.to].z) / 2 - (proj[b.from].z + proj[b.to].z) / 2
 			);
@@ -108,18 +197,46 @@
 				const alpha = Math.min(0.7, ((f.s + t.s) / 2) * 0.9);
 				const isHovered = hoveredIdx === link.from || hoveredIdx === link.to;
 
+				// Base line
 				ctx.beginPath();
 				ctx.moveTo(cx + f.sx, cy2 + f.sy);
 				ctx.lineTo(cx + t.sx, cy2 + t.sy);
 				ctx.strokeStyle =
 					(LINK_COLORS[Math.min(link.depth, 2)] || LINK_COLORS[2]) +
-					(isHovered ? Math.min(1, alpha * 2.5) : alpha) +
-					')';
+					(isHovered ? Math.min(1, alpha * 2.5) : alpha) + ')';
 				ctx.lineWidth = isHovered ? 2 : link.depth === 0 ? 1.5 : 1;
 				ctx.stroke();
+
+				// ── Pulses along this link ──
+				link.pulses = link.pulses.filter(p => p.t <= 1);
+				for (const pulse of link.pulses) {
+					pulse.t = Math.min(1, pulse.t + pulse.speed);
+					const pt = pulse.reverse ? 1 - pulse.t : pulse.t;
+					const px = (cx + f.sx) + ((cx + t.sx) - (cx + f.sx)) * pt;
+					const py = (cy2 + f.sy) + ((cy2 + t.sy) - (cy2 + f.sy)) * pt;
+
+					// Glow trail
+					const pulseColor = PULSE_COLORS[Math.min(link.depth, 2)];
+					const trailAlpha = (1 - Math.abs(pulse.t - 0.5) * 2) * 0.7;
+					const glowR = 7 * Math.max(0.4, (f.s + t.s) / 2);
+					const grad = ctx.createRadialGradient(px, py, 0, px, py, glowR);
+					grad.addColorStop(0, pulseColor + '0.9)');
+					grad.addColorStop(0.4, pulseColor + `${trailAlpha * 0.5})`);
+					grad.addColorStop(1, 'transparent');
+					ctx.beginPath();
+					ctx.arc(px, py, glowR, 0, Math.PI * 2);
+					ctx.fillStyle = grad;
+					ctx.fill();
+
+					// Bright core dot
+					ctx.beginPath();
+					ctx.arc(px, py, 2 * Math.max(0.5, (f.s + t.s) / 2), 0, Math.PI * 2);
+					ctx.fillStyle = 'rgba(255,255,255,0.9)';
+					ctx.fill();
+				}
 			}
 
-			// Draw nodes (sorted back to front)
+			// ── Nodes (sorted back to front) ──
 			const sortedNodes = [...proj].sort((a, b) => a.z - b.z);
 
 			for (const n of sortedNodes) {
@@ -221,10 +338,17 @@
 					break;
 				}
 			}
+			// Spawn pulse on new hover
+			if (hoveredIdx !== prevHoveredIdx && hoveredIdx >= 0) {
+				triggerPulseCascade(hoveredIdx);
+			}
+			prevHoveredIdx = hoveredIdx;
 		});
 
 		canvas.addEventListener('mouseup', () => { dragging = false; });
-		canvas.addEventListener('mouseleave', () => { dragging = false; hoveredIdx = -1; hoveredName = ''; });
+		canvas.addEventListener('mouseleave', () => {
+			dragging = false; hoveredIdx = -1; hoveredName = ''; prevHoveredIdx = -1;
+		});
 
 		canvas.addEventListener('wheel', (e) => {
 			e.preventDefault();
@@ -234,6 +358,16 @@
 
 		canvas.addEventListener('dblclick', () => {
 			isAutoRotating = !isAutoRotating;
+		});
+
+		// Click: pulse burst from clicked node
+		canvas.addEventListener('click', () => {
+			if (hoveredIdx >= 0) {
+				// Spawn pulses on all adjacent links
+				links.filter(l => l.from === hoveredIdx || l.to === hoveredIdx).forEach(l => {
+					l.pulses.push({ t: 0, speed: 0.005 + Math.random() * 0.002, reverse: l.to === hoveredIdx });
+				});
+			}
 		});
 
 		// Touch
