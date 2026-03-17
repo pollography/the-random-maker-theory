@@ -3,7 +3,17 @@ title: "ESP32 + Home Assistant: Dein erster Sensor in 30 Minuten"
 slug: "esp32-home-assistant-erster-sensor-2026"
 date: "2026-03-17"
 description: "ESP32 + ESPHome + Home Assistant: Eigenen Temperatursensor bauen fuer 15 Euro. Schritt-fuer-Schritt ohne Coding. YAML-Config zum Kopieren."
-tags: ["esp32", "home-assistant", "esphome", "smart-home", "maker", "tutorial", "anfaenger", "diy"]
+tags:
+  [
+    "esp32",
+    "home-assistant",
+    "esphome",
+    "smart-home",
+    "maker",
+    "tutorial",
+    "anfaenger",
+    "diy",
+  ]
 category: "maker-projekt"
 draft: false
 readingTime: 11
@@ -14,6 +24,12 @@ podcastSlug: "007-esp32-home-assistant-erster-sensor-2026"
 podcastUrl: ""
 videoUrl: ""
 ---
+
+<script>
+  import MindMap3D from '$lib/components/blog/MindMap3D.svelte';
+
+  const mindMapData = {"name":"Home Assistant 2025.12 & ESPHome","children":[{"name":"Home Assistant 2025.12 Release","children":[{"name":"Home Assistant Labs","children":[{"name":"Winter Mode (Snowflakes)"},{"name":"Feature Previews"}]},{"name":"Automations","children":[{"name":"Purpose-specific Triggers"},{"name":"Purpose-specific Conditions"},{"name":"Target-first Approach"},{"name":"Floor and Area Support"}]},{"name":"Dashboards","children":[{"name":"System-wide Default Dashboard"},{"name":"Manual Reorder Areas/Floors"},{"name":"Undo/Redo in Editor"},{"name":"Home Dashboard Improvements"}]},{"name":"Energy Dashboard","children":[{"name":"Real-time Power Monitoring"},{"name":"Downstream Water Meters"},{"name":"Water Sankey Card"}]},{"name":"New Integrations","children":[{"name":"Google Air Quality"},{"name":"Philips Hue BLE"},{"name":"Airobot"},{"name":"Victron BLE"}]}]},{"name":"ESPHome & Hardware","children":[{"name":"ESP32 Support","children":[{"name":"ESP32-C3 Super Mini"},{"name":"ESP32-C6 (Wi-Fi 6/Thread)"},{"name":"ESP32-H2 (RISC-V)"},{"name":"ESP32-P4 (High Performance)"}]},{"name":"Frameworks","children":[{"name":"ESP-IDF v5.3.2"},{"name":"Arduino Migration"},{"name":"Python 3.10 Requirement"}]},{"name":"Sensors","children":[{"name":"BME280","children":[{"name":"I2C/SPI Interface"},{"name":"Temp/Pressure/Humidity"},{"name":"Oversampling Options"}]},{"name":"DHT22","children":[{"name":"Pull-up Resistor Needed"},{"name":"Temp/Humidity Only"},{"name":"Slow Update Rate"}]},{"name":"DS18B20 (Dallas)"},{"name":"SHT3x/SHT4x"}]},{"name":"Networking","children":[{"name":"OpenThread Support"},{"name":"Post-Connect Roaming"},{"name":"802.11k/v Native Roaming"}]}]},{"name":"Changes & Deprecations","children":[{"name":"32-bit System Support Removed"},{"name":"Core/Supervised Deprecation"},{"name":"Removed: Dominos, Flick Electric"},{"name":"Removed: Bluetooth Tracker"}]}]};
+</script>
 
 Hast du dir mal die fertigen Smart-Home-Sensoren im Laden angeschaut? Entweder kosten sie ein Vermoegen, oder sie schicken deine Daten ueber irgendeine Cloud in China. Ich hatte da echt keinen Bock mehr drauf. Leere Batterien genau dann wenn man sie braucht, Daten die mit Verzoegerung ankommen -- und das alles fuer 50 Euro plus Abo.
 
@@ -49,15 +65,16 @@ Der DHT22 ist der guenstige Klassiker (3-5 EUR). Er misst Temperatur und Luftfeu
 
 Nimm den **BME280** (5-10 EUR). Der misst auch noch den Luftdruck, hat eine zehnmal feinere Aufloesung (0.01 statt 0.1 Grad), und laeuft ueber I2C -- einen Bus-Standard der quasi unkaputtbar ist.
 
-| | DHT22 | BME280 |
-|---|---|---|
-| Preis | 3-5 EUR | 5-10 EUR |
-| Misst | Temp + Feuchte | Temp + Feuchte + Luftdruck |
-| Aufloesung | 0.1 Grad | 0.01 Grad |
-| Zuverlaessigkeit | Mittelmaessig | Sehr gut |
-| Empfehlung | Nein | Ja |
+|                  | DHT22          | BME280                     |
+| ---------------- | -------------- | -------------------------- |
+| Preis            | 3-5 EUR        | 5-10 EUR                   |
+| Misst            | Temp + Feuchte | Temp + Feuchte + Luftdruck |
+| Aufloesung       | 0.1 Grad       | 0.01 Grad                  |
+| Zuverlaessigkeit | Mittelmaessig  | Sehr gut                   |
+| Empfehlung       | Nein           | Ja                         |
 
 **Restliches Material:**
+
 - Breadboard (3 EUR)
 - Jumper-Kabel / Dupont-Kabel (2 EUR)
 - USB-Kabel (hast du bestimmt schon)
@@ -100,9 +117,9 @@ esphome:
   name: mein-erster-sensor
 
 esp32:
-  board: esp32-c3-devkitm-1   # Beim WROOM-32: esp32dev
+  board: esp32-c3-devkitm-1 # Beim WROOM-32: esp32dev
   framework:
-    type: esp-idf              # Stabiler als Arduino, seit 2026 Standard
+    type: esp-idf # Stabiler als Arduino, seit 2026 Standard
 
 wifi:
   ssid: !secret wifi_ssid
@@ -178,6 +195,7 @@ Das Beste an ESPHome ist Over-The-Air Update. Wenn du die YAML-Config aenderst -
 ## Realitaetscheck: Was nervt, was geil ist
 
 **Was geil ist:**
+
 - 12-18 Euro statt 50+ Euro fuer kommerzielle Sensoren
 - Daten bleiben lokal -- keine Cloud, kein Abo, kein Account
 - Jederzeit erweiterbar: Display, LED, Knopf, Relais
@@ -185,6 +203,7 @@ Das Beste an ESPHome ist Over-The-Air Update. Wenn du die YAML-Config aenderst -
 - Wenn was kaputt geht: ESP32 fuer 5 Euro nachbestellen
 
 **Was nervt:**
+
 - Jumper-Kabel sind winzig. Breadboard-Stecken ist Zen-Training.
 - YAML-Einrueckung muss exakt sein. Ein falsches Leerzeichen und ESPHome beschwert sich.
 - Erster Flash schlaegt manchmal fehl. Nicht aufgeben, Boot-Trick versuchen.
@@ -210,6 +229,12 @@ Das Gefuehl wenn die erste Temperaturkurve in deinem eigenen Home Assistant auft
 Bestell die Teile fuer den Preis eines Kasten Biers und fang an. Der Rest ergibt sich beim Basteln.
 
 Wenn du tiefer einsteigen willst: Im [Home Assistant Komplett-Guide](/blog/home-assistant-einrichten-2026) erklaere ich wie du die komplette Basis aufsetzt. Und im [ESPHome Tutorial](/blog/esphome-tutorial-deutsch-2026) kommen dann komplexere Sensoren dran.
+
+## Konzept-Map: Das grosse Bild
+
+Alle Themen auf einmal — drehen, zoomen, erkunden:
+
+<MindMap3D data={mindMapData} />
 
 ## Quellen und Links
 
