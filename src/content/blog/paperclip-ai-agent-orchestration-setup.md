@@ -1,313 +1,227 @@
 ---
-title: "28 AI Agents die fuer mich arbeiten — Mein Paperclip Setup"
-slug: "paperclip-ai-agent-orchestration-setup"
-date: "2026-03-19"
-description: "Ich orchestriere 28 AI Agents mit Paperclip — ohne extra API-Kosten. Mein AI Agent Orchestration Setup mit Claude, Codex, Gemini und Ollama zum Nachbauen."
-tags: ["paperclip", "ai-agents", "automation", "claude-code", "orchestration", "ai-agent-orchestration"]
-category: "automatisierung"
+title: "28 AI Agents die für mich arbeiten — Mein Paperclip Setup"
+slug: paperclip-ai-agent-orchestration-setup
+description: "Wie ich mit Paperclip AI 28 Agents orchestriere — ohne einen Cent extra zu zahlen. Claude Code, Codex, Gemini und Ollama in einem System."
+date: 2026-03-19
+category: automation
+tags: [paperclip, ai-agents, automation, claude-code, orchestration]
+image: /images/blog/paperclip-agent-empire-og.webp
+pillar: automation
 draft: true
-titleAccent: "28 AI Agents"
-heroImage: "/images/blog/paperclip-agent-empire-og.webp"
 readingTime: 14
-pillar: "automation"
-keywords: ["paperclip ai", "ai agent orchestration", "claude code agents", "multi agent system"]
+titleAccent: "28 AI Agents"
+keywords: [ai agent orchestration, paperclip ai, claude code agents, multi agent system]
 ---
+
+# 28 AI Agents die für mich arbeiten — Mein Paperclip Setup
 
 ## TL;DR
-
-- Paperclip ist ein Open-Source Framework fuer AI Agent Orchestration — es koordiniert mehrere AI Agents als virtuelles Unternehmen
-- Ich hab 28 Agents in 2 Companies aufgesetzt: Content Pipeline fuer meinen Blog + Gaming Studio Operations
-- Alles laeuft ueber bestehende Subscriptions (Claude Max, ChatGPT Pro, Gemini, Ollama) — kein einziger Extra-Cent fuer API-Keys
-- Nachts arbeiten lokale Ollama-Agents auf meiner RTX 5080 waehrend ich schlafe
-- Die Completion Chains automatisieren den kompletten Weg von Research bis Deploy
-- Mein [Life OS Dashboard](/blog/life-os-paperclip-agent-office-widget) zeigt alle Agents als Widget in Echtzeit
+- Paperclip AI ist ein Open-Source Agent Orchestration Framework
+- Ich hab 22 Agents in 2 Companies aufgesetzt — für meinen Blog und mein Gaming Studio
+- Alles läuft über bestehende Subscriptions: Claude Max, ChatGPT Pro, Google Workspace, Ollama
+- Kein einziger Extra-Cent für API-Keys
+- Die Agents haben Completion Chains — Research → Schreiben → Design → Deploy passiert automatisch
+- Nachts arbeiten lokale Ollama-Agents während ich schlafe
+- Ein Health Monitor Agent überwacht alle 30 Minuten ob alles läuft
 
 ---
 
-Ich muss dir was zeigen. Und ich weiss, das klingt erstmal komplett uebertrieben — aber ich hab 28 AI Agents die fuer mich arbeiten. Nicht als Spielerei. Nicht als Proof of Concept. Als echtes, produktives System das jeden Tag Content produziert, Code reviewed, Social Media Posts erstellt und Deployments macht.
+Stell dir vor, du hast ein Team. Nicht irgendein Team — 22 spezialisierte AI Agents, die für dich recherchieren, schreiben, coden, designen, deployen und sogar nachts weiterarbeiten während du schläfst.
 
-Das Ganze heisst Paperclip. Und ich nehm dich jetzt mit durch mein komplettes Setup.
+Klingt nach Science Fiction? Ist es seit letzter Woche nicht mehr. Willkommen in meinem Paperclip Setup. Das hier ist kein theoretischer Artikel. Kein "10 Wege wie AI Agents die Zukunft verändern" Gelaber. Das ist ein ehrlicher Build Log von jemandem, der das Ding tatsächlich aufgesetzt hat, eine Woche lang benutzt hat, und dir jetzt erzählt was funktioniert — und was nicht.
 
-## Was ist Paperclip eigentlich?
+## Was ist Paperclip AI eigentlich?
 
-Paperclip ist ein Open-Source Framework fuer AI Agent Orchestration. Wenn Claude Code ein Mitarbeiter ist, dann ist Paperclip das Unternehmen drum herum. Es ist quasi die Management-Schicht die dafuer sorgt, dass mehrere AI Agents zusammenarbeiten koennen ohne sich gegenseitig in die Quere zu kommen.
+Paperclip ist ein Open-Source Framework das mehrere AI Agents als virtuelles Unternehmen orchestriert. Wenn Claude Code ein einzelner Mitarbeiter ist, dann ist Paperclip das Büro in dem alle sitzen.
 
-Und das ist ein wichtiger Punkt: Es ist **nicht** ein weiterer Chatbot. Nicht ein Workflow-Builder wie [n8n](/blog/n8n-automatisierung-fuer-anfaenger). Nicht ein Prompt Manager. Es ist die Koordinationsebene darueber.
+Stell's dir so vor: Du hast einen Fotografen (Visual Creator), einen Texter (Content Writer), einen SEO-Spezialisten (SEO Analyst) und einen Deployment-Ingenieur (Deploy Bot). Bisher musstest du jedem einzeln sagen was er tun soll. Mit Paperclip gibst du dem CEO (Dispatch Controller) EINE Aufgabe, und der verteilt die Arbeit automatisch.
 
 **Was Paperclip konkret macht:**
+- Org Charts mit Hierarchie (CEO → Teams → Agents)
+- Per-Agent Budgets und Cost Tracking
+- Heartbeat-System — Agents wachen auf Schedule auf und arbeiten
+- Approval Gates — ich genehmige wichtige Entscheidungen
+- Multi-Company Support — mein Blog und mein Gaming Studio sind getrennte Firmen
+- Audit Trail — ich seh genau was welcher Agent wann gemacht hat
 
-- **Org Charts mit Hierarchie** — CEO Agent delegiert an Team Leads, die delegieren an Spezialisten
-- **Per-Agent Budgets und Cost Tracking** — ich seh genau was jeder Agent kostet
-- **Heartbeat-System** — Agents wachen auf Schedule auf, checken ihre Tasks, arbeiten, und gehen wieder schlafen
-- **Approval Gates** — bei wichtigen Entscheidungen muss ich als Mensch genehmigen
-- **Multi-Company Support** — mein Blog und mein Gaming Studio sind komplett getrennt
-- **Immutable Audit Trail** — ich kann nachvollziehen was welcher Agent wann gemacht hat
+Und das Beste: Es ist keine Cloud-SaaS. Läuft auf deinem Rechner. Port 3100. Fertig.
 
-Das klingt nach viel. Ist es auch. Aber im Alltag fuehlt sich das erstaunlich natuerlich an — wie ein kleines Buero das halt zufaellig aus AI Agents besteht.
+## Mein Setup: 2 Companies, 22 Agents, 4 AI-Backends
 
-Und bevor du fragst: Ja, das laeuft alles lokal. Paperclip ist eine Node.js App die auf deinem Rechner oder Server laeuft. Keine Cloud, kein SaaS, deine Daten bleiben bei dir. Das war fuer mich ein Hauptgrund — ich will nicht dass meine Content-Strategie und meine Agent-Instructions auf irgendeinem fremden Server liegen.
+### Die Agent-Hierarchie
 
-## Warum AI Agent Orchestration und nicht einfach Claude Code?
+An der Spitze sitzt der **Dispatch Controller**. Der wird alle 15 Minuten per Heartbeat geweckt und checkt: Gibt es neue Aufgaben? Sind Chains steckengeblieben? Muss jemand eskaliert werden? Der Typ ist quasi mein virtueller Projektmanager.
 
-Berechtigte Frage. Ich hab Claude Code vorher schon intensiv genutzt — und wenn du wissen willst wie sich die verschiedenen AI Coding Tools schlagen, hab ich einen [ausfuehrlichen Vergleich](/blog/claude-code-vs-cursor-vs-copilot-2026) geschrieben.
+Darunter die Spezialisten. Hier die komplette Liste — ja, mit echten Model-Zuweisungen und Kosten:
 
-Aber ein einzelner Agent hat Grenzen. Claude Code ist fantastisch fuer Coding Tasks. Aber wer schreibt die Blog-Artikel? Wer erstellt die Social Media Posts? Wer ueberwacht die SEO Rankings? Wer deployed? Wer macht Quality Assurance?
+| Agent | Model | Kosten-Tier | Aufgabe |
+|-------|-------|------------|---------|
+| Dispatch Controller | Opus 4.6 | $$$ | Orchestrierung, Routing |
+| Content Writer | Opus 4.6 | $$$ | Blog-Artikel in TRMT Voice |
+| Claude Engineer | Sonnet 4.6 | $$ | SvelteKit, Architektur |
+| Code Engineer | Codex 5.4 | $$ | Code Reviews, Bugs |
+| Life OS Dev | Sonnet 4.6 | $$ | React Dashboard |
+| Video AI Engineer | Sonnet 4.6 | $$ | Python/PyTorch |
+| Research Scout | Haiku 4.5 | $ | KI-News, Trends |
+| Social Publisher | Haiku 4.5 | $ | LinkedIn, X, Threads |
+| SEO Analyst | Haiku 4.5 | $ | Keywords, Rankings |
+| Deploy Bot | Haiku 4.5 | $ | Git + Vercel |
+| QA Inspector | Haiku 4.5 | $ | Lighthouse, Links |
+| **System Health Monitor** | **Haiku 4.5** | **$** | **Alle Systeme überwachen** |
+| Visual Creator | Gemini 2.5 Pro | $$ | OG Images, Thumbnails |
+| Night Worker | Ollama qwen3:14b | **GRATIS** | Nacht-Batch |
+| Vault Keeper | Ollama qwen3:14b | **GRATIS** | Obsidian Vault |
+| Knowledge Miner | Ollama qwen3:14b | **GRATIS** | ChatGPT Export |
 
-Sobald du mehr als 3-4 verschiedene Aufgabentypen hast, brauchst du Spezialisierung. Und Spezialisierung braucht Koordination. Und Koordination braucht ein System.
+Die Logik dahinter: Kreative Arbeit (Content, Architektur) kriegt Opus oder Sonnet — da zählt Qualität. Repetitive Checks (SEO, QA, Deploy) kriegen Haiku — 10x billiger, reicht völlig. Und nachts? Ollama. Kostet halt nichts. Meine RTX 5080 macht die Arbeit.
 
-Das ist der Punkt wo AI Agent Orchestration ins Spiel kommt. Nicht weil ein Agent zu dumm ist — sondern weil verschiedene Aufgaben verschiedene Models, verschiedene Instructions und verschiedenen Kontext brauchen.
+### Der Trick: Keine API-Keys, nur Subscriptions
 
-## Mein Setup: 2 Companies, 28 Agents
+Hier wird's interessant. Paperclip startet die CLI-Tools als Subprozesse. Die nutzen automatisch deine bestehende Subscription-Auth:
 
-### Company 1: TRMT Blog Operations (21 Agents)
+| CLI | Subscription | Extra-Kosten |
+|-----|-------------|-------------|
+| Claude Code | Max Plan (~100 USD/Mo) | 0 EUR extra |
+| Codex | ChatGPT Pro (~200 USD/Mo) | 0 EUR extra |
+| Gemini | Google Workspace | 0 EUR extra |
+| Ollama | Lokal (RTX 5080) | Strom |
+| **Total Extra** | | **0 EUR** |
 
-Mein Blog [therandommakertheory.com](https://therandommakertheory.com) hat eine komplette Content Pipeline. Und wenn ich komplett sage, meine ich komplett — von der Trend-Erkennung bis zum fertigen Deploy.
+**Wichtig:** Keine `ANTHROPIC_API_KEY` in den Environment Variables setzen! Sonst nutzt die CLI die API statt der Subscription — und du zahlst per Token.
 
-**Die Kernteam-Agents (Claude Code, Max Plan):**
+## Completion Chains: Die eigentliche Magie
 
-| Agent | Rolle | Was er macht |
-|-------|-------|-------------|
-| Dispatch Controller | CEO | Orchestriert alles, erstellt Tasks, ueberwacht Deadlines |
-| Content Writer | CMO | Schreibt 1500+ Woerter Artikel in meiner Brand Voice |
-| Research Scout | Research | Findet KI-News und Trends, bereitet Briefings vor |
-| Claude Engineer | Lead Dev | SvelteKit Features, Bug Fixes, Refactoring |
-| Social Publisher | Social Media | LinkedIn, X und Threads Posts |
-| SEO Analyst | SEO | Keywords, Rankings, Competitor Watch |
-| Deploy Bot | DevOps | Baut und deployed die SvelteKit Seite |
-| QA Inspector | Quality | Prueft Deployments auf Fehler |
-
-**Codex Agent (ChatGPT Pro):**
-
-| Agent | Rolle | Was er macht |
-|-------|-------|-------------|
-| Code Engineer | Code Review | Reviewed PRs parallel zu Claude, zweite Meinung |
-
-Und ja — ich lasse bewusst einen Claude Agent und einen Codex Agent am gleichen Repo arbeiten. Verschiedene Models finden verschiedene Bugs. Das ist eigentlich einer der groessten Vorteile von Multi-Agent AI Agent Orchestration: Diversitaet in den Perspektiven.
-
-**Gemini Agents (Google Workspace):**
-
-| Agent | Rolle | Was er macht |
-|-------|-------|-------------|
-| Visual Creator | Design | OG Images, Thumbnails, Social Media Grafiken |
-| Video AI Engineer | Video | Video Scripts, YouTube Metadaten |
-
-**Ollama Agents (LOKAL, GRATIS):**
-
-| Agent | Rolle | Model | Was er macht |
-|-------|-------|-------|-------------|
-| Night Worker | Nachtschicht | qwen3:14b | Arbeitet nachts waehrend ich schlafe |
-| Vault Keeper | Wissensmanagement | qwen3:14b | Verwaltet meinen Obsidian Vault |
-| Knowledge Miner | Data Mining | qwen3:14b | Extrahiert Wissen aus alten Chats |
-
-### Company 2: Active Fungus Studios (7 Agents)
-
-Mein Gaming Studio hat ein komplett separates Team. Getrennte Company, getrennte Daten, getrennte Budgets. Das ist wichtig — ich will nicht dass mein Blog-Content irgendwie in die Gaming-Kommunikation leakt.
-
-- **AFS Director** — Studio Operations und Strategie
-- **MF Community Lead** — Discord Community fuer Medieval Frontiers
-- **Community Pulse** — Sentiment Analyse der Player-Community
-- **Prospera Marketer** — Marketing Kampagnen
-- **AFS Designer** — Game UI und Marketing Visuals
-
-## Der Trick: Keine API-Keys, nur Subscriptions
-
-Jetzt kommt der Teil der die meisten Leute ueberrascht. Paperclip startet die CLI-Tools als Subprozesse. Die nutzen automatisch deine bestehende Subscription-Authentifizierung. Das heisst: Kein `ANTHROPIC_API_KEY`. Kein `OPENAI_API_KEY`. Keine Extra-Kosten.
-
-| CLI Tool | Subscription | Monatliche Kosten | Extra fuer Paperclip |
-|----------|-------------|-------------------|---------------------|
-| Claude Code | Max Plan (5x) | ~100 USD | 0 EUR |
-| Codex CLI | ChatGPT Pro | ~200 USD | 0 EUR |
-| Gemini CLI | Google Workspace | bereits vorhanden | 0 EUR |
-| Ollama | Lokal (RTX 5080) | Stromkosten | 0 EUR |
-| **Paperclip selbst** | Open Source | **0 EUR** | **0 EUR** |
-
-**Wichtig:** Wenn du `ANTHROPIC_API_KEY` oder `OPENAI_API_KEY` in deinen Environment Variables gesetzt hast, nutzt die CLI die API statt der Subscription. Das willst du nicht — API-Calls kosten richtig Geld bei dem Volumen. Also: Keys raus aus den Env Vars wenn du ueber Subscription arbeiten willst.
-
-Wenn du wissen willst wie sich [ChatGPT und Claude im direkten Vergleich](/blog/chatgpt-vs-claude-content-creator-2026) schlagen: Ich nutze beide jeden Tag und hab ausfuehrlich darueber geschrieben.
-
-## Die Completion Chains: Automatischer Workflow von A bis Z
-
-Das ist eigentlich das Herzstueck meiner AI Agent Orchestration. Die Completion Chains definieren was nach was passiert — automatisch, ohne dass ich eingreifen muss.
-
-**Content Pipeline Chain:**
+OK, einzelne Agents sind nett. Aber das Killer-Feature sind die **Completion Chains**. Die funktionieren so:
 
 ```
-Research Scout findet Trend
-    → Dispatch Controller erstellt Content Writer Task
-        → Content Writer schreibt Artikel
-            → Visual Creator erstellt OG Image (parallel)
-            → Social Publisher erstellt Posts (parallel)
-                → Deploy Bot baut und deployed
-                    → QA Inspector prueft das Deployment
+Research Scout findet Trend [done]
+    ↓ automatisch
+Content Writer schreibt Artikel [done]
+    ↓ automatisch (parallel!)
+Visual Creator: OG Image ──┐
+Social Publisher: Posts ────┤ gleichzeitig
+    ↓ warte auf beide
+Deploy Bot: Git Push + Vercel [done]
+    ↓ automatisch
+QA Inspector: Lighthouse Check
 ```
 
-Das laeuft komplett autonom. Ich kriege eine Telegram-Notification wenn der Artikel im Draft ist und wenn der Deploy fertig ist. Dazwischen muss ich quasi nichts machen — ausser bei Approval Gates wo ich explizit absegnen muss.
+Wenn der Research Scout seinen Job erledigt, erstellt ein n8n Workflow automatisch den nächsten Task für den Content Writer. Kein manuelles Eingreifen. Kein "Hey Claude, der Research ist fertig, jetzt schreib bitte den Artikel."
 
-**Wie das technisch funktioniert:**
+In der Praxis heißt das: Ich gehe abends ins Bett, der Night Worker hat über Nacht ein paar News zusammengefasst, morgens um 07:00 wacht der Dispatch Controller auf, sieht die fertigen Summaries, erstellt Tasks für den Content Writer, und bis ich meinen ersten Kaffee hab, ist ein Artikel-Draft fertig.
 
-Jeder Agent hat ein Heartbeat-System. Das heisst: Er wacht in regelmaessigen Intervallen auf, checkt ob er Tasks hat, arbeitet die ab, und geht wieder schlafen. Wenn ein Agent einen Task als "done" markiert, checkt der Dispatch Controller automatisch ob es einen Nachfolger in der Chain gibt und erstellt den naechsten Task.
+Hat bei mir nicht immer funktioniert. Aber wenn es funktioniert — ist es halt krass geil.
 
-Das klingt simpel, aber die Eleganz liegt im Detail. Wenn der Visual Creator und der Social Publisher parallel laufen, wartet der Deploy Bot bis **beide** fertig sind. Wenn einer blockiert ist, wird das eskaliert. Wenn ein Agent zu lange braucht, kriegt er einen Reminder.
+## Der Health Monitor: Mein autonomer Sysadmin
 
-## Model-Routing: Das richtige Gehirn fuer den richtigen Job
+Letzte Woche hab ich den **System Health Monitor** gebaut. Ein Agent der alle 30 Minuten 10 Systeme checkt:
 
-Nicht jeder Task braucht das teuerste Model. Das ist eigentlich eine der wichtigsten Lektionen die ich bei meinem AI Agent Orchestration Setup gelernt hab.
+1. Paperclip Server (läuft?)
+2. Agent Error States (jemand gecrasht?)
+3. n8n Docker Container (gesund?)
+4. n8n Workflow Errors (Fehler in den letzten 30 Min?)
+5. Trigger Server (Auth funktioniert?)
+6. Content Queue (Artikel stecken fest?)
+7. Supabase (Datenbank erreichbar?)
+8. NotebookLM (Auth noch gültig?)
+9. Git/Vercel (Merge Conflicts?)
+10. Scheduled Tasks (alle aktiv?)
 
-| Task-Typ | Model | Warum |
-|----------|-------|-------|
-| Artikel schreiben (Brand Voice) | Claude Opus 4.6 | Beste Schreibqualitaet, versteht Nuancen |
-| Code Reviews | Codex 5.4 | Anderes Model = andere Perspektive |
-| OG Images | Gemini 2.5 Pro | Multimodal, gut fuer visuellen Content |
-| SEO Checks, Deployments | Claude Haiku 4.5 | Schnell, guenstig, reicht voellig |
-| Nacht-Tasks (Low Priority) | Ollama qwen3:14b | Komplett kostenlos, laeuft lokal |
+Wenn was kaputt ist, versucht er es erst selbst zu fixen. Agent in Error State? Reset auf idle. Trigger Server down? Neustart. Erst wenn er es nicht hinkriegt, schickt er mir eine Telegram-Nachricht.
 
-Die Faustregel: Kreative Tasks kriegen teure Models. Repetitive Tasks kriegen guenstige Models. Und alles was warten kann, laeuft nachts auf Ollama.
+Kostet quasi nichts — läuft auf Haiku. Die billigste Versicherungspolice die ich hab.
 
-## Nacht-Modus: Agents die arbeiten waehrend ich schlafe
+## Der Zeitplan: Wer wacht wann auf?
 
-Das ist ehrlich gesagt einer meiner Lieblingsteile. Meine Ollama-Agents laufen auf meiner RTX 5080 mit 16GB VRAM. Komplett lokal, keine Cloud, keine Kosten ausser Strom.
+| Schedule | Agent | Frequenz |
+|----------|-------|----------|
+| Heartbeat | Dispatch Controller | Alle 15 Min |
+| **Health Check** | **System Health Monitor** | **Alle 30 Min** |
+| Morning Routine | Dispatch Controller | 07:00 |
+| Community Watch | Community Pulse | Alle 4h |
+| Vault Sync | Vault Keeper | Alle 6h |
+| SEO Report | SEO Analyst | Montag 09:00 |
+| Evening Summary | Dispatch Controller | 20:00 |
+| Night Batch | Night Worker | 23:00 |
 
-**Typische Nacht-Aufgaben:**
+Das läuft über Windows Task Scheduler. Jeder Heartbeat weckt den Agent, der checkt seine Inbox, arbeitet offene Tasks ab, und geht wieder schlafen. Kein 24/7-Prozess, kein Token-Verbrauch wenn nichts zu tun ist.
 
-- Ungelesene KI-News der letzten 48 Stunden zusammenfassen
-- Keyword-Clustering fuer kommende SEO-Analysen
-- Obsidian Vault aufraeumen und Cross-Referenzen finden
-- Blog Draft Outlines fuer die naechste Woche vorbereiten
-- Community Sentiment aus Discord analysieren
+## n8n als Brücke: 34 Workflows verbinden alles
 
-Morgens finde ich ein fertiges Briefing. Das ist quasi mein morgendlicher Stand-up — nur dass mein Team aus AI Agents besteht und der Stand-up ein Markdown-File ist.
+Meine 34 n8n Workflows sind das Nervensystem. Ein paar Highlights:
 
-Klappt das immer perfekt? Nein. Manchmal halluziniert der Night Worker und die Zusammenfassungen sind Quatsch. Manchmal crashed Ollama weil VRAM voll laeuft. Einmal hat der Vault Keeper angefangen, Obsidian-Notes zu duplizieren statt zu verlinken — das hab ich erst nach drei Tagen bemerkt.
+**Paperclip Heartbeat Workflow** — checkt alle 5 Minuten ob ein Task "done" ist, und erstellt automatisch den Nachfolger-Task. Das sind die Completion Chains von oben.
 
-Aber in 80% der Faelle spart es mir gut eine Stunde am Morgen. Und die 20% wo es schiefgeht? Dafuer hab ich den QA Inspector der morgens als erstes die Nacht-Ergebnisse prueft. Agent der Agent prueft. Klingt absurd, funktioniert aber.
+**Queue Trigger** — scannt alle 30 Minuten die Content Queue. Ist ein Artikel queued und nichts in-progress? Starte die Content Engine. Telegram-Notification ans Handy.
 
-## n8n als Bruecke zur Aussenwelt
+**Article Approval Handler** — wenn ein Artikel fertig ist, bekomme ich Telegram-Buttons: "Veröffentlichen" oder "Muss überarbeitet werden". Ein Klick und der Artikel geht live.
 
-Paperclip ist gut in Agent-zu-Agent Koordination. Aber fuer externe Trigger — Webhooks, RSS-Feeds, Telegram-Notifications — brauche ich [n8n](/blog/n8n-automatisierung-fuer-anfaenger). Die beiden ergaenzen sich perfekt.
+**Daily Auto-Publish** — jeden Morgen um 09:00 geht automatisch ein Artikel online. Der älteste mit Status "ready" wird published. Ich hab grad 19 Artikel im Buffer — das reicht für fast drei Wochen ohne dass ich einen Finger rühre.
 
-Meine 25+ n8n Workflows sind ueber einen "Paperclip Task Router" verbunden:
+## Mobile Access: Alles vom Handy
 
-```
-n8n Workflow findet Trend (RSS/Twitter/Reddit)
-    → POST /webhook/paperclip-task
-        → Paperclip erstellt Issue
-            → Richtiger Agent wird automatisch zugewiesen
-                → Agent arbeitet
-                    → Telegram Notification an mein Handy
-```
+Paperclip ist eine PWA. Auf meinem iPhone als Home-Screen App installiert. Im WLAN seh ich alle Agents, ihre Tasks, das Dashboard. Fühlt sich an wie Slack für AI Agents.
 
-Das geile daran: n8n triggert Paperclip, Paperclip orchestriert die Agents, und n8n informiert mich ueber das Ergebnis. Die beiden sind wie Legosteine die einfach zusammenpassen.
+Und mit Telegram hab ich einen zweiten Kanal: Push-Notifications wenn ein Agent fertig ist, Approval-Buttons, Status-Updates. Ich steuere meine AI-Firma halt quasi vom Sofa.
 
-Wenn du n8n noch nicht kennst, fang mit meinem [n8n Tutorial](/blog/n8n-automatisierung-fuer-anfaenger) an. Und wenn du sehen willst wie ich n8n mit ChatGPT verbinde, schau dir meinen [n8n + ChatGPT Workflow Artikel](/blog/n8n-chatgpt-workflow-2026) an.
+## Was ehrlich gesagt noch nicht funktioniert
 
-## Budget-Management: Wann Agents automatisch pausieren
+Ich wär kein TRMT-Autor wenn ich dir nicht auch die Kacke erzählen würde.
 
-Paperclip hat ein eingebautes Budget-System. Jeder Agent hat ein monatliches Budget in Cents. Ab 80% Verbrauch fokussiert der Agent nur noch auf kritische Tasks. Bei 100% wird er automatisch pausiert.
+**Permission-Problem:** Agents die Bash-Commands ausführen müssen (curl, git, etc.) brauchen `dangerouslySkipPermissions`. Klingt genau so gefährlich wie es ist. Ich hab das für alle 11 Claude-Agents aktiviert. Ist ein Sicherheitskompromiss — die Agents können halt ALLES machen. Deshalb: gute Instructions sind Pflicht.
 
-Das klingt streng, ist aber noetig. Ohne Limits wuerden die Agents endlos arbeiten und die Subscription-Limits sprengen. Besonders bei Claude Max, wo du zwar viel Kapazitaet hast aber nicht unendlich.
+**Chain-Duplikate:** Am Anfang hab ich die Completion Chain Logik DOPPELT eingebaut — einmal in n8n, einmal in den Dispatch Controller Instructions. Ergebnis: doppelte Tasks. Musste ich fixen. Jetzt macht n8n die Chains und der Dispatch Controller überwacht nur noch.
 
-**Meine Budget-Strategie:**
+**Heartbeat-Kosten:** Opus 4.6 für den Dispatch Controller alle 15 Minuten ist nicht billig. Manchmal wacht er auf, checkt seine Inbox, findet nichts, und hat trotzdem Tokens verbraucht. An manchen Tagen 2-3 USD nur fürs Aufwachen.
 
-- **Hohe Budgets** fuer Content Writer und Claude Engineer (die produzieren den meisten Wert)
-- **Mittlere Budgets** fuer Research und Social (wichtig aber nicht kritisch)
-- **Minimale Budgets** fuer QA und Deploy (kurze Tasks, wenig Tokens)
-- **Kein Budget** fuer Ollama-Agents (kosten eh nichts)
+**Ollama-Qualität:** qwen3:14b ist OK für Zusammenfassungen und Cleanup. Aber wenn du einen echten Artikel in Brand Voice brauchst — vergiss es. Da muss Opus ran. Lokal ist halt lokal.
 
-## Approval Gates: Wo der Mensch entscheidet
+**Windows Task Scheduler:** Fragil. Tasks laufen nur wenn du eingeloggt bist (kein Passwort = keine Hintergrund-Tasks). Ich plane auf PM2 umzusteigen für die Services.
 
-Nicht alles soll autonom laufen. Es gibt Momente wo ich als Mensch eingreifen muss. Paperclip hat dafuer Approval Gates:
+## Was ich gelernt hab
 
-- **Agent Hiring** — wenn ein neuer Agent erstellt werden soll, muss ich genehmigen
-- **Cross-Team Delegation** — wenn ein Blog-Agent einen Gaming-Agent braucht
-- **Budget-Ueberschreitungen** — wenn ein Agent mehr braucht als zugeteilt
+1. **Agent Instructions sind alles.** Nicht der Agent-Name. Nicht das Model. Die Instructions. Schreib sie wie SOPs für echte Mitarbeiter — mit konkreten Dateipfaden, Quellen, und vor allem: was der Agent NICHT tun soll.
 
-Das ist wichtig. AI Agent Orchestration ohne menschliche Kontrolle ist ein Rezept fuer Chaos. Die Agents sind gut in ausfuehrender Arbeit, aber strategische Entscheidungen will ich selbst treffen.
+2. **Heartbeats staffeln.** Nie alle Agents gleichzeitig aufwachen lassen. Rate Limits existieren. Mein Schedule: 15 Min (CEO), 30 Min (Health), 4h (Community), 6h (Vault).
 
-## Mobile Access und mein Life OS Dashboard
+3. **Haiku für 80% der Jobs.** SEO-Check, Deploy, QA, Social Posts — brauchst du kein Opus für. Spar die teuren Models für kreative und strategische Arbeit.
 
-Paperclip ist eine PWA — ich hab sie auf meinem iPhone als Home-Screen App installiert. Funktioniert im lokalen WLAN perfekt. Unterwegs brauche ich einen VPN oder Tailscale zurueck zu meinem Home Server.
+4. **Monitoring ist nicht optional.** Ohne den Health Monitor hab ich Fehler erst gemerkt wenn die Pipeline 3 Stunden still stand. Jetzt nach 30 Minuten.
 
-Aber das eigentliche Highlight ist mein [Life OS Dashboard mit dem Agent Office Widget](/blog/life-os-paperclip-agent-office-widget). Das pollt die Paperclip API alle 30 Sekunden und zeigt mir:
+5. **Chains brauchen Dedup-Logik.** Wenn du Chains in mehreren Systemen implementierst, kriegst du Duplikate. Eine Quelle der Wahrheit — bei mir n8n.
 
-- Gruener Punkt = Agent ist idle
-- Oranger Punkt mit Puls-Animation = Agent arbeitet gerade
-- Roter Punkt = Agent ist blockiert und braucht meine Hilfe
-- Gruppiert nach Company (TRMT / Active Fungus Studios)
+6. **Ollama als Fallback rettet dich.** Wenn Claude oder Codex Subscriptions auslaufen oder Rate-Limited sind, springt das lokale Model ein. Qualität leidet, aber der Workflow stoppt nicht.
 
-Fuer mein ADHS-Gehirn ist das Gold wert. "Out of sight, out of mind" ist bei mir woertlich zu nehmen — wenn ich die Agents nicht sehe, vergesse ich dass sie existieren.
+## Setup in 30 Minuten
 
-## Setup in 30 Minuten: So startest du selbst
+Falls du das nachbauen willst:
 
 ```bash
-git clone https://github.com/nicepaperweb/paperclip.git
+git clone https://github.com/paperclipai/paperclip.git
 cd paperclip
 pnpm install
 pnpm dev
 ```
 
-Dann im Browser: `http://localhost:3100`. Company erstellen, ersten Agent hinzufuegen, einen Task zuweisen, Heartbeat triggern. Das wars.
+Browser auf: `http://localhost:3100`. Company erstellen. Agents hinzufügen. Goals setzen. Los geht's.
 
-**Voraussetzungen:** Node.js 20+, pnpm, und mindestens eins der CLI-Tools installiert (Claude Code, Codex, oder Ollama). Fuer den Start reicht Ollama voellig — das ist kostenlos und laeuft lokal. Wenn du Claude Code oder Codex nutzen willst, brauchst du natuerlich die jeweilige Subscription.
+Für die Heartbeats brauchst du einen Scheduler — Windows Task Scheduler, cron, oder PM2. Die BAT-Dateien sehen so aus:
 
-Die Dokumentation ist ehrlich gesagt noch ausbaufaehig — das Projekt ist jung und bewegt sich schnell. Aber der Code ist sauber und die Grundkonzepte sind innerhalb einer Stunde verstanden. Und die Community auf GitHub und Discord ist super hilfsbereit wenn du mal haengst.
+```bash
+cd paperclip
+pnpm paperclipai heartbeat run --agent-id <agent-uuid> --source timer --trigger system
+```
 
-**Mein Tipp fuer den Start:** Fang mit 3 Agents an. Nicht 28. Ein CEO/Dispatch Agent, ein Worker Agent fuer deine Hauptaufgabe, und ein QA Agent der das Ergebnis prueft. Sobald das laeuft, skalierst du.
+Das weckt den Agent, der checkt seine Inbox, arbeitet, und beendet sich.
 
-## Was ich gelernt hab (und was noch nervt)
+## Fazit: Lohnt sich das?
 
-**Was genial funktioniert:**
+Für einen Solo-Creator mit ADHS? Absolut. Mein Gehirn ist nicht dafür gemacht, 15 verschiedene Tasks im Kopf zu behalten und zur richtigen Zeit auszuführen. Mein Paperclip Setup macht genau das — zuverlässiger als ich es je könnte.
 
-1. **Completion Chains** — der automatische Workflow von Research bis Deploy ist echte Zeitersparnis
-2. **Model-Diversitaet** — verschiedene Models finden verschiedene Probleme
-3. **Nacht-Agents** — aufwachen und ein fertiges Briefing haben ist unschlagbar
-4. **Audit Trail** — ich kann jederzeit nachvollziehen was passiert ist
+Ist es perfekt? Nein. Die Permission-Geschichte nervt. Die Kosten für Opus-Heartbeats sind spürbar. Und manchmal crasht ein Agent und niemand merkt es (deshalb der Health Monitor).
 
-**Was noch nervt:**
+Aber: Ich hab in einer Woche 18 Blog-Artikel produziert, einen Content-Buffer für fast einen Monat aufgebaut, und meine Community wird automatisch monitored. Ohne Paperclip hätte ich das alles manuell machen müssen.
 
-1. **Heartbeat Timing** — wenn alle Agents gleichzeitig aufwachen, gibt es Rate Limits. Ich muss die Schedules manuell staffeln
-2. **Ollama Stabilitaet** — crashed gelegentlich bei langen Tasks wenn der VRAM voll laeuft
-3. **Instructions schreiben** — jeder Agent braucht eine detaillierte Markdown-Datei mit Kontext, Regeln und Beispielen. Das ist Arbeit
-4. **Debugging** — wenn eine Chain haengt, muss ich manchmal 5 verschiedene Agent-Logs durchgehen um zu verstehen warum
-5. **Kein echtes Scheduling** — Heartbeats werden extern getriggert (cron oder n8n), Paperclip selbst hat keinen eingebauten Scheduler
+28 Agents. 0 Euro extra. Ein Abend Setup. Das ist der Deal.
 
-Das ist ehrlich. Es ist kein magisches "Klick und alles funktioniert" Tool. Es ist ein Framework das dir Struktur gibt — aber die Arbeit, gute Instructions zu schreiben und die Agents richtig zu konfigurieren, die bleibt bei dir.
-
-Und ganz ehrlich: Die Instructions sind der groesste Zeitfresser. Mein Content Writer hat eine Markdown-Datei mit ueber 200 Zeilen — Brand Voice Regeln, Anti-AI-Filter, SEO-Anforderungen, Interlink-Strategien. Das zu schreiben hat laenger gedauert als Paperclip selbst aufzusetzen. Aber es ist auch der Grund warum die Ergebnisse so gut sind. Garbage in, garbage out — das gilt bei AI Agent Orchestration genauso wie ueberall sonst.
-
-**Mein Tipp:** Fang mit kurzen Instructions an und iteriere. Schreib 20 Zeilen, lass den Agent arbeiten, schau was schiefgeht, ergaenze die Instructions. Nach 2-3 Iterationen hast du 80% der Edge Cases abgedeckt.
-
-## Was es kostet vs. was es bringt
-
-Meine monatlichen Kosten:
-
-| Posten | Kosten |
-|--------|--------|
-| Claude Max (5x) | ~100 USD |
-| ChatGPT Pro | ~200 USD |
-| Google Workspace | bereits vorhanden |
-| Ollama + Strom | ~5 EUR |
-| Paperclip | 0 EUR (Open Source) |
-| **Total** | **~310 USD/Monat** |
-
-Was ich dafuer kriege: 3-4 Blog-Artikel pro Woche, taegliche Social Media Posts, automatisches SEO Monitoring, Code Reviews, Community Management, und ein morgendliches Briefing. Das wuerde als Freelancer-Team locker 3.000-5.000 EUR pro Monat kosten.
-
-Lohnt sich das? Fuer mich absolut. Aber ich hab auch Monate gebraucht um das System so aufzusetzen. Wenn du nur einen Blog-Artikel pro Woche schreibst, ist das Overkill. Wenn du aber wie ich mehrere Projekte parallel faehrst und jeden Tag Content produzieren willst, dann zahlt sich die Investition schnell aus.
-
-Ein Rechenbeispiel: Allein der Research Scout spart mir taeglich 30-45 Minuten manuelle News-Recherche. Auf den Monat sind das 15-20 Stunden. Der Content Writer spart mir pro Artikel etwa 2-3 Stunden Schreibzeit (ich muss trotzdem reviewen und editieren, aber der erste Draft steht). Bei 3-4 Artikeln pro Woche sind das nochmal 8-12 Stunden. Rechne ich das zusammen, spart mir das System grob 25-30 Stunden pro Monat. Fuer ~310 USD. Das ist weniger als 12 USD pro gesparte Stunde.
-
-## Naechste Schritte
-
-Ich bin noch lange nicht fertig. Was als naechstes kommt:
-
-- **Pixel-Art Agent Visualisierung** — die Agents als kleine Pixel-Figuren in meinem Life OS Dashboard darstellen (inspiriert von Claw Empire)
-- **ChatGPT Knowledge Export** — 1+ Jahr alte Chats in Obsidian extrahieren und als Wissensbasis nutzen
-- **AfterShoot-Alternative** — mein eigenes AI Photo Culling Tool bauen (dazu kommt bald ein eigener Artikel!)
-- **24/7 Autonomous Operation** — besseres Heartbeat Scheduling damit die Agents wirklich rund um die Uhr arbeiten
-
----
-
-AI Agent Orchestration ist kein Hype-Thema mehr. Es ist ein echtes Werkzeug das echte Arbeit erledigt. Und mit Paperclip kann das quasi jeder aufsetzen der bereit ist, sich ein paar Stunden hinzusetzen.
-
-Ob du 28 Agents brauchst? Wahrscheinlich nicht. Ob du 3-5 Agents brauchen koenntest die dir repetitive Arbeit abnehmen? Ziemlich sicher ja. Und das Schoene an AI Agent Orchestration ist: Du kannst klein anfangen und nach Bedarf skalieren. Mein System hat auch mal mit 3 Agents angefangen. Die anderen 25 sind ueber Wochen dazugekommen, einer nach dem anderen, wenn ich gemerkt hab dass ich einen bestimmten Workflow automatisieren will.
-
-*Paperclip ist Open Source unter MIT License. Fragen? Schreib mir auf [LinkedIn](https://linkedin.com/in/trmt) oder [X](https://x.com/trmt).*
+— TRMT
