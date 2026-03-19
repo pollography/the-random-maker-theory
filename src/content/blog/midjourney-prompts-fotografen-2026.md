@@ -4,7 +4,7 @@ titleAccent: "Midjourney"
 slug: midjourney-prompts-fotografen-2026
 date: 2026-03-18
 updated: 2026-03-18
-draft: true
+draft: false
 category: ki-tools
 pillar: ai-creative
 primaryKW: midjourney prompts deutsch
