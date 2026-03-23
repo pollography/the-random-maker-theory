@@ -20,6 +20,7 @@ interlinks:
 # n8n + ChatGPT: Mein Automatisierungs-Stack
 
 **TL;DR**
+
 - n8n + ChatGPT ist die Kombination die meinen Content-Output verdreifacht hat — ohne dass ich mehr Zeit investiere
 - Ich zeige 3 konkrete n8n chatgpt workflow Setups die ich selbst taeglich nutze
 - Jeder Workflow wird Node fuer Node erklaert, kein "einfach so funktioniert das halt"
@@ -61,6 +62,7 @@ Bevor ich die Workflows zeige, kurz das Grundsetup:
 **OpenAI Account:** API-Key holen unter platform.openai.com. Wichtig: Das ist NICHT der ChatGPT Plus Account. Das ist ein separater API-Account. Guthaben aufladen (10-20 EUR reichen erstmal) und einen Key erstellen.
 
 **In n8n den OpenAI Credential anlegen:**
+
 1. In n8n: Settings → Credentials → New
 2. "OpenAI" auswaehlen
 3. API Key eintragen
@@ -81,11 +83,13 @@ Jetzt zu den drei Workflows.
 ### Node fuer Node
 
 **Node 1 — Schedule Trigger**
+
 - Typ: Schedule Trigger
 - Einstellung: Every Day, 7:00 AM
 - Das ist der Startschuss. Jeden Morgen, punklich.
 
 **Node 2 — RSS Feed Read (wiederholt fuer jeden Feed)**
+
 - Typ: RSS Feed Read
 - URL: Einer meiner RSS-Feeds (z.B. https://feeds.feedburner.com/techcrunch)
 - Items to Return: 5 (die 5 neuesten Eintraege)
@@ -93,25 +97,30 @@ Jetzt zu den drei Workflows.
 Ich habe diesen Node drei Mal nebeneinander — einmal pro Haupt-Feed. Die Outputs landen alle beim naechsten Node.
 
 **Node 3 — Merge**
+
 - Typ: Merge
 - Mode: Append
 - Alle drei RSS-Outputs werden zusammengefuehrt in eine Liste
 
 **Node 4 — Item Lists (Sort + Limit)**
+
 - Sortiert nach Datum (neuste zuerst)
 - Limit: 10 Artikel maximal weiterleiten
 
 [SCREENSHOT: n8n Canvas mit den ersten 4 Nodes, Verbindungen sichtbar]
 
 **Node 5 — Code Node (Artikel-Text zusammenbauen)**
+
 - Typ: Code
 - Ich baue hier einen strukturierten Text pro Artikel zusammen:
 
 ```javascript
 const items = $input.all();
-const articleList = items.map(item => {
-  return `Titel: ${item.json.title}\nURL: ${item.json.link}\nBeschreibung: ${item.json.contentSnippet || item.json.summary || 'keine'}`;
-}).join('\n\n---\n\n');
+const articleList = items
+  .map((item) => {
+    return `Titel: ${item.json.title}\nURL: ${item.json.link}\nBeschreibung: ${item.json.contentSnippet || item.json.summary || "keine"}`;
+  })
+  .join("\n\n---\n\n");
 
 return [{ json: { articleList } }];
 ```
@@ -119,23 +128,26 @@ return [{ json: { articleList } }];
 Dieser Node reduziert 10 Eintraege auf einen einzigen Text-Block. Das ist wichtig damit der naechste ChatGPT-Call nicht 10 separate API-Requests macht.
 
 **Node 6 — OpenAI (Chat Model)**
+
 - Typ: OpenAI
 - Operation: Message a Model
 - Model: gpt-4o-mini (reicht hier voellig)
 - Prompt (System): "Du bist ein Content-Stratege fuer einen Tech-Blog der sich auf Maker, Home Automation und AI fokussiert. Deine Aufgabe: Identifiziere aus der folgenden Artikel-Liste die 3 interessantesten Ideen fuer Blog-Content und schreibe je einen kurzen Content-Brief (Idee, Angle, Zielgruppe, 3 Punkte die der Artikel abdecken soll)."
-- Prompt (User): `{{ $json.articleList }}`
+- Prompt (User): Die n8n-Expression `$json.articleList` — also der zusammengebaute Text aus dem Code Node
 
 Das ist der Kern des n8n chatgpt workflow — der OpenAI Node mit dem richtigen Prompt.
 
 [SCREENSHOT: n8n OpenAI Node Config, Prompt-Felder ausgefuellt]
 
 **Node 7 — Notion**
+
 - Typ: Notion
 - Operation: Create Page
 - Database: Meine Content-Pipeline-Datenbank
-- Fields: Titel = "Content Brief {{ $now }}", Content = OpenAI Output
+- Fields: Titel = "Content Brief" + aktuelles Datum via n8n-Expression, Content = OpenAI Output
 
 **Node 8 — Telegram**
+
 - Typ: Telegram
 - Operation: Send Message
 - Chat ID: Meine Telegram-Chat-ID
@@ -154,6 +166,7 @@ Fertig. Der Workflow laeuft jeden Morgen, ich bekomme eine kurze Benachrichtigun
 ### Node fuer Node
 
 **Node 1 — Notion Trigger**
+
 - Typ: Notion Trigger
 - Event: Page Updated
 - Database: Content-Pipeline
@@ -162,21 +175,25 @@ Fertig. Der Workflow laeuft jeden Morgen, ich bekomme eine kurze Benachrichtigun
 Sobald ich in Notion den Status eines Artikels aendere, feuert dieser Trigger.
 
 **Node 2 — Notion (Get Page)**
+
 - Typ: Notion
 - Operation: Get Page
 - Ich hole die vollstaendigen Seiten-Daten: Titel, Meta-Description, URL, Artikel-Intro (erste 500 Zeichen)
 
 **Node 3 — OpenAI (LinkedIn Post)**
+
 - Model: gpt-4o-mini
 - System Prompt: "Du schreibst LinkedIn-Posts fuer einen Tech-Blogger. Ton: professionell aber persoenlich, keine Floskeln, kein 'Ich freue mich'. Max 1200 Zeichen. Starte mit einer provokanten These oder einer persoenlichen Beobachtung. 3-5 kurze Absaetze. Ende mit einer offenen Frage."
-- User Prompt: `Artikel-Titel: {{ $json.title }}\nMeta: {{ $json.description }}\nIntro: {{ $json.intro }}\nURL: {{ $json.url }}`
+- User Prompt: Artikel-Titel, Meta-Description, Intro und URL werden per n8n-Expression aus dem Notion-Datensatz gezogen
 
 **Node 4 — OpenAI (Twitter/X Post)**
+
 - Model: gpt-4o-mini
 - System Prompt: "Schreibe einen Twitter-Post. Max 280 Zeichen. Direkt, keine Emojis ausser 1 am Anfang. Endet mit dem Link als [URL]."
 - User Prompt: Gleiche Daten wie Node 3
 
 **Node 5 — OpenAI (Mastodon Post)**
+
 - Model: gpt-4o-mini
 - System Prompt: "Mastodon-Post fuer eine Tech-Community. 500 Zeichen max. Etwas geekiger als LinkedIn, #Hashtags am Ende (max 4)."
 - User Prompt: Gleiche Daten
@@ -186,6 +203,7 @@ Sobald ich in Notion den Status eines Artikels aendere, feuert dieser Trigger.
 Ich nutze hier drei separate OpenAI-Nodes statt einem — das klingt verschwenderisch, aber jeder bekommt seinen eigenen System-Prompt und damit einen anderen Output. Wenn ich alle drei in einen Prompt packe, wird das Ergebnis schlechter. Das habe ich ausprobiert.
 
 **Node 6 — Notion (Update Page)**
+
 - Ich speichere alle drei generierten Posts als Properties der Notion-Seite
 - LinkedIn Post, Twitter Post, Mastodon Post als Text-Properties
 
@@ -204,22 +222,27 @@ Das ist der Workflow der am meisten Reaktionen bekommt wenn ich ihn erwaehne.
 ### Node fuer Node
 
 **Node 1 — Schedule Trigger**
+
 - Alle 4 Stunden
 
 **Node 2 — HTTP Request (Blog API)**
-- Mein Blog hat eine simple API unter /api/comments?since={{ $now.minus(4, 'hours').toISO() }}
+
+- Mein Blog hat eine simple API unter `/api/comments?since=...` — der Zeitstempel wird per n8n-Expression auf "letzte 4 Stunden" gesetzt
 - Gibt JSON-Array mit neuen Kommentaren zurueck
 
 **Node 3 — Discord (Get Messages)**
+
 - Typ: Discord
 - Operation: Get Messages
 - Channel ID: Meine Support-Channel-ID
 - Limit: 50 neueste Nachrichten
 
 **Node 4 — Merge**
+
 - Blog-Kommentare und Discord-Nachrichten zusammenfuehren
 
 **Node 5 — Filter**
+
 - Entfernt Messages von mir selbst (anhand der User-ID)
 - Entfernt bereits verarbeitete Items (ich nutze eine kleine SQLite-Tabelle als State)
 
@@ -228,17 +251,21 @@ Alle gefilterten Kommentare werden in einen strukturierten Text zusammengefuehrt
 
 ```javascript
 const comments = $input.all();
-const formatted = comments.map((c, i) =>
-  `[${i+1}] Quelle: ${c.json.source} | Von: ${c.json.author}\n${c.json.content}`
-).join('\n\n');
+const formatted = comments
+  .map(
+    (c, i) =>
+      `[${i + 1}] Quelle: ${c.json.source} | Von: ${c.json.author}\n${c.json.content}`,
+  )
+  .join("\n\n");
 
 return [{ json: { commentBatch: formatted, count: comments.length } }];
 ```
 
 **Node 7 — OpenAI (Kategorisierung)**
+
 - Model: gpt-4o-mini
 - System Prompt: "Du analysierst Community-Kommentare fuer einen Tech-Blog und Discord-Server. Kategorisiere jeden Kommentar als: FRAGE (technische oder allgemeine Frage), FEEDBACK_POS (positives Feedback), BUG (Bug-Report oder Fehler-Meldung), SPAM (offensichtlicher Spam), REVIEW (muss manuell geprueft werden, z.B. kontroverse Diskussion). Antworte als JSON-Array mit den Feldern: id (Nummer aus dem Input), kategorie, prioritaet (1-3, wobei 1=dringend), kurze_zusammenfassung."
-- User Prompt: `{{ $json.commentBatch }}`
+- User Prompt: Die aufbereiteten Kommentare aus dem Code Node als n8n-Expression `$json.commentBatch`
 
 Das ist der anspruchsvollste Prompt in meinem Stack. Ich habe ihn ueber mehrere Wochen verfeinert. Die Schluessel-Entscheidung war das JSON-Output-Format zu erzwingen — dann kann ich den naechsten Node direkt mit strukturierten Daten fuettern.
 
@@ -251,16 +278,16 @@ Parsed das JSON, sortiert nach Prioritaet, baut den Telegram-Report:
 const analysisRaw = $input.first().json.text;
 const analysis = JSON.parse(analysisRaw);
 
-const urgent = analysis.filter(a => a.prioritaet === 1);
-const normal = analysis.filter(a => a.prioritaet > 1);
+const urgent = analysis.filter((a) => a.prioritaet === 1);
+const normal = analysis.filter((a) => a.prioritaet > 1);
 
-const report = `Community Report (${new Date().toLocaleDateString('de-DE')})
+const report = `Community Report (${new Date().toLocaleDateString("de-DE")})
 
 DRINGEND (${urgent.length}):
-${urgent.map(a => `- [${a.kategorie}] ${a.kurze_zusammenfassung}`).join('\n')}
+${urgent.map((a) => `- [${a.kategorie}] ${a.kurze_zusammenfassung}`).join("\n")}
 
 NORMAL (${normal.length}):
-${normal.map(a => `- [${a.kategorie}] ${a.kurze_zusammenfassung}`).join('\n')}`;
+${normal.map((a) => `- [${a.kategorie}] ${a.kurze_zusammenfassung}`).join("\n")}`;
 
 return [{ json: { report } }];
 ```

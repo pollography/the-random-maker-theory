@@ -25,6 +25,7 @@ interlinks:
 # Zigbee vs Thread vs Matter: Welches Protokoll brauchst du 2026?
 
 **TL;DR:**
+
 - Zigbee ist ausgereift, guenstig und hat das groesste Geraete-Oekosystem — ideal fuer Home Assistant
 - Thread ist das Netzwerk-Backbone hinter Matter, nicht standalone nutzbar
 - Matter ist der neue Standard mit Apple/Google/Amazon-Support, aber noch limitiert in der Geraeteauswahl
@@ -78,6 +79,7 @@ Der Zugang ins Thread-Netzwerk laeuft ueber einen Border Router. Das kann ein Ap
 Matter ist der eigentlich spannende Teil dieser Gleichung. Es ist ein offener Standard der 2022 von der Connectivity Standards Alliance (CSA) veroeffentlicht wurde — hinter der Apple, Google, Amazon, Samsung und viele andere stehen.
 
 Matter laeuft ueber zwei Transportwege:
+
 1. **WiFi** — fuer netzbetriebene Geraete
 2. **Thread** — fuer batteriebetriebene Geraete und eine bessere Mesh-Topologie
 
@@ -93,23 +95,23 @@ Das klingt nach dem grossen Versprechen. Und im Grunde stimmt es — wenn die Ge
 
 ## Zigbee vs Thread vs Matter: Die Vergleichstabelle
 
-| Kriterium | Zigbee | Thread | Matter |
-|---|---|---|---|
-| **Typ** | Netzwerk + Anwendung | Netzwerk-Transportschicht | Anwendungsschicht |
-| **Standalone nutzbar** | Ja | Nein (braucht Matter) | Nein (braucht WiFi oder Thread) |
-| **Mesh-Netzwerk** | Ja | Ja | Ja (via Thread oder WiFi-Mesh) |
-| **Batteriebetriebene Geraete** | Sehr gut | Sehr gut | Gut (via Thread) |
-| **Protokoll-Basis** | IEEE 802.15.4, proprietaer | IPv6, IEEE 802.15.4 | IP-basiert (WiFi oder Thread) |
-| **Geraeteauswahl 2026** | Sehr gross (1000+ Geraete) | Wachsend (als Matter-Basis) | Mittel, schnell wachsend |
-| **Einstiegspreis** | Sehr guenstig (ab 8 EUR) | Mittlere Infrastrukturkosten | Mittlere bis hoehere Geraetepreise |
-| **Home Assistant Support** | Exzellent (ZHA, Zigbee2MQTT) | Gut (Thread Border Router) | Gut (Matter Integration) |
-| **Interoperabilitaet** | Innerhalb Zigbee ok | Standardisiert via IPv6 | Exzellent (Design-Ziel) |
-| **Cloud-Abhaengigkeit** | Keine (mit lokalem Coordinator) | Keine | Keine (lokale Steuerung) |
-| **Apple HomeKit** | Ueber Bruecken moeglich | Als Thread-Backbone | Nativ |
-| **Google Home** | Ueber Bruecken moeglich | Als Thread-Backbone | Nativ |
-| **Amazon Alexa** | Ueber Skills | - | Nativ |
-| **Komplexitaet Einrichtung** | Mittel | Mittel-Hoch | Niedrig bis Mittel |
-| **Langzeit-Perspektive** | Stabil aber kein Wachstum | Infrastruktur fuer Zukunft | Zukunft des Smart Home |
+| Kriterium                      | Zigbee                          | Thread                       | Matter                             |
+| ------------------------------ | ------------------------------- | ---------------------------- | ---------------------------------- |
+| **Typ**                        | Netzwerk + Anwendung            | Netzwerk-Transportschicht    | Anwendungsschicht                  |
+| **Standalone nutzbar**         | Ja                              | Nein (braucht Matter)        | Nein (braucht WiFi oder Thread)    |
+| **Mesh-Netzwerk**              | Ja                              | Ja                           | Ja (via Thread oder WiFi-Mesh)     |
+| **Batteriebetriebene Geraete** | Sehr gut                        | Sehr gut                     | Gut (via Thread)                   |
+| **Protokoll-Basis**            | IEEE 802.15.4, proprietaer      | IPv6, IEEE 802.15.4          | IP-basiert (WiFi oder Thread)      |
+| **Geraeteauswahl 2026**        | Sehr gross (1000+ Geraete)      | Wachsend (als Matter-Basis)  | Mittel, schnell wachsend           |
+| **Einstiegspreis**             | Sehr guenstig (ab 8 EUR)        | Mittlere Infrastrukturkosten | Mittlere bis hoehere Geraetepreise |
+| **Home Assistant Support**     | Exzellent (ZHA, Zigbee2MQTT)    | Gut (Thread Border Router)   | Gut (Matter Integration)           |
+| **Interoperabilitaet**         | Innerhalb Zigbee ok             | Standardisiert via IPv6      | Exzellent (Design-Ziel)            |
+| **Cloud-Abhaengigkeit**        | Keine (mit lokalem Coordinator) | Keine                        | Keine (lokale Steuerung)           |
+| **Apple HomeKit**              | Ueber Bruecken moeglich         | Als Thread-Backbone          | Nativ                              |
+| **Google Home**                | Ueber Bruecken moeglich         | Als Thread-Backbone          | Nativ                              |
+| **Amazon Alexa**               | Ueber Skills                    | -                            | Nativ                              |
+| **Komplexitaet Einrichtung**   | Mittel                          | Mittel-Hoch                  | Niedrig bis Mittel                 |
+| **Langzeit-Perspektive**       | Stabil aber kein Wachstum       | Infrastruktur fuer Zukunft   | Zukunft des Smart Home             |
 
 ---
 
@@ -118,6 +120,7 @@ Das klingt nach dem grossen Versprechen. Und im Grunde stimmt es — wenn die Ge
 ### Zigbee
 
 **Pro:**
+
 - Riesige Geraeteauswahl zu niedrigen Preisen
 - Jahrelang erprobt, extrem stabil
 - Volle lokale Kontrolle ohne Cloud
@@ -126,6 +129,7 @@ Das klingt nach dem grossen Versprechen. Und im Grunde stimmt es — wenn die Ge
 - Bestehende Infrastruktur ist nicht wertlos
 
 **Contra:**
+
 - Kein offizieller Standard wie Matter — herstellerspezifische Profile moeglich
 - Interoperabilitaet manchmal hakelig
 - Kein nativer Apple/Google/Amazon Support (braucht Bruecken)
@@ -135,6 +139,7 @@ Das klingt nach dem grossen Versprechen. Und im Grunde stimmt es — wenn die Ge
 ### Thread
 
 **Pro:**
+
 - IP-basiert = zukunftssicher
 - Exzellente Mesh-Performance
 - Niedrige Latenz, gute Batterielaufzeit
@@ -142,6 +147,7 @@ Das klingt nach dem grossen Versprechen. Und im Grunde stimmt es — wenn die Ge
 - Offen spezifiziert
 
 **Contra:**
+
 - Kein Standalone-Protokoll, immer in Kombination mit Matter
 - Border Router Pflicht (zusaetzliche Hardware oder vorhandenes Oekosystem)
 - Komplexere Fehlerdiagnose bei Netzwerkproblemen
@@ -150,6 +156,7 @@ Das klingt nach dem grossen Versprechen. Und im Grunde stimmt es — wenn die Ge
 ### Matter
 
 **Pro:**
+
 - Echter offener Standard mit Big-Tech-Support
 - Multi-Admin: ein Geraet in mehreren Plattformen gleichzeitig
 - Einfache Einrichtung (QR-Code, lokal, keine Cloud)
@@ -158,8 +165,9 @@ Das klingt nach dem grossen Versprechen. Und im Grunde stimmt es — wenn die Ge
 - Home Assistant hat solide Matter-Integration
 
 **Contra:**
+
 - Geraeteauswahl 2026 noch kleiner als Zigbee
-- Guenstige Matter-Sensoren (Temperatursensor < 10 EUR) kaum verfuegbar
+- Guenstige Matter-Sensoren (Temperatursensor unter 10 EUR) kaum verfuegbar
 - Einige Hersteller labeln bestehende WLAN-Geraete als "Matter-ready", was Overhead bedeutet
 - Thread-Infrastruktur muss aufgebaut werden fuer batteriebetriebene Matter-Geraete
 - Firmware-Updates bei Matter noch uneinheitlich
@@ -245,11 +253,13 @@ Thread-Infrastruktur ist inzwischen bei vielen verbreitet — fast jeder mit ein
 Ich nutze Home Assistant als Zentrale fuer beides. Hier ist mein aktuelles Setup:
 
 **Zigbee-Seite:**
+
 - Coordinator: Sonoff Zigbee 3.0 USB Dongle Plus
 - Software: Zigbee2MQTT (stabiler als ZHA in meiner Erfahrung)
 - Geraete: 43 Nodes, Aqara-Sensoren, IKEA Tradfri, Sonoff-Steckdosen
 
 **Matter-Seite:**
+
 - Border Router: Home Assistant Yellow (integriert)
 - Matter-Geraete: bisher 7, hauptsaechlich neue Steckdosen und Lampen
 - Thread Border Router: laeuft auch auf dem HA Yellow
@@ -278,10 +288,11 @@ Der grosse Zigbee-vs-Thread-vs-Matter-Krieg den manche Foren fuehren? Der ist ue
 
 ---
 
-*Hast du Fragen zu deinem konkreten Setup? Schreib mir — ich schaue es mir gerne an.*
+_Hast du Fragen zu deinem konkreten Setup? Schreib mir — ich schaue es mir gerne an._
 
 ---
 
 **Weiterlesen:**
+
 - [Home Assistant einrichten: Komplett-Guide 2026](/home-assistant-einrichten-2026)
 - [Home Assistant Zigbee einrichten: Schritt fuer Schritt](/home-assistant-zigbee-einrichten-2026)
