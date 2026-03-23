@@ -9,7 +9,7 @@ category: ki-tools
 pillar: ai-creative
 primaryKW: midjourney prompts deutsch
 description: "Midjourney Prompts Deutsch erklaert von einem Fotografen: Kamera-Parameter, Licht, Style und 15 echte Prompt-Beispiele fuer fotorealistische Portraits und Landschaften."
-ogImage: /images/midjourney-prompts-fotografen-2026-og.jpg
+heroImage: "/images/blog/midjourney-prompts-fotografen-2026-1.webp"
 podcastSlug: "010-midjourney-prompts-fotografen-2026"
 tags:
   - midjourney

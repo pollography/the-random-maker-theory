@@ -7,6 +7,7 @@ tags: ["tools", "claude", "anthropic", "tipps", "produktivitaet"]
 category: "tools"
 draft: false
 readingTime: 7
+heroImage: "/images/blog/claude-cowork-einladung-kostenlos-testen-1.webp"
 titleAccent: "Cowork"
 ---
 
