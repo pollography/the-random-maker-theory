@@ -137,7 +137,7 @@ Für Blog-Bilder reicht DALL-E im Plus-Plan komplett. Für Video brauchst du Pro
 
 ## Was macht Ollama Pro eigentlich genau?
 
-Die Frage krieg ich ständig. Weil Ollama für die meisten "das Ding zum lokalen Modelle laufen lassen" bedeutet.
+Die Frage krieg ich ständig. Den kompletten Deep Dive mit Benchmarks, Kostenrechnung und konkreten Use Cases hab ich in einem separaten Artikel: [Ollama Pro: Was Qwen3 & Kimi K2.5 wirklich können](/blog/ollama-pro-modelle-qwen3-kimi-vergleich) Weil Ollama für die meisten "das Ding zum lokalen Modelle laufen lassen" bedeutet.
 
 Ollama Pro ist quasi die Cloud-Version davon. Du zahlst $20 im Monat und bekommst API-Zugang zu riesigen Modellen auf Ollama-Servern. Qwen3-235B (235 Milliarden Parameter), Kimi K2.5, NemoTron-Super. Modelle die lokal 100-200 GB VRAM brauchen würden. Auf einer RTX 5080 schlicht unmöglich.
 
