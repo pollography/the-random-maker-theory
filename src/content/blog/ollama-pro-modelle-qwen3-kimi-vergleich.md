@@ -24,7 +24,7 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-Cursor Composer 2 läuft auf einem Open-Source-Modell. Kimi K2.5, entwickelt von Moonshot AI. Das hat mich überrascht — ich hatte erwartet, dass Cursor auf Claude oder GPT-5 setzt, wie alle anderen.
+Cursor Composer 2 läuft auf einem Open-Source-Modell. Kimi K2.5, entwickelt von Moonshot AI. Das hat mich überrascht. Ich hatte erwartet, dass Cursor auf Claude oder GPT-5 setzt, wie alle anderen.
 
 Aber genau das ist der Punkt. Open-Source-Modelle sind 2026 keine experimentelle Alternative mehr. Qwen3-235B schlägt Claude beim Coding. Kimi K2.5 liegt mit 65,8% auf SWE-Bench unter den Top 3 weltweit. Und beides läuft auf Ollama Pro für pauschal $20 im Monat.
 
@@ -38,7 +38,7 @@ Erstmal das Wichtigste, das in keinem Review steht: Ollama Pro hat ein Output-Li
 
 Was bedeutet das praktisch? Ein langer Blogbeitrag (3.000 Wörter) liegt bei rund 4.000 Tokens. Ein mittleres Python-Skript mit 300 Zeilen: etwa 2.000 Tokens. Du kannst in einem Request grob fünf bis sechs Artikel auf einmal generieren lassen, oder acht bis zehn Codedateien. Für einzelne Tasks reicht das völlig. Für Codebasen mit Tausenden von Dateien brauchst du einen anderen Ansatz.
 
-Session-Limits? Nicht öffentlich spezifiziert. Ollama rechnet nach GPU-Time, nicht nach Tokens. Wie viele Tokens du in 5 Stunden wirklich machen kannst — unklar. Das ist opaque und ein echtes Manko.
+Session-Limits? Nicht öffentlich spezifiziert. Ollama rechnet nach GPU-Time, nicht nach Tokens. Wie viele Tokens du in 5 Stunden wirklich machen kannst: unklar. Das ist opaque und ein echtes Manko.
 
 ## Die drei Modelle: Wer ist für was da
 
@@ -54,7 +54,7 @@ Auf Deutsch läuft das problemlos. Multilingual ist eine der echten Stärken.
 
 Der Überraschungskandidat. Kimi war vor einem Jahr kaum bekannt. Jetzt läuft Cursor Composer 2 darauf.
 
-Warum? Kimi K2.5 wurde explizit für **agentic Tasks** trainiert. Tool-Use, Web-Search-Integration, Multi-Step-Reasoning. Das spiegelt sich in SWE-Bench wider: **65,8% Verified** — top 3 weltweit, proprietäre Modelle eingeschlossen.
+Warum? Kimi K2.5 wurde explizit für **agentic Tasks** trainiert. Tool-Use, Web-Search-Integration, Multi-Step-Reasoning. Das spiegelt sich in SWE-Bench wider: **65,8% Verified**, top 3 weltweit, proprietäre Modelle eingeschlossen.
 
 Das Einzigartige: bis zu **100 Sub-Agents parallel**. Claude ist Single-Agent. GPT auch. Kimi verteilt komplexe Aufgaben auf einen Schwarm und ist dadurch laut eigenem Benchmark 4,5x schneller bei der Execution. Kein Marketing-Bla, das steckt in Cursor Composer.
 
@@ -62,7 +62,7 @@ Kontextfenster: **256.000 Tokens**.
 
 **NemoTron-3-Super (NVIDIA)**
 
-120B Parameter, 12B aktiv. Hybrid Mamba-Transformer. Nicht für Text oder Coding im klassischen Sinn, sondern für **Multi-Agent Orchestration**. PinchBench Agentic Reasoning: **85,6%** — höchste Punktzahl unter allen open-source Modellen in diesem Bereich. Throughput ist 5x höher als beim Vorgänger. Wer viele gleichzeitige Anfragen hat, ist hier gut aufgehoben.
+120B Parameter, 12B aktiv. Hybrid Mamba-Transformer. Nicht für Text oder Coding im klassischen Sinn, sondern für **Multi-Agent Orchestration**. PinchBench Agentic Reasoning: **85,6%**. Höchste Punktzahl unter allen open-source Modellen in diesem Bereich. Throughput ist 5x höher als beim Vorgänger. Wer viele gleichzeitige Anfragen hat, ist hier gut aufgehoben.
 
 ## Benchmarks: Wie gut ist das wirklich?
 
@@ -77,6 +77,8 @@ Kontextfenster: **256.000 Tokens**.
 | **Gemini 3.1 Pro** | ~1.950 | ~58% | 89,2% | 1M |
 
 </div>
+
+![Benchmark-Vergleich: Coding und Agentic Performance 2026](/images/blog/ollama-pro-modelle-qwen3-kimi-vergleich-2.webp)
 
 Coding: Qwen3 gewinnt gegen Claude, deutlich. Agentic: Kimi gewinnt gegen Claude, auch deutlich. Auf MMLU-Pro (allgemeines Wissen, Reasoning) liegen beide hinter GPT und Claude.
 
@@ -96,6 +98,8 @@ Claude Sonnet 4.6 API: $3 pro Million Input-Tokens, $15 pro Million Output-Token
 | 500M+ Token/Monat | ~$4.500 | $20 | **Ollama Pro** |
 
 </div>
+
+![Break-Even-Rechnung: Ollama Pro vs Claude API Kostenvergleich](/images/blog/ollama-pro-modelle-qwen3-kimi-vergleich-3.webp)
 
 Break-Even liegt bei etwa **5 Millionen Input-Tokens pro Monat**. Das klingt viel. Ist es aber nicht, wenn du Modelle in Workflows integrierst: n8n-Automatisierungen, Code-Generation-Pipelines, Batch-Jobs. Da knackst du 5M schnell.
 
