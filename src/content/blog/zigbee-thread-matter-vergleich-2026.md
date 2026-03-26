@@ -1,8 +1,8 @@
 ---
 title: "Zigbee vs Thread vs Matter: Welches Protokoll brauchst du 2026?"
 slug: "zigbee-thread-matter-vergleich-2026"
-date: "2026-03-18"
-draft: true
+date: "2026-04-04"
+draft: false
 category: "smart-home"
 pillar: "maker"
 type: "Vergleich"
@@ -20,6 +20,8 @@ tags:
 interlinks:
   - home-assistant-einrichten-2026
   - home-assistant-zigbee-einrichten-2026
+heroImage: "/images/blog/zigbee-thread-matter-vergleich-2026-1.webp"
+heroImageThumb: "/images/blog/zigbee-thread-matter-vergleich-2026-1-thumb.webp"
 ---
 
 # Zigbee vs Thread vs Matter: Welches Protokoll brauchst du 2026?

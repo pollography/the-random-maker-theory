@@ -1,11 +1,11 @@
 ---
 title: "Home Assistant Dashboard: Mein Setup mit Mushroom Cards"
 slug: "home-assistant-dashboard-2026"
-date: "2026-03-18"
+date: "2026-03-31"
 description: "Wie ich mein Home Assistant Dashboard mit Mushroom Cards und Custom Themes aufgebaut habe — inkl. YAML-Beispiele und Schritt-fuer-Schritt Anleitung."
 tags: ["smart-home", "home-assistant", "maker", "tutorial", "diy"]
 category: "smart-home"
-draft: true
+draft: false
 readingTime: 11
 heroImage: "/images/blog/home-assistant-dashboard-2026-1.webp"
 heroImageThumb: "/images/blog/home-assistant-dashboard-2026-1-thumb.webp"

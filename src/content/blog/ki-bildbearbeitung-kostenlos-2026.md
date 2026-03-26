@@ -2,8 +2,8 @@
 title: "KI Bildbearbeitung kostenlos: Die 5 besten Online-Tools"
 titleAccent: "kostenlos"
 slug: ki-bildbearbeitung-kostenlos-2026
-date: 2026-03-18
-draft: true
+date: "2026-04-02"
+draft: false
 category: ki-tools
 pillar: AI Creative
 primaryKW: ki bildbearbeitung online kostenlos
@@ -20,6 +20,8 @@ interlinks:
   - ki-bilder-erstellen-guide-2026
 podcastSlug: "013-ki-bildbearbeitung-kostenlos-2026"
 wordCount: ~2200
+heroImage: "/images/blog/ki-bildbearbeitung-kostenlos-2026-1.webp"
+heroImageThumb: "/images/blog/ki-bildbearbeitung-kostenlos-2026-1-thumb.webp"
 ---
 
 # KI Bildbearbeitung kostenlos: Die 5 besten Online-Tools (2026)

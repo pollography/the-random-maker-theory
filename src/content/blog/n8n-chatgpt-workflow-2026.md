@@ -2,12 +2,12 @@
 title: "n8n + ChatGPT: Mein Automatisierungs-Stack"
 titleAccent: "ChatGPT"
 slug: "n8n-chatgpt-workflow-2026"
-date: "2026-03-18"
+date: "2026-04-07"
 category: "automatisierung"
 primaryKW: "n8n chatgpt workflow"
 description: "Wie ich n8n mit der ChatGPT API kombiniere: 3 echte Automationen die ich taeglich nutze — Node fuer Node erklaert. Kein Theorie-Bla, nur Praxis."
 ogImage: "og-n8n-chatgpt-workflow-2026.png"
-draft: true
+draft: false
 pillar: "Automation"
 type: "Tutorial + Deep-Dive"
 podcastSlug: "018-n8n-chatgpt-workflow-2026"
@@ -15,6 +15,8 @@ interlinks:
   - "n8n-tutorial-deutsch-2026"
   - "prompt-engineering-lernen-2026"
   - "chatgpt-vs-claude-content-creator-2026"
+heroImage: "/images/blog/n8n-chatgpt-workflow-2026-1.webp"
+heroImageThumb: "/images/blog/n8n-chatgpt-workflow-2026-1-thumb.webp"
 ---
 
 # n8n + ChatGPT: Mein Automatisierungs-Stack

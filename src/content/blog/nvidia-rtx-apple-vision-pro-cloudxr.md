@@ -106,7 +106,7 @@ Es gibt Multi-Plattform-Templates, also Vorlagen, mit denen du eine App einmal s
 
 Fuer uns als Endnutzer heisst das: Es werden deutlich mehr Apps kommen. Die Entwickler-Experience ist simpel genug, dass auch kleinere Teams sowas umsetzen koennen. Das war bei frueheren XR-Plattformen der groesste Blocker -- die Tools waren einfach zu kompliziert.
 
-Wer sich fuer die Automatisierungs-Seite interessiert: Das erinnert mich an den Trend, den wir auch bei [n8n und anderen Automatisierungstools](/blog/n8n-automatisierung-fuer-anfaenger) sehen. Einmal bauen, ueberall deployen. Die Huerde sinkt, die Adoption steigt.
+Wer sich fuer die Automatisierungs-Seite interessiert: Das erinnert mich an den Trend, den wir auch bei [n8n und anderen Automatisierungstools](/blog/n8n-tutorial-deutsch-2026) sehen. Einmal bauen, ueberall deployen. Die Huerde sinkt, die Adoption steigt.
 
 ## Was das wirklich bedeutet
 

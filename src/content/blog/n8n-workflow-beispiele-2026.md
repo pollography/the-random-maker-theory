@@ -3,8 +3,8 @@ title: "n8n Workflow Beispiele: 5 Automationen die ich täglich nutze"
 titleAccent: "Workflow"
 slug: "n8n-workflow-beispiele-2026"
 description: "Fünf echte n8n Workflow Beispiele aus meinem Alltag: RSS zu Telegram, KI-News Monitoring, Discord Alerts, Deploy-Notifications und Content-Queue. Mit Node-Aufbau und ehrlicher Einschätzung."
-date: "2026-03-18"
-draft: true
+date: "2026-03-30"
+draft: false
 category: "automatisierung"
 pillar: "automation"
 primaryKW: "n8n workflow beispiele"
@@ -23,6 +23,8 @@ interlinks:
   - "n8n-chatgpt-workflow-2026"
 readingTime: 11
 wordCount: 2240
+heroImage: "/images/blog/n8n-workflow-beispiele-2026-1.webp"
+heroImageThumb: "/images/blog/n8n-workflow-beispiele-2026-1-thumb.webp"
 ---
 
 # n8n Workflow Beispiele: 5 Automationen die ich täglich nutze

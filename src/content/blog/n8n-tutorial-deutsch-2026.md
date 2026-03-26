@@ -1,11 +1,11 @@
 ---
 title: "n8n Tutorial Deutsch: Automatisierung für Einsteiger"
 slug: "n8n-tutorial-deutsch-2026"
-date: "2026-03-18"
+date: "2026-03-26"
 description: "n8n Tutorial auf Deutsch: Lerne Workflow-Automatisierung ohne Code. Mit Vergleich zu Make & Zapier, Installation und deinem ersten Workflow."
 tags: ["n8n", "automatisierung", "tutorial", "open-source", "workflow", "tools", "anfaenger"]
 category: "automatisierung"
-draft: true
+draft: false
 readingTime: 10
 heroImage: "/images/blog/n8n-tutorial-deutsch-2026-1.webp"
 heroImageThumb: "/images/blog/n8n-tutorial-deutsch-2026-1-thumb.webp"

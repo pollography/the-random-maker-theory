@@ -1,11 +1,11 @@
 ---
 title: "Prompt Engineering lernen: Mein System"
 slug: "prompt-engineering-lernen-2026"
-date: "2026-03-18"
+date: "2026-03-27"
 description: "90% der Leute prompten falsch – mit meinem System lernst du Prompt Engineering in unter einer Stunde. Konkret, praxisnah, ohne Entwickler-Vorkenntnisse."
 tags: ["prompt engineering", "chatgpt", "claude", "ki tools", "tutorial", "ai prompts"]
 category: "ki-tools"
-draft: true
+draft: false
 readingTime: "12 min"
 heroImage: "/images/blog/prompt-engineering-lernen-2026-1.webp"
 heroImageThumb: "/images/blog/prompt-engineering-lernen-2026-1-thumb.webp"

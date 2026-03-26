@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 675px;
+    overflow: hidden;
+    background: hsl(0 0% 4%);
+    font-family: 'Inter', sans-serif;
+    color: hsl(36 18% 90%);
+    position: relative;
+  }
+
+  /* Ambient gradients */
+  .ambient {
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(ellipse at 82% 8%, rgba(228, 150, 60, 0.28) 0%, transparent 48%),
+      radial-gradient(ellipse at 8% 92%, rgba(58, 180, 168, 0.18) 0%, transparent 38%),
+      radial-gradient(ellipse at 50% 40%, rgba(180, 120, 50, 0.07) 0%, transparent 60%);
+  }
+
+  /* Vignette */
+  .vignette {
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 40%, hsl(0 0% 0% / 0.3) 100%);
+    z-index: 10;
+  }
+
+  /* Film grain */
+  .grain {
+    position: absolute; inset: 0; pointer-events: none; z-index: 20;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 256px 256px;
+    opacity: 0.45;
+    mix-blend-mode: overlay;
+  }
+
+  .content {
+    position: relative; z-index: 5;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    height: 100%;
+    gap: 24px;
+  }
+
+  /* Category badge */
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: hsl(25 66% 54% / 0.12);
+    border: 1px solid hsl(25 66% 54% / 0.3);
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: hsl(25 66% 54%);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    width: fit-content;
+  }
+
+  .badge-icon {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: hsl(36 18% 90%);
+    max-width: 800px;
+  }
+
+  h1 .accent {
+    color: hsl(25 66% 54%);
+    font-style: italic;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    color: hsl(30 10% 55%);
+    max-width: 650px;
+    line-height: 1.5;
+  }
+
+  /* Desktop mockup decoration */
+  .mockup {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 340px;
+    height: 240px;
+    background: hsl(0 0% 10%);
+    border: 1px solid hsl(0 0% 100% / 0.06);
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 4;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px hsl(25 66% 54% / 0.08);
+  }
+
+  .mockup-titlebar {
+    height: 32px;
+    background: hsl(0 0% 7%);
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    gap: 6px;
+    border-bottom: 1px solid hsl(0 0% 100% / 0.04);
+  }
+
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-red { background: hsl(0 70% 55%); }
+  .dot-yellow { background: hsl(45 70% 55%); }
+  .dot-green { background: hsl(120 50% 45%); }
+
+  .mockup-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mockup-line {
+    height: 8px;
+    border-radius: 4px;
+    background: hsl(0 0% 100% / 0.06);
+  }
+
+  .mockup-line.short { width: 60%; }
+  .mockup-line.medium { width: 80%; }
+  .mockup-line.accent { background: hsl(25 66% 54% / 0.2); width: 45%; }
+
+  .mockup-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, hsl(25 66% 54% / 0.3), hsl(172 50% 46% / 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+
+  /* TRMT branding */
+  .branding {
+    position: absolute;
+    bottom: 28px;
+    right: 80px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: hsl(30 10% 30%);
+    letter-spacing: 0.1em;
+    z-index: 6;
+  }
+
+  .branding span { color: hsl(25 66% 54% / 0.6); }
+</style>
+</head>
+<body>
+  <div class="ambient"></div>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+
+  <div class="content">
+    <div class="badge">
+      <span class="badge-icon">&#9672;</span>
+      Tools &amp; Produktivitaet
+    </div>
+    <h1>Claude <span class="accent">Cowork</span>: Dein KI-Desktop-Assistent</h1>
+    <p class="subtitle">Was die App kann, wie sie sich von Claude Code unterscheidet — und wie du sie eine Woche kostenlos testest.</p>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-titlebar">
+      <div class="dot dot-red"></div>
+      <div class="dot dot-yellow"></div>
+      <div class="dot dot-green"></div>
+    </div>
+    <div class="mockup-content">
+      <div class="mockup-icon">&#10024;</div>
+      <div class="mockup-line medium"></div>
+      <div class="mockup-line"></div>
+      <div class="mockup-line short"></div>
+      <div class="mockup-line accent"></div>
+      <div class="mockup-line medium"></div>
+      <div class="mockup-line short"></div>
+    </div>
+  </div>
+
+  <div class="branding"><span>TRMT</span> / therandommakertheory.com</div>
+</body>
+</html>

@@ -3,10 +3,10 @@ title: "WLED auf ESP32: LED-Strips smart machen"
 titleAccent: "WLED"
 slug: "wled-esp32-anleitung-2026"
 description: "WLED auf den ESP32 flashen, WS2812B LED-Strips einrichten und mit Home Assistant verbinden — komplette Anleitung für unter 35 EUR. Kein Vorwissen nötig."
-date: "2026-03-18"
+date: "2026-03-29"
 category: "maker"
 pillar: "maker"
-draft: true
+draft: false
 primaryKW: "wled esp32 anleitung"
 tags: ["wled", "esp32", "led", "ws2812b", "home-assistant", "smart-home", "diy"]
 podcastSlug: "008-wled-esp32-anleitung-2026"
@@ -21,6 +21,8 @@ affiliate:
   - product: "Netzteil 5V 3A"
     price: "~12 EUR"
 ogImage: "/images/wled-esp32-anleitung-2026-og.jpg"
+heroImage: "/images/blog/wled-esp32-anleitung-2026-1.webp"
+heroImageThumb: "/images/blog/wled-esp32-anleitung-2026-1-thumb.webp"
 ---
 
 # WLED auf ESP32: LED-Strips in 20 Minuten smart machen

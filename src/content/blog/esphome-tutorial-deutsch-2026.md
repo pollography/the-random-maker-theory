@@ -1,11 +1,11 @@
 ---
 title: "ESPHome Tutorial Deutsch: Smart Sensoren ohne Code"
 slug: "esphome-tutorial-deutsch-2026"
-date: "2026-03-18"
+date: "2026-04-03"
 description: "ESPHome Tutorial auf Deutsch: ESP32-Sensor in Home Assistant einbinden ohne eine Zeile C++ zu schreiben. YAML-Config, OTA-Updates und der Vergleich mit Arduino erklaert."
 tags: ["esphome", "esp32", "home-assistant", "yaml", "smart-home", "maker", "tutorial", "anfaenger", "ota"]
 category: "smart-home"
-draft: true
+draft: false
 readingTime: 11
 heroImage: "/images/blog/esphome-tutorial-deutsch-2026-1.webp"
 heroImageThumb: "/images/blog/esphome-tutorial-deutsch-2026-1-thumb.webp"

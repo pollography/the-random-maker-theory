@@ -1,11 +1,11 @@
 ---
 title: "Mein Life OS Dashboard zeigt AI Agents als Widget — So hab ichs gebaut"
 slug: "life-os-paperclip-agent-office-widget"
-date: "2026-03-25"
+date: "2026-04-10"
 description: "Life OS Dashboard mit AI Agent Widget: Ich zeig dir, wie ich Paperclip in mein persoenliches Dashboard eingebaut hab. React, Vite, echte API-Calls. Zum Nachbauen."
 tags: ["life-os", "dashboard", "paperclip", "ai-agents", "react", "automation", "adhs", "tutorial"]
 category: "automatisierung"
-draft: true
+draft: false
 readingTime: 10
 heroImage: "/images/blog/life-os-paperclip-agent-office-widget-1.webp"
 heroImageThumb: "/images/blog/life-os-paperclip-agent-office-widget-1-thumb.webp"
@@ -317,7 +317,7 @@ Dieses Widget loest drei konkrete ADHS-Probleme:
 
 Das Widget ist V1. Funktioniert, tut was es soll. Aber meine Ideen-Liste ist laenger als mein Budget:
 
-- **Push-Notifications** wenn ein Agent blockiert ist — Browser Notifications, vielleicht ueber [n8n](/blog/n8n-automatisierung-fuer-anfaenger) als Middleware
+- **Push-Notifications** wenn ein Agent blockiert ist — Browser Notifications, vielleicht ueber [n8n](/blog/n8n-tutorial-deutsch-2026) als Middleware
 - **Mobile View** — das Widget responsive machen ist easy, aber ich will eigentlich eine PWA die ich als Home Screen App nutzen kann
 - **Agent Timeline** — eine Zeitleiste die zeigt wann welcher Agent aktiv war, wie ein Gantt-Chart fuer AI Arbeit
 - **One-Click Unblock** — direkt aus dem Widget heraus blockierte Tasks kommentieren oder reassignen
@@ -355,4 +355,4 @@ Den kompletten Code findest du auf meinem GitHub. Und wenn du Fragen hast oder d
 
 ---
 
-*Dieser Artikel ist Teil meiner Automation-Serie. Wenn dich interessiert wie ich n8n fuer Automatisierungen nutze, schau dir meinen [n8n Einsteiger-Guide](/blog/n8n-automatisierung-fuer-anfaenger) an.*
+*Dieser Artikel ist Teil meiner Automation-Serie. Wenn dich interessiert wie ich n8n fuer Automatisierungen nutze, schau dir meinen [n8n Einsteiger-Guide](/blog/n8n-tutorial-deutsch-2026) an.*

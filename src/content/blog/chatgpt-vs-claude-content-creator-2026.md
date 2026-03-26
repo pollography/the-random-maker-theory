@@ -1,8 +1,8 @@
 ---
 title: "ChatGPT vs Claude fuer Content Creator: Ehrlicher Vergleich"
 slug: chatgpt-vs-claude-content-creator-2026
-date: 2026-03-18
-draft: true
+date: "2026-04-05"
+draft: false
 category: ki-tools
 titleAccent: "Claude"
 podcastSlug: "016-chatgpt-vs-claude-content-creator-2026"
@@ -20,6 +20,8 @@ interlinks:
   - chatgpt-prompts-erstellen-2026
   - claude-code-tutorial-deutsch-2026
 wordCount: ~2800
+heroImage: "/images/blog/chatgpt-vs-claude-content-creator-2026-1.webp"
+heroImageThumb: "/images/blog/chatgpt-vs-claude-content-creator-2026-1-thumb.webp"
 ---
 
 # ChatGPT vs Claude fuer Content Creator: Ehrlicher Vergleich 2026

@@ -3,9 +3,9 @@ title: "Home Assistant einrichten: Komplett-Guide 2026"
 titleAccent: "Home Assistant"
 description: "Home Assistant einrichten in 2026: Schritt-fuer-Schritt von Hardware-Wahl bis erste Automatisierung. Raspberry Pi 5, HA Green oder Mini-PC? Hier ist die ehrliche Entscheidungshilfe."
 slug: home-assistant-einrichten-2026
-date: 2026-03-18
+date: "2026-03-28"
 updatedAt: 2026-03-18
-draft: true
+draft: false
 category: smart-home
 tags:
   - home-assistant
@@ -32,6 +32,8 @@ affiliate:
     price: "~100 EUR"
   - name: "Mini-PC (z.B. Beelink EQ12)"
     price: "~150 EUR"
+heroImage: "/images/blog/home-assistant-einrichten-2026-1.webp"
+heroImageThumb: "/images/blog/home-assistant-einrichten-2026-1-thumb.webp"
 ---
 
 # Home Assistant einrichten: Komplett-Guide 2026

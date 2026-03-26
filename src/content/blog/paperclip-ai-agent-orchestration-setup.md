@@ -2,15 +2,17 @@
 title: "28 AI Agents die für mich arbeiten — Mein Paperclip Setup"
 slug: paperclip-ai-agent-orchestration-setup
 description: "Wie ich mit Paperclip AI 28 Agents orchestriere — ohne einen Cent extra zu zahlen. Claude Code, Codex, Gemini und Ollama in einem System."
-date: 2026-03-19
+date: "2026-04-08"
 category: automation
 tags: [paperclip, ai-agents, automation, claude-code, orchestration]
 image: /images/blog/paperclip-agent-empire-og.webp
 pillar: automation
-draft: true
+draft: false
 readingTime: 14
 titleAccent: "28 AI Agents"
 keywords: [ai agent orchestration, paperclip ai, claude code agents, multi agent system]
+heroImage: "/images/blog/paperclip-ai-agent-orchestration-setup-1.webp"
+heroImageThumb: "/images/blog/paperclip-ai-agent-orchestration-setup-1-thumb.webp"
 ---
 
 # 28 AI Agents die für mich arbeiten — Mein Paperclip Setup

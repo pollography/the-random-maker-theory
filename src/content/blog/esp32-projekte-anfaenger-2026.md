@@ -1,8 +1,8 @@
 ---
 title: "ESP32 Projekte fuer Anfaenger: 5 Ideen unter 20 Euro"
 slug: esp32-projekte-anfaenger-2026
-date: 2026-03-18
-draft: true
+date: "2026-04-06"
+draft: false
 category: maker
 primaryKW: "esp32 projekt anfaenger"
 metaDescription: "5 ESP32 Projekte fuer Anfaenger unter 20 Euro: Temperatursensor, OLED Display, Wetterstation, Bewegungsmelder und automatische Pflanzenbewaesserung. Mit Einkaufsliste und Schritt-fuer-Schritt Anleitung."
@@ -16,6 +16,8 @@ affiliate:
   - "Sensor-Kit (~20 EUR)"
   - "ESP32 Board (~8 EUR)"
   - "Starter Kit (~25 EUR)"
+heroImage: "/images/blog/esp32-projekte-anfaenger-2026-1.webp"
+heroImageThumb: "/images/blog/esp32-projekte-anfaenger-2026-1-thumb.webp"
 ---
 
 # ESP32 Projekte fuer Anfaenger: 5 Ideen unter 20 Euro
