@@ -18,7 +18,7 @@ tags:
 interlinks:
   - prompt-engineering-lernen-2026
   - chatgpt-prompts-erstellen-2026
-  - claude-code-tutorial-deutsch-2026
+  - claude-code-vs-cursor-vs-copilot-2026
 wordCount: ~2800
 heroImage: "/images/blog/chatgpt-vs-claude-content-creator-2026-1.webp"
 heroImageThumb: "/images/blog/chatgpt-vs-claude-content-creator-2026-1-thumb.webp"
@@ -205,7 +205,7 @@ Ich nutze beide. Das ist keine Aussage ueber Unentschlossenheit, sondern ueber d
 
 Was du jetzt tun kannst: Wenn du noch kein kostenpflichtiges Abo hast, fang mit ChatGPT Plus an – breitere Feature-Basis. Wenn du schon ChatGPT Plus hast und hauptsaechlich Texte schreibst, teste Claude Pro einen Monat. Der Unterschied im Schreibstil ist spuerbar.
 
-Und wenn du tiefer in das Thema Prompting einsteigen willst – mein [Claude Code Tutorial auf Deutsch](/blog/claude-code-tutorial-deutsch-2026) zeigt wie ich Claude als vollstaendiges Entwicklungs-Tool nutze.
+Und wenn du tiefer in das Thema Prompting einsteigen willst – mein [Claude Code vs Cursor vs Copilot Vergleich](/blog/claude-code-vs-cursor-vs-copilot-2026) zeigt wie ich Claude als vollstaendiges Entwicklungs-Tool nutze.
 
 ---
 

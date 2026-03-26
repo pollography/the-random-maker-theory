@@ -31,15 +31,15 @@ Der Markt hat sich brutal veraendert. 2024 war Midjourney quasi Monopolist fuer 
 
 <div class="vb-card">
 
-| Tool | Preis ab | Fotorealismus | Text im Bild | Kostenlos? | Am besten fuer |
-|------|----------|---------------|-------------|------------|----------------|
-| **Midjourney v7** | $10/Monat | Sehr gut | Schwach | Nein | Kuenstlerische Bilder |
-| **Flux.2** | Kostenlos (lokal) | Absolut top | Gut | Ja | Fotorealismus |
-| **Leonardo AI** | $0 | Solide | Gut | Ja (150/Tag) | Anfaenger |
-| **Ideogram 3.0** | $0 | Okay | Bestes am Markt | Ja (20/Tag) | Text auf Bildern |
-| **Adobe Firefly** | $10/Monat | Sehr gut | Mittel | 25 Credits/Monat | Adobe CC Nutzer |
-| **GPT Image** | $20/Monat (ChatGPT+) | Sehr gut | Sehr gut | Nein | Einfachheit |
-| **Stable Diffusion** | Kostenlos (lokal) | Gut bis top | Schwach | Ja | Volle Kontrolle |
+| Tool                 | Preis ab             | Fotorealismus | Text im Bild    | Kostenlos?       | Am besten fuer        |
+| -------------------- | -------------------- | ------------- | --------------- | ---------------- | --------------------- |
+| **Midjourney v7**    | $10/Monat            | Sehr gut      | Schwach         | Nein             | Kuenstlerische Bilder |
+| **Flux.2**           | Kostenlos (lokal)    | Absolut top   | Gut             | Ja               | Fotorealismus         |
+| **Leonardo AI**      | $0                   | Solide        | Gut             | Ja (150/Tag)     | Anfaenger             |
+| **Ideogram 3.0**     | $0                   | Okay          | Bestes am Markt | Ja (20/Tag)      | Text auf Bildern      |
+| **Adobe Firefly**    | $10/Monat            | Sehr gut      | Mittel          | 25 Credits/Monat | Adobe CC Nutzer       |
+| **GPT Image**        | $20/Monat (ChatGPT+) | Sehr gut      | Sehr gut        | Nein             | Einfachheit           |
+| **Stable Diffusion** | Kostenlos (lokal)    | Gut bis top   | Schwach         | Ja               | Volle Kontrolle       |
 
 </div>
 
@@ -66,6 +66,7 @@ Flux kommt von Black Forest Labs. Und dieses Tool hat mich als Fotograf am meist
 Tiefenschaerfe stimmt. Linsenverzerrung stimmt. Filmkorn wo es hingehoert. Wenn ich nicht wuesste dass das KI ist, wuerde ich auf manche Bilder reinfallen.
 
 **Die Versionen:**
+
 - **Flux.2 [pro]:** Hosted ueber die BFL API, $0.03 pro Megapixel
 - **Flux.2 [dev]:** Open Source, Apache 2.0 Lizenz, komplett kostenlos lokal nutzbar
 - **Flux.2 [klein]:** Schnelle Variante, generiert unter 1 Sekunde auf moderner Hardware
@@ -81,6 +82,7 @@ Tiefenschaerfe stimmt. Linsenverzerrung stimmt. Filmkorn wo es hingehoert. Wenn 
 Leonardo AI ist meine Empfehlung fuer alle die KI Bilder erstellen wollen ohne sofort Geld auszugeben. 150 Credits am Tag. Kostenlos. Und die Qualitaet ist ordentlich.
 
 **Preise:**
+
 - Kostenlos: 150 Credits taeglich
 - Apprentice: ~$10/Monat
 - Artisan: ~$20/Monat
@@ -99,6 +101,7 @@ Ideogram macht eine Sache besser als alle anderen: Text auf Bildern. 90% Genauig
 Du willst ein Poster mit "OPENING SOON"? Ideogram. Ein Logo mit Text? Ideogram. Eine Menuekarte fuer ein Restaurant? Rate mal.
 
 **Preise:**
+
 - Kostenlos: 20 Bilder/Tag (70% Qualitaet)
 - Pro: ab $7/Monat (1.000 Bilder)
 - Premium: ~$30/Monat (4.000 Bilder)
@@ -114,6 +117,7 @@ Du willst ein Poster mit "OPENING SOON"? Ideogram. Ein Logo mit Text? Ideogram. 
 Wenn du eh schon Adobe Creative Cloud bezahlst, ist Firefly quasi gratis dabei. Direkt in Photoshop, Illustrator, Premiere Pro integriert. Generative Fill ist brutal effektiv.
 
 **Preise:**
+
 - Enthalten in Creative Cloud Abos
 - Firefly Pro: ab $9.99/Monat mit 4.000 Credits
 - Premium: ab ~$50/Monat fuer Vielnutzer
@@ -141,11 +145,13 @@ GPT Image ist in ChatGPT Plus ($20/Monat) enthalten. Die Qualitaet ist gut, Text
 Stable Diffusion ist die Open-Source-Alternative. Laeuft komplett lokal auf deinem Rechner. Kostenlos. Keine Cloud, keine Abos, keine Limits.
 
 **Aktuelle Modelle:**
+
 - **SDXL 1.0:** Der Allrounder, beste Community-Unterstuetzung mit LoRAs und ControlNet
 - **SD3.5:** Neuer, besser bei Text, aber weniger Community-Modelle
 - **Flux.1/2:** Technically ein eigenes Modell, laeuft aber auch ueber ComfyUI
 
 **Installation:** Du brauchst eine der Web UIs:
+
 - **ComfyUI:** Node-basiert, flexibel, aber steile Lernkurve
 - **AUTOMATIC1111:** Einfacher, klassisch, gut fuer Anfaenger
 - **Forge UI:** Der Mittelweg, empfohlen fuer 2026
@@ -246,13 +252,13 @@ Lass uns mal Klartext reden ueber Geld. Weil "kostenlos" nicht immer kostenlos b
 
 <div class="vb-card">
 
-| Szenario | Tool | Kosten/Monat | Bilder/Monat |
-|----------|------|-------------|-------------|
-| Hobby, gelegentlich | Leonardo AI Free | $0 | ~150 |
-| Content Creator | Midjourney Standard | $30 | ~900 |
-| Designer/Agentur | Midjourney Pro + Ideogram Pro | $67 | ~2.000+ |
-| Power User (lokal) | Flux.2 + Strom | ~$5-10 Strom | Unbegrenzt |
-| Adobe-Workflow | CC Photography + Firefly | ~$12 | 4.000 Credits |
+| Szenario            | Tool                          | Kosten/Monat | Bilder/Monat  |
+| ------------------- | ----------------------------- | ------------ | ------------- |
+| Hobby, gelegentlich | Leonardo AI Free              | $0           | ~150          |
+| Content Creator     | Midjourney Standard           | $30          | ~900          |
+| Designer/Agentur    | Midjourney Pro + Ideogram Pro | $67          | ~2.000+       |
+| Power User (lokal)  | Flux.2 + Strom                | ~$5-10 Strom | Unbegrenzt    |
+| Adobe-Workflow      | CC Photography + Firefly      | ~$12         | 4.000 Credits |
 
 </div>
 
@@ -336,8 +342,9 @@ Also ja: Nutze diese Tools. Experimentier damit. Lerne prompten. Aber vergiss ni
 - [KI-Bilder Urheberrecht Deutschland](https://www.urheberrecht.de/ki-generierte-bilder/), Rechtliche Einordnung
 
 **Weiterlesen auf TRMT:**
+
 - [KI Bildbearbeitung: Mein Workflow als Fotograf](/blog/ki-bildbearbeitung-workflow-fotograf-2026)
 - [Midjourney Prompts Deutsch: Guide fuer Fotografen](/blog/midjourney-prompts-fotografen-2026)
-- [KI Bilder mit eigenem Bild erstellen](/blog/ki-bilder-mit-eigenem-bild-2026)
+- [KI Bildbearbeitung kostenlos: Die 5 besten Online-Tools](/blog/ki-bildbearbeitung-kostenlos-2026)
 
 . TRMT

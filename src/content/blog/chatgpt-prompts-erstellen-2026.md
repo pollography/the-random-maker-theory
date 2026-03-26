@@ -6,7 +6,7 @@ description: "ChatGPT Prompts erstellen die wirklich funktionieren — mit Syste
 tags: ["chatgpt", "prompts erstellen", "prompt engineering", "ki tools", "tutorial", "system prompt", "ai prompts"]
 category: "ki-tools"
 draft: false
-readingTime: "11 min"
+readingTime: 11
 heroImage: "/images/blog/chatgpt-prompts-erstellen-2026-1.webp"
 heroImageThumb: "/images/blog/chatgpt-prompts-erstellen-2026-1-thumb.webp"
 titleAccent: "Prompts"

@@ -19,7 +19,7 @@ tags:
   - thread
 interlinks:
   - home-assistant-einrichten-2026
-  - home-assistant-zigbee-einrichten-2026
+  - esphome-tutorial-deutsch-2026
 heroImage: "/images/blog/zigbee-thread-matter-vergleich-2026-1.webp"
 heroImageThumb: "/images/blog/zigbee-thread-matter-vergleich-2026-1-thumb.webp"
 ---
@@ -268,7 +268,7 @@ Ich nutze Home Assistant als Zentrale fuer beides. Hier ist mein aktuelles Setup
 
 Was ich dabei gelernt habe: Die Zigbee2MQTT-Stabilitaet ist nach wie vor unschlagbar. Die Matter-Integration in Home Assistant hat sich in den letzten Versionen stark verbessert, hakelt aber gelegentlich noch bei der Einrichtung neuer Geraete.
 
-Wenn du Home Assistant nutzt und noch keinen Zigbee-Coordinator hast, erklaere ich den Aufbau Schritt fuer Schritt in meinem [Zigbee-Einrichten Guide](/home-assistant-zigbee-einrichten-2026).
+Wenn du Home Assistant nutzt und noch keinen Zigbee-Coordinator hast, erklaere ich den Aufbau Schritt fuer Schritt in meinem [ESPHome Tutorial: Sensoren ohne Code](/blog/esphome-tutorial-deutsch-2026).
 
 ---
 
@@ -297,4 +297,4 @@ _Hast du Fragen zu deinem konkreten Setup? Schreib mir — ich schaue es mir ger
 **Weiterlesen:**
 
 - [Home Assistant einrichten: Komplett-Guide 2026](/home-assistant-einrichten-2026)
-- [Home Assistant Zigbee einrichten: Schritt fuer Schritt](/home-assistant-zigbee-einrichten-2026)
+- [ESPHome Tutorial: Sensoren ohne Code einbinden](/blog/esphome-tutorial-deutsch-2026)

@@ -24,7 +24,7 @@ podcastSlug: "007-home-assistant-einrichten-2026"
 interlinks:
   - esp32-home-assistant-erster-sensor-2026
   - home-assistant-dashboard-2026
-  - zigbee-thread-matter-2026
+  - zigbee-thread-matter-vergleich-2026
 affiliate:
   - name: "Raspberry Pi 5 (4GB)"
     price: "~80 EUR"
@@ -250,7 +250,7 @@ Wenn du Zigbee-Geraete hast oder kaufen willst (IKEA Tradfri, Aqara, Sonoff, etc
 
 Der guenstigste und am besten unterstuetzte: **SONOFF Zigbee 3.0 USB Dongle Plus** fuer ca. 20 EUR.
 
-Wenn du dir den Artikel ueber Protokolle sparen willst: Zigbee ist 2026 noch immer die beste Wahl fuer guenstige Sensoren und Lampen. Thread und Matter sind fuer neue Geraete interessant, aber die Auswahl ist noch kleiner und teurer. Mehr dazu: [Zigbee vs Thread vs Matter: Was brauchst du 2026?](/blog/zigbee-thread-matter-2026)
+Wenn du dir den Artikel ueber Protokolle sparen willst: Zigbee ist 2026 noch immer die beste Wahl fuer guenstige Sensoren und Lampen. Thread und Matter sind fuer neue Geraete interessant, aber die Auswahl ist noch kleiner und teurer. Mehr dazu: [Zigbee vs Thread vs Matter: Was brauchst du 2026?](/blog/zigbee-thread-matter-vergleich-2026)
 
 ---
 

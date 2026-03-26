@@ -6,7 +6,7 @@ description: "Die 25 besten ChatGPT Prompts fuer Content, Produktivitaet, Resear
 tags: ["chatgpt", "beste prompts", "ki tools", "prompt sammlung", "ai prompts", "produktivitaet", "content creator"]
 category: "ki-tools"
 draft: true
-readingTime: "14 min"
+readingTime: 14
 heroImage: "/images/blog/beste-chatgpt-prompts-2026-1.webp"
 heroImageThumb: "/images/blog/beste-chatgpt-prompts-2026-1-thumb.webp"
 titleAccent: "25 besten"

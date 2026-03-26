@@ -6,7 +6,7 @@ description: "90% der Leute prompten falsch – mit meinem System lernst du Prom
 tags: ["prompt engineering", "chatgpt", "claude", "ki tools", "tutorial", "ai prompts"]
 category: "ki-tools"
 draft: false
-readingTime: "12 min"
+readingTime: 12
 heroImage: "/images/blog/prompt-engineering-lernen-2026-1.webp"
 heroImageThumb: "/images/blog/prompt-engineering-lernen-2026-1-thumb.webp"
 titleAccent: "Prompt Engineering"
