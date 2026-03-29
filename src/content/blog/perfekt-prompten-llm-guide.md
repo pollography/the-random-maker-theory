@@ -57,10 +57,10 @@ Mein Lieblingstrick. Sag der KI, wer sie sein soll.
 
 Hier der direkte Vergleich:
 
-| Vager Prompt | Präziser Prompt |
-| :--- | :--- |
+| Vager Prompt                 | Präziser Prompt                                                                                                                                                |
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | „Fass den Bericht zusammen." | „Du bist Senior-Unternehmensberater. Analysiere den Quartalsbericht für den Vorstand. Fokus: Business-Impact. Format: Markdown-Tabelle mit Risiko und Chance." |
-| „Hilf mir beim Code-Fehler." | „Du bist Senior-Python-Entwickler mit Security-Fokus. Analysiere diesen Code auf SQL-Injection. Erkläre den Fehler, dann gib den fixierten Code." |
+| „Hilf mir beim Code-Fehler." | „Du bist Senior-Python-Entwickler mit Security-Fokus. Analysiere diesen Code auf SQL-Injection. Erkläre den Fehler, dann gib den fixierten Code."              |
 
 Der Unterschied? Nacht und Tag. Probier's mal aus.
 
@@ -105,16 +105,20 @@ Jetzt wird's spannend. Manchmal rast die KI zu schnell zur Antwort und überspri
 Simpelster Fix: Sag der KI „Lass uns Schritt für Schritt denken." Das zwingt sie, ihre Logik auszuschreiben. Die bemerkt dabei eigene Fehler. Quasi ein Selbstkorrektur-Mechanismus.
 
 Konkretes Beispiel — ohne CoT:
+
 ```
 Was ist günstiger: 3 Packungen à 500g für 4,99€ oder 2 Packungen à 800g für 6,49€?
 ```
+
 Die KI spuckt oft einfach eine Antwort aus. Manchmal richtig, manchmal nicht.
 
 Mit CoT:
+
 ```
 Was ist günstiger: 3 Packungen à 500g für 4,99€ oder 2 Packungen à 800g für 6,49€?
 Denke Schritt für Schritt. Berechne erst den Kilopreis für beide Optionen.
 ```
+
 Jetzt rechnet die KI sauber: Option A = 1500g für 14,97€ = 9,98€/kg. Option B = 1600g für 12,98€ = 8,11€/kg. Klare Antwort, nachvollziehbarer Rechenweg. Dieser kleine Zusatz macht den Unterschied zwischen Raten und Rechnen.
 
 ### Tree-of-Thought (ToT)
@@ -124,6 +128,7 @@ Die absolute Endstufe. Statt einer Gedankenkette baut die KI einen Baum. Mehrere
 Stell dir das so vor wie beim Schach. Du überlegst nicht nur einen Zug voraus, sondern spielst mehrere Varianten im Kopf durch und wählst die beste.
 
 Der ToT-Workflow:
+
 1. **Generate** — Mehrere Lösungsansätze erstellen
 2. **Evaluate** — Jeden Ansatz bewerten (Sackgasse oder vielversprechend?)
 3. **Expand** — Nur die guten Zweige weiterverfolgen
@@ -157,6 +162,7 @@ Entwickelt von Sheila Teo. Sechs Komponenten:
 - **R**esponse: Format (Tabelle, JSON, Fließtext...)
 
 Konkretes Beispiel:
+
 ```
 Context: Ich launche nächste Woche ein SaaS-Produkt für Freelancer.
 Objective: Erstelle 5 LinkedIn-Posts für die Launch-Woche.
@@ -179,6 +185,7 @@ Mein Urteil: Stark. Nutze ich für alles, wo's professionell sein muss.
 Das N ist das Besondere. Du entscheidest: Einschränken oder Loslassen. [Für Recherche und Content-Erstellung echt geil.](https://juuzt.ai/knowledge-base/prompt-frameworks/the-risen-framework/)
 
 Konkretes RISEN-Beispiel:
+
 ```
 Role: Du bist ein erfahrener Tech-Journalist.
 Instructions: Schreibe einen Vergleichsartikel über drei KI-Coding-Tools.
@@ -294,6 +301,8 @@ Mein Rat: Fang mit RTF an für den Alltag. Steig auf COSTAR um wenn's profession
 Prompting ist die Brücke zwischen deiner Absicht und dem KI-Output. Ohne Brücke bleibt die KI ein nettes Spielzeug. Mit ihr wird sie zum echten Produktivitäts-Partner.
 
 Probier's aus. Fang heute an. Und wenn der erste Prompt nicht sitzt: Iterieren. Das ist der ganze Trick.
+
+Wer noch einen Schritt weiter gehen will: Mein [Prompt Engineering Guide](/blog/prompt-engineering-lernen-2026) geht auf konkrete Techniken ein — mit Template-System und 10 Copy-Paste-Prompts für verschiedene Use Cases.
 
 — TRMT
 

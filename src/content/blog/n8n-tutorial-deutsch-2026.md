@@ -3,7 +3,16 @@ title: "n8n Tutorial Deutsch: Automatisierung für Einsteiger"
 slug: "n8n-tutorial-deutsch-2026"
 date: "2026-03-26"
 description: "n8n Tutorial auf Deutsch: Lerne Workflow-Automatisierung ohne Code. Mit Vergleich zu Make & Zapier, Installation und deinem ersten Workflow."
-tags: ["n8n", "automatisierung", "tutorial", "open-source", "workflow", "tools", "anfaenger"]
+tags:
+  [
+    "n8n",
+    "automatisierung",
+    "tutorial",
+    "open-source",
+    "workflow",
+    "tools",
+    "anfaenger",
+  ]
 category: "automatisierung"
 draft: false
 readingTime: 10
@@ -37,17 +46,17 @@ Der Name "n8n" steht übrigens für "nodemation" — Node + Automation. Ziemlich
 
 "Warum nicht einfach Zapier nehmen?" Gute Frage. Kurze Antwort: Geld und Kontrolle.
 
-| Kriterium | n8n | Zapier | Make |
-|---|---|---|---|
-| **Open-Source** | Ja, voller Quellcode | Nein | Nein |
-| **Self-Hosting** | Ja (Docker, VPS, lokal) | Nein | Nein |
-| **Datenkontrolle** | Du bestimmst, DSGVO-safe | US-Server | EU-/US-Server |
-| **Abrechnung** | Pro Workflow-Ausführung | Pro Task (jeder Schritt zählt!) | Pro Operation |
-| **Native Integrationen** | ~400+ (plus HTTP-Node für alles) | 8.000+ | 1.500+ |
-| **KI-Features** | LangChain, AI Agents, Multi-Agent | Zapier Agents | Make AI Agents |
-| **Cloud-Preis** | Ab 20 €/Monat | Ab 20 €/Monat (aber schnell teurer) | Ab 10 €/Monat |
-| **Self-Hosted-Preis** | Nur Serverkosten (~5 €/Monat) | Nicht möglich | Nicht möglich |
-| **Lernkurve** | Mittel | Niedrig | Mittel |
+| Kriterium                | n8n                               | Zapier                              | Make           |
+| ------------------------ | --------------------------------- | ----------------------------------- | -------------- |
+| **Open-Source**          | Ja, voller Quellcode              | Nein                                | Nein           |
+| **Self-Hosting**         | Ja (Docker, VPS, lokal)           | Nein                                | Nein           |
+| **Datenkontrolle**       | Du bestimmst, DSGVO-safe          | US-Server                           | EU-/US-Server  |
+| **Abrechnung**           | Pro Workflow-Ausführung           | Pro Task (jeder Schritt zählt!)     | Pro Operation  |
+| **Native Integrationen** | ~400+ (plus HTTP-Node für alles)  | 8.000+                              | 1.500+         |
+| **KI-Features**          | LangChain, AI Agents, Multi-Agent | Zapier Agents                       | Make AI Agents |
+| **Cloud-Preis**          | Ab 20 €/Monat                     | Ab 20 €/Monat (aber schnell teurer) | Ab 10 €/Monat  |
+| **Self-Hosted-Preis**    | Nur Serverkosten (~5 €/Monat)     | Nicht möglich                       | Nicht möglich  |
+| **Lernkurve**            | Mittel                            | Niedrig                             | Mittel         |
 
 Der Knackpunkt ist die Abrechnung. Bei Zapier kostet ein Workflow mit 20 Schritten auch 20 Tasks pro Durchlauf. Bei n8n? Eine Execution. Egal ob dein Workflow 3 oder 50 Nodes hat. Bei 50.000 Operationen im Monat zahlst du bei Zapier rund 4.200 € im Jahr. Ein selbst gehostetes n8n kostet dich die VPS-Miete — circa 60 bis 200 € im Jahr. Unlimitiert.
 
@@ -162,7 +171,7 @@ Nach Monaten mit n8n hab ich ein paar Lektionen gelernt, die ich dir ersparen wi
 
 **Workflow-Templates importieren statt alles selbst bauen.** Geh auf n8n.io/workflows — da findest du tausende fertige Workflows von der Community. Du lädst die JSON-Datei runter, klickst im n8n-Editor auf "Import", und hast einen funktionierenden Workflow. Credentials eintragen, testen, aktivieren. Dauert fünf Minuten statt zwei Stunden. Grad am Anfang ist das der schnellste Weg, um zu lernen wie erfahrene Nutzer ihre Workflows strukturieren.
 
-**n8n 2.0 und AI-Agents.** Seit dem großen 2.0-Update hat n8n native AI-Agent-Unterstützung. Du kannst Multi-Agent-Systeme bauen, LangChain direkt im Editor nutzen, und sogar RAG-Pipelines (Retrieval Augmented Generation) zusammenklicken. Wenn du mit KI-Automatisierung starten willst, ist n8n grad das spannendste Tool auf dem Markt. Kein anderes Automatisierungs-Tool bietet diese Tiefe bei AI-Integration.
+**n8n 2.0 und AI-Agents.** Seit dem großen 2.0-Update hat n8n native AI-Agent-Unterstützung. Du kannst Multi-Agent-Systeme bauen, LangChain direkt im Editor nutzen, und sogar RAG-Pipelines (Retrieval Augmented Generation) zusammenklicken. Wenn du mit KI-Automatisierung starten willst, ist n8n grad das spannendste Tool auf dem Markt. Kein anderes Automatisierungs-Tool bietet diese Tiefe bei AI-Integration. Ich nutze n8n selbst als Herzstück meiner [Paperclip Agent-Orchestration](/blog/paperclip-ai-agent-orchestration-setup) — da laufen 34 Workflows die meine KI-Agents koordinieren und Completion Chains automatisieren.
 
 ## Fazit: Fang heute an
 

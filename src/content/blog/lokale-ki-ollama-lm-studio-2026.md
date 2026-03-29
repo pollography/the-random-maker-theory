@@ -12,6 +12,7 @@ readingTime: 4
 ---
 
 > **TL;DR**
+>
 > - Ollama (CLI), LM Studio (GUI) oder Jan.ai, kostenlos, DeepSeek V3, Llama 3.1, Mistral, Qwen, Gemma
 > - 8-12GB VRAM sweet spot, 7-8B Modelle 40+ Tokens/sec, schneller als Cloud-APIs
 > - Q4_K_M Quantization 75% weniger RAM, minimal schlechter, Dual-Strategie (lokal Standard, Cloud Complex)
@@ -25,16 +26,16 @@ Oder du lässt die KI auf deinem eigenen Rechner laufen. Lokal. Privat. Offline.
 
 ## Ollama vs LM Studio vs Jan.ai
 
-| | Ollama | LM Studio | Jan.ai |
-|---|---|---|---|
-| **Interface** | CLI | Desktop-App | Desktop-App |
-| **Bedienung** | Terminal-Befehle | Visuell, klickbar | Visuell, simpel |
-| **API** | OpenAI-kompatibel | OpenAI + Anthropic | OpenAI-kompatibel |
-| **Modelle** | 100+ in Library | Hugging Face Browser | Integrierter Hub |
-| **RAG** | Über Open WebUI | Direkt im Chat | Nein |
-| **GPU Support** | NVIDIA, AMD, Apple | NVIDIA, AMD, Apple | NVIDIA, Apple |
-| **Preis** | Kostenlos | Kostenlos | Kostenlos |
-| **Best für** | Entwickler, Scripting | Einsteiger, GUI-User | Privacy-Puristen |
+|                 | Ollama                | LM Studio            | Jan.ai            |
+| --------------- | --------------------- | -------------------- | ----------------- |
+| **Interface**   | CLI                   | Desktop-App          | Desktop-App       |
+| **Bedienung**   | Terminal-Befehle      | Visuell, klickbar    | Visuell, simpel   |
+| **API**         | OpenAI-kompatibel     | OpenAI + Anthropic   | OpenAI-kompatibel |
+| **Modelle**     | 100+ in Library       | Hugging Face Browser | Integrierter Hub  |
+| **RAG**         | Über Open WebUI       | Direkt im Chat       | Nein              |
+| **GPU Support** | NVIDIA, AMD, Apple    | NVIDIA, AMD, Apple   | NVIDIA, Apple     |
+| **Preis**       | Kostenlos             | Kostenlos            | Kostenlos         |
+| **Best für**    | Entwickler, Scripting | Einsteiger, GUI-User | Privacy-Puristen  |
 
 **Mein Take:** Ollama für Entwickler (CLI + API + Scripting). LM Studio für alle, die eine hübsche GUI wollen. Jan.ai für Leute, die Open Source wichtig finden.
 
@@ -84,12 +85,12 @@ MIT-Lizenz. Multimodal (Text + Bild).
 
 ### VRAM ist King
 
-| Modellgröße | VRAM nötig (Q4_K_M) | System RAM | Speed |
-|---|---|---|---|
-| 7-8B | 4-6 GB | 16 GB | 40-50 Tokens/Sek |
-| 13B | 8-10 GB | 16 GB | 30-40 Tokens/Sek |
-| 32-34B | 16-20 GB | 32 GB | 20-30 Tokens/Sek |
-| 70B | 35-40 GB | 64 GB | 10-20 Tokens/Sek |
+| Modellgröße | VRAM nötig (Q4_K_M) | System RAM | Speed            |
+| ----------- | ------------------- | ---------- | ---------------- |
+| 7-8B        | 4-6 GB              | 16 GB      | 40-50 Tokens/Sek |
+| 13B         | 8-10 GB             | 16 GB      | 30-40 Tokens/Sek |
+| 32-34B      | 16-20 GB            | 32 GB      | 20-30 Tokens/Sek |
+| 70B         | 35-40 GB            | 64 GB      | 10-20 Tokens/Sek |
 
 **Sweet Spot 2026:** 8-12 GB VRAM. Damit laufen 7-8B Modelle bei 40+ Tokens pro Sekunde. Das ist schneller als die meisten Cloud-APIs.
 
@@ -207,6 +208,8 @@ Beide Optionen: unter 10 Minuten von Null zu laufender lokaler KI.
 Ollama als Backend (CLI + API), Open WebUI als Chat-Interface, Continue.dev in VSCode für Code-Completion. Llama 3.1 8B für schnelle Tasks, DeepSeek V3 (quantized) für komplexe Sachen.
 
 Kosten nach GPU-Investment: ~40€/Monat Strom. Dafür: unbegrenzte, private, offline-fähige KI.
+
+Ich nutze lokale Modelle auch als Fallback in meinem [Paperclip Agent-System](/blog/paperclip-ai-agent-orchestration-setup) — der Night Worker läuft nachts auf Ollama und kostet damit keinen einzigen API-Token.
 
 ---
 

@@ -12,6 +12,7 @@ readingTime: 4
 ---
 
 > **TL;DR**
+>
 > - Lightroom Denoise 10/10, AI Masking 9/10, Generative Remove gut, Culling 2h auf 20min
 > - Luminar Neo 119€ Einmal, Topaz nur noch Abo, DxO PhotoLab 240€, Topaz beste Denoise
 > - KI ersetzt nicht dich, erledigt 70% der Technik, die restlichen 30% (Kreativität, Story) sind geil
@@ -112,13 +113,13 @@ Neu in Version 9: AI Masking für Himmel, Personen, Hintergründe. Endlich.
 
 ## Preisvergleich
 
-| Tool | Modell | Kosten/Jahr |
-|---|---|---|
-| Adobe Lightroom | Abo | ~120€ |
-| Adobe Photoshop | Abo | ~120€ |
-| Topaz Photo AI | Abo | ~200-400€ |
-| Luminar Neo | Einmal-Kauf | 119€ (einmalig!) |
-| DxO PhotoLab 9 | Einmal-Kauf | 240€ (einmalig) |
+| Tool            | Modell      | Kosten/Jahr      |
+| --------------- | ----------- | ---------------- |
+| Adobe Lightroom | Abo         | ~120€            |
+| Adobe Photoshop | Abo         | ~120€            |
+| Topaz Photo AI  | Abo         | ~200-400€        |
+| Luminar Neo     | Einmal-Kauf | 119€ (einmalig!) |
+| DxO PhotoLab 9  | Einmal-Kauf | 240€ (einmalig)  |
 
 **Budget-Tipp:** Luminar Neo für 119€ einmal kaufen. Deckt 80% der AI-Features ab. Lightroom dazu, wenn du es brauchst.
 
@@ -135,6 +136,8 @@ OM System (Olympus) ist die Ausnahme. Die machen Computational Photography. Alle
 KI ersetzt keinen Fotografen. Aber KI erledigt 70% des technischen Handwerks. Denoise, Culling, Masking, Baseline-Edits. Das Zeug, das früher Stunden gedauert hat.
 
 Die restlichen 30%. Kreativität, Storytelling, den richtigen Moment finden, das bleibt bei dir. Und das ist der Teil, der Spaß macht.
+
+Wer den Workflow noch weiter ausbauen will: In meinem [Artikel zu KI-Bildbearbeitung als Fotograf](/blog/ki-bildbearbeitung-workflow-fotograf-2026) zeig ich mein komplettes System — von Import bis Export. Und wer noch keine Erfahrung mit [KI-Bildgenerierung](/blog/ki-bilder-erstellen-guide-2026) hat: Midjourney und Flux öffnen ganz andere Möglichkeiten fürs Konzeptionelle. Für die Sortierung großer Shootings lohnt sich außerdem ein Blick auf [KI-gestütztes Photo Culling](/blog/aftershoot-alternative-ai-photo-culling) — damit hab ich meinen Culling-Workflow massiv beschleunigt.
 
 ---
 

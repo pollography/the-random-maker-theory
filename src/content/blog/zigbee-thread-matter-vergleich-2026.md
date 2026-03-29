@@ -8,7 +8,7 @@ pillar: "maker"
 type: "Vergleich"
 primaryKW: "zigbee vs thread vs matter"
 metaDescription: "Zigbee vs Thread vs Matter im ehrlichen Vergleich 2026. Ich zeige dir welches Smart-Home-Protokoll zu dir passt, was Matter wirklich kann und ob du Zigbee noch brauchst."
-ogImage: "/og/zigbee-thread-matter-vergleich-2026.jpg"
+heroImage: "/og/zigbee-thread-matter-vergleich-2026.jpg"
 titleAccent: "Zigbee"
 podcastSlug: "015-zigbee-thread-matter-vergleich-2026"
 tags:

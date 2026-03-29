@@ -3,7 +3,15 @@ title: "Prompt Engineering lernen: Mein System"
 slug: "prompt-engineering-lernen-2026"
 date: "2026-03-27"
 description: "90% der Leute prompten falsch – mit meinem System lernst du Prompt Engineering in unter einer Stunde. Konkret, praxisnah, ohne Entwickler-Vorkenntnisse."
-tags: ["prompt engineering", "chatgpt", "claude", "ki tools", "tutorial", "ai prompts"]
+tags:
+  [
+    "prompt engineering",
+    "chatgpt",
+    "claude",
+    "ki tools",
+    "tutorial",
+    "ai prompts",
+  ]
 category: "ki-tools"
 draft: false
 readingTime: 12
@@ -18,6 +26,7 @@ videoUrl: ""
 # Prompt Engineering lernen: Mein komplettes System
 
 **TL;DR**
+
 - 90% der Leute verschenken das Potenzial von ChatGPT und Claude, weil sie prompten wie sie googeln
 - Prompt Engineering lernen heißt nicht: komplizierte Formeln auswendig lernen
 - Vier Techniken reichen für 80% der Anwendungsfälle
@@ -81,11 +90,13 @@ Das ist die Technik die ich zuerst gelernt habe und die sofort den größten Unt
 Die Idee: Du gibst dem Modell eine Rolle — und es antwortet aus dieser Perspektive. Das Modell hat im Training massiv viel Text von Experten in allen möglichen Bereichen gesehen. Mit Rollen-Prompting rufst du gezielt dieses Wissen ab.
 
 **Vorher:**
+
 > "Erkläre mir, wie ich meinen Blog-Artikel für SEO optimiere."
 
 Das bekommst du: Eine generische Liste mit "Benutze Keywords", "Schreibe Meta-Descriptions", "Mach interne Links". Alles richtig. Alles nutzlos spezifisch.
 
 **Nachher:**
+
 > "Du bist ein erfahrener SEO-Spezialist der sich auf Content-Creator-Blogs im Tech-Bereich spezialisiert hat. Ich schreibe einen Artikel über Prompt Engineering für Nicht-Entwickler, Zielgruppe sind Content Creator zwischen 25-45. Erkläre mir die drei wichtigsten On-Page-SEO-Maßnahmen die ich vor dem Publish noch erledigen sollte. Geh davon aus, dass ich Grundkenntnisse in SEO habe, aber kein Experte bin."
 
 Das bekommst du: Konkrete, kontextbezogene Empfehlungen die tatsächlich zu meiner Situation passen.
@@ -107,11 +118,13 @@ Du bittest das Modell, **seinen Denkprozess explizit zu machen**, bevor es die A
 Warum das hilft: KI-Modelle machen mehr Fehler wenn sie direkt zur Antwort springen, als wenn sie Zwischenschritte zeigen. Es ist ähnlich wie bei Menschen — wer laut denkt macht seltener Flüchtigkeitsfehler.
 
 **Vorher:**
+
 > "Welche drei Content-Formate sollte ich für meinen Tech-Blog priorisieren?"
 
 Ergebnis: Drei Formate mit Begründung. Aber du weißt nicht, ob die Logik stimmt — du siehst nur die Schlussfolgerung.
 
 **Nachher:**
+
 > "Ich betreibe einen Tech-Blog über KI und Smart Home, hauptsächlich für Hobby-Tüftler und Content Creator. Ich habe momentan 4-5 Stunden pro Woche für Content. Überlege Schritt für Schritt: Welche drei Content-Formate sollte ich priorisieren? Zeig mir deine Überlegung — welche Faktoren du berücksichtigst, welche Abwägungen du machst — bevor du zur Empfehlung kommst."
 
 Das Ergebnis ist länger, aber du kannst die Logik nachvollziehen. Und du kannst eingreifen: "Der erste Faktor stimmt, aber beim zweiten liegst du falsch weil..."
@@ -129,11 +142,13 @@ Few-Shot bedeutet: Du gibst der KI Beispiele von dem, was du willst — bevor du
 Das Modell erkennt Muster aus diesen Beispielen und wendet sie auf deine Aufgabe an. Es ist im Grunde der direkteste Weg, einen bestimmten Stil, eine bestimmte Struktur oder ein bestimmtes Format zu übermitteln.
 
 **Vorher:**
+
 > "Schreib mir fünf Twitter-Posts über KI-Tools. Locker und direkt."
 
 Was du bekommst: Fünf Posts. Die sind "locker" aus der Perspektive des Modells — was unter Umständen ganz anders ist als was du unter "locker" verstehst.
 
 **Nachher:**
+
 > "Schreib mir fünf Twitter-Posts über KI-Tools in genau diesem Stil:
 >
 > Beispiel 1: 'Hab heute 2h mit dem neuen Midjourney-Update gespielt. Fazit: Portrait-Mode ist jetzt wirklich gut. Haare und Hände — endlich. Das war bisher mein größtes Frustrations-Thema.'
@@ -157,16 +172,19 @@ Die meisten Leute sagen was sie wollen, aber nicht wie das Ergebnis aussehen sol
 Du kannst das vollständig kontrollieren. Und das spart massiv Nachbearbeitung.
 
 **Vorher:**
+
 > "Vergleich ChatGPT und Claude für Content Creator."
 
 Ergebnis: Irgendein Mix aus Text, vielleicht eine Liste, vielleicht nicht. Unvorhersehbar.
 
 **Nachher:**
+
 > "Vergleich ChatGPT und Claude für Content Creator. Erstelle eine Tabelle mit diesen Spalten: Feature | ChatGPT | Claude | Gewinner. Zeilen: Texte schreiben, Recherche zusammenfassen, Social Media Posts, Bildgenerierung (falls vorhanden), Preis/Leistung, Kontext-Fenster. Unter der Tabelle: drei Sätze Fazit mit konkreter Empfehlung wann ich welches Tool nehmen sollte."
 
 Ich bekomme genau das was ich brauche. Keine Nacharbeit. Direkt verwendbar.
 
 Mögliche Output-Format-Anweisungen die ich regelmäßig nutze:
+
 - "Als nummerierte Liste mit max. 8 Punkten"
 - "Als Tabelle mit Spalten X, Y, Z"
 - "In drei Absätzen: Problem, Lösung, nächster Schritt"
@@ -208,6 +226,7 @@ Klingt formal? Ist es nicht — wenn man es einmal verinnerlicht hat fließt das
 Das Beste für den Schluss: Konkrete Prompts die du direkt verwenden oder anpassen kannst. Alle basieren auf meinem Template-System.
 
 **1. Blog-Artikel-Outline**
+
 ```
 Du bist ein erfahrener Content Strategist der sich auf Tech-Blogs für Nicht-Entwickler spezialisiert hat.
 
@@ -223,6 +242,7 @@ Format: Markdown mit H2 für Hauptabschnitte, darunter Bullet Points mit Kernaus
 ```
 
 **2. Social Media Caption (Instagram/Threads)**
+
 ```
 Du bist ein Social Media Manager der für Indie-Maker und Tech-Content-Creator arbeitet.
 
@@ -239,6 +259,7 @@ Format: Drei Varianten — eine kurz (unter 50 Zeichen), eine mittel (2-3 Sätze
 ```
 
 **3. E-Mail-Newsletter**
+
 ```
 Du bist ein Newsletter-Autor der wöchentliche Tech-Briefings für Hobbyisten schreibt.
 
@@ -253,6 +274,7 @@ Format: Drei Absätze. Erster Absatz: Hook/persönlicher Aufhänger. Zweiter: wa
 ```
 
 **4. Produkt-Beschreibung**
+
 ```
 Du bist ein Conversion-Copywriter der auf digitale Produkte spezialisiert ist.
 
@@ -270,6 +292,7 @@ Format: Hook-Satz (max. 15 Wörter), dann 3 Bullet Points mit Benefit (nicht Fea
 ```
 
 **5. Code erklären / debuggen**
+
 ```
 Du bist ein geduldiger Entwickler-Mentor der an Nicht-Entwickler erklärt ohne sie zu überfordern.
 
@@ -281,6 +304,7 @@ Format: Erst eine Zusammenfassung in einem Satz was der Code insgesamt macht. Da
 ```
 
 **6. Recherche-Zusammenfassung**
+
 ```
 Du bist ein Research-Analyst der komplexe Themen für Entscheider zusammenfasst.
 
@@ -296,6 +320,7 @@ Format: Executive Summary (3 Bullets), dann Abschnitt "Relevant für meine Entsc
 ```
 
 **7. Feedback auf einen Text**
+
 ```
 Du bist ein erfahrener Lektor der auf [TEXTTYP] spezialisiert ist.
 
@@ -312,6 +337,7 @@ Format: Drei nummerierte Punkte. Je: Problem, Warum es ein Problem ist, Verbesse
 ```
 
 **8. Titel/Headline-Varianten**
+
 ```
 Du bist ein Headline-Texter der für Tech-Blogs und YouTube-Kanäle arbeitet.
 
@@ -327,6 +353,7 @@ Format: 10 nummerierte Titel. Danach: deine Top 3 mit kurzer Begründung warum.
 ```
 
 **9. Ideen-Brainstorming**
+
 ```
 Du bist ein kreativer Stratege der für Content Creator arbeitet.
 
@@ -343,6 +370,7 @@ Format: 15 nummerierte Ideen mit je: Titel-Vorschlag (5-8 Wörter), ein Satz was
 ```
 
 **10. Automatisierungs-Workflow planen**
+
 ```
 Du bist ein Automatisierungs-Experte der n8n und ähnliche Tools für kleine Creator-Businesses einsetzt.
 
@@ -368,7 +396,7 @@ Mein Tipp: Leg dir ein einfaches Dokument an wo du deine besten Prompts sammelst
 
 Wenn du tiefer reinwillst: In meinem Artikel zu [ChatGPT Prompts erstellen](/blog/chatgpt-prompts-erstellen-2026) gehe ich auf fortgeschrittenere Strukturen ein — inklusive System-Prompts und wie du ein konsistentes Verhalten über mehrere Chats hinweg aufbaust. Und wenn du verstehen willst wie sich ChatGPT und Claude in der Praxis unterscheiden, empfehle ich meinen [direkten Vergleich der beiden Tools](/blog/chatgpt-vs-claude-content-creator-2026).
 
-Und wenn du die Erkenntnisse aus diesem Artikel direkt in die Praxis umsetzen willst: Mein Workflow für [KI-Bildbearbeitung als Fotograf](/blog/ki-bildbearbeitung-workflow-fotograf-2026) zeigt wie diese Techniken in einem echten Produktions-Workflow aussehen.
+Und wenn du die Erkenntnisse aus diesem Artikel direkt in die Praxis umsetzen willst: Mein Workflow für [KI-Bildbearbeitung als Fotograf](/blog/ki-bildbearbeitung-workflow-fotograf-2026) zeigt wie diese Techniken in einem echten Produktions-Workflow aussehen. Und wer über das Prompten hinaus gehen will — für [KI-generierte Bilder](/blog/ki-bilder-erstellen-guide-2026) gelten dieselben Prinzipien: Je präziser der Prompt, desto besser das Ergebnis. Das gilt für Midjourney genauso wie für ChatGPT — in meinem [Guide zu Midjourney Prompts für Fotografen](/blog/midjourney-prompts-fotografen-2026) zeige ich wie das in der Praxis aussieht.
 
 Prompt Engineering lernen ist kein Sprint — es ist eine Gewohnheit. Fang heute damit an.
 

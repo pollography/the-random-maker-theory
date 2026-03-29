@@ -12,6 +12,7 @@ readingTime: 4
 ---
 
 > **TL;DR**
+>
 > - Sora 2 beste Qualität (5-8min wait), Runway Gen-4.5 Allrounder mit Character Consistency, Kling 3.0 Preis-König 4K
 > - Pika 2.5 Speed-King 30-90sec, Veo 2 kostenlos, Hailuo günstig, jedes hat Schwächen
 > - Fotorealismus Sora, Kreativität Runway, Kosten Kling, Speed Pika
@@ -23,14 +24,14 @@ Ich hab Sora 2, Runway Gen-4.5, Kling 3.0 und Pika 2.5 getestet. Spoiler: Die Qu
 
 ## Das Feld im Überblick
 
-| Tool | Preis ab | Max Auflösung | Max Länge | Audio | Speed |
-|---|---|---|---|---|---|
-| **Sora 2** | 20$/Mo (ChatGPT+) | 1080p | 25 Sek | Sync | 5-8 Min |
-| **Runway Gen-4.5** | 12$/Mo | 4K (API) | ~10 Sek | Nein | 1-3 Min |
-| **Kling 3.0** | 6.99$/Mo | 4K nativ | 15 Sek | Sync | 1-2 Min |
-| **Pika 2.5** | 8$/Mo | 1080p | ~8 Sek | Auto-SFX | 30-90 Sek |
-| **Veo 2** | Kostenlos (limitiert) | 4K | 8 Sek | Nein | Variabel |
-| **Hailuo 2.3** | Günstig | 4K | ~10 Sek | Sync | 1-2 Min |
+| Tool               | Preis ab              | Max Auflösung | Max Länge | Audio    | Speed     |
+| ------------------ | --------------------- | ------------- | --------- | -------- | --------- |
+| **Sora 2**         | 20$/Mo (ChatGPT+)     | 1080p         | 25 Sek    | Sync     | 5-8 Min   |
+| **Runway Gen-4.5** | 12$/Mo                | 4K (API)      | ~10 Sek   | Nein     | 1-3 Min   |
+| **Kling 3.0**      | 6.99$/Mo              | 4K nativ      | 15 Sek    | Sync     | 1-2 Min   |
+| **Pika 2.5**       | 8$/Mo                 | 1080p         | ~8 Sek    | Auto-SFX | 30-90 Sek |
+| **Veo 2**          | Kostenlos (limitiert) | 4K            | 8 Sek     | Nein     | Variabel  |
+| **Hailuo 2.3**     | Günstig               | 4K            | ~10 Sek   | Sync     | 1-2 Min   |
 
 ## Sora 2: Der Qualitätskönig mit Problemen
 
@@ -149,6 +150,8 @@ Das ist +30-50% Pricing für deine Kunden, ohne zusätzliche Hardware.
 **Höchste Qualität:** Sora 2 (20$/Mo via ChatGPT+). Wenn Fotorealismus alles ist.
 
 **Social-Media-Maschine:** Pika 2.5 (8$/Mo). Schnellste Generierung, perfekt für TikTok/Reels.
+
+Wer als Fotograf in Video einsteigen will: Die Grundlage für gute KI-Videos sind dieselben visuellen Instinkte wie für Fotos. Mein [Guide zu KI-Bildgenerierung](/blog/ki-bilder-erstellen-guide-2026) erklärt die Prompt-Prinzipien die hier genauso greifen — Licht, Komposition, Stil.
 
 ---
 

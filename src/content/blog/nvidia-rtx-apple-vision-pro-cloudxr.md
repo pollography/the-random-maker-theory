@@ -10,6 +10,11 @@ tags:
     "tools",
     "news",
     "analyse",
+    "nvidia",
+    "rtx",
+    "apple vision pro",
+    "cloudxr",
+    "vr",
   ]
 category: "ki-news"
 draft: true

@@ -13,6 +13,7 @@ readingTime: 2
 ---
 
 > **TL;DR**
+>
 > - Claude 4.6 für Texte und Code, beste Qualität auf dem Markt
 > - Claude Code als IDE, Figma AI Assist für UI, Cursor für Tab-Completion
 > - Leonardo AI für Bilder, kostenlos testen, dann bei einem Tool gut werden
@@ -27,12 +28,14 @@ Deshalb hab ich meine TOP 5 zusammengefasst, die du kennen solltest, wenn du mit
 Claude 4.6 ist mein Go-to für alles. Texte schreiben, Code generieren, Recherche, Analyse. Dieses Modell knackt praktisch alles.
 
 **Warum TOP 1?**
+
 - Beste Textqualität auf dem Markt
 - Code ist sauber und lauffähig
 - Versteht Kontext über lange Dokumente
 - API ist stabil
 
 **Wo nutz ich es?**
+
 - TRMT Blog-Posts drafts
 - Podcast-Skripte
 - Code-Reviews
@@ -45,6 +48,7 @@ Claude 4.6 ist mein Go-to für alles. Texte schreiben, Code generieren, Recherch
 Wenn du Svelte, React, oder TypeScript schreibst: Claude Code ist dein neuer bester Freund. Das ist ein IDE mit KI-Superkräften.
 
 **Features:**
+
 - Live-Coding-Assistent
 - Terminal-Zugang
 - File-Management
@@ -57,6 +61,7 @@ Wenn du Svelte, React, oder TypeScript schreibst: Claude Code ist dein neuer bes
 Mit Figma's neuer AI-Integration machst du Mockups 3x schneller. Layout-Ideen brainstormen, Auto-Layout, Varianten generieren. Alles mit KI.
 
 **Was es kann:**
+
 - UI-Varianten generieren
 - Copy schreiben
 - Assets finden
@@ -84,6 +89,7 @@ Dein Code ist besser, schneller geschrieben.
 Leonardo AI ist die Geheimwaffe für Bilder. Nicht Midjourney-gut, aber mit KI trainierbar und produktionsreif.
 
 **Best for:**
+
 - Blog-Header
 - Social Media Assets
 - Thumbnails
@@ -102,6 +108,8 @@ Der Unterschied zwischen **gut** und **episch** ist deine Erfahrung damit. 100 S
 Fang an. Nutz eins. Werd darin verdammt gut.
 
 Dann skalier auf die anderen.
+
+Wer tiefer einsteigen will: Mein Vergleich von [lokaler KI mit Ollama und LM Studio](/blog/lokale-ki-ollama-lm-studio-2026) zeigt warum lokale Modelle 2026 für viele Use Cases interessant sind — gerade wenn Datenschutz oder Kosten eine Rolle spielen.
 
 ---
 

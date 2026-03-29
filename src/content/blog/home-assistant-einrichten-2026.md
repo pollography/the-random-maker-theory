@@ -72,13 +72,13 @@ Das ist die Frage die fast alle falsch stellen. Die meisten fragen "was ist am g
 
 ### Vergleichstabelle
 
-| Hardware | Preis | Vorteile | Nachteile | Empfehlung fuer |
-|---|---|---|---|---|
-| **Raspberry Pi 5 (4GB)** | ~80 EUR | Guenstig, gut dokumentiert, grosse Community | Braucht SD-Karte oder SSD extra, Setup noetig | Maker, Bastler, wer lernen will |
-| **Home Assistant Green** | ~100 EUR | Plug-and-Play, offiziell unterstuetzt, kompakt | Kein Zigbee-Chip eingebaut, etwas teurer | Einsteiger, wer einfach anfangen will |
-| **Mini-PC (z.B. Beelink EQ12)** | ~150 EUR | Viel Power, grosse SSD, 24/7-faehig, erweiterbar | Groesser, mehr Verbrauch, Setup etwas aufwaendiger | Fortgeschrittene, viele Daten, Proxmox-Setup |
-| **Home Assistant Yellow** | ~130 EUR | PoE, eingebauter Zigbee-Chip, M.2-Slot | Nicht mehr aktiv verkauft, begrenzte Verfuegbarkeit | Zigbee-Nutzer die Wert auf integrierte Hardware legen |
-| **NUC oder alter Laptop** | 0-80 EUR | Ggf. schon vorhanden, viel Power | Oft nicht effizient genug fuer 24/7 | Wenn ohnehin was rumliegt |
+| Hardware                        | Preis    | Vorteile                                         | Nachteile                                           | Empfehlung fuer                                       |
+| ------------------------------- | -------- | ------------------------------------------------ | --------------------------------------------------- | ----------------------------------------------------- |
+| **Raspberry Pi 5 (4GB)**        | ~80 EUR  | Guenstig, gut dokumentiert, grosse Community     | Braucht SD-Karte oder SSD extra, Setup noetig       | Maker, Bastler, wer lernen will                       |
+| **Home Assistant Green**        | ~100 EUR | Plug-and-Play, offiziell unterstuetzt, kompakt   | Kein Zigbee-Chip eingebaut, etwas teurer            | Einsteiger, wer einfach anfangen will                 |
+| **Mini-PC (z.B. Beelink EQ12)** | ~150 EUR | Viel Power, grosse SSD, 24/7-faehig, erweiterbar | Groesser, mehr Verbrauch, Setup etwas aufwaendiger  | Fortgeschrittene, viele Daten, Proxmox-Setup          |
+| **Home Assistant Yellow**       | ~130 EUR | PoE, eingebauter Zigbee-Chip, M.2-Slot           | Nicht mehr aktiv verkauft, begrenzte Verfuegbarkeit | Zigbee-Nutzer die Wert auf integrierte Hardware legen |
+| **NUC oder alter Laptop**       | 0-80 EUR | Ggf. schon vorhanden, viel Power                 | Oft nicht effizient genug fuer 24/7                 | Wenn ohnehin was rumliegt                             |
 
 Meine Empfehlung fuer 90% der Leute die anfangen: **Home Assistant Green** oder **Raspberry Pi 5 mit SSD**. Wer basteln will, nimmt den Pi. Wer einfach anfangen will, nimmt den Green.
 
@@ -250,7 +250,7 @@ Wenn du Zigbee-Geraete hast oder kaufen willst (IKEA Tradfri, Aqara, Sonoff, etc
 
 Der guenstigste und am besten unterstuetzte: **SONOFF Zigbee 3.0 USB Dongle Plus** fuer ca. 20 EUR.
 
-Wenn du dir den Artikel ueber Protokolle sparen willst: Zigbee ist 2026 noch immer die beste Wahl fuer guenstige Sensoren und Lampen. Thread und Matter sind fuer neue Geraete interessant, aber die Auswahl ist noch kleiner und teurer. Mehr dazu: [Zigbee vs Thread vs Matter: Was brauchst du 2026?](/blog/zigbee-thread-matter-vergleich-2026)
+Wenn du dir den Artikel ueber Protokolle sparen willst: Zigbee ist 2026 noch immer die beste Wahl fuer guenstige Sensoren und Lampen. Thread und Matter sind fuer neue Geraete interessant, aber die Auswahl ist noch kleiner und teurer. Mehr dazu: [Zigbee vs Thread vs Matter: Was brauchst du 2026?](/blog/zigbee-thread-matter-vergleich-2026) — der Vergleich hilft dir, die richtige Entscheidung fuer dein Setup zu treffen, bevor du Geld ausgibst.
 
 ---
 
@@ -340,4 +340,4 @@ Ich nutze keinen der Links fuer den eigenen Start irgendwie zu optimieren. Die E
 
 ---
 
-*Letztes Update: Maerz 2026. Getestet mit Home Assistant OS 13.x auf Raspberry Pi 5 und Beelink EQ12.*
+_Letztes Update: Maerz 2026. Getestet mit Home Assistant OS 13.x auf Raspberry Pi 5 und Beelink EQ12._

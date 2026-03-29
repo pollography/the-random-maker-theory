@@ -5,7 +5,7 @@ description: "Wie ich mit Paperclip AI 28 Agents orchestriere — ohne einen Cen
 date: "2026-04-08"
 category: automation
 tags: [paperclip, ai-agents, automation, claude-code, orchestration]
-image: /images/blog/paperclip-agent-empire-og.webp
+heroImage: /images/blog/paperclip-agent-empire-og.webp
 pillar: automation
 draft: false
 readingTime: 14
@@ -18,6 +18,7 @@ heroImageThumb: "/images/blog/paperclip-ai-agent-orchestration-setup-1-thumb.web
 # 28 AI Agents die für mich arbeiten — Mein Paperclip Setup
 
 ## TL;DR
+
 - Paperclip AI ist ein Open-Source Agent Orchestration Framework
 - Ich hab 22 Agents in 2 Companies aufgesetzt — für meinen Blog und mein Gaming Studio
 - Alles läuft über bestehende Subscriptions: Claude Max, ChatGPT Pro, Google Workspace, Ollama
@@ -39,6 +40,7 @@ Paperclip ist ein Open-Source Framework das mehrere AI Agents als virtuelles Unt
 Stell's dir so vor: Du hast einen Fotografen (Visual Creator), einen Texter (Content Writer), einen SEO-Spezialisten (SEO Analyst) und einen Deployment-Ingenieur (Deploy Bot). Bisher musstest du jedem einzeln sagen was er tun soll. Mit Paperclip gibst du dem CEO (Dispatch Controller) EINE Aufgabe, und der verteilt die Arbeit automatisch.
 
 **Was Paperclip konkret macht:**
+
 - Org Charts mit Hierarchie (CEO → Teams → Agents)
 - Per-Agent Budgets und Cost Tracking
 - Heartbeat-System — Agents wachen auf Schedule auf und arbeiten
@@ -56,24 +58,24 @@ An der Spitze sitzt der **Dispatch Controller**. Der wird alle 15 Minuten per He
 
 Darunter die Spezialisten. Hier die komplette Liste — ja, mit echten Model-Zuweisungen und Kosten:
 
-| Agent | Model | Kosten-Tier | Aufgabe |
-|-------|-------|------------|---------|
-| Dispatch Controller | Opus 4.6 | $$$ | Orchestrierung, Routing |
-| Content Writer | Opus 4.6 | $$$ | Blog-Artikel in TRMT Voice |
-| Claude Engineer | Sonnet 4.6 | $$ | SvelteKit, Architektur |
-| Code Engineer | Codex 5.4 | $$ | Code Reviews, Bugs |
-| Life OS Dev | Sonnet 4.6 | $$ | React Dashboard |
-| Video AI Engineer | Sonnet 4.6 | $$ | Python/PyTorch |
-| Research Scout | Haiku 4.5 | $ | KI-News, Trends |
-| Social Publisher | Haiku 4.5 | $ | LinkedIn, X, Threads |
-| SEO Analyst | Haiku 4.5 | $ | Keywords, Rankings |
-| Deploy Bot | Haiku 4.5 | $ | Git + Vercel |
-| QA Inspector | Haiku 4.5 | $ | Lighthouse, Links |
-| **System Health Monitor** | **Haiku 4.5** | **$** | **Alle Systeme überwachen** |
-| Visual Creator | Gemini 2.5 Pro | $$ | OG Images, Thumbnails |
-| Night Worker | Ollama qwen3:14b | **GRATIS** | Nacht-Batch |
-| Vault Keeper | Ollama qwen3:14b | **GRATIS** | Obsidian Vault |
-| Knowledge Miner | Ollama qwen3:14b | **GRATIS** | ChatGPT Export |
+| Agent                     | Model            | Kosten-Tier | Aufgabe                     |
+| ------------------------- | ---------------- | ----------- | --------------------------- |
+| Dispatch Controller       | Opus 4.6         | $$$         | Orchestrierung, Routing     |
+| Content Writer            | Opus 4.6         | $$$         | Blog-Artikel in TRMT Voice  |
+| Claude Engineer           | Sonnet 4.6       | $$          | SvelteKit, Architektur      |
+| Code Engineer             | Codex 5.4        | $$          | Code Reviews, Bugs          |
+| Life OS Dev               | Sonnet 4.6       | $$          | React Dashboard             |
+| Video AI Engineer         | Sonnet 4.6       | $$          | Python/PyTorch              |
+| Research Scout            | Haiku 4.5        | $           | KI-News, Trends             |
+| Social Publisher          | Haiku 4.5        | $           | LinkedIn, X, Threads        |
+| SEO Analyst               | Haiku 4.5        | $           | Keywords, Rankings          |
+| Deploy Bot                | Haiku 4.5        | $           | Git + Vercel                |
+| QA Inspector              | Haiku 4.5        | $           | Lighthouse, Links           |
+| **System Health Monitor** | **Haiku 4.5**    | **$**       | **Alle Systeme überwachen** |
+| Visual Creator            | Gemini 2.5 Pro   | $$          | OG Images, Thumbnails       |
+| Night Worker              | Ollama qwen3:14b | **GRATIS**  | Nacht-Batch                 |
+| Vault Keeper              | Ollama qwen3:14b | **GRATIS**  | Obsidian Vault              |
+| Knowledge Miner           | Ollama qwen3:14b | **GRATIS**  | ChatGPT Export              |
 
 Die Logik dahinter: Kreative Arbeit (Content, Architektur) kriegt Opus oder Sonnet — da zählt Qualität. Repetitive Checks (SEO, QA, Deploy) kriegen Haiku — 10x billiger, reicht völlig. Und nachts? Ollama. Kostet halt nichts. Meine RTX 5080 macht die Arbeit.
 
@@ -81,13 +83,13 @@ Die Logik dahinter: Kreative Arbeit (Content, Architektur) kriegt Opus oder Sonn
 
 Hier wird's interessant. Paperclip startet die CLI-Tools als Subprozesse. Die nutzen automatisch deine bestehende Subscription-Auth:
 
-| CLI | Subscription | Extra-Kosten |
-|-----|-------------|-------------|
-| Claude Code | Max Plan (~100 USD/Mo) | 0 EUR extra |
-| Codex | ChatGPT Pro (~200 USD/Mo) | 0 EUR extra |
-| Gemini | Google Workspace | 0 EUR extra |
-| Ollama | Lokal (RTX 5080) | Strom |
-| **Total Extra** | | **0 EUR** |
+| CLI             | Subscription              | Extra-Kosten |
+| --------------- | ------------------------- | ------------ |
+| Claude Code     | Max Plan (~100 USD/Mo)    | 0 EUR extra  |
+| Codex           | ChatGPT Pro (~200 USD/Mo) | 0 EUR extra  |
+| Gemini          | Google Workspace          | 0 EUR extra  |
+| Ollama          | Lokal (RTX 5080)          | Strom        |
+| **Total Extra** |                           | **0 EUR**    |
 
 **Wichtig:** Keine `ANTHROPIC_API_KEY` in den Environment Variables setzen! Sonst nutzt die CLI die API statt der Subscription — und du zahlst per Token.
 
@@ -135,16 +137,16 @@ Kostet quasi nichts — läuft auf Haiku. Die billigste Versicherungspolice die 
 
 ## Der Zeitplan: Wer wacht wann auf?
 
-| Schedule | Agent | Frequenz |
-|----------|-------|----------|
-| Heartbeat | Dispatch Controller | Alle 15 Min |
+| Schedule         | Agent                     | Frequenz        |
+| ---------------- | ------------------------- | --------------- |
+| Heartbeat        | Dispatch Controller       | Alle 15 Min     |
 | **Health Check** | **System Health Monitor** | **Alle 30 Min** |
-| Morning Routine | Dispatch Controller | 07:00 |
-| Community Watch | Community Pulse | Alle 4h |
-| Vault Sync | Vault Keeper | Alle 6h |
-| SEO Report | SEO Analyst | Montag 09:00 |
-| Evening Summary | Dispatch Controller | 20:00 |
-| Night Batch | Night Worker | 23:00 |
+| Morning Routine  | Dispatch Controller       | 07:00           |
+| Community Watch  | Community Pulse           | Alle 4h         |
+| Vault Sync       | Vault Keeper              | Alle 6h         |
+| SEO Report       | SEO Analyst               | Montag 09:00    |
+| Evening Summary  | Dispatch Controller       | 20:00           |
+| Night Batch      | Night Worker              | 23:00           |
 
 Das läuft über Windows Task Scheduler. Jeder Heartbeat weckt den Agent, der checkt seine Inbox, arbeitet offene Tasks ab, und geht wieder schlafen. Kein 24/7-Prozess, kein Token-Verbrauch wenn nichts zu tun ist.
 

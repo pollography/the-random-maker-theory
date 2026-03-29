@@ -6,7 +6,7 @@ date: "2026-04-07"
 category: "automatisierung"
 primaryKW: "n8n chatgpt workflow"
 description: "Wie ich n8n mit der ChatGPT API kombiniere: 3 echte Automationen die ich taeglich nutze — Node fuer Node erklaert. Kein Theorie-Bla, nur Praxis."
-ogImage: "og-n8n-chatgpt-workflow-2026.png"
+heroImage: "og-n8n-chatgpt-workflow-2026.png"
 draft: false
 pillar: "Automation"
 type: "Tutorial + Deep-Dive"

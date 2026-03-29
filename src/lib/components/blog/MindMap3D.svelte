@@ -1,11 +1,28 @@
 <script>
 	import { onMount } from 'svelte';
 
-	let { data } = $props();
+	let { data, title = 'Konzept-Map' } = $props();
 
 	let canvas = $state(null);
+
+	// Flatten data tree for SEO fallback
+	function flattenForSEO(node, depth = 0) {
+		const items = [{ name: node.name, depth }];
+		if (node.children) {
+			for (const child of node.children) {
+				items.push(...flattenForSEO(child, depth + 1));
+			}
+		}
+		return items;
+	}
+
+	const seoNodes = data ? flattenForSEO(data) : [];
 	let hoveredName = $state('');
-	let isAutoRotating = $state(true);
+	// Respect prefers-reduced-motion for accessibility
+	const prefersReducedMotion = typeof window !== 'undefined'
+		? window.matchMedia('(prefers-reduced-motion: reduce)').matches
+		: false;
+	let isAutoRotating = $state(!prefersReducedMotion);
 
 	onMount(() => {
 		if (!canvas || !data) return;
@@ -405,8 +422,20 @@
 		bind:this={canvas}
 		class="mm-canvas"
 		style="cursor: grab;"
+		role="img"
+		aria-label="Interaktive 3D Konzept-Map: {title}"
 		title="Drag to rotate · Scroll to zoom · Double-click to toggle auto-rotate"
 	></canvas>
+
+	<!-- SEO Fallback: sr-only HTML tree for Google indexing (Canvas content is invisible to crawlers) -->
+	<div class="sr-only">
+		<h3>{title}</h3>
+		<ul>
+			{#each seoNodes as node}
+				<li>{node.name}</li>
+			{/each}
+		</ul>
+	</div>
 
 	<div class="mm-footer">
 		{#if hoveredName}
@@ -522,5 +551,18 @@
 
 	.mm-toggle:hover {
 		background: rgba(212, 137, 62, 0.2);
+	}
+
+	/* SEO Fallback: visually hidden but indexable by Google */
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
 	}
 </style>

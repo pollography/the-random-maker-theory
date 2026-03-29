@@ -76,6 +76,7 @@ documentary style, muted warm tones --ar 3:2 --v 6.1 --style raw --stylize 50
 ```
 
 Jeder Block hat einen Job:
+
 - **Motiv** sagt was auf dem Bild ist
 - **Kamera-Setup** sagt wie es aufgenommen wurde
 - **Licht** sagt woher das Licht kommt
@@ -121,6 +122,7 @@ Negativprompt. Ich nutze fast immer `--no watermark, text, signature, oversatura
 Als Fotograf weisst du: Licht entscheidet. Das gilt auch fuer Midjourney. Diese Begriffe funktionieren besonders gut:
 
 **Naturlicht:**
+
 - `golden hour backlight` — klassisches Gegenlichtportrait
 - `overcast diffused light` — weiches, richtungsloses Licht, perfekt fuer Portraits ohne harte Schatten
 - `blue hour ambient light` — duestere Stimmung, staedtische Szenen
@@ -128,6 +130,7 @@ Als Fotograf weisst du: Licht entscheidet. Das gilt auch fuer Midjourney. Diese 
 - `window light from left, soft shadow falloff` — klassisches Studio-Ersatz-Licht
 
 **Studioprobleme reproduzieren:**
+
 - `Rembrandt lighting setup` — das charakteristische Dreieck unter dem Auge
 - `split lighting, half face in shadow` — dramatisch
 - `butterfly lighting, beauty dish effect` — klassisches Beautylicht
@@ -135,6 +138,7 @@ Als Fotograf weisst du: Licht entscheidet. Das gilt auch fuer Midjourney. Diese 
 - `ring flash, flat even light` — Fashion-Style
 
 **Film und Vintage:**
+
 - `practical lights only, tungsten color cast` — warme Raumlichtatmosphaere
 - `neon signage reflections, wet street` — urbaner Night-Stil
 - `candlelight, chiaroscuro` — malerisch, sehr warm
@@ -153,12 +157,14 @@ Brennweiten und Blenden funktionieren ueberraschend gut in Midjourney. Das Model
 - `24-70mm zoom, environmental portrait` — Allrounder-Look
 
 Kamera-Bodies funktionieren auch, allerdings subtiler:
+
 - `shot on Canon 5D Mark IV, full frame sensor` — wirkt etwas waermer, klassischer DSLR-Look
 - `shot on Sony A7 series, mirrorless` — etwas neutraler, moderner
 - `shot on Fujifilm GFX medium format` — tonal fein, sehr scharf wirkend
 - `shot on Leica M, rangefinder aesthetic` — charakteristischer Leica-Look
 
 **Filmemulsionen** sind einer meiner Lieblingstricks:
+
 - `Kodak Portra 400 film grain, warm skin tones` — der Klassiker fuer Portraits
 - `Fujifilm Velvia slide film, saturated greens` — Landschaft mit knalligen Farben
 - `Kodak Tri-X black and white, high contrast grain` — harten S/W-Look erzeugen
@@ -362,7 +368,7 @@ Kurz erklaert wie ich selbst mit Midjourney prompts deutsch arbeite wenn ich etw
 4. Sobald ich happy bin, `--chaos 0` setzen und weitere Variationen davon generieren
 5. Fuer finale Versionen immer `--q 2` (max Quality) und `--v 6.1`
 
-Den kompletten Workflow wie ich KI-generierte Bilder anschliessend bearbeite und in meinen Fotografie-Workflow einbinde, habe ich im Artikel [KI Bildbearbeitung: Mein Workflow als Fotograf](/blog/ki-bildbearbeitung-workflow-fotograf-2026) beschrieben.
+Den kompletten Workflow wie ich KI-generierte Bilder anschliessend bearbeite und in meinen Fotografie-Workflow einbinde, habe ich im Artikel [KI Bildbearbeitung: Mein Workflow als Fotograf](/blog/ki-bildbearbeitung-workflow-fotograf-2026) beschrieben. Und die Prompt-Prinzipien die ich hier fuer Bilder nutze — Kontext liefern, Output-Format vorgeben, iterieren — funktionieren genauso fuer Text: dazu habe ich einen eigenen [Prompt Engineering Guide](/blog/prompt-engineering-lernen-2026) geschrieben.
 
 ---
 
@@ -371,12 +377,13 @@ Den kompletten Workflow wie ich KI-generierte Bilder anschliessend bearbeite und
 Direkte Antwort: Ja, aber nicht als Fotografen-Ersatz.
 
 Ich nutze Midjourney hauptsaechlich fuer:
+
 - **Moodboards** vor einem Shooting — Kunden koennen sehen was ich mir vorstelle
 - **Konzeptvisualisierungen** die sich nicht vernuenftig produzieren liessen
 - **Blog und Social Media** wenn ich ein visuelles Beispiel brauche ohne ein eigenes Bild parat zu haben
 - **Stilexperimente** bevor ich Zeit und Geld in ein echtes Shoot stecke
 
-Was Midjourney *nicht* ist: ein Ersatz fuer echte Fotografie. Das Gefuehl eines Moments, das echte Licht, die Substanz einer Szene — das kriegst du nicht mit einem KI-Bild. Meine besten Bilder sind immer noch die, die ich mit einer Kamera in der Hand gemacht habe.
+Was Midjourney _nicht_ ist: ein Ersatz fuer echte Fotografie. Das Gefuehl eines Moments, das echte Licht, die Substanz einer Szene — das kriegst du nicht mit einem KI-Bild. Meine besten Bilder sind immer noch die, die ich mit einer Kamera in der Hand gemacht habe.
 
 Aber als Werkzeug in meinem kreativen Prozess ist es inzwischen Standard. Das [Midjourney Abo fuer ~10 USD/Monat](https://midjourney.com) ist fuer mich gerechtfertigt — ich nutze es regelmaessig genug.
 
@@ -388,19 +395,19 @@ Wenn du noch nie mit KI-Bildgeneratoren gearbeitet hast, empfehle ich erst meine
 
 Zum Bookmarken:
 
-| Kategorie | Begriff im Prompt | Effekt |
-|---|---|---|
-| Brennweite | `24mm wide angle` | Weites FOV, leichte Verzerrung |
-| Brennweite | `85mm portrait lens` | Portrait-Kompression, Trennung |
-| Brennweite | `135mm telephoto` | Starke Kompression, flacher Look |
-| Blende | `f/1.4 shallow DOF` | Starkes Bokeh |
-| Blende | `f/8 deep focus` | Alles scharf |
-| Licht | `golden hour backlight` | Warmes Gegenlicht |
-| Licht | `overcast diffused` | Weiches Licht ohne Schatten |
-| Licht | `Rembrandt lighting` | Charakteristisches Portraitlicht |
-| Film | `Kodak Portra 400` | Warme Hauttöne, klassisch |
-| Film | `Fujifilm Velvia` | Saettigte Farben, Natur |
-| Film | `Kodak Tri-X B&W` | Harter S/W Kontrast |
-| Style | `--style raw` | Weniger KI-Filter, fotografischer |
-| Style | `--stylize 30` | Mehr Prompt-Treue |
-| Style | `--stylize 150` | Mehr kuenstlerische Freiheit |
+| Kategorie  | Begriff im Prompt       | Effekt                            |
+| ---------- | ----------------------- | --------------------------------- |
+| Brennweite | `24mm wide angle`       | Weites FOV, leichte Verzerrung    |
+| Brennweite | `85mm portrait lens`    | Portrait-Kompression, Trennung    |
+| Brennweite | `135mm telephoto`       | Starke Kompression, flacher Look  |
+| Blende     | `f/1.4 shallow DOF`     | Starkes Bokeh                     |
+| Blende     | `f/8 deep focus`        | Alles scharf                      |
+| Licht      | `golden hour backlight` | Warmes Gegenlicht                 |
+| Licht      | `overcast diffused`     | Weiches Licht ohne Schatten       |
+| Licht      | `Rembrandt lighting`    | Charakteristisches Portraitlicht  |
+| Film       | `Kodak Portra 400`      | Warme Hauttöne, klassisch         |
+| Film       | `Fujifilm Velvia`       | Saettigte Farben, Natur           |
+| Film       | `Kodak Tri-X B&W`       | Harter S/W Kontrast               |
+| Style      | `--style raw`           | Weniger KI-Filter, fotografischer |
+| Style      | `--stylize 30`          | Mehr Prompt-Treue                 |
+| Style      | `--stylize 150`         | Mehr kuenstlerische Freiheit      |

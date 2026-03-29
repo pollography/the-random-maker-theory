@@ -12,6 +12,7 @@ readingTime: 3
 ---
 
 > **TL;DR**
+>
 > - Open Source, lokal, keine Cloud, deine Daten bleiben bei dir, 2.000+ Integrationen
 > - Hardware: Pi 4 ab 30€ + Zigbee Dongle 20€, für 5-20 Geräte ausreichend
 > - Start mit Smart Plug (15€), Bewegungssensor (20€), Tür-Sensor (10€), dann Automationen bauen
@@ -79,15 +80,15 @@ Nervig? Ja. Spart Geld? Absolut.
 
 ## Was kostet der Spaß?
 
-| Was | Budget | Komfort |
-|---|---|---|
-| Hardware (Hub) | Pi 4 gebraucht: 30€ | NUC: 200€ |
-| Zigbee-Dongle | 20€ | 30€ |
-| Smart Plugs (2x) | 30€ | 50€ |
-| Smart Bulbs (2x) | 30€ | 60€ |
-| Bewegungssensor | 20€ | 30€ |
-| Tür-Sensor (2x) | 20€ | 40€ |
-| **Gesamt** | **~150€** | **~410€** |
+| Was              | Budget              | Komfort   |
+| ---------------- | ------------------- | --------- |
+| Hardware (Hub)   | Pi 4 gebraucht: 30€ | NUC: 200€ |
+| Zigbee-Dongle    | 20€                 | 30€       |
+| Smart Plugs (2x) | 30€                 | 50€       |
+| Smart Bulbs (2x) | 30€                 | 60€       |
+| Bewegungssensor  | 20€                 | 30€       |
+| Tür-Sensor (2x)  | 20€                 | 40€       |
+| **Gesamt**       | **~150€**           | **~410€** |
 
 Die Software ist kostenlos. Kein Abo. Kein Vendor-Lock-in.
 
@@ -110,6 +111,8 @@ Drei Gründe:
 5. Erste Automation bauen: Bewegung → Licht
 
 Nach einem Nachmittag hast du ein funktionierendes Smart Home. Lokal, privat, erweiterbar.
+
+Wer das Ganze noch tiefer ausbauen will — Hardware, Schritt-für-Schritt-Installation und die ersten Automatisierungen — findet alles im [Home Assistant Komplett-Guide 2026](/blog/home-assistant-einrichten-2026).
 
 ---
 

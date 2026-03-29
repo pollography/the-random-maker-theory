@@ -2,8 +2,18 @@
 title: "Claude Code Ultimate Setup: Die komplette Maschine fuer maximale Produktivitaet"
 slug: "claude-code-ultimate-setup-produktivitaet-2026"
 date: "2026-03-11"
-description: "Der ultimative Guide: Claude Code mit Obsidian, NotebookLM, Playwright, Hooks und Scheduled Tasks zur perfekten Arbeitsmaschine kombinieren. Schritt fuer Schritt, von der Installation bis zum fertigen System."
-tags: ["claude-code", "ki-tools", "produktivitaet", "workflow", "automation", "tutorial", "obsidian", "notebooklm"]
+description: "Claude Code mit Obsidian, NotebookLM, Playwright, Hooks und Scheduled Tasks zur Arbeitsmaschine kombinieren. Von der Installation bis zum fertigen System."
+tags:
+  [
+    "claude-code",
+    "ki-tools",
+    "produktivitaet",
+    "workflow",
+    "automation",
+    "tutorial",
+    "obsidian",
+    "notebooklm",
+  ]
 category: "ki-tools"
 draft: true
 readingTime: 25
@@ -159,6 +169,7 @@ Playwright ist der Hammer. Wenn du jemals versucht hast, ueber Claude etwas in e
 **Warum Playwright statt MCP Browser Server?** Token-Effizienz. Ein MCP-Server schickt den kompletten Accessibility Tree jeder Seite in deinen Context. Das sind schnell 90.000 extra Tokens. Playwright CLI komprimiert das auf Element-Referenzen wie `e15: [Button] "Submit"`. Das spart circa 18% Context.
 
 **Was es kann:**
+
 - Formulare ausfuellen und absenden
 - Screenshots fuer Dokumentation
 - Daten aus dynamischen Seiten extrahieren
@@ -176,6 +187,7 @@ Playwright ist der Hammer. Wenn du jemals versucht hast, ueber Claude etwas in e
 Firecrawl macht aus jeder Website sauberes Markdown. Das ist der Unterschied zu normalem Scraping: Du kriegst nicht HTML-Muell, sondern formatierte Daten die Claude sofort verarbeiten kann.
 
 **Vier Commands:**
+
 - **Scrape:** Eine einzelne Seite in Markdown konvertieren
 - **Crawl:** Eine komplette Website systematisch durchgehen
 - **Map:** Sitemap einer Website erstellen
@@ -190,6 +202,7 @@ Firecrawl macht aus jeder Website sauberes Markdown. Das ist der Unterschied zu 
 Das ist vielleicht der cleverste Hack im ganzen Setup. NotebookLM ist Googles Research-Tool. Es analysiert Quellen, erstellt Zusammenfassungen, generiert Podcasts, Mind Maps und Infografiken. Und das Beste: Es ist komplett kostenlos. Google bezahlt die Gemini-Tokens.
 
 **Der Workflow:**
+
 1. Claude sammelt Quellen (Web Search + Firecrawl + YouTube)
 2. Claude erstellt ein NotebookLM Notebook mit diesen Quellen
 3. NotebookLM analysiert alles (auf Googles Servern, keine Claude-Token-Kosten!)
@@ -197,6 +210,7 @@ Das ist vielleicht der cleverste Hack im ganzen Setup. NotebookLM ist Googles Re
 5. Ergebnisse werden in Obsidian gespeichert
 
 **Was NotebookLM generieren kann:**
+
 - Audio Overviews (Podcast-artige Diskussionen ueber deine Quellen)
 - Mind Maps (Konzept-Beziehungen visualisiert)
 - Flashcards und Quizzes
@@ -353,6 +367,7 @@ Dann Hooks:
 ### Phase 2: Playwright CLI (10 Minuten)
 
 In PowerShell:
+
 ```
 npm install -g @playwright/cli@latest
 npx playwright install chromium
@@ -366,6 +381,7 @@ Test: "Oeffne https://example.com im Browser und mach einen Screenshot."
 ### Phase 3: Firecrawl CLI (10 Minuten)
 
 In PowerShell:
+
 ```
 npm install -g firecrawl
 ```
@@ -373,6 +389,7 @@ npm install -g firecrawl
 Dann: https://firecrawl.dev registrieren, API Key kopieren.
 
 Environment Variable setzen:
+
 ```
 setx FIRECRAWL_API_KEY "fc-dein-key-hier"
 ```
@@ -382,6 +399,7 @@ Test in Claude Code: "Scrape die Startseite von therandommakertheory.com und zei
 ### Phase 4: NotebookLM CLI (15 Minuten)
 
 In PowerShell:
+
 ```
 pip install notebooklm-mcp-cli
 nlm auth login
@@ -390,6 +408,7 @@ nlm auth login
 Browser oeffnet sich, Google-Login durchfuehren.
 
 Dann in Claude Code:
+
 ```
 nlm setup add claude-code
 ```
@@ -406,6 +425,7 @@ Dann Claude Code im Vault-Ordner oeffnen und eingeben:
 ### Phase 6: Scheduled Tasks (20 Minuten)
 
 In Cowork Desktop, jeden Task einzeln anlegen:
+
 - Morning Dashboard (07:00, Mo-Fr)
 - Content Pipeline (08:00, Mo-Fr)
 - Social Recycler (12:00, Mo-Mi-Fr)
@@ -583,3 +603,5 @@ Aber das Fundament das du jetzt aufbaust, CLAUDE.md, Hooks, Skills, Obsidian Vau
 Und ehrlich: Fuer jemanden mit ADHS ist das System pures Gold. Kein "ich muss mich erinnern X zu machen". Kein "ich hab vergessen Y zu checken". Kein Decision Fatigue bei Routine-Aufgaben. Claude uebernimmt die kognitive Last. Du behaltst die kreative Kontrolle.
 
 Das ist keine Zukunftsvision. Das ist jetzt. Und es funktioniert verdammt gut.
+
+— TRMT

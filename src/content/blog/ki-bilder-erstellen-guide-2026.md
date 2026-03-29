@@ -214,6 +214,8 @@ Die KI versteht Kamera-Begriffe. Und zwar richtig gut. "Shot on Canon EOS R5, 85
 
 Kein Fotograf macht ein Bild beim ersten Ausloeser. Bei KI ist das genauso. Plan 3 bis 5 Runden ein. Verfeinere den Prompt, aendere einzelne Begriffe, teste Variationen. Das Ergebnis der dritten Runde ist immer besser als das der ersten.
 
+Wer die Prompt-Logik dahinter grundlegend verstehen will, empfehle ich meinen [Prompt Engineering Guide](/blog/prompt-engineering-lernen-2026) — die Techniken dort gelten genauso fuer Bildgenerierung wie fuer Text.
+
 ## Prompt-Beispiele: Vorher vs. Nachher
 
 Damit du siehst was ich meine, hier ein paar echte Beispiele. Der Unterschied zwischen einem Anfaenger-Prompt und einem guten Prompt ist oft nur Praezision.

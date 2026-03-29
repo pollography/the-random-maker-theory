@@ -8,7 +8,7 @@ category: ki-tools
 pillar: AI Creative
 primaryKW: ki bildbearbeitung online kostenlos
 description: "5 KI-Tools fuer Bildbearbeitung die wirklich nichts kosten — persoenlich getestet vom Fotografen. Hintergrund freistellen, Bildrauschen entfernen, hochskalieren und mehr."
-ogImage: /images/ki-bildbearbeitung-kostenlos-2026-og.jpg
+heroImage: /images/ki-bildbearbeitung-kostenlos-2026-og.jpg
 tags:
   - KI
   - Bildbearbeitung
@@ -65,6 +65,7 @@ Ich nutze es regelmaessig fuer Produktshots die ich schnell auf weissem Hintergr
 **Mein Test:** Portrait mit lockerem Haar vor unruhigem Hintergrund (Baumkronen, wechselndes Licht). Ergebnis war sofort verwendbar, minimale manuelle Nacharbeit. Ich habe danach noch drei weitere Fotos durch Remove.bg gejagt -- Produktfotos auf Holztisch, ein Hundebild mit viel Fell, eine Stadtaufnahme mit Motorrad -- und war in allen Faellen zufrieden.
 
 **Kostenlos-Limits:**
+
 - Ausgabe in 0.25 Megapixel (ca. 500x500px)
 - Fuer normale Web-Nutzung ausreichend
 - Fuer Print oder grosse Formate: kostenpflichtig
@@ -84,6 +85,7 @@ Ich war skeptisch -- Canva ist halt primaer ein Design-Tool, kein Bildbearbeitun
 Der Background Remover ist nicht ganz auf Remove.bg-Niveau, aber eng dran. Magic Eraser fuer stoerende Elemente im Hintergrund laeuft auf dem Niveau von dem was Lightroom erst seit Kurzem kann. Magic Expand -- also das Weiterfuehren eines Bildes ueber seine Kanten hinaus -- ist absoluter Wahnsinn und ich nutze es staendig fuer Social-Media-Formate wenn ich ein 4:3-Foto auf 16:9 bringen muss.
 
 **Kostenlos-Limits:**
+
 - Free-Account: 50 generative KI-Credits pro Monat
 - Background Remover: im Free-Plan verfuegbar (limitiert)
 - Ausgabe: bis 1080px in der Gratis-Version
@@ -105,6 +107,7 @@ Clipdrop ist mein persoenlicher Geheimtipp. Das Tool wird von Stability AI betri
 **Relight (Beleuchtung aendern):** Das ist die Funktion die mich am meisten beeindruckt. Du kannst die Lichtquelle in einem Bild nachtraeglich aendern. Warmton, Kaltton, seitliches Licht, Backlight -- das funktioniert nicht immer perfekt, aber oft gut genug fuer Social Posts.
 
 **Kostenlos-Limits:**
+
 - Kostenloser Account mit monatlichem Credit-Budget
 - Grosse Bilder brauchen mehr Credits
 - Kein Wasserzeichen in der Free-Version
@@ -128,6 +131,7 @@ Fotor erledigt Hautergleichung, Augen aufhellen und dezente Glattung in einem Ru
 Was mich stoert: Das Interface ist leicht chaotisch, man findet nicht sofort was man sucht. Und die Free-Version schiebt nach jeder Aktion eine kleine Upgrade-Aufforderung ins Bild. Nervt.
 
 **Kostenlos-Limits:**
+
 - Portrait-KI-Features: begrenzte Anzahl kostenlos
 - Wasserzeichen bei Downloads in niedrig Aufloesung ohne Account
 - Mit kostenlosem Account: besser, aber immer noch eingeschraenkt
@@ -149,6 +153,7 @@ MyEdit ist das Nischentool im Vergleich. Es macht ein paar Dinge die andere nich
 **Kolorierung von Schwarzweissfotos:** Das macht MyEdit gut. Ich habe es mit historischen Fotos getestet -- die Hauttone wirken natuerlicher als bei vielen Konkurrenten.
 
 **Kostenlos-Limits:**
+
 - 10 kostenlose Bearbeitungen pro Tag ohne Anmeldung
 - Mit Account mehr Limits moeglich
 - Keine Wasserzeichen bei normaler Ausgabe
@@ -159,13 +164,13 @@ MyEdit ist das Nischentool im Vergleich. Es macht ein paar Dinge die andere nich
 
 ## Vergleichstabelle: KI Bildbearbeitung Online Kostenlos
 
-| Tool | Kostenlos? | Staerke | Schwaeche | Mein Urteil |
-|------|-----------|---------|-----------|-------------|
-| **Remove.bg** | Ja (0.25MP) | Freistellen (beste Qualitaet) | Nur Freistellen, kleine Aufloesung gratis | Pflicht fuer Freistellen |
-| **Canva AI** | Ja (50 Credits/Mo) | Breiteste Funktionspalette | Credit-Limit, kein Profi-Ersatz | Bester Allrounder gratis |
-| **Clipdrop** | Ja (Credit-Budget) | Rauschen, Upscaling, Relight | Credits limitiert | Bester fuer technische Korrekturen |
-| **Fotor** | Eingeschraenkt | Portrait-Retusche | Aufdringliche Upgrade-Aufforderungen | Gut fuer Portraits, nervt aber |
-| **MyEdit** | Ja (10/Tag) | Alte Fotos, Kolorierung | Schwaecher bei komplexen Objekten | Nischentool, aber stark dort |
+| Tool          | Kostenlos?         | Staerke                       | Schwaeche                                 | Mein Urteil                        |
+| ------------- | ------------------ | ----------------------------- | ----------------------------------------- | ---------------------------------- |
+| **Remove.bg** | Ja (0.25MP)        | Freistellen (beste Qualitaet) | Nur Freistellen, kleine Aufloesung gratis | Pflicht fuer Freistellen           |
+| **Canva AI**  | Ja (50 Credits/Mo) | Breiteste Funktionspalette    | Credit-Limit, kein Profi-Ersatz           | Bester Allrounder gratis           |
+| **Clipdrop**  | Ja (Credit-Budget) | Rauschen, Upscaling, Relight  | Credits limitiert                         | Bester fuer technische Korrekturen |
+| **Fotor**     | Eingeschraenkt     | Portrait-Retusche             | Aufdringliche Upgrade-Aufforderungen      | Gut fuer Portraits, nervt aber     |
+| **MyEdit**    | Ja (10/Tag)        | Alte Fotos, Kolorierung       | Schwaecher bei komplexen Objekten         | Nischentool, aber stark dort       |
 
 ---
 
@@ -193,7 +198,7 @@ Wenn du gerade anfaengst dich mit KI-Bildbearbeitung zu beschaeftigen: Fang mit 
 
 Willst du tiefer einsteigen -- also eigene KI-Workflows aufbauen, Tools miteinander kombinieren, verstehen warum manche Bilder gut reagieren und andere nicht -- dann schau dir meinen Artikel an: [KI Bildbearbeitung: Mein Workflow als Fotograf](/blog/ki-bildbearbeitung-workflow-fotograf-2026). Da gehe ich ins Detail was hinter den Algorithmen steckt.
 
-Und wenn du noch einen Schritt weitergehen willst und eigene KI-Bilder erstellen statt nur bearbeiten moechtest: [KI Bilder erstellen: Der ultimative Guide](/blog/ki-bilder-erstellen-guide-2026).
+Und wenn du noch einen Schritt weitergehen willst und eigene KI-Bilder erstellen statt nur bearbeiten moechtest: [KI Bilder erstellen: Der ultimative Guide](/blog/ki-bilder-erstellen-guide-2026). Wer viele Fotos sortieren muss, sollte sich ausserdem ansehen wie [KI-gestuetztes Culling](/blog/aftershoot-alternative-ai-photo-culling) den Auswahlprozess komplett veraendert -- ich hab damit meinen Culling-Aufwand von zwei Stunden auf unter 20 Minuten reduziert.
 
 ---
 
@@ -207,4 +212,4 @@ Eine letzte Sache die ich betonen will: Die Qualitaet dieser Tools hat sich in d
 
 ---
 
-*Fotografie, KI-Tools, Automatisierung -- das sind meine Themen hier auf TRMT. Wenn dich das interessiert, schau regelmaessig vorbei.*
+_Fotografie, KI-Tools, Automatisierung -- das sind meine Themen hier auf TRMT. Wenn dich das interessiert, schau regelmaessig vorbei._

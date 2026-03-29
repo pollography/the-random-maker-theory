@@ -3,7 +3,16 @@ title: "Die 25 besten ChatGPT Prompts 2026: Getestet, sortiert, sofort nutzbar"
 slug: "beste-chatgpt-prompts-2026"
 date: "2026-03-18"
 description: "Die 25 besten ChatGPT Prompts fuer Content, Produktivitaet, Research und Coding — alle persoenlich getestet, mit Erklaerung und sofort zum Kopieren."
-tags: ["chatgpt", "beste prompts", "ki tools", "prompt sammlung", "ai prompts", "produktivitaet", "content creator"]
+tags:
+  [
+    "chatgpt",
+    "beste prompts",
+    "ki tools",
+    "prompt sammlung",
+    "ai prompts",
+    "produktivitaet",
+    "content creator",
+  ]
 category: "ki-tools"
 draft: true
 readingTime: 14
@@ -18,6 +27,7 @@ videoUrl: ""
 # Die 25 besten ChatGPT Prompts 2026: Getestet, sortiert, sofort nutzbar
 
 **TL;DR**
+
 - 25 ChatGPT Prompts die ich taeglich nutze — keine generischen "Schreib mir ein Gedicht"-Beispiele
 - Sortiert nach Kategorie: Content, Produktivitaet, Research, Kreativ, Coding
 - Jeder Prompt mit Erklaerung warum er funktioniert und wie du ihn anpasst
@@ -374,25 +384,28 @@ Bewerte jede Analogie von 1-5 Sternen (Genauigkeit der Abbildung).
 
 ### Prompt 17: Der Code-Reviewer
 
-```
+````
 Reviewe diesen Code:
 
 ```[SPRACHE]
 [DEIN CODE]
-```
+````
 
 Pruefe auf:
+
 1. Bugs oder logische Fehler
 2. Sicherheitsluecken (SQL Injection, XSS, etc.)
 3. Performance-Probleme
 4. Lesbarkeit und Wartbarkeit
 
 Fuer jedes gefundene Problem:
+
 - Schweregrad (kritisch/mittel/niedrig)
 - Erklaerung warum es ein Problem ist
 - Konkreter Fix als Code-Snippet
 
 Wenn der Code gut ist, sag das auch — kein Problem erfinden wo keins existiert.
+
 ```
 
 **Warum er funktioniert:** Der letzte Satz ist wichtig. Ohne ihn erfindet ChatGPT gerne Probleme die keine sind. Die Schweregrad-Einstufung hilft dir, dich auf das Wichtige zu konzentrieren.
@@ -400,6 +413,7 @@ Wenn der Code gut ist, sag das auch — kein Problem erfinden wo keins existiert
 ### Prompt 18: Der Error-Message-Decoder
 
 ```
+
 Ich bekomme diesen Fehler:
 
 ```
@@ -407,6 +421,7 @@ Ich bekomme diesen Fehler:
 ```
 
 Kontext:
+
 - Sprache/Framework: [z.B. "Python 3.11", "React 18", "ESPHome"]
 - Was ich versuche: [1 Satz]
 - Was ich schon probiert habe: [LISTE]
@@ -415,6 +430,7 @@ Kontext:
 2. Was ist die wahrscheinlichste Ursache?
 3. Gib mir die 3 wahrscheinlichsten Fixes, sortiert nach Wahrscheinlichkeit
 4. Wie verhindere ich diesen Fehler in Zukunft?
+
 ```
 
 **Warum er funktioniert:** Das "Was ich schon probiert habe" spart dir die Runde wo ChatGPT genau das vorschlaegt was du schon getestet hast. Und "in einfachen Worten" hilft, den Fehler wirklich zu verstehen statt ihn nur zu fixen.
@@ -422,6 +438,7 @@ Kontext:
 ### Prompt 19: Der Regex-Baumeister
 
 ```
+
 Ich brauche eine Regular Expression die:
 [BESCHREIBUNG WAS SIE MATCHEN SOLL]
 
@@ -431,10 +448,12 @@ Und NICHT matchen soll:
 Sprache: [Python/JavaScript/etc.]
 
 Gib mir:
+
 1. Die Regex
 2. Erklaerung jedes einzelnen Teils
 3. 5 Test-Strings (3 die matchen sollen, 2 die nicht matchen sollen)
 4. Edge Cases die ich beachten sollte
+
 ```
 
 **Warum er funktioniert:** Regex ist eines der Dinge wo ChatGPT wirklich glaenzt. Aber ohne die Gegenbeispiele und Edge Cases bekommst du oft eine Regex die zu viel matcht. Die Test-Strings kannst du direkt zum Validieren verwenden.
@@ -442,6 +461,7 @@ Gib mir:
 ### Prompt 20: Der API-Erklaerer
 
 ```
+
 Erklaere mir diese API / dieses Code-Konzept:
 
 [API-DOKUMENTATION ODER CODE-SNIPPET]
@@ -451,6 +471,7 @@ Erklaere mir diese API / dieses Code-Konzept:
 3. Minimales funktionierendes Beispiel (so kurz wie moeglich)
 4. Haeufigste Fehler die Anfaenger damit machen
 5. Wie haengt es mit [VERWANDTES KONZEPT] zusammen?
+
 ```
 
 **Warum er funktioniert:** Die Kombination aus Use Cases und haeufigen Fehlern gibt dir ein vollstaendiges mentales Modell statt nur einer Syntax-Erklaerung.
@@ -462,11 +483,13 @@ Erklaere mir diese API / dieses Code-Konzept:
 ### Prompt 21: Der System-Prompt-Builder
 
 ```
+
 Ich moechte einen Custom GPT / ein AI-Tool bauen fuer folgenden Zweck:
 
 [ZWECK]
 
 Erstelle einen System-Prompt der:
+
 1. Die Rolle klar definiert
 2. Den Kontext vorgibt (Wissen, Grenzen, Zielgruppe)
 3. Das Output-Format festlegt
@@ -475,6 +498,7 @@ Erstelle einen System-Prompt der:
 
 Der System-Prompt soll maximal 500 Woerter sein.
 Teste ihn mental mit diesem Szenario: [BEISPIEL-ANFRAGE]
+
 ```
 
 **Warum er funktioniert:** System Prompts sind die Koenigsklasse. Wenn du einen Custom GPT oder ein Tool mit der API baust, entscheidet der System Prompt ueber alles. Die 500-Woerter-Grenze zwingt ChatGPT, praezise zu sein statt einen Roman zu schreiben.
@@ -482,6 +506,7 @@ Teste ihn mental mit diesem Szenario: [BEISPIEL-ANFRAGE]
 ### Prompt 22: Der Content-Repurposer
 
 ```
+
 Hier ist mein fertiger Blog-Artikel:
 
 """
@@ -489,6 +514,7 @@ Hier ist mein fertiger Blog-Artikel:
 """
 
 Erstelle daraus ein komplettes Content-Paket:
+
 1. **Twitter/X Thread** (8-10 Tweets, jeder standalone lesbar)
 2. **LinkedIn Post** (Hook + 3 Key Takeaways + CTA, max 300 Woerter)
 3. **Newsletter-Teaser** (3 Saetze die zum Klick motivieren)
@@ -496,6 +522,7 @@ Erstelle daraus ein komplettes Content-Paket:
 5. **Pinterest Pin Text** (Titel + 2 Saetze)
 
 Behalte meinen Stil bei. Kein generisches Umschreiben.
+
 ```
 
 **Warum er funktioniert:** Ein Blog-Artikel in fuenf Plattform-Formate verwandeln — das ist die Art von Prompt die dir Stunden spart. Der Schluessel: "jeder standalone lesbar" beim Thread und "meinen Stil beibehalten" verhindern Copy-Paste-Muell.
@@ -503,11 +530,13 @@ Behalte meinen Stil bei. Kein generisches Umschreiben.
 ### Prompt 23: Der Feedback-Simulator
 
 ```
+
 Ich habe dieses [Produkt/Feature/Artikel/Design] erstellt:
 
 [BESCHREIBUNG ODER INHALT]
 
 Simuliere 5 verschiedene Nutzer-Reaktionen:
+
 1. **Der Anfaenger** — verwirrt, braucht mehr Erklaerung
 2. **Der Fortgeschrittene** — findet es okay, will mehr Tiefe
 3. **Der Kritiker** — sucht Schwaechen und Luecken
@@ -515,6 +544,7 @@ Simuliere 5 verschiedene Nutzer-Reaktionen:
 5. **Der Pragmatiker** — will wissen was das konkret bringt
 
 Jede Persona: 3-4 Saetze ehrliches Feedback.
+
 ```
 
 **Warum er funktioniert:** Du bekommst Feedback bevor du veroeffentlichst. Die fuenf Perspektiven decken fast alle echten Nutzer-Typen ab. Besonders der "Kritiker" und der "Anfaenger" zeigen dir blinde Flecken.
@@ -522,6 +552,7 @@ Jede Persona: 3-4 Saetze ehrliches Feedback.
 ### Prompt 24: Der Lern-Beschleuniger
 
 ```
+
 Ich will [SKILL/THEMA] in [ZEITRAUM] lernen.
 
 Mein aktuelles Level: [ANFAENGER/MITTEL/FORTGESCHRITTEN]
@@ -529,11 +560,13 @@ Verfuegbare Zeit pro Tag: [STUNDEN]
 Lerntyp: [visuell/hands-on/textbasiert]
 
 Erstelle:
+
 1. Einen Lernplan mit Wochen-Meilensteinen
 2. Die 3 wichtigsten Ressourcen (Buch/Kurs/Tutorial)
 3. Ein Mini-Projekt das ich nach Woche 2 umsetzen kann
 4. Die 5 haeufigsten Fehler die Lernende machen (und wie ich sie vermeide)
 5. Woran ich merke dass ich "gut genug" bin fuer [NAECHSTER SCHRITT]
+
 ```
 
 **Warum er funktioniert:** Punkt 5 ist der Geheimtipp. "Gut genug" zu definieren verhindert endloses Tutorial-Binge-Watching ohne echten Fortschritt. Das Mini-Projekt in Woche 2 gibt dir frueh ein Erfolgserlebnis.
@@ -541,6 +574,7 @@ Erstelle:
 ### Prompt 25: Der Komplett-Briefing-Prompt
 
 ```
+
 Ich starte ein neues Projekt:
 
 Projekt: [BESCHREIBUNG]
@@ -552,6 +586,7 @@ Meine Staerken: [WAS ICH GUT KANN]
 Meine Schwaechen: [WO ICH HILFE BRAUCHE]
 
 Erstelle ein Komplett-Briefing:
+
 1. **Scope:** Was gehoert rein, was explizit NICHT
 2. **Meilensteine:** 4-6 Checkpoints mit Deliverables
 3. **Risiken:** Top 3 Dinge die schiefgehen koennten + Gegenmassnahmen
@@ -559,6 +594,7 @@ Erstelle ein Komplett-Briefing:
 5. **Erster Schritt:** Was mache ich HEUTE in den naechsten 2 Stunden
 
 Sei realistisch, nicht optimistisch.
+
 ```
 
 **Warum er funktioniert:** "Sei realistisch, nicht optimistisch" ist der wichtigste Satz. Ohne ihn gibt dir ChatGPT einen Plan der in einer perfekten Welt funktioniert aber nicht in deiner. Die expliziten Schwaechen helfen, den Stack und die Timeline an deine Realitaet anzupassen.
@@ -588,3 +624,6 @@ Die besten ChatGPT Prompts sind nicht die laengsten oder die cleversten. Es sind
 Nimm dir drei Prompts aus dieser Liste. Teste sie. Passe sie an. Und wenn du merkst dass einer davon deinen Alltag wirklich veraendert — dann hast du mehr gewonnen als mit jedem Online-Kurs ueber "AI Mastery".
 
 Und falls du tiefer einsteigen willst: Mein [Prompt Engineering Guide](/blog/prompt-engineering-lernen-2026) erklaert die Techniken hinter diesen Prompts. Damit kannst du dir deine eigenen bauen — die noch besser zu deinem Use Case passen als alles was eine Liste dir geben kann.
+
+— TRMT
+```

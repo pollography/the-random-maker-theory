@@ -39,6 +39,7 @@ Heute zeige ich dir 5 **esp32 projekt anfaenger** Ideen, die ich selbst gebaut h
 Was du grundsaetzlich brauchst:
 
 **Grundausstattung (einmalig, ~25 EUR als Starter Kit):**
+
 - ESP32 Development Board (z.B. AZ-Delivery ESP32, ~8 EUR auf Amazon)
 - Breadboard + Jumper-Kabel Set (~5 EUR)
 - USB-Kabel Micro-USB oder USB-C (je nach Board)
@@ -57,11 +58,11 @@ Das ist das "Hello World" unter den ESP32 Projekten. Du baust einen Sensor, der 
 
 ### Einkaufsliste
 
-| Bauteil | Typ | Preis |
-|---|---|---|
-| Temperatur/Feuchtigkeitssensor | DHT22 (genauer) oder DHT11 (guenstiger) | 3-5 EUR |
-| 10k Ohm Widerstand | 1x | im Sensor-Kit meist dabei |
-| Jumper-Kabel | bereits in Grundausstattung | - |
+| Bauteil                        | Typ                                     | Preis                     |
+| ------------------------------ | --------------------------------------- | ------------------------- |
+| Temperatur/Feuchtigkeitssensor | DHT22 (genauer) oder DHT11 (guenstiger) | 3-5 EUR                   |
+| 10k Ohm Widerstand             | 1x                                      | im Sensor-Kit meist dabei |
+| Jumper-Kabel                   | bereits in Grundausstattung             | -                         |
 
 Ein [Sensor-Kit (~20 EUR)](https://amzn.to/esp32-sensor-kit) mit DHT22, diversen Widerstaenden und ein paar Extra-Sensoren ist hier eine gute Investition — du brauchst das Zeug eh noch fuer die anderen Projekte.
 
@@ -91,11 +92,11 @@ Sobald man den ersten Sensor zum Laufen gebracht hat, will man die Werte irgendw
 
 ### Einkaufsliste
 
-| Bauteil | Typ | Preis |
-|---|---|---|
-| OLED Display 0,96 Zoll | SSD1306, I2C, 128x64 Pixel | 3-5 EUR |
-| DHT22 Sensor | wie Projekt 1 | 3-5 EUR (oder bereits vorhanden) |
-| Jumper-Kabel | bereits in Grundausstattung | - |
+| Bauteil                | Typ                         | Preis                            |
+| ---------------------- | --------------------------- | -------------------------------- |
+| OLED Display 0,96 Zoll | SSD1306, I2C, 128x64 Pixel  | 3-5 EUR                          |
+| DHT22 Sensor           | wie Projekt 1               | 3-5 EUR (oder bereits vorhanden) |
+| Jumper-Kabel           | bereits in Grundausstattung | -                                |
 
 Das Display laeuft ueber I2C — das bedeutet, du brauchst nur 4 Kabel: VCC, GND, SDA und SCL. Das ist angenehm simpel.
 
@@ -153,11 +154,11 @@ Das Ergebnis: eine Wetterstation, die sowohl draussen-Daten von der API als auch
 
 ### Einkaufsliste
 
-| Bauteil | Typ | Preis |
-|---|---|---|
-| DHT22 Sensor | wie Projekt 1 | bereits vorhanden |
-| OLED Display | wie Projekt 2 | bereits vorhanden |
-| OpenWeatherMap Account | kostenlos | 0 EUR |
+| Bauteil                | Typ           | Preis             |
+| ---------------------- | ------------- | ----------------- |
+| DHT22 Sensor           | wie Projekt 1 | bereits vorhanden |
+| OLED Display           | wie Projekt 2 | bereits vorhanden |
+| OpenWeatherMap Account | kostenlos     | 0 EUR             |
 
 Extra-Kosten: theoretisch 0 Euro, wenn du die Komponenten aus den ersten beiden Projekten hast.
 
@@ -207,11 +208,11 @@ Das ist das Projekt, das ich Leuten zeige, wenn sie fragen ob man mit dem ESP32 
 
 ### Einkaufsliste
 
-| Bauteil | Typ | Preis |
-|---|---|---|
-| PIR Bewegungssensor | HC-SR501 | 2-4 EUR |
-| Jumper-Kabel | bereits in Grundausstattung | - |
-| Telegram Bot | kostenlos | 0 EUR |
+| Bauteil             | Typ                         | Preis   |
+| ------------------- | --------------------------- | ------- |
+| PIR Bewegungssensor | HC-SR501                    | 2-4 EUR |
+| Jumper-Kabel        | bereits in Grundausstattung | -       |
+| Telegram Bot        | kostenlos                   | 0 EUR   |
 
 Der HC-SR501 ist quasi der Standardsensor fuer Bewegungserkennung im DIY-Bereich. Er hat drei Pins (VCC, GND, OUT) und ist damit noch einfacher zu verdrahten als der DHT22.
 
@@ -269,13 +270,13 @@ Das ist das erste Projekt hier, bei dem der ESP32 nicht nur misst, sondern auch 
 
 ### Einkaufsliste
 
-| Bauteil | Typ | Preis |
-|---|---|---|
-| Kapazitiver Bodenfeuchtigkeitssensor | nicht resistiv (langlebiger!) | 3-5 EUR |
-| 5V Mini-Wasserpumpe | z.B. "Arduino Wasserpumpe" | 4-6 EUR |
-| 5V Relais-Modul | 1-Kanal | 2-4 EUR |
-| Kleiner Schlauch | Silikonschlauch 4-6mm | 1-2 EUR |
-| Netzteil 5V 2A | micro-USB | 3-5 EUR (oder altes Handy-Ladegeraet) |
+| Bauteil                              | Typ                           | Preis                                 |
+| ------------------------------------ | ----------------------------- | ------------------------------------- |
+| Kapazitiver Bodenfeuchtigkeitssensor | nicht resistiv (langlebiger!) | 3-5 EUR                               |
+| 5V Mini-Wasserpumpe                  | z.B. "Arduino Wasserpumpe"    | 4-6 EUR                               |
+| 5V Relais-Modul                      | 1-Kanal                       | 2-4 EUR                               |
+| Kleiner Schlauch                     | Silikonschlauch 4-6mm         | 1-2 EUR                               |
+| Netzteil 5V 2A                       | micro-USB                     | 3-5 EUR (oder altes Handy-Ladegeraet) |
 
 Gesamtkosten: circa 13-22 Euro, je nach Quelle. Auf Amazon gibt es gelegentlich Sets mit Pumpe, Sensor und Relais zusammen fuer unter 15 Euro.
 
@@ -345,7 +346,7 @@ Wenn du alle fuenf Projekte durchgegangen bist, hast du das Handwerkszeug fuer a
 
 Der logische naechste Schritt: statt alles selbst zu programmieren, nimmst du **ESPHome**. Das ist ein Framework speziell fuer Home Automation, wo du deine Sensoren per YAML konfigurierst statt selbst Code zu schreiben. Ich hab meinen gesamten Sensor-Wald auf ESPHome umgestellt — das ist deutlich wartungsfreundlicher. Mehr dazu in meinem [ESPHome Tutorial Deutsch](/blog/esphome-tutorial-deutsch-2026).
 
-Und wenn du die Daten in einem echten Smart Home Dashboard haben willst: [WLED auf ESP32](/blog/wled-esp32-anleitung-2026) zeigt dir wie du mit demselben Board auch LEDs smart machst.
+Und wenn du die Daten in einem echten Smart Home Dashboard haben willst: [WLED auf ESP32](/blog/wled-esp32-anleitung-2026) zeigt dir wie du mit demselben Board auch LEDs smart machst. Wer den naechsten Schritt in Richtung 3D-Druck gehen will — viele ESP32-Projekte profitieren von selbst gedruckten Gehaeusen: [Welcher 3D-Drucker passt zum Einstieg](/blog/3d-druck-einstieg-welcher-drucker-2026) gibt einen ehrlichen Ueberblick.
 
 ---
 
@@ -363,4 +364,4 @@ Der ESP32 hat mein Maker-Hobby komplett veraendert. Es ist das erste Mal, dass d
 
 ---
 
-*Affiliate-Hinweis: Die Links in diesem Artikel sind Amazon-Affiliate-Links. Der Preis aendert sich fuer dich nicht. Ich bekomme eine kleine Provision, die diesen Blog am Leben haelt.*
+_Affiliate-Hinweis: Die Links in diesem Artikel sind Amazon-Affiliate-Links. Der Preis aendert sich fuer dich nicht. Ich bekomme eine kleine Provision, die diesen Blog am Leben haelt._

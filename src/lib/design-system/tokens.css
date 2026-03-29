@@ -1,12 +1,12 @@
 /**
- * Life OS Design System - CSS Design Tokens
- * ==========================================
+ * TRMT Design System - CSS Design Tokens
+ * =======================================
  *
  * Two themes: Dark (Deep Honey + Full Cinematic Gradient) & Light (Warm Neomorphism)
  * Default: Dark theme
  *
  * Import fonts (add to HTML <head>):
- * @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+ * @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
  */
 
 /* ============================================================================
