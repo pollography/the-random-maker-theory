@@ -26,7 +26,12 @@ export async function getPosts(): Promise<Post[]> {
 
 	for (const path in modules) {
 		const module = modules[path];
-		const metadata = module.metadata;
+		const metadata = module?.metadata;
+
+		if (!metadata) {
+			console.warn(`[getPosts] Skipping ${path}: no metadata (mdsvex parse error?)`);
+			continue;
+		}
 
 		if (!metadata.draft) {
 			posts.push({

@@ -8,7 +8,6 @@ titleAccent: "Claude"
 podcastSlug: "016-chatgpt-vs-claude-content-creator-2026"
 primaryKW: chatgpt vs claude
 description: "ChatGPT vs Claude: Ich nutze beide KI-Tools taeglich als Content Creator. Hier ist mein ehrlicher Vergleich – mit echten Use Cases, klaren Urteilen und ohne Marketing-Gelaber."
-heroImage: /images/chatgpt-vs-claude-content-creator-2026-og.webp
 tags:
   - KI Tools
   - ChatGPT

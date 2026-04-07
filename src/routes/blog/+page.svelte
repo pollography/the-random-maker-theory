@@ -1,8 +1,9 @@
 <script>
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
-	import { getPosts } from '$lib/utils/posts';
 	import { siteConfig } from '$lib/config';
 	import { pageFAQs } from '$lib/data/pageFAQs';
+
+	let { data } = $props();
 
 	const faqs = pageFAQs.blog;
 	const faqSchema = JSON.stringify({
@@ -17,23 +18,17 @@
 
 	const POSTS_PER_PAGE = 9;
 
-	let allPosts = $state([]);
+	let allPosts = $derived(data.posts);
 	let currentPage = $state(1);
 
 	let totalPages = $derived(Math.ceil(allPosts.length / POSTS_PER_PAGE));
 	let paginatedPosts = $derived(allPosts.slice(0, currentPage * POSTS_PER_PAGE));
 	let hasMore = $derived(currentPage < totalPages);
 
-	async function load() {
-		allPosts = await getPosts();
-	}
-
 	function loadMore() {
 		currentPage++;
 		// Scroll bleibt wo es ist, neue Cards laden unten nach
 	}
-
-	load();
 </script>
 
 <svelte:head>

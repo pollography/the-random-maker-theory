@@ -5,7 +5,6 @@ description: "Wie ich mit Paperclip AI 28 Agents orchestriere — ohne einen Cen
 date: "2026-04-08"
 category: automation
 tags: [paperclip, ai-agents, automation, claude-code, orchestration]
-heroImage: /images/blog/paperclip-agent-empire-og.webp
 pillar: automation
 draft: false
 readingTime: 14
