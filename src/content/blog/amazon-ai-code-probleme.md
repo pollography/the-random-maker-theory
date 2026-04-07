@@ -86,7 +86,7 @@ AI-Code hat ein ganz spezifisches Problem: lokal korrekt, global falsch. Das Mod
 
 ## Was ich konkret anders mach
 
-Ich nutz Claude Code für meine eigenen Projekte: [diesen Blog](/blog/claude-code-ultimate-setup-produktivitaet-2026), Automations, kleinere Tools. Kein Production-System mit tausenden Usern. Aber trotzdem hab ich nach dem Amazon-Ding meinen Workflow kurz überprüft.
+Ich nutz Claude Code für meine eigenen Projekte: [diesen Blog](/blog/claude-code-vs-cursor-vs-copilot-2026), Automations, kleinere Tools. Kein Production-System mit tausenden Usern. Aber trotzdem hab ich nach dem Amazon-Ding meinen Workflow kurz überprüft.
 
 <div class="vb-card">
 

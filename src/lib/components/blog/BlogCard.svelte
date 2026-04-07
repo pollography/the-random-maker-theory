@@ -61,7 +61,7 @@
 
 		<!-- Tags -->
 		<div>
-			<TagList tags={post.tags} />
+			<TagList tags={post.tags} linked={false} />
 		</div>
 	</div>
 </Card>

@@ -113,7 +113,7 @@ Die **RTX 5090** ist dabei das interessanteste Stueck Hardware fuer Endverbrauch
 
 **RTX PRO Blackwell Workstations** gehen noch weiter: Bis zu **4.000 TOPS** lokale KI-Performance. Die RTX PRO 4500 Blackwell Server Edition liefert 100x Performance fuer Vision AI und 50x fuer Vektor-Datenbanken im Vergleich zur Vorgaengergeneration.
 
-Die grosse Frage ist halt: Was bringt dir das im Alltag? Ich sag's mal so — du koenntest theoretisch eine Runde zocken, waehrend im Hintergrund dein lokaler [KI-Agent deine Mails sortiert, Code debuggt und deine naechste Praesentation vorbereitet](/blog/ki-agents-shoppen-posten-mailen-2026). Das ist kein Sci-Fi, das ist der Workflow von 2026.
+Die grosse Frage ist halt: Was bringt dir das im Alltag? Ich sag's mal so — du koenntest theoretisch eine Runde zocken, waehrend im Hintergrund dein lokaler [KI-Agent deine Mails sortiert, Code debuggt und deine naechste Praesentation vorbereitet](/blog/paperclip-ai-agent-orchestration-setup). Das ist kein Sci-Fi, das ist der Workflow von 2026.
 
 | Kriterium | Cloud-KI (API) | Lokale KI (RTX/DGX) |
 |:---|:---|:---|

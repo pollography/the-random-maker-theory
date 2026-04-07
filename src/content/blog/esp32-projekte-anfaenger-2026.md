@@ -5,7 +5,8 @@ date: "2026-04-06"
 draft: false
 category: maker
 primaryKW: "esp32 projekt anfaenger"
-metaDescription: "5 ESP32 Projekte fuer Anfaenger unter 20 Euro: Temperatursensor, OLED Display, Wetterstation, Bewegungsmelder und automatische Pflanzenbewaesserung. Mit Einkaufsliste und Schritt-fuer-Schritt Anleitung."
+description: "5 ESP32 Projekte fuer Anfaenger unter 20 Euro: Temperatursensor, OLED Display, Wetterstation, Bewegungsmelder und automatische Pflanzenbewaesserung. Mit Einkaufsliste und Schritt-fuer-Schritt Anleitung."
+tags: ["esp32", "maker", "diy", "anfaenger", "tutorial"]
 titleAccent: "ESP32"
 podcastSlug: "017-esp32-projekte-anfaenger-2026"
 interlinks:

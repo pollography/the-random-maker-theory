@@ -93,7 +93,7 @@ Insider-Warnung zur Vision-Pricing: Die offiziellen Docs sind grad Müll. OpenAI
 
 Hier liegt der eigentliche Paradigmenwechsel. Nicht ein Modell für alles, sondern spezialisierte Teams.
 
-In modernen Systemen wie [Claude Code](/blog/claude-code-ultimate-setup-produktivitaet-2026) oder OpenAIs Codex funktioniert das so: Das große Modell plant die Strategie. Dann delegiert es Aufgaben an mini-Subagenten. Die arbeiten parallel — zehn Agents gleichzeitig, jeder durchsucht eine andere Datei, prüft einen anderen Test, checkt einen anderen Log-Eintrag.
+In modernen Systemen wie [Claude Code](/blog/claude-code-vs-cursor-vs-copilot-2026) oder OpenAIs Codex funktioniert das so: Das große Modell plant die Strategie. Dann delegiert es Aufgaben an mini-Subagenten. Die arbeiten parallel — zehn Agents gleichzeitig, jeder durchsucht eine andere Datei, prüft einen anderen Test, checkt einen anderen Log-Eintrag.
 
 GPT-5.4 mini ist dafür über **2x schneller** als GPT-5 mini. In Codex verbraucht der mini nur 30% des Quota-Guthabens vom großen Modell. Das heißt: Mehr Agents, weniger Kosten, schnellere Ergebnisse.
 
@@ -107,9 +107,9 @@ Drei konkrete Szenarien:
 
 **1. Massen-Vision.** Du hast 100.000 Screenshots deiner Web-App und willst wissen, ob irgendwo der Kontrast nicht stimmt? Nano-Armee losschicken. Bei $0,20 pro Million Tokens kostet das fast nix. Vorher undenkbar.
 
-**2. Coding-Workflows.** Der mini-Agent im Hintergrund indiziert dein Repo, schreibt Tests, sucht Fehler. Bei doppelter Geschwindigkeit fühlt sich das nicht mehr nach "Warten auf die KI" an, sondern nach Echtzeit. In [meinem Claude Code Setup](/blog/claude-code-ultimate-setup-produktivitaet-2026) nutze ich genau solche Patterns schon.
+**2. Coding-Workflows.** Der mini-Agent im Hintergrund indiziert dein Repo, schreibt Tests, sucht Fehler. Bei doppelter Geschwindigkeit fühlt sich das nicht mehr nach "Warten auf die KI" an, sondern nach Echtzeit. In [meinem Claude Code Setup](/blog/claude-code-vs-cursor-vs-copilot-2026) nutze ich genau solche Patterns schon.
 
-**3. UI-Automatisierung.** Mit 72,1% auf OSWorld kannst du Agenten bauen, die wirklich dein CRM pflegen, Formulare ausfüllen oder Reports generieren. Kein "oops, falscher Button" mehr bei jedem zweiten Klick. Das funktioniert jetzt tatsächlich. Mehr zum Thema [KI-Agents im Alltag](/blog/ki-agents-shoppen-posten-mailen-2026).
+**3. UI-Automatisierung.** Mit 72,1% auf OSWorld kannst du Agenten bauen, die wirklich dein CRM pflegen, Formulare ausfüllen oder Reports generieren. Kein "oops, falscher Button" mehr bei jedem zweiten Klick. Das funktioniert jetzt tatsächlich. Mehr zum Thema [KI-Agents im Alltag](/blog/paperclip-ai-agent-orchestration-setup).
 
 Und wenn du kein Entwickler bist: GPT-5.4 mini ist jetzt für **Free- und Go-User in ChatGPT** verfügbar. Du findest es über die "Thinking"-Funktion. Für Pro-User dient mini als automatischer Fallback, wenn du dein GPT-5.4-Limit erreicht hast. Quasi lautlos umgeleitet auf ein Modell, das für 90% der Alltagsfragen immer noch perfekt reicht. Du merkst es daran, dass die Denkpause kürzer wird.
 

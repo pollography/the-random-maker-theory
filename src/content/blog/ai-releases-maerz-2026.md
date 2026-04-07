@@ -29,7 +29,7 @@ OpenAI hat am 5. März GPT-5.4 gedroppt. Wenn du denkst "ach, wieder ein neues M
 
 1 Million Token. Klingt erstmal nach ner Zahl für Leute die gern Benchmarks lesen. Aber überleg kurz: Du kannst damit einen ganzen Roman reinwerfen. Den kompletten Quellcode eines mittleren Projekts. Alle E-Mails deines letzten Jahres. Das Modell verliert halt einfach nicht den Faden.
 
-Ich hab mit [Claude Code meine ganze Workflow-Maschine gebaut](/blog/claude-code-ultimate-setup-produktivitaet-2026). Das grösste Problem bei sowas war immer, dass der Kontext irgendwann abgebrochen ist. Mitten in der Arbeit. Einfach weg. 1 Million Token löst das.
+Ich hab mit [Claude Code meine ganze Workflow-Maschine gebaut](/blog/claude-code-vs-cursor-vs-copilot-2026). Das grösste Problem bei sowas war immer, dass der Kontext irgendwann abgebrochen ist. Mitten in der Arbeit. Einfach weg. 1 Million Token löst das.
 
 <div class="vb-stat">
 <span class="vb-stat-number">1M</span>
@@ -85,7 +85,7 @@ Codex Security nutzt LLM-Reasoning. Es *versteht* den Code. Erkennt Lücken die 
 
 ### Kleine Fussnote am Rande
 
-Anthropic hatte 14 Tage vorher "Claude Code Security" gelauncht. Wer die [Claude Code Setup-Serie](/blog/claude-code-ultimate-setup-produktivitaet-2026) kennt: Das ist mein Daily Driver. Beide Ansätze sind gut fürs Ecosystem. Konkurrenz macht beide besser, so läuft das.
+Anthropic hatte 14 Tage vorher "Claude Code Security" gelauncht. Wer die [Claude Code Setup-Serie](/blog/claude-code-vs-cursor-vs-copilot-2026) kennt: Das ist mein Daily Driver. Beide Ansätze sind gut fürs Ecosystem. Konkurrenz macht beide besser, so läuft das.
 
 Codex Security ist gratis für den ersten Monat, für ChatGPT Pro, Enterprise, Business und Edu. Danach? Mal sehen.
 

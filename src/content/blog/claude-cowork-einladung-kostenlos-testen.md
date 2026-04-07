@@ -15,7 +15,7 @@ titleAccent: "Cowork"
 >
 > - **Cowork** ist Anthropics Desktop-Agent: Claude arbeitet direkt mit deinen lokalen Dateien
 > - Excel mit Formeln, PowerPoint-Decks, PDFs analysieren, Research, alles autonom
-> - Quasi [Claude Code](/blog/claude-code-ultimate-setup-produktivitaet-2026) für Nicht-Entwickler
+> - Quasi [Claude Code](/blog/claude-code-vs-cursor-vs-copilot-2026) für Nicht-Entwickler
 > - Du kannst Freunde **eine Woche kostenlos** einladen, [hier mein Link](https://claude.ai/referral/OIg-oNK-yg?s=cowork)
 > - Wenn sie danach abonnieren, bekomm ich 10€ Credits. Fair Deal.
 
@@ -53,7 +53,7 @@ Ich nutz beides täglich und die [Abgrenzung](https://fortelabs.com/blog/the-dif
 
 </div>
 
-Claude Code ist mein Coding-Partner. Damit bau ich [diesen Blog hier](/blog/claude-code-ultimate-setup-produktivitaet-2026), meine [n8n-Workflows](/blog/n8n-tutorial-deutsch-2026), mein komplettes [Agent-System mit 22 Agents](/blog/paperclip-ai-agent-orchestration-setup). Ohne Terminal geht da gar nichts.
+Claude Code ist mein Coding-Partner. Damit bau ich [diesen Blog hier](/blog/claude-code-vs-cursor-vs-copilot-2026), meine [n8n-Workflows](/blog/n8n-tutorial-deutsch-2026), mein komplettes [Agent-System mit 22 Agents](/blog/paperclip-ai-agent-orchestration-setup). Ohne Terminal geht da gar nichts.
 
 Cowork dagegen brauchst du null technisches Wissen für. Keine Kommandozeile, kein Setup-Gefrickel. Desktop-App öffnen, Ordner freigeben, loslegen. That's it. Genau das macht es halt so krass für Leute die nicht programmieren wollen oder können. Quasi Claude Code Power, aber mit einer Oberfläche die auch deine Oma bedienen könnte. Naja, vielleicht nicht deine Oma. Aber du verstehst was ich mein.
 

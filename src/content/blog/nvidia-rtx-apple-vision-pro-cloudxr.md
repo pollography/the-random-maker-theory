@@ -41,7 +41,7 @@ NVIDIA hat mit CloudXR 6.0 und Apples visionOS 26.4 eine Bruecke gebaut, die das
 
 Kurze Rueckblende. VR hatte bisher immer dasselbe Problem: Entweder du hattest ein klobiges Headset mit dickem Kabel am PC und bist staendig drueber gestolpert. Oder du hattest was Kabelloses, das aber nur so viel Rechenpower hatte wie ein besseres Smartphone. Texturen? Matschig. Schatten? Wegoptimiert. Raytracing? Vergiss es.
 
-CloudXR 6.0 loest das. Und zwar ziemlich elegant. Angekuendigt wurde das Ganze auf der [GTC 2026](/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17), NVIDIAs jaehrlicher Mega-Konferenz, bei der Jensen Huang traditionell einen Sack voller Ankuendigungen raushaut.
+CloudXR 6.0 loest das. Und zwar ziemlich elegant. Angekuendigt wurde das Ganze auf der [GTC 2026](/blog/ai-releases-maerz-2026), NVIDIAs jaehrlicher Mega-Konferenz, bei der Jensen Huang traditionell einen Sack voller Ankuendigungen raushaut.
 
 Das Prinzip ist quasi wie ein unsichtbares HDMI-Kabel. Dein RTX-PC -- egal ob RTX PRO Workstation oder ne GeForce RTX zu Hause -- berechnet die komplette Grafik. Volles Raytracing, echte Lichtbrechungen, fotorealistische Materialien. Das fertige Bild wird dann ueber WLAN an die Vision Pro gestreamt.
 

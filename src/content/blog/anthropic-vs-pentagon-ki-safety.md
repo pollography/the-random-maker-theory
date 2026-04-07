@@ -145,7 +145,7 @@ Hegseth und das Pentagon werden sich verteidigen. Anthropic hat starke Argumente
 
 Ich werd das verfolgen. Nicht nur als Claude-User, sondern weil dieser Fall echt definieren wird wie KI-Unternehmen künftig mit Regierungsaufträgen umgehen.
 
-Falls dich das Thema interessiert, hier hab ich über mein [Claude Code Setup](/blog/claude-code-ultimate-setup-produktivitaet-2026) geschrieben. Wie ich Claude täglich nutze und was dabei so rauskommt.
+Falls dich das Thema interessiert, hier hab ich über mein [Claude Code Setup](/blog/claude-code-vs-cursor-vs-copilot-2026) geschrieben. Wie ich Claude täglich nutze und was dabei so rauskommt.
 
 ---
 

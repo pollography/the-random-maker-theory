@@ -30,7 +30,7 @@ export async function getEpisodes(): Promise<Episode[]> {
 			continue;
 		}
 
-		if (!metadata.draft) {
+		if (metadata.draft !== true) {
 			episodes.push({
 				slug: metadata.slug,
 				title: metadata.title,
