@@ -6,12 +6,12 @@ description: "Die 25 besten ChatGPT Prompts fuer Content, Produktivitaet, Resear
 tags:
   [
     "chatgpt",
-    "beste prompts",
-    "ki tools",
-    "prompt sammlung",
-    "ai prompts",
+    "prompting",
+    "ki-tools",
+    "prompting",
+    "prompting",
     "produktivitaet",
-    "content creator",
+    "content-creation",
   ]
 category: "ki-tools"
 draft: true

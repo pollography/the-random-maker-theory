@@ -9,11 +9,9 @@ pillar: AI Creative
 primaryKW: ki bildbearbeitung online kostenlos
 description: "5 KI-Tools fuer Bildbearbeitung die wirklich nichts kosten — persoenlich getestet vom Fotografen. Hintergrund freistellen, Bildrauschen entfernen, hochskalieren und mehr."
 tags:
-  - KI
-  - Bildbearbeitung
-  - kostenlos
-  - Online-Tools
-  - Fotografie
+  - "ki-tools"
+  - "fotografie"
+  - "tools"
 interlinks:
   - ki-bildbearbeitung-workflow-fotograf-2026
   - ki-bilder-erstellen-guide-2026

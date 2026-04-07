@@ -6,7 +6,7 @@ description: "Fünf echte n8n Workflow Beispiele aus meinem Alltag: RSS zu Teleg
 date: "2026-03-30"
 draft: false
 category: "automatisierung"
-pillar: "automation"
+pillar: "automatisierung"
 primaryKW: "n8n workflow beispiele"
 tags:
   - n8n

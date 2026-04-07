@@ -3,7 +3,7 @@ title: "ChatGPT Prompts erstellen: So schreibst du Prompts die funktionieren"
 slug: "chatgpt-prompts-erstellen-2026"
 date: "2026-04-01"
 description: "ChatGPT Prompts erstellen die wirklich funktionieren — mit System-Prompts, Vorher/Nachher-Beispielen und Copy-Paste-Templates für Content Creator."
-tags: ["chatgpt", "prompts erstellen", "prompt engineering", "ki tools", "tutorial", "system prompt", "ai prompts"]
+tags: ["chatgpt", "prompting", "prompting", "ki-tools", "tutorial", "prompting", "prompting"]
 category: "ki-tools"
 draft: false
 readingTime: 11

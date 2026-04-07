@@ -9,7 +9,7 @@ tags:
     "ki-tools",
     "produktivitaet",
     "workflow",
-    "automation",
+    "automatisierung",
     "tutorial",
     "obsidian",
     "notebooklm",

@@ -5,12 +5,12 @@ date: "2026-03-27"
 description: "90% der Leute prompten falsch – mit meinem System lernst du Prompt Engineering in unter einer Stunde. Konkret, praxisnah, ohne Entwickler-Vorkenntnisse."
 tags:
   [
-    "prompt engineering",
+    "prompting",
     "chatgpt",
     "claude",
-    "ki tools",
+    "ki-tools",
     "tutorial",
-    "ai prompts",
+    "prompting",
   ]
 category: "ki-tools"
 draft: false

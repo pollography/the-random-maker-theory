@@ -12,7 +12,7 @@ tags:
     "analyse",
     "nvidia",
     "rtx",
-    "apple vision pro",
+    "apple-vision-pro",
     "cloudxr",
     "vr",
   ]

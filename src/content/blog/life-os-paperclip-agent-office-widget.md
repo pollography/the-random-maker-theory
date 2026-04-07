@@ -3,7 +3,7 @@ title: "Mein Life OS Dashboard zeigt AI Agents als Widget — So hab ichs gebaut
 slug: "life-os-paperclip-agent-office-widget"
 date: "2026-04-10"
 description: "Life OS Dashboard mit AI Agent Widget: Ich zeig dir, wie ich Paperclip in mein persoenliches Dashboard eingebaut hab. React, Vite, echte API-Calls. Zum Nachbauen."
-tags: ["life-os", "dashboard", "paperclip", "ai-agents", "react", "automation", "adhs", "tutorial"]
+tags: ["life-os", "dashboard", "paperclip", "ai-agents", "react", "automatisierung", "adhs", "tutorial"]
 category: "automatisierung"
 draft: false
 readingTime: 10

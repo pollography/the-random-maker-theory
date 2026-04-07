@@ -3,7 +3,7 @@ title: "Amazons AI Code Probleme: 6 Stunden Down"
 slug: "amazon-ai-code-probleme"
 date: "2026-03-12"
 description: "Amazon hatte 6h Outage wegen KI-generiertem Code. Ich nutz Claude Code täglich, hier ist was das für uns bedeutet und was ich jetzt anders mache."
-tags: ["ki-news", "ki-tools", "automation", "coding", "claude-code"]
+tags: ["ki-news", "ki-tools", "automatisierung", "coding", "claude-code"]
 category: "ki-news"
 draft: false
 readingTime: 8
