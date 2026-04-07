@@ -44,6 +44,8 @@
 	<meta name="twitter:description" content="KI-Tool-Reviews, Maker-Projekte, Smart Home Tutorials und Produktivitäts-Hacks." />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<link rel="canonical" href="https://therandommakertheory.com/blog" />
+	<link rel="alternate" hreflang="de" href="https://therandommakertheory.com/blog" />
+	<link rel="alternate" hreflang="x-default" href="https://therandommakertheory.com/blog" />
 	{@html `<script type="application/ld+json">${faqSchema}</script>`}
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		"@context": "https://schema.org",

@@ -38,6 +38,8 @@
 	<meta name="twitter:description" content="Keine Zeit zum Lesen? Hör dir die Zusammenfassungen an. Perfekt für unterwegs." />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<link rel="canonical" href="https://therandommakertheory.com/podcast" />
+	<link rel="alternate" hreflang="de" href="https://therandommakertheory.com/podcast" />
+	<link rel="alternate" hreflang="x-default" href="https://therandommakertheory.com/podcast" />
 	{@html `<script type="application/ld+json">${faqSchema}</script>`}
 </svelte:head>
 

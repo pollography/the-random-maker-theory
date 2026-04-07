@@ -80,16 +80,16 @@
 	<meta name="description" content={data.post.description} />
 	<meta property="og:title" content={data.post.title} />
 	<meta property="og:description" content={data.post.description} />
-	{#if data.post.heroImage}
-		<meta property="og:image" content={`https://therandommakertheory.com${data.post.heroImage}`} />
-		<meta name="twitter:image" content={`https://therandommakertheory.com${data.post.heroImage}`} />
-		<meta name="twitter:card" content="summary_large_image" />
-	{/if}
+	<meta property="og:image" content={`https://therandommakertheory.com${data.post.heroImage || '/images/og/default.webp'}`} />
+	<meta name="twitter:image" content={`https://therandommakertheory.com${data.post.heroImage || '/images/og/default.webp'}`} />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={data.post.title} />
 	<meta name="twitter:description" content={data.post.description} />
 
-	<!-- Canonical -->
+	<!-- Canonical + hreflang -->
 	<link rel="canonical" href={`https://therandommakertheory.com/blog/${data.post.slug}`} />
+	<link rel="alternate" hreflang="de" href={`https://therandommakertheory.com/blog/${data.post.slug}`} />
+	<link rel="alternate" hreflang="x-default" href={`https://therandommakertheory.com/blog/${data.post.slug}`} />
 
 	<!-- JSON-LD Article Schema -->
 	{@html `<script type="application/ld+json">${JSON.stringify({
@@ -103,14 +103,23 @@
 		"author": {
 			"@type": "Person",
 			"name": "TRMT",
-			"url": "https://therandommakertheory.com/about"
+			"url": "https://therandommakertheory.com/about",
+			"sameAs": [
+				"https://www.instagram.com/therandommakertheory",
+				"https://www.youtube.com/@therandommakertheory",
+				"https://www.threads.net/@therandommakertheory"
+			]
 		},
 		"publisher": {
 			"@type": "Organization",
 			"name": "The Random Maker Theory",
-			"url": "https://therandommakertheory.com"
+			"url": "https://therandommakertheory.com",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://therandommakertheory.com/favicon.svg"
+			}
 		},
-		"image": data.post.heroImage ? `https://therandommakertheory.com${data.post.heroImage}` : undefined,
+		"image": `https://therandommakertheory.com${data.post.heroImage || '/images/og/default.webp'}`,
 		"inLanguage": "de-DE",
 		"mainEntityOfPage": {
 			"@type": "WebPage",

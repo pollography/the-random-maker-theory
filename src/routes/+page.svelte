@@ -132,8 +132,10 @@
 	<meta name="twitter:description" content="Dein deutsches Tech-Magazin: KI-Tools, Maker-Projekte, Smart Home und Produktivität. Reviews, Tutorials, News." />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 
-	<!-- Canonical -->
+	<!-- Canonical + hreflang -->
 	<link rel="canonical" href="https://therandommakertheory.com" />
+	<link rel="alternate" hreflang="de" href="https://therandommakertheory.com" />
+	<link rel="alternate" hreflang="x-default" href="https://therandommakertheory.com" />
 
 	<!-- FAQPage Schema -->
 	{@html `<script type="application/ld+json">${faqSchema}</script>`}

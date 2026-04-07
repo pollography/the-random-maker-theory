@@ -17,6 +17,8 @@
 	<meta name="twitter:description" content="Tech, KI, Maker-Projekte und Produktivität. Ein Solo-Projekt, gebaut aus echtem Interesse." />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<link rel="canonical" href="https://therandommakertheory.com/about" />
+	<link rel="alternate" hreflang="de" href="https://therandommakertheory.com/about" />
+	<link rel="alternate" hreflang="x-default" href="https://therandommakertheory.com/about" />
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		"@context": "https://schema.org",
 		"@type": "AboutPage",
