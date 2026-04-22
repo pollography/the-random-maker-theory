@@ -19,7 +19,6 @@ readingTime: 10
 heroImage: "/images/blog/n8n-tutorial-deutsch-2026-1.webp"
 heroImageThumb: "/images/blog/n8n-tutorial-deutsch-2026-1-thumb.webp"
 titleAccent: "n8n"
-podcastSlug: "005-n8n-tutorial-deutsch-2026"
 podcastUrl: ""
 videoUrl: ""
 ---

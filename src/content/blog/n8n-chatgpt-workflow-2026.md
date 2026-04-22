@@ -10,7 +10,6 @@ tags: ["n8n", "chatgpt", "automatisierung", "tutorial", "workflow"]
 draft: false
 pillar: "Automation"
 type: "Tutorial + Deep-Dive"
-podcastSlug: "018-n8n-chatgpt-workflow-2026"
 interlinks:
   - "n8n-tutorial-deutsch-2026"
   - "prompt-engineering-lernen-2026"

@@ -19,7 +19,6 @@ readingTime: 14
 heroImage: "/images/blog/beste-chatgpt-prompts-2026-1.webp"
 heroImageThumb: "/images/blog/beste-chatgpt-prompts-2026-1-thumb.webp"
 titleAccent: "25 besten"
-podcastSlug: "014-beste-chatgpt-prompts-2026"
 podcastUrl: ""
 videoUrl: ""
 ---

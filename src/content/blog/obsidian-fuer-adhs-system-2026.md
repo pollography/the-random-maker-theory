@@ -10,7 +10,7 @@ readingTime: 12
 heroImage: "/images/blog/obsidian-fuer-adhs-system-2026-1.webp"
 heroImageThumb: "/images/blog/obsidian-fuer-adhs-system-2026-1-thumb.webp"
 titleAccent: "ADHS"
-podcastSlug: "002-obsidian-fuer-adhs-system-2026"
+podcastSlug: "004-obsidian-fuer-adhs-system-2026"
 podcastUrl: ""
 videoUrl: ""
 ---

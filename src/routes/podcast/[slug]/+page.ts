@@ -1,4 +1,5 @@
 import { getEpisodes } from '$lib/utils/episodes';
+import { getPost } from '$lib/utils/posts';
 import { error } from '@sveltejs/kit';
 
 export const prerender = true;
@@ -19,8 +20,14 @@ export async function load({ params }) {
 		// No content, just show episode details
 	}
 
+	// Only surface the blog link if the referenced post is actually published.
+	// Drafts and stale slugs would otherwise prerender as 404s.
+	const blogSlugResolved = episode.blogSlug
+		? (await getPost(episode.blogSlug))?.slug ?? null
+		: null;
+
 	return {
-		episode,
+		episode: { ...episode, blogSlug: blogSlugResolved },
 		content,
 	};
 }

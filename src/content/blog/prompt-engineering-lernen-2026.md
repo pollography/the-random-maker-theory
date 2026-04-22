@@ -18,7 +18,6 @@ readingTime: 12
 heroImage: "/images/blog/prompt-engineering-lernen-2026-1.webp"
 heroImageThumb: "/images/blog/prompt-engineering-lernen-2026-1-thumb.webp"
 titleAccent: "Prompt Engineering"
-podcastSlug: "006-prompt-engineering-lernen-2026"
 podcastUrl: ""
 videoUrl: ""
 ---

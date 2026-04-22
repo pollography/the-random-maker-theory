@@ -16,7 +16,6 @@ tags:
   - rss
   - discord
 author: "pollo"
-podcastSlug: "009-n8n-workflow-beispiele-2026"
 interlinks:
   - "n8n-tutorial-deutsch-2026"
   - "n8n-chatgpt-workflow-2026"

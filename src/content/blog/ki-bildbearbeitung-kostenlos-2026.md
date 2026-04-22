@@ -15,7 +15,6 @@ tags:
 interlinks:
   - ki-bildbearbeitung-workflow-fotograf-2026
   - ki-bilder-erstellen-guide-2026
-podcastSlug: "013-ki-bildbearbeitung-kostenlos-2026"
 wordCount: ~2200
 heroImage: "/images/blog/ki-bildbearbeitung-kostenlos-2026-1.webp"
 heroImageThumb: "/images/blog/ki-bildbearbeitung-kostenlos-2026-1-thumb.webp"

@@ -9,7 +9,6 @@ type: "Vergleich"
 primaryKW: "zigbee vs thread vs matter"
 description: "Zigbee vs Thread vs Matter im ehrlichen Vergleich 2026. Ich zeige dir welches Smart-Home-Protokoll zu dir passt, was Matter wirklich kann und ob du Zigbee noch brauchst."
 titleAccent: "Zigbee"
-podcastSlug: "015-zigbee-thread-matter-vergleich-2026"
 tags:
   - smart-home
   - home-assistant
@@ -198,7 +197,7 @@ Zigbee (Netzwerk + Anwendung)
          Home Assistant (ZHA oder Zigbee2MQTT)
 ```
 
-Wenn du Home Assistant als Zentrale nutzt — was ich nur empfehlen kann, wie ich in meinem [Home Assistant Einrichten Guide](/home-assistant-einrichten-2026) erklaert habe — dann kannst du beide Welten parallel betreiben. Das ist heute die pragmatischste Loesung.
+Wenn du Home Assistant als Zentrale nutzt — was ich nur empfehlen kann, wie ich in meinem [Home Assistant Einrichten Guide](/blog/home-assistant-einrichten-2026) erklaert habe — dann kannst du beide Welten parallel betreiben. Das ist heute die pragmatischste Loesung.
 
 ---
 
@@ -295,5 +294,5 @@ _Hast du Fragen zu deinem konkreten Setup? Schreib mir — ich schaue es mir ger
 
 **Weiterlesen:**
 
-- [Home Assistant einrichten: Komplett-Guide 2026](/home-assistant-einrichten-2026)
+- [Home Assistant einrichten: Komplett-Guide 2026](/blog/home-assistant-einrichten-2026)
 - [ESPHome Tutorial: Sensoren ohne Code einbinden](/blog/esphome-tutorial-deutsch-2026)

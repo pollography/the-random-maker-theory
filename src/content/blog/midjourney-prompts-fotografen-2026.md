@@ -11,7 +11,6 @@ primaryKW: midjourney prompts deutsch
 description: "Midjourney Prompts Deutsch erklaert von einem Fotografen: Kamera-Parameter, Licht, Style und 15 echte Prompt-Beispiele fuer fotorealistische Portraits und Landschaften."
 heroImage: "/images/blog/midjourney-prompts-fotografen-2026-1.webp"
 heroImageThumb: "/images/blog/midjourney-prompts-fotografen-2026-1-thumb.webp"
-podcastSlug: "010-midjourney-prompts-fotografen-2026"
 tags:
   - midjourney
   - ki-bildgenerierung

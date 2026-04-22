@@ -10,7 +10,7 @@ readingTime: 12
 heroImage: "/images/blog/perfekt-prompten-llm-guide-1.webp"
 heroImageThumb: "/images/blog/perfekt-prompten-llm-guide-1-thumb.webp"
 titleAccent: "Prompt"
-podcastSlug: "002-perfekt-prompten-llm-guide"
+podcastSlug: "perfekt-prompten-llm-guide"
 podcastUrl: "https://open.spotify.com/show/2gzpv9JphhoWBmjXXP2Pjd"
 videoUrl: "https://www.youtube.com/watch?v=KWIH_InMQZ8"
 ---

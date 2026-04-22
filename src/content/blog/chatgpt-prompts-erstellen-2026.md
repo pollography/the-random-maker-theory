@@ -10,7 +10,6 @@ readingTime: 11
 heroImage: "/images/blog/chatgpt-prompts-erstellen-2026-1.webp"
 heroImageThumb: "/images/blog/chatgpt-prompts-erstellen-2026-1-thumb.webp"
 titleAccent: "Prompts"
-podcastSlug: "012-chatgpt-prompts-erstellen-2026"
 podcastUrl: ""
 videoUrl: ""
 ---

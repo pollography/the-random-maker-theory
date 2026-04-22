@@ -10,7 +10,6 @@ readingTime: 11
 heroImage: "/images/blog/esphome-tutorial-deutsch-2026-1.webp"
 heroImageThumb: "/images/blog/esphome-tutorial-deutsch-2026-1-thumb.webp"
 titleAccent: "ESPHome"
-podcastSlug: "014-esphome-tutorial-deutsch-2026"
 podcastUrl: ""
 videoUrl: ""
 ---

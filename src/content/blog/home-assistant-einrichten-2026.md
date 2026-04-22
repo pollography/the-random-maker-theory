@@ -20,7 +20,6 @@ pillar: maker
 type: guide
 primaryKW: home assistant einrichten
 volume: 590
-podcastSlug: "007-home-assistant-einrichten-2026"
 interlinks:
   - esp32-home-assistant-erster-sensor-2026
   - home-assistant-dashboard-2026

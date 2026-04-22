@@ -9,7 +9,6 @@ pillar: "maker"
 draft: false
 primaryKW: "wled esp32 anleitung"
 tags: ["wled", "esp32", "led", "ws2812b", "home-assistant", "smart-home", "diy"]
-podcastSlug: "008-wled-esp32-anleitung-2026"
 interlinks:
   - "esp32-home-assistant-erster-sensor-2026"
   - "home-assistant-dashboard-2026"

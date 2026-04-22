@@ -10,7 +10,6 @@ readingTime: 11
 heroImage: "/images/blog/home-assistant-dashboard-2026-1.webp"
 heroImageThumb: "/images/blog/home-assistant-dashboard-2026-1-thumb.webp"
 titleAccent: "Dashboard"
-podcastSlug: "011-home-assistant-dashboard-2026"
 podcastUrl: ""
 videoUrl: ""
 ---
