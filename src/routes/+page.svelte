@@ -1,11 +1,15 @@
 <script>
-	import { getPosts } from '$lib/utils/posts';
-	import { getLatestEpisode } from '$lib/utils/episodes';
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
-	import { siteConfig } from '$lib/config';
 	import { pageFAQs } from '$lib/data/pageFAQs';
+
+	/** @type {{ data: { posts: any[]; latestEpisode: any; totalCount: number } }} */
+	let { data } = $props();
+
+	const posts = data.posts;
+	const latestEpisode = data.latestEpisode;
+	const totalCount = data.totalCount;
 
 	const faqs = pageFAQs.home;
 	const faqSchema = JSON.stringify({
@@ -18,32 +22,22 @@
 		}))
 	});
 
-	/** @type {any[]} */
-	let posts = $state([]);
-	/** @type {any} */
-	let latestEpisode = $state(null);
 	let scrollY = $state(0);
 
-	// Count-up animation
-	let displayCount = $state(0);
+	// Count-up animation — SSR-friendly: start at totalCount so no "0" flash
+	let displayCount = $state(totalCount);
 	/** @type {HTMLDivElement | null} */
 	let counterRef = $state(null);
 	let hasAnimated = false;
-
-	async function load() {
-		posts = await getPosts();
-		latestEpisode = await getLatestEpisode();
-	}
-
-	load();
 
 	$effect(() => {
 		if (!counterRef) return;
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
-				if (entry.isIntersecting && !hasAnimated && posts.length > 0) {
+				if (entry.isIntersecting && !hasAnimated && totalCount > 0) {
 					hasAnimated = true;
-					animateCount(posts.length);
+					displayCount = 0;
+					animateCount(totalCount);
 				}
 			});
 		}, { threshold: 0.5 });

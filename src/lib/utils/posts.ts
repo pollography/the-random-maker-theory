@@ -19,14 +19,15 @@ export interface Post {
 export async function getPosts(): Promise<Post[]> {
 	const posts: Post[] = [];
 
-	const modules = import.meta.glob<{ metadata: Record<string, any>; default: any }>(
+	// Metadata-only import — avoids bundling full rendered blog HTML (saves ~1MB/chunk).
+	// Full post content is loaded on demand via dynamic import in getPost(slug).
+	const metadataModules = import.meta.glob<Record<string, any>>(
 		'/src/content/blog/*.md',
-		{ eager: true }
+		{ eager: true, import: 'metadata' }
 	);
 
-	for (const path in modules) {
-		const module = modules[path];
-		const metadata = module?.metadata;
+	for (const path in metadataModules) {
+		const metadata = metadataModules[path];
 
 		if (!metadata) {
 			console.warn(`[getPosts] Skipping ${path}: no metadata (mdsvex parse error?)`);
@@ -45,7 +46,7 @@ export async function getPosts(): Promise<Post[]> {
 				heroImage: metadata.heroImage,
 				heroImageThumb: metadata.heroImageThumb,
 				draft: metadata.draft || false,
-				readingTime: metadata.readingTime || calculateReadingTime(module.default?.toString() || ''),
+				readingTime: typeof metadata.readingTime === 'number' ? metadata.readingTime : undefined,
 				podcastSlug: metadata.podcastSlug,
 				podcastUrl: metadata.podcastUrl,
 				videoUrl: metadata.videoUrl,
@@ -80,8 +81,3 @@ export async function getAllTags(): Promise<string[]> {
 	return Array.from(tags).sort();
 }
 
-function calculateReadingTime(content: string): number {
-	const wordsPerMinute = 200;
-	const words = content.trim().split(/\s+/).length;
-	return Math.ceil(words / wordsPerMinute);
-}
