@@ -1,6 +1,8 @@
 import { getEpisodes } from '$lib/utils/episodes';
 import { error } from '@sveltejs/kit';
 
+export const prerender = true;
+
 export async function load({ params }) {
 	const episodes = await getEpisodes();
 	const episode = episodes.find((e) => e.slug === params.slug);

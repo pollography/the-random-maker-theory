@@ -1,6 +1,8 @@
 import { getPosts } from '$lib/utils/posts';
 import { error } from '@sveltejs/kit';
 
+export const prerender = true;
+
 export async function load({ params }) {
 	const posts = await getPosts();
 	const post = posts.find((p) => p.slug === params.slug);

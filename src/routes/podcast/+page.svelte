@@ -1,8 +1,11 @@
 <script>
 	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
-	import { getEpisodes } from '$lib/utils/episodes';
-	import { siteConfig } from '$lib/config';
 	import { pageFAQs } from '$lib/data/pageFAQs';
+	import { siteConfig } from '$lib/config';
+
+	/** @type {{ data: { episodes: any[] } }} */
+	let { data } = $props();
+	const episodes = data.episodes;
 
 	const faqs = pageFAQs.podcast;
 	const faqSchema = JSON.stringify({
@@ -14,14 +17,6 @@
 			"acceptedAnswer": { "@type": "Answer", "text": faq.a }
 		}))
 	});
-
-	let episodes = $state([]);
-
-	async function load() {
-		episodes = await getEpisodes();
-	}
-
-	load();
 </script>
 
 <svelte:head>

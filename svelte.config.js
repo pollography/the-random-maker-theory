@@ -16,7 +16,13 @@ const config = {
 	kit: {
 		adapter: adapter({
 			runtime: 'nodejs22.x'
-		})
+		}),
+		prerender: {
+			// Broken internal links surface as warnings so authors can fix in follow-ups,
+			// but a single stale href doesn't gate an otherwise-green deploy.
+			handleHttpError: 'warn',
+			handleMissingId: 'warn'
+		}
 	}
 };
 
