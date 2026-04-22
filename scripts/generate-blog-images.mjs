@@ -35,9 +35,15 @@
  *   NONE! Just run: node scripts/generate-blog-images.mjs
  */
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, unlinkSync } from 'fs';
 import { resolve, join } from 'path';
 import { readdirSync } from 'fs';
+import { createRequire } from 'module';
+
+// sharp is optional — only required for the --regen path which writes .webp in place
+const requireCJS = createRequire(import.meta.url);
+let sharp = null;
+try { sharp = requireCJS('sharp'); } catch {}
 
 // ─── Config ───────────────────────────────────────────────────────
 const ROOT = resolve(import.meta.dirname, '..');
@@ -54,6 +60,11 @@ const PROVIDER_FLAG = args.indexOf('--provider');
 const PROVIDER = PROVIDER_FLAG !== -1 ? args[PROVIDER_FLAG + 1] : 'pollinations';
 const MODEL_FLAG = args.indexOf('--model');
 const MODEL = MODEL_FLAG !== -1 ? args[MODEL_FLAG + 1] : 'flux';
+const FORCE_REGEN = args.includes('--force-regen');
+const REGEN_LIST_FLAG = args.indexOf('--regen-slugs');
+const REGEN_SLUGS = REGEN_LIST_FLAG !== -1
+  ? new Set((args[REGEN_LIST_FLAG + 1] || '').split(',').filter(Boolean))
+  : null;
 
 // Load .env (only needed for together/gemini providers)
 function loadEnv() {
@@ -177,26 +188,120 @@ function detectVisualConcept(description, postTitle) {
 }
 
 /**
- * Creates ONE bulletproof prompt that produces a usable result every time.
+ * Style presets — five visually distinct looks so consecutive posts
+ * don't all land on the same "dark charcoal + honey + grain" template.
+ * Each preset is a complete aesthetic; rotating across presets gives
+ * the feed variety without abandoning the TRMT palette.
  */
-function createFinalPrompt(todoDescription, altText, postTitle, postCategory) {
+const STYLE_PRESETS = [
+  {
+    id: 'editorial-object',
+    directives: [
+      'Style: editorial product photography, magazine still-life.',
+      'Neutral warm surface (pale concrete, matte wood, or paper).',
+      'Soft diffused daylight from the top-left, gentle shadow fall.',
+      'Muted palette with one honey-amber accent.',
+      'Shallow depth of field, sharp on subject.',
+      'Composition: centered hero, generous negative space.',
+    ],
+  },
+  {
+    id: 'isometric-3d',
+    directives: [
+      'Style: clean isometric 3D render, technical illustration.',
+      'Pastel mid-tone background (soft lavender, mint, or sand).',
+      'Flat shading with subtle ambient occlusion.',
+      'Bright honey-amber and teal accents on geometric elements.',
+      'Crisp edges, no texture noise.',
+      'Composition: 30-degree isometric perspective.',
+    ],
+  },
+  {
+    id: 'hero-product',
+    directives: [
+      'Style: high-end product showroom photography.',
+      'Smooth gradient backdrop from deep teal to warm charcoal.',
+      'Single hard rim light on the subject, glossy reflection underneath.',
+      'Strong subject separation, no ambient clutter.',
+      'Crystalline detail.',
+      'Composition: subject slightly right of center, rule of thirds.',
+    ],
+  },
+  {
+    id: 'abstract-concept',
+    directives: [
+      'Style: abstract graphic illustration, flat vector-inspired with soft 3D depth.',
+      'Bold color blocks: warm honey gradient meeting cool teal gradient.',
+      'Geometric shapes suggesting the topic, no literal objects required.',
+      'Clean vector edges.',
+      'Composition: balanced asymmetry, strong diagonals.',
+    ],
+  },
+  {
+    id: 'cinematic-scene',
+    directives: [
+      'Style: cinematic tech scene, warm interior lighting.',
+      'Deep charcoal environment with a single practical light source.',
+      'Warm amber key, subtle teal rim.',
+      'Rich blacks but never muddy, clean highlights.',
+      'Composition: leading lines toward the subject.',
+    ],
+  },
+];
+
+const CATEGORY_STYLE_MAP = {
+  'maker-projekt': ['editorial-object', 'hero-product'],
+  'maker': ['editorial-object', 'hero-product'],
+  'smart-home': ['hero-product', 'editorial-object'],
+  'ai-creative': ['abstract-concept', 'isometric-3d'],
+  'ai-tools': ['isometric-3d', 'abstract-concept'],
+  'ki-news': ['abstract-concept', 'isometric-3d'],
+  'automation': ['isometric-3d', 'abstract-concept'],
+  'produktivitaet': ['editorial-object', 'isometric-3d'],
+  'fotografie': ['editorial-object', 'cinematic-scene'],
+};
+
+function slugHash(slug) {
+  let h = 2166136261;
+  for (let i = 0; i < slug.length; i++) {
+    h ^= slug.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function pickStyle(category, slug, todoIndex) {
+  const preferred = (CATEGORY_STYLE_MAP[category?.toLowerCase()] || [])
+    .map(id => STYLE_PRESETS.find(p => p.id === id))
+    .filter(Boolean);
+  const rest = STYLE_PRESETS.filter(p => !preferred.includes(p));
+  const pool = preferred.length ? [...preferred, ...rest] : STYLE_PRESETS;
+  const idx = (slugHash(slug) + todoIndex) % pool.length;
+  return pool[idx];
+}
+
+function seedForSlug(slug, todoIndex) {
+  return (slugHash(slug) + todoIndex * 7919) % 999999;
+}
+
+/**
+ * Build a diverse, grain-free prompt with category-aware style routing.
+ * Explicit negative: "no film grain, no scan lines, no texture overlay"
+ * — this is the direct counter-prompt to the old uniform output.
+ */
+function createFinalPrompt(todoDescription, altText, postTitle, postCategory, slug, todoIndex) {
   const safeDescription = transformToReliableStyle(todoDescription);
   const visualConcept = detectVisualConcept(todoDescription, postTitle);
+  const style = pickStyle(postCategory, slug, todoIndex);
 
   const prompt = [
     `${safeDescription}.`,
     `Visual concept: ${visualConcept}.`,
-    'Style: moody tech photography with cinematic lighting.',
-    'Dark charcoal background (near black).',
-    'Key light in warm amber/honey tone.',
-    'Accent light in cool teal.',
-    'Subtle film grain texture.',
-    'Sharp focus on main subject, gentle bokeh on background.',
-    'Composition: clean, minimal, centered or rule-of-thirds.',
-    'Wide 16:9 aspect ratio, suitable as blog header image.',
-    'High resolution, professional quality.',
+    ...style.directives,
+    'Wide 16:9 aspect ratio, usable as blog header.',
+    'High resolution, professional finish.',
     'Absolutely no text, no watermarks, no logos, no UI elements, no human faces.',
-    'No busy or cluttered backgrounds.',
+    'No film grain, no scan lines, no texture overlay, no vignette halos, no noise filter.',
   ].join(' ');
 
   return prompt;
@@ -209,7 +314,7 @@ function createFinalPrompt(todoDescription, altText, postTitle, postCategory) {
  * Berlin-based, open-source, uses Flux/Seedream/GPT Image models
  * Simple URL-based API: fetch image bytes directly
  */
-async function generateWithPollinations(prompt, outputPath) {
+async function generateWithPollinations(prompt, outputPath, seed) {
   const encodedPrompt = encodeURIComponent(prompt);
 
   // Map model names to Pollinations model IDs
@@ -227,7 +332,7 @@ async function generateWithPollinations(prompt, outputPath) {
     model: pollinationsModel,
     nologo: 'true',
     enhance: 'true',
-    seed: String(Math.floor(Math.random() * 999999)),
+    seed: String(seed ?? Math.floor(Math.random() * 999999)),
   }).toString();
 
   // Pollinations returns the image directly as bytes
@@ -340,17 +445,17 @@ async function generateWithGemini(prompt, outputPath) {
 /**
  * Route to correct provider
  */
-async function generateImage(prompt, outputPath) {
+async function generateImage(prompt, outputPath, seed) {
   switch (PROVIDER) {
     case 'pollinations':
-      return generateWithPollinations(prompt, outputPath);
+      return generateWithPollinations(prompt, outputPath, seed);
     case 'together':
     case 'flux':
       return generateWithFlux(prompt, outputPath);
     case 'gemini':
       return generateWithGemini(prompt, outputPath);
     default:
-      return generateWithPollinations(prompt, outputPath);
+      return generateWithPollinations(prompt, outputPath, seed);
   }
 }
 
@@ -383,10 +488,16 @@ function extractImageTodos(content) {
 }
 
 function getPostMeta(content) {
-  const title = content.match(/^title:\s*"(.+?)"/m)?.[1] || 'Blog Post';
-  const slug = content.match(/^slug:\s*"(.+?)"/m)?.[1] || 'unknown';
-  const category = content.match(/^category:\s*"(.+?)"/m)?.[1] || 'tech';
-  return { title, slug, category };
+  // Frontmatter values may or may not be quoted — accept both styles.
+  const pick = (key, fallback) => {
+    const m = content.match(new RegExp(`^${key}:\\s*"?([^"\\n]+?)"?\\s*$`, 'm'));
+    return m?.[1]?.trim() || fallback;
+  };
+  return {
+    title: pick('title', 'Blog Post'),
+    slug: pick('slug', 'unknown'),
+    category: pick('category', 'tech'),
+  };
 }
 
 // ─── Main ──────────────────────────────────────────────────────────
@@ -411,7 +522,8 @@ async function main() {
 
   const posts = readdirSync(BLOG_DIR)
     .filter(f => f.endsWith('.md'))
-    .filter(f => !TARGET_POST || f.includes(TARGET_POST));
+    .filter(f => !TARGET_POST || f.includes(TARGET_POST))
+    .filter(f => !REGEN_SLUGS || REGEN_SLUGS.has(f.replace(/\.md$/, '')));
 
   if (posts.length === 0) {
     console.log('Keine passenden Posts gefunden.');
@@ -426,33 +538,51 @@ async function main() {
   for (const postFile of posts) {
     const postPath = join(BLOG_DIR, postFile);
     const content = readFileSync(postPath, 'utf-8');
-    const todos = extractImageTodos(content);
-
-    if (todos.length === 0) continue;
+    let todos = extractImageTodos(content);
 
     const { title, slug, category } = getPostMeta(content);
 
-    console.log(`\n\u{1f4dd} ${title}`);
-    console.log(`   ${todos.length} Platzhalter`);
+    // Regen path: when the post has no TODO tags anymore (already-published
+    // state) but the slug is in the regen list or forced, synthesise a
+    // single hero-image TODO from the post's description so we can rebuild
+    // the `-1.png` in place with the new style engine.
+    if (todos.length === 0 && (REGEN_SLUGS?.has(slug) || (FORCE_REGEN && TARGET_POST))) {
+      const description = content.match(/^description:\s*"(.+?)"/m)?.[1] || title;
+      todos = [{ description: `Hero-Bild für: ${description}`, altText: title, lineIndex: -1, hasAltLine: false }];
+      console.log(`\n\u{1f4dd} ${title} [REGEN]`);
+      console.log(`   Synthesised hero TODO from frontmatter`);
+    } else if (todos.length === 0) {
+      continue;
+    } else {
+      console.log(`\n\u{1f4dd} ${title}`);
+      console.log(`   ${todos.length} Platzhalter`);
+    }
 
     for (let j = 0; j < todos.length; j++) {
       const todo = todos[j];
       totalTodos++;
 
-      const fileName = `${slug}-${j + 1}.png`;
+      // When regenerating, write directly to the .webp filenames the blog
+      // posts already reference. Otherwise keep the old .png-then-apply flow.
+      const isRegen = REGEN_SLUGS?.has(slug) || (FORCE_REGEN && TARGET_POST);
+      const fileName = isRegen ? `${slug}-${j + 1}.webp` : `${slug}-${j + 1}.png`;
       const outputPath = join(IMAGE_DIR, fileName);
+      const rawPath = isRegen ? join(IMAGE_DIR, `.${slug}-${j + 1}.raw.png`) : outputPath;
 
-      // Skip if already exists
-      if (existsSync(outputPath)) {
+      // Skip if already exists (unless forced regen or slug is in regen list)
+      if (existsSync(outputPath) && !FORCE_REGEN && !REGEN_SLUGS) {
         console.log(`   \u23ed\ufe0f  [${j + 1}] ${fileName} existiert bereits`);
         totalSkipped++;
         continue;
       }
 
-      // Build prompt
-      const prompt = createFinalPrompt(todo.description, todo.altText, title, category);
+      // Build prompt (style-routed + deterministic per slug)
+      const style = pickStyle(category, slug, j);
+      const prompt = createFinalPrompt(todo.description, todo.altText, title, category, slug, j);
+      const seed = seedForSlug(slug, j) ^ (FORCE_REGEN ? (Date.now() & 0xffff) : 0);
 
       console.log(`\n   \u{1f3a8} [${j + 1}/${todos.length}] ${todo.description}`);
+      console.log(`      Style: ${style.id} · seed ${seed}`);
 
       if (DRY_RUN) {
         console.log(`      File:   ${fileName}`);
@@ -467,7 +597,17 @@ async function main() {
           if (attempt > 1) console.log(`      Retry ${attempt}/3...`);
           else console.log(`      Generiere...`);
 
-          await generateImage(prompt, outputPath);
+          await generateImage(prompt, rawPath, seed);
+
+          // Regen path: raw PNG -> WebP hero + WebP thumb.
+          if (isRegen) {
+            if (!sharp) throw new Error('sharp not installed - run `npm i sharp` to enable regen');
+            const rawBuf = readFileSync(rawPath);
+            await sharp(rawBuf).resize(1280, 720, { fit: 'cover' }).webp({ quality: 85 }).toFile(outputPath);
+            const thumbPath = outputPath.replace(/\.webp$/, '-thumb.webp');
+            await sharp(rawBuf).resize(640, 360, { fit: 'cover' }).webp({ quality: 80 }).toFile(thumbPath);
+            try { unlinkSync(rawPath); } catch {}
+          }
 
           const sizeKB = (readFileSync(outputPath).length / 1024).toFixed(0);
           console.log(`      \u2705 ${fileName} (${sizeKB} KB)`);
