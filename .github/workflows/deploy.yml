@@ -1,17 +1,21 @@
 # TRMT Auto-Deploy via Vercel
-# Triggered on push to main branch
-# Builds SvelteKit and deploys to Vercel
 #
-# Required Secrets (in GitHub repo settings):
-#   VERCEL_TOKEN    - Vercel API token
-#   VERCEL_ORG_ID   - Vercel org/team ID
-#   VERCEL_PROJECT_ID - Vercel project ID
+# NOTE: Vercel's GitHub App integration already auto-deploys every push
+# to main (that is the canonical deploy path — verifiable in the Vercel
+# dashboard). This workflow is kept as a belt-and-suspenders redundancy
+# and for the green "deploy" check mark on PRs.
 #
-# Setup:
-#   1. npm i -g vercel
-#   2. vercel link (in project root)
-#   3. Copy .vercel/project.json values to GitHub Secrets
-#   4. Create token: https://vercel.com/account/tokens
+# The old `amondnet/vercel-action@v25` pinned a Vercel CLI that the
+# Vercel API no longer accepts ("CLI version is outdated, requires
+# 47.2.2 or later"), so every push to main surfaced a failure email
+# even though the actual site deployed fine via the GitHub App.
+# Replaced with a direct `npm install --global vercel@latest` flow
+# that always pulls the latest CLI.
+#
+# Required Secrets:
+#   VERCEL_TOKEN      - https://vercel.com/account/tokens
+#   VERCEL_ORG_ID     - from .vercel/project.json
+#   VERCEL_PROJECT_ID - from .vercel/project.json
 
 name: Deploy to Vercel
 
@@ -28,6 +32,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -35,19 +42,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
-      - name: Install Dependencies
-        run: npm ci
+      - name: Install Vercel CLI (latest)
+        run: npm install --global vercel@latest
 
-      - name: Build
-        run: npm run build
+      - name: Pull Vercel env (production)
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: '--prod'
+      - name: Build via Vercel
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy prebuilt to Vercel
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
