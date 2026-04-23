@@ -65,6 +65,8 @@ const REGEN_LIST_FLAG = args.indexOf('--regen-slugs');
 const REGEN_SLUGS = REGEN_LIST_FLAG !== -1
   ? new Set((args[REGEN_LIST_FLAG + 1] || '').split(',').filter(Boolean))
   : null;
+const STYLE_FLAG = args.indexOf('--style');
+const STYLE_OVERRIDE = STYLE_FLAG !== -1 ? args[STYLE_FLAG + 1] : null;
 
 // Load .env (only needed for together/gemini providers)
 function loadEnv() {
@@ -234,7 +236,18 @@ const STYLE_PRESETS = [
       'Bold color blocks: warm honey gradient meeting cool teal gradient.',
       'Geometric shapes suggesting the topic, no literal objects required.',
       'Clean vector edges.',
-      'Composition: balanced asymmetry, strong diagonals.',
+      'Composition: single compact focal motif at the center, tight framing, large calm negative space to the sides — do not spread content across the full width.',
+    ],
+  },
+  {
+    id: 'tight-product',
+    // Anti-stretch preset: close-up, centered, generous padding on left/right
+    directives: [
+      'Style: studio product macro photography, close-up and centered.',
+      'Subject occupies the middle third only — heavy soft-focus negative space on both sides, never edge-to-edge.',
+      'Warm key light top-left, teal rim from the right, smooth seamless backdrop.',
+      'Shallow depth of field, surgical sharpness on subject.',
+      'Composition: strict symmetry or mild rule-of-thirds, subject anchored to center.',
     ],
   },
   {
@@ -271,6 +284,12 @@ function slugHash(slug) {
 }
 
 function pickStyle(category, slug, todoIndex) {
+  // Explicit --style override wins over auto-routing.
+  if (STYLE_OVERRIDE) {
+    const hit = STYLE_PRESETS.find(p => p.id === STYLE_OVERRIDE);
+    if (hit) return hit;
+    console.warn(`[pickStyle] Unknown --style ${STYLE_OVERRIDE}; falling back to auto.`);
+  }
   const preferred = (CATEGORY_STYLE_MAP[category?.toLowerCase()] || [])
     .map(id => STYLE_PRESETS.find(p => p.id === id))
     .filter(Boolean);
