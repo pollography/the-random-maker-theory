@@ -37,10 +37,11 @@ Günstig in Anschaffung und Betrieb. Robuste Teile. Kein Chemie-Setup nötig. Gr
 
 Aber: Du brauchst Handschuhe, eine Maske, gute Belüftung. Die Teile sind spröde. Nachbearbeitung (Waschen + UV-Aushärten) nervt. Und das Harz stinkt.
 
-**Mein Take:** FDM für Einsteiger. Immer. Resin nur, wenn du Miniaturen oder Schmuck drucken willst und bereit bist, dich mit Chemie auseinanderzusetzen.
-
-![Vergleich: Dasselbe Modell gedruckt mit FDM (links) und Resin (rechts)](/images/blog/3d-druck-2.webp)
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Mein Take</span>
+	<p>FDM für Einsteiger. Immer. Resin nur, wenn du Miniaturen oder Schmuck drucken willst und bereit bist, dich mit Chemie auseinanderzusetzen.</p>
+	<p>!<a href="/images/blog/3d-druck-2.webp">Vergleich: Dasselbe Modell gedruckt mit FDM (links) und Resin (rechts)</a></p>
+</div>
 ## Die 3 besten Budget-Drucker unter 300€
 
 ### Bambu Lab A1 Mini. Plug and Play

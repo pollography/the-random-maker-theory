@@ -291,9 +291,13 @@ CALLOUT_MARKERS = {
     "Protipp": "Pro-Tipp",
     "Tipp": "Tipp",
     "Hinweis": "Hinweis",
-    "Wichtig": "Wichtig",
     "Info": "Info",
     "Merke": "Merke",
+    "Mein Take": "Mein Take",
+    "Mein Tipp": "Mein Tipp",
+    "Spoiler": "Spoiler",
+    "Fazit": "Fazit",
+    "Ergebnis": "Ergebnis",
 }
 WARNING_MARKERS = {
     "Warnung": "Warnung",
@@ -301,6 +305,8 @@ WARNING_MARKERS = {
     "Gotcha": "Gotcha",
     "Vorsicht": "Vorsicht",
     "Fehler": "Fehler",
+    "Wichtig": "Wichtig",
+    "Wichtiger Hinweis": "Wichtiger Hinweis",
 }
 
 
@@ -322,6 +328,42 @@ CALLOUT_RE = _compile_keyword_regex(CALLOUT_MARKERS.keys())
 WARNING_RE = _compile_keyword_regex(WARNING_MARKERS.keys())
 
 
+def _compile_inline_marker_regex(keywords):
+    """Match plain `**Keyword:**` paragraphs (not blockquoted)."""
+    alt = "|".join(re.escape(k) for k in sorted(keywords, key=len, reverse=True))
+    return re.compile(
+        rf"""
+        (?:^|\n\n)                                # paragraph boundary
+        (?P<block>
+            \*\*\s*(?P<kw>{alt})\s*[:：]\s*\*\*     # marker with colon required
+            [ \t]*(?P<rest>[^\n]*)\n               # first-line content after marker
+            (?:(?!\n\n)(?!\#{{1,3}}\s)(?!>\s)[^\n]*\n?)*  # continuation until blank line or new heading/bq
+        )
+        """,
+        re.M | re.VERBOSE,
+    )
+
+
+INLINE_CALLOUT_RE = _compile_inline_marker_regex(CALLOUT_MARKERS.keys())
+INLINE_WARNING_RE = _compile_inline_marker_regex(WARNING_MARKERS.keys())
+
+
+# Catch-all for remaining `> text` blockquotes that weren't already caught by
+# a marker pattern. These were using the generic prose blockquote style
+# (honey tint) — promote them to rf-callout so they match the new system.
+GENERIC_BLOCKQUOTE_RE = re.compile(
+    r"""
+    (?:^|\n\n)
+    (?P<block>
+        >(?!\s*\*\*\s*(?:TL[;:\s]*DR))             # skip TL;DR ones (handled earlier)
+        [ \t]?[^\n]*\n
+        (?:>[ \t]?[^\n]*\n?)*
+    )
+    """,
+    re.M | re.VERBOSE,
+)
+
+
 def migrate_keyword_blockquote(body: str, regex: re.Pattern, kind: str, label_map: dict):
     count = [0]
 
@@ -330,7 +372,6 @@ def migrate_keyword_blockquote(body: str, regex: re.Pattern, kind: str, label_ma
         block = m.group("block")
         kw = m.group("kw")
         lines = block.split("\n")
-        # First line contains the keyword — strip it and take trailing content if any
         first = re.sub(
             rf"^>\s*\*\*\s*{re.escape(kw)}\s*\*\*\s*:?\s*", "", lines[0]
         ).strip()
@@ -348,6 +389,52 @@ def migrate_keyword_blockquote(body: str, regex: re.Pattern, kind: str, label_ma
     return regex.sub(replace, body), count[0]
 
 
+def migrate_inline_marker(body: str, regex: re.Pattern, kind: str, label_map: dict):
+    """Wrap `**Marker:** prose` paragraphs in an rf-block."""
+    count = [0]
+
+    def replace(m):
+        count[0] += 1
+        block = m.group("block").rstrip("\n")
+        kw = m.group("kw")
+        # Strip the marker from the start, keep the rest as paragraph content
+        stripped = re.sub(
+            rf"^\*\*\s*{re.escape(kw)}\s*[:：]\s*\*\*\s*", "", block, count=1
+        )
+        paragraphs = [p.strip() for p in re.split(r"\n", stripped) if p.strip()]
+        label = label_map[kw]
+        rf = render_rf_block(kind, label, [], paragraphs)
+        prefix = "\n\n" if m.group(0).startswith("\n\n") else ""
+        return prefix + rf + "\n"
+
+    return regex.sub(replace, body), count[0]
+
+
+def migrate_generic_blockquote(body: str):
+    """Promote leftover plain blockquotes to rf-callout with label 'Notiz'."""
+    count = [0]
+
+    def replace(m):
+        block = m.group("block")
+        # Guard: skip blockquotes that are ONLY a single-line attribution/quote
+        # of well-known format (> — Author) — those read better as italic quotes.
+        lines = [re.sub(r"^>\s?", "", l) for l in block.split("\n") if l.strip()]
+        if not lines:
+            return m.group(0)
+        text = " ".join(lines).strip()
+        # If it already contains a rf-tldr marker that was missed, skip
+        if "TL;DR" in text[:30]:
+            return m.group(0)
+        count[0] += 1
+        bullets, loose = bullets_from_blockquote(block.split("\n"))
+        paragraphs = loose if loose else [text]
+        rf = render_rf_block("callout", "Notiz", bullets, paragraphs if not bullets else [])
+        prefix = "\n\n" if m.group(0).startswith("\n\n") else ""
+        return prefix + rf + "\n"
+
+    return GENERIC_BLOCKQUOTE_RE.sub(replace, body), count[0]
+
+
 # ────────────────────────────────────────────────────────────
 
 
@@ -358,8 +445,11 @@ def process_file(path: Path):
         return None
     if not is_published(fm):
         return None
-    if already_migrated(body):
-        return {"skipped": "already-migrated"}
+    # Guard removed: earlier versions short-circuited once any rf-block existed,
+    # but that blocks the mid-article pass from reaching content that was never
+    # touched (inline markers, leftover blockquotes) — each pattern is idempotent
+    # because the regexes target the original markdown syntax, not the HTML
+    # they are replaced with.
 
     new_body = body
     total_tldr = 0
@@ -377,6 +467,18 @@ def process_file(path: Path):
     new_body, n_warn = migrate_keyword_blockquote(
         new_body, WARNING_RE, "warning", WARNING_MARKERS
     )
+    # Inline-marker forms: `**Wichtig:**`, `**Pro-Tipp:**`, etc. at paragraph start
+    new_body, n_il_call = migrate_inline_marker(
+        new_body, INLINE_CALLOUT_RE, "callout", CALLOUT_MARKERS
+    )
+    new_body, n_il_warn = migrate_inline_marker(
+        new_body, INLINE_WARNING_RE, "warning", WARNING_MARKERS
+    )
+    n_call += n_il_call
+    n_warn += n_il_warn
+    # Final pass: promote leftover `> text` blockquotes to generic callouts
+    new_body, n_bq = migrate_generic_blockquote(new_body)
+    n_call += n_bq
 
     if new_body == body:
         return {"skipped": "no-pattern-match"}

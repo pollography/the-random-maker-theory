@@ -40,8 +40,10 @@ Oder du lässt die KI auf deinem eigenen Rechner laufen. Lokal. Privat. Offline.
 | **Preis**       | Kostenlos             | Kostenlos            | Kostenlos         |
 | **Best für**    | Entwickler, Scripting | Einsteiger, GUI-User | Privacy-Puristen  |
 
-**Mein Take:** Ollama für Entwickler (CLI + API + Scripting). LM Studio für alle, die eine hübsche GUI wollen. Jan.ai für Leute, die Open Source wichtig finden.
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Mein Take</span>
+	<p>Ollama für Entwickler (CLI + API + Scripting). LM Studio für alle, die eine hübsche GUI wollen. Jan.ai für Leute, die Open Source wichtig finden.</p>
+</div>
 ## Die besten Open-Source-Modelle 2026
 
 ### Meta Llama 3.x. Der Allrounder

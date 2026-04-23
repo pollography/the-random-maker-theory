@@ -48,8 +48,10 @@ OpenAIs Sora 2 produziert die fotorealistischsten Videos. Punkt. Die Physik stim
 
 **Das Watermark-Problem:** Sora klebt ein Watermark auf jedes Video. Für professionelle Arbeit brauchst du Third-Party-Tools zum Entfernen. Legale Grauzone.
 
-**Fazit:** Beste Qualität, aber teuer, langsam und das Watermark nervt brutal.
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Fazit</span>
+	<p>Beste Qualität, aber teuer, langsam und das Watermark nervt brutal.</p>
+</div>
 ## Runway Gen-4.5: Der Kreativ-Allrounder
 
 Runway ist seit Januar 2026 bei Gen-4.5 und hat den höchsten Elo-Score (1.247) im Text-to-Video Benchmark.
@@ -62,8 +64,10 @@ Runway ist seit Januar 2026 bei Gen-4.5 und hat den höchsten Elo-Score (1.247) 
 
 **Preise:** Standard 12$/Mo (625 Credits), Pro 28$/Mo, Unlimited 76-95$/Mo.
 
-**Fazit:** Flexibelste Plattform, beste für kreative Profis. 4K via API. Integrierte Editing-Tools im gleichen Ökosystem.
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Fazit</span>
+	<p>Flexibelste Plattform, beste für kreative Profis. 4K via API. Integrierte Editing-Tools im gleichen Ökosystem.</p>
+</div>
 ## Kling 3.0: Das Feature-Monster
 
 Kling 3.0 von Kuaishou ist seit Februar 2026 draußen und packt mehr Features rein als alle anderen.
@@ -78,8 +82,10 @@ Kling 3.0 von Kuaishou ist seit Februar 2026 draußen und packt mehr Features re
 
 **Das Problem:** Credits verfallen, wenn du sie nicht nutzt.
 
-**Fazit:** Bestes Preis-Leistungs-Verhältnis. Feature-Dichte ungeschlagen. Für Budget-Creator der klare Gewinner.
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Fazit</span>
+	<p>Bestes Preis-Leistungs-Verhältnis. Feature-Dichte ungeschlagen. Für Budget-Creator der klare Gewinner.</p>
+</div>
 ## Pika 2.5: Der Speed-King
 
 Pika generiert Videos in 30-90 Sekunden. Turbo-Modus: 12 Sekunden. Das ist 10x schneller als Sora.
@@ -90,8 +96,10 @@ Pika generiert Videos in 30-90 Sekunden. Turbo-Modus: 12 Sekunden. Das ist 10x s
 
 **Preis:** Ab 8$/Mo. Free Tier nutzbar.
 
-**Fazit:** Perfekt für Social Media. TikTok, Reels, Shorts, schnell generieren, schnell posten.
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Fazit</span>
+	<p>Perfekt für Social Media. TikTok, Reels, Shorts, schnell generieren, schnell posten.</p>
+</div>
 ## Qualitäts-Ranking
 
 **Fotorealismus:** Sora 2 > Veo 2 > Runway Gen-4.5 > Kling 3.0

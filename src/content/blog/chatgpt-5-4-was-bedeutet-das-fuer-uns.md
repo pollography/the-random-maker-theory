@@ -62,10 +62,11 @@ Hier wird's spannend. Ich hab die Benchmarks gegen Claude Opus 4.6 und Gemini 3.
 
 *GPT-5.2-Wert, GPT-5.4 Wert noch nicht separat veröffentlicht
 
-**Mein Take:** GPT-5.4 gewinnt bei Computer Use (75% OSWorld, besser als der menschliche Baseline von 72.4%) und bei professioneller Wissensarbeit (83% über 44 Berufsfelder). Claude Opus 4.6 dominiert beim abstrakten Reasoning (ARC-AGI-2: 68.8%) und beim Standard-Coding. Gemini 3.1 Pro ist der Preis-Leistungs-König.
-
-Kein Modell gewinnt überall. Das ist die Realität 2026.
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Mein Take</span>
+	<p>GPT-5.4 gewinnt bei Computer Use (75% OSWorld, besser als der menschliche Baseline von 72.4%) und bei professioneller Wissensarbeit (83% über 44 Berufsfelder). Claude Opus 4.6 dominiert beim abstrakten Reasoning (ARC-AGI-2: 68.8%) und beim Standard-Coding. Gemini 3.1 Pro ist der Preis-Leistungs-König.</p>
+	<p>Kein Modell gewinnt überall. Das ist die Realität 2026.</p>
+</div>
 ## Computer Use. Das eigentliche Game-Changer-Feature
 
 Die größte Neuerung: GPT-5.4 ist das erste allgemeine OpenAI-Modell mit nativer Computer-Steuerung. Das bedeutet: Screenshots machen, Maus bewegen, Tastatur bedienen, Software starten.

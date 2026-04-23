@@ -98,10 +98,11 @@ Leonardo AI ist die Geheimwaffe für Bilder. Nicht Midjourney-gut, aber mit KI t
 - Thumbnails
 - Mockups
 
-**Tipp:** Nutz "Style Transfer" für konsistente Bilder über mehrere Posts.
-
----
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Tipp</span>
+	<p>Nutz "Style Transfer" für konsistente Bilder über mehrere Posts.</p>
+	<p>---</p>
+</div>
 ## Die Meta-Einsicht
 
 KI ist keine Magie. Es sind Tools. Gute Tools, aber Tools.

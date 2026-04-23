@@ -62,7 +62,10 @@ Kurz sacken lassen.
 
 Anthropic argumentiert die Einstufung verletze die Verfassung.
 
-> "The Constitution does not allow the government to wield its enormous power to punish a company for its protected speech."
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>"The Constitution does not allow the government to wield its enormous power to punish a company for its protected speech."</p>
+</div>
 
 Klingt erstmal nach typischem Anwalts-Boilerplate. Ist es aber nicht.
 

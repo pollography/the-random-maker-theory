@@ -33,8 +33,10 @@ Hier sind 5 Projekte, die alle unter 20€ kosten. Mit exakten Teilelisten, ESPH
 | **ESP32** (klassisch) | Dual-Core | 4-5€ | Allrounder |
 | **ESP32-S3** | Dual-Core | 5-7€ | KI/ML, Kamera |
 
-**Mein Tipp:** ESP32-C3 für unter 3€ auf AliExpress. Reicht für alle 5 Projekte.
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Mein Tipp</span>
+	<p>ESP32-C3 für unter 3€ auf AliExpress. Reicht für alle 5 Projekte.</p>
+</div>
 ## Warum ESPHome?
 
 ESPHome ist YAML-basiert. Kein C++, kein Arduino IDE, kein Debugging-Hölle. Du schreibst eine Config-Datei, flashst das Board, fertig. Home Assistant erkennt das Gerät automatisch.
@@ -79,12 +81,12 @@ sensor:
     update_interval: 30s
 ```
 
-**Tipp:** DHT22 braucht 2,5 Sekunden pro Messung. Update-Interval nicht unter 30s setzen.
-
-**Alternative:** BME280 (2-4€) misst zusätzlich barometrischen Luftdruck. Genauer, aber teurer.
-
-Home Assistant zeigt dir automatisch einen Live-Graph mit History. Perfekt für Raumklima-Monitoring.
-
+<div class="rf-block rf-callout">
+	<span class="rf-label">Tipp</span>
+	<p>DHT22 braucht 2,5 Sekunden pro Messung. Update-Interval nicht unter 30s setzen.</p>
+	<p><strong>Alternative:</strong> BME280 (2-4€) misst zusätzlich barometrischen Luftdruck. Genauer, aber teurer.</p>
+	<p>Home Assistant zeigt dir automatisch einen Live-Graph mit History. Perfekt für Raumklima-Monitoring.</p>
+</div>
 ## Projekt 2: Bewegungsmelder mit Notification (6€)
 
 ![HC-SR501 PIR Bewegungssensor an der Wand montiert](/images/blog/esp32-3.webp)
@@ -178,8 +180,10 @@ switch:
 
 **Kalibrierung ist Pflicht:** Sensor in Wasser = 100%, trocken = 0%. Rohwerte notieren und in die Config eintragen.
 
-**Wichtig:** Relais mit separatem 5V Netzteil betreiben. Nicht vom ESP32! Und Pump-Runtime limitieren (max 30 Sekunden pro Start), sonst überschwemmst du deine Wohnung.
-
+<div class="rf-block rf-warning">
+	<span class="rf-label">Wichtig</span>
+	<p>Relais mit separatem 5V Netzteil betreiben. Nicht vom ESP32! Und Pump-Runtime limitieren (max 30 Sekunden pro Start), sonst überschwemmst du deine Wohnung.</p>
+</div>
 ## Projekt 5: LED-Strip Controller mit WLED (11€)
 
 ![WS2812B LED Strip mit ESP32 Controller, warmes Licht](/images/blog/esp32-5.webp)

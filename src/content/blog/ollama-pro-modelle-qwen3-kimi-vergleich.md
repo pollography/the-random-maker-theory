@@ -30,7 +30,10 @@ Aber genau das ist der Punkt. Open-Source-Modelle sind 2026 keine experimentelle
 
 Was kannst du damit konkret machen? Wo sind die Limits? Und wann lohnt sich das gegenüber Claude oder GPT? Das klären wir jetzt.
 
-> Im [großen KI-Subscription-Vergleich 2026](/blog/ki-subscription-vergleich-2026) haben wir alle vier Abos gegenübergestellt. Dieser Artikel geht tiefer in Ollama Pro.
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>Im <a href="/blog/ki-subscription-vergleich-2026">großen KI-Subscription-Vergleich 2026</a> haben wir alle vier Abos gegenübergestellt. Dieser Artikel geht tiefer in Ollama Pro.</p>
+</div>
 
 ## Das 16K-Limit: Was Ollama Pro dir nicht sagt
 

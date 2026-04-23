@@ -93,8 +93,10 @@ Hier wird's interessant. Paperclip startet die CLI-Tools als Subprozesse. Die nu
 | Ollama          | Lokal (RTX 5080)          | Strom        |
 | **Total Extra** |                           | **0 EUR**    |
 
-**Wichtig:** Keine `ANTHROPIC_API_KEY` in den Environment Variables setzen! Sonst nutzt die CLI die API statt der Subscription — und du zahlst per Token.
-
+<div class="rf-block rf-warning">
+	<span class="rf-label">Wichtig</span>
+	<p>Keine <code>ANTHROPIC_API_KEY</code> in den Environment Variables setzen! Sonst nutzt die CLI die API statt der Subscription — und du zahlst per Token.</p>
+</div>
 ## Completion Chains: Die eigentliche Magie
 
 OK, einzelne Agents sind nett. Aber das Killer-Feature sind die **Completion Chains**. Die funktionieren so:

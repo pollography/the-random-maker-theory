@@ -93,13 +93,19 @@ Die Idee: Du gibst dem Modell eine Rolle — und es antwortet aus dieser Perspek
 
 **Vorher:**
 
-> "Erkläre mir, wie ich meinen Blog-Artikel für SEO optimiere."
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>"Erkläre mir, wie ich meinen Blog-Artikel für SEO optimiere."</p>
+</div>
 
 Das bekommst du: Eine generische Liste mit "Benutze Keywords", "Schreibe Meta-Descriptions", "Mach interne Links". Alles richtig. Alles nutzlos spezifisch.
 
 **Nachher:**
 
-> "Du bist ein erfahrener SEO-Spezialist der sich auf Content-Creator-Blogs im Tech-Bereich spezialisiert hat. Ich schreibe einen Artikel über Prompt Engineering für Nicht-Entwickler, Zielgruppe sind Content Creator zwischen 25-45. Erkläre mir die drei wichtigsten On-Page-SEO-Maßnahmen die ich vor dem Publish noch erledigen sollte. Geh davon aus, dass ich Grundkenntnisse in SEO habe, aber kein Experte bin."
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>"Du bist ein erfahrener SEO-Spezialist der sich auf Content-Creator-Blogs im Tech-Bereich spezialisiert hat. Ich schreibe einen Artikel über Prompt Engineering für Nicht-Entwickler, Zielgruppe sind Content Creator zwischen 25-45. Erkläre mir die drei wichtigsten On-Page-SEO-Maßnahmen die ich vor dem Publish noch erledigen sollte. Geh davon aus, dass ich Grundkenntnisse in SEO habe, aber kein Experte bin."</p>
+</div>
 
 Das bekommst du: Konkrete, kontextbezogene Empfehlungen die tatsächlich zu meiner Situation passen.
 
@@ -121,13 +127,19 @@ Warum das hilft: KI-Modelle machen mehr Fehler wenn sie direkt zur Antwort sprin
 
 **Vorher:**
 
-> "Welche drei Content-Formate sollte ich für meinen Tech-Blog priorisieren?"
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>"Welche drei Content-Formate sollte ich für meinen Tech-Blog priorisieren?"</p>
+</div>
 
 Ergebnis: Drei Formate mit Begründung. Aber du weißt nicht, ob die Logik stimmt — du siehst nur die Schlussfolgerung.
 
 **Nachher:**
 
-> "Ich betreibe einen Tech-Blog über KI und Smart Home, hauptsächlich für Hobby-Tüftler und Content Creator. Ich habe momentan 4-5 Stunden pro Woche für Content. Überlege Schritt für Schritt: Welche drei Content-Formate sollte ich priorisieren? Zeig mir deine Überlegung — welche Faktoren du berücksichtigst, welche Abwägungen du machst — bevor du zur Empfehlung kommst."
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>"Ich betreibe einen Tech-Blog über KI und Smart Home, hauptsächlich für Hobby-Tüftler und Content Creator. Ich habe momentan 4-5 Stunden pro Woche für Content. Überlege Schritt für Schritt: Welche drei Content-Formate sollte ich priorisieren? Zeig mir deine Überlegung — welche Faktoren du berücksichtigst, welche Abwägungen du machst — bevor du zur Empfehlung kommst."</p>
+</div>
 
 Das Ergebnis ist länger, aber du kannst die Logik nachvollziehen. Und du kannst eingreifen: "Der erste Faktor stimmt, aber beim zweiten liegst du falsch weil..."
 
@@ -145,19 +157,22 @@ Das Modell erkennt Muster aus diesen Beispielen und wendet sie auf deine Aufgabe
 
 **Vorher:**
 
-> "Schreib mir fünf Twitter-Posts über KI-Tools. Locker und direkt."
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>"Schreib mir fünf Twitter-Posts über KI-Tools. Locker und direkt."</p>
+</div>
 
 Was du bekommst: Fünf Posts. Die sind "locker" aus der Perspektive des Modells — was unter Umständen ganz anders ist als was du unter "locker" verstehst.
 
 **Nachher:**
 
-> "Schreib mir fünf Twitter-Posts über KI-Tools in genau diesem Stil:
->
-> Beispiel 1: 'Hab heute 2h mit dem neuen Midjourney-Update gespielt. Fazit: Portrait-Mode ist jetzt wirklich gut. Haare und Hände — endlich. Das war bisher mein größtes Frustrations-Thema.'
->
-> Beispiel 2: 'n8n + Claude API = mein neuer Lieblings-Stack. Hab gestern einen Workflow gebaut der automatisch meine Artikel-Ideen in strukturierte Briefs verwandelt. 4h Arbeit. Spart mir jetzt 3h/Woche.'
->
-> Meine Regel: Immer konkret, immer mit persönlicher Erfahrung, niemals generische Tipps-und-Tricks-Energie."
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>"Schreib mir fünf Twitter-Posts über KI-Tools in genau diesem Stil:</p>
+	<p>Beispiel 1: 'Hab heute 2h mit dem neuen Midjourney-Update gespielt. Fazit: Portrait-Mode ist jetzt wirklich gut. Haare und Hände — endlich. Das war bisher mein größtes Frustrations-Thema.'</p>
+	<p>Beispiel 2: 'n8n + Claude API = mein neuer Lieblings-Stack. Hab gestern einen Workflow gebaut der automatisch meine Artikel-Ideen in strukturierte Briefs verwandelt. 4h Arbeit. Spart mir jetzt 3h/Woche.'</p>
+	<p>Meine Regel: Immer konkret, immer mit persönlicher Erfahrung, niemals generische Tipps-und-Tricks-Energie."</p>
+</div>
 
 Jetzt weiß das Modell genau was "mein Stil" ist — nicht weil ich es beschrieben habe, sondern weil ich es gezeigt habe.
 
@@ -175,13 +190,19 @@ Du kannst das vollständig kontrollieren. Und das spart massiv Nachbearbeitung.
 
 **Vorher:**
 
-> "Vergleich ChatGPT und Claude für Content Creator."
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>"Vergleich ChatGPT und Claude für Content Creator."</p>
+</div>
 
 Ergebnis: Irgendein Mix aus Text, vielleicht eine Liste, vielleicht nicht. Unvorhersehbar.
 
 **Nachher:**
 
-> "Vergleich ChatGPT und Claude für Content Creator. Erstelle eine Tabelle mit diesen Spalten: Feature | ChatGPT | Claude | Gewinner. Zeilen: Texte schreiben, Recherche zusammenfassen, Social Media Posts, Bildgenerierung (falls vorhanden), Preis/Leistung, Kontext-Fenster. Unter der Tabelle: drei Sätze Fazit mit konkreter Empfehlung wann ich welches Tool nehmen sollte."
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>"Vergleich ChatGPT und Claude für Content Creator. Erstelle eine Tabelle mit diesen Spalten: Feature | ChatGPT | Claude | Gewinner. Zeilen: Texte schreiben, Recherche zusammenfassen, Social Media Posts, Bildgenerierung (falls vorhanden), Preis/Leistung, Kontext-Fenster. Unter der Tabelle: drei Sätze Fazit mit konkreter Empfehlung wann ich welches Tool nehmen sollte."</p>
+</div>
 
 Ich bekomme genau das was ich brauche. Keine Nacharbeit. Direkt verwendbar.
 

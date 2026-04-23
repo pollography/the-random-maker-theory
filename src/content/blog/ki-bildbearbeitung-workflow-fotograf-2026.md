@@ -57,7 +57,10 @@ Und jetzt die unschöne Wahrheit: Nach mehreren Jahren bin ich unsicher, ob ich 
 
 Das ist nicht Pollos Verschuldung. Das ist die Realität von **ki bildbearbeitung** 2026: Die Tools sind nicht perfekt. Sie sind echt gut. Aber sie ersetzen dich nicht komplett. Du brauchst trotzdem eine zweite Schicht Mensch-Augen.
 
-> Falls du AfterShoot ausprobieren willst: [Hier gibt's 10% Rabatt über meinen Link](https://account.aftershoot.com/referral-signup?referrer=NA5Q6S19&utm_source=referral-page-app&utm_medium=copy-cta) *(Affiliate-Link, ich bekomme eine kleine Provision, du sparst 10%)*
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>Falls du AfterShoot ausprobieren willst: <a href="https://account.aftershoot.com/referral-signup?referrer=NA5Q6S19&utm_source=referral-page-app&utm_medium=copy-cta">Hier gibt's 10% Rabatt über meinen Link</a> <em>(Affiliate-Link, ich bekomme eine kleine Provision, du sparst 10%)</em></p>
+</div>
 
 ## Lightroom: Das Gummi-Tool für Fehler
 

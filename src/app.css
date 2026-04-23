@@ -157,57 +157,182 @@ select {
 		font-family: var(--font-display);
 	}
 
+	/* H2 sections — honey accent bar + more breathing room above.
+	 * Creates a clear visual break between major sections so long
+	 * articles scan like chapters rather than one wall of prose.
+	 */
 	h2 {
 		color: var(--color-accent-honey);
 		font-family: var(--font-display);
 		font-style: italic;
+		margin-top: 3.5rem;
+		margin-bottom: 0.75rem;
+		padding-top: 1rem;
+		position: relative;
+	}
+	h2::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 2.25rem;
+		height: 2px;
+		border-radius: 2px;
+		background: var(--color-accent-honey);
+		opacity: 0.85;
 	}
 
-	h3,
+	h3 {
+		color: var(--color-text);
+		font-family: var(--font-sans);
+		margin-top: 2.25rem;
+		margin-bottom: 0.5rem;
+	}
+
 	h4 {
 		color: var(--color-text);
 		font-family: var(--font-sans);
+		margin-top: 1.75rem;
+		margin-bottom: 0.5rem;
 	}
+
+	p {
+		margin-top: 0;
+		margin-bottom: 1.1em;
+	}
+
+	/* Lists — custom tinted dots so inline bullets read consistently
+	 * with the rf-block lists. Default browser markers disabled.
+	 */
+	ul, ol {
+		margin: 1em 0 1.25em;
+		padding-left: 0;
+		list-style: none;
+	}
+	ul li, ol li {
+		position: relative;
+		padding-left: 1.35rem;
+		margin: 0.35rem 0;
+		line-height: 1.7;
+	}
+	ul li::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0.75em;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: var(--color-accent-honey);
+		opacity: 0.55;
+	}
+	ol { counter-reset: prose-ol; }
+	ol li { counter-increment: prose-ol; }
+	ol li::before {
+		content: counter(prose-ol);
+		position: absolute;
+		left: 0;
+		top: 0;
+		font-family: var(--font-mono);
+		font-size: 0.78em;
+		font-weight: 700;
+		color: var(--color-accent-teal);
+		line-height: 1.7;
+	}
+
+	strong { color: var(--color-text); font-weight: 700; }
 
 	a {
 		color: var(--color-accent-honey);
+		border-bottom: 1px solid rgba(212, 137, 62, 0.25);
 
 		&:hover {
 			color: var(--color-accent-honey-hover);
+			border-bottom-color: var(--color-accent-honey);
 		}
 	}
 
+	/* Generic blockquotes (the ones the migrator didn't catch) keep
+	 * the rf-callout look so everything reads consistently.
+	 */
 	blockquote {
-		border-left: 3px solid var(--color-accent-honey);
-		background: var(--color-accent-honey-subtle);
-		border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+		margin: 1.75rem 0;
 		padding: 1.25rem 1.5rem;
+		background: var(--color-elevated);
+		border-left: 3px solid var(--color-accent-teal);
+		border-radius: var(--radius-md) var(--radius-lg) var(--radius-lg) var(--radius-md);
 		color: var(--color-text);
 		font-style: normal;
 	}
 
 	code {
-		background-color: var(--color-surface-raised);
-		color: var(--color-text);
+		background-color: var(--color-base);
+		color: var(--color-accent-honey);
 	}
 
 	pre {
-		background-color: var(--color-surface-raised);
-		border: 1px solid var(--color-border);
+		background-color: var(--color-base);
+		border: 1px solid var(--color-border-subtle);
+	}
+
+	/* Figures (markdown images) get stronger separation from prose */
+	img {
+		border-radius: var(--radius-lg);
+		margin: 1.5rem 0;
+		box-shadow: var(--shadow-card);
 	}
 
 	table {
 		border-color: var(--color-border);
+		margin: 1.5rem 0;
 
 		thead {
-			background-color: var(--color-surface-raised);
+			background-color: var(--color-elevated);
 		}
 
 		tbody tr {
 			border-bottom-color: var(--color-border-subtle);
 		}
+		tbody tr:nth-child(even) td {
+			background-color: rgba(255, 255, 255, 0.015);
+		}
+	}
+
+	/* Horizontal rules — subtle section break, honey dot in the middle */
+	hr {
+		border: 0;
+		height: 1px;
+		margin: 3rem 0;
+		background: linear-gradient(
+			90deg,
+			transparent 0%,
+			var(--color-border-soft) 30%,
+			var(--color-border-soft) 70%,
+			transparent 100%
+		);
+		position: relative;
+	}
+	hr::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: var(--color-accent-honey);
+		opacity: 0.45;
 	}
 }
+
+/* Light theme adjustments for prose elements */
+[data-theme='light'] .prose blockquote {
+	background: rgba(255, 255, 255, 0.45);
+	border-left-color: var(--color-accent-teal);
+}
+[data-theme='light'] .prose table thead { background: rgba(255, 255, 255, 0.5); }
+[data-theme='light'] .prose ul li::before { background: var(--color-accent-honey); }
 
 /* Responsive typography */
 @media (max-width: 768px) {

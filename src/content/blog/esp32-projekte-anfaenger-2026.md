@@ -258,10 +258,11 @@ Was ich gern am PIR-Sensor mag: du kannst Empfindlichkeit und Verzoegerungszeit 
 
 **Erweiterung:** Mit einem kleinen Buzzer (1-2 EUR) kannst du zusaetzlich einen lokalen Alarm einbauen. Oder du kombinierst das mit dem OLED Display aus Projekt 2 und zeigst "Bewegung erkannt!" direkt auf dem Geraet an.
 
-**Wichtiger Hinweis:** Der HC-SR501 braucht eigentlich 5V an VCC fuer volle Reichweite, aber der Signalpin gibt trotzdem 3.3V-kompatible Signale aus. Keine Sorge wegen Damage am ESP32.
-
----
-
+<div class="rf-block rf-warning">
+	<span class="rf-label">Wichtiger Hinweis</span>
+	<p>Der HC-SR501 braucht eigentlich 5V an VCC fuer volle Reichweite, aber der Signalpin gibt trotzdem 3.3V-kompatible Signale aus. Keine Sorge wegen Damage am ESP32.</p>
+	<p>---</p>
+</div>
 ## Projekt 5: Automatische Pflanzenbewaesserung
 
 **Schwierigkeitsgrad: 4/5 — erstes Projekt mit einem Aktor (etwas das physisch etwas tut)**

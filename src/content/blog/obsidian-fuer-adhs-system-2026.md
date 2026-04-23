@@ -197,7 +197,10 @@ Hier ist mein Daily-Note-Template zum Nachbauen. Du brauchst dafuer die Plugins 
 # {{date:dddd, DD. MMMM YYYY}}
 
 ## Fokus heute
-> Was ist die EINE Sache die ich heute schaffen will?
+<div class="rf-block rf-callout">
+	<span class="rf-label">Notiz</span>
+	<p>Was ist die EINE Sache die ich heute schaffen will?</p>
+</div>
 
 -
 
