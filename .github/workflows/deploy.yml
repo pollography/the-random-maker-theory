@@ -28,6 +28,8 @@ on:
       - 'package.json'
       - 'svelte.config.js'
       - 'tailwind.config.js'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
 
 jobs:
   deploy:
