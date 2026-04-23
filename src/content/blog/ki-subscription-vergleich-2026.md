@@ -25,6 +25,11 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<p>ChatGPT Plus, Claude Pro, Gemini Advanced, Ollama Pro – alle kosten ~20 Euro. Aber was bekommst du wirklich? Ein ehrlicher Vergleich nach Use Case.</p>
+</div>
+
 Ich hab neulich meine Kreditkartenabrechnung aufgemacht und gezählt: Vier KI-Abos. Vier. Und alle irgendwie "20 Euro im Monat". Macht zusammen 80 Euro. Für was genau?
 
 Das ist das Problem mit dem KI-Abo-Markt 2026. Alle kosten ähnlich viel. Alle versprechen ähnlich viel. Und keiner erklärt dir ehrlich, was du davon brauchst und was totaler Overkill ist.

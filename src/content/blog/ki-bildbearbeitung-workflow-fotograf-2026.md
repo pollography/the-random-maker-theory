@@ -15,6 +15,11 @@ podcastUrl: "https://open.spotify.com/episode/2gg5xxS45Nusk0vC1kknD3"
 videoUrl: "https://www.youtube.com/watch?v=l-PP-PrOdAs"
 ---
 
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<p>15 Jahre Fotografie, ADHS und KI-Tools: Mein kompletter Workflow mit AfterShoot, Lightroom, Photoshop, Luminar Neo und Topaz AI im ehrlichen Praxistest.</p>
+</div>
+
 15 Jahre Fotografie. Tausende Hochzeiten. Und ein ADHS-Hirn das nach jedem Shooting vor 4.000 RAW-Dateien sitzt und innerlich stirbt. Kennst du das? Stundenlang Regler schieben, Bilder sortieren, die Konzentration irgendwo zwischen dem dritten Kaffee und nem YouTube-Video über Ameisenfarmen verloren. Das nervt einfach massiv.
 
 Post-Production war der stille Killer meines Geschäfts. Nicht mehr Geld verdienen als man wegarbeiten kann. Das ist kein Feature, das ist ein Bug. Aber 2026 hat KI das komplett gedreht. Das hier ist kein trockenes Tech-Review. Ich bin kein YouTuber der Plugins testet. Das ist ein ehrlicher Erfahrungsbericht von jemandem, der täglich mit **ki bildbearbeitung** arbeitet. Basically: KI hat mich nicht ersetzt. Sie hat meine Erschöpfung ersetzt.

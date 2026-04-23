@@ -15,7 +15,10 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-> **TL;DR:** Midjourney fuer Aesthetik, Flux fuer Fotorealismus, Ideogram fuer Text auf Bildern, Leonardo AI wenn du kein Geld ausgeben willst. Stable Diffusion lokal wenn du eine dicke GPU hast. DALL-E 3 wird abgeschaltet. Und ja, ich hab alle selbst getestet.
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<p>Midjourney fuer Aesthetik, Flux fuer Fotorealismus, Ideogram fuer Text auf Bildern, Leonardo AI wenn du kein Geld ausgeben willst. Stable Diffusion lokal wenn du eine dicke GPU hast. DALL-E 3 wird abgeschaltet. Und ja, ich hab alle selbst getestet.</p>
+</div>
 
 KI Bilder erstellen kann mittlerweile jeder. Mit einem Satz. Einfach reintippen, Enter druecken, Bild da.
 

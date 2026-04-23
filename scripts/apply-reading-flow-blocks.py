@@ -27,7 +27,15 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 
 DRY_RUN = "--dry-run" in sys.argv
+SYNTHESIZE = "--synthesize-tldr" in sys.argv
 BLOG_DIR = Path(__file__).resolve().parent.parent / "src" / "content" / "blog"
+
+# Articles where a synthesized TL;DR would feel wrong — skip even with
+# --synthesize-tldr. KI-News briefings are short-form and self-summarising,
+# willkommen is intentionally a letter-style intro.
+SYNTHESIZE_SKIP = {
+    "willkommen-bei-trmt",
+}
 
 
 def split_frontmatter(content: str):
@@ -117,8 +125,9 @@ BQ_TLDR_RE = re.compile(
     r"""
     (?:^|\n\n)                                  # blank line before block
     (?P<block>
-        >\s*\*\*\s*TL[;:\s]*DR\s*\*\*\s*\n       # opening line
-        (?:>\s?.*\n?)+                           # one or more continuation lines
+        >\s*\*\*\s*TL[;:\s]*DR\s*[:：]?\s*\*\*   # "**TL;DR**" or "**TL;DR:**"
+        [ \t]*(?P<inline>[^\n]*)\n               # optional inline prose after marker
+        (?:>\s?.*\n?)*                           # zero or more continuation lines
     )
     """,
     re.M | re.VERBOSE,
@@ -131,10 +140,14 @@ def migrate_blockquote_tldr(body: str):
     def replace(m):
         count[0] += 1
         block = m.group("block")
-        lines = block.split("\n")[1:]  # drop the "> **TL;DR**" first line
+        inline = (m.group("inline") or "").strip()
+        lines = block.split("\n")[1:]
         bullets, loose = bullets_from_blockquote(lines)
-        rf = render_rf_block("tldr", "TL;DR", bullets, loose)
-        # preserve preceding blank line if the match started with one
+        paragraphs = []
+        if inline:
+            paragraphs.append(inline)
+        paragraphs.extend(loose)
+        rf = render_rf_block("tldr", "TL;DR", bullets, paragraphs)
         prefix = "\n\n" if m.group(0).startswith("\n\n") else ""
         return prefix + rf + "\n"
 
@@ -438,6 +451,25 @@ def migrate_generic_blockquote(body: str):
 # ────────────────────────────────────────────────────────────
 
 
+def extract_frontmatter_field(fm: str, key: str) -> str | None:
+    m = re.search(rf'^{key}:\s*"?(.+?)"?\s*$', fm, re.M)
+    return m.group(1).strip() if m else None
+
+
+def synthesize_tldr_from_description(body: str, fm: str) -> tuple[str, int]:
+    """Inject an rf-tldr built from the frontmatter description for articles
+    that still have no TL;DR-like block after the other passes.
+    The block is placed immediately before the first content line so the
+    existing article intro keeps its natural flow."""
+    desc = extract_frontmatter_field(fm, "description")
+    if not desc:
+        return body, 0
+    rf = render_rf_block("tldr", "TL;DR", [], [desc])
+    stripped = body.lstrip("\n")
+    leading_newlines = body[: len(body) - len(stripped)]
+    return leading_newlines + rf + "\n\n" + stripped, 1
+
+
 def process_file(path: Path):
     content = path.read_text(encoding="utf-8")
     fm, body = split_frontmatter(content)
@@ -479,6 +511,19 @@ def process_file(path: Path):
     # Final pass: promote leftover `> text` blockquotes to generic callouts
     new_body, n_bq = migrate_generic_blockquote(new_body)
     n_call += n_bq
+
+    # Optional: synthesize a TL;DR from the frontmatter description when no
+    # rf-tldr exists anywhere in the article yet.
+    synth_tldr = 0
+    slug = extract_frontmatter_field(fm, "slug") or path.stem
+    if (
+        SYNTHESIZE
+        and total_tldr == 0
+        and 'class="rf-block rf-tldr"' not in new_body
+        and slug not in SYNTHESIZE_SKIP
+    ):
+        new_body, synth_tldr = synthesize_tldr_from_description(new_body, fm)
+        total_tldr += synth_tldr
 
     if new_body == body:
         return {"skipped": "no-pattern-match"}

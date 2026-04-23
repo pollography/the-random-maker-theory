@@ -25,6 +25,11 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<p>ESP32 + ESPHome + Home Assistant: Eigenen Temperatursensor bauen fuer 15 Euro. Schritt-fuer-Schritt ohne Coding. YAML-Config zum Kopieren.</p>
+</div>
+
 <script>
   import MindMap3D from '$lib/components/blog/MindMap3D.svelte';
 

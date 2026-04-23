@@ -13,6 +13,11 @@ titleAccent: "AI-Releases"
 keywords: ["AI Releases März 2026", "GPT-5.4", "Siri Gemini", "Codex Security", "Qwen 3.5", "AI Tools 2026"]
 ---
 
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<p>GPT-5.4 kann deinen Computer bedienen, Siri wird von Gemini angetrieben und Qwen läuft offline auf deinem iPhone. Was die AI-Releases im März 2026 für Content Creator bedeuten.</p>
+</div>
+
 Dein Computer gehorcht jetzt einem Chatbot. Siri hat ein Google-Gehirn. Ein Modell das auf dein iPhone passt, schlägt Riesen die 13 Mal grösser sind. März 2026 halt. Der Monat wo "AI als Agent" aufgehört hat, Marketing-Gelaber zu sein.
 
 Wild.

@@ -15,6 +15,11 @@ podcastUrl: "https://open.spotify.com/show/2gzpv9JphhoWBmjXXP2Pjd"
 videoUrl: "https://www.youtube.com/watch?v=KWIH_InMQZ8"
 ---
 
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<p>Lerne mit Frameworks wie COSTAR und RISEN, wie du LLMs richtig promptest. Praxistipps, Techniken und konkrete Beispiele für bessere KI-Ergebnisse.</p>
+</div>
+
 Stell dir vor, du springst in ein Taxi und sagst: „Fahr mich mal irgendwohin Schönes." Der Fahrer guckt dich an wie'n Auto. Fährt dich zum nächsten Stadtpark, der nach Frittenfett riecht. Genau das passiert, wenn du ChatGPT, Claude oder Gemini mit vagen Prompts fütterst. Du landest irgendwo — aber halt nicht da, wo du hinwolltest.
 
 Gibst du dem Fahrer die exakte Adresse, die Route und den Fahrstil vor? Perfekte Ankunft. Das ist Prompt Engineering in einer Nussschale.

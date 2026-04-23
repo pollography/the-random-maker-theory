@@ -23,6 +23,11 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<p>n8n Tutorial auf Deutsch: Lerne Workflow-Automatisierung ohne Code. Mit Vergleich zu Make & Zapier, Installation und deinem ersten Workflow.</p>
+</div>
+
 Du verschwendest jede Woche fünf Stunden mit Aufgaben, die ein Bot für dich erledigen könnte. Links kopieren, Blog-Posts händisch auf drei Plattformen teilen, RSS-Feeds durchscrollen, Kontakte zwischen Tools hin- und herschubsen. Fünf Stunden. Jede Woche. Das sind über 260 Stunden im Jahr — mehr als sechs volle Arbeitswochen, die du in stumpfes Copy-Paste steckst, statt Content zu machen oder Projekte voranzutreiben.
 
 Ich hab das lange genauso gemacht. Bis ich n8n entdeckt hab.
