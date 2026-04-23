@@ -28,13 +28,16 @@ affiliate:
 
 # Midjourney Prompts Deutsch: Der Guide fuer Fotografen
 
-**TL;DR**
-
-- Midjourney "denkt" in fotografischen Begriffen — wenn du als Fotograf promptest, kriegst du deutlich bessere Ergebnisse
-- Die wichtigsten Parameter: `--ar`, `--v 6.1`, `--style raw`, `--chaos`, `--stylize`
-- Licht ist alles: Golden Hour, Rembrandt, Softbox — Midjourney kennt die alle
-- Kamera-Specs im Prompt verbessern den Output sichtbar (Brennweite, Blende, Body)
-- 15 Copy-Paste-Prompts am Ende des Artikels
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Midjourney "denkt" in fotografischen Begriffen — wenn du als Fotograf promptest, kriegst du deutlich bessere Ergebnisse</li>
+		<li>Die wichtigsten Parameter: <code>--ar</code>, <code>--v 6.1</code>, <code>--style raw</code>, <code>--chaos</code>, <code>--stylize</code></li>
+		<li>Licht ist alles: Golden Hour, Rembrandt, Softbox — Midjourney kennt die alle</li>
+		<li>Kamera-Specs im Prompt verbessern den Output sichtbar (Brennweite, Blende, Body)</li>
+		<li>15 Copy-Paste-Prompts am Ende des Artikels</li>
+	</ul>
+</div>
 
 ---
 

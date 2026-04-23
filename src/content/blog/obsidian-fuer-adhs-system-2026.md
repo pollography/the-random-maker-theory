@@ -15,13 +15,16 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-## TL;DR
-
-- Obsidian ist das einzige Produktivitaets-Tool das nach 6 Monaten noch bei mir ueberlebt hat — und ich hab quasi alles durch
-- Der Trick: 4 Plugins (Tasks, Templater, Periodic Notes, Dataview) und eine Daily Note die alles zusammenhaelt
-- Notion, Todoist, Trello — alles ausprobiert, alles nach 2-8 Wochen wieder fallen gelassen
-- Obsidian funktioniert fuer mein ADHS-Gehirn weil es sich an MICH anpasst, nicht umgekehrt
-- Template zum Download am Ende des Artikels
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Obsidian ist das einzige Produktivitaets-Tool das nach 6 Monaten noch bei mir ueberlebt hat — und ich hab quasi alles durch</li>
+		<li>Der Trick: 4 Plugins (Tasks, Templater, Periodic Notes, Dataview) und eine Daily Note die alles zusammenhaelt</li>
+		<li>Notion, Todoist, Trello — alles ausprobiert, alles nach 2-8 Wochen wieder fallen gelassen</li>
+		<li>Obsidian funktioniert fuer mein ADHS-Gehirn weil es sich an MICH anpasst, nicht umgekehrt</li>
+		<li>Template zum Download am Ende des Artikels</li>
+	</ul>
+</div>
 
 ---
 

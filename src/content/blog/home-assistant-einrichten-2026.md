@@ -37,13 +37,16 @@ heroImageThumb: "/images/blog/home-assistant-einrichten-2026-1-thumb.webp"
 
 # Home Assistant einrichten: Komplett-Guide 2026
 
-**TL;DR**
-
-- Home Assistant ist die einzige Smart-Home-Plattform, die wirklich dir gehoert. Kein Cloud-Zwang, kein Abo, kein "Dienst wird eingestellt".
-- Drei Hardware-Optionen: Raspberry Pi 5 (guenstig, flexibel), HA Green (Plug-and-Play), Mini-PC (Power und Storage).
-- HAOS installieren dauert ca. 15 Minuten. Erste Integration einrichten nochmal 10.
-- Erste Automatisierung laeuft oft schon am selben Abend.
-- Lernkurve gibt es. Aber die ist flach genug, dass du heute noch anfangen kannst.
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Home Assistant ist die einzige Smart-Home-Plattform, die wirklich dir gehoert. Kein Cloud-Zwang, kein Abo, kein "Dienst wird eingestellt".</li>
+		<li>Drei Hardware-Optionen: Raspberry Pi 5 (guenstig, flexibel), HA Green (Plug-and-Play), Mini-PC (Power und Storage).</li>
+		<li>HAOS installieren dauert ca. 15 Minuten. Erste Integration einrichten nochmal 10.</li>
+		<li>Erste Automatisierung laeuft oft schon am selben Abend.</li>
+		<li>Lernkurve gibt es. Aber die ist flach genug, dass du heute noch anfangen kannst.</li>
+	</ul>
+</div>
 
 ---
 

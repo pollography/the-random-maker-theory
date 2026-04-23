@@ -24,13 +24,16 @@ heroImageThumb: "/images/blog/zigbee-thread-matter-vergleich-2026-1-thumb.webp"
 
 # Zigbee vs Thread vs Matter: Welches Protokoll brauchst du 2026?
 
-**TL;DR:**
-
-- Zigbee ist ausgereift, guenstig und hat das groesste Geraete-Oekosystem — ideal fuer Home Assistant
-- Thread ist das Netzwerk-Backbone hinter Matter, nicht standalone nutzbar
-- Matter ist der neue Standard mit Apple/Google/Amazon-Support, aber noch limitiert in der Geraeteauswahl
-- Wenn du heute startest: Zigbee fuer Sensoren/Aktoren, Matter fuer neue Geraete die es unterstuetzen
-- Alles auf einem Coordinator zusammenfassen ist immer noch der pragmatischste Weg
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Zigbee ist ausgereift, guenstig und hat das groesste Geraete-Oekosystem — ideal fuer Home Assistant</li>
+		<li>Thread ist das Netzwerk-Backbone hinter Matter, nicht standalone nutzbar</li>
+		<li>Matter ist der neue Standard mit Apple/Google/Amazon-Support, aber noch limitiert in der Geraeteauswahl</li>
+		<li>Wenn du heute startest: Zigbee fuer Sensoren/Aktoren, Matter fuer neue Geraete die es unterstuetzen</li>
+		<li>Alles auf einem Coordinator zusammenfassen ist immer noch der pragmatischste Weg</li>
+	</ul>
+</div>
 
 ---
 

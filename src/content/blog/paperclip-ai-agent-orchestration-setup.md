@@ -16,15 +16,18 @@ heroImageThumb: "/images/blog/paperclip-ai-agent-orchestration-setup-1-thumb.web
 
 # 28 AI Agents die für mich arbeiten — Mein Paperclip Setup
 
-## TL;DR
-
-- Paperclip AI ist ein Open-Source Agent Orchestration Framework
-- Ich hab 22 Agents in 2 Companies aufgesetzt — für meinen Blog und mein Gaming Studio
-- Alles läuft über bestehende Subscriptions: Claude Max, ChatGPT Pro, Google Workspace, Ollama
-- Kein einziger Extra-Cent für API-Keys
-- Die Agents haben Completion Chains — Research → Schreiben → Design → Deploy passiert automatisch
-- Nachts arbeiten lokale Ollama-Agents während ich schlafe
-- Ein Health Monitor Agent überwacht alle 30 Minuten ob alles läuft
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Paperclip AI ist ein Open-Source Agent Orchestration Framework</li>
+		<li>Ich hab 22 Agents in 2 Companies aufgesetzt — für meinen Blog und mein Gaming Studio</li>
+		<li>Alles läuft über bestehende Subscriptions: Claude Max, ChatGPT Pro, Google Workspace, Ollama</li>
+		<li>Kein einziger Extra-Cent für API-Keys</li>
+		<li>Die Agents haben Completion Chains — Research → Schreiben → Design → Deploy passiert automatisch</li>
+		<li>Nachts arbeiten lokale Ollama-Agents während ich schlafe</li>
+		<li>Ein Health Monitor Agent überwacht alle 30 Minuten ob alles läuft</li>
+	</ul>
+</div>
 
 ---
 

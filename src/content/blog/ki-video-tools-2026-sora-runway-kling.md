@@ -11,12 +11,15 @@ heroImage: "/images/blog/ki-video-1.webp"
 readingTime: 4
 ---
 
-> **TL;DR**
->
-> - Sora 2 beste Qualität (5-8min wait), Runway Gen-4.5 Allrounder mit Character Consistency, Kling 3.0 Preis-König 4K
-> - Pika 2.5 Speed-King 30-90sec, Veo 2 kostenlos, Hailuo günstig, jedes hat Schwächen
-> - Fotorealismus Sora, Kreativität Runway, Kosten Kling, Speed Pika
-> - Security: "VibeScamming" real, KI-Code hat Löcher, nie ungeprüft in Production
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Sora 2 beste Qualität (5-8min wait), Runway Gen-4.5 Allrounder mit Character Consistency, Kling 3.0 Preis-König 4K</li>
+		<li>Pika 2.5 Speed-King 30-90sec, Veo 2 kostenlos, Hailuo günstig, jedes hat Schwächen</li>
+		<li>Fotorealismus Sora, Kreativität Runway, Kosten Kling, Speed Pika</li>
+		<li>Security: "VibeScamming" real, KI-Code hat Löcher, nie ungeprüft in Production</li>
+	</ul>
+</div>
 
 Text rein, Video raus. Das ist der Pitch. Aber wie gut ist die Realität?
 

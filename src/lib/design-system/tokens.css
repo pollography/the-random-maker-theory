@@ -92,10 +92,11 @@
     );
 
   /* DARK THEME - Grain Texture
-   * Was 0.4 × internal SVG opacity 0.5 = ~20% effective. Too loud on text-heavy pages.
-   * Dialed to 0.11 × 0.5 = ~5.5% effective — film-texture stays, doesn't fight the prose.
+   * Was 0.40 (effective ~20%) → 0.11 (~5.5%) → 0.14 (~7%).
+   * Pollo: "noch minimal erhöhen, nur ein bisschen" — this is the sweet spot
+   * where grain is felt on empty surfaces but prose stays comfortable.
    */
-  --grain-opacity: 0.11;
+  --grain-opacity: 0.14;
   --grain-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 
   /* SHARED - Typography */

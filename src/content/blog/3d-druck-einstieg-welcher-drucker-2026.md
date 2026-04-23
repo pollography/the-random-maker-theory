@@ -11,11 +11,15 @@ heroImage: "/images/blog/3d-druck-1.webp"
 readingTime: 3
 ---
 
-> **TL;DR**
-> - FDM-Drucker für Anfänger, Resin nur für Details, Miniaturen
-> - Bambu A1 Mini, Creality Ender 3 V3 oder Elegoo Centauri, alle unter 300€
-> - Startup-Kosten 250-450€ (Drucker, Filament, Zubehör), laufend 30-80€/Monat
-> - Mit Cura slicen, Printables/MakerWorld für Modelle, PLA für Anfänger, mit Benchy starten
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>FDM-Drucker für Anfänger, Resin nur für Details, Miniaturen</li>
+		<li>Bambu A1 Mini, Creality Ender 3 V3 oder Elegoo Centauri, alle unter 300€</li>
+		<li>Startup-Kosten 250-450€ (Drucker, Filament, Zubehör), laufend 30-80€/Monat</li>
+		<li>Mit Cura slicen, Printables/MakerWorld für Modelle, PLA für Anfänger, mit Benchy starten</li>
+	</ul>
+</div>
 
 Du willst dir Sachen drucken. Handy-Halter, Kabelorganizer, Ersatzteile, vielleicht ein Custom-Gehäuse für dein Projekt. Geil. Aber welchen Drucker kaufst du?
 

@@ -20,12 +20,16 @@ ESPHome hat das fuer mich komplett gedreht. Kein C++, keine Compiler-Fehler wege
 
 In diesem esphome tutorial deutsch zeige ich dir den kompletten Weg: von der Installation bis zu deinem ersten funktionierenden Sensor, inklusive OTA-Updates und dem ehrlichen Vergleich mit der Arduino IDE.
 
-**TL;DR:**
-- ESPHome = YAML statt C++, kein Programmierwissen noetig
-- In Home Assistant als Add-on installierbar, Browser-basiertes Dashboard
-- OTA-Updates laufen automatisch, kein Kabel mehr nach dem ersten Flash
-- ESPHome schlaegt Arduino IDE fuer alle Smart-Home-Anwendungen klar
-- Erste YAML-Config laeuft in unter 15 Minuten
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>ESPHome = YAML statt C++, kein Programmierwissen noetig</li>
+		<li>In Home Assistant als Add-on installierbar, Browser-basiertes Dashboard</li>
+		<li>OTA-Updates laufen automatisch, kein Kabel mehr nach dem ersten Flash</li>
+		<li>ESPHome schlaegt Arduino IDE fuer alle Smart-Home-Anwendungen klar</li>
+		<li>Erste YAML-Config laeuft in unter 15 Minuten</li>
+	</ul>
+</div>
 
 ---
 

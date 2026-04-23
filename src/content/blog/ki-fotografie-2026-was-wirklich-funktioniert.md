@@ -11,12 +11,15 @@ heroImage: "/images/blog/ki-fotografie-1.webp"
 readingTime: 4
 ---
 
-> **TL;DR**
->
-> - Lightroom Denoise 10/10, AI Masking 9/10, Generative Remove gut, Culling 2h auf 20min
-> - Luminar Neo 119€ Einmal, Topaz nur noch Abo, DxO PhotoLab 240€, Topaz beste Denoise
-> - KI ersetzt nicht dich, erledigt 70% der Technik, die restlichen 30% (Kreativität, Story) sind geil
-> - iPhone macht Computational Photography besser als 3000€-Kameras, Canon, Sony schlafen
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Lightroom Denoise 10/10, AI Masking 9/10, Generative Remove gut, Culling 2h auf 20min</li>
+		<li>Luminar Neo 119€ Einmal, Topaz nur noch Abo, DxO PhotoLab 240€, Topaz beste Denoise</li>
+		<li>KI ersetzt nicht dich, erledigt 70% der Technik, die restlichen 30% (Kreativität, Story) sind geil</li>
+		<li>iPhone macht Computational Photography besser als 3000€-Kameras, Canon, Sony schlafen</li>
+	</ul>
+</div>
 
 Ich fotografiere seit 15 Jahren. Von Spiegelreflex über Mirrorless bis Smartphone. Und die letzten zwei Jahre hat KI meinen Workflow grundlegend verändert.
 

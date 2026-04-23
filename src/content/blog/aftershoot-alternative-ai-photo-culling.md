@@ -12,13 +12,16 @@ heroImageThumb: "/images/blog/aftershoot-alternative-ai-photo-culling-1-thumb.we
 titleAccent: "Alternative"
 ---
 
-**TL;DR**
-
-- AfterShoot klingt geil: KI sortiert deine Fotos automatisch. In der Praxis: zu viele Fehler, zu teuer, zu wenig Kontrolle
-- Ich hab mit Python + CLIP Embeddings mein eigenes Photo Culling Tool gebaut — kostenlos, lokal, auf meinem Rechner
-- Ergebnis: 4.200 Hochzeitsfotos in 8 Minuten auf 620 reduziert, mit besserem Trefferquote als AfterShoot
-- Der Code ist simpel genug dass du ihn nachbauen kannst — kein ML-Studium noetig
-- Ehrliches Fazit: Mein Tool ist nicht perfekt, aber fuer meinen Workflow besser als 300 EUR/Jahr an AfterShoot zahlen
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>AfterShoot klingt geil: KI sortiert deine Fotos automatisch. In der Praxis: zu viele Fehler, zu teuer, zu wenig Kontrolle</li>
+		<li>Ich hab mit Python + CLIP Embeddings mein eigenes Photo Culling Tool gebaut — kostenlos, lokal, auf meinem Rechner</li>
+		<li>Ergebnis: 4.200 Hochzeitsfotos in 8 Minuten auf 620 reduziert, mit besserem Trefferquote als AfterShoot</li>
+		<li>Der Code ist simpel genug dass du ihn nachbauen kannst — kein ML-Studium noetig</li>
+		<li>Ehrliches Fazit: Mein Tool ist nicht perfekt, aber fuer meinen Workflow besser als 300 EUR/Jahr an AfterShoot zahlen</li>
+	</ul>
+</div>
 
 ---
 

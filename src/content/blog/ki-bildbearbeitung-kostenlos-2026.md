@@ -22,13 +22,16 @@ heroImageThumb: "/images/blog/ki-bildbearbeitung-kostenlos-2026-1-thumb.webp"
 
 # KI Bildbearbeitung kostenlos: Die 5 besten Online-Tools (2026)
 
-**TL;DR**
-
-- Remove.bg ist fuer Hintergrund freistellen immer noch unerreicht -- kostenlose Version reicht fuer die meisten Faelle
-- Canva AI hat sich zu einem echten All-in-One-Tool entwickelt, wenn man die Gratis-Limits akzeptiert
-- Clipdrop von Stability AI macht Rauschentfernung und Upscaling kostenlos auf einem Niveau das fruehert 30 EUR/Monat gekostet haette
-- Fotor und MyEdit fuellen Nischen (Gesichtretusche, kreative Effekte) die die grossen Tools ignorieren
-- Keins der fuenf Tools ersetzt Lightroom oder Topaz -- aber fuer schnelle Korrekturen ohne Abo braucht man das auch nicht
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Remove.bg ist fuer Hintergrund freistellen immer noch unerreicht -- kostenlose Version reicht fuer die meisten Faelle</li>
+		<li>Canva AI hat sich zu einem echten All-in-One-Tool entwickelt, wenn man die Gratis-Limits akzeptiert</li>
+		<li>Clipdrop von Stability AI macht Rauschentfernung und Upscaling kostenlos auf einem Niveau das fruehert 30 EUR/Monat gekostet haette</li>
+		<li>Fotor und MyEdit fuellen Nischen (Gesichtretusche, kreative Effekte) die die grossen Tools ignorieren</li>
+		<li>Keins der fuenf Tools ersetzt Lightroom oder Topaz -- aber fuer schnelle Korrekturen ohne Abo braucht man das auch nicht</li>
+	</ul>
+</div>
 
 ---
 

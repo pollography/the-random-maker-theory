@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TRMT Design-Upgrade Preview — 2026-04-23</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================================
+   TRMT v2 — lifted from LifeOS Design System
+   - Galaxy Forge 0-5-10 surface layering (vs. current uniform alpha tints)
+   - Grain 9% → 4% (Pollo: "too much")
+   - Pillar cards: DARK default, hover = lighter/honey-glow (Pollo's flip)
+   - Metallic buttons from LifeOS metallic.css
+   - Instrument Serif reduced to soul-moments only, Inter everywhere else
+   ============================================================================ */
+:root {
+  /* Galaxy Forge Hybrid — FOUR distinct surfaces, not alpha tints */
+  --color-base:     hsl(220 15% 3%);     /* page bg */
+  --color-surface:  hsl(220 12% 7%);     /* default card */
+  --color-elevated: hsl(220 10% 11%);    /* hovered/active card */
+  --color-overlay:  hsl(220 8% 15%);     /* modal, popover */
+
+  /* Section-tint system — soft color wash for reading-flow contrast */
+  --tint-honey:  hsl(25 66% 54% / 0.04);
+  --tint-teal:   hsl(172 50% 46% / 0.04);
+  --tint-neutral: transparent;
+
+  --fg-1: hsl(36 18% 90%);
+  --fg-2: hsl(30 10% 70%);
+  --fg-3: hsl(30 10% 43%);
+  --fg-4: hsl(30 8% 30%);
+
+  --honey:       hsl(25 66% 54%);
+  --honey-hover: hsl(35 68% 62%);
+  --teal:        hsl(172 50% 46%);
+  --teal-hover:  hsl(172 60% 56%);
+  --dragon-gold: hsl(43 100% 62%);
+
+  --border-subtle: hsl(0 0% 100% / 0.08);
+  --border-soft:   hsl(0 0% 100% / 0.10);
+  --border-medium: hsl(0 0% 100% / 0.14);
+
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-serif:   'Instrument Serif', Georgia, serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  --radius-chip: 6px;
+  --radius-ctrl: 10px;
+  --radius-card: 14px;
+  --radius-modal: 22px;
+
+  --shadow-card: 0 4px 16px hsl(0 0% 0% / 0.5);
+  --shadow-card-hover: 0 8px 28px hsl(0 0% 0% / 0.6), 0 0 16px hsl(25 66% 54% / 0.15);
+
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms; --dur-base: 250ms;
+
+  /* Grain opacity: LifeOS uses 9%, TRMT currently higher. Pollo says "too much" → 4% */
+  --grain-opacity: 0.04;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fg-2);
+  background: var(--color-base);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Galaxy Forge background */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(circle at 84% 12%, hsl(25 66% 54% / 0.14) 0%, transparent 32%),
+    radial-gradient(circle at 12% 88%, hsl(172 50% 46% / 0.10) 0%, transparent 36%);
+  pointer-events: none; z-index: 0;
+}
+
+/* Reduced grain */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3'/><feColorMatrix values='0 0 0 0 0.9  0 0 0 0 0.85  0 0 0 0 0.75  0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='1'/></svg>");
+  opacity: var(--grain-opacity);
+  mix-blend-mode: overlay;
+  pointer-events: none; z-index: 1;
+}
+
+.page { position: relative; z-index: 2; max-width: 1120px; margin: 0 auto; padding: 64px 24px 96px; }
+
+/* ─────────── HEADER ─────────── */
+.doc-head {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 40px; margin-bottom: 56px;
+}
+.doc-eyebrow {
+  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--honey); font-weight: 700;
+}
+.doc-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -0.03em; line-height: 1.05;
+  color: var(--fg-1);
+  margin: 12px 0 16px;
+}
+.doc-title em { font-family: var(--font-serif); font-style: italic; color: var(--honey); font-weight: 400; }
+.doc-sub { color: var(--fg-2); font-size: 18px; max-width: 60ch; line-height: 1.6; }
+
+h2.section-h {
+  font-family: var(--font-display);
+  font-size: 28px; font-weight: 700; letter-spacing: -0.02em;
+  color: var(--fg-1);
+  margin: 72px 0 8px;
+  display: flex; align-items: baseline; gap: 14px;
+}
+h2.section-h::before {
+  content: ''; display: inline-block; width: 28px; height: 2px;
+  background: var(--honey); border-radius: 2px;
+  transform: translateY(-6px);
+}
+.section-lead {
+  color: var(--fg-2); font-size: 15px; margin-bottom: 28px; max-width: 68ch;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 1 — Surface elevations (the "Farbdifferenzen" fix)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.surface-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  margin-bottom: 16px;
+}
+.surface-sample {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-subtle);
+  display: flex; align-items: flex-end; padding: 16px;
+  font-family: var(--font-mono); font-size: 12px; color: var(--fg-3);
+  position: relative;
+}
+.surface-sample .label { font-weight: 600; color: var(--fg-1); display: block; }
+.surface-sample .hsl { font-size: 10px; color: var(--fg-3); }
+.surface-base     { background: var(--color-base); }
+.surface-surface  { background: var(--color-surface); }
+.surface-elevated { background: var(--color-elevated); }
+.surface-overlay  { background: var(--color-overlay); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 2 — Pillar cards: DARK default / LIGHT hover (Pollo's flip)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pillars { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
+.pillar {
+  display: grid; grid-template-columns: 64px 1fr auto; gap: 24px;
+  align-items: center; padding: 28px;
+  background: var(--color-surface);            /* DARK default */
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  color: var(--fg-1);
+  cursor: pointer;
+  transition:
+    background var(--dur-base) var(--ease-smooth),
+    border-color var(--dur-base) var(--ease-smooth),
+    transform var(--dur-base) var(--ease-bounce),
+    box-shadow var(--dur-base) var(--ease-smooth);
+}
+.pillar:hover {
+  background: var(--color-elevated);
+  border-color: hsl(25 66% 54% / 0.35);
+  transform: scale(1.01);
+  box-shadow: var(--shadow-card-hover);
+}
+.pillar .pillar-icon { font-size: 2.5rem; text-align: center; }
+.pillar .pillar-body .pillar-eyebrow {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--teal); font-weight: 700; margin-bottom: 6px;
+}
+.pillar .pillar-body h3 {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 700; letter-spacing: -0.01em; color: var(--fg-1);
+  margin-bottom: 8px;
+}
+.pillar .pillar-body p { color: var(--fg-2); max-width: 64ch; font-size: 14.5px; }
+.pillar .pillar-body .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.pillar .pillar-body .tag {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.04em;
+  color: var(--teal); background: hsl(172 50% 46% / 0.10);
+  padding: 3px 10px; border-radius: var(--radius-chip);
+}
+.pillar .arrow {
+  color: var(--honey); font-weight: 600; font-size: 14px;
+  transition: transform var(--dur-base) var(--ease-bounce);
+}
+.pillar:hover .arrow { transform: translateX(6px); color: var(--honey-hover); }
+
+/* Alternate tint (soft section-wash for reading-flow variation) */
+.pillar.tint-honey { background: var(--color-surface); box-shadow: inset 0 0 0 9999px var(--tint-honey); }
+.pillar.tint-teal  { background: var(--color-surface); box-shadow: inset 0 0 0 9999px var(--tint-teal); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 3 — Blog-post reading flow (section contrasts)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.article-demo {
+  background: var(--color-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-modal);
+  padding: 48px;
+  margin-top: 16px;
+}
+.article-demo h1 {
+  font-family: var(--font-display);
+  font-size: 40px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1;
+  color: var(--fg-1); margin-bottom: 16px;
+}
+.article-demo h1 em { font-family: var(--font-serif); font-style: italic; color: var(--honey); font-weight: 400; }
+.article-demo .meta {
+  font-family: var(--font-mono); font-size: 12px;
+  color: var(--fg-3); letter-spacing: 0.04em;
+  margin-bottom: 32px;
+}
+.article-demo p { color: var(--fg-2); font-size: 16px; line-height: 1.75; margin-bottom: 18px; max-width: 70ch; }
+.article-demo h2.article-h2 {
+  font-family: var(--font-display);
+  font-size: 26px; font-weight: 700; letter-spacing: -0.015em;
+  color: var(--fg-1);
+  margin: 40px 0 16px; padding-top: 16px;
+  display: flex; align-items: baseline; gap: 12px;
+}
+.article-demo h2.article-h2::before {
+  content: ''; width: 20px; height: 2px; background: var(--honey); border-radius: 2px;
+  transform: translateY(-5px);
+}
+
+/* Reading-flow contrast blocks */
+.rf-block {
+  padding: 24px 28px;
+  border-radius: var(--radius-card);
+  margin: 28px 0;
+  border: 1px solid var(--border-subtle);
+}
+.rf-block.rf-tldr {
+  background: hsl(25 66% 54% / 0.07);
+  border-color: hsl(25 66% 54% / 0.22);
+}
+.rf-block.rf-tldr .rf-label { color: var(--honey); }
+.rf-block.rf-callout {
+  background: var(--color-elevated);
+  border-left: 3px solid var(--teal);
+  border-radius: var(--radius-card);
+}
+.rf-block.rf-warning {
+  background: hsl(0 70% 45% / 0.08);
+  border: 1px solid hsl(0 70% 45% / 0.25);
+}
+.rf-block.rf-warning .rf-label { color: hsl(0 85% 72%); }
+.rf-block .rf-label {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--teal); font-weight: 700; margin-bottom: 8px;
+}
+.rf-block p { margin: 0; color: var(--fg-2); }
+
+.article-demo pre {
+  background: var(--color-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 20px; margin: 20px 0;
+  font-family: var(--font-mono); font-size: 13px; color: var(--fg-1);
+  overflow-x: auto;
+}
+.article-demo code { color: var(--honey); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 4 — Metallic button system from LifeOS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+.mbtn {
+  position: relative;
+  font-family: 'Inter', sans-serif; font-weight: 600; font-size: 13px;
+  letter-spacing: 0.04em; border: 0; cursor: pointer;
+  padding: 12px 24px; border-radius: var(--radius-ctrl);
+  overflow: hidden; isolation: isolate;
+  transition: transform 420ms var(--ease-smooth), box-shadow 420ms var(--ease-smooth), filter 420ms var(--ease-smooth);
+}
+.mbtn::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(135deg,
+    hsl(0 0% 100% / 0.22) 0%,
+    hsl(0 0% 100% / 0.04) 28%,
+    hsl(0 0% 0% / 0.18) 62%,
+    hsl(0 0% 100% / 0.08) 100%);
+  mix-blend-mode: overlay; pointer-events: none; z-index: 1;
+}
+.mbtn::after {
+  content: ""; position: absolute;
+  top: -50%; left: -10%; width: 55%; height: 100%;
+  background: radial-gradient(ellipse at center, hsl(0 0% 100% / 0.28), transparent 70%);
+  transform: rotate(-18deg); filter: blur(4px);
+  pointer-events: none; z-index: 2; opacity: 0.9;
+  transition: opacity 420ms var(--ease-smooth), transform 420ms var(--ease-smooth);
+}
+.mbtn:hover { transform: scale(1.025); filter: brightness(1.08); }
+.mbtn:hover::after { opacity: 1; transform: rotate(-18deg) translateX(10%); }
+.mbtn:active { transform: scale(0.985); }
+.mbtn > span { position: relative; z-index: 3; }
+
+.mbtn-honey {
+  background: linear-gradient(160deg, hsl(38 92% 60%), hsl(25 88% 50%) 42%, hsl(18 78% 36%));
+  color: hsl(25 40% 10%);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.35), inset 0 -1px 0 hsl(0 0% 0% / 0.35),
+              0 1px 2px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(25 66% 54% / 0.25);
+}
+.mbtn-teal {
+  background: linear-gradient(160deg, hsl(172 78% 56%), hsl(172 72% 42%) 45%, hsl(184 80% 24%));
+  color: hsl(180 50% 8%);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.35), inset 0 -1px 0 hsl(0 0% 0% / 0.35),
+              0 1px 2px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(172 50% 46% / 0.25);
+}
+.mbtn-secondary {
+  background: linear-gradient(160deg, hsl(220 12% 16%), hsl(220 14% 10%) 55%, hsl(220 14% 6%));
+  color: hsl(36 18% 90%);
+  box-shadow: inset 0 1px 0 hsl(0 0% 100% / 0.08), inset 0 -1px 0 hsl(0 0% 0% / 0.4),
+              0 1px 2px hsl(0 0% 0% / 0.5), 0 0 0 1px hsl(0 0% 100% / 0.06);
+}
+.mbtn-ghost { background: transparent; color: var(--fg-2); }
+.mbtn-ghost::before, .mbtn-ghost::after { display: none; }
+.mbtn-ghost:hover { color: var(--fg-1); background: hsl(0 0% 100% / 0.04); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SECTION 5 — Side-by-side comparison
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.compare .col { padding: 24px; border-radius: var(--radius-card); border: 1px solid var(--border-subtle); }
+.compare .col .label {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 700; margin-bottom: 12px;
+}
+.compare .col.old { background: hsl(220 10% 10%); }
+.compare .col.old .label { color: hsl(0 60% 60%); }
+.compare .col.new { background: var(--color-surface); }
+.compare .col.new .label { color: var(--teal); }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOOTER notes
+   ═══════════════════════════════════════════════════════════════════════════ */
+.notes {
+  margin-top: 72px; padding: 28px; border-top: 1px solid var(--border-subtle);
+  font-size: 13px; color: var(--fg-3); font-family: var(--font-mono);
+}
+.notes ul { list-style: none; }
+.notes li { padding: 6px 0; }
+.notes li::before { content: '→ '; color: var(--honey); }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="doc-head">
+    <div class="doc-eyebrow">Design Upgrade Preview · 2026-04-23</div>
+    <h1 class="doc-title">TRMT <em>v2</em> — Reading-Flow + Surface-Layering</h1>
+    <p class="doc-sub">
+      Drei konkrete Änderungsvorschläge aus deinem LifeOS-System zurück auf TRMT gehoben.
+      Nichts davon ist committed — das ist nur eine Vorschau-Seite zum Anschauen und Freigeben.
+      Wenn dir ein Block zusagt, sag welcher und ich ziehe den in <code>src/app.css</code> + die Routes.
+    </p>
+  </header>
+
+  <!-- SECTION 1 -->
+  <h2 class="section-h">1 · Surface-Layering (die "Farbdifferenzen"-Antwort)</h2>
+  <p class="section-lead">
+    Aktuell nutzt TRMT überall die gleiche <code>--color-surface</code> — darum wirkt alles gleich hell.
+    LifeOS hat vier diskrete Elevations (0-5-10-15). Jede Schicht eine HSL-Stufe dunkler/heller → sofort
+    sichtbare Hierarchie, ohne dass man Ränder oder Schatten sieht.
+  </p>
+  <div class="surface-grid">
+    <div class="surface-sample surface-base"><span><span class="label">Base</span><span class="hsl">hsl(220 15% 3%)</span></span></div>
+    <div class="surface-sample surface-surface"><span><span class="label">Surface</span><span class="hsl">hsl(220 12% 7%)</span></span></div>
+    <div class="surface-sample surface-elevated"><span><span class="label">Elevated</span><span class="hsl">hsl(220 10% 11%)</span></span></div>
+    <div class="surface-sample surface-overlay"><span><span class="label">Overlay</span><span class="hsl">hsl(220 8% 15%)</span></span></div>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2 class="section-h">2 · "Was dich hier erwartet"-Karten — dein Flip</h2>
+  <p class="section-lead">
+    Aktuell: Karten honey/teal getönt im Default, neutral beim Hover. Du wolltest es umgekehrt.
+    → Default jetzt dunkel + ruhig, Hover hebt auf <code>--color-elevated</code> an, zieht die Border
+    auf honey und bekommt den Card-Hover-Glow. Scan-Ruhe, Aktion sichtbar.
+  </p>
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-icon">🤖</div>
+      <div class="pillar-body">
+        <div class="pillar-eyebrow">Reviews · News · Tutorials</div>
+        <h3>KI & Tech</h3>
+        <p>Was taugt wirklich? ChatGPT, Claude, Gemini im ehrlichen Praxistest. Keine Lobeshymnen — echte Erfahrung.</p>
+        <div class="tags">
+          <span class="tag">Tool-Reviews</span>
+          <span class="tag">KI-News</span>
+          <span class="tag">Prompt-Guides</span>
+        </div>
+      </div>
+      <div class="arrow">Entdecken →</div>
+    </div>
+    <div class="pillar tint-teal">
+      <div class="pillar-icon">🔧</div>
+      <div class="pillar-body">
+        <div class="pillar-eyebrow">Projekte · Anleitungen · Hardware</div>
+        <h3>Maker &amp; DIY</h3>
+        <p>Arduino, ESP32, Raspberry Pi, 3D-Druck. Jedes Projekt mit Teileliste, Schaltplan und vollständigem Code.</p>
+        <div class="tags">
+          <span class="tag">Arduino</span>
+          <span class="tag">ESP32</span>
+          <span class="tag">3D-Druck</span>
+        </div>
+      </div>
+      <div class="arrow">Entdecken →</div>
+    </div>
+    <div class="pillar tint-honey">
+      <div class="pillar-icon">⚡</div>
+      <div class="pillar-body">
+        <div class="pillar-eyebrow">Workflows · Scripts · DevOps</div>
+        <h3>Automatisierung</h3>
+        <p>n8n, Make, Zapier. Alles was du einmal einrichtest und nie wieder anfassen musst.</p>
+        <div class="tags">
+          <span class="tag">n8n</span>
+          <span class="tag">API</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+      <div class="arrow">Entdecken →</div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2 class="section-h">3 · Blog-Post Reading-Flow</h2>
+  <p class="section-lead">
+    Aktuell flacht der Artikel nach der Hero-Sektion ab — fließender Text, gleichbleibende Helligkeit.
+    Fix: drei Block-Typen (TL;DR-Box mit Honey-Tint, Callout mit Teal-Stripe, Warning mit dezentem Rot)
+    plus aufgehellter Code-Block gegen den dunklen Hintergrund. Das gibt dem Auge Landepunkte.
+  </p>
+  <article class="article-demo">
+    <h1>n8n + <em>ChatGPT</em>: Mein Automatisierungs-Stack</h1>
+    <div class="meta">2026-04-18 · 8 min Lesezeit · Automation</div>
+    <p>
+      Wie ich n8n mit der ChatGPT API kombiniere: drei echte Automationen die ich täglich nutze —
+      Node für Node erklärt. Kein Theorie-Bla, nur Praxis.
+    </p>
+
+    <div class="rf-block rf-tldr">
+      <div class="rf-label">TL;DR</div>
+      <p>n8n self-hosted auf NAS, Claude-API als Text-Brain, 3 Workflows: RSS→Blog, Error-Alerts, Content-Queue.
+      Laufzeit pro Workflow: ~4-8 Sekunden. Kosten: &lt; 3 EUR/Monat.</p>
+    </div>
+
+    <h2 class="article-h2">Warum n8n statt Zapier oder Make</h2>
+    <p>
+      Zapier ist teuer ab 5 Workflows. Make ist günstiger aber die UI macht mich wahnsinnig. n8n ist
+      self-hosted, kostet nichts außer ein bisschen Strom, und läuft auf meinem NAS im Keller.
+    </p>
+
+    <div class="rf-block rf-callout">
+      <div class="rf-label">Pro-Tipp</div>
+      <p>Wenn du n8n per Docker aufsetzt: <code>--restart unless-stopped</code> NICHT vergessen.
+      Sonst ist nach dem nächsten Reboot alles tot und du wunderst dich eine Woche, warum keine Mails kommen.</p>
+    </div>
+
+    <h2 class="article-h2">Workflow 1 — RSS-Feeds zu Blog-Drafts</h2>
+    <p>Ich lese ~40 Tech-RSS-Feeds. Die interessanten fütter ich in eine Queue-Tabelle in Supabase:</p>
+
+    <pre><code>const response = await fetch(url);
+const feed = await parser.parseString(await response.text());
+for (const item of feed.items.slice(0, 3)) {
+  await supabase.from('content_queue').insert({
+    title: item.title,
+    url: item.link,
+    source: feed.title,
+    status: 'queued'
+  });
+}</code></pre>
+
+    <div class="rf-block rf-warning">
+      <div class="rf-label">Gotcha</div>
+      <p>Manche RSS-Feeds sind UTF-8 mit BOM — Node's fast-xml-parser stolpert darüber. Vorher <code>.replace(/^﻿/, '')</code> sonst crashed der Parser silent.</p>
+    </div>
+
+    <p>
+      Am nächsten Morgen laufe ich durch die Queue, markiere die drei besten als &quot;approved&quot;,
+      und ein zweiter Workflow füttert die in NotebookLM.
+    </p>
+  </article>
+
+  <!-- SECTION 4 -->
+  <h2 class="section-h">4 · Metallic-Buttons (optional)</h2>
+  <p class="section-lead">
+    Aktuelle Buttons sind flat-filled. LifeOS hat ein metallic-System mit Gradient + innerem Highlight + Shine-Sweep beim Hover.
+    Mehr "premium feel". Optional, weil stilistisch eigener Charakter — nicht jede TRMT-Landing muss das haben.
+    Hover drüber zum Testen.
+  </p>
+  <div class="btn-row">
+    <button class="mbtn mbtn-honey"><span>Zum Blog →</span></button>
+    <button class="mbtn mbtn-teal"><span>Zum Hören</span></button>
+    <button class="mbtn mbtn-secondary"><span>Mehr erfahren</span></button>
+    <button class="mbtn mbtn-ghost"><span>Abbrechen</span></button>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2 class="section-h">5 · Grain-Reduktion</h2>
+  <p class="section-lead">
+    LifeOS-Spec: 9% Opacity, <code>mix-blend-mode: overlay</code>. TRMT fühlt sich laut dir "too much" an.
+    Diese Seite nutzt <strong>4%</strong>. Darunter würde der Look seine Textur verlieren, darüber wird's
+    wieder zu nervig. 4 % ist der Kompromiss-Sweetspot den ich nach ein paar Iterationen sehe.
+  </p>
+  <div class="compare">
+    <div class="col old">
+      <div class="label">Status quo (geschätzt 9-12%)</div>
+      <p>Grain sehr präsent, "filmisch" aber auf Text-lastigen Screens ermüdend.</p>
+    </div>
+    <div class="col new">
+      <div class="label">Vorschlag 4%</div>
+      <p>Textur spürbar, aber nicht dominant. Text bleibt scharf. Dunkle Surfaces wirken solid.</p>
+    </div>
+  </div>
+
+  <!-- Footer notes -->
+  <aside class="notes">
+    <strong style="color: var(--fg-2);">Implementations-Plan wenn du grünes Licht gibst:</strong>
+    <ul>
+      <li>Token-Migration nach <code>src/app.css</code> — 4 Surface-Variablen + reduzierte Grain-Opacity</li>
+      <li>Pillar-Cards in <code>src/routes/+page.svelte</code> auf dark-default + elevated-hover flippen</li>
+      <li>Block-Components für TL;DR / Callout / Warning als Svelte-Snippets (wiederverwendbar in mdsvex)</li>
+      <li>Metallic-Buttons als optionale <code>.btn-metallic</code>-Variante in <code>src/lib/styles/buttons.css</code></li>
+      <li>Smoke-Test: Lighthouse &gt; 90, Contrast-Check WCAG AA auf allen Text-Surfaces</li>
+    </ul>
+  </aside>
+
+</div>
+
+</body>
+</html>

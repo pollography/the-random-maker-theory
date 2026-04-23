@@ -24,14 +24,17 @@ videoUrl: ""
 
 # Prompt Engineering lernen: Mein komplettes System
 
-**TL;DR**
-
-- 90% der Leute verschenken das Potenzial von ChatGPT und Claude, weil sie prompten wie sie googeln
-- Prompt Engineering lernen heißt nicht: komplizierte Formeln auswendig lernen
-- Vier Techniken reichen für 80% der Anwendungsfälle
-- Rollen-Prompting und Output-Format-Vorgabe bringen sofort die meiste Verbesserung
-- Chain-of-Thought klingt fancy, hilft aber vor allem bei logischen Aufgaben
-- Am Ende des Artikels: mein Template-System mit 10 Copy-Paste-Prompts
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>90% der Leute verschenken das Potenzial von ChatGPT und Claude, weil sie prompten wie sie googeln</li>
+		<li>Prompt Engineering lernen heißt nicht: komplizierte Formeln auswendig lernen</li>
+		<li>Vier Techniken reichen für 80% der Anwendungsfälle</li>
+		<li>Rollen-Prompting und Output-Format-Vorgabe bringen sofort die meiste Verbesserung</li>
+		<li>Chain-of-Thought klingt fancy, hilft aber vor allem bei logischen Aufgaben</li>
+		<li>Am Ende des Artikels: mein Template-System mit 10 Copy-Paste-Prompts</li>
+	</ul>
+</div>
 
 ---
 

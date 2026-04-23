@@ -22,13 +22,16 @@ heroImageThumb: "/images/blog/esp32-projekte-anfaenger-2026-1-thumb.webp"
 
 # ESP32 Projekte fuer Anfaenger: 5 Ideen unter 20 Euro
 
-**TL;DR**
-
-- Der ESP32 ist ein 8-Euro-Microcontroller mit WLAN und Bluetooth eingebaut — perfekter Einstieg ins Maker-Hobby
-- 5 konkrete esp32 projekt anfaenger Ideen: Temperatursensor, OLED Display, Wetterstation, Bewegungsmelder, Pflanzenbewaesserung
-- Jedes Projekt hat eine eigene Einkaufsliste, einen Schwierigkeitsgrad (1-5) und realistische Kostenangaben
-- Arduino IDE reicht als Software — kein Profi-Setup noetig
-- Wer tiefer einsteigen will: Danach direkt weiter mit ESPHome und Home Assistant
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Der ESP32 ist ein 8-Euro-Microcontroller mit WLAN und Bluetooth eingebaut — perfekter Einstieg ins Maker-Hobby</li>
+		<li>5 konkrete esp32 projekt anfaenger Ideen: Temperatursensor, OLED Display, Wetterstation, Bewegungsmelder, Pflanzenbewaesserung</li>
+		<li>Jedes Projekt hat eine eigene Einkaufsliste, einen Schwierigkeitsgrad (1-5) und realistische Kostenangaben</li>
+		<li>Arduino IDE reicht als Software — kein Profi-Setup noetig</li>
+		<li>Wer tiefer einsteigen will: Danach direkt weiter mit ESPHome und Home Assistant</li>
+	</ul>
+</div>
 
 ---
 

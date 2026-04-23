@@ -11,12 +11,15 @@ heroImage: "/images/blog/lokale-ki-1.webp"
 readingTime: 4
 ---
 
-> **TL;DR**
->
-> - Ollama (CLI), LM Studio (GUI) oder Jan.ai, kostenlos, DeepSeek V3, Llama 3.1, Mistral, Qwen, Gemma
-> - 8-12GB VRAM sweet spot, 7-8B Modelle 40+ Tokens/sec, schneller als Cloud-APIs
-> - Q4_K_M Quantization 75% weniger RAM, minimal schlechter, Dual-Strategie (lokal Standard, Cloud Complex)
-> - Privacy, Zero Data Exfiltration, DSGVO-konform, Break-Even 2-6 Monate, dann praktisch gratis
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Ollama (CLI), LM Studio (GUI) oder Jan.ai, kostenlos, DeepSeek V3, Llama 3.1, Mistral, Qwen, Gemma</li>
+		<li>8-12GB VRAM sweet spot, 7-8B Modelle 40+ Tokens/sec, schneller als Cloud-APIs</li>
+		<li>Q4_K_M Quantization 75% weniger RAM, minimal schlechter, Dual-Strategie (lokal Standard, Cloud Complex)</li>
+		<li>Privacy, Zero Data Exfiltration, DSGVO-konform, Break-Even 2-6 Monate, dann praktisch gratis</li>
+	</ul>
+</div>
 
 Jeder Prompt, den du an ChatGPT schickst, landet auf einem Server in den USA. Jedes Code-Snippet, jeder private Text, jede Geschäftsidee.
 

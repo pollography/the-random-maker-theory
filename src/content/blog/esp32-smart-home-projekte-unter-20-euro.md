@@ -11,11 +11,15 @@ heroImage: "/images/blog/esp32-1.webp"
 readingTime: 4
 ---
 
-> **TL;DR**
-> - ESP32-C3 (3€) + Sensoren (DHT22, PIR, Reed Switch), YAML-Config mit ESPHome, Home Assistant erkennt automatisch
-> - 5 Projekte, alle unter 20€, Temperatur/Luftfeuchte, Bewegung, Tür, Pflanzenbewässerung, LED-Strips
-> - Kritisch: GPIO-Pins, 5V Netzteil, Sensor-Kalibrierung, Level Shifter bei LEDs
-> - Deep Sleep für Batteriebtrieb 6-12 Monate Laufzeit
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>ESP32-C3 (3€) + Sensoren (DHT22, PIR, Reed Switch), YAML-Config mit ESPHome, Home Assistant erkennt automatisch</li>
+		<li>5 Projekte, alle unter 20€, Temperatur/Luftfeuchte, Bewegung, Tür, Pflanzenbewässerung, LED-Strips</li>
+		<li>Kritisch: GPIO-Pins, 5V Netzteil, Sensor-Kalibrierung, Level Shifter bei LEDs</li>
+		<li>Deep Sleep für Batteriebtrieb 6-12 Monate Laufzeit</li>
+	</ul>
+</div>
 
 Ein ESP32 Board kostet 3€. Ein Temperatursensor 1,50€. Zusammen mit ESPHome und Home Assistant hast du in 20 Minuten einen smarten Raumsensor, der keine Cloud braucht.
 

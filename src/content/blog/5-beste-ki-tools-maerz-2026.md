@@ -12,12 +12,15 @@ titleAccent: "KI-Tools"
 readingTime: 2
 ---
 
-> **TL;DR**
->
-> - Claude 4.6 für Texte und Code, beste Qualität auf dem Markt
-> - Claude Code als IDE, Figma AI Assist für UI, Cursor für Tab-Completion
-> - Leonardo AI für Bilder, kostenlos testen, dann bei einem Tool gut werden
-> - 100 Stunden mit einem Tool schlägt 100 gute Prompts
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Claude 4.6 für Texte und Code, beste Qualität auf dem Markt</li>
+		<li>Claude Code als IDE, Figma AI Assist für UI, Cursor für Tab-Completion</li>
+		<li>Leonardo AI für Bilder, kostenlos testen, dann bei einem Tool gut werden</li>
+		<li>100 Stunden mit einem Tool schlägt 100 gute Prompts</li>
+	</ul>
+</div>
 
 Der KI-Markt ist im März 2026 nicht zu überschauen. Täglich gibt es neue Tools, neue Features, neue Möglichkeiten. Das ist geil und verwirrend zugleich.
 

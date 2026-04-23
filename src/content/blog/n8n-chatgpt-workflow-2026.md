@@ -20,13 +20,16 @@ heroImageThumb: "/images/blog/n8n-chatgpt-workflow-2026-1-thumb.webp"
 
 # n8n + ChatGPT: Mein Automatisierungs-Stack
 
-**TL;DR**
-
-- n8n + ChatGPT ist die Kombination die meinen Content-Output verdreifacht hat — ohne dass ich mehr Zeit investiere
-- Ich zeige 3 konkrete n8n chatgpt workflow Setups die ich selbst taeglich nutze
-- Jeder Workflow wird Node fuer Node erklaert, kein "einfach so funktioniert das halt"
-- Die OpenAI-Kosten fuer alle drei zusammen: unter 5 EUR im Monat
-- Das hier ist kein YouTube-Tutorial-Klon — ich zeige was wirklich in Produktion laeuft
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>n8n + ChatGPT ist die Kombination die meinen Content-Output verdreifacht hat — ohne dass ich mehr Zeit investiere</li>
+		<li>Ich zeige 3 konkrete n8n chatgpt workflow Setups die ich selbst taeglich nutze</li>
+		<li>Jeder Workflow wird Node fuer Node erklaert, kein "einfach so funktioniert das halt"</li>
+		<li>Die OpenAI-Kosten fuer alle drei zusammen: unter 5 EUR im Monat</li>
+		<li>Das hier ist kein YouTube-Tutorial-Klon — ich zeige was wirklich in Produktion laeuft</li>
+	</ul>
+</div>
 
 ---
 

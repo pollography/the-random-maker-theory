@@ -11,13 +11,16 @@ heroImage: "/images/blog/claude-cowork-einladung-kostenlos-testen-1.webp"
 titleAccent: "Cowork"
 ---
 
-> **TL;DR**
->
-> - **Cowork** ist Anthropics Desktop-Agent: Claude arbeitet direkt mit deinen lokalen Dateien
-> - Excel mit Formeln, PowerPoint-Decks, PDFs analysieren, Research, alles autonom
-> - Quasi [Claude Code](/blog/claude-code-vs-cursor-vs-copilot-2026) für Nicht-Entwickler
-> - Du kannst Freunde **eine Woche kostenlos** einladen, [hier mein Link](https://claude.ai/referral/OIg-oNK-yg?s=cowork)
-> - Wenn sie danach abonnieren, bekomm ich 10€ Credits. Fair Deal.
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li><strong>Cowork</strong> ist Anthropics Desktop-Agent: Claude arbeitet direkt mit deinen lokalen Dateien</li>
+		<li>Excel mit Formeln, PowerPoint-Decks, PDFs analysieren, Research, alles autonom</li>
+		<li>Quasi <a href="/blog/claude-code-vs-cursor-vs-copilot-2026">Claude Code</a> für Nicht-Entwickler</li>
+		<li>Du kannst Freunde <strong>eine Woche kostenlos</strong> einladen, <a href="https://claude.ai/referral/OIg-oNK-yg?s=cowork">hier mein Link</a></li>
+		<li>Wenn sie danach abonnieren, bekomm ich 10€ Credits. Fair Deal.</li>
+	</ul>
+</div>
 
 ## Was ist Claude Cowork eigentlich?
 

@@ -11,12 +11,15 @@ heroImage: "/images/blog/home-assistant-1.webp"
 readingTime: 3
 ---
 
-> **TL;DR**
->
-> - Open Source, lokal, keine Cloud, deine Daten bleiben bei dir, 2.000+ Integrationen
-> - Hardware: Pi 4 ab 30€ + Zigbee Dongle 20€, für 5-20 Geräte ausreichend
-> - Start mit Smart Plug (15€), Bewegungssensor (20€), Tür-Sensor (10€), dann Automationen bauen
-> - Erste Automation: Bewegung im Flur, Licht an, nach 10 Min aus, dann wird's Sucht
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Open Source, lokal, keine Cloud, deine Daten bleiben bei dir, 2.000+ Integrationen</li>
+		<li>Hardware: Pi 4 ab 30€ + Zigbee Dongle 20€, für 5-20 Geräte ausreichend</li>
+		<li>Start mit Smart Plug (15€), Bewegungssensor (20€), Tür-Sensor (10€), dann Automationen bauen</li>
+		<li>Erste Automation: Bewegung im Flur, Licht an, nach 10 Min aus, dann wird's Sucht</li>
+	</ul>
+</div>
 
 Alexa hört mit. Google speichert alles. Und wenn der Cloud-Server down ist, geht dein Licht nicht an.
 

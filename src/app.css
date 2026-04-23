@@ -246,6 +246,41 @@ select {
 }
 .rf-block p { margin: 0; color: var(--color-text); }
 .rf-block p + p { margin-top: 0.5rem; }
+.rf-block ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.rf-block ul + p, .rf-block p + ul { margin-top: 0.75rem; }
+.rf-block li {
+	position: relative;
+	padding-left: 1.25rem;
+	color: var(--color-text);
+	line-height: 1.55;
+}
+.rf-block li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.55em;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: currentColor;
+	opacity: 0.35;
+}
+.rf-tldr li::before { background: var(--color-accent-honey); opacity: 0.65; }
+.rf-callout li::before { background: var(--color-accent-teal); opacity: 0.65; }
+.rf-warning li::before { background: var(--color-danger); opacity: 0.65; }
+.rf-block strong { color: var(--color-text); font-weight: 700; }
+.rf-block code {
+	/* Code inside rf-blocks: keep the card surface so the block reads as one unit */
+	background: rgba(255, 255, 255, 0.05);
+	border-color: rgba(255, 255, 255, 0.08);
+}
 
 .rf-tldr {
 	background: var(--color-accent-honey-subtle);

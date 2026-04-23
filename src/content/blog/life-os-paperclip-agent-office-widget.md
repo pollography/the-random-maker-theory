@@ -15,13 +15,16 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-## TL;DR
-
-- Ich hab ein React Widget gebaut, das meine AI Agents live in meinem Life OS Dashboard anzeigt — Status, Tasks, Kosten, alles auf einen Blick
-- Paperclip liefert die API, React + Vite + Tailwind das Frontend — das ganze Setup steht in unter einer Stunde
-- Fuer mein ADHS-Gehirn ist das Widget wie ein Buero-Fenster: Ich sehe mein Team arbeiten und bleibe fokussiert
-- Komplette Code-Snippets zum Nachbauen in diesem Artikel
-- Das Widget pollt alle 30 Sekunden die Paperclip API — kein WebSocket noetig, trotzdem quasi-live
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Ich hab ein React Widget gebaut, das meine AI Agents live in meinem Life OS Dashboard anzeigt — Status, Tasks, Kosten, alles auf einen Blick</li>
+		<li>Paperclip liefert die API, React + Vite + Tailwind das Frontend — das ganze Setup steht in unter einer Stunde</li>
+		<li>Fuer mein ADHS-Gehirn ist das Widget wie ein Buero-Fenster: Ich sehe mein Team arbeiten und bleibe fokussiert</li>
+		<li>Komplette Code-Snippets zum Nachbauen in diesem Artikel</li>
+		<li>Das Widget pollt alle 30 Sekunden die Paperclip API — kein WebSocket noetig, trotzdem quasi-live</li>
+	</ul>
+</div>
 
 ---
 

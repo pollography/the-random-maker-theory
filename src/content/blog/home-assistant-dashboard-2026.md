@@ -16,13 +16,16 @@ videoUrl: ""
 
 Mein Home Assistant sah anfangs aus wie das Steuerpult eines Kernkraftwerks. Zu viele Karten, zu viel Text, null Struktur. Mit Mushroom Cards hab ich das in einem Nachmittag gerade gebogen. Hier zeig ich dir wie.
 
-## Was dich in diesem Artikel erwartet
-
-- HACS und Mushroom Cards installieren (dauert 10 Minuten)
-- Die wichtigsten Karten-Typen erklaert
-- Mein persoenliches Dashboard-Layout
-- YAML-Snippets zum direkten Kopieren
-- Custom Themes fuer den letzten Schliff
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>HACS und Mushroom Cards installieren (dauert 10 Minuten)</li>
+		<li>Die wichtigsten Karten-Typen erklaert</li>
+		<li>Mein persoenliches Dashboard-Layout</li>
+		<li>YAML-Snippets zum direkten Kopieren</li>
+		<li>Custom Themes fuer den letzten Schliff</li>
+	</ul>
+</div>
 
 ---
 

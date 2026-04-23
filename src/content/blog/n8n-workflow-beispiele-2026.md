@@ -27,15 +27,18 @@ heroImageThumb: "/images/blog/n8n-workflow-beispiele-2026-1-thumb.webp"
 
 # n8n Workflow Beispiele: 5 Automationen die ich täglich nutze
 
-**TL;DR**
-
-- Ich nutze n8n seit über einem Jahr produktiv — hier sind meine fünf wichtigsten Workflows
-- Workflow 1 sammelt RSS-Feeds und schickt Zusammenfassungen per Telegram
-- Workflow 2 monitort KI-News aus 46 Quellen und filtert mit GPT-4o-mini
-- Workflow 3 überwacht Discord-Channels und meldet Community-Aktivität
-- Workflow 4 schickt nach jedem Blog-Deploy automatisch eine Benachrichtigung
-- Workflow 5 hält meine Content-Queue auf dem aktuellen Stand
-- Alle Workflows laufen auf Self-Hosted n8n in Docker — kein Cloud-Abo nötig
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Ich nutze n8n seit über einem Jahr produktiv — hier sind meine fünf wichtigsten Workflows</li>
+		<li>Workflow 1 sammelt RSS-Feeds und schickt Zusammenfassungen per Telegram</li>
+		<li>Workflow 2 monitort KI-News aus 46 Quellen und filtert mit GPT-4o-mini</li>
+		<li>Workflow 3 überwacht Discord-Channels und meldet Community-Aktivität</li>
+		<li>Workflow 4 schickt nach jedem Blog-Deploy automatisch eine Benachrichtigung</li>
+		<li>Workflow 5 hält meine Content-Queue auf dem aktuellen Stand</li>
+		<li>Alle Workflows laufen auf Self-Hosted n8n in Docker — kein Cloud-Abo nötig</li>
+	</ul>
+</div>
 
 ---
 

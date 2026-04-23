@@ -16,13 +16,17 @@ videoUrl: ""
 
 # ChatGPT Prompts erstellen: So schreibst du Prompts die funktionieren
 
-**TL;DR**
-- Die meisten Leute schreiben ChatGPT Prompts wie Google-Suchanfragen — das ist das Problem
-- Ein guter Prompt hat vier Teile: Rolle, Aufgabe, Kontext, Format
-- System-Prompts sind das mächtigste Feature das die meisten nie nutzen
-- Vorher/Nachher zeige ich für jeden Tipp konkret — nicht abstrakt
-- Am Ende: 8 fertige Templates für die häufigsten Content-Creator-Aufgaben
-- Companion-Piece zu meinem [Prompt Engineering Artikel](/blog/prompt-engineering-lernen-2026) — der gibt das Fundament, dieser hier die Praxis
+<div class="rf-block rf-tldr">
+	<span class="rf-label">TL;DR</span>
+	<ul>
+		<li>Die meisten Leute schreiben ChatGPT Prompts wie Google-Suchanfragen — das ist das Problem</li>
+		<li>Ein guter Prompt hat vier Teile: Rolle, Aufgabe, Kontext, Format</li>
+		<li>System-Prompts sind das mächtigste Feature das die meisten nie nutzen</li>
+		<li>Vorher/Nachher zeige ich für jeden Tipp konkret — nicht abstrakt</li>
+		<li>Am Ende: 8 fertige Templates für die häufigsten Content-Creator-Aufgaben</li>
+		<li>Companion-Piece zu meinem <a href="/blog/prompt-engineering-lernen-2026">Prompt Engineering Artikel</a> — der gibt das Fundament, dieser hier die Praxis</li>
+	</ul>
+</div>
 
 ---
 
