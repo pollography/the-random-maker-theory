@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# TRMT pre-commit — auto-apply reading-flow blocks to any staged .md files
+# in src/content/blog/ before they are committed, then re-stage the result.
+
+set -e
+
+staged_blog=$(git diff --cached --name-only --diff-filter=ACM | grep -E "^src/content/blog/.*\.md$" || true)
+if [ -z "$staged_blog" ]; then
+  exit 0
+fi
+
+echo "[pre-commit] Applying reading-flow blocks to $(echo "$staged_blog" | wc -l) staged blog file(s)…"
+python3 scripts/apply-reading-flow-blocks.py --include-drafts --synthesize-tldr >/dev/null
+
+for f in $staged_blog; do
+  [ -f "$f" ] && git add "$f"
+done
+echo "[pre-commit] rf-block migration applied + re-staged."

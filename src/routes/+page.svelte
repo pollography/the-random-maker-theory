@@ -1,4 +1,5 @@
 <script>
+	import { untrack } from 'svelte';
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
@@ -7,9 +8,9 @@
 	/** @type {{ data: { posts: any[]; latestEpisode: any; totalCount: number } }} */
 	let { data } = $props();
 
-	const posts = data.posts;
-	const latestEpisode = data.latestEpisode;
-	const totalCount = data.totalCount;
+	const posts = $derived(data.posts);
+	const latestEpisode = $derived(data.latestEpisode);
+	const totalCount = $derived(data.totalCount);
 
 	const faqs = pageFAQs.home;
 	const faqSchema = JSON.stringify({
@@ -24,8 +25,10 @@
 
 	let scrollY = $state(0);
 
-	// Count-up animation — SSR-friendly: start at totalCount so no "0" flash
-	let displayCount = $state(totalCount);
+	// Count-up animation — SSR-friendly: start at totalCount so no "0" flash.
+	// untrack() prevents Svelte from flagging this one-shot capture as a
+	// reactive-state leak; the IntersectionObserver later reassigns it anyway.
+	let displayCount = $state(untrack(() => data.totalCount));
 	/** @type {HTMLDivElement | null} */
 	let counterRef = $state(null);
 	let hasAnimated = false;

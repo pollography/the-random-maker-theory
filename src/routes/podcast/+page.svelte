@@ -5,7 +5,7 @@
 
 	/** @type {{ data: { episodes: any[] } }} */
 	let { data } = $props();
-	const episodes = data.episodes;
+	const episodes = $derived(data.episodes);
 
 	const faqs = pageFAQs.podcast;
 	const faqSchema = JSON.stringify({

@@ -17,8 +17,8 @@ tags:
 category: "ki-tools"
 draft: true
 readingTime: 25
-heroImage: "/images/blog/claude-code-ultimate-setup-produktivitaet-2026-1.webp"
-heroImageThumb: "/images/blog/claude-code-ultimate-setup-produktivitaet-2026-1-thumb.webp"
+heroImage: "/images/blog/claude-code-ultimate-setup-architecture.webp"
+heroImageThumb: "/images/blog/claude-code-ultimate-setup-architecture-thumb.webp"
 titleAccent: "Ultimate"
 podcastSlug: ""
 podcastUrl: ""

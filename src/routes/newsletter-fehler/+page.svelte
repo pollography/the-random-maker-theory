@@ -74,18 +74,4 @@
 		box-shadow: 0 0 20px rgba(212, 137, 62, 0.4), 0 0 40px rgba(212, 137, 62, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
 	}
 
-	.btn-outline {
-		padding: 12px 24px;
-		border: 1px solid var(--color-border);
-		color: var(--color-text-muted);
-		border-radius: var(--radius-lg);
-		text-decoration: none;
-		font-weight: var(--font-weight-semibold);
-		transition: all var(--transition-normal);
-	}
-
-	.btn-outline:hover {
-		border-color: var(--color-text-muted);
-		color: var(--color-text);
-	}
 </style>
