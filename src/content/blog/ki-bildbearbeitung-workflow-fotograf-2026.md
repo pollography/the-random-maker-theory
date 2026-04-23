@@ -15,8 +15,8 @@ podcastUrl: "https://open.spotify.com/episode/2gg5xxS45Nusk0vC1kknD3"
 videoUrl: "https://www.youtube.com/watch?v=l-PP-PrOdAs"
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>15 Jahre Fotografie, ADHS und KI-Tools: Mein kompletter Workflow mit AfterShoot, Lightroom, Photoshop, Luminar Neo und Topaz AI im ehrlichen Praxistest.</p>
 </div>
 
@@ -62,8 +62,8 @@ Und jetzt die unschöne Wahrheit: Nach mehreren Jahren bin ich unsicher, ob ich 
 
 Das ist nicht Pollos Verschuldung. Das ist die Realität von **ki bildbearbeitung** 2026: Die Tools sind nicht perfekt. Sie sind echt gut. Aber sie ersetzen dich nicht komplett. Du brauchst trotzdem eine zweite Schicht Mensch-Augen.
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>Falls du AfterShoot ausprobieren willst: <a href="https://account.aftershoot.com/referral-signup?referrer=NA5Q6S19&utm_source=referral-page-app&utm_medium=copy-cta">Hier gibt's 10% Rabatt über meinen Link</a> <em>(Affiliate-Link, ich bekomme eine kleine Provision, du sparst 10%)</em></p>
 </div>
 

@@ -15,8 +15,8 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>Midjourney fuer Aesthetik, Flux fuer Fotorealismus, Ideogram fuer Text auf Bildern, Leonardo AI wenn du kein Geld ausgeben willst. Stable Diffusion lokal wenn du eine dicke GPU hast. DALL-E 3 wird abgeschaltet. Und ja, ich hab alle selbst getestet.</p>
 </div>
 

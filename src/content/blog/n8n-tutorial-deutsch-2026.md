@@ -23,8 +23,8 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>n8n Tutorial auf Deutsch: Lerne Workflow-Automatisierung ohne Code. Mit Vergleich zu Make & Zapier, Installation und deinem ersten Workflow.</p>
 </div>
 

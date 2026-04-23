@@ -26,8 +26,8 @@ heroImageThumb: "/images/blog/wled-esp32-anleitung-2026-1-thumb.webp"
 
 # WLED auf ESP32: LED-Strips in 20 Minuten smart machen
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>WS2812B LED-Strip + ESP32 + WLED = addressierbare Smart-LEDs für unter 35 EUR</li>
 		<li>WLED flashen dauert 5 Minuten, kein Coding nötig</li>

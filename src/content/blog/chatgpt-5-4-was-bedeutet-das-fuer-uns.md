@@ -18,8 +18,8 @@ Und weil ich gerade mit Claude Cowork diesen Blog baue, muss ich die Frage stell
 
 Spoiler: Ja und nein. Aber der Reihe nach.
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>Keine Lust auf 14 Minuten? Hier die Facts:</p>
 	<p><strong>GPT-5.4</strong> kombiniert erstmals Reasoning + Computer Use + Coding in einem Modell. 75% auf OSWorld (besser als Menschen). 1M Token Context. 33% weniger Fehler als GPT-5.2.</p>
 	<p><strong>Für Entwickler:</strong> Tool Search spart 47% Tokens bei MCP-lastigen Workflows. API kostet $2.50/1M Input, $15/1M Output.</p>
@@ -62,8 +62,8 @@ Hier wird's spannend. Ich hab die Benchmarks gegen Claude Opus 4.6 und Gemini 3.
 
 *GPT-5.2-Wert, GPT-5.4 Wert noch nicht separat veröffentlicht
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Mein Take</span>
+<div class="rf-block rf-callout" role="note" aria-label="Mein Take">
+	<span class="rf-label" aria-hidden="true">Mein Take</span>
 	<p>GPT-5.4 gewinnt bei Computer Use (75% OSWorld, besser als der menschliche Baseline von 72.4%) und bei professioneller Wissensarbeit (83% über 44 Berufsfelder). Claude Opus 4.6 dominiert beim abstrakten Reasoning (ARC-AGI-2: 68.8%) und beim Standard-Coding. Gemini 3.1 Pro ist der Preis-Leistungs-König.</p>
 	<p>Kein Modell gewinnt überall. Das ist die Realität 2026.</p>
 </div>

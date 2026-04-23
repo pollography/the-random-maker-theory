@@ -12,6 +12,11 @@ heroImageThumb: "/images/blog/ki-agents-shoppen-posten-mailen-2026-1-thumb.webp"
 titleAccent: "KI-Agents"
 ---
 
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
+	<p>KI-Agents kaufen bei Amazon ein, posten auf Social Media und haben eigene E-Mail-Adressen. Was gestern passiert ist und was das für uns bedeutet.</p>
+</div>
+
 Gestern sind drei Dinge gleichzeitig passiert, die zusammen ein ziemlich klares Bild zeichnen: KI-Agents sind nicht mehr nur ein Buzzword. Sie shoppen. Sie posten. Sie haben eigene E-Mail-Adressen. Und das Ganze eskaliert grad schneller als die meisten von uns mitbekommen.
 
 Ich fass dir zusammen, was los ist — und vor allem, was das für dich als normalen User bedeutet.

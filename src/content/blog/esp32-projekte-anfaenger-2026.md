@@ -22,8 +22,8 @@ heroImageThumb: "/images/blog/esp32-projekte-anfaenger-2026-1-thumb.webp"
 
 # ESP32 Projekte fuer Anfaenger: 5 Ideen unter 20 Euro
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Der ESP32 ist ein 8-Euro-Microcontroller mit WLAN und Bluetooth eingebaut — perfekter Einstieg ins Maker-Hobby</li>
 		<li>5 konkrete esp32 projekt anfaenger Ideen: Temperatursensor, OLED Display, Wetterstation, Bewegungsmelder, Pflanzenbewaesserung</li>
@@ -258,8 +258,8 @@ Was ich gern am PIR-Sensor mag: du kannst Empfindlichkeit und Verzoegerungszeit 
 
 **Erweiterung:** Mit einem kleinen Buzzer (1-2 EUR) kannst du zusaetzlich einen lokalen Alarm einbauen. Oder du kombinierst das mit dem OLED Display aus Projekt 2 und zeigst "Bewegung erkannt!" direkt auf dem Geraet an.
 
-<div class="rf-block rf-warning">
-	<span class="rf-label">Wichtiger Hinweis</span>
+<div class="rf-block rf-warning" role="alert" aria-label="Wichtiger Hinweis">
+	<span class="rf-label" aria-hidden="true">Wichtiger Hinweis</span>
 	<p>Der HC-SR501 braucht eigentlich 5V an VCC fuer volle Reichweite, aber der Signalpin gibt trotzdem 3.3V-kompatible Signale aus. Keine Sorge wegen Damage am ESP32.</p>
 	<p>---</p>
 </div>

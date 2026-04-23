@@ -11,8 +11,8 @@ heroImage: "/images/blog/3d-druck-1.webp"
 readingTime: 3
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>FDM-Drucker für Anfänger, Resin nur für Details, Miniaturen</li>
 		<li>Bambu A1 Mini, Creality Ender 3 V3 oder Elegoo Centauri, alle unter 300€</li>
@@ -37,8 +37,8 @@ Günstig in Anschaffung und Betrieb. Robuste Teile. Kein Chemie-Setup nötig. Gr
 
 Aber: Du brauchst Handschuhe, eine Maske, gute Belüftung. Die Teile sind spröde. Nachbearbeitung (Waschen + UV-Aushärten) nervt. Und das Harz stinkt.
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Mein Take</span>
+<div class="rf-block rf-callout" role="note" aria-label="Mein Take">
+	<span class="rf-label" aria-hidden="true">Mein Take</span>
 	<p>FDM für Einsteiger. Immer. Resin nur, wenn du Miniaturen oder Schmuck drucken willst und bereit bist, dich mit Chemie auseinanderzusetzen.</p>
 	<p>!<a href="/images/blog/3d-druck-2.webp">Vergleich: Dasselbe Modell gedruckt mit FDM (links) und Resin (rechts)</a></p>
 </div>

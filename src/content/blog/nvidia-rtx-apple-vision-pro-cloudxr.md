@@ -27,6 +27,11 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
+	<p>NVIDIA CloudXR 6.0 streamt RTX-Grafik direkt auf die Apple Vision Pro. Was das fuer Gaming, Industrie und Entwickler bedeutet -- einfach erklaert.</p>
+</div>
+
 <script>
   import MindMap3D from '$lib/components/blog/MindMap3D.svelte';
 
@@ -125,14 +130,13 @@ Ausserdem: Streaming abhaengig von WLAN oder Cloud-Anbindung. In einer perfekten
 
 **Verfuegbarkeit:** CloudXR 6.0 und visionOS 26.4 kommen im Fruehjahr 2026. Also bald. Die Apps von Autodesk, X-Plane und iRacing sollen dann direkt verfuegbar sein.
 
-**Mein Take:** Das ist kein kleines Feature-Update. Das ist NVIDIA und Apple die sagen: "Die Zukunft von VR ist nicht staerkere Hardware in der Brille, sondern smartes Streaming." Und mit den Enterprise-Partnern die schon an Bord sind, ist das kein Konzept-Paper sondern wird tatsaechlich deployed. BMW baut keine Tonmodelle mehr. Roche simuliert Labore bevor sie existieren. X-Plane schickt dich kabellos ins Cockpit.
-
-Ob das auch fuer Consumer relevant wird, haengt vom Preis der naechsten Vision Pro Generation ab. Und davon, ob die WLAN-Infrastruktur in normalen Haushalten die Latenz-Versprechen halten kann. Aber die Technologie ist da. Und die ist echt beeindruckend.
-
-Eins ist klar: Spatial Computing ist nicht mehr nur Apples Sache. Mit NVIDIA als GPU-Partner und einem wachsenden Oekosystem an Enterprise-Apps wird die Vision Pro vom teuren Gadget zum ernsthaften Werkzeug. Und das ist spannender als jedes Hardware-Upgrade.
-
-<MindMap3D data={mindMapData} title="NVIDIA CloudXR + Apple Vision Pro: Das Oekosystem" />
-
+<div class="rf-block rf-callout" role="note" aria-label="Mein Take">
+	<span class="rf-label" aria-hidden="true">Mein Take</span>
+	<p>Das ist kein kleines Feature-Update. Das ist NVIDIA und Apple die sagen: "Die Zukunft von VR ist nicht staerkere Hardware in der Brille, sondern smartes Streaming." Und mit den Enterprise-Partnern die schon an Bord sind, ist das kein Konzept-Paper sondern wird tatsaechlich deployed. BMW baut keine Tonmodelle mehr. Roche simuliert Labore bevor sie existieren. X-Plane schickt dich kabellos ins Cockpit.</p>
+	<p>Ob das auch fuer Consumer relevant wird, haengt vom Preis der naechsten Vision Pro Generation ab. Und davon, ob die WLAN-Infrastruktur in normalen Haushalten die Latenz-Versprechen halten kann. Aber die Technologie ist da. Und die ist echt beeindruckend.</p>
+	<p>Eins ist klar: Spatial Computing ist nicht mehr nur Apples Sache. Mit NVIDIA als GPU-Partner und einem wachsenden Oekosystem an Enterprise-Apps wird die Vision Pro vom teuren Gadget zum ernsthaften Werkzeug. Und das ist spannender als jedes Hardware-Upgrade.</p>
+	<p><MindMap3D data={mindMapData} title="NVIDIA CloudXR + Apple Vision Pro: Das Oekosystem" /></p>
+</div>
 ## Quellen & Links
 
 - [NVIDIA Blog: RTX-Accelerated Computers Connect to Vision Pro](https://blogs.nvidia.com/blog/nvidia-cloudxr-apple-vision-pro/) -- Offizielle Ankuendigung

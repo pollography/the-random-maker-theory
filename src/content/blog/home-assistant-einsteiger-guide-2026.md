@@ -11,8 +11,8 @@ heroImage: "/images/blog/home-assistant-1.webp"
 readingTime: 3
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Open Source, lokal, keine Cloud, deine Daten bleiben bei dir, 2.000+ Integrationen</li>
 		<li>Hardware: Pi 4 ab 30€ + Zigbee Dongle 20€, für 5-20 Geräte ausreichend</li>

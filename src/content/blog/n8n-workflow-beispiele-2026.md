@@ -27,8 +27,8 @@ heroImageThumb: "/images/blog/n8n-workflow-beispiele-2026-1-thumb.webp"
 
 # n8n Workflow Beispiele: 5 Automationen die ich täglich nutze
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Ich nutze n8n seit über einem Jahr produktiv — hier sind meine fünf wichtigsten Workflows</li>
 		<li>Workflow 1 sammelt RSS-Feeds und schickt Zusammenfassungen per Telegram</li>

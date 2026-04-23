@@ -22,8 +22,8 @@ heroImageThumb: "/images/blog/ki-bildbearbeitung-kostenlos-2026-1-thumb.webp"
 
 # KI Bildbearbeitung kostenlos: Die 5 besten Online-Tools (2026)
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Remove.bg ist fuer Hintergrund freistellen immer noch unerreicht -- kostenlose Version reicht fuer die meisten Faelle</li>
 		<li>Canva AI hat sich zu einem echten All-in-One-Tool entwickelt, wenn man die Gratis-Limits akzeptiert</li>

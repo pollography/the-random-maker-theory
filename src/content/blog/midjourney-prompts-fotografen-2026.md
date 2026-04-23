@@ -28,8 +28,8 @@ affiliate:
 
 # Midjourney Prompts Deutsch: Der Guide fuer Fotografen
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Midjourney "denkt" in fotografischen Begriffen — wenn du als Fotograf promptest, kriegst du deutlich bessere Ergebnisse</li>
 		<li>Die wichtigsten Parameter: <code>--ar</code>, <code>--v 6.1</code>, <code>--style raw</code>, <code>--chaos</code>, <code>--stylize</code></li>

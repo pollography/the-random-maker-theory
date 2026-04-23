@@ -15,8 +15,8 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Obsidian ist das einzige Produktivitaets-Tool das nach 6 Monaten noch bei mir ueberlebt hat — und ich hab quasi alles durch</li>
 		<li>Der Trick: 4 Plugins (Tasks, Templater, Periodic Notes, Dataview) und eine Daily Note die alles zusammenhaelt</li>
@@ -197,8 +197,8 @@ Hier ist mein Daily-Note-Template zum Nachbauen. Du brauchst dafuer die Plugins 
 # {{date:dddd, DD. MMMM YYYY}}
 
 ## Fokus heute
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>Was ist die EINE Sache die ich heute schaffen will?</p>
 </div>
 

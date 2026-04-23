@@ -24,8 +24,8 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>Qwen3-235B schlägt Claude beim Coding. Kimi K2.5 läuft in Cursor Composer 2. Was Open-Source-Modelle auf Ollama Pro wirklich können – und wann sie sich lohnen.</p>
 </div>
 
@@ -35,8 +35,8 @@ Aber genau das ist der Punkt. Open-Source-Modelle sind 2026 keine experimentelle
 
 Was kannst du damit konkret machen? Wo sind die Limits? Und wann lohnt sich das gegenüber Claude oder GPT? Das klären wir jetzt.
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>Im <a href="/blog/ki-subscription-vergleich-2026">großen KI-Subscription-Vergleich 2026</a> haben wir alle vier Abos gegenübergestellt. Dieser Artikel geht tiefer in Ollama Pro.</p>
 </div>
 

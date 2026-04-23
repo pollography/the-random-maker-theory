@@ -16,8 +16,8 @@ heroImageThumb: "/images/blog/paperclip-ai-agent-orchestration-setup-1-thumb.web
 
 # 28 AI Agents die für mich arbeiten — Mein Paperclip Setup
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Paperclip AI ist ein Open-Source Agent Orchestration Framework</li>
 		<li>Ich hab 22 Agents in 2 Companies aufgesetzt — für meinen Blog und mein Gaming Studio</li>
@@ -93,8 +93,8 @@ Hier wird's interessant. Paperclip startet die CLI-Tools als Subprozesse. Die nu
 | Ollama          | Lokal (RTX 5080)          | Strom        |
 | **Total Extra** |                           | **0 EUR**    |
 
-<div class="rf-block rf-warning">
-	<span class="rf-label">Wichtig</span>
+<div class="rf-block rf-warning" role="alert" aria-label="Wichtig">
+	<span class="rf-label" aria-hidden="true">Wichtig</span>
 	<p>Keine <code>ANTHROPIC_API_KEY</code> in den Environment Variables setzen! Sonst nutzt die CLI die API statt der Subscription — und du zahlst per Token.</p>
 </div>
 ## Completion Chains: Die eigentliche Magie

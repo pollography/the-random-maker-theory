@@ -12,8 +12,8 @@ titleAccent: "KI-Tools"
 readingTime: 2
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Claude 4.6 für Texte und Code, beste Qualität auf dem Markt</li>
 		<li>Claude Code als IDE, Figma AI Assist für UI, Cursor für Tab-Completion</li>
@@ -98,8 +98,8 @@ Leonardo AI ist die Geheimwaffe für Bilder. Nicht Midjourney-gut, aber mit KI t
 - Thumbnails
 - Mockups
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Tipp</span>
+<div class="rf-block rf-callout" role="note" aria-label="Tipp">
+	<span class="rf-label" aria-hidden="true">Tipp</span>
 	<p>Nutz "Style Transfer" für konsistente Bilder über mehrere Posts.</p>
 	<p>---</p>
 </div>

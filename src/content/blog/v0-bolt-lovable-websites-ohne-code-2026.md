@@ -11,8 +11,8 @@ heroImage: "/images/blog/v0-bolt-1.webp"
 readingTime: 4
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>v0 (React/Tailwind/shadcn) Production-Code, aber nur Frontend, Bolt schnellster MVP 20min mit Live-Debugging</li>
 		<li>Lovable beste Designs und Auto-Supabase, aber RLS-Security musst du selbst, Replit flexible Agent-Workflows</li>

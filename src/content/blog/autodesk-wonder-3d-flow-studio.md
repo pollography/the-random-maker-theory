@@ -15,6 +15,11 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
+	<p>Autodesk integriert Wonder 3D in Flow Studio — Text-to-3D und Image-to-3D direkt im Browser. Was das Tool kann, was es kostet und für wen es sich lohnt.</p>
+</div>
+
 Autodesk hat Anfang März 2026 Wonder 3D in Flow Studio veröffentlicht. Text eintippen, 3D-Modell raus. Bild hochladen, 3D-Modell raus. Das klingt nach Science-Fiction, funktioniert aber tatsächlich — und läuft komplett im Browser.
 
 Ich hab mir das Ganze mal genauer angeschaut und ehrlich bewertet: Was kann Wonder 3D wirklich, wie teuer wird der Spaß, und lohnt sich das für Maker, Game Devs oder VFX-Leute?

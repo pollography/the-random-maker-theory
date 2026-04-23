@@ -11,8 +11,8 @@
 		Melde dich einfach nochmal an.
 	</p>
 	<div class="error-actions">
-		<a href="/#newsletter" class="btn-honey">Nochmal anmelden</a>
-		<a href="/" class="btn-outline">Zur Startseite</a>
+		<a href="/#newsletter" class="btn-metallic btn-honey"><span>Nochmal anmelden</span></a>
+		<a href="/" class="btn-metallic btn-ghost"><span>Zur Startseite</span></a>
 	</div>
 </div>
 

@@ -24,8 +24,8 @@
 		{/if}
 	</p>
 	<div class="error-actions">
-		<a href="/" class="btn-honey">Zur Startseite</a>
-		<a href="/blog" class="btn-teal">Zum Blog</a>
+		<a href="/" class="btn-metallic btn-honey"><span>Zur Startseite</span></a>
+		<a href="/blog" class="btn-metallic btn-teal"><span>Zum Blog</span></a>
 	</div>
 </section>
 

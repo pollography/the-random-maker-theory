@@ -11,8 +11,8 @@ heroImage: "/images/blog/esp32-1.webp"
 readingTime: 4
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>ESP32-C3 (3€) + Sensoren (DHT22, PIR, Reed Switch), YAML-Config mit ESPHome, Home Assistant erkennt automatisch</li>
 		<li>5 Projekte, alle unter 20€, Temperatur/Luftfeuchte, Bewegung, Tür, Pflanzenbewässerung, LED-Strips</li>
@@ -33,8 +33,8 @@ Hier sind 5 Projekte, die alle unter 20€ kosten. Mit exakten Teilelisten, ESPH
 | **ESP32** (klassisch) | Dual-Core | 4-5€ | Allrounder |
 | **ESP32-S3** | Dual-Core | 5-7€ | KI/ML, Kamera |
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Mein Tipp</span>
+<div class="rf-block rf-callout" role="note" aria-label="Mein Tipp">
+	<span class="rf-label" aria-hidden="true">Mein Tipp</span>
 	<p>ESP32-C3 für unter 3€ auf AliExpress. Reicht für alle 5 Projekte.</p>
 </div>
 ## Warum ESPHome?
@@ -81,8 +81,8 @@ sensor:
     update_interval: 30s
 ```
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Tipp</span>
+<div class="rf-block rf-callout" role="note" aria-label="Tipp">
+	<span class="rf-label" aria-hidden="true">Tipp</span>
 	<p>DHT22 braucht 2,5 Sekunden pro Messung. Update-Interval nicht unter 30s setzen.</p>
 	<p><strong>Alternative:</strong> BME280 (2-4€) misst zusätzlich barometrischen Luftdruck. Genauer, aber teurer.</p>
 	<p>Home Assistant zeigt dir automatisch einen Live-Graph mit History. Perfekt für Raumklima-Monitoring.</p>
@@ -180,8 +180,8 @@ switch:
 
 **Kalibrierung ist Pflicht:** Sensor in Wasser = 100%, trocken = 0%. Rohwerte notieren und in die Config eintragen.
 
-<div class="rf-block rf-warning">
-	<span class="rf-label">Wichtig</span>
+<div class="rf-block rf-warning" role="alert" aria-label="Wichtig">
+	<span class="rf-label" aria-hidden="true">Wichtig</span>
 	<p>Relais mit separatem 5V Netzteil betreiben. Nicht vom ESP32! Und Pump-Runtime limitieren (max 30 Sekunden pro Start), sonst überschwemmst du deine Wohnung.</p>
 </div>
 ## Projekt 5: LED-Strip Controller mit WLED (11€)

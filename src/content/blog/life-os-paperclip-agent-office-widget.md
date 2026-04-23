@@ -15,8 +15,8 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Ich hab ein React Widget gebaut, das meine AI Agents live in meinem Life OS Dashboard anzeigt — Status, Tasks, Kosten, alles auf einen Blick</li>
 		<li>Paperclip liefert die API, React + Vite + Tailwind das Frontend — das ganze Setup steht in unter einer Stunde</li>

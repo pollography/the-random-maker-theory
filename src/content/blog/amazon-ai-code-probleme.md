@@ -13,8 +13,8 @@ titleAccent: "AI Code"
 keywords: ["AI Code Probleme", "Amazon Outage", "KI Code Review", "AI Coding"]
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>Amazon hatte 6h Outage wegen KI-generiertem Code. Ich nutz Claude Code täglich, hier ist was das für uns bedeutet und was ich jetzt anders mache.</p>
 </div>
 

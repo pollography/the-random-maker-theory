@@ -25,6 +25,11 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
+	<p>Claude Code mit Obsidian, NotebookLM, Playwright, Hooks und Scheduled Tasks zur Arbeitsmaschine kombinieren. Von der Installation bis zum fertigen System.</p>
+</div>
+
 Stell dir vor: Du wachst morgens auf und dein KI-News-Briefing liegt schon in deiner Knowledge Base. Dein naechster Blog-Artikel wurde ueber Nacht recherchiert. Deine Social-Media-Posts sind fertig getextet. Und du hast genau NICHTS davon manuell gemacht. Das ist keine Science Fiction. Das ist mein aktuelles Setup mit Claude Code.
 
 Ich hab die letzten Wochen wie ein Besessener an einem System gebaut, das Claude Code von einem cleveren Chat-Partner in eine vollstaendige Arbeitsmaschine verwandelt. Das Ergebnis: 10 Tools, 0 Euro Zusatzkosten, und ein Workflow der sich anfuehlt wie ein persoenliches Team aus 5 Leuten.
@@ -278,8 +283,10 @@ Desktop Scheduled Tasks sind persistent. Sie ueberleben Restarts, laufen nach Ze
 
 09:00 Uhr, Montag: **SEO Health Check.** Lighthouse Score, Core Web Vitals, Broken Links. Wochenbericht als Markdown.
 
-**Wichtig:** Die Tasks laufen nur wenn der PC an ist und die App offen. Wenn der PC schlaeft, wird der Task beim naechsten Aufwachen nachgeholt.
-
+<div class="rf-block rf-warning" role="alert" aria-label="Wichtig">
+	<span class="rf-label" aria-hidden="true">Wichtig</span>
+	<p>Die Tasks laufen nur wenn der PC an ist und die App offen. Wenn der PC schlaeft, wird der Task beim naechsten Aufwachen nachgeholt.</p>
+</div>
 ### CLI /loop fuer Session-Monitoring
 
 /loop ist fuer kurzfristige, session-basierte Tasks. Es ueberwacht Dinge WAEHREND du arbeitest.

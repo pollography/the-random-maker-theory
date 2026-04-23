@@ -12,8 +12,8 @@ heroImageThumb: "/images/blog/aftershoot-alternative-ai-photo-culling-1-thumb.we
 titleAccent: "Alternative"
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>AfterShoot klingt geil: KI sortiert deine Fotos automatisch. In der Praxis: zu viele Fehler, zu teuer, zu wenig Kontrolle</li>
 		<li>Ich hab mit Python + CLIP Embeddings mein eigenes Photo Culling Tool gebaut — kostenlos, lokal, auf meinem Rechner</li>

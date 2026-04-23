@@ -25,8 +25,8 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>ChatGPT Plus, Claude Pro, Gemini Advanced, Ollama Pro – alle kosten ~20 Euro. Aber was bekommst du wirklich? Ein ehrlicher Vergleich nach Use Case.</p>
 </div>
 

@@ -37,8 +37,8 @@ heroImageThumb: "/images/blog/home-assistant-einrichten-2026-1-thumb.webp"
 
 # Home Assistant einrichten: Komplett-Guide 2026
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Home Assistant ist die einzige Smart-Home-Plattform, die wirklich dir gehoert. Kein Cloud-Zwang, kein Abo, kein "Dienst wird eingestellt".</li>
 		<li>Drei Hardware-Optionen: Raspberry Pi 5 (guenstig, flexibel), HA Green (Plug-and-Play), Mini-PC (Power und Storage).</li>

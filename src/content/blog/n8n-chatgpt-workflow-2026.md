@@ -20,8 +20,8 @@ heroImageThumb: "/images/blog/n8n-chatgpt-workflow-2026-1-thumb.webp"
 
 # n8n + ChatGPT: Mein Automatisierungs-Stack
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>n8n + ChatGPT ist die Kombination die meinen Content-Output verdreifacht hat — ohne dass ich mehr Zeit investiere</li>
 		<li>Ich zeige 3 konkrete n8n chatgpt workflow Setups die ich selbst taeglich nutze</li>

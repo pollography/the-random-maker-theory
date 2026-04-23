@@ -19,15 +19,17 @@ Holt euch ein Getränk, wir müssen reden. Am 17. März 2026 hat OpenAI GPT-5.4 
 
 Ich hab mir beide Modelle angeschaut, Benchmarks verglichen, Preise durchgerechnet und getestet, was die Dinger in der Praxis taugen. Hier kommt alles, was du wissen musst.
 
-## Die Kurzversion
-
-Keine Lust auf den ganzen Artikel? Hier die Facts:
-
-- **GPT-5.4 mini** schließt fast zum großen GPT-5.4 auf — bei doppelter Geschwindigkeit und einem Drittel der Kosten
-- **GPT-5.4 nano** kostet nur $0.20 pro Million Input-Tokens. Simon Willison hat vorgerechnet: 76.000 Fotos beschreiben für 52 Dollar
-- Beide Modelle haben ein **400k Context Window** und können Text + Bilder verarbeiten
-- Der eigentliche Game-Plan: OpenAI baut ein Ökosystem, in dem das große Modell plant und hunderte kleine Modelle parallel die Arbeit machen
-- Für ChatGPT-User: mini ist jetzt für Free- und Go-Nutzer verfügbar
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
+	<p>Keine Lust auf den ganzen Artikel? Hier die Facts:</p>
+	<ul>
+		<li><strong>GPT-5.4 mini</strong> schließt fast zum großen GPT-5.4 auf — bei doppelter Geschwindigkeit und einem Drittel der Kosten</li>
+		<li><strong>GPT-5.4 nano</strong> kostet nur $0.20 pro Million Input-Tokens. Simon Willison hat vorgerechnet: 76.000 Fotos beschreiben für 52 Dollar</li>
+		<li>Beide Modelle haben ein <strong>400k Context Window</strong> und können Text + Bilder verarbeiten</li>
+		<li>Der eigentliche Game-Plan: OpenAI baut ein Ökosystem, in dem das große Modell plant und hunderte kleine Modelle parallel die Arbeit machen</li>
+		<li>Für ChatGPT-User: mini ist jetzt für Free- und Go-Nutzer verfügbar</li>
+	</ul>
+</div>
 
 ## Was sind mini und nano? Die Restaurant-Erklärung
 

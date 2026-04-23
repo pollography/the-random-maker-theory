@@ -15,8 +15,8 @@ readingTime: 4
 
 Aber welches Tool lohnt sich wirklich? Ich hab alle drei im Alltag getestet. Plus Windsurf als Dark Horse.
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>Keine Lust auf den ganzen Artikel? Hier die Zusammenfassung:</p>
 	<p><strong>Claude Code</strong> = Dein Senior-Dev, der Aufgaben komplett übernimmt. Bestes Reasoning, Token-effizient, CLI-native.</p>
 	<p><strong>Cursor</strong> = Dein Turbo-IDE mit Agent-Mode. Schnellste Suggestions, Multi-Agent (bis 8 parallel), VSCode-Fork.</p>
@@ -44,8 +44,8 @@ Seit dem Opus 4.6 Release im Februar 2026 ist Claude Code ein anderes Tier.
 | Max 5x | 100$/Mo | 25x Kapazität |
 | Max 20x | 200$/Mo | 100x Kapazität |
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Mein Take</span>
+<div class="rf-block rf-callout" role="note" aria-label="Mein Take">
+	<span class="rf-label" aria-hidden="true">Mein Take</span>
 	<p>Claude Code ist der beste "Delegator". Du beschreibst, was du willst, und es liefert. Perfekt für große Refactorings, neue Features, Test-Suites. Weniger gut für schnelle Inline-Completions.</p>
 </div>
 ## Cursor: Der Flow-State
@@ -68,8 +68,8 @@ Cursor ist ein VSCode-Fork mit eingebautem KI-Gehirn. Seit dem 2.0 Update im Feb
 | Pro | 20$/Mo | 20$ Credits |
 | Ultra | 200$/Mo | Massiv |
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Mein Take</span>
+<div class="rf-block rf-callout" role="note" aria-label="Mein Take">
+	<span class="rf-label" aria-hidden="true">Mein Take</span>
 	<p>Cursor ist für den Flow-State. Wenn du aktiv codest und schnelle, gute Suggestions brauchst. Die IDE-Integration ist nahtlos. Multi-Agent ist Game-Changing für parallele Aufgaben.</p>
 </div>
 ## GitHub Copilot: Der Ökosystem-Player
@@ -91,8 +91,8 @@ Copilot hat im Februar 2026 den Model-Picker bekommen. Du wählst jetzt zwischen
 | Business | 19$/User/Mo | Teams |
 | Enterprise | 39$/User/Mo | Compliance, SSO |
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Mein Take</span>
+<div class="rf-block rf-callout" role="note" aria-label="Mein Take">
+	<span class="rf-label" aria-hidden="true">Mein Take</span>
 	<p>Copilot ist der "Safe Pick". Funktioniert überall (VSCode, JetBrains, Visual Studio), hat ein Free Tier, und die GitHub-Integration (Issues → PRs) ist unschlagbar. Model-Picker macht es flexibler als je zuvor.</p>
 </div>
 ## Windsurf: Der Geheimtipp

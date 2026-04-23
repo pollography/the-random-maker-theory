@@ -16,8 +16,8 @@ videoUrl: ""
 
 # ChatGPT Prompts erstellen: So schreibst du Prompts die funktionieren
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Die meisten Leute schreiben ChatGPT Prompts wie Google-Suchanfragen — das ist das Problem</li>
 		<li>Ein guter Prompt hat vier Teile: Rolle, Aufgabe, Kontext, Format</li>
@@ -79,16 +79,16 @@ Und RAKE ist kein starres Template das du stur ausfüllen musst. Es ist eine Che
 Wenn du ChatGPT eine Rolle gibst, passiert etwas Interessantes: Das Modell filtert sein riesiges Wissen durch diese Perspektive. Ein SEO-Spezialist und ein Journalist würden denselben Artikel-Outline sehr unterschiedlich strukturieren — und ChatGPT spiegelt das.
 
 **Vorher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Wie mache ich mein YouTube-Video bekannter?"</p>
 </div>
 
 Ergebnis: Generische Tipps die du schon zehnmal gelesen hast. Thumbnail optimieren, guter Titel, Keywords in der Beschreibung. Alles stimmt. Nichts hilft konkret.
 
 **Nachher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Du bist ein YouTube-Wachstumsstratege der sich auf Tech-Creators mit unter 10.000 Abonnenten spezialisiert hat. Mein Kanal dreht sich um Smart Home und KI-Tools für Hobbyisten. Mein letztes Video über ESP32-Sensoren hat 340 Views in 30 Tagen. Was sind die drei spezifischsten Maßnahmen die ich jetzt angehen sollte — mit Begründung warum genau diese drei?"</p>
 </div>
 
@@ -109,16 +109,16 @@ Das Problem: Wir formulieren Aufgaben wie Wünsche statt wie Briefings.
 "Schreib mir was über Automatisierung" ist ein Wunsch. "Schreib einen 400-Wörter-Intro-Absatz für einen Artikel mit dem Titel 'n8n für Einsteiger: Dein erster Workflow in 30 Minuten'" ist ein Briefing.
 
 **Vorher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Hilf mir mit meiner Instagram-Bio."</p>
 </div>
 
 Ergebnis: Allgemeine Ratschläge was eine gute Bio ausmacht. Oder eine generische Bio die nichts über mich verrät.
 
 **Nachher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Schreib drei Varianten für meine Instagram-Bio. Ich bin Fotograf und Content Creator, mein Account dreht sich um Smart Home, KI-Fotografie und Maker-Projekte. Ich spreche deutschsprachige Tech-Hobbyisten an. Max. 150 Zeichen je Variante. Kein Marketing-Speak. Direkt, persönlich, ein bisschen nerd-ig."</p>
 </div>
 
@@ -139,16 +139,16 @@ Zwei Sätze Kontext können die Qualität eines Outputs verdoppeln. Das ist kein
 Das Modell weiß zu Beginn eines Chats nichts über dich. Nichts über dein Projekt, deine Zielgruppe, deinen Stil, deine Einschränkungen. Alles was es nicht weiß, muss es raten. Und geraten ist selten gut.
 
 **Vorher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Erstell mir eine Outline für einen Artikel über KI-Bildbearbeitung."</p>
 </div>
 
 Ergebnis: Eine generische Outline die für jeden halbwegs informativen Artikel funktionieren würde. Kein Alleinstellungsmerkmal, kein Winkel, keine Persönlichkeit.
 
 **Nachher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Erstell mir eine Outline für einen Artikel über KI-Bildbearbeitung. Kontext: Ich bin Fotograf mit 15 Jahren Erfahrung und schreibe aus der Perspektive jemand der KI-Tools erst skeptisch war und jetzt täglich nutzt. Zielgruppe: Hobbyfotografen die noch nicht mit KI-Bearbeitung angefangen haben. Ziel: Sie sollen nach dem Artikel wissen welche zwei Tools sie als erstes ausprobieren sollten. Ton: Persönlich, ehrlich, kein Tool-Promo-Speak. Länge: ~2500 Wörter."</p>
 </div>
 
@@ -171,16 +171,16 @@ Die meisten Leute sagen dem Modell was sie wollen, aber nicht wie der Output aus
 Das lässt sich vollständig kontrollieren. Und ich tue das bei fast jedem Prompt.
 
 **Vorher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Vergleich die drei besten Automatisierungs-Tools für Content Creator."</p>
 </div>
 
 Ergebnis: Irgendeine Mix-Struktur, unvorhersehbar, wahrscheinlich nicht was ich brauche.
 
 **Nachher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Vergleich Make, n8n und Zapier für Content Creator. Erstelle eine Tabelle mit den Spalten: Tool | Kostenloser Plan | Beste Stärke | Größte Schwäche | Mein Urteil. Unter der Tabelle: zwei Sätze wann ich welches Tool empfehlen würde."</p>
 </div>
 
@@ -248,16 +248,16 @@ Lass mich drei konkrete Situationen durchspielen die ich selbst erlebt habe.
 ### Fehler 1: Der Ideen-Prompt ohne Nische
 
 **Vorher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Gib mir 10 Blog-Artikel-Ideen über KI."</p>
 </div>
 
 Was du bekommst: "Was ist künstliche Intelligenz", "Die besten KI-Tools 2026", "KI und die Zukunft der Arbeit" — generisch bis zur Schmerzgrenze.
 
 **Nachher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Ich brauche 10 Blog-Artikel-Ideen für meine Nische: Smart Home und KI-Tools für Hobbyisten ohne Entwickler-Hintergrund. Meine Stärken: Ich fotografiere seit 15 Jahren und baue Smart-Home-Projekte mit ESP32 und Home Assistant. Was ich NICHT will: Generische 'Top 10 AI Tools' Listen, Unternehmens-Perspektive, rein theoretische Artikel. Gib mir zu jeder Idee: Titel, einen Satz was ihn besonders macht, und welches meiner eigenen Projekte ich als Praxisbeispiel einbauen könnte."</p>
 </div>
 
@@ -266,16 +266,16 @@ Das Ergebnis ist spezifisch genug dass du weißt, ob du den Artikel schreiben wi
 ### Fehler 2: Der Überarbeitungs-Prompt der nichts ändert
 
 **Vorher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Mach den Text besser."</p>
 </div>
 
 Was du bekommst: Marginale Stiländerungen, der Text bleibt im Kern gleich.
 
 **Nachher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Überarbeit diesen Absatz. Das Problem: Er klingt zu distanziert und wie ein Wikipedia-Artikel. Was ich will: Es soll sich anfühlen wie jemand der seinem Kumpel am Tisch erklärt wie das Ding funktioniert. Konkrete Sprache, nicht abstrakt. Und kürz es um 30% — streiche alles was nicht direkt zur Hauptaussage beiträgt. Hauptaussage ist: [KERNAUSSAGE HIER]."</p>
 </div>
 
@@ -284,16 +284,16 @@ Jetzt weißt das Modell nicht nur das Ziel, sondern auch das Problem mit dem akt
 ### Fehler 3: Der Research-Prompt der Floskeln produziert
 
 **Vorher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Was sind die Vor- und Nachteile von Home Assistant?"</p>
 </div>
 
 Was du bekommst: Aufgelistete Bullets, alle korrekt, keiner überraschend, nichts was du nicht schon wusstest.
 
 **Nachher:**
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Ich überlege ob ich von Philips Hue auf Home Assistant umsteige. Ich habe aktuell: 12 Hue-Lampen, 3 Steckdosen, Echo Dot als Sprachsteuerung, und ich bin kein Entwickler aber kann YAML lesen. Was sind die drei konkreten Punkte die ich wirklich abwägen sollte — nicht allgemeine Vor/Nachteile sondern was für jemanden mit meinem Setup und meinem Tech-Level tatsächlich relevant ist? Sei ehrlich wo Home Assistant mehr Aufwand bedeutet als der Mehrwert rechtfertigt."</p>
 </div>
 

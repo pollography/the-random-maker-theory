@@ -24,8 +24,8 @@ videoUrl: ""
 
 # Prompt Engineering lernen: Mein komplettes System
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>90% der Leute verschenken das Potenzial von ChatGPT und Claude, weil sie prompten wie sie googeln</li>
 		<li>Prompt Engineering lernen heißt nicht: komplizierte Formeln auswendig lernen</li>
@@ -93,8 +93,8 @@ Die Idee: Du gibst dem Modell eine Rolle — und es antwortet aus dieser Perspek
 
 **Vorher:**
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Erkläre mir, wie ich meinen Blog-Artikel für SEO optimiere."</p>
 </div>
 
@@ -102,8 +102,8 @@ Das bekommst du: Eine generische Liste mit "Benutze Keywords", "Schreibe Meta-De
 
 **Nachher:**
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Du bist ein erfahrener SEO-Spezialist der sich auf Content-Creator-Blogs im Tech-Bereich spezialisiert hat. Ich schreibe einen Artikel über Prompt Engineering für Nicht-Entwickler, Zielgruppe sind Content Creator zwischen 25-45. Erkläre mir die drei wichtigsten On-Page-SEO-Maßnahmen die ich vor dem Publish noch erledigen sollte. Geh davon aus, dass ich Grundkenntnisse in SEO habe, aber kein Experte bin."</p>
 </div>
 
@@ -127,8 +127,8 @@ Warum das hilft: KI-Modelle machen mehr Fehler wenn sie direkt zur Antwort sprin
 
 **Vorher:**
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Welche drei Content-Formate sollte ich für meinen Tech-Blog priorisieren?"</p>
 </div>
 
@@ -136,8 +136,8 @@ Ergebnis: Drei Formate mit Begründung. Aber du weißt nicht, ob die Logik stimm
 
 **Nachher:**
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Ich betreibe einen Tech-Blog über KI und Smart Home, hauptsächlich für Hobby-Tüftler und Content Creator. Ich habe momentan 4-5 Stunden pro Woche für Content. Überlege Schritt für Schritt: Welche drei Content-Formate sollte ich priorisieren? Zeig mir deine Überlegung — welche Faktoren du berücksichtigst, welche Abwägungen du machst — bevor du zur Empfehlung kommst."</p>
 </div>
 
@@ -157,8 +157,8 @@ Das Modell erkennt Muster aus diesen Beispielen und wendet sie auf deine Aufgabe
 
 **Vorher:**
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Schreib mir fünf Twitter-Posts über KI-Tools. Locker und direkt."</p>
 </div>
 
@@ -166,8 +166,8 @@ Was du bekommst: Fünf Posts. Die sind "locker" aus der Perspektive des Modells 
 
 **Nachher:**
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Schreib mir fünf Twitter-Posts über KI-Tools in genau diesem Stil:</p>
 	<p>Beispiel 1: 'Hab heute 2h mit dem neuen Midjourney-Update gespielt. Fazit: Portrait-Mode ist jetzt wirklich gut. Haare und Hände — endlich. Das war bisher mein größtes Frustrations-Thema.'</p>
 	<p>Beispiel 2: 'n8n + Claude API = mein neuer Lieblings-Stack. Hab gestern einen Workflow gebaut der automatisch meine Artikel-Ideen in strukturierte Briefs verwandelt. 4h Arbeit. Spart mir jetzt 3h/Woche.'</p>
@@ -190,8 +190,8 @@ Du kannst das vollständig kontrollieren. Und das spart massiv Nachbearbeitung.
 
 **Vorher:**
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Vergleich ChatGPT und Claude für Content Creator."</p>
 </div>
 
@@ -199,8 +199,8 @@ Ergebnis: Irgendein Mix aus Text, vielleicht eine Liste, vielleicht nicht. Unvor
 
 **Nachher:**
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"Vergleich ChatGPT und Claude für Content Creator. Erstelle eine Tabelle mit diesen Spalten: Feature | ChatGPT | Claude | Gewinner. Zeilen: Texte schreiben, Recherche zusammenfassen, Social Media Posts, Bildgenerierung (falls vorhanden), Preis/Leistung, Kontext-Fenster. Unter der Tabelle: drei Sätze Fazit mit konkreter Empfehlung wann ich welches Tool nehmen sollte."</p>
 </div>
 

@@ -25,13 +25,16 @@ videoUrl: ""
 
 # Die 25 besten ChatGPT Prompts 2026: Getestet, sortiert, sofort nutzbar
 
-**TL;DR**
-
-- 25 ChatGPT Prompts die ich taeglich nutze — keine generischen "Schreib mir ein Gedicht"-Beispiele
-- Sortiert nach Kategorie: Content, Produktivitaet, Research, Kreativ, Coding
-- Jeder Prompt mit Erklaerung warum er funktioniert und wie du ihn anpasst
-- Alle Copy-Paste-ready — einfach die [Platzhalter] ersetzen und los
-- Companion-Piece: Wer das Fundament verstehen will, liest meinen [Prompt Engineering Guide](/blog/prompt-engineering-lernen-2026)
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
+	<ul>
+		<li>25 ChatGPT Prompts die ich taeglich nutze — keine generischen "Schreib mir ein Gedicht"-Beispiele</li>
+		<li>Sortiert nach Kategorie: Content, Produktivitaet, Research, Kreativ, Coding</li>
+		<li>Jeder Prompt mit Erklaerung warum er funktioniert und wie du ihn anpasst</li>
+		<li>Alle Copy-Paste-ready — einfach die [Platzhalter] ersetzen und los</li>
+		<li>Companion-Piece: Wer das Fundament verstehen will, liest meinen <a href="/blog/prompt-engineering-lernen-2026">Prompt Engineering Guide</a></li>
+	</ul>
+</div>
 
 ---
 

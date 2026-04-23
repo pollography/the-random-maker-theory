@@ -32,14 +32,17 @@ heroImageThumb: "/images/blog/meine-content-pipeline-ai-agents-2026-1-thumb.webp
 
 # Meine Content Pipeline: Wie AI Agents meinen Blog am Laufen halten
 
-## TL;DR
-
-- Ich publiziere 3 Blog-Artikel pro Woche als Solo-Creator — moeglich durch eine automatisierte Content Pipeline
-- Jeder Artikel durchlaeuft 7 Stationen: Queue, Research, Outline, Write, Visual, Social, Deploy
-- Die Pipeline basiert auf Paperclip AI Agents — jeder Agent hat genau eine Aufgabe
-- Alles startet mit einer JSON-Datei die ich content-queue.json nenne — die Single Source of Truth
-- Completion Chains triggern automatisch den naechsten Schritt: Artikel fertig? Visual Creator startet sofort
-- Ehrlich: 70% der Pipeline laeuft automatisch, 30% brauchen mein manuelles Feedback
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
+	<ul>
+		<li>Ich publiziere 3 Blog-Artikel pro Woche als Solo-Creator — moeglich durch eine automatisierte Content Pipeline</li>
+		<li>Jeder Artikel durchlaeuft 7 Stationen: Queue, Research, Outline, Write, Visual, Social, Deploy</li>
+		<li>Die Pipeline basiert auf Paperclip AI Agents — jeder Agent hat genau eine Aufgabe</li>
+		<li>Alles startet mit einer JSON-Datei die ich content-queue.json nenne — die Single Source of Truth</li>
+		<li>Completion Chains triggern automatisch den naechsten Schritt: Artikel fertig? Visual Creator startet sofort</li>
+		<li>Ehrlich: 70% der Pipeline laeuft automatisch, 30% brauchen mein manuelles Feedback</li>
+	</ul>
+</div>
 
 ---
 

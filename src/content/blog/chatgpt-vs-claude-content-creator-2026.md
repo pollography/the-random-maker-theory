@@ -24,8 +24,8 @@ heroImageThumb: "/images/blog/chatgpt-vs-claude-content-creator-2026-1-thumb.web
 
 # ChatGPT vs Claude fuer Content Creator: Ehrlicher Vergleich 2026
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Ich nutze ChatGPT und Claude taeglich – beide haben klare Staerken</li>
 		<li>Claude gewinnt bei langen Texten, Schreibstil und Analyse</li>

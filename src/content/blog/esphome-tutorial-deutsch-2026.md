@@ -20,8 +20,8 @@ ESPHome hat das fuer mich komplett gedreht. Kein C++, keine Compiler-Fehler wege
 
 In diesem esphome tutorial deutsch zeige ich dir den kompletten Weg: von der Installation bis zu deinem ersten funktionierenden Sensor, inklusive OTA-Updates und dem ehrlichen Vergleich mit der Arduino IDE.
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>ESPHome = YAML statt C++, kein Programmierwissen noetig</li>
 		<li>In Home Assistant als Add-on installierbar, Browser-basiertes Dashboard</li>

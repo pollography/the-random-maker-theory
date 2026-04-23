@@ -28,6 +28,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 DRY_RUN = "--dry-run" in sys.argv
 SYNTHESIZE = "--synthesize-tldr" in sys.argv
+INCLUDE_DRAFTS = "--include-drafts" in sys.argv
 BLOG_DIR = Path(__file__).resolve().parent.parent / "src" / "content" / "blog"
 
 # Articles where a synthesized TL;DR would feel wrong — skip even with
@@ -103,8 +104,14 @@ def md_inline(text: str) -> str:
 
 
 def render_rf_block(kind: str, label: str, bullets: list, paragraphs: list) -> str:
-    """Render as raw HTML that mdsvex can pass through."""
-    inner = [f'\t<span class="rf-label">{label}</span>']
+    """Render as raw HTML that mdsvex can pass through, with a11y semantics.
+
+    role="note" for tldr/callout (landmark for screen readers),
+    role="alert" for warnings (assistive tech announces these proactively),
+    aria-label carries the label so the kind is announced on focus.
+    """
+    role = "alert" if kind == "warning" else "note"
+    inner = [f'\t<span class="rf-label" aria-hidden="true">{label}</span>']
     for p in paragraphs:
         inner.append(f"\t<p>{md_inline(p)}</p>")
     if bullets:
@@ -113,7 +120,10 @@ def render_rf_block(kind: str, label: str, bullets: list, paragraphs: list) -> s
             inner.append(f"\t\t<li>{md_inline(b)}</li>")
         inner.append("\t</ul>")
     body = "\n".join(inner)
-    return f'<div class="rf-block rf-{kind}">\n{body}\n</div>'
+    return (
+        f'<div class="rf-block rf-{kind}" role="{role}" aria-label="{label}">\n'
+        f"{body}\n</div>"
+    )
 
 
 # ────────────────────────────────────────────────────────────
@@ -475,7 +485,7 @@ def process_file(path: Path):
     fm, body = split_frontmatter(content)
     if fm is None:
         return None
-    if not is_published(fm):
+    if not is_published(fm) and not INCLUDE_DRAFTS:
         return None
     # Guard removed: earlier versions short-circuited once any rf-block existed,
     # but that blocks the mid-article pass from reaching content that was never

@@ -15,11 +15,15 @@ podcastUrl: ""
 videoUrl: ""
 ---
 
-**TL;DR**
-- NVIDIA hat auf der GTC 2026 den DGX Spark (ab 4.699 USD, 128 GB RAM, 1 PFLOP) und die DGX Station (748 GB RAM, 20 PFLOPS) vorgestellt — lokale KI-Supercomputer fuer deinen Schreibtisch.
-- NemoClaw ist der neue Open-Source-Stack fuer AI Agents, die lokal auf deiner Hardware laufen. Keine Cloud, keine Token-Kosten, volle Kontrolle.
-- Open Models wie Nemotron 3, Qwen 3.5 und Mistral Small 4 laufen jetzt optimiert auf RTX PCs und DGX Systemen.
-- Jensen Huang nennt das die "Agentic Era" — KI-Agenten die eigenstaendig planen, handeln und sich weiterentwickeln.
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
+	<ul>
+		<li>NVIDIA hat auf der GTC 2026 den DGX Spark (ab 4.699 USD, 128 GB RAM, 1 PFLOP) und die DGX Station (748 GB RAM, 20 PFLOPS) vorgestellt — lokale KI-Supercomputer fuer deinen Schreibtisch.</li>
+		<li>NemoClaw ist der neue Open-Source-Stack fuer AI Agents, die lokal auf deiner Hardware laufen. Keine Cloud, keine Token-Kosten, volle Kontrolle.</li>
+		<li>Open Models wie Nemotron 3, Qwen 3.5 und Mistral Small 4 laufen jetzt optimiert auf RTX PCs und DGX Systemen.</li>
+		<li>Jensen Huang nennt das die "Agentic Era" — KI-Agenten die eigenstaendig planen, handeln und sich weiterentwickeln.</li>
+	</ul>
+</div>
 
 ---
 

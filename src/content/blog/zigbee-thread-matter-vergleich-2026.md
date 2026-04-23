@@ -24,8 +24,8 @@ heroImageThumb: "/images/blog/zigbee-thread-matter-vergleich-2026-1-thumb.webp"
 
 # Zigbee vs Thread vs Matter: Welches Protokoll brauchst du 2026?
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Zigbee ist ausgereift, guenstig und hat das groesste Geraete-Oekosystem — ideal fuer Home Assistant</li>
 		<li>Thread ist das Netzwerk-Backbone hinter Matter, nicht standalone nutzbar</li>

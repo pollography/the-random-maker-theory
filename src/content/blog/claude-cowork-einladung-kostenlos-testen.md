@@ -11,8 +11,8 @@ heroImage: "/images/blog/claude-cowork-einladung-kostenlos-testen-1.webp"
 titleAccent: "Cowork"
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li><strong>Cowork</strong> ist Anthropics Desktop-Agent: Claude arbeitet direkt mit deinen lokalen Dateien</li>
 		<li>Excel mit Formeln, PowerPoint-Decks, PDFs analysieren, Research, alles autonom</li>

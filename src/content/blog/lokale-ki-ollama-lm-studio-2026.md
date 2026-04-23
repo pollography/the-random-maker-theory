@@ -11,8 +11,8 @@ heroImage: "/images/blog/lokale-ki-1.webp"
 readingTime: 4
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Ollama (CLI), LM Studio (GUI) oder Jan.ai, kostenlos, DeepSeek V3, Llama 3.1, Mistral, Qwen, Gemma</li>
 		<li>8-12GB VRAM sweet spot, 7-8B Modelle 40+ Tokens/sec, schneller als Cloud-APIs</li>
@@ -40,8 +40,8 @@ Oder du lässt die KI auf deinem eigenen Rechner laufen. Lokal. Privat. Offline.
 | **Preis**       | Kostenlos             | Kostenlos            | Kostenlos         |
 | **Best für**    | Entwickler, Scripting | Einsteiger, GUI-User | Privacy-Puristen  |
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Mein Take</span>
+<div class="rf-block rf-callout" role="note" aria-label="Mein Take">
+	<span class="rf-label" aria-hidden="true">Mein Take</span>
 	<p>Ollama für Entwickler (CLI + API + Scripting). LM Studio für alle, die eine hübsche GUI wollen. Jan.ai für Leute, die Open Source wichtig finden.</p>
 </div>
 ## Die besten Open-Source-Modelle 2026

@@ -15,8 +15,8 @@ podcastUrl: "https://open.spotify.com/show/2gzpv9JphhoWBmjXXP2Pjd"
 videoUrl: "https://www.youtube.com/watch?v=KWIH_InMQZ8"
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>Lerne mit Frameworks wie COSTAR und RISEN, wie du LLMs richtig promptest. Praxistipps, Techniken und konkrete Beispiele für bessere KI-Ergebnisse.</p>
 </div>
 

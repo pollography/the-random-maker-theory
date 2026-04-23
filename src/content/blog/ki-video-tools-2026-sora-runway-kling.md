@@ -11,8 +11,8 @@ heroImage: "/images/blog/ki-video-1.webp"
 readingTime: 4
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Sora 2 beste Qualität (5-8min wait), Runway Gen-4.5 Allrounder mit Character Consistency, Kling 3.0 Preis-König 4K</li>
 		<li>Pika 2.5 Speed-King 30-90sec, Veo 2 kostenlos, Hailuo günstig, jedes hat Schwächen</li>
@@ -48,8 +48,8 @@ OpenAIs Sora 2 produziert die fotorealistischsten Videos. Punkt. Die Physik stim
 
 **Das Watermark-Problem:** Sora klebt ein Watermark auf jedes Video. Für professionelle Arbeit brauchst du Third-Party-Tools zum Entfernen. Legale Grauzone.
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Fazit</span>
+<div class="rf-block rf-callout" role="note" aria-label="Fazit">
+	<span class="rf-label" aria-hidden="true">Fazit</span>
 	<p>Beste Qualität, aber teuer, langsam und das Watermark nervt brutal.</p>
 </div>
 ## Runway Gen-4.5: Der Kreativ-Allrounder
@@ -64,8 +64,8 @@ Runway ist seit Januar 2026 bei Gen-4.5 und hat den höchsten Elo-Score (1.247) 
 
 **Preise:** Standard 12$/Mo (625 Credits), Pro 28$/Mo, Unlimited 76-95$/Mo.
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Fazit</span>
+<div class="rf-block rf-callout" role="note" aria-label="Fazit">
+	<span class="rf-label" aria-hidden="true">Fazit</span>
 	<p>Flexibelste Plattform, beste für kreative Profis. 4K via API. Integrierte Editing-Tools im gleichen Ökosystem.</p>
 </div>
 ## Kling 3.0: Das Feature-Monster
@@ -82,8 +82,8 @@ Kling 3.0 von Kuaishou ist seit Februar 2026 draußen und packt mehr Features re
 
 **Das Problem:** Credits verfallen, wenn du sie nicht nutzt.
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Fazit</span>
+<div class="rf-block rf-callout" role="note" aria-label="Fazit">
+	<span class="rf-label" aria-hidden="true">Fazit</span>
 	<p>Bestes Preis-Leistungs-Verhältnis. Feature-Dichte ungeschlagen. Für Budget-Creator der klare Gewinner.</p>
 </div>
 ## Pika 2.5: Der Speed-King
@@ -96,8 +96,8 @@ Pika generiert Videos in 30-90 Sekunden. Turbo-Modus: 12 Sekunden. Das ist 10x s
 
 **Preis:** Ab 8$/Mo. Free Tier nutzbar.
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Fazit</span>
+<div class="rf-block rf-callout" role="note" aria-label="Fazit">
+	<span class="rf-label" aria-hidden="true">Fazit</span>
 	<p>Perfekt für Social Media. TikTok, Reels, Shorts, schnell generieren, schnell posten.</p>
 </div>
 ## Qualitäts-Ranking

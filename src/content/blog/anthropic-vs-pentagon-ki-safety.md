@@ -13,8 +13,8 @@ titleAccent: "KI-Safety"
 keywords: ["Anthropic Pentagon", "Claude AI", "Supply Chain Risk", "KI-Safety", "Anthropic Klage"]
 ---
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>Anthropic verklagt das US-Pentagon wegen Supply Chain Risk-Label. Was das für Claude-User bedeutet und warum Rückgrat hier buchstäblich Millionen wert ist.</p>
 </div>
 
@@ -67,8 +67,8 @@ Kurz sacken lassen.
 
 Anthropic argumentiert die Einstufung verletze die Verfassung.
 
-<div class="rf-block rf-callout">
-	<span class="rf-label">Notiz</span>
+<div class="rf-block rf-callout" role="note" aria-label="Notiz">
+	<span class="rf-label" aria-hidden="true">Notiz</span>
 	<p>"The Constitution does not allow the government to wield its enormous power to punish a company for its protected speech."</p>
 </div>
 

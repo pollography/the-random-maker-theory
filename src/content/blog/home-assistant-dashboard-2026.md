@@ -16,8 +16,8 @@ videoUrl: ""
 
 Mein Home Assistant sah anfangs aus wie das Steuerpult eines Kernkraftwerks. Zu viele Karten, zu viel Text, null Struktur. Mit Mushroom Cards hab ich das in einem Nachmittag gerade gebogen. Hier zeig ich dir wie.
 
-<div class="rf-block rf-tldr">
-	<span class="rf-label">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
+	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>HACS und Mushroom Cards installieren (dauert 10 Minuten)</li>
 		<li>Die wichtigsten Karten-Typen erklaert</li>
