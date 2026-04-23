@@ -14,12 +14,24 @@
    ========================================================================== */
 
 :root {
-  /* DARK THEME - Colors */
+  /* DARK THEME - Colors
+   * Surface elevation system (Galaxy Forge 0-5-10-15 lifted from LifeOS):
+   *   --color-bg       → page background (deepest)
+   *   --color-base     → sections that sit BELOW cards (code blocks, sunken zones)
+   *   --color-surface  → default card surface
+   *   --color-elevated → hovered / active card, modal backdrop
+   *   --color-overlay  → popover, tooltip, command palette
+   * Always pick the surface ONE step darker than the parent to preserve hierarchy.
+   */
   --color-bg: #0b0b0b;
+  --color-base: #0f0f0f;
   --color-surface: #1a1a1a;
-  --color-surface-raised: #222220;
+  --color-surface-raised: #222220; /* legacy alias, kept for backwards-compat */
+  --color-elevated: #232323;
+  --color-overlay: #2d2d2d;
   --color-border: #2a2520;
   --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-soft: rgba(255, 255, 255, 0.10);
   --color-text: #ede8e0;
   --color-text-muted: #7a7268;
   --color-text-dim: #5a5348;
@@ -79,8 +91,11 @@
       transparent 60%
     );
 
-  /* DARK THEME - Grain Texture */
-  --grain-opacity: 0.4;
+  /* DARK THEME - Grain Texture
+   * Was 0.4 × internal SVG opacity 0.5 = ~20% effective. Too loud on text-heavy pages.
+   * Dialed to 0.11 × 0.5 = ~5.5% effective — film-texture stays, doesn't fight the prose.
+   */
+  --grain-opacity: 0.11;
   --grain-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 
   /* SHARED - Typography */
@@ -171,10 +186,14 @@
 [data-theme='light'] {
   /* LIGHT THEME - Colors (Film Noir Light / Variant C) */
   --color-bg: #E2D8C6;
+  --color-base: #DACEBC;
   --color-surface: rgba(230, 222, 208, 0.75);
   --color-surface-raised: rgba(235, 228, 215, 0.85);
+  --color-elevated: rgba(240, 233, 220, 0.92);
+  --color-overlay: rgba(245, 238, 225, 0.96);
   --color-border: transparent;
   --color-border-subtle: rgba(0, 0, 0, 0.04);
+  --color-border-soft: rgba(0, 0, 0, 0.07);
   --color-text: #2d2a26;
   --color-text-muted: #5a534b;
   --color-text-dim: #76706a;
@@ -240,8 +259,11 @@
   --gradient-card-shadow: 8px 8px 18px rgba(160, 145, 125, 0.6),
     -5px -5px 12px rgba(245, 238, 225, 0.7);
 
-  /* LIGHT THEME - Grain Texture (Film Noir Light: heavy grain) */
-  --grain-opacity: 0.65;
+  /* LIGHT THEME - Grain Texture
+   * Was 0.65 — film-noir look was "too much" on body text (Pollo, 2026-04-23).
+   * Dialed to 0.18 × 0.5 = ~9% effective. Still noticeably cinematic on the cream bg.
+   */
+  --grain-opacity: 0.18;
 
   /* LIGHT THEME - Bento Grid (wider gap for neomorphism breathing room) */
   --bento-gap: 20px;

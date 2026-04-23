@@ -159,8 +159,8 @@
 	</h1>
 	<p class="hero-subtitle">Content, den ich <em class="hero-accent">selbst</em> lese.</p>
 	<div class="hero-actions">
-		<a href="/blog" class="btn-honey">Zum Blog</a>
-		<a href="/podcast" class="btn-teal">Zum Hören</a>
+		<a href="/blog" class="btn-metallic btn-honey"><span>Zum Blog</span></a>
+		<a href="/podcast" class="btn-metallic btn-teal"><span>Zum Hören</span></a>
 	</div>
 	<div class="hero-counter" bind:this={counterRef}>
 		<span class="counter-number">{displayCount}</span>
@@ -491,23 +491,31 @@
 		color: inherit;
 	}
 
-	/* Alternating subtle backgrounds — markant genug sichtbar */
-	.pillar-honey {
-		background: rgba(212, 137, 62, 0.06);
-		border-color: rgba(212, 137, 62, 0.15);
+	/* Pillars — Pollo's flip (2026-04-23):
+	 * DEFAULT = dark and calm (Galaxy Forge surface),
+	 * HOVER   = lifts to elevated + honey-glow + warmer tint.
+	 * Alternation now only shows on hover (honey vs teal trim), not at rest,
+	 * so the feed scans quiet and the active card sings.
+	 */
+	.pillar-card {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border-subtle);
 	}
-
+	.pillar-honey,
 	.pillar-teal {
-		background: rgba(58, 176, 162, 0.06);
-		border-color: rgba(58, 176, 162, 0.15);
+		background: var(--color-surface);
+		border-color: var(--color-border-subtle);
 	}
 
-	/* Hover: lift + honey glow + golden border */
 	.pillar-card:hover {
-		transform: translateY(-4px);
-		box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), 0 0 20px rgba(212, 137, 62, 0.12);
-		background: rgba(0, 0, 0, 0.25);
+		transform: scale(1.01);
+		background: var(--color-elevated);
 		border-color: rgba(212, 137, 62, 0.35);
+		box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 137, 62, 0.14);
+	}
+	.pillar-teal:hover {
+		border-color: rgba(58, 176, 162, 0.35);
+		box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(58, 176, 162, 0.14);
 	}
 
 	:global([data-theme='light']) .pillar-card {
@@ -515,19 +523,13 @@
 		border: none;
 		box-shadow: var(--shadow-neo);
 	}
-
-	:global([data-theme='light']) .pillar-honey {
-		background: rgba(212, 137, 62, 0.04);
-	}
-
+	:global([data-theme='light']) .pillar-honey,
 	:global([data-theme='light']) .pillar-teal {
-		background: rgba(58, 176, 162, 0.04);
+		background: var(--gradient-card-bg);
 	}
-
 	:global([data-theme='light']) .pillar-card:hover {
 		background: rgba(0, 0, 0, 0.04);
 		box-shadow: 12px 12px 24px rgba(160, 145, 125, 0.5), -6px -6px 12px rgba(245, 238, 225, 0.6);
-		border-color: rgba(196, 133, 76, 0.3);
 	}
 
 	.pillar-icon-col {
