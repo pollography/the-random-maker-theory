@@ -142,7 +142,7 @@
 <!-- Reading Progress Bar -->
 <div
 	class="progress-bar"
-	style="width: {scrollProgress}%; background: linear-gradient(90deg, var(--color-accent-honey), var(--color-accent-teal));"
+	style="transform: scaleX({scrollProgress / 100}); background: linear-gradient(90deg, var(--color-accent-honey), var(--color-accent-teal));"
 ></div>
 
 <article class="article-container">
@@ -242,9 +242,13 @@
 		position: fixed;
 		top: 0;
 		left: 0;
+		width: 100%;
 		height: 3px;
 		z-index: var(--z-sticky);
-		transition: width 0.1s ease-out;
+		/* scaleX statt width: laeuft auf dem Compositor, kein Layout/Paint pro Scroll-Frame */
+		transform-origin: 0 50%;
+		transition: transform 0.1s ease-out;
+		will-change: transform;
 	}
 
 	.article-title {
