@@ -8,13 +8,11 @@ tags:
     "chatgpt",
     "prompting",
     "ki-tools",
-    "prompting",
-    "prompting",
     "produktivitaet",
     "content-creation",
   ]
 category: "ki-tools"
-draft: true
+draft: false
 readingTime: 14
 heroImage: "/images/blog/beste-chatgpt-prompts-2026-1.webp"
 heroImageThumb: "/images/blog/beste-chatgpt-prompts-2026-1-thumb.webp"

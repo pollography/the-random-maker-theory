@@ -5,7 +5,7 @@ date: "2026-03-18"
 description: "DGX Spark, DGX Station, NemoClaw und Open Models — was NVIDIA auf der GTC 2026 fuer lokale KI angekuendigt hat und warum dein PC bald AI Agents ausfuehrt."
 tags: ["ki-news", "ki-tools", "news", "analyse", "open-source"]
 category: "ki-news"
-draft: true
+draft: false
 readingTime: 12
 heroImage: "/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-1.webp"
 heroImageThumb: "/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-1-thumb.webp"

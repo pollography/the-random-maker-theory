@@ -5,7 +5,7 @@ date: "2026-03-18"
 description: "OpenAI bringt GPT-5.4 mini und nano. Schneller, günstiger, gebaut für Subagenten. Benchmarks, Preise und was das für dich bedeutet."
 tags: ["ki-news", "ki-tools", "news", "analyse", "vergleich"]
 category: "ki-news"
-draft: true
+draft: false
 readingTime: 10
 heroImage: "/images/blog/introducing-gpt-5-4-mini-and-nano-2026-03-17-1.webp"
 heroImageThumb: "/images/blog/introducing-gpt-5-4-mini-and-nano-2026-03-17-1-thumb.webp"

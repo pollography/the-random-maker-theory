@@ -5,7 +5,7 @@ date: "2026-03-11"
 description: "KI-Agents kaufen bei Amazon ein, posten auf Social Media und haben eigene E-Mail-Adressen. Was gestern passiert ist und was das für uns bedeutet."
 tags: ["ki-agents", "ki-news", "perplexity", "meta", "automatisierung", "tools", "analyse"]
 category: "ki-news"
-draft: true
+draft: false
 readingTime: 10
 heroImage: "/images/blog/ki-agents-shoppen-posten-mailen-2026-1.webp"
 heroImageThumb: "/images/blog/ki-agents-shoppen-posten-mailen-2026-1-thumb.webp"

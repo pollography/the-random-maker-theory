@@ -10,7 +10,22 @@ if [ -z "$staged_blog" ]; then
 fi
 
 echo "[pre-commit] Applying reading-flow blocks to $(echo "$staged_blog" | wc -l) staged blog file(s)…"
-python3 scripts/apply-reading-flow-blocks.py --include-drafts --synthesize-tldr >/dev/null
+
+# Windows hat oft nur `python`; `python3` ist dort der Microsoft-Store-Stub,
+# der zwar im PATH liegt, aber beim Aufruf fehlschlaegt. Erst benutzbaren Interpreter suchen.
+PY=""
+for cand in python3 python py; do
+  if command -v "$cand" >/dev/null 2>&1 && "$cand" -c "import sys" >/dev/null 2>&1; then
+    PY="$cand"
+    break
+  fi
+done
+if [ -z "$PY" ]; then
+  echo "[pre-commit] FEHLER: kein lauffaehiger Python-Interpreter gefunden (python3/python/py)." >&2
+  exit 1
+fi
+
+"$PY" scripts/apply-reading-flow-blocks.py --include-drafts --synthesize-tldr >/dev/null
 
 for f in $staged_blog; do
   [ -f "$f" ] && git add "$f"

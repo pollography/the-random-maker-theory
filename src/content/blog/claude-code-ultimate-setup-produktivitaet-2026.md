@@ -15,7 +15,7 @@ tags:
     "notebooklm",
   ]
 category: "ki-tools"
-draft: true
+draft: false
 readingTime: 25
 heroImage: "/images/blog/claude-code-ultimate-setup-architecture.webp"
 heroImageThumb: "/images/blog/claude-code-ultimate-setup-architecture-thumb.webp"

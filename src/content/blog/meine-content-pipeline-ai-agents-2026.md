@@ -13,9 +13,8 @@ tags:
     blogging,
     content-creation,
   ]
-image: /images/blog/meine-content-pipeline-ai-agents-2026-og.webp
 pillar: automation
-draft: true
+draft: false
 readingTime: 12
 titleAccent: "Content Pipeline"
 keywords:
