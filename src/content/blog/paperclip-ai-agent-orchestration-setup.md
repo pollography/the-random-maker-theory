@@ -20,7 +20,7 @@ heroImageThumb: "/images/blog/paperclip-ai-agent-orchestration-setup-1-thumb.web
 	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Paperclip AI ist ein Open-Source Agent Orchestration Framework</li>
-		<li>Ich hab 22 Agents in 2 Companies aufgesetzt — für meinen Blog und mein Gaming Studio</li>
+		<li>Ich hab 28 Agents in 2 Companies aufgesetzt — für meinen Blog und mein Gaming Studio</li>
 		<li>Alles läuft über bestehende Subscriptions: Claude Max, ChatGPT Pro, Google Workspace, Ollama</li>
 		<li>Kein einziger Extra-Cent für API-Keys</li>
 		<li>Die Agents haben Completion Chains — Research → Schreiben → Design → Deploy passiert automatisch</li>
@@ -52,7 +52,7 @@ Stell's dir so vor: Du hast einen Fotografen (Visual Creator), einen Texter (Con
 
 Und das Beste: Es ist keine Cloud-SaaS. Läuft auf deinem Rechner. Port 3100. Fertig.
 
-## Mein Setup: 2 Companies, 22 Agents, 4 AI-Backends
+## Mein Setup: 2 Companies, 28 Agents, 4 AI-Backends
 
 ### Die Agent-Hierarchie
 
