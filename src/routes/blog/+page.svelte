@@ -66,7 +66,7 @@
 		</p>
 	</div>
 	<p class="blog-intro">
-		Ehrliche Reviews, Praxis-Tutorials und Maker-Projekte zum Nachbauen. Von KI-Tools wie ChatGPT, Claude und Midjourney über Arduino- und ESP32-Projekte bis zu Automatisierung mit n8n und Produktivitäts-Systemen mit Obsidian. Alles getestet, alles nachvollziehbar, alles frei Schnauze. Keine gesponserten Bestenlisten, keine aufgeblähten Listicles. Wenn was gut ist, sag ich das. Wenn was kacke ist, auch.
+		Ehrliche Reviews, Praxis-Tutorials und Maker-Projekte zum Nachbauen. Keine gesponserten Bestenlisten, keine aufgeblähten Listicles. Wenn was gut ist, sag ich das. Wenn was kacke ist, auch.
 	</p>
 	{#if allPosts.length > 0}
 		<p class="blog-count">
