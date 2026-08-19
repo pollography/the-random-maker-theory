@@ -33,16 +33,13 @@
 		<div class="legal-block">
 			<h2>3. Webanalyse</h2>
 			<p>
-				Ich verwende Umami Analytics, eine datenschutzfreundliche Analysesoftware. Umami erhebt keine personenbezogenen Daten, setzt keine Cookies und speichert keine IP-Adressen. Alle Daten werden aggregiert und anonym erhoben.
+				Ich verwende Vercel Web Analytics (Vercel Inc.), eine datenschutzfreundliche Reichweitenmessung. Der Dienst setzt keine Cookies, speichert keine IP-Adressen im Klartext und erstellt keine geräteübergreifenden Profile. Erfasst werden aggregierte Seitenaufrufe, Referrer und grobe Herkunftsregion.
 			</p>
 			<p>
-				Zusätzlich nutze ich Vercel Web Analytics (Vercel Inc.). Dieser Dienst setzt ebenfalls keine Cookies, speichert keine IP-Adressen im Klartext und erstellt keine geräteübergreifenden Profile. Erfasst werden aggregierte Seitenaufrufe, Referrer und grobe Herkunftsregion.
+				Der Dienst greift nicht auf Informationen in deinem Endgerät zu und speichert dort nichts. Eine Einwilligung nach § 25 TDDDG ist dafür nicht erforderlich, deshalb gibt es auf dieser Seite auch keinen Cookie-Banner. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer anonymen Reichweitenmessung).
 			</p>
 			<p>
-				Beide Dienste greifen nicht auf Informationen in deinem Endgerät zu und speichern dort nichts. Eine Einwilligung nach § 25 TDDDG ist dafür nicht erforderlich, deshalb gibt es auf dieser Seite auch keinen Cookie-Banner. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer anonymen Reichweitenmessung).
-			</p>
-			<p>
-				Du kannst der Messung jederzeit widersprechen, indem du die Domains <code>cloud.umami.is</code> und <code>va.vercel-scripts.com</code> in deinem Browser oder per Content-Blocker sperrst. Da keine personenbezogenen Daten erhoben werden, entsteht dir dadurch kein Nachteil.
+				Du kannst der Messung jederzeit widersprechen, indem du die Domain <code>va.vercel-scripts.com</code> in deinem Browser oder per Content-Blocker sperrst. Da keine personenbezogenen Daten erhoben werden, entsteht dir dadurch kein Nachteil.
 			</p>
 		</div>
 

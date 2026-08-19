@@ -23,10 +23,13 @@
 			})();
 		</script>
 
-		<!-- Umami Analytics: cookiefrei, keine personenbezogenen Daten, daher ohne
-		     Einwilligung. Achtung: die Website-ID muss im Umami-Konto existieren,
-		     sonst laufen die Events ins Leere. -->
-		<script defer src="https://cloud.umami.is/script.js" data-website-id="baab8505-1eee-4706-adeb-4bfea05b4771"></script>
+		<!-- Umami am 19.08.2026 entfernt: die hier hinterlegte Website-ID
+		     (baab8505-...) gehoert zu keiner Website im verknuepften Umami-Konto.
+		     Die Events wurden zwar angenommen, waren aber nicht abrufbar - die
+		     Besucherdaten gingen an ein fremdes Property. Reichweitenmessung
+		     laeuft jetzt ausschliesslich ueber Vercel Web Analytics (+layout.svelte).
+		     Falls Umami zurueck soll: Website im Konto anlegen und die NEUE ID
+		     eintragen, niemals die alte. -->
 
 		%sveltekit.head%
 	</head>
