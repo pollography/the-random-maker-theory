@@ -21,7 +21,7 @@ heroImageThumb: "/images/blog/paperclip-ai-agent-orchestration-setup-1-thumb.web
 	<ul>
 		<li>Paperclip AI ist ein Open-Source Agent Orchestration Framework</li>
 		<li>Ich hab 28 Agents in 2 Companies aufgesetzt — für meinen Blog und mein Gaming Studio</li>
-		<li>Alles läuft über bestehende Subscriptions: Claude Max, ChatGPT Pro, Google Workspace, Ollama</li>
+		<li>Alles läuft über bestehende Subscriptions: Claude Max, ChatGPT Pro, Google Workspace, [Ollama](/blog/lokale-ki-ollama-lm-studio-2026)</li>
 		<li>Kein einziger Extra-Cent für API-Keys</li>
 		<li>Die Agents haben Completion Chains — Research → Schreiben → Design → Deploy passiert automatisch</li>
 		<li>Nachts arbeiten lokale Ollama-Agents während ich schlafe</li>
@@ -76,7 +76,7 @@ Darunter die Spezialisten. Hier die komplette Liste — ja, mit echten Model-Zuw
 | **System Health Monitor** | **Haiku 4.5**    | **$**       | **Alle Systeme überwachen** |
 | Visual Creator            | Gemini 2.5 Pro   | $$          | OG Images, Thumbnails       |
 | Night Worker              | Ollama qwen3:14b | **GRATIS**  | Nacht-Batch                 |
-| Vault Keeper              | Ollama qwen3:14b | **GRATIS**  | Obsidian Vault              |
+| Vault Keeper              | Ollama qwen3:14b | **GRATIS**  | [Obsidian](/blog/obsidian-fuer-adhs-system-2026) Vault              |
 | Knowledge Miner           | Ollama qwen3:14b | **GRATIS**  | ChatGPT Export              |
 
 Die Logik dahinter: Kreative Arbeit (Content, Architektur) kriegt Opus oder Sonnet — da zählt Qualität. Repetitive Checks (SEO, QA, Deploy) kriegen Haiku — 10x billiger, reicht völlig. Und nachts? Ollama. Kostet halt nichts. Meine RTX 5080 macht die Arbeit.

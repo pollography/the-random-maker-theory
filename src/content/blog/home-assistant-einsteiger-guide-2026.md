@@ -15,7 +15,7 @@ readingTime: 3
 	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Open Source, lokal, keine Cloud, deine Daten bleiben bei dir, 2.000+ Integrationen</li>
-		<li>Hardware: Pi 4 ab 30€ + Zigbee Dongle 20€, für 5-20 Geräte ausreichend</li>
+		<li>Hardware: Pi 4 ab 30€ + [Zigbee](/blog/zigbee-thread-matter-vergleich-2026) Dongle 20€, für 5-20 Geräte ausreichend</li>
 		<li>Start mit Smart Plug (15€), Bewegungssensor (20€), Tür-Sensor (10€), dann Automationen bauen</li>
 		<li>Erste Automation: Bewegung im Flur, Licht an, nach 10 Min aus, dann wird's Sucht</li>
 	</ul>

@@ -46,7 +46,7 @@ Erstmal der Überblick. Damit wir von denselben Dingen reden.
 | ----------- | ------------ | ----------- | ------------------------- | ----------------------- |
 | **ChatGPT** | Free         | $0          | GPT-5.3 (begrenzt)        | Basics                  |
 | **ChatGPT** | Go           | dynamisch   | GPT-5.3 (erweitert)       | mit Werbung (!)         |
-| **ChatGPT** | Plus         | individuell | GPT-5.4 Thinking          | Sora 2, DALL-E          |
+| **ChatGPT** | Plus         | individuell | [GPT-5.4](/blog/chatgpt-5-4-was-bedeutet-das-fuer-uns) Thinking          | Sora 2, DALL-E          |
 | **ChatGPT** | Pro          | individuell | GPT-5.4 Pro (unlimitiert) | Codex Agent             |
 | **Gemini**  | Free         | $0          | Gemini 3.1 Flash          | 50 Credits/Tag          |
 | **Gemini**  | AI Plus      | $7.99       | Gemini 3.1 Pro (enhanced) | 200 Credits             |

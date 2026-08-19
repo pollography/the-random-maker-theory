@@ -27,7 +27,7 @@ videoUrl: ""
 
 <div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
 	<span class="rf-label" aria-hidden="true">TL;DR</span>
-	<p>Claude Code mit Obsidian, NotebookLM, Playwright, Hooks und Scheduled Tasks zur Arbeitsmaschine kombinieren. Von der Installation bis zum fertigen System.</p>
+	<p>Claude Code mit [Obsidian](/blog/obsidian-fuer-adhs-system-2026), NotebookLM, Playwright, Hooks und Scheduled Tasks zur Arbeitsmaschine kombinieren. Von der Installation bis zum fertigen System.</p>
 </div>
 
 Stell dir vor: Du wachst morgens auf und dein KI-News-Briefing liegt schon in deiner Knowledge Base. Dein naechster Blog-Artikel wurde ueber Nacht recherchiert. Deine Social-Media-Posts sind fertig getextet. Und du hast genau NICHTS davon manuell gemacht. Das ist keine Science Fiction. Das ist mein aktuelles Setup mit Claude Code.
@@ -601,7 +601,7 @@ Dieses System ist nicht im luftleeren Raum entstanden. Es basiert auf hunderten 
 
 **Die offizielle Claude Code Dokumentation** (code.claude.com/docs) ist seit Anfang 2026 massiv gewachsen. Hooks, Skills, Sub-Agents, Agent Teams, alles ist dort dokumentiert mit Beispielen und Edge Cases.
 
-**Die Anthropic Community** auf Discord und GitHub hat eine unglaubliche Menge an Open-Source-Skills und Tools produziert. Das Skill-Format (SKILL.md) funktioniert mittlerweile in Claude Code, Cursor, Gemini CLI, Codex CLI und mehr. Ein Skill den du fuer Claude Code schreibst, laeuft auch woanders.
+**Die Anthropic Community** auf Discord und GitHub hat eine unglaubliche Menge an Open-Source-Skills und Tools produziert. Das Skill-Format (SKILL.md) funktioniert mittlerweile in Claude Code, [Cursor](/blog/claude-code-vs-cursor-vs-copilot-2026), Gemini CLI, Codex CLI und mehr. Ein Skill den du fuer Claude Code schreibst, laeuft auch woanders.
 
 Was mich an diesem ganzen Oekosystem am meisten fasziniert: Wir sind Anfang 2026. Das hier ist Version 1.0. In 6 Monaten wird das alles noch mal deutlich leistungsfaehiger sein. Agent Teams werden aus dem Experimental-Status rauskommen. MCP-Server werden effizienter. Neue CLI-Tools werden auftauchen.
 

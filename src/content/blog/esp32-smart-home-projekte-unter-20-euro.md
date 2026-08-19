@@ -14,7 +14,7 @@ readingTime: 4
 <div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
 	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
-		<li>ESP32-C3 (3€) + Sensoren (DHT22, PIR, Reed Switch), YAML-Config mit ESPHome, Home Assistant erkennt automatisch</li>
+		<li>ESP32-C3 (3€) + Sensoren ([DHT22](/blog/esp32-home-assistant-erster-sensor-2026), PIR, Reed Switch), YAML-Config mit ESPHome, [Home Assistant](/blog/home-assistant-einsteiger-guide-2026) erkennt automatisch</li>
 		<li>5 Projekte, alle unter 20€, Temperatur/Luftfeuchte, Bewegung, Tür, Pflanzenbewässerung, LED-Strips</li>
 		<li>Kritisch: GPIO-Pins, 5V Netzteil, Sensor-Kalibrierung, Level Shifter bei LEDs</li>
 		<li>Deep Sleep für Batteriebtrieb 6-12 Monate Laufzeit</li>

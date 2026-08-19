@@ -307,7 +307,7 @@ Was ich an diesem Workflow besonders mag: Er braucht mich nicht zu ersetzen. Er 
 
 Drei Dinge die ich gerne frueher gewusst haette:
 
-**1. Prompts in n8n sind anders als in ChatGPT direkt.** In ChatGPT habe ich Kontext — das Chat-Interface, den Verlauf. In n8n ist jeder API-Call komplett kontextlos. Der System-Prompt muss deshalb praeziser sein. Ich musste jeden Prompt neu schreiben.
+**1. Prompts in n8n sind anders als in ChatGPT direkt.** In ChatGPT habe ich Kontext — das Chat-Interface, den Verlauf. In n8n ist jeder API-Call komplett kontextlos. Der [System-Prompt](/blog/chatgpt-prompts-erstellen-2026) muss deshalb praeziser sein. Ich musste jeden Prompt neu schreiben.
 
 **2. gpt-4o-mini vs gpt-4o klug einsetzen.** Fuer Kategorisierung und einfache Text-Generierung reicht Mini voellig. Fuer komplexere Aufgaben wie das Content-Brief-Writing wo Kreativitaet und Qualitaet zaehlen lohnt sich gpt-4o. Ich habe das durchgetestet. Den Unterschied bei den Content-Briefs merkt man, bei der Kommentar-Kategorisierung kaum.
 
@@ -335,7 +335,7 @@ Starte mit Workflow 2 (Social Post Generator). Er ist der einfachste, der Nutzen
 
 Workflow 3 empfehle ich erst wenn du ein bisschen Erfahrung mit dem Code Node hast. Das JSON-Parsing kann frustrieren wenn man noch nicht weiss wie man Fehler debuggt.
 
-Wenn du tiefer in Prompt Engineering einsteigen willst — ich habe [ein eigenes System dafuer entwickelt](prompt-engineering-lernen-2026) das ich seit ueber einem Jahr nutze. Und falls du dich fragst ob ChatGPT oder Claude die bessere Wahl fuer deinen Stack ist: [den Vergleich habe ich hier gemacht](chatgpt-vs-claude-content-creator-2026), mit echten Use Cases statt Benchmark-Zahlen.
+Wenn du tiefer in [Prompt Engineering](/blog/perfekt-prompten-llm-guide) einsteigen willst — ich habe [ein eigenes System dafuer entwickelt](prompt-engineering-lernen-2026) das ich seit ueber einem Jahr nutze. Und falls du dich fragst ob ChatGPT oder Claude die bessere Wahl fuer deinen Stack ist: [den Vergleich habe ich hier gemacht](chatgpt-vs-claude-content-creator-2026), mit echten Use Cases statt Benchmark-Zahlen.
 
 ---
 

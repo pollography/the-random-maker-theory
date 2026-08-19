@@ -26,7 +26,7 @@ videoUrl: ""
 
 <div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
 	<span class="rf-label" aria-hidden="true">TL;DR</span>
-	<p>Qwen3-235B schlägt Claude beim Coding. Kimi K2.5 läuft in Cursor Composer 2. Was Open-Source-Modelle auf Ollama Pro wirklich können – und wann sie sich lohnen.</p>
+	<p>Qwen3-235B schlägt Claude beim Coding. Kimi K2.5 läuft in Cursor Composer 2. Was Open-Source-Modelle auf [Ollama](/blog/lokale-ki-ollama-lm-studio-2026) Pro wirklich können – und wann sie sich lohnen.</p>
 </div>
 
 ![Ollama-Pro-Modelle im Vergleich: Qwen3-235B, Kimi K2.5 und NemoTron-3 mit Benchmarks, Kontextfenstern und Kosten-Limits](/images/blog/ollama-pro-modelle-qwen3-kimi-vergleich-1-chart.webp)
@@ -57,7 +57,7 @@ Session-Limits? Nicht öffentlich spezifiziert. Ollama rechnet nach GPU-Time, ni
 
 Das klingt nach Monster-Modell. Ist es auch, aber effizienter als du denkst. Die 235 Milliarden sind Gesamtparameter, aktiv sind nur **22B pro Token**. Mixture-of-Experts-Architektur: 128 Experten, 8 werden pro Token aktiviert. Ergebnis: Geschwindigkeit eines 22B-Modells mit der Intelligenz eines 235B-Modells.
 
-Kontextfenster: **262.000 Tokens**. Mehr als Claude (200K), mehr als GPT-5.4 (128K).
+Kontextfenster: **262.000 Tokens**. Mehr als Claude (200K), mehr als [GPT-5.4](/blog/chatgpt-5-4-was-bedeutet-das-fuer-uns) (128K).
 
 Auf Deutsch läuft das problemlos. Multilingual ist eine der echten Stärken.
 

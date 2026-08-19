@@ -133,7 +133,7 @@ Das rettet mir regelmäßig den Hintern. Kunde möchte Ausschnitt doch A3-groß.
 
 ## Midjourney: Visionen vor der Kamera
 
-Bevor ich überhaupt die Kamera anfasse, nutze ich Midjourney. Früher habe ich Stunden damit verbracht, Stockfotos zu suchen. Pinterest. Unsplash. iStock. Boards anlegen. Die richtige „Stimmung" rausfinden.
+Bevor ich überhaupt die Kamera anfasse, nutze ich [Midjourney](/blog/midjourney-prompts-fotografen-2026). Früher habe ich Stunden damit verbracht, Stockfotos zu suchen. Pinterest. Unsplash. iStock. Boards anlegen. Die richtige „Stimmung" rausfinden.
 
 Heute generiere ich einfach selbst.
 
@@ -190,7 +190,7 @@ Und noch etwas: Die Tools sind nicht magisch. Sie machen Fehler. Generative Remo
 
 ## Zukunft: Eigene Tools mit Claude Code
 
-Das hier wird euch wahrscheinlich nächstes Mal im Blog zu lesen sein, aber: Ich plane gerade ein Python-Script mit Claude Code. Die Idee: AfterShoot exportiert meine 5-Sterne-Auswahl. Das Script spiegelt diese automatisch in einen verschlüsselten Cloud-Backup-Ordner. Das spart mir das manuelle Dateimanagement, das mich früher immer wahnsinnig gemacht hat.
+Das hier wird euch wahrscheinlich nächstes Mal im Blog zu lesen sein, aber: Ich plane gerade ein Python-Script mit [Claude Code](/blog/claude-code-ultimate-setup-produktivitaet-2026). Die Idee: AfterShoot exportiert meine 5-Sterne-Auswahl. Das Script spiegelt diese automatisch in einen verschlüsselten Cloud-Backup-Ordner. Das spart mir das manuelle Dateimanagement, das mich früher immer wahnsinnig gemacht hat.
 
 Langfristig? Ich kann mir vorstellen, dass ich ein einfaches Open-Source-Tool baue. Vielleicht kein Full Replacement für AfterShoot oder Adobe. Aber ein **ki bildbearbeitung**-Tool das speziell für Fotograf:innen konzipiert ist. Mit Claude. Mit lokaler GPU-Nutzung. Mit Fokus auf Workflow statt Featurecreep.
 

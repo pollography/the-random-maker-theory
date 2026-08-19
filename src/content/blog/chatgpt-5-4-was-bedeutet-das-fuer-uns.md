@@ -14,7 +14,7 @@ readingTime: 8
 
 Gestern Abend hat OpenAI GPT-5.4 released. Nicht einfach ein Update. Sondern der Versuch, alles in ein Model zu packen: Coding, Reasoning, Computer Use, Agent-Workflows, Finance-Plugins. Das ambitionierteste Release seit GPT-4.
 
-Und weil ich gerade mit Claude Cowork diesen Blog baue, muss ich die Frage stellen: Ändert das was für uns?
+Und weil ich gerade mit [Claude Cowork](/blog/claude-cowork-einladung-kostenlos-testen) diesen Blog baue, muss ich die Frage stellen: Ändert das was für uns?
 
 Spoiler: Ja und nein. Aber der Reihe nach.
 
@@ -23,7 +23,7 @@ Spoiler: Ja und nein. Aber der Reihe nach.
 	<p>Keine Lust auf 14 Minuten? Hier die Facts:</p>
 	<p><strong>GPT-5.4</strong> kombiniert erstmals Reasoning + Computer Use + Coding in einem Modell. 75% auf OSWorld (besser als Menschen). 1M Token Context. 33% weniger Fehler als GPT-5.2.</p>
 	<p><strong>Für Entwickler:</strong> Tool Search spart 47% Tokens bei MCP-lastigen Workflows. API kostet $2.50/1M Input, $15/1M Output.</p>
-	<p><strong>Für Office-Worker:</strong> GPT-5.4 kann jetzt eigenständig Excel bedienen, Präsentationen bauen, Multi-Step-Workflows ausführen. McKinsey setzt bereits 25.000 KI-Agents neben 40.000 Beratern ein.</p>
+	<p><strong>Für Office-Worker:</strong> GPT-5.4 kann jetzt eigenständig Excel bedienen, Präsentationen bauen, Multi-Step-Workflows ausführen. McKinsey setzt bereits 25.000 [KI-Agents](/blog/ki-agents-shoppen-posten-mailen-2026) neben 40.000 Beratern ein.</p>
 	<p><strong>Für Claude Cowork User:</strong> Cowork bleibt der bessere Desktop-Agent für File-basierte Arbeit. GPT-5.4 ist stärker im Browser. Verschiedene Stärken, kein Killer.</p>
 	<p><strong>Marktlage:</strong> Anthropic dominiert 80% des API-Spends. Claude war am Wochenende Nr. 1 im App Store. OpenAI kontert mit Enterprise-Push.</p>
 </div>

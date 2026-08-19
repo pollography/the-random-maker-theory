@@ -17,7 +17,7 @@ readingTime: 4
 		<li>v0 (React/Tailwind/shadcn) Production-Code, aber nur Frontend, Bolt schnellster MVP 20min mit Live-Debugging</li>
 		<li>Lovable beste Designs und Auto-Supabase, aber RLS-Security musst du selbst, Replit flexible Agent-Workflows</li>
 		<li>Marketing-Sites: Framer, Apps: Bolt/Lovable, Tech-Profis: v0 dann selbst weiterbauen</li>
-		<li>"VibeScamming" real, KI-Code hat Security-Löcher, nie ungeprüft live, Enterprise noch nicht ready</li>
+		<li>"VibeScamming" real, [KI-Code](/blog/amazon-ai-code-probleme) hat Security-Löcher, nie ungeprüft live, Enterprise noch nicht ready</li>
 	</ul>
 </div>
 

@@ -16,7 +16,7 @@ readingTime: 2
 	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
 		<li>Claude 4.6 für Texte und Code, beste Qualität auf dem Markt</li>
-		<li>Claude Code als IDE, Figma AI Assist für UI, Cursor für Tab-Completion</li>
+		<li>[Claude Code](/blog/claude-code-ultimate-setup-produktivitaet-2026) als IDE, Figma AI Assist für UI, Cursor für Tab-Completion</li>
 		<li>Leonardo AI für Bilder, kostenlos testen, dann bei einem Tool gut werden</li>
 		<li>100 Stunden mit einem Tool schlägt 100 gute Prompts</li>
 	</ul>

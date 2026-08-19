@@ -14,7 +14,7 @@ readingTime: 4
 <div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
 	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<ul>
-		<li>Ollama (CLI), LM Studio (GUI) oder Jan.ai, kostenlos, DeepSeek V3, Llama 3.1, Mistral, Qwen, Gemma</li>
+		<li>Ollama (CLI), LM Studio (GUI) oder Jan.ai, kostenlos, DeepSeek V3, Llama 3.1, Mistral, [Qwen](/blog/ollama-pro-modelle-qwen3-kimi-vergleich), Gemma</li>
 		<li>8-12GB VRAM sweet spot, 7-8B Modelle 40+ Tokens/sec, schneller als Cloud-APIs</li>
 		<li>Q4_K_M Quantization 75% weniger RAM, minimal schlechter, Dual-Strategie (lokal Standard, Cloud Complex)</li>
 		<li>Privacy, Zero Data Exfiltration, DSGVO-konform, Break-Even 2-6 Monate, dann praktisch gratis</li>

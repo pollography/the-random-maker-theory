@@ -148,7 +148,7 @@ Das 2B-Modell läuft auf einem iPhone offline. 4GB RAM. Kein Internet nötig. Ei
 
 <div class="vb-highlight-teal">
 
-**Warum mich das als Fotograf interessiert:** Ich bin viel auf Locations ohne Internet unterwegs. Berghütten, abgelegene Outdoor-Spots. Wenn ich dort KI-Assistenz nutzen will, ging das bisher nicht. Mit Qwen 3.5 Small geht das jetzt. Text und Bilder, komplett lokal. Für ESP32-Bastler die lokale Home Assistant Setups bauen auch mega spannend. Edge AI, aber halt wirklich.
+**Warum mich das als Fotograf interessiert:** Ich bin viel auf Locations ohne Internet unterwegs. Berghütten, abgelegene Outdoor-Spots. Wenn ich dort KI-Assistenz nutzen will, ging das bisher nicht. Mit Qwen 3.5 Small geht das jetzt. Text und Bilder, komplett lokal. Für ESP32-Bastler die lokale [Home Assistant](/blog/home-assistant-einsteiger-guide-2026) Setups bauen auch mega spannend. Edge AI, aber halt wirklich.
 
 </div>
 

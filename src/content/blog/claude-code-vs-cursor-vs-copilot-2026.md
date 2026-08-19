@@ -18,7 +18,7 @@ Aber welches Tool lohnt sich wirklich? Ich hab alle drei im Alltag getestet. Plu
 <div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
 	<span class="rf-label" aria-hidden="true">TL;DR</span>
 	<p>Keine Lust auf den ganzen Artikel? Hier die Zusammenfassung:</p>
-	<p><strong>Claude Code</strong> = Dein Senior-Dev, der Aufgaben komplett übernimmt. Bestes Reasoning, Token-effizient, CLI-native.</p>
+	<p><strong>[Claude Code](/blog/claude-code-ultimate-setup-produktivitaet-2026)</strong> = Dein Senior-Dev, der Aufgaben komplett übernimmt. Bestes Reasoning, Token-effizient, CLI-native.</p>
 	<p><strong>Cursor</strong> = Dein Turbo-IDE mit Agent-Mode. Schnellste Suggestions, Multi-Agent (bis 8 parallel), VSCode-Fork.</p>
 	<p><strong>GitHub Copilot</strong> = Der Allrounder im GitHub-Ökosystem. Free Tier, Model-Picker (Claude + GPT), beste Integration.</p>
 	<p><strong>Windsurf</strong> = Best Value für 15$/Monat. Cascade Agent, Memory-Feature, 92% Accuracy.</p>

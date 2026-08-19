@@ -15,7 +15,7 @@ keywords: ["Anthropic Pentagon", "Claude AI", "Supply Chain Risk", "KI-Safety", 
 
 <div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
 	<span class="rf-label" aria-hidden="true">TL;DR</span>
-	<p>Anthropic verklagt das US-Pentagon wegen Supply Chain Risk-Label. Was das für Claude-User bedeutet und warum Rückgrat hier buchstäblich Millionen wert ist.</p>
+	<p>Anthropic verklagt das US-[Pentagon](/blog/anthropic-2026-rueckblick-pentagon-bis-billion) wegen Supply Chain Risk-Label. Was das für Claude-User bedeutet und warum Rückgrat hier buchstäblich Millionen wert ist.</p>
 </div>
 
 Hunderte Millionen Dollar an Verträgen. Auf der einen Seite. Auf der anderen: Keine Massenüberwachung. Keine autonomen Waffen.

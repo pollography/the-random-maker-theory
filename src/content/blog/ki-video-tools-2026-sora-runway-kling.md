@@ -17,7 +17,7 @@ readingTime: 4
 		<li>Sora 2 beste Qualität (5-8min wait), Runway Gen-4.5 Allrounder mit Character Consistency, Kling 3.0 Preis-König 4K</li>
 		<li>Pika 2.5 Speed-King 30-90sec, Veo 2 kostenlos, Hailuo günstig, jedes hat Schwächen</li>
 		<li>Fotorealismus Sora, Kreativität Runway, Kosten Kling, Speed Pika</li>
-		<li>Security: "VibeScamming" real, KI-Code hat Löcher, nie ungeprüft in Production</li>
+		<li>Security: "VibeScamming" real, [KI-Code](/blog/amazon-ai-code-probleme) hat Löcher, nie ungeprüft in Production</li>
 	</ul>
 </div>
 
