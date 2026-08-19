@@ -9,6 +9,8 @@
 	// bildet keine geraeteuebergreifenden Profile. Damit greift § 25 TDDDG nicht und
 	// es laeuft ohne Einwilligung. Sobald hier Affiliate- oder Ad-Tracking dazukommt,
 	// muss der Consent-Banner zurueck.
+	// Umami wurde am 19.08.2026 entfernt: die alte Website-ID gehoerte zu keinem
+	// Property im verknuepften Konto. Falls Umami zurueck soll, neue ID anlegen.
 	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
 	let { children } = $props();
