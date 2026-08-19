@@ -32,6 +32,9 @@ videoUrl: ""
 	<p>NVIDIA CloudXR 6.0 streamt RTX-Grafik direkt auf die Apple Vision Pro. Was das fuer Gaming, Industrie und Entwickler bedeutet -- einfach erklaert.</p>
 </div>
 
+![Wie NVIDIA CloudXR 6.0 RTX-Grafik auf die Apple Vision Pro streamt: Remote-Rendering, drahtlose Uebertragung und native Anzeige in visionOS](/images/blog/nvidia-rtx-apple-vision-pro-cloudxr-1-chart.webp)
+
+
 <script>
   import MindMap3D from '$lib/components/blog/MindMap3D.svelte';
 

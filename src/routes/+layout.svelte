@@ -2,13 +2,7 @@
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import CookieBanner from '$lib/components/layout/CookieBanner.svelte';
-	import { injectAnalytics } from '@vercel/analytics/sveltekit';
-	import { dev } from '$app/environment';
 	import '../app.css';
-
-	// Vercel Web Analytics: cookiefrei und ohne personenbezogene Daten, laeuft daher
-	// unabhaengig vom Cookie-Banner. Umami bleibt unangetastet (eigenes Property).
-	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
 	let { children } = $props();
 </script>

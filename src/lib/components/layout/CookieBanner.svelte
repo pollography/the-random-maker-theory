@@ -71,9 +71,10 @@
   function applyConsent() {
     if (typeof window === 'undefined') return;
 
-    // Analytics: Umami
+    // Analytics: Umami + Vercel Web Analytics
     if (analyticsConsent) {
       enableUmami();
+      enableVercelAnalytics();
     } else {
       disableUmami();
     }
@@ -95,6 +96,18 @@
     script.src = 'https://cloud.umami.is/script.js';
     script.setAttribute('data-website-id', getUmamiId());
     document.head.appendChild(script);
+  }
+
+  // Vercel Web Analytics setzt keine Cookies und braeuchte nach § 25 TDDDG keine
+  // Einwilligung — laeuft hier trotzdem nur nach Zustimmung, aus demselben Grund
+  // wie Umami: wer die Analyse abwaehlt, soll auch wirklich keine haben.
+  // Der Import ist dynamisch, damit ohne Zustimmung nichts geladen wird.
+  let vercelAnalyticsLoaded = false;
+  async function enableVercelAnalytics() {
+    if (typeof window === 'undefined' || vercelAnalyticsLoaded) return;
+    vercelAnalyticsLoaded = true;
+    const { injectAnalytics } = await import('@vercel/analytics/sveltekit');
+    injectAnalytics({ mode: import.meta.env.DEV ? 'development' : 'production' });
   }
 
   function disableUmami() {
@@ -119,7 +132,7 @@
       </div>
 
       <p class="cookie-text">
-        Ich nutze Umami für anonyme Besucherstatistiken (keine Werbung, kein Tracking über andere Seiten).
+        Ich nutze Umami und Vercel Analytics für anonyme Besucherstatistiken (keine Werbung, kein Tracking über andere Seiten).
         Du kannst selbst entscheiden, was aktiv sein darf.
       </p>
 

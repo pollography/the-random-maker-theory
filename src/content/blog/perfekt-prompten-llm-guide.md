@@ -20,6 +20,9 @@ videoUrl: "https://www.youtube.com/watch?v=KWIH_InMQZ8"
 	<p>Lerne mit Frameworks wie COSTAR und RISEN, wie du LLMs richtig promptest. Praxistipps, Techniken und konkrete Beispiele für bessere KI-Ergebnisse.</p>
 </div>
 
+![Prompting-Frameworks im Ueberblick: COSTAR, Chain-of-Thought und das RTF-Prinzip, dazu die Staerken von ChatGPT, Claude und Gemini](/images/blog/perfekt-prompten-llm-guide-1-chart.webp)
+
+
 Stell dir vor, du springst in ein Taxi und sagst: „Fahr mich mal irgendwohin Schönes." Der Fahrer guckt dich an wie'n Auto. Fährt dich zum nächsten Stadtpark, der nach Frittenfett riecht. Genau das passiert, wenn du ChatGPT, Claude oder Gemini mit vagen Prompts fütterst. Du landest irgendwo — aber halt nicht da, wo du hinwolltest.
 
 Gibst du dem Fahrer die exakte Adresse, die Route und den Fahrstil vor? Perfekte Ankunft. Das ist Prompt Engineering in einer Nussschale.

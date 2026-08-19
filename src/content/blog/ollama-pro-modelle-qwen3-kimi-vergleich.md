@@ -29,6 +29,9 @@ videoUrl: ""
 	<p>Qwen3-235B schlägt Claude beim Coding. Kimi K2.5 läuft in Cursor Composer 2. Was Open-Source-Modelle auf Ollama Pro wirklich können – und wann sie sich lohnen.</p>
 </div>
 
+![Ollama-Pro-Modelle im Vergleich: Qwen3-235B, Kimi K2.5 und NemoTron-3 mit Benchmarks, Kontextfenstern und Kosten-Limits](/images/blog/ollama-pro-modelle-qwen3-kimi-vergleich-1-chart.webp)
+
+
 Cursor Composer 2 läuft auf einem Open-Source-Modell. Kimi K2.5, entwickelt von Moonshot AI. Das hat mich überrascht. Ich hatte erwartet, dass Cursor auf Claude oder GPT-5 setzt, wie alle anderen.
 
 Aber genau das ist der Punkt. Open-Source-Modelle sind 2026 keine experimentelle Alternative mehr. Qwen3-235B schlägt Claude beim Coding. Kimi K2.5 liegt mit 65,8% auf SWE-Bench unter den Top 3 weltweit. Und beides läuft auf Ollama Pro für pauschal $20 im Monat.

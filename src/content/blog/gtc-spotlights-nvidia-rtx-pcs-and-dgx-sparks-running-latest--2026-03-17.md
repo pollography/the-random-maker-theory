@@ -25,6 +25,9 @@ videoUrl: ""
 	</ul>
 </div>
 
+![Uebersicht der NVIDIA-GTC-2026-Ankuendigungen: DGX Spark, GeForce RTX 50-Serie, NemoClaw und die lokalen KI-Modelle im Vergleich](/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-1-chart.webp)
+
+
 ---
 
 Ich hab mir die Jensen-Huang-Keynote am Montag reingezogen. Zwei Stunden, schwarze Lederjacke, die ueblichen Superlative. Aber dieses Mal war das anders. Dieses Mal ging's nicht um irgendwelche Datacenter-Racks, die sich normale Menschen eh nicht leisten koennen. Dieses Mal hat NVIDIA was gezeigt, das mich als Maker und Tech-Nerd echt gepackt hat: Lokale KI-Power. Fuer deinen Schreibtisch. Ohne Cloud.

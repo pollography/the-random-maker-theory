@@ -36,7 +36,10 @@
 				Ich verwende Umami Analytics, eine datenschutzfreundliche Analysesoftware. Umami erhebt keine personenbezogenen Daten, setzt keine Cookies und speichert keine IP-Adressen. Alle Daten werden aggregiert und anonym erhoben.
 			</p>
 			<p>
-				Obwohl Umami technisch keine Einwilligung nach § 25 TDDDG erfordert, biete ich dir über den Cookie-Banner die Möglichkeit, auch diese anonyme Analyse zu deaktivieren. Transparenz ist mir wichtig.
+				Zusätzlich nutze ich Vercel Web Analytics (Vercel Inc.). Dieser Dienst setzt ebenfalls keine Cookies, speichert keine IP-Adressen im Klartext und erstellt keine geräteübergreifenden Profile. Erfasst werden aggregierte Seitenaufrufe, Referrer und grobe Herkunftsregion.
+			</p>
+			<p>
+				Obwohl beide Dienste technisch keine Einwilligung nach § 25 TDDDG erfordern, biete ich dir über den Cookie-Banner die Möglichkeit, auch diese anonyme Analyse zu deaktivieren. Sie werden erst nach deiner Zustimmung geladen. Transparenz ist mir wichtig.
 			</p>
 		</div>
 
