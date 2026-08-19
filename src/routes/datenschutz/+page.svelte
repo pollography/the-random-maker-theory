@@ -39,7 +39,10 @@
 				Zusätzlich nutze ich Vercel Web Analytics (Vercel Inc.). Dieser Dienst setzt ebenfalls keine Cookies, speichert keine IP-Adressen im Klartext und erstellt keine geräteübergreifenden Profile. Erfasst werden aggregierte Seitenaufrufe, Referrer und grobe Herkunftsregion.
 			</p>
 			<p>
-				Obwohl beide Dienste technisch keine Einwilligung nach § 25 TDDDG erfordern, biete ich dir über den Cookie-Banner die Möglichkeit, auch diese anonyme Analyse zu deaktivieren. Sie werden erst nach deiner Zustimmung geladen. Transparenz ist mir wichtig.
+				Beide Dienste greifen nicht auf Informationen in deinem Endgerät zu und speichern dort nichts. Eine Einwilligung nach § 25 TDDDG ist dafür nicht erforderlich, deshalb gibt es auf dieser Seite auch keinen Cookie-Banner. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer anonymen Reichweitenmessung).
+			</p>
+			<p>
+				Du kannst der Messung jederzeit widersprechen, indem du die Domains <code>cloud.umami.is</code> und <code>va.vercel-scripts.com</code> in deinem Browser oder per Content-Blocker sperrst. Da keine personenbezogenen Daten erhoben werden, entsteht dir dadurch kein Nachteil.
 			</p>
 		</div>
 

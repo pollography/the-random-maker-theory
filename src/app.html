@@ -23,8 +23,10 @@
 			})();
 		</script>
 
-		<!-- Umami Analytics: wird erst nach Cookie-Consent geladen (CookieBanner.svelte) -->
-		<script>window.__UMAMI_ID = 'baab8505-1eee-4706-adeb-4bfea05b4771';</script>
+		<!-- Umami Analytics: cookiefrei, keine personenbezogenen Daten, daher ohne
+		     Einwilligung. Achtung: die Website-ID muss im Umami-Konto existieren,
+		     sonst laufen die Events ins Leere. -->
+		<script defer src="https://cloud.umami.is/script.js" data-website-id="baab8505-1eee-4706-adeb-4bfea05b4771"></script>
 
 		%sveltekit.head%
 	</head>

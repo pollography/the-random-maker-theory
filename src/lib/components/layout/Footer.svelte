@@ -83,7 +83,6 @@
 			<div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
 				<a href="/impressum" class="footer-link">Impressum</a>
 				<a href="/datenschutz" class="footer-link">Datenschutz</a>
-				<button class="footer-link cookie-settings-btn" onclick={() => { localStorage.removeItem('trmt-cookie-consent'); location.reload(); }}>Cookie-Einstellungen</button>
 			</div>
 			<p style="margin: 0; color: var(--color-text-dim); font-size: var(--font-size-sm);">
 				&copy; {new Date().getFullYear()} {siteConfig.name}. Alle Rechte vorbehalten.
@@ -121,14 +120,6 @@
 
 	:global(.footer-link:hover) {
 		color: var(--color-accent-honey);
-	}
-
-	:global(.cookie-settings-btn) {
-		background: none;
-		border: none;
-		cursor: pointer;
-		padding: 0;
-		font-family: inherit;
 	}
 
 	@media (max-width: 768px) {

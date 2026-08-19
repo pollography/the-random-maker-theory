@@ -1,8 +1,15 @@
 <script lang="ts">
 	import Header from '$lib/components/layout/Header.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
-	import CookieBanner from '$lib/components/layout/CookieBanner.svelte';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	import { dev } from '$app/environment';
 	import '../app.css';
+
+	// Vercel Web Analytics: setzt keine Cookies, speichert keine IP im Klartext und
+	// bildet keine geraeteuebergreifenden Profile. Damit greift § 25 TDDDG nicht und
+	// es laeuft ohne Einwilligung. Sobald hier Affiliate- oder Ad-Tracking dazukommt,
+	// muss der Consent-Banner zurueck.
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
 	let { children } = $props();
 </script>
@@ -17,7 +24,6 @@
 		{@render children()}
 	</main>
 	<Footer />
-	<CookieBanner />
 </div>
 
 <style>
