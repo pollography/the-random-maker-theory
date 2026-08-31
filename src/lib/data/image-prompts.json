@@ -1,0 +1,1658 @@
+{
+	"version": 1,
+	"updatedAt": "2026-08-31",
+	"sourceImage": "/images/blog/ki-bildprompts/00-ausgangsbild.webp",
+	"categories": [
+		{
+			"id": "menschen-posen",
+			"label": "Menschen & Posen",
+			"description": "Blickwinkel, Mimik, Gesten und Kleidung",
+			"order": 1
+		},
+		{
+			"id": "avatare-reaktionen",
+			"label": "Avatare & Reaktionen",
+			"description": "Sticker, Emojis und Profilvarianten",
+			"order": 2
+		},
+		{
+			"id": "alter-transformation",
+			"label": "Alter & Transformation",
+			"description": "Zeit, Entwicklung und alternative Versionen",
+			"order": 3
+		},
+		{
+			"id": "technik-innenansichten",
+			"label": "Technik & Innenansichten",
+			"description": "Querschnitte, Baugruppen und Funktionsgrafiken",
+			"order": 4
+		},
+		{
+			"id": "infografiken-wissen",
+			"label": "Infografiken & Wissen",
+			"description": "Lernkarten, Vergleiche und visuelle Erklärungen",
+			"order": 5
+		},
+		{
+			"id": "welten-filmszenen",
+			"label": "Welten & Filmszenen",
+			"description": "Neue Umgebungen, Genres und filmische Motive",
+			"order": 6
+		},
+		{
+			"id": "spielzeug-sammlerstuecke",
+			"label": "Spielzeug & Sammlerstücke",
+			"description": "Figuren, Karten und kleine Produktideen",
+			"order": 7
+		},
+		{
+			"id": "miniaturwelten",
+			"label": "Miniaturwelten",
+			"description": "Dioramen, Kapseln und winzige Szenen",
+			"order": 8
+		},
+		{
+			"id": "comics-retro",
+			"label": "Comics & Retro",
+			"description": "Panels, Filmstreifen und fiktionale Drucksachen",
+			"order": 9
+		},
+		{
+			"id": "stoff-knete-glas",
+			"label": "Stoff, Knete & Glas",
+			"description": "Materialstile von Plüsch bis Buntglas",
+			"order": 10
+		},
+		{
+			"id": "portraet-look",
+			"label": "Porträt & Look",
+			"description": "Licht, Frisuren, Farben und Profilbilder",
+			"order": 11
+		},
+		{
+			"id": "creator-ki-video",
+			"label": "Creator & KI-Video",
+			"description": "Marke, Merch, Referenzen und Storyboards",
+			"order": 12
+		}
+	],
+	"prompts": [
+		{
+			"id": "turnaround",
+			"command": "/turnaround",
+			"title": "Mehrere Blickwinkel",
+			"category": "menschen-posen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/01-turnaround.webp",
+			"alt": "Mehrere Blickwinkel: echtes Ergebnis des Bildprompts /turnaround",
+			"articleSlug": "kuerzeste-bildprompts-menschen-posen",
+			"useCases": [
+				"Charakterreferenz",
+				"3D-Moodboard",
+				"KI-Video"
+			]
+		},
+		{
+			"id": "expression",
+			"command": "/expression",
+			"title": "Eine starke Mimik",
+			"category": "menschen-posen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/02-expression.webp",
+			"alt": "Eine starke Mimik: echtes Ergebnis des Bildprompts /expression",
+			"articleSlug": "kuerzeste-bildprompts-menschen-posen",
+			"useCases": [
+				"Reaktionsbild",
+				"Thumbnail",
+				"Profilbild"
+			]
+		},
+		{
+			"id": "expressions",
+			"command": "/expressions",
+			"title": "Neun Emotionen im Raster",
+			"category": "menschen-posen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/extra-expressions-plural.webp",
+			"alt": "Neun Emotionen im Raster: echtes Ergebnis des Bildprompts /expressions",
+			"articleSlug": "kuerzeste-bildprompts-menschen-posen",
+			"useCases": [
+				"Emotionsreferenz",
+				"Sticker",
+				"KI-Video"
+			]
+		},
+		{
+			"id": "posepack",
+			"command": "/posepack",
+			"title": "Sechs Ganzkörperposen",
+			"category": "menschen-posen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/03-pose-pack.webp",
+			"alt": "Sechs Ganzkörperposen: echtes Ergebnis des Bildprompts /posepack",
+			"articleSlug": "kuerzeste-bildprompts-menschen-posen",
+			"useCases": [
+				"YouTube-Thumbnails",
+				"KI-Video",
+				"Personenreferenz"
+			]
+		},
+		{
+			"id": "actionposes",
+			"command": "/actionposes",
+			"title": "Gesten für Thumbnails",
+			"category": "menschen-posen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/04-action-poses.webp",
+			"alt": "Gesten für Thumbnails: echtes Ergebnis des Bildprompts /actionposes",
+			"articleSlug": "kuerzeste-bildprompts-menschen-posen",
+			"useCases": [
+				"YouTube-Thumbnails",
+				"Social Media",
+				"Reaktionsbilder"
+			]
+		},
+		{
+			"id": "character-sheet",
+			"command": "/characterSheet",
+			"title": "Komplette Referenztafel",
+			"category": "menschen-posen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/05-character-sheet.webp",
+			"alt": "Komplette Referenztafel: echtes Ergebnis des Bildprompts /characterSheet",
+			"articleSlug": "kuerzeste-bildprompts-menschen-posen",
+			"useCases": [
+				"Charakterdesign",
+				"KI-Video",
+				"3D-Referenz"
+			]
+		},
+		{
+			"id": "emotion-grid",
+			"command": "/emotionGrid",
+			"title": "Klar getrennte Emotionen",
+			"category": "menschen-posen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/06-emotion-grid.webp",
+			"alt": "Klar getrennte Emotionen: echtes Ergebnis des Bildprompts /emotionGrid",
+			"articleSlug": "kuerzeste-bildprompts-menschen-posen",
+			"useCases": [
+				"Mimikreferenz",
+				"Schauspiel",
+				"Avatare"
+			]
+		},
+		{
+			"id": "body-language",
+			"command": "/bodylanguage",
+			"title": "Körpersprache statt Raster",
+			"category": "menschen-posen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/07-body-language.webp",
+			"alt": "Körpersprache statt Raster: echtes Ergebnis des Bildprompts /bodylanguage",
+			"articleSlug": "kuerzeste-bildprompts-menschen-posen",
+			"useCases": [
+				"Posenplanung",
+				"Storytelling",
+				"Fotoshooting"
+			]
+		},
+		{
+			"id": "outfit-variants",
+			"command": "/outfitVariants",
+			"title": "Sechs neue Looks",
+			"category": "menschen-posen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/08-outfit-variants.webp",
+			"alt": "Sechs neue Looks: echtes Ergebnis des Bildprompts /outfitVariants",
+			"articleSlug": "kuerzeste-bildprompts-menschen-posen",
+			"useCases": [
+				"Modeberatung",
+				"Kostümplanung",
+				"Personal Branding"
+			]
+		},
+		{
+			"id": "sticker",
+			"command": "/sticker",
+			"title": "Ein einzelner Cutout",
+			"category": "avatare-reaktionen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/11-sticker.webp",
+			"alt": "Ein einzelner Cutout: echtes Ergebnis des Bildprompts /sticker",
+			"articleSlug": "kuerzeste-bildprompts-avatare-reaktionen",
+			"useCases": [
+				"Messenger",
+				"Social Media",
+				"Profilbild"
+			]
+		},
+		{
+			"id": "sticker-pack",
+			"command": "/stickerPack",
+			"title": "Neun Sticker-Gesten",
+			"category": "avatare-reaktionen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/12-sticker-pack.webp",
+			"alt": "Neun Sticker-Gesten: echtes Ergebnis des Bildprompts /stickerPack",
+			"articleSlug": "kuerzeste-bildprompts-avatare-reaktionen",
+			"useCases": [
+				"Community",
+				"Messenger",
+				"Reaktionen"
+			]
+		},
+		{
+			"id": "emoji-pack",
+			"command": "/emojiPack",
+			"title": "Mensch plus Symbole",
+			"category": "avatare-reaktionen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/13-emoji-pack.webp",
+			"alt": "Mensch plus Symbole: echtes Ergebnis des Bildprompts /emojiPack",
+			"articleSlug": "kuerzeste-bildprompts-avatare-reaktionen",
+			"useCases": [
+				"Emojis",
+				"Social Media",
+				"Community"
+			]
+		},
+		{
+			"id": "reaction-pack",
+			"command": "/reactionPack",
+			"title": "Gesichter statt Deko",
+			"category": "avatare-reaktionen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/14-reaction-pack.webp",
+			"alt": "Gesichter statt Deko: echtes Ergebnis des Bildprompts /reactionPack",
+			"articleSlug": "kuerzeste-bildprompts-avatare-reaktionen",
+			"useCases": [
+				"Reaktionsbilder",
+				"Streaming",
+				"Thumbnails"
+			]
+		},
+		{
+			"id": "avatar-pack",
+			"command": "/avatarPack",
+			"title": "Mehrere Profilansichten",
+			"category": "avatare-reaktionen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/15-avatar-pack.webp",
+			"alt": "Mehrere Profilansichten: echtes Ergebnis des Bildprompts /avatarPack",
+			"articleSlug": "kuerzeste-bildprompts-avatare-reaktionen",
+			"useCases": [
+				"Profilbilder",
+				"Teamseite",
+				"Social Media"
+			]
+		},
+		{
+			"id": "miniature",
+			"command": "/miniature",
+			"title": "Die Person als Figur",
+			"category": "avatare-reaktionen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/16-miniature.webp",
+			"alt": "Die Person als Figur: echtes Ergebnis des Bildprompts /miniature",
+			"articleSlug": "kuerzeste-bildprompts-avatare-reaktionen",
+			"useCases": [
+				"Maskottchen",
+				"Geschenkidee",
+				"Avatar"
+			]
+		},
+		{
+			"id": "giantify",
+			"command": "/giantify",
+			"title": "Riesig in der Stadt",
+			"category": "avatare-reaktionen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/17-giantify.webp",
+			"alt": "Riesig in der Stadt: echtes Ergebnis des Bildprompts /giantify",
+			"articleSlug": "kuerzeste-bildprompts-avatare-reaktionen",
+			"useCases": [
+				"Thumbnail",
+				"Poster",
+				"Storytelling"
+			]
+		},
+		{
+			"id": "age-progression",
+			"command": "/ageprogression",
+			"title": "Vier Altersstufen",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/09-age-progression.webp",
+			"alt": "Vier Altersstufen: echtes Ergebnis des Bildprompts /ageprogression",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Altersvergleich",
+				"Storytelling",
+				"Charakterdesign"
+			]
+		},
+		{
+			"id": "character-evolution",
+			"command": "/characterEvolution",
+			"title": "Eine ganze Lebenslinie",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/10-character-evolution.webp",
+			"alt": "Eine ganze Lebenslinie: echtes Ergebnis des Bildprompts /characterEvolution",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Biografie",
+				"Zeitleiste",
+				"Charakterentwicklung"
+			]
+		},
+		{
+			"id": "clone-scene",
+			"command": "/cloneScene",
+			"title": "Die Person als Gruppe",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/18-clone-scene.webp",
+			"alt": "Die Person als Gruppe: echtes Ergebnis des Bildprompts /cloneScene",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Humor",
+				"Team-Motiv",
+				"Social Media"
+			]
+		},
+		{
+			"id": "multiverse",
+			"command": "/multiverse",
+			"title": "Mehrere Welten auf einmal",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/19-multiverse.webp",
+			"alt": "Mehrere Welten auf einmal: echtes Ergebnis des Bildprompts /multiverse",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Charaktervarianten",
+				"Poster",
+				"Storytelling"
+			]
+		},
+		{
+			"id": "evolution",
+			"command": "/evolution",
+			"title": "Entwicklung als Zeitleiste",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/20-evolution.webp",
+			"alt": "Entwicklung als Zeitleiste: echtes Ergebnis des Bildprompts /evolution",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Vorher-nachher",
+				"Karriere",
+				"Charakterdesign"
+			]
+		},
+		{
+			"id": "before-after",
+			"command": "/beforeAfter",
+			"title": "Ein direkter Vergleich",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/21-before-after.webp",
+			"alt": "Ein direkter Vergleich: echtes Ergebnis des Bildprompts /beforeAfter",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Transformation",
+				"Tutorial",
+				"Case Study"
+			]
+		},
+		{
+			"id": "time-travel",
+			"command": "/timeTravel",
+			"title": "Sofort eine Zeitreise",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/22-time-travel.webp",
+			"alt": "Sofort eine Zeitreise: echtes Ergebnis des Bildprompts /timeTravel",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Geschichte",
+				"Kostüm",
+				"Poster"
+			]
+		},
+		{
+			"id": "future-version",
+			"command": "/futureVersion",
+			"title": "Eine futuristische Variante",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/23-future-version.webp",
+			"alt": "Eine futuristische Variante: echtes Ergebnis des Bildprompts /futureVersion",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Sci-Fi",
+				"Personal Branding",
+				"Konzeptbild"
+			]
+		},
+		{
+			"id": "past-version",
+			"command": "/pastVersion",
+			"title": "Eine historische Variante",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/24-past-version.webp",
+			"alt": "Eine historische Variante: echtes Ergebnis des Bildprompts /pastVersion",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Historie",
+				"Kostüm",
+				"Storytelling"
+			]
+		},
+		{
+			"id": "alternate-reality",
+			"command": "/alternateReality",
+			"title": "Neue Rolle, gleiche Person",
+			"category": "alter-transformation",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/25-alternate-reality.webp",
+			"alt": "Neue Rolle, gleiche Person: echtes Ergebnis des Bildprompts /alternateReality",
+			"articleSlug": "kuerzeste-bildprompts-alter-transformation",
+			"useCases": [
+				"Charakteridee",
+				"Rollenspiel",
+				"Filmkonzept"
+			]
+		},
+		{
+			"id": "cutaway",
+			"command": "/cutaway",
+			"title": "Ein Blick ins Innere",
+			"category": "technik-innenansichten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/26-cutaway.webp",
+			"alt": "Ein Blick ins Innere: echtes Ergebnis des Bildprompts /cutaway",
+			"articleSlug": "kuerzeste-bildprompts-technik-innenansichten",
+			"useCases": [
+				"Produktvisualisierung",
+				"Erklärgrafik",
+				"Konzept"
+			]
+		},
+		{
+			"id": "exploded-view",
+			"command": "/explodedView",
+			"title": "In Einzelteile zerlegt",
+			"category": "technik-innenansichten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/27-exploded-view.webp",
+			"alt": "In Einzelteile zerlegt: echtes Ergebnis des Bildprompts /explodedView",
+			"articleSlug": "kuerzeste-bildprompts-technik-innenansichten",
+			"useCases": [
+				"Produktdesign",
+				"Montage",
+				"Technik"
+			]
+		},
+		{
+			"id": "blueprint",
+			"command": "/blueprint",
+			"title": "Technische Blaupause",
+			"category": "technik-innenansichten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/28-blueprint.webp",
+			"alt": "Technische Blaupause: echtes Ergebnis des Bildprompts /blueprint",
+			"articleSlug": "kuerzeste-bildprompts-technik-innenansichten",
+			"useCases": [
+				"Moodboard",
+				"Produktidee",
+				"Poster"
+			]
+		},
+		{
+			"id": "xray",
+			"command": "/xray",
+			"title": "Röntgenartige Ansicht",
+			"category": "technik-innenansichten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/29-xray.webp",
+			"alt": "Röntgenartige Ansicht: echtes Ergebnis des Bildprompts /xray",
+			"articleSlug": "kuerzeste-bildprompts-technik-innenansichten",
+			"useCases": [
+				"Visualisierung",
+				"Sci-Fi",
+				"Konzept"
+			]
+		},
+		{
+			"id": "anatomy",
+			"command": "/anatomy",
+			"title": "Beschriftete Anatomie",
+			"category": "technik-innenansichten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/30-anatomy.webp",
+			"alt": "Beschriftete Anatomie: echtes Ergebnis des Bildprompts /anatomy",
+			"articleSlug": "kuerzeste-bildprompts-technik-innenansichten",
+			"useCases": [
+				"Lernidee",
+				"Poster",
+				"Konzeptgrafik"
+			]
+		},
+		{
+			"id": "cross-section",
+			"command": "/crossSection",
+			"title": "Querschnitt als Poster",
+			"category": "technik-innenansichten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/31-cross-section.webp",
+			"alt": "Querschnitt als Poster: echtes Ergebnis des Bildprompts /crossSection",
+			"articleSlug": "kuerzeste-bildprompts-technik-innenansichten",
+			"useCases": [
+				"Erklärgrafik",
+				"Produkt",
+				"Architektur"
+			]
+		},
+		{
+			"id": "assembly",
+			"command": "/assembly",
+			"title": "Montage als Baugruppe",
+			"category": "technik-innenansichten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/32-assembly.webp",
+			"alt": "Montage als Baugruppe: echtes Ergebnis des Bildprompts /assembly",
+			"articleSlug": "kuerzeste-bildprompts-technik-innenansichten",
+			"useCases": [
+				"Anleitung",
+				"Produktdesign",
+				"Storyboard"
+			]
+		},
+		{
+			"id": "disassembly",
+			"command": "/disassembly",
+			"title": "Surreal zerlegt",
+			"category": "technik-innenansichten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/33-disassembly.webp",
+			"alt": "Surreal zerlegt: echtes Ergebnis des Bildprompts /disassembly",
+			"articleSlug": "kuerzeste-bildprompts-technik-innenansichten",
+			"useCases": [
+				"Konzeptkunst",
+				"Poster",
+				"Thumbnail"
+			]
+		},
+		{
+			"id": "how-it-works",
+			"command": "/howItWorks",
+			"title": "So funktioniert es",
+			"category": "technik-innenansichten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/34-how-it-works.webp",
+			"alt": "So funktioniert es: echtes Ergebnis des Bildprompts /howItWorks",
+			"articleSlug": "kuerzeste-bildprompts-technik-innenansichten",
+			"useCases": [
+				"Erklärgrafik",
+				"Tutorial",
+				"Produktseite"
+			]
+		},
+		{
+			"id": "mind-map",
+			"command": "/mindMap",
+			"title": "Eine Mindmap aus dem Bild",
+			"category": "infografiken-wissen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/35-mind-map.webp",
+			"alt": "Eine Mindmap aus dem Bild: echtes Ergebnis des Bildprompts /mindMap",
+			"articleSlug": "kuerzeste-bildprompts-infografiken-wissen",
+			"useCases": [
+				"Brainstorming",
+				"Präsentation",
+				"Lernhilfe"
+			]
+		},
+		{
+			"id": "flashcard",
+			"command": "/flashcard",
+			"title": "Eine visuelle Lernkarte",
+			"category": "infografiken-wissen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/36-flashcard.webp",
+			"alt": "Eine visuelle Lernkarte: echtes Ergebnis des Bildprompts /flashcard",
+			"articleSlug": "kuerzeste-bildprompts-infografiken-wissen",
+			"useCases": [
+				"Lernen",
+				"Workshop",
+				"Social Post"
+			]
+		},
+		{
+			"id": "infographic",
+			"command": "/infographic",
+			"title": "Infografik auf einen Klick",
+			"category": "infografiken-wissen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/37-infographic.webp",
+			"alt": "Infografik auf einen Klick: echtes Ergebnis des Bildprompts /infographic",
+			"articleSlug": "kuerzeste-bildprompts-infografiken-wissen",
+			"useCases": [
+				"Präsentation",
+				"Erklärung",
+				"Social Media"
+			]
+		},
+		{
+			"id": "timeline",
+			"command": "/timeline",
+			"title": "Eine visuelle Zeitleiste",
+			"category": "infografiken-wissen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/38-timeline.webp",
+			"alt": "Eine visuelle Zeitleiste: echtes Ergebnis des Bildprompts /timeline",
+			"articleSlug": "kuerzeste-bildprompts-infografiken-wissen",
+			"useCases": [
+				"Biografie",
+				"Prozess",
+				"Geschichte"
+			]
+		},
+		{
+			"id": "visual-guide",
+			"command": "/visualGuide",
+			"title": "Ein kompletter Kurz-Guide",
+			"category": "infografiken-wissen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/39-visual-guide.webp",
+			"alt": "Ein kompletter Kurz-Guide: echtes Ergebnis des Bildprompts /visualGuide",
+			"articleSlug": "kuerzeste-bildprompts-infografiken-wissen",
+			"useCases": [
+				"Anleitung",
+				"Onboarding",
+				"Tutorial"
+			]
+		},
+		{
+			"id": "comparison",
+			"command": "/comparison",
+			"title": "Ein direkter Bildvergleich",
+			"category": "infografiken-wissen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/40-comparison.webp",
+			"alt": "Ein direkter Bildvergleich: echtes Ergebnis des Bildprompts /comparison",
+			"articleSlug": "kuerzeste-bildprompts-infografiken-wissen",
+			"useCases": [
+				"Vorher-nachher",
+				"Auswahl",
+				"Produktvergleich"
+			]
+		},
+		{
+			"id": "environment-expand",
+			"command": "/environmentExpand",
+			"title": "Mehr Umgebung um die Person",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/41-environment-expand.webp",
+			"alt": "Mehr Umgebung um die Person: echtes Ergebnis des Bildprompts /environmentExpand",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Formatwechsel",
+				"Thumbnail",
+				"Banner"
+			]
+		},
+		{
+			"id": "world-build",
+			"command": "/worldBuild",
+			"title": "Eine neue Welt aufbauen",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/42-world-build.webp",
+			"alt": "Eine neue Welt aufbauen: echtes Ergebnis des Bildprompts /worldBuild",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Worldbuilding",
+				"Game Art",
+				"Filmkonzept"
+			]
+		},
+		{
+			"id": "underwater",
+			"command": "/underwater",
+			"title": "Die Person unter Wasser",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/43-underwater.webp",
+			"alt": "Die Person unter Wasser: echtes Ergebnis des Bildprompts /underwater",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Poster",
+				"Musikcover",
+				"Fantasy"
+			]
+		},
+		{
+			"id": "space-scene",
+			"command": "/spaceScene",
+			"title": "Eine Szene im Weltraum",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/44-space-scene.webp",
+			"alt": "Eine Szene im Weltraum: echtes Ergebnis des Bildprompts /spaceScene",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Sci-Fi",
+				"Thumbnail",
+				"Filmstill"
+			]
+		},
+		{
+			"id": "cyberpunk",
+			"command": "/cyberpunk",
+			"title": "Neon und Zukunftsstadt",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/45-cyberpunk.webp",
+			"alt": "Neon und Zukunftsstadt: echtes Ergebnis des Bildprompts /cyberpunk",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Gaming",
+				"Poster",
+				"Profilbild"
+			]
+		},
+		{
+			"id": "post-apocalypse",
+			"command": "/postApocalypse",
+			"title": "Nach dem Ende der Welt",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/46-post-apocalypse.webp",
+			"alt": "Nach dem Ende der Welt: echtes Ergebnis des Bildprompts /postApocalypse",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Filmkonzept",
+				"Game Art",
+				"Storytelling"
+			]
+		},
+		{
+			"id": "portal",
+			"command": "/portal",
+			"title": "Ein visueller Übergang",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/47-portal.webp",
+			"alt": "Ein visueller Übergang: echtes Ergebnis des Bildprompts /portal",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Transition",
+				"Thumbnail",
+				"Fantasy"
+			]
+		},
+		{
+			"id": "dreamscape",
+			"command": "/dreamscape",
+			"title": "Eine surreale Traumwelt",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/48-dreamscape.webp",
+			"alt": "Eine surreale Traumwelt: echtes Ergebnis des Bildprompts /dreamscape",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Kunstmotiv",
+				"Musikcover",
+				"Ideenfindung"
+			]
+		},
+		{
+			"id": "double-exposure",
+			"command": "/doubleExposure",
+			"title": "Zwei Motive in einer Silhouette",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/49-double-exposure.webp",
+			"alt": "Zwei Motive in einer Silhouette: echtes Ergebnis des Bildprompts /doubleExposure",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Poster",
+				"Cover",
+				"Porträtkunst"
+			]
+		},
+		{
+			"id": "movie-scene",
+			"command": "/movieScene",
+			"title": "Direkt wie ein Filmstill",
+			"category": "welten-filmszenen",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/50-movie-scene.webp",
+			"alt": "Direkt wie ein Filmstill: echtes Ergebnis des Bildprompts /movieScene",
+			"articleSlug": "kuerzeste-bildprompts-welten-filmszenen",
+			"useCases": [
+				"Storyboard",
+				"Thumbnail",
+				"Filmkonzept"
+			]
+		},
+		{
+			"id": "starter-pack",
+			"command": "/starterPack",
+			"title": "Eine Person als Set",
+			"category": "spielzeug-sammlerstuecke",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/51-starter-pack.webp",
+			"alt": "Eine Person als Set: echtes Ergebnis des Bildprompts /starterPack",
+			"articleSlug": "bildprompts-spielzeug-sammlerstuecke",
+			"useCases": [
+				"Team-Intro",
+				"Geschenk-Mockup",
+				"Personal Brand"
+			]
+		},
+		{
+			"id": "bobblehead",
+			"command": "/bobblehead",
+			"title": "Der klassische Wackelkopf",
+			"category": "spielzeug-sammlerstuecke",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/52-bobblehead.webp",
+			"alt": "Der klassische Wackelkopf: echtes Ergebnis des Bildprompts /bobblehead",
+			"articleSlug": "bildprompts-spielzeug-sammlerstuecke",
+			"useCases": [
+				"Profilavatar",
+				"Figurenkonzept",
+				"Podcast-Cover"
+			]
+		},
+		{
+			"id": "designer-toy",
+			"command": "/designerToy",
+			"title": "Ein starkes Maskottchen",
+			"category": "spielzeug-sammlerstuecke",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/53-designer-toy.webp",
+			"alt": "Ein starkes Maskottchen: echtes Ergebnis des Bildprompts /designerToy",
+			"articleSlug": "bildprompts-spielzeug-sammlerstuecke",
+			"useCases": [
+				"Kanal-Maskottchen",
+				"Sticker",
+				"Community"
+			]
+		},
+		{
+			"id": "desk-figurine",
+			"command": "/deskFigurine",
+			"title": "Figur auf dem Schreibtisch",
+			"category": "spielzeug-sammlerstuecke",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/54-desk-figurine.webp",
+			"alt": "Figur auf dem Schreibtisch: echtes Ergebnis des Bildprompts /deskFigurine",
+			"articleSlug": "bildprompts-spielzeug-sammlerstuecke",
+			"useCases": [
+				"Geschenkidee",
+				"Teamseite",
+				"Social Post"
+			]
+		},
+		{
+			"id": "trading-card",
+			"command": "/tradingCard",
+			"title": "Eine persönliche Sammelkarte",
+			"category": "spielzeug-sammlerstuecke",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/55-trading-card.webp",
+			"alt": "Eine persönliche Sammelkarte: echtes Ergebnis des Bildprompts /tradingCard",
+			"articleSlug": "bildprompts-spielzeug-sammlerstuecke",
+			"useCases": [
+				"Teamkarte",
+				"Spielprototyp",
+				"Community"
+			]
+		},
+		{
+			"id": "pin-collection",
+			"command": "/pinCollection",
+			"title": "Eine eigene Pin-Kollektion",
+			"category": "spielzeug-sammlerstuecke",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/56-pin-collection.webp",
+			"alt": "Eine eigene Pin-Kollektion: echtes Ergebnis des Bildprompts /pinCollection",
+			"articleSlug": "bildprompts-spielzeug-sammlerstuecke",
+			"useCases": [
+				"Moodboard",
+				"Community",
+				"Merch"
+			]
+		},
+		{
+			"id": "mini-me",
+			"command": "/miniMe",
+			"title": "Das kleine Ich",
+			"category": "miniaturwelten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/57-mini-me.webp",
+			"alt": "Das kleine Ich: echtes Ergebnis des Bildprompts /miniMe",
+			"articleSlug": "bildprompts-miniaturwelten",
+			"useCases": [
+				"Familiengeschichte",
+				"Mentoring",
+				"Vorher-nachher"
+			]
+		},
+		{
+			"id": "tiny-workers",
+			"command": "/tinyWorkers",
+			"title": "Winzige Helfer bei der Arbeit",
+			"category": "miniaturwelten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/58-tiny-workers.webp",
+			"alt": "Winzige Helfer bei der Arbeit: echtes Ergebnis des Bildprompts /tinyWorkers",
+			"articleSlug": "bildprompts-miniaturwelten",
+			"useCases": [
+				"YouTube-Thumbnails",
+				"Reparatur",
+				"Website-Wartung"
+			]
+		},
+		{
+			"id": "diorama",
+			"command": "/diorama",
+			"title": "Eine eigene kleine Bühne",
+			"category": "miniaturwelten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/59-diorama.webp",
+			"alt": "Eine eigene kleine Bühne: echtes Ergebnis des Bildprompts /diorama",
+			"articleSlug": "bildprompts-miniaturwelten",
+			"useCases": [
+				"Berufsprofil",
+				"Setplanung",
+				"Buchcover"
+			]
+		},
+		{
+			"id": "snow-globe",
+			"command": "/snowGlobe",
+			"title": "Die Szene in einer Schneekugel",
+			"category": "miniaturwelten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/60-snow-globe.webp",
+			"alt": "Die Szene in einer Schneekugel: echtes Ergebnis des Bildprompts /snowGlobe",
+			"articleSlug": "bildprompts-miniaturwelten",
+			"useCases": [
+				"Weihnachtskarte",
+				"Winterkampagne",
+				"Loop-Idee"
+			]
+		},
+		{
+			"id": "paper-doll",
+			"command": "/paperDoll",
+			"title": "Outfitplanung auf Papier",
+			"category": "miniaturwelten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/61-paper-doll.webp",
+			"alt": "Outfitplanung auf Papier: echtes Ergebnis des Bildprompts /paperDoll",
+			"articleSlug": "bildprompts-miniaturwelten",
+			"useCases": [
+				"Outfit-Moodboard",
+				"Kostüm",
+				"Spielidee"
+			]
+		},
+		{
+			"id": "gachapon",
+			"command": "/gachapon",
+			"title": "Die Figur in einer Kapsel",
+			"category": "miniaturwelten",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/62-gachapon.webp",
+			"alt": "Die Figur in einer Kapsel: echtes Ergebnis des Bildprompts /gachapon",
+			"articleSlug": "bildprompts-miniaturwelten",
+			"useCases": [
+				"Blind Box",
+				"Serienfigur",
+				"Community Reward"
+			]
+		},
+		{
+			"id": "comic-strip",
+			"command": "/comicStrip",
+			"title": "Vier Panels, vier Reaktionen",
+			"category": "comics-retro",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/63-comic-strip.webp",
+			"alt": "Vier Panels, vier Reaktionen: echtes Ergebnis des Bildprompts /comicStrip",
+			"articleSlug": "bildprompts-comics-retro",
+			"useCases": [
+				"Social Carousel",
+				"Erklärung",
+				"Storyboard"
+			]
+		},
+		{
+			"id": "fantasy-newspaper",
+			"command": "/fantasyNewspaper",
+			"title": "Eine fiktionale Titelseite",
+			"category": "comics-retro",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/64-fantasy-newspaper.webp",
+			"alt": "Eine fiktionale Titelseite: echtes Ergebnis des Bildprompts /fantasyNewspaper",
+			"articleSlug": "bildprompts-comics-retro",
+			"useCases": [
+				"Rollenspiel",
+				"Escape Room",
+				"Geschenk"
+			]
+		},
+		{
+			"id": "film-strip",
+			"command": "/filmStrip",
+			"title": "Ein Kontaktbogen mit Persönlichkeit",
+			"category": "comics-retro",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/65-film-strip.webp",
+			"alt": "Ein Kontaktbogen mit Persönlichkeit: echtes Ergebnis des Bildprompts /filmStrip",
+			"articleSlug": "bildprompts-comics-retro",
+			"useCases": [
+				"About-Seite",
+				"Casting",
+				"Expression-Auswahl"
+			]
+		},
+		{
+			"id": "travel-scrapbook",
+			"command": "/travelScrapbook",
+			"title": "Ein illustriertes Reisetagebuch",
+			"category": "comics-retro",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/66-travel-scrapbook.webp",
+			"alt": "Ein illustriertes Reisetagebuch: echtes Ergebnis des Bildprompts /travelScrapbook",
+			"articleSlug": "bildprompts-comics-retro",
+			"useCases": [
+				"Reiseidee",
+				"Geschenkseite",
+				"Jahresrückblick"
+			]
+		},
+		{
+			"id": "tarot-card",
+			"command": "/tarotCard",
+			"title": "Eine symbolische Charakterkarte",
+			"category": "comics-retro",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/67-tarot-card.webp",
+			"alt": "Eine symbolische Charakterkarte: echtes Ergebnis des Bildprompts /tarotCard",
+			"articleSlug": "bildprompts-comics-retro",
+			"useCases": [
+				"Musikcover",
+				"Rollenspiel",
+				"Archetypen"
+			]
+		},
+		{
+			"id": "game-screen",
+			"command": "/gameScreen",
+			"title": "Die Person als Spielfigur",
+			"category": "comics-retro",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/68-game-screen.webp",
+			"alt": "Die Person als Spielfigur: echtes Ergebnis des Bildprompts /gameScreen",
+			"articleSlug": "bildprompts-comics-retro",
+			"useCases": [
+				"Game-Konzept",
+				"UI-Moodboard",
+				"Charakteridee"
+			]
+		},
+		{
+			"id": "scribble",
+			"command": "/scribble",
+			"title": "Porträt als Kritzelei",
+			"category": "stoff-knete-glas",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/69-scribble.webp",
+			"alt": "Porträt als Kritzelei: echtes Ergebnis des Bildprompts /scribble",
+			"articleSlug": "bildprompts-stoff-knete-glas",
+			"useCases": [
+				"Avatar",
+				"Notizbuch-Cover",
+				"Thumbnail"
+			]
+		},
+		{
+			"id": "claymation",
+			"command": "/claymation",
+			"title": "Sichtbar modellierte Knete",
+			"category": "stoff-knete-glas",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/70-claymation.webp",
+			"alt": "Sichtbar modellierte Knete: echtes Ergebnis des Bildprompts /claymation",
+			"articleSlug": "bildprompts-stoff-knete-glas",
+			"useCases": [
+				"Kinderinhalt",
+				"Erklärvideo",
+				"Kanalfigur"
+			]
+		},
+		{
+			"id": "plush-toy",
+			"command": "/plushToy",
+			"title": "Ein komplettes Stofftier",
+			"category": "stoff-knete-glas",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/71-plush-toy.webp",
+			"alt": "Ein komplettes Stofftier: echtes Ergebnis des Bildprompts /plushToy",
+			"articleSlug": "bildprompts-stoff-knete-glas",
+			"useCases": [
+				"Maskottchen",
+				"Geschenkidee",
+				"Shop-Mockup"
+			]
+		},
+		{
+			"id": "amigurumi",
+			"command": "/amigurumi",
+			"title": "Die Person als Häkelpuppe",
+			"category": "stoff-knete-glas",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/72-amigurumi.webp",
+			"alt": "Die Person als Häkelpuppe: echtes Ergebnis des Bildprompts /amigurumi",
+			"articleSlug": "bildprompts-stoff-knete-glas",
+			"useCases": [
+				"Handarbeit",
+				"Geschenk",
+				"Profilfigur"
+			]
+		},
+		{
+			"id": "embroidery",
+			"command": "/embroidery",
+			"title": "Das Porträt als Stickmotiv",
+			"category": "stoff-knete-glas",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/73-embroidery.webp",
+			"alt": "Das Porträt als Stickmotiv: echtes Ergebnis des Bildprompts /embroidery",
+			"articleSlug": "bildprompts-stoff-knete-glas",
+			"useCases": [
+				"Patch",
+				"Textil-Moodboard",
+				"Albumcover"
+			]
+		},
+		{
+			"id": "stained-glass",
+			"command": "/stainedGlass",
+			"title": "Porträt aus Buntglas",
+			"category": "stoff-knete-glas",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/74-stained-glass.webp",
+			"alt": "Porträt aus Buntglas: echtes Ergebnis des Bildprompts /stainedGlass",
+			"articleSlug": "bildprompts-stoff-knete-glas",
+			"useCases": [
+				"Poster",
+				"Musikcover",
+				"Einladung"
+			]
+		},
+		{
+			"id": "studio-headshot",
+			"command": "/studioHeadshot",
+			"title": "Ein klares Studio-Porträt",
+			"category": "portraet-look",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/75-studio-headshot.webp",
+			"alt": "Ein klares Studio-Porträt: echtes Ergebnis des Bildprompts /studioHeadshot",
+			"articleSlug": "bildprompts-portraet-verbessern",
+			"useCases": [
+				"Profilbild",
+				"LinkedIn",
+				"About-Seite"
+			]
+		},
+		{
+			"id": "color-analysis",
+			"command": "/colorAnalysis",
+			"title": "Farben rund um das Porträt",
+			"category": "portraet-look",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/76-color-analysis.webp",
+			"alt": "Farben rund um das Porträt: echtes Ergebnis des Bildprompts /colorAnalysis",
+			"articleSlug": "bildprompts-portraet-verbessern",
+			"useCases": [
+				"Outfitfarben",
+				"Moodboard",
+				"Einkaufsidee"
+			]
+		},
+		{
+			"id": "hairstyle-grid",
+			"command": "/hairstyleGrid",
+			"title": "Neun Frisuren auf einmal",
+			"category": "portraet-look",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/77-hairstyle-grid.webp",
+			"alt": "Neun Frisuren auf einmal: echtes Ergebnis des Bildprompts /hairstyleGrid",
+			"articleSlug": "bildprompts-portraet-verbessern",
+			"useCases": [
+				"Frisurenvergleich",
+				"Figurenentwicklung",
+				"Kostüm"
+			]
+		},
+		{
+			"id": "fix-lighting",
+			"command": "/fixLighting",
+			"title": "Automatische Lichtkorrektur",
+			"category": "portraet-look",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/78-fix-lighting.webp",
+			"alt": "Automatische Lichtkorrektur: echtes Ergebnis des Bildprompts /fixLighting",
+			"articleSlug": "bildprompts-portraet-verbessern",
+			"useCases": [
+				"Farbstich",
+				"Schatten",
+				"Profilbild"
+			]
+		},
+		{
+			"id": "cover-pack",
+			"command": "/coverPack",
+			"title": "Mehrere Cover-Ideen",
+			"category": "portraet-look",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/79-cover-pack.webp",
+			"alt": "Mehrere Cover-Ideen: echtes Ergebnis des Bildprompts /coverPack",
+			"articleSlug": "bildprompts-portraet-verbessern",
+			"useCases": [
+				"Thumbnail",
+				"Cover",
+				"Mockup"
+			]
+		},
+		{
+			"id": "career-caricature",
+			"command": "/careerCaricature",
+			"title": "Beruf als Karikatur",
+			"category": "portraet-look",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/80-career-caricature.webp",
+			"alt": "Beruf als Karikatur: echtes Ergebnis des Bildprompts /careerCaricature",
+			"articleSlug": "bildprompts-portraet-verbessern",
+			"useCases": [
+				"LinkedIn",
+				"Teamvorstellung",
+				"Geschenk"
+			]
+		},
+		{
+			"id": "brand-board",
+			"command": "/brandBoard",
+			"title": "Eine komplette Markenrichtung",
+			"category": "creator-ki-video",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/81-brand-board.webp",
+			"alt": "Eine komplette Markenrichtung: echtes Ergebnis des Bildprompts /brandBoard",
+			"articleSlug": "bildprompts-creator-ki-video",
+			"useCases": [
+				"Personal Branding",
+				"Kanaldesign",
+				"Moodboard"
+			]
+		},
+		{
+			"id": "packaging-board",
+			"command": "/packagingBoard",
+			"title": "Verpackungen als Moodboard",
+			"category": "creator-ki-video",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/82-packaging-board.webp",
+			"alt": "Verpackungen als Moodboard: echtes Ergebnis des Bildprompts /packagingBoard",
+			"articleSlug": "bildprompts-creator-ki-video",
+			"useCases": [
+				"Produktidee",
+				"Pitch",
+				"Verpackung"
+			]
+		},
+		{
+			"id": "merch-mockup",
+			"command": "/merchMockup",
+			"title": "Motiv auf Merch-Produkten",
+			"category": "creator-ki-video",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/83-merch-mockup.webp",
+			"alt": "Motiv auf Merch-Produkten: echtes Ergebnis des Bildprompts /merchMockup",
+			"articleSlug": "bildprompts-creator-ki-video",
+			"useCases": [
+				"Shop",
+				"Community",
+				"Produkttest"
+			]
+		},
+		{
+			"id": "contact-sheet",
+			"command": "/contactSheet",
+			"title": "Die wichtigste Personenreferenz",
+			"category": "creator-ki-video",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/84-contact-sheet.webp",
+			"alt": "Die wichtigste Personenreferenz: echtes Ergebnis des Bildprompts /contactSheet",
+			"articleSlug": "bildprompts-creator-ki-video",
+			"useCases": [
+				"KI-Video",
+				"Charakterdesign",
+				"3D-Moodboard"
+			]
+		},
+		{
+			"id": "storyboard",
+			"command": "/storyboard",
+			"title": "Ein kompletter visueller Ablauf",
+			"category": "creator-ki-video",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/85-storyboard.webp",
+			"alt": "Ein kompletter visueller Ablauf: echtes Ergebnis des Bildprompts /storyboard",
+			"articleSlug": "bildprompts-creator-ki-video",
+			"useCases": [
+				"Shotlist",
+				"Reel",
+				"Werbefilm"
+			]
+		},
+		{
+			"id": "first-last-frame",
+			"command": "/firstLastFrame",
+			"title": "Start- und Endbild",
+			"category": "creator-ki-video",
+			"status": "tested",
+			"image": "/images/blog/ki-bildprompts/86-first-last-frame.webp",
+			"alt": "Start- und Endbild: echtes Ergebnis des Bildprompts /firstLastFrame",
+			"articleSlug": "bildprompts-creator-ki-video",
+			"useCases": [
+				"KI-Video",
+				"Transformation",
+				"Keyframes"
+			]
+		},
+		{
+			"id": "paparazzi-portrait",
+			"command": "/paparazzi",
+			"title": "Paparazzi-Blitzlicht-Porträt",
+			"category": "portraet-look",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Editorial",
+				"Musikcover",
+				"Social Media"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "long-exposure-portrait",
+			"command": "/longExposurePortrait",
+			"title": "Porträt mit Langzeitbelichtung",
+			"category": "portraet-look",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Poster",
+				"Street-Foto",
+				"Cover"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "fashion-triptych",
+			"command": "/fashionTriptych",
+			"title": "Modeporträt als Triptychon",
+			"category": "portraet-look",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Fashion",
+				"Lookbook",
+				"Social Carousel"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "yearbook",
+			"command": "/yearbook",
+			"title": "Porträt im Jahrbuch-Stil",
+			"category": "comics-retro",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Retro",
+				"Teamseite",
+				"Geschenk"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "photo-booth-strip",
+			"command": "/photoBoothStrip",
+			"title": "Klassischer Fotoautomaten-Streifen",
+			"category": "comics-retro",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Profilbild",
+				"Einladung",
+				"Social Media"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "paper-mosaic",
+			"command": "/paperMosaic",
+			"title": "Porträt aus Papierfragmenten",
+			"category": "stoff-knete-glas",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Poster",
+				"Cover",
+				"Kunstmotiv"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "typographic-portrait",
+			"command": "/typographicPortrait",
+			"title": "Porträt aus wiederholter Typografie",
+			"category": "creator-ki-video",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Poster",
+				"Marke",
+				"Editorial"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "giant-avatar",
+			"command": "/giantAvatar",
+			"title": "Person neben einer riesigen 3D-Version",
+			"category": "alter-transformation",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Thumbnail",
+				"Kampagne",
+				"Humor"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "chrome-sculpture",
+			"command": "/chromeSculpture",
+			"title": "Porträt als Chromskulptur",
+			"category": "stoff-knete-glas",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Produktvisual",
+				"Cover",
+				"Kunstmotiv"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "balloon-sculpture",
+			"command": "/balloonSculpture",
+			"title": "Person als Ballonskulptur",
+			"category": "stoff-knete-glas",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Event",
+				"Humor",
+				"Werbemotiv"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "paper-craft",
+			"command": "/paperCraft",
+			"title": "Person als Papiermodell",
+			"category": "miniaturwelten",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Bastelidee",
+				"Kinderinhalt",
+				"Poster"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "wood-carving",
+			"command": "/woodCarving",
+			"title": "Porträt als Holzschnitzerei",
+			"category": "stoff-knete-glas",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Handwerk",
+				"Geschenk",
+				"Kunstmotiv"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "shadow-box",
+			"command": "/shadowBox",
+			"title": "Szene als mehrlagiger Schaukasten",
+			"category": "miniaturwelten",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Diorama",
+				"Geschenk",
+				"Dekoration"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "collectible-coin",
+			"command": "/collectibleCoin",
+			"title": "Porträt auf einer Sammlermünze",
+			"category": "spielzeug-sammlerstuecke",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Sammlerstück",
+				"Community",
+				"Jubiläum"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "postage-stamp",
+			"command": "/postageStamp",
+			"title": "Porträt als Briefmarke",
+			"category": "comics-retro",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Einladung",
+				"Geschenk",
+				"Retro"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "character-select",
+			"command": "/characterSelect",
+			"title": "Person als Charakterauswahl",
+			"category": "creator-ki-video",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Game UI",
+				"Varianten",
+				"Community"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		},
+		{
+			"id": "story-sequence",
+			"command": "/storySequence",
+			"title": "Konsistente Geschichte in mehreren Bildern",
+			"category": "creator-ki-video",
+			"status": "idea",
+			"image": null,
+			"alt": null,
+			"articleSlug": null,
+			"useCases": [
+				"Storyboard",
+				"KI-Video",
+				"Social Carousel"
+			],
+			"researchNote": "Recherchekandidat vom 31.08.2026; vor Veröffentlichung mit dem TRMT-Porträt testen."
+		}
+	]
+}
