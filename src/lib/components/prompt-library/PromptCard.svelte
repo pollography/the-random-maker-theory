@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { copyPromptText } from '$lib/utils/prompt-actions.js';
-	import { getPromptThumbnail } from '$lib/utils/prompt-library.js';
+	import { getPromptCopyText, getPromptThumbnail } from '$lib/utils/prompt-library.js';
 
 	type Prompt = {
 		id: string;
@@ -13,6 +13,8 @@
 		alt: string;
 		articleSlug: string;
 		useCases: string[];
+		promptType?: string;
+		promptText?: string;
 	};
 
 	let {
@@ -28,6 +30,7 @@
 	} = $props();
 	let previewImage = $derived(prompt.displayImage ?? prompt.image);
 	let thumbnailImage = $derived(getPromptThumbnail(previewImage));
+	let copyText = $derived(getPromptCopyText(prompt));
 	let status = $state('');
 	let statusState = $state<'success' | 'error'>('success');
 	let statusTimer: ReturnType<typeof setTimeout> | undefined;
@@ -43,7 +46,7 @@
 
 	async function copyPrompt() {
 		try {
-			await copyPromptText(prompt.command, navigator.clipboard, document);
+			await copyPromptText(copyText, navigator.clipboard, document);
 			showStatus('Kopiert', 'success');
 		} catch {
 			showStatus('Bitte manuell markieren', 'error');
@@ -78,7 +81,10 @@
 		<h2>{prompt.title}</h2>
 
 		<div class="command-row">
-			<code>{prompt.command}</code>
+			<div class="command-label">
+				<code>{prompt.command}</code>
+				{#if prompt.promptType === 'detailed'}<span>Ausführlicher Prompt</span>{/if}
+			</div>
 			<button type="button" class="copy-button" onclick={copyPrompt} aria-label="Prompt kopieren: {prompt.command}">
 				<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
 					<rect x="8" y="8" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.8" />
@@ -87,6 +93,13 @@
 				Prompt kopieren
 			</button>
 		</div>
+
+		{#if prompt.promptType === 'detailed' && prompt.promptText}
+			<details class="prompt-details">
+				<summary>Vollständigen Prompt anzeigen</summary>
+				<p>{prompt.promptText}</p>
+			</details>
+		{/if}
 
 		<ul class="use-cases" aria-label="Einsatzmöglichkeiten">
 			{#each prompt.useCases.slice(0, 3) as useCase}
@@ -199,6 +212,48 @@
 		background: var(--color-base);
 		border: 1px solid var(--color-border-subtle);
 		border-radius: var(--radius-md);
+	}
+
+	.command-label {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		gap: 8px;
+		flex-wrap: wrap;
+	}
+
+	.command-label span {
+		padding: 3px 7px;
+		background: color-mix(in srgb, var(--color-accent-teal) 12%, transparent);
+		border: 1px solid color-mix(in srgb, var(--color-accent-teal) 32%, transparent);
+		border-radius: var(--radius-full);
+		color: var(--color-accent-teal);
+		font-size: 0.58rem;
+		font-weight: 800;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+	}
+
+	.prompt-details {
+		padding: 9px 11px;
+		background: color-mix(in srgb, var(--color-accent-teal) 5%, var(--color-elevated));
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-md);
+	}
+
+	.prompt-details summary {
+		color: var(--color-text-muted);
+		font-size: 0.7rem;
+		font-weight: 750;
+		cursor: pointer;
+	}
+
+	.prompt-details p {
+		margin: 9px 0 0;
+		color: var(--color-text-muted);
+		font-family: var(--font-mono);
+		font-size: 0.65rem;
+		line-height: 1.55;
 	}
 
 	code {

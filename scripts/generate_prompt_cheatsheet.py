@@ -64,6 +64,15 @@ PAGE_DEFINITIONS = [
 ]
 
 
+def is_short_tested_prompt(prompt: dict[str, Any]) -> bool:
+    """Return only the 87 tested slash prompts intended for the compact sheet."""
+
+    return (
+        prompt.get("status") == "tested"
+        and prompt.get("promptType", "short") == "short"
+    )
+
+
 def load_library(path: Path = DATA_PATH) -> dict[str, Any]:
     """Load the canonical prompt library."""
 
@@ -74,7 +83,7 @@ def load_library(path: Path = DATA_PATH) -> dict[str, Any]:
 def build_page_groups(data: dict[str, Any]) -> list[dict[str, Any]]:
     """Group tested prompts into the six approved PDF pages."""
 
-    tested = [prompt for prompt in data["prompts"] if prompt.get("status") == "tested"]
+    tested = [prompt for prompt in data["prompts"] if is_short_tested_prompt(prompt)]
     groups = []
     for definition in PAGE_DEFINITIONS:
         category_ids = set(definition["categories"])
@@ -86,7 +95,7 @@ def build_page_groups(data: dict[str, Any]) -> list[dict[str, Any]]:
 def validate_export(data: dict[str, Any], groups: list[dict[str, Any]]) -> None:
     """Reject incomplete or duplicated export data before drawing anything."""
 
-    tested = [prompt for prompt in data["prompts"] if prompt.get("status") == "tested"]
+    tested = [prompt for prompt in data["prompts"] if is_short_tested_prompt(prompt)]
     exported = [prompt for group in groups for prompt in group["prompts"]]
     tested_commands = [prompt["command"] for prompt in tested]
     exported_commands = [prompt["command"] for prompt in exported]

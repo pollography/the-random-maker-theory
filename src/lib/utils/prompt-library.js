@@ -10,6 +10,10 @@
  * @property {string | null} alt
  * @property {string | null} articleSlug
  * @property {string[]} useCases
+ * @property {string} [promptType]
+ * @property {string} [promptText]
+ * @property {string} [series]
+ * @property {string} [verdict]
  */
 
 /**
@@ -27,7 +31,7 @@ export function getPublicPrompts(data) {
 /**
  * Filter public prompts by category and a case-insensitive free-text query.
  *
- * @param {Array<{ command: string, title: string, category: string, useCases: string[] }>} prompts
+ * @param {Array<{ command: string, promptText?: string, title: string, category: string, useCases: string[] }>} prompts
  * @param {Array<{ id: string, label: string }>} categories
  * @param {string} [query]
  * @param {string} [categoryId]
@@ -42,6 +46,7 @@ export function filterPrompts(prompts, categories, query = '', categoryId = 'all
 
 		const haystack = [
 			prompt.command,
+			prompt.promptText ?? '',
 			prompt.title,
 			categoryLabels.get(prompt.category) ?? '',
 			...(prompt.useCases ?? [])
@@ -51,6 +56,17 @@ export function filterPrompts(prompts, categories, query = '', categoryId = 'all
 
 		return haystack.includes(term);
 	});
+}
+
+/**
+ * Return the text that reproduces the tested result.
+ * Existing one-word entries copy their slash command; detailed entries copy
+ * the full tested prompt instead of pretending the mnemonic is a model command.
+ *
+ * @param {{ promptText?: string, command: string }} prompt
+ */
+export function getPromptCopyText(prompt) {
+	return prompt.promptText?.trim() || prompt.command;
 }
 
 /**
@@ -118,6 +134,9 @@ export function validatePromptLibrary(data, options = {}) {
 			}
 			if (prompt.displayImage && options.imageExists && !options.imageExists(prompt.displayImage)) {
 				errors.push(`${prompt.command} references a missing display image: ${prompt.displayImage}`);
+			}
+			if (prompt.promptType === 'detailed' && !prompt.promptText?.trim()) {
+				errors.push(`${prompt.command} is detailed but has no full prompt text.`);
 			}
 		} else if (prompt.status !== 'idea') {
 			errors.push(`${prompt.command ?? prompt.id} has an unsupported status.`);

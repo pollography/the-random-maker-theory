@@ -7,7 +7,12 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 
-from generate_prompt_cheatsheet import build_page_groups, load_library, prepare_image  # noqa: E402
+from generate_prompt_cheatsheet import (  # noqa: E402
+    build_page_groups,
+    is_short_tested_prompt,
+    load_library,
+    prepare_image,
+)
 
 
 class PromptCheatSheetTests(unittest.TestCase):
@@ -20,7 +25,7 @@ class PromptCheatSheetTests(unittest.TestCase):
         self.assertEqual(len(self.groups), 6)
 
     def test_export_covers_every_tested_prompt_once(self):
-        tested = [prompt for prompt in self.data["prompts"] if prompt["status"] == "tested"]
+        tested = [prompt for prompt in self.data["prompts"] if is_short_tested_prompt(prompt)]
         exported = [prompt for group in self.groups for prompt in group["prompts"]]
 
         self.assertEqual(len(tested), 87)
@@ -36,6 +41,7 @@ class PromptCheatSheetTests(unittest.TestCase):
 
         self.assertTrue(exported)
         self.assertTrue(all(prompt["status"] == "tested" for prompt in exported))
+        self.assertTrue(all(prompt.get("promptType", "short") == "short" for prompt in exported))
         self.assertFalse(any(prompt["status"] == "idea" for prompt in exported))
 
     def test_no_page_exceeds_eighteen_cards(self):

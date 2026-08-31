@@ -8,6 +8,7 @@ import test from 'node:test';
 import {
 	filterPrompts,
 	getCategoryCounts,
+	getPromptCopyText,
 	getPublicPrompts,
 	validatePromptLibrary
 } from './prompt-library.js';
@@ -30,20 +31,26 @@ const expectedCategoryIds = [
 	'comics-retro',
 	'stoff-knete-glas',
 	'portraet-look',
-	'creator-ki-video'
+	'creator-ki-video',
+	'kamera-produktion',
+	'fotoexperimente',
+	'material-handwerk',
+	'maker-tech',
+	'raw-camera-looks',
+	'produkt-design'
 ];
 
-test('canonical library exposes exactly 87 tested prompts and keeps research ideas private', () => {
+test('canonical library exposes exactly 123 tested prompts and keeps research ideas private', () => {
 	const publicPrompts = getPublicPrompts(data);
 	const allPrompts = /** @type {Array<{ status: string }>} */ (data.prompts);
 
-	assert.equal(publicPrompts.length, 87);
+	assert.equal(publicPrompts.length, 123);
 	assert.ok(allPrompts.some((prompt) => prompt.status === 'idea'));
 	assert.ok(publicPrompts.every((prompt) => prompt.status === 'tested' && prompt.image));
 	assert.ok(publicPrompts.every((prompt) => prompt.command.startsWith('/')));
 });
 
-test('canonical library uses the twelve approved categories in their stable order', () => {
+test('canonical library uses the eighteen approved categories in their stable order', () => {
 	const allCategories = /** @type {Array<{ id: string }>} */ (data.categories);
 	assert.deepEqual(
 		allCategories.map((category) => category.id),
@@ -95,6 +102,24 @@ test('search finds commands, titles, category labels, and use cases without case
 			(prompt) => prompt.category === 'miniaturwelten'
 		)
 	);
+	assert.deepEqual(
+		filterPrompts(publicPrompts, data.categories, 'volumetric hologram projector', 'all').map(
+			(prompt) => prompt.command
+		),
+		['/hologram']
+	);
+});
+
+test('detailed entries copy the tested full prompt while short entries keep the slash command', () => {
+	const prompts = getPublicPrompts(data);
+	const shortPrompt = prompts.find((prompt) => prompt.command === '/posepack');
+	const detailedPrompt = prompts.find((prompt) => prompt.command === '/behindTheScenes');
+
+	assert.ok(shortPrompt);
+	assert.ok(detailedPrompt);
+	assert.equal(getPromptCopyText(shortPrompt), '/posepack');
+	assert.match(getPromptCopyText(detailedPrompt), /behind-the-scenes studio photograph/i);
+	assert.equal(detailedPrompt.promptType, 'detailed');
 });
 
 test('search and category filters compose deterministically', () => {
@@ -114,10 +139,10 @@ test('category counts cover all tested prompts and preserve zero-safe output', (
 	const publicPrompts = getPublicPrompts(data);
 	const counts = getCategoryCounts(publicPrompts, data.categories);
 
-	assert.equal(counts.all, 87);
+	assert.equal(counts.all, 123);
 	assert.equal(
 		expectedCategoryIds.reduce((total, categoryId) => total + counts[categoryId], 0),
-		87
+		123
 	);
 	for (const categoryId of expectedCategoryIds) assert.ok(counts[categoryId] > 0);
 });
@@ -134,12 +159,15 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(card, /Prompt kopieren/);
 	assert.match(card, /aria-live="polite"/);
 	assert.match(card, /copyPromptText/);
+	assert.match(card, /getPromptCopyText/);
+	assert.match(card, /Ausführlicher Prompt/);
 	assert.match(library, /type="search"/);
 	assert.match(library, /Prompt suchen/);
 	assert.match(library, /filterPrompts/);
 	assert.match(page, /Bildprompt-Library/);
-	assert.match(page, /PDF-Cheat-Sheet/);
+	assert.match(page, /Kurzprompt-Cheat-Sheet/);
 	assert.match(page, /\/downloads\/trmt-bildprompt-cheatsheet\.pdf/);
+	assert.match(page, /\/downloads\/trmt-ultimate-bildprompts-part-3\.pdf/);
 	assert.match(page, /@media \(max-width: 760px\)[\s\S]*h1 \{ font-size:/);
 });
 

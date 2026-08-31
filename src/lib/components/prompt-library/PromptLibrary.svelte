@@ -14,6 +14,8 @@
 		alt: string;
 		articleSlug: string;
 		useCases: string[];
+		promptType?: string;
+		promptText?: string;
 	};
 
 	type Category = {

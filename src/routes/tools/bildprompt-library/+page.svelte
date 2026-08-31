@@ -6,7 +6,7 @@
 	const prompts = getPublicPrompts(promptData);
 	const categories = promptData.categories;
 	const canonicalUrl = 'https://therandommakertheory.com/tools/bildprompt-library';
-	const pageDescription = '87 kurze Bildprompts, echte Ergebnisse und direkte Copy-Buttons. Durchsuche die kostenlose TRMT Bildprompt-Library und lade das PDF-Cheat-Sheet herunter.';
+	const pageDescription = '123 getestete Bildprompts mit echten Ergebnissen, 87 Kurzprompts und 36 ausführlichen Vorlagen. Kostenlos suchen, filtern, kopieren und als PDF laden.';
 	const collectionSchema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'CollectionPage',
@@ -27,15 +27,15 @@
 </script>
 
 <svelte:head>
-	<title>87 Bildprompts mit Beispielen | Kostenlose Library | TRMT</title>
+	<title>123 Bildprompts mit Beispielen | Kostenlose Library | TRMT</title>
 	<meta name="description" content={pageDescription} />
-	<meta property="og:title" content="87 Bildprompts mit echten Beispielen | TRMT" />
+	<meta property="og:title" content="123 Bildprompts mit echten Beispielen | TRMT" />
 	<meta property="og:description" content={pageDescription} />
 	<meta property="og:url" content={canonicalUrl} />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://therandommakertheory.com/images/blog/50-bildprompts-echt-getestet-1.webp" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="87 Bildprompts mit echten Beispielen | TRMT" />
+	<meta name="twitter:title" content="123 Bildprompts mit echten Beispielen | TRMT" />
 	<meta name="twitter:description" content={pageDescription} />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/blog/50-bildprompts-echt-getestet-1.webp" />
 	<link rel="canonical" href={canonicalUrl} />
@@ -45,15 +45,23 @@
 <section class="tool-hero">
 	<div class="hero-copy">
 		<h1>Bildprompt-Library</h1>
-		<p>Ein Foto, ein kurzer Befehl und ein echtes Ergebnis. Durchsuche alle 87 getesteten Bildprompts, kopiere deinen Favoriten und probiere ihn mit einem eigenen Bild aus.</p>
+		<p>Ein Ausgangsbild, 123 echte Tests. Durchsuche 87 Kurzprompts und 36 ausführliche Vorlagen, kopiere deinen Favoriten und probiere ihn mit einem eigenen Bild aus.</p>
 	</div>
 
-	<a class="download-button" href="/downloads/trmt-bildprompt-cheatsheet.pdf" download>
-		<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-			<path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-		</svg>
-		<span><strong>PDF-Cheat-Sheet</strong><small>6 Seiten · kostenlos</small></span>
-	</a>
+	<div class="download-actions" aria-label="Kostenlose Prompt-Downloads">
+		<a class="download-button" href="/downloads/trmt-bildprompt-cheatsheet.pdf" download>
+			<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+				<path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span><strong>Kurzprompt-Cheat-Sheet</strong><small>87 Prompts · 6 Seiten</small></span>
+		</a>
+		<a class="download-button secondary" href="/downloads/trmt-ultimate-bildprompts-part-3.pdf" download>
+			<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+				<path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span><strong>36 ausführliche Prompts</strong><small>Mit Ergebnissen · 12 Seiten</small></span>
+		</a>
+	</div>
 </section>
 
 <PromptLibrary {prompts} {categories} />
@@ -111,6 +119,23 @@
 		transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 	}
 
+	.download-actions {
+		display: flex;
+		align-items: stretch;
+		gap: 10px;
+		flex-direction: column;
+	}
+
+	.download-button.secondary {
+		background: color-mix(in srgb, var(--color-accent-teal) 12%, var(--color-surface));
+		border-color: color-mix(in srgb, var(--color-accent-teal) 42%, var(--color-border-soft));
+		box-shadow: none;
+		color: var(--color-text);
+	}
+
+	.download-button.secondary small { color: var(--color-text-muted); }
+	.download-button.secondary:hover { background: color-mix(in srgb, var(--color-accent-teal) 18%, var(--color-surface)); }
+
 	.download-button:hover {
 		background: var(--color-accent-honey-hover);
 		color: var(--color-on-accent);
@@ -157,6 +182,7 @@
 	@media (max-width: 760px) {
 		.tool-hero { align-items: stretch; flex-direction: column; gap: 22px; padding-top: 34px; }
 		h1 { font-size: clamp(2.2rem, 10vw, 2.5rem); letter-spacing: -0.04em; }
+		.download-actions { align-items: flex-start; }
 		.download-button { align-self: flex-start; }
 		.library-note { align-items: flex-start; flex-direction: column; padding: 24px; }
 	}
