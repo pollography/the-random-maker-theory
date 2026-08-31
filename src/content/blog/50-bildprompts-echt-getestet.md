@@ -29,6 +29,35 @@ Das klingt nach einem billigen Prompt-Trick. Deshalb wollte ich nicht nur ein pa
 
 ![Bereinigtes Ausgangsporträt für alle 50 Bildprompt-Tests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
+Und das ist die Reise, die aus diesem einen Porträt entstanden ist:
+
+<div class="prompt-result-grid" aria-label="Sechs Richtungen der Bildprompt-Serie">
+	<a class="prompt-result-card" href="/blog/kuerzeste-bildprompts-menschen-posen">
+		<img src="/images/blog/ki-bildprompts/04-action-poses.webp" alt="Sechs Actionposen derselben Person" loading="lazy" />
+		<span>Posen</span>
+	</a>
+	<a class="prompt-result-card" href="/blog/kuerzeste-bildprompts-avatare-reaktionen">
+		<img src="/images/blog/ki-bildprompts/12-sticker-pack.webp" alt="Stickerpack mit mehreren Reaktionen derselben Person" loading="lazy" />
+		<span>Avatare</span>
+	</a>
+	<a class="prompt-result-card" href="/blog/kuerzeste-bildprompts-alter-transformation">
+		<img src="/images/blog/ki-bildprompts/19-multiverse.webp" alt="Alternative Versionen derselben Person" loading="lazy" />
+		<span>Transformation</span>
+	</a>
+	<a class="prompt-result-card" href="/blog/kuerzeste-bildprompts-technik-innenansichten">
+		<img src="/images/blog/ki-bildprompts/extra-product-exploded-view.webp" alt="Explosionsdarstellung einer Kamera" loading="lazy" />
+		<span>Technik</span>
+	</a>
+	<a class="prompt-result-card" href="/blog/kuerzeste-bildprompts-infografiken-wissen">
+		<img src="/images/blog/ki-bildprompts/39-visual-guide.webp" alt="Visueller Leitfaden als KI-Infografik" loading="lazy" />
+		<span>Wissen</span>
+	</a>
+	<a class="prompt-result-card" href="/blog/kuerzeste-bildprompts-welten-filmszenen">
+		<img src="/images/blog/ki-bildprompts/50-movie-scene.webp" alt="Cineastische Filmszene mit derselben Person" loading="lazy" />
+		<span>Filmszenen</span>
+	</a>
+</div>
+
 Die Ergebnisse reichen von erstaunlich brauchbar bis komplett schräg. Genau das macht den Test interessant. Einige Begriffe liefern sofort Material für Thumbnails, Profilbilder oder Storyboards. Andere produzieren hübsche, aber inhaltlich erfundene Schaubilder. Und manche verstehen das Wort ganz anders, als ich es erwartet hatte.
 
 ## Sind das echte Slash-Befehle?
@@ -159,31 +188,61 @@ Nach einem Durchlauf mit allen 50 Begriffen würde ich sie in drei Gruppen einte
 
 **Nur mit Kontrolle verwenden:** Anatomy, X-ray, How It Works, Assembly und Infographic. Sie können überzeugend aussehen und trotzdem falsche Beschriftungen, erfundene Bauteile oder Unsinn enthalten.
 
-## Fünf konkrete Use Cases
+## Vom Mini-Prompt zum fertigen Asset
+
+Ein Raster ist noch kein Endergebnis. Es liefert dir Auswahlmaterial. Erst der Folgeprompt macht daraus ein Bild mit passendem Format, sauberem Ausschnitt und einem konkreten Zweck. Diese drei Beispiele zeigen den ganzen Weg.
 
 ### 1. YouTube-Thumbnail
 
-Nimm eine starke Emotion aus `/emotionGrid` oder eine Geste aus `/actionposes`. Lass sie anschließend als einzelnes 16:9-Motiv mit freier Fläche für deine Überschrift neu erzeugen.
+Im `/actionposes`-Raster steckt bereits eine starke Zeigegeste. Für ein Thumbnail braucht sie aber mehr Platz, einen klaren Hintergrund und eine Seite, auf der die Überschrift sofort lesbar ist.
+
+![Ausgangsraster mit sechs Actionposen](/images/blog/ki-bildprompts/04-action-poses.webp)
 
 ```prompt
-Erstelle aus Reihe 1, Spalte 3 des Emotionsrasters ein einzelnes 16:9-Thumbnail. Setze die Person groß auf die linke Bildhälfte. Rechts bleibt ruhiger, kontrastreicher Freiraum für eine spätere Überschrift. Erhalte Gesicht, Bart, orange Brille und türkisen Hoodie. Keine Schrift und kein Logo.
+Nutze im zuletzt hochgeladenen 2×3-Raster ausschließlich Reihe 1, Spalte 1, gezählt von oben links. Gemeint ist die lächelnde Person mit der Zeigegeste zur Kamera. Erstelle daraus ein einzelnes Bild im Format 16:9. Setze die Person auf die rechte Bildhälfte und lass links viel ruhigen, dunklen Freiraum. Erhalte Gesicht, langen Bart, orange Brille und türkisen Hoodie. Kräftiger Kontrast, cyanfarbenes und warmes Kantenlicht, glaubwürdige Hand mit fünf Fingern. Keine Schrift, kein Raster, kein Logo und kein Wasserzeichen.
 ```
+
+![Fertiges YouTube-Thumbnail mit der Hook 1 Foto, 1 Wort](/images/blog/ki-bildprompts/usecase-youtube-thumbnail.webp)
+
+Die Auswahl aus dem Raster lieferte die Figur. Hintergrund, Beschnitt und Freiraum kamen im Folgeprompt dazu. Die exakte Hook **1 FOTO. 1 WORT.** habe ich anschließend als Layout gesetzt. Das ist zuverlässiger, als ein Bildmodell mit fehlerfreier Typografie zu beauftragen.
 
 ### 2. Profilbild oder Avatar
 
-Nutze `/avatarPack` oder `/sticker`, wähle die frontalste Variante und lass sie quadratisch mit ausreichend Rand neu erzeugen.
+Beim `/avatarPack` ist die frontale Variante oben links die klarste Ausgangsbasis. Ein bloßer Ausschnitt wäre schnell erledigt, hätte aber wenig Auflösung und kaum sicheren Rand für den runden Beschnitt vieler Plattformen.
 
-### 3. Modeberatung und Look-Ideen
+![Avatar-Pack mit vier Ansichten derselben Person](/images/blog/ki-bildprompts/15-avatar-pack.webp)
 
-Mit `/outfitVariants` bekommst du schnell Richtungen. Danach isolierst du ein Outfit und beschreibst exakt, welche Kleidungsstücke übernommen werden sollen. Verlass dich nicht auf die KI, wenn es um reale Größen, Passform oder Produktverfügbarkeit geht.
+```prompt
+Nutze ausschließlich die frontale, lächelnde Variante oben links aus dem zuletzt hochgeladenen 2×2-Avatar-Raster. Erstelle daraus ein einzelnes quadratisches Profilbild. Kopf und Schultern frontal zur Kamera, ruhiger dunkelblauer Hintergrund, weiches Studio-Licht und ausreichend Abstand zu allen Bildrändern für einen späteren runden Zuschnitt. Erhalte Gesichtsform, kahlen Kopf, langen dunklen Bart, orange Brille und türkisen Hoodie. Kein Raster, kein Rahmen, keine Schrift, kein Logo und kein Wasserzeichen.
+```
 
-### 4. Personenreferenz für KI-Video
+![Fertiges quadratisches Profilbild mit sicherem Rand](/images/blog/ki-bildprompts/usecase-profilbild.webp)
 
-Ein Turnaround, ein Posepack und ein Emotionsraster bilden zusammen eine deutlich bessere Referenz als nur ein einzelnes Selfie. Sie machen Blickwinkel, Gestik und markante Merkmale sichtbar. Für echte Konsistenz brauchst du trotzdem ein Videomodell, das Bildreferenzen zuverlässig unterstützt.
+Das fertige Bild funktioniert quadratisch und bleibt auch im runden Avatar-Ausschnitt lesbar. Trotzdem gilt: Beim Neuerzeugen kann das Gesicht leicht driften. Vergleiche deshalb Brillenform, Nase, Bartansatz und Gesichtsproportionen noch einmal mit dem Original.
 
-### 5. Technische Produktgrafik
+### 3. Personenreferenz für KI-Video
 
-`/explodedView` war am Porträt eher ein surrealer Gag. Mit einer klar fotografierten Kamera entstand dagegen sofort eine verständliche Explosionsdarstellung. Der Begriff war derselbe. Der Unterschied lag im Ausgangsmotiv.
+Ein einzelnes Selfie zeigt einem Videomodell nur einen Blickwinkel. Turnaround, Posepack und Emotionsraster liefern zusammen mehr Informationen darüber, wie dieselbe Person von der Seite aussieht, sich bewegt und mimisch reagiert.
+
+<div class="prompt-source-grid" aria-label="Drei Quellen für das KI-Video-Referenzboard">
+	<img src="/images/blog/ki-bildprompts/01-turnaround.webp" alt="Turnaround mit sechs Blickwinkeln" loading="lazy" />
+	<img src="/images/blog/ki-bildprompts/03-pose-pack.webp" alt="Posepack mit sechs Ganzkörperposen" loading="lazy" />
+	<img src="/images/blog/ki-bildprompts/06-emotion-grid.webp" alt="Emotionsraster mit neun Gesichtsausdrücken" loading="lazy" />
+</div>
+
+```prompt
+Ordne die drei hochgeladenen Referenzbilder zu einem übersichtlichen 16:9-Personenboard an. Links stehen die verschiedenen Kopfansichten, in der Mitte die Ganzkörperposen und rechts die Gesichtsausdrücke. Verwende ausschließlich die vorhandenen Bilder und erfinde keine neue Ansicht. Alle Bereiche vollständig zeigen, sauber voneinander trennen und klar beschriften. Dunkler, ruhiger Hintergrund, keine Logos und kein Wasserzeichen.
+```
+
+![Fertiges Personenreferenz-Board für KI-Video](/images/blog/ki-bildprompts/usecase-ki-video-referenz.webp)
+
+Dieses Board ist kein Garant für ein konsistentes Video. **Das Videomodell muss Bildreferenzen unterstützen** und kann Merkmale trotzdem verändern. Das Board macht die Vorgabe aber eindeutiger als ein einziges Porträt.
+
+### Zwei weitere sinnvolle Anwendungen
+
+**Modeberatung und Look-Ideen:** Mit `/outfitVariants` bekommst du schnell Richtungen. Danach isolierst du ein Outfit und beschreibst exakt, welche Kleidungsstücke übernommen werden sollen. Verlass dich nicht auf die KI, wenn es um reale Größen, Passform oder Produktverfügbarkeit geht.
+
+**Technische Produktgrafik:** `/explodedView` war am Porträt eher ein surrealer Gag. Mit einer klar fotografierten Kamera entstand dagegen sofort eine verständliche Explosionsdarstellung. Der Begriff war derselbe. Der Unterschied lag im Ausgangsmotiv.
 
 ## Mein Fazit
 

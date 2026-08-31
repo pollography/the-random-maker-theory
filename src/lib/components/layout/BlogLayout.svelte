@@ -136,6 +136,62 @@
 		color: var(--color-accent-honey-hover);
 	}
 
+	:global(.prompt-result-grid) {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.85rem;
+		margin: 1.5rem 0 2rem;
+	}
+
+	:global(.prose .prompt-result-card) {
+		display: flex;
+		overflow: hidden;
+		flex-direction: column;
+		margin: 0;
+		border: 1px solid var(--color-border);
+		border-radius: 0.75rem;
+		background: var(--color-surface-raised);
+		color: var(--color-text);
+		text-decoration: none;
+		transition: border-color 140ms ease, transform 140ms ease;
+	}
+
+	:global(.prose .prompt-result-card:hover) {
+		border-color: var(--color-accent-teal);
+		color: var(--color-text);
+		transform: translateY(-2px);
+	}
+
+	:global(.prompt-result-card img) {
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		margin: 0;
+		object-fit: cover;
+	}
+
+	:global(.prompt-result-card span) {
+		padding: 0.65rem 0.75rem;
+		font-size: 0.82rem;
+		font-weight: 800;
+	}
+
+	:global(.prompt-source-grid) {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 0.75rem;
+		margin: 1.25rem 0;
+	}
+
+	:global(.prompt-source-grid img) {
+		width: 100%;
+		margin: 0;
+		border: 1px solid var(--color-border);
+		border-radius: 0.65rem;
+		aspect-ratio: 1 / 1;
+		background: #fff;
+		object-fit: contain;
+	}
+
 	:global(.prompt-block) {
 		margin: 1.25rem 0;
 		overflow: hidden;
@@ -251,7 +307,18 @@
 		color: var(--color-accent-honey);
 	}
 
+	@media (max-width: 64rem) {
+		:global(.prompt-result-grid) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+
 	@media (max-width: 42rem) {
+		:global(.prompt-result-grid),
+		:global(.prompt-source-grid) {
+			grid-template-columns: 1fr;
+		}
+
 		:global(.prompt-toolbar) {
 			align-items: flex-start;
 			flex-direction: column;
