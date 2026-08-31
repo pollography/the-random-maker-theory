@@ -1,16 +1,32 @@
 /**
+ * @typedef {Object} PromptLibraryEntry
+ * @property {string} id
+ * @property {string} command
+ * @property {string} title
+ * @property {string} category
+ * @property {string} status
+ * @property {string | null} image
+ * @property {string | null} alt
+ * @property {string | null} articleSlug
+ * @property {string[]} useCases
+ */
+
+/**
  * Return only entries that are safe to render publicly.
  *
- * @param {{ prompts?: Array<Record<string, any>> }} data
+ * @param {{ prompts?: PromptLibraryEntry[] }} data
+ * @returns {Array<PromptLibraryEntry & { image: string, alt: string, articleSlug: string }>}
  */
 export function getPublicPrompts(data) {
-	return (data.prompts ?? []).filter((prompt) => prompt.status === 'tested' && Boolean(prompt.image));
+	return /** @type {Array<PromptLibraryEntry & { image: string, alt: string, articleSlug: string }>} */ (
+		(data.prompts ?? []).filter((prompt) => prompt.status === 'tested' && Boolean(prompt.image))
+	);
 }
 
 /**
  * Filter public prompts by category and a case-insensitive free-text query.
  *
- * @param {Array<Record<string, any>>} prompts
+ * @param {Array<{ command: string, title: string, category: string, useCases: string[] }>} prompts
  * @param {Array<{ id: string, label: string }>} categories
  * @param {string} [query]
  * @param {string} [categoryId]
@@ -39,7 +55,7 @@ export function filterPrompts(prompts, categories, query = '', categoryId = 'all
 /**
  * Count visible prompts per category.
  *
- * @param {Array<Record<string, any>>} prompts
+ * @param {Array<{ category: string }>} prompts
  * @param {Array<{ id: string }>} categories
  */
 export function getCategoryCounts(prompts, categories) {
@@ -57,7 +73,7 @@ export function getCategoryCounts(prompts, categories) {
  * Validate the canonical data without importing Node-only filesystem modules.
  * Tests and local generators can inject an image check.
  *
- * @param {{ categories?: Array<Record<string, any>>, prompts?: Array<Record<string, any>> }} data
+ * @param {{ categories?: Array<{ id: string, label: string }>, prompts?: PromptLibraryEntry[] }} data
  * @param {{ imageExists?: (imagePath: string) => boolean }} [options]
  */
 export function validatePromptLibrary(data, options = {}) {
@@ -96,4 +112,3 @@ export function validatePromptLibrary(data, options = {}) {
 
 	return errors;
 }
-

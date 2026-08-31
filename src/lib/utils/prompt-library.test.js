@@ -15,9 +15,8 @@ import {
 const currentDirectory = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(currentDirectory, '..', '..', '..');
 const staticRoot = join(projectRoot, 'static');
-const data = JSON.parse(
-	await readFile(join(projectRoot, 'src', 'lib', 'data', 'image-prompts.json'), 'utf8')
-);
+/** @type {any} */
+const data = JSON.parse(await readFile(join(projectRoot, 'src', 'lib', 'data', 'image-prompts.json'), 'utf8'));
 
 const expectedCategoryIds = [
 	'menschen-posen',
@@ -36,16 +35,18 @@ const expectedCategoryIds = [
 
 test('canonical library exposes exactly 87 tested prompts and keeps research ideas private', () => {
 	const publicPrompts = getPublicPrompts(data);
+	const allPrompts = /** @type {Array<{ status: string }>} */ (data.prompts);
 
 	assert.equal(publicPrompts.length, 87);
-	assert.ok(data.prompts.some((prompt) => prompt.status === 'idea'));
+	assert.ok(allPrompts.some((prompt) => prompt.status === 'idea'));
 	assert.ok(publicPrompts.every((prompt) => prompt.status === 'tested' && prompt.image));
 	assert.ok(publicPrompts.every((prompt) => prompt.command.startsWith('/')));
 });
 
 test('canonical library uses the twelve approved categories in their stable order', () => {
+	const allCategories = /** @type {Array<{ id: string }>} */ (data.categories);
 	assert.deepEqual(
-		data.categories.map((category) => category.id),
+		allCategories.map((category) => category.id),
 		expectedCategoryIds
 	);
 
@@ -121,3 +122,22 @@ test('category counts cover all tested prompts and preserve zero-safe output', (
 	for (const categoryId of expectedCategoryIds) assert.ok(counts[categoryId] > 0);
 });
 
+test('public Svelte surface exposes the approved search, copy, status, and download controls', async () => {
+	const componentRoot = join(projectRoot, 'src', 'lib', 'components', 'prompt-library');
+	const routeRoot = join(projectRoot, 'src', 'routes', 'tools', 'bildprompt-library');
+	const [card, library, page] = await Promise.all([
+		readFile(join(componentRoot, 'PromptCard.svelte'), 'utf8'),
+		readFile(join(componentRoot, 'PromptLibrary.svelte'), 'utf8'),
+		readFile(join(routeRoot, '+page.svelte'), 'utf8')
+	]);
+
+	assert.match(card, /Prompt kopieren/);
+	assert.match(card, /aria-live="polite"/);
+	assert.match(card, /copyPromptText/);
+	assert.match(library, /type="search"/);
+	assert.match(library, /Prompt suchen/);
+	assert.match(library, /filterPrompts/);
+	assert.match(page, /Bildprompt-Library/);
+	assert.match(page, /PDF-Cheat-Sheet/);
+	assert.match(page, /\/downloads\/trmt-bildprompt-cheatsheet\.pdf/);
+});
