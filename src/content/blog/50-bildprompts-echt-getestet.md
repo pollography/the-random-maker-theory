@@ -244,6 +244,14 @@ Dieses Board ist kein Garant für ein konsistentes Video. **Das Videomodell muss
 
 **Technische Produktgrafik:** `/explodedView` war am Porträt eher ein surrealer Gag. Mit einer klar fotografierten Kamera entstand dagegen sofort eine verständliche Explosionsdarstellung. Der Begriff war derselbe. Der Unterschied lag im Ausgangsmotiv.
 
+## Die Serie geht mit 36 neuen Prompts weiter
+
+Ich habe denselben Test inzwischen um sechs neue Richtungen erweitert: Sammelfiguren, Miniaturwelten, Comics und Retroformate, Stoff- und Materialstile, Porträtideen sowie Creator- und KI-Video-Workflows.
+
+Darunter sind Begriffe wie `/tinyWorkers`, `/designerToy`, `/comicStrip`, `/plushToy`, `/hairstyleGrid`, `/contactSheet` und `/storyboard`. Auch die Fehlversuche bleiben sichtbar, damit klar wird, welche Wörter tatsächlich reagieren und welche erst mit einem genauen Folgeprompt brauchbar werden.
+
+[36 neue Ultimate Bildprompts mit allen Ergebnissen öffnen](/blog/ultimate-bildprompts-part-2)
+
 ## Mein Fazit
 
 Der kürzeste Prompt ist selten der fertige Prompt.
