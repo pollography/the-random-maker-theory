@@ -1,5 +1,6 @@
 ---
 title: "Diese Bildprompts verändern dein Porträt"
+seoTitle: "KI-Bildprompts für Porträts: 6 echte Beispiele"
 slug: "bildprompts-portraet-verbessern"
 date: "2026-08-31"
 description: "Sechs Mini-Prompts für Studiofoto, Farbanalyse, Frisurenraster, Lichtkorrektur, Cover-Pack und Karriere-Karikatur im echten Porträttest."

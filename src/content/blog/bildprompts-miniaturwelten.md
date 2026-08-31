@@ -1,5 +1,6 @@
 ---
 title: "Miniaturwelten aus deinem Porträt"
+seoTitle: "KI-Bildprompts für Miniaturwelten"
 slug: "bildprompts-miniaturwelten"
 date: "2026-08-31"
 description: "Sechs Mini-Prompts verwandeln ein Porträt in Mini-Me, winzige Arbeiter, Diorama, Schneekugel, Papierpuppe und Capsule Toy."

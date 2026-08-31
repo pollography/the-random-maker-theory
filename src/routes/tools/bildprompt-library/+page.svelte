@@ -63,7 +63,11 @@
 		<h2>Kurzer Prompt, überraschendes Ergebnis</h2>
 		<p>Die Bilder zeigen echte Tests mit demselben Ausgangsporträt. Trotzdem sind Ein-Wort-Prompts kein fester Befehlssatz: Modell, Version und Ausgangsbild können das Ergebnis deutlich verändern.</p>
 	</div>
-	<a href="/blog/50-bildprompts-echt-getestet">Wie du die Ergebnisse weiterverwendest</a>
+	<nav class="guide-links" aria-label="Artikel zur Bildprompt-Serie">
+		<a href="/blog/50-bildprompts-echt-getestet">50 Prompts im Test</a>
+		<a href="/blog/ultimate-bildprompts-part-2">36 weitere Prompts</a>
+		<a href="/blog/ein-foto-vier-slash-befehle-ki-bilder">Vier Slash-Prompts im Vergleich</a>
+	</nav>
 </section>
 
 <style>
@@ -140,7 +144,15 @@
 	.library-note div { max-width: 720px; }
 	.library-note h2 { margin: 0; color: var(--color-text); font-size: 1.75rem; }
 	.library-note p { margin: 8px 0 0; color: var(--color-text-muted); font-size: 0.88rem; line-height: 1.65; }
-	.library-note > a { flex: 0 0 auto; color: var(--color-accent-honey); font-size: 0.78rem; font-weight: 800; }
+	.guide-links {
+		display: flex;
+		flex: 0 0 auto;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+
+	.guide-links a { color: var(--color-accent-honey); font-size: 0.78rem; font-weight: 800; }
 
 	@media (max-width: 760px) {
 		.tool-hero { align-items: stretch; flex-direction: column; gap: 22px; padding-top: 34px; }

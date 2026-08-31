@@ -1,5 +1,6 @@
 ---
 title: "Bildprompts für Creator und KI-Videos"
+seoTitle: "KI-Bildprompts für Creator & KI-Videos"
 slug: "bildprompts-creator-ki-video"
 date: "2026-08-31"
 description: "Sechs Mini-Prompts für Brandboard, Verpackung, Merch, Kontaktbogen, Storyboard und Start-/Endbilder plus eine konkrete KI-Video-Pipeline."

@@ -1,5 +1,6 @@
 ---
 title: "Die kürzesten Bildprompts: Technik & Innenansichten"
+seoTitle: "KI-Bildprompts für Technik & Innenansichten"
 slug: "kuerzeste-bildprompts-technik-innenansichten"
 date: "2026-08-30"
 description: "Neun Ein-Wort-Bildprompts für Blueprint, Explosionsansicht, Querschnitt und Anleitung. Mit Porträt-Test und zusätzlichem Produktvergleich."

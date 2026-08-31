@@ -5,6 +5,7 @@
 	import { siteConfig } from '$lib/config';
 
 	let { data } = $props();
+	let metaTitle = $derived(data.post.seoTitle || data.post.title);
 
 	// Ensure ISO 8601 dates with timezone for Schema.org
 	function toISO(dateStr) {
@@ -76,14 +77,14 @@
 <svelte:window onscroll={handleScroll} onkeydown={handleKeydown} />
 
 <svelte:head>
-	<title>{data.post.title} | TRMT</title>
+	<title>{metaTitle} | TRMT</title>
 	<meta name="description" content={data.post.description} />
-	<meta property="og:title" content={data.post.title} />
+	<meta property="og:title" content={metaTitle} />
 	<meta property="og:description" content={data.post.description} />
 	<meta property="og:image" content={`https://therandommakertheory.com${data.post.heroImage || '/images/og/default.webp'}`} />
 	<meta name="twitter:image" content={`https://therandommakertheory.com${data.post.heroImage || '/images/og/default.webp'}`} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={data.post.title} />
+	<meta name="twitter:title" content={metaTitle} />
 	<meta name="twitter:description" content={data.post.description} />
 
 	<!-- Canonical + hreflang -->

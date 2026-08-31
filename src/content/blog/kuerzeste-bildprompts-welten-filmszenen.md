@@ -1,5 +1,6 @@
 ---
 title: "Die kürzesten Bildprompts: Welten & Filmszenen"
+seoTitle: "KI-Bildprompts für Welten & Filmszenen"
 slug: "kuerzeste-bildprompts-welten-filmszenen"
 date: "2026-08-30"
 description: "Zehn Ein-Wort-Bildprompts für Unterwasser, Weltraum, Cyberpunk, Portale und Filmszenen. Mit echten Ergebnissen und Video-Use-Cases."

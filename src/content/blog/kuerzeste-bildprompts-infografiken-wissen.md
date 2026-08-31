@@ -1,5 +1,6 @@
 ---
 title: "Die kürzesten Bildprompts: Infografiken & Wissen"
+seoTitle: "KI-Bildprompts für Infografiken & Wissen"
 slug: "kuerzeste-bildprompts-infografiken-wissen"
 date: "2026-08-30"
 description: "Sechs extrem kurze Bildprompts für Mindmaps, Lernkarten, Timelines und Infografiken. Mit echten Ergebnissen und sicherem Weiterarbeiten."

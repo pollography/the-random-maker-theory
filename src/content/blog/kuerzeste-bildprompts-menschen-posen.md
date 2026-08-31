@@ -1,5 +1,6 @@
 ---
 title: "Die kürzesten Bildprompts: Menschen & Posen"
+seoTitle: "Kurze KI-Bildprompts für Menschen & Posen"
 slug: "kuerzeste-bildprompts-menschen-posen"
 date: "2026-08-30"
 description: "Acht extrem kurze Bildprompts für Posen, Mimik, Kleidung und Character Sheets. Mit echten Ergebnissen und Folgeprompts für einzelne Motive."
@@ -25,6 +26,8 @@ titleAccent: "Menschen & Posen"
 Wie viele neue Bilder stecken in einem einzigen Porträt?
 
 Für diesen ersten Teil habe ich acht extrem kurze Prompts getestet, die sich auf Menschen konzentrieren: Blickwinkel, Posen, Gesichtsausdrücke, Körpersprache und Kleidung. Als Referenz diente jedes Mal dasselbe bereinigte Ausgangsbild.
+
+Wenn du zuerst nur die vier wichtigsten Begriffe ausprobieren möchtest, findest du [Posepack, Outfitvarianten, Action Poses und Character Sheet auch als kurzen Direktvergleich](/blog/ein-foto-vier-slash-befehle-ki-bilder).
 
 ![Ausgangsporträt mit kahlem Kopf, langem Bart, orangefarbener Brille und türkisem Hoodie](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 

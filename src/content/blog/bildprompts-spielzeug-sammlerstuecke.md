@@ -1,5 +1,6 @@
 ---
 title: "Bildprompts für eigene Sammelfiguren"
+seoTitle: "KI-Bildprompts für Sammelfiguren & Spielzeug"
 slug: "bildprompts-spielzeug-sammlerstuecke"
 date: "2026-08-31"
 description: "Sechs Mini-Prompts verwandeln ein Porträt in Starter-Pack, Wackelkopf, Designer Toy, Schreibtischfigur, Sammelkarte und Pin-Kollektion."

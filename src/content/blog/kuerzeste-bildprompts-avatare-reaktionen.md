@@ -1,5 +1,6 @@
 ---
 title: "Die kürzesten Bildprompts: Avatare & Reaktionen"
+seoTitle: "Kurze KI-Bildprompts für Avatare & Reaktionen"
 slug: "kuerzeste-bildprompts-avatare-reaktionen"
 date: "2026-08-30"
 description: "Sieben Ein-Wort-Bildprompts für Sticker, Avatare, Reaktionen, Miniaturen und Riesenbilder. Echt getestet mit demselben Porträt."

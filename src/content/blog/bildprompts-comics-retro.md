@@ -1,5 +1,6 @@
 ---
 title: "Comics und Retro aus einem Foto"
+seoTitle: "KI-Bildprompts für Comics & Retro-Looks"
 slug: "bildprompts-comics-retro"
 date: "2026-08-31"
 description: "Sechs Mini-Prompts machen aus einem Porträt Comic, Fantasy-Zeitung, Filmstreifen, Reisetagebuch, Tarotkarte und einen gescheiterten Game-Screen-Test."

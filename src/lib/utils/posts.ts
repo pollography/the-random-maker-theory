@@ -1,6 +1,7 @@
 export interface Post {
 	slug: string;
 	title: string;
+	seoTitle?: string;
 	titleAccent?: string;
 	date: string;
 	description: string;
@@ -38,6 +39,7 @@ export async function getPosts(): Promise<Post[]> {
 			posts.push({
 				slug: metadata.slug,
 				title: metadata.title,
+				seoTitle: metadata.seoTitle,
 				titleAccent: metadata.titleAccent || '',
 				date: metadata.date,
 				description: metadata.description,

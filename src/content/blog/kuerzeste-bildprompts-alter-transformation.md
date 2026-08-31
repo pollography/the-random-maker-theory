@@ -1,5 +1,6 @@
 ---
 title: "Die kürzesten Bildprompts: Alter & Transformation"
+seoTitle: "KI-Bildprompts für Alter & Transformation"
 slug: "kuerzeste-bildprompts-alter-transformation"
 date: "2026-08-30"
 description: "Zehn extrem kurze Bildprompts für Alter, Zeitreise, Zukunft und Parallelwelten. Echte Porträt-Tests mit sofort kopierbaren Folgeprompts."

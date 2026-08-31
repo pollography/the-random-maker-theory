@@ -1,5 +1,6 @@
 ---
 title: "Dein Porträt aus Stoff und Knete"
+seoTitle: "KI-Bildprompts für Stoff, Knete & Glas"
 slug: "bildprompts-stoff-knete-glas"
 date: "2026-08-31"
 description: "Sechs Mini-Prompts verwandeln dasselbe Porträt in Zeichnung, Knetfigur, Plüschtier, Amigurumi, Stickerei und Glasfenster."

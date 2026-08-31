@@ -1,5 +1,6 @@
 ---
 title: "Ultimate Bildprompts: Part 2"
+seoTitle: "36 KI-Bildprompts für Creator & Miniwelten"
 slug: "ultimate-bildprompts-part-2"
 date: "2026-08-31"
 description: "36 neue Mini-Prompts, real mit demselben Porträt getestet: Spielzeug, Miniwelten, Comics, Materialstile, Porträtideen und Creator-Workflows."
@@ -19,13 +20,15 @@ titleAccent: "Part 2"
 		<li>Die stärksten Ergebnisse sind Miniarbeiter, Sammelfiguren, Comics, Materialstile, Frisurenraster, Merch-Mockups und Storyboards.</li>
 		<li>Mehrere Begriffe reagierten kaum oder verstanden den Auftrag falsch. Auch diese Resultate bleiben sichtbar.</li>
 		<li>Jeder Teil enthält den Rohprompt, das echte Ergebnis, eine besser steuerbare Vorlage und konkrete Anwendungen.</li>
-		<li>Zusammen mit dem ersten Test umfasst die Serie jetzt 86 praktisch ausprobierte Bildprompts.</li>
+		<li>Zusammen sind es 86 nummerierte Bildprompts plus eine zusätzliche Bonus-Variante: 87 echte Tests.</li>
 	</ul>
 </div>
 
 Aus einem einzigen Porträt wird eine Sammelfigur, eine Schneekugel, eine Comicseite, eine Knetfigur, eine Frisurenberatung oder gleich ein ganzes Storyboard.
 
 Nach meinen ersten [50 real getesteten Bildprompts](/blog/50-bildprompts-echt-getestet) wollte ich wissen, ob noch mehr extrem kurze Begriffe brauchbare Bildideen auslösen. Deshalb habe ich **36 neue Mini-Prompts mit genau demselben Ausgangsfoto** getestet.
+
+Alle 87 Tests aus beiden Serien findest du zusätzlich nach Aufgabe sortiert in der [filterbaren Bildprompt-Bibliothek](/tools/bildprompt-library). Die Zahl umfasst 50 nummerierte Prompts, eine Bonus-Variante und 36 neue Prompts.
 
 ![Ausgangsporträt für alle 36 neuen Bildprompt-Tests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 

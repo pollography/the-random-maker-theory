@@ -1,9 +1,10 @@
 ---
 title: "Ein Foto, vier Slash-Befehle: Posepacks und Character Sheets mit KI"
+seoTitle: "Posepack & Character Sheet: 4 KI-Bildprompts im Test"
 slug: "ein-foto-vier-slash-befehle-ki-bilder"
 date: "2026-08-30"
 description: "Mit vier kurzen Slash-Befehlen wird ein Porträt zum Posepack, Outfit-Set, Action-Set oder Character Sheet. Mein Test, die Prompts und die Grenzen."
-tags: ["ki-tools", "tutorial", "fotografie", "workflow", "anfaenger"]
+tags: ["ki-tools", "ki-bilder", "prompts", "tutorial", "fotografie", "workflow", "anfaenger"]
 category: "ki-tools"
 draft: false
 readingTime: 6
@@ -30,6 +31,10 @@ Rund um KI-Bilder tauchen immer wieder kleine Prompt-Tricks auf. Einer davon kla
 Das Ergebnis war tatsächlich ziemlich stark. Aus einem einzelnen Foto entstanden Posepacks, neue Outfits, Action Poses und komplette Character Sheets. Die Person blieb meistens gut erkennbar. Gleichzeitig hat die KI aber auch Schrift, Details und sogar einen fremden Magazin-Look erfunden. Genau deshalb lohnt sich ein genauer Blick.
 
 Hier zeig ich dir die vier Befehle, meinen Ablauf und die Stellen, an denen der kleine Trick eben doch nicht ganz so magisch ist.
+
+Für den größeren Vergleich kannst du zu den [50 getesteten KI-Bilder-Prompts](/blog/50-bildprompts-echt-getestet) wechseln. Wenn du schon weißt, was du erzeugen möchtest, führt die [filterbare Bildprompt-Bibliothek](/tools/bildprompt-library) schneller zum passenden Test.
+
+Die vollständige Themenreihe mit Turnaround, Mimik und Körpersprache findest du bei den [kurzen Bildprompts für Menschen und Posen](/blog/kuerzeste-bildprompts-menschen-posen).
 
 ## Was diese Slash-Befehle eigentlich sind
 

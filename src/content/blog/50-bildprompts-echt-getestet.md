@@ -1,5 +1,6 @@
 ---
 title: "50 Bildprompts. Echt getestet."
+seoTitle: "50 KI-Bilder-Prompts: getestete Beispiele"
 slug: "50-bildprompts-echt-getestet"
 date: "2026-08-30"
 description: "50 extrem kurze Bildprompts im Praxistest: echte Ergebnisse mit demselben Porträt, sinnvolle Use Cases und fertige Folgeprompts zum Kopieren."
@@ -26,6 +27,8 @@ titleAccent: "Echt getestet"
 Ein Bild. Ein Wort. Und plötzlich steht dieselbe Person in sechs Posen da, taucht als Stickerpack auf oder läuft durch eine Cyberpunk-Stadt.
 
 Das klingt nach einem billigen Prompt-Trick. Deshalb wollte ich nicht nur ein paar besonders schöne Beispiele sammeln. Ich habe **50 kurze Bildprompts mit demselben Ausgangsporträt getestet**. Immer wieder derselbe kahle Kopf, derselbe lange Bart, dieselbe orange Brille und derselbe türkise Hoodie.
+
+Wenn du nicht chronologisch lesen, sondern direkt nach einer bestimmten Aufgabe suchen möchtest, findest du alle Tests auch in der [filterbaren Bildprompt-Bibliothek](/tools/bildprompt-library).
 
 ![Bereinigtes Ausgangsporträt für alle 50 Bildprompt-Tests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
@@ -75,6 +78,8 @@ Das bedeutet:
 - Schrift, Anatomie, Marken und technische Details bleiben prüfpflichtig.
 
 Ich nenne sie deshalb im Artikel **Ein-Wort-Prompts** oder **Mini-Prompts**. Das ist weniger magisch, aber deutlich ehrlicher.
+
+Vier dieser Begriffe habe ich zusätzlich als kompakten Einstieg verglichen: [Posepack, Outfitvarianten, Action Poses und Character Sheet im direkten Test](/blog/ein-foto-vier-slash-befehle-ki-bilder).
 
 ## Der Ablauf, der aus einem Gimmick ein Werkzeug macht
 
