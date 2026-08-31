@@ -137,20 +137,20 @@
 	}
 
 	:global(.prompt-block) {
-		margin: 1.75rem 0;
+		margin: 1.25rem 0;
 		overflow: hidden;
 		border: 1px solid color-mix(in srgb, var(--color-accent-honey) 48%, var(--color-border));
-		border-radius: 0.875rem;
+		border-radius: 0.75rem;
 		background: var(--color-surface-raised);
-		box-shadow: 0 1rem 3rem hsl(0 0% 0% / 0.18);
+		box-shadow: 0 0.5rem 1.5rem hsl(0 0% 0% / 0.12);
 	}
 
 	:global(.prompt-toolbar) {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 0.75rem;
-		padding: 0.75rem;
+		gap: 0.5rem;
+		padding: 0.5rem 0.625rem;
 		border-bottom: 1px solid var(--color-border);
 		background: linear-gradient(
 			120deg,
@@ -171,22 +171,22 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-end;
-		gap: 0.5rem;
+		gap: 0.375rem;
 	}
 
 	:global(.prose .prompt-action) {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		min-height: 2.25rem;
+		min-height: 2rem;
 		margin: 0;
-		padding: 0.45rem 0.7rem;
+		padding: 0.35rem 0.55rem;
 		border: 1px solid var(--color-border);
 		border-radius: 0.55rem;
 		background: color-mix(in srgb, var(--color-surface-raised) 78%, var(--color-text) 6%);
 		color: var(--color-text);
 		font: inherit;
-		font-size: 0.78rem;
+		font-size: 0.72rem;
 		font-weight: 700;
 		line-height: 1.1;
 		text-decoration: none;
@@ -225,22 +225,26 @@
 
 	:global(.prompt-block pre code) {
 		display: block;
-		padding: 1rem 1.125rem;
+		padding: 0.75rem 0.875rem;
 		background: transparent;
 		color: var(--color-text);
-		font-size: 0.95rem;
-		line-height: 1.65;
+		font-size: 0.88rem;
+		line-height: 1.55;
 		white-space: pre-wrap;
 		word-break: break-word;
 	}
 
 	:global(.prompt-status) {
-		min-height: 1.8rem;
+		min-height: 0;
 		margin: 0;
-		padding: 0.35rem 0.75rem 0.55rem;
+		padding: 0.3rem 0.625rem 0.45rem;
 		color: var(--color-accent-teal);
 		font-size: 0.75rem;
 		line-height: 1.2;
+	}
+
+	:global(.prompt-status:empty) {
+		display: none;
 	}
 
 	:global(.prompt-status[data-state='error']) {
@@ -255,10 +259,11 @@
 
 		:global(.prompt-actions) {
 			justify-content: flex-start;
+			width: 100%;
 		}
 
 		:global(.prose .prompt-action) {
-			font-size: 0.73rem;
+			font-size: 0.7rem;
 		}
 	}
 </style>

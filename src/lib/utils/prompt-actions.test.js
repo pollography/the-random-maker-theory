@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
 import {
@@ -81,4 +82,16 @@ test('copyPromptText falls back to a temporary textarea when Clipboard API is un
 
 test('copyPromptText reports when no copy mechanism is available', async () => {
 	await assert.rejects(() => copyPromptText('/posepack', undefined, undefined), /Copy is not available/);
+});
+
+test('prompt block uses the compact presentation contract', async () => {
+	const source = await readFile(
+		new URL('../components/layout/BlogLayout.svelte', import.meta.url),
+		'utf8'
+	);
+
+	assert.match(source, /min-height:\s*2rem/);
+	assert.match(source, /font-size:\s*0\.72rem/);
+	assert.match(source, /padding:\s*0\.75rem 0\.875rem/);
+	assert.match(source, /\.prompt-status:empty/);
 });
