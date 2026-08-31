@@ -219,6 +219,7 @@
 			"category": "avatare-reaktionen",
 			"status": "tested",
 			"image": "/images/blog/ki-bildprompts/11-sticker.webp",
+			"displayImage": "/images/blog/ki-bildprompts/11-sticker-transparent.webp",
 			"alt": "Ein einzelner Cutout: echtes Ergebnis des Bildprompts /sticker",
 			"articleSlug": "kuerzeste-bildprompts-avatare-reaktionen",
 			"useCases": [
@@ -234,6 +235,7 @@
 			"category": "avatare-reaktionen",
 			"status": "tested",
 			"image": "/images/blog/ki-bildprompts/12-sticker-pack.webp",
+			"displayImage": "/images/blog/ki-bildprompts/12-sticker-pack-transparent.webp",
 			"alt": "Neun Sticker-Gesten: echtes Ergebnis des Bildprompts /stickerPack",
 			"articleSlug": "kuerzeste-bildprompts-avatare-reaktionen",
 			"useCases": [

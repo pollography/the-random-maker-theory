@@ -24,6 +24,7 @@
 	});
 
 	let scrollY = $state(0);
+	let videoLoaded = $state(false);
 
 	// Count-up animation — SSR-friendly: start at totalCount so no "0" flash.
 	// untrack() prevents Svelte from flagging this one-shot capture as a
@@ -35,6 +36,11 @@
 
 	$effect(() => {
 		if (!counterRef) return;
+		if (typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			hasAnimated = true;
+			displayCount = totalCount;
+			return;
+		}
 		const observer = new IntersectionObserver((entries) => {
 			entries.forEach((entry) => {
 				if (entry.isIntersecting && !hasAnimated && totalCount > 0) {
@@ -234,14 +240,30 @@
 			<a href="https://www.youtube.com/@therandommakertheory" target="_blank" rel="noopener" class="section-link">YouTube →</a>
 		</div>
 		<div class="video-embed">
-			<iframe
-				src="https://www.youtube.com/embed/KWIH_InMQZ8"
-				title="Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini | TRMT #002"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-				loading="lazy"
-			></iframe>
+			{#if videoLoaded}
+				<iframe
+					src="https://www.youtube-nocookie.com/embed/KWIH_InMQZ8?autoplay=1"
+					title="Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini | TRMT #002"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen
+				></iframe>
+			{:else}
+				<button
+					type="button"
+					class="video-facade"
+					aria-label="Video abspielen: Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini"
+					onclick={() => (videoLoaded = true)}
+				>
+					<img
+						src="/images/video/prompt-engineering-trmt-002.webp"
+						alt=""
+						width="1280"
+						height="720"
+						loading="lazy"
+					/>
+					<span class="video-play" aria-hidden="true">▶</span>
+				</button>
+			{/if}
 		</div>
 		<p class="video-title">Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini</p>
 	</section>
@@ -301,7 +323,7 @@
 		display: inline-block;
 		font-family: var(--font-mono);
 		font-size: var(--font-size-sm);
-		color: var(--color-accent-teal);
+		color: var(--color-accent-teal-foreground);
 		letter-spacing: var(--letter-spacing-wider);
 		text-transform: uppercase;
 		margin-bottom: 24px;
@@ -323,7 +345,7 @@
 	}
 
 	.hero-accent {
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 		font-style: italic;
 		transition: all 0.4s ease;
 	}
@@ -443,7 +465,7 @@
 	}
 
 	.intro-accent {
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 	}
 
 	.intro-text {
@@ -458,7 +480,7 @@
 		font-family: var(--font-display);
 		font-weight: 400;
 		font-size: 1.125rem;
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 		line-height: 1;
 	}
 
@@ -555,7 +577,7 @@
 	.pillar-category {
 		font-family: var(--font-mono);
 		font-size: var(--font-size-xs);
-		color: var(--color-accent-teal);
+		color: var(--color-accent-teal-foreground);
 		text-transform: uppercase;
 		letter-spacing: 0.12em;
 	}
@@ -586,7 +608,7 @@
 	.pillar-tag {
 		font-size: var(--font-size-xs);
 		font-family: var(--font-mono);
-		color: var(--color-accent-teal);
+		color: var(--color-accent-teal-foreground);
 		background: var(--color-accent-teal-subtle);
 		padding: 3px 10px;
 		border-radius: var(--radius-full);
@@ -599,7 +621,7 @@
 		font-family: var(--font-sans);
 		font-size: var(--font-size-sm);
 		font-weight: var(--font-weight-semibold);
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 		transition: all var(--transition-normal);
 	}
 
@@ -609,11 +631,11 @@
 	}
 
 	.pillar-honey:hover .pillar-cta {
-		color: var(--color-accent-honey-hover);
+		color: var(--color-accent-honey-foreground);
 	}
 
 	.pillar-teal:hover .pillar-cta {
-		color: var(--color-accent-teal);
+		color: var(--color-accent-teal-foreground);
 		text-shadow: 0 0 12px rgba(58, 176, 162, 0.5);
 	}
 
@@ -638,7 +660,10 @@
 	}
 
 	.section-link {
-		color: var(--color-accent-honey);
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		color: var(--color-accent-honey-foreground);
 		text-decoration: none;
 		font-weight: var(--font-weight-semibold);
 		font-size: var(--font-size-base);
@@ -647,7 +672,7 @@
 		border-radius: var(--radius-md);
 	}
 	.section-link:hover {
-		color: var(--color-accent-honey-hover);
+		color: var(--color-accent-honey-foreground);
 		text-shadow: 0 0 12px rgba(212, 137, 62, 0.4);
 		transform: translateX(2px);
 	}
@@ -758,12 +783,59 @@
 		border-radius: var(--radius-lg);
 	}
 
+	.video-facade {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		border: none;
+		border-radius: var(--radius-lg);
+		background: transparent;
+		cursor: pointer;
+	}
+
+	.video-facade img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.video-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		display: grid;
+		place-items: center;
+		width: 64px;
+		height: 64px;
+		padding-left: 4px;
+		border-radius: 50%;
+		background: rgba(0, 0, 0, 0.72);
+		color: white;
+		font-size: 1.5rem;
+		transition: transform var(--transition-normal), background var(--transition-normal);
+	}
+
+	.video-facade:hover .video-play {
+		transform: translate(-50%, -50%) scale(1.08);
+		background: var(--color-accent-honey);
+	}
+
+	.video-facade:focus-visible {
+		outline: 3px solid var(--color-focus);
+		outline-offset: -3px;
+	}
+
 	.video-title {
 		margin: 16px 0 0;
 		font-family: var(--font-display);
 		font-weight: 400;
 		font-size: clamp(18px, 2.5vw, 22px);
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 		line-height: 1.3;
 		font-style: italic;
 	}
@@ -822,7 +894,7 @@
 	.faq-chevron {
 		flex-shrink: 0;
 		font-size: 1.25rem;
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 		transition: transform 0.2s ease;
 		font-weight: 700;
 	}
@@ -832,7 +904,7 @@
 	}
 
 	.faq-item-teal .faq-chevron {
-		color: var(--color-accent-teal);
+		color: var(--color-accent-teal-foreground);
 	}
 
 	.faq-answer {
@@ -881,7 +953,7 @@
 		background: var(--gradient-card-bg);
 		border: none;
 		box-shadow: 4px 4px 10px rgba(160, 145, 125, 0.3), -3px -3px 8px rgba(245, 238, 225, 0.45);
-		color: var(--color-accent-teal);
+		color: var(--color-accent-teal-foreground);
 	}
 
 	:global([data-theme='light']) .discover-section {
@@ -950,5 +1022,32 @@
 		}
 		.pillar-icon-col { justify-content: center; }
 		.pillar-highlights { justify-content: center; }
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.scroll-hint,
+		.hero-accent,
+		.btn-honey,
+		.btn-teal,
+		.pillar-card,
+		.pillar-cta,
+		.section-link,
+		.video-play,
+		.faq-item,
+		.faq-chevron {
+			transition: none;
+		}
+
+		.scroll-arrow {
+			animation: none;
+		}
+
+		.btn-honey:hover,
+		.btn-teal:hover,
+		.pillar-card:hover,
+		.section-link:hover,
+		.video-facade:hover .video-play {
+			transform: none;
+		}
 	}
 </style>

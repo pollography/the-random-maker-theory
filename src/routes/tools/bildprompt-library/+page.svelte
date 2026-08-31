@@ -118,7 +118,12 @@
 	.download-button svg { width: 25px; height: 25px; flex: 0 0 auto; }
 	.download-button span { display: flex; flex-direction: column; gap: 2px; }
 	.download-button strong { font-size: 0.82rem; line-height: 1.1; }
-	.download-button small { font-size: 0.67rem; font-weight: 650; opacity: 0.72; }
+	.download-button small {
+		color: var(--color-on-accent);
+		font-size: 0.67rem;
+		font-weight: 650;
+		opacity: 1;
+	}
 
 	.library-note {
 		display: flex;
@@ -128,7 +133,7 @@
 		margin-top: 48px;
 		padding: 28px 30px;
 		background: color-mix(in srgb, var(--color-accent-teal) 7%, var(--color-surface));
-		border-left: 3px solid var(--color-accent-teal);
+		border: 1px solid color-mix(in srgb, var(--color-accent-teal) 22%, var(--color-border-subtle));
 		border-radius: var(--radius-lg);
 	}
 

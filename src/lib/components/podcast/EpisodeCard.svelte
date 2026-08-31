@@ -49,7 +49,7 @@
 	.episode-number {
 		font-family: var(--font-mono);
 		font-size: var(--font-size-xs);
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 		letter-spacing: -0.01em;
 	}
 
@@ -91,7 +91,7 @@
 	}
 
 	.episode-duration {
-		color: var(--color-accent-teal);
+		color: var(--color-accent-teal-foreground);
 		font-weight: 600;
 	}
 </style>

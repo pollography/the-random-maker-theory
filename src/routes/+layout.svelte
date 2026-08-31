@@ -21,18 +21,15 @@
 </svelte:head>
 
 <div class="flex flex-col min-h-screen">
+	<a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 	<Header />
-	<main class="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
+	<main id="main-content" tabindex="-1" class="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
 		{@render children()}
 	</main>
 	<Footer />
 </div>
 
 <style>
-	:global(html) {
-		scroll-behavior: smooth;
-	}
-
 	:global(body) {
 		background: var(--gradient-bg);
 		background-color: var(--color-bg);

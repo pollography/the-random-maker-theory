@@ -143,6 +143,100 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(page, /@media \(max-width: 760px\)[\s\S]*h1 \{ font-size:/);
 });
 
+test('sticker previews use transparent display derivatives while canonical originals stay unchanged', () => {
+	const prompts = /** @type {Array<Record<string, any>>} */ (data.prompts);
+	const promptsById = new Map(prompts.map((prompt) => [prompt.id, prompt]));
+	const sticker = promptsById.get('sticker');
+	const stickerPack = promptsById.get('sticker-pack');
+	assert.ok(sticker);
+	assert.ok(stickerPack);
+
+	assert.equal(sticker.image, '/images/blog/ki-bildprompts/11-sticker.webp');
+	assert.equal(sticker.displayImage, '/images/blog/ki-bildprompts/11-sticker-transparent.webp');
+	assert.equal(stickerPack.image, '/images/blog/ki-bildprompts/12-sticker-pack.webp');
+	assert.equal(stickerPack.displayImage, '/images/blog/ki-bildprompts/12-sticker-pack-transparent.webp');
+	assert.equal(
+		existsSync(join(staticRoot, sticker.displayImage.replace(/^\//, ''))),
+		true,
+		'single sticker display derivative is missing'
+	);
+	assert.equal(
+		existsSync(join(staticRoot, stickerPack.displayImage.replace(/^\//, ''))),
+		true,
+		'sticker-pack display derivative is missing'
+	);
+});
+
+test('prompt images open a shared in-page dialog and return focus without a new tab', async () => {
+	const componentRoot = join(projectRoot, 'src', 'lib', 'components', 'prompt-library');
+	const [card, library, lightbox] = await Promise.all([
+		readFile(join(componentRoot, 'PromptCard.svelte'), 'utf8'),
+		readFile(join(componentRoot, 'PromptLibrary.svelte'), 'utf8'),
+		readFile(join(componentRoot, 'PromptLightbox.svelte'), 'utf8')
+	]);
+
+	assert.doesNotMatch(card, /target="_blank"/);
+	assert.match(card, /class:transparent-preview/);
+	assert.match(card, /prompt\.displayImage \?\? prompt\.image/);
+	assert.match(card, /onPreview/);
+	assert.match(library, /<PromptLightbox/);
+	assert.match(library, /returnFocusElement/);
+	assert.match(library, /\.focus\(\)/);
+	assert.match(lightbox, /<dialog/);
+	assert.match(lightbox, /aria-modal="true"/);
+	assert.match(lightbox, /oncancel/);
+	assert.match(lightbox, /event\.key === 'Escape'/);
+	assert.match(lightbox, /event\.target === dialog/);
+	assert.match(lightbox, /document\.body\.style\.overflow = 'hidden'/);
+	assert.match(lightbox, /Schließen/);
+});
+
+test('image controls use a two-tone focus ring that stays visible over arbitrary artwork', async () => {
+	const componentRoot = join(projectRoot, 'src', 'lib', 'components', 'prompt-library');
+	const [card, lightbox] = await Promise.all([
+		readFile(join(componentRoot, 'PromptCard.svelte'), 'utf8'),
+		readFile(join(componentRoot, 'PromptLightbox.svelte'), 'utf8')
+	]);
+	const twoToneInsetRing = /box-shadow:\s*inset 0 0 0 3px #fff,\s*inset 0 0 0 6px #111/;
+
+	assert.match(card, twoToneInsetRing);
+	assert.match(lightbox, twoToneInsetRing);
+});
+
+test('prompt cards serve compact local thumbnails and defer offscreen rendering', async () => {
+	const card = await readFile(
+		join(projectRoot, 'src', 'lib', 'components', 'prompt-library', 'PromptCard.svelte'),
+		'utf8'
+	);
+	const publicPrompts = getPublicPrompts(data);
+
+	assert.match(card, /getPromptThumbnail/);
+	assert.match(card, /loading=\{priority \? 'eager' : 'lazy'\}/);
+	assert.match(card, /fetchpriority=\{priority \? 'high' : 'auto'\}/);
+	assert.match(card, /content-visibility: auto/);
+	for (const prompt of publicPrompts) {
+		const previewImage = prompt.displayImage ?? prompt.image;
+		const thumbnailPath = `/images/blog/ki-bildprompts/thumbs/${previewImage.split('/').at(-1)}`;
+		assert.equal(
+			existsSync(join(staticRoot, thumbnailPath.replace(/^\//, ''))),
+			true,
+			`${prompt.command} is missing ${thumbnailPath}`
+		);
+	}
+});
+
+test('library controls keep visible labels in their accessible names and contrast', async () => {
+	const [card, page] = await Promise.all([
+		readFile(join(projectRoot, 'src', 'lib', 'components', 'prompt-library', 'PromptCard.svelte'), 'utf8'),
+		readFile(join(projectRoot, 'src', 'routes', 'tools', 'bildprompt-library', '+page.svelte'), 'utf8')
+	]);
+
+	assert.match(card, /aria-label="Prompt kopieren: \{prompt\.command\}"/);
+	assert.doesNotMatch(card, /aria-label="\{prompt\.command\} kopieren"/);
+	assert.match(page, /\.download-button small \{[^}]*color: var\(--color-on-accent\);[^}]*opacity: 1;/s);
+	assert.doesNotMatch(page, /border-left:\s*[2-9]px/);
+});
+
 test('the public library is discoverable from navigation and the sitemap', async () => {
 	const [header, footer, sitemap] = await Promise.all([
 		readFile(join(projectRoot, 'src', 'lib', 'components', 'layout', 'Header.svelte'), 'utf8'),
@@ -151,7 +245,7 @@ test('the public library is discoverable from navigation and the sitemap', async
 	]);
 
 	assert.equal((header.match(/href="\/tools\/bildprompt-library"/g) ?? []).length, 2);
-	assert.match(header, /pathname\.startsWith\('\/tools'\)/);
+	assert.match(header, /function isActive\(path\)[\s\S]*pathname === path \|\| pathname\.startsWith\(`\$\{path\}\/`\)/);
 	assert.match(footer, /href="\/tools\/bildprompt-library"[^>]*>Bildprompt-Library<\/a>/);
 	assert.match(sitemap, /\$\{siteConfig\.url\}\/tools\/bildprompt-library/);
 });

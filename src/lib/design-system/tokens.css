@@ -5,8 +5,7 @@
  * Two themes: Dark (Deep Honey + Full Cinematic Gradient) & Light (Warm Neomorphism)
  * Default: Dark theme
  *
- * Import fonts (add to HTML <head>):
- * @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+ * Font faces are self-hosted and declared in src/app.css.
  */
 
 /* ============================================================================
@@ -33,26 +32,30 @@
   --color-border-subtle: rgba(255, 255, 255, 0.06);
   --color-border-soft: rgba(255, 255, 255, 0.10);
   --color-text: #ede8e0;
-  --color-text-muted: #7a7268;
-  --color-text-dim: #5a5348;
+  --color-text-muted: #9a9186;
+  --color-text-dim: #8d857b;
 
   /* Accent Colors - Honey (70% of accent usage) */
   --color-accent-honey: #d4893e;
   --color-accent-honey-hover: #e0a55a;
   --color-accent-honey-glow: rgba(212, 137, 62, 0.35);
   --color-accent-honey-subtle: rgba(212, 137, 62, 0.14);
+  --color-accent-honey-foreground: #d4893e;
 
   /* Accent Colors - Teal (30% of accent usage) */
   --color-accent-teal: #3ab0a2;
   --color-accent-teal-hover: #5cc4b8;
   --color-accent-teal-glow: rgba(58, 176, 162, 0.35);
   --color-accent-teal-subtle: rgba(58, 176, 162, 0.12);
+  --color-accent-teal-foreground: #3ab0a2;
 
   /* Semantic Colors */
   --color-danger: #ff6b6b;
   --color-danger-subtle: rgba(255, 70, 70, 0.12);
   --color-success: #3ab0a2;
   --color-warning: #d4893e;
+  --color-danger-foreground: #ff6b6b;
+  --color-focus: #f3ba76;
 
   /* Text on Accent Backgrounds */
   --color-on-accent: #111111;
@@ -197,28 +200,32 @@
   --color-border-soft: rgba(0, 0, 0, 0.07);
   --color-text: #2d2a26;
   --color-text-muted: #5a534b;
-  --color-text-dim: #76706a;
+  --color-text-dim: #625c56;
 
   /* Accent Colors - Honey (70% of accent usage) */
   --color-accent-honey: #c4854c;
   --color-accent-honey-hover: #d4a06a;
   --color-accent-honey-glow: rgba(196, 133, 76, 0.25);
   --color-accent-honey-subtle: rgba(196, 133, 76, 0.08);
+  --color-accent-honey-foreground: #6d421e;
 
   /* Accent Colors - Teal (30% of accent usage) */
   --color-accent-teal: #4a9b90;
   --color-accent-teal-hover: #6bb5aa;
   --color-accent-teal-glow: rgba(74, 155, 144, 0.25);
   --color-accent-teal-subtle: rgba(74, 155, 144, 0.08);
+  --color-accent-teal-foreground: #155f57;
 
   /* Semantic Colors */
   --color-danger: #c85038;
   --color-danger-subtle: rgba(200, 80, 60, 0.08);
   --color-success: #4a9b90;
   --color-warning: #c4854c;
+  --color-danger-foreground: #8f2e20;
+  --color-focus: #70431f;
 
   /* Text on Accent Backgrounds (ALWAYS dark for light theme) */
-  --color-on-accent: #2d2a26;
+  --color-on-accent: #111111;
 
   /* LIGHT THEME - Neomorphic Shadows (Film Noir Light) */
   --shadow-neo: 8px 8px 18px rgba(160,145,125,0.6), -5px -5px 12px rgba(245,238,225,0.7);

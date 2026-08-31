@@ -1,18 +1,33 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { copyPromptText } from '$lib/utils/prompt-actions.js';
+	import { getPromptThumbnail } from '$lib/utils/prompt-library.js';
 
 	type Prompt = {
 		id: string;
 		command: string;
 		title: string;
+		category: string;
 		image: string;
+		displayImage?: string | null;
 		alt: string;
 		articleSlug: string;
 		useCases: string[];
 	};
 
-	let { prompt, categoryLabel }: { prompt: Prompt; categoryLabel: string } = $props();
+	let {
+		prompt,
+		categoryLabel,
+		onPreview,
+		priority = false
+	}: {
+		prompt: Prompt;
+		categoryLabel: string;
+		onPreview: (prompt: Prompt, trigger: HTMLButtonElement) => void;
+		priority?: boolean;
+	} = $props();
+	let previewImage = $derived(prompt.displayImage ?? prompt.image);
+	let thumbnailImage = $derived(getPromptThumbnail(previewImage));
 	let status = $state('');
 	let statusState = $state<'success' | 'error'>('success');
 	let statusTimer: ReturnType<typeof setTimeout> | undefined;
@@ -41,15 +56,22 @@
 </script>
 
 <article class="prompt-card">
-	<a
-		class="image-link"
-		href={prompt.image}
-		target="_blank"
-		rel="noopener noreferrer"
-		aria-label="{prompt.title} in voller Größe öffnen"
+	<button
+		type="button"
+		class="image-button"
+		class:transparent-preview={Boolean(prompt.displayImage)}
+		onclick={(event) => onPreview(prompt, event.currentTarget)}
+		aria-haspopup="dialog"
+		aria-label="{prompt.title} groß anzeigen"
 	>
-		<img src={prompt.image} alt={prompt.alt} loading="lazy" decoding="async" />
-	</a>
+		<img
+			src={thumbnailImage}
+			alt={prompt.alt}
+			loading={priority ? 'eager' : 'lazy'}
+			fetchpriority={priority ? 'high' : 'auto'}
+			decoding="async"
+		/>
+	</button>
 
 	<div class="card-body">
 		<p class="category">{categoryLabel}</p>
@@ -57,7 +79,7 @@
 
 		<div class="command-row">
 			<code>{prompt.command}</code>
-			<button type="button" class="copy-button" onclick={copyPrompt} aria-label="{prompt.command} kopieren">
+			<button type="button" class="copy-button" onclick={copyPrompt} aria-label="Prompt kopieren: {prompt.command}">
 				<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
 					<rect x="8" y="8" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.8" />
 					<path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
@@ -85,6 +107,8 @@
 		min-width: 0;
 		overflow: hidden;
 		flex-direction: column;
+		content-visibility: auto;
+		contain-intrinsic-size: auto 460px;
 		background: var(--color-surface);
 		border: 1px solid var(--color-border-soft);
 		border-radius: var(--radius-xl);
@@ -98,18 +122,34 @@
 		box-shadow: var(--shadow-elevated);
 	}
 
-	.image-link {
+	.image-button {
 		display: grid;
+		width: 100%;
 		aspect-ratio: 4 / 3;
 		place-items: center;
 		overflow: hidden;
+		padding: 0;
 		background: #f4f4f2;
+		border: 0;
 		border-bottom: 1px solid var(--color-border-subtle);
+		color: inherit;
+		cursor: zoom-in;
 	}
 
-	.image-link:focus-visible {
-		outline: 3px solid var(--color-accent-honey);
-		outline-offset: -3px;
+	.image-button.transparent-preview {
+		background-color: #274047;
+		background-image:
+			linear-gradient(45deg, rgb(255 255 255 / 7%) 25%, transparent 25%),
+			linear-gradient(-45deg, rgb(255 255 255 / 7%) 25%, transparent 25%),
+			linear-gradient(45deg, transparent 75%, rgb(255 255 255 / 7%) 75%),
+			linear-gradient(-45deg, transparent 75%, rgb(255 255 255 / 7%) 75%);
+		background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+		background-size: 24px 24px;
+	}
+
+	.image-button:focus-visible {
+		outline: none;
+		box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 6px #111;
 	}
 
 	img {
@@ -120,7 +160,7 @@
 		transition: transform var(--transition-normal);
 	}
 
-	.image-link:hover img { transform: scale(1.018); }
+	.image-button:hover img { transform: scale(1.018); }
 
 	.card-body {
 		display: flex;

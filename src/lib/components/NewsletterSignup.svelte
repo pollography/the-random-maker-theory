@@ -1,8 +1,11 @@
 <script>
 	let email = $state('');
-	let status = $state('idle'); // idle, loading, success, error
+	/** @type {'idle' | 'loading' | 'success' | 'error'} */
+	let status = $state('idle');
 	let message = $state('');
+	const emailId = $props.id();
 
+	/** @param {SubmitEvent} e */
 	async function handleSubmit(e) {
 		e.preventDefault();
 		if (!email || !email.includes('@')) return;
@@ -43,16 +46,20 @@
 		</div>
 
 		{#if status === 'success'}
-			<div class="newsletter-success">
+			<div class="newsletter-success" role="status" aria-live="polite">
 				<span class="success-icon">✓</span>
 				<p>{message}</p>
 			</div>
 		{:else}
-			<form class="newsletter-form" onsubmit={handleSubmit}>
+			<form class="newsletter-form" onsubmit={handleSubmit} aria-busy={status === 'loading'}>
 				<div class="input-group">
+					<label class="visually-hidden" for={emailId}>E-Mail-Adresse</label>
 					<input
+						id={emailId}
+						name="email"
 						type="email"
 						bind:value={email}
+						autocomplete="email"
 						placeholder="deine@email.de"
 						required
 						disabled={status === 'loading'}
@@ -63,11 +70,11 @@
 						disabled={status === 'loading'}
 						class="newsletter-btn"
 					>
-						{status === 'loading' ? '...' : 'Anmelden'}
+						{status === 'loading' ? 'Wird angemeldet…' : 'Anmelden'}
 					</button>
 				</div>
 				{#if status === 'error'}
-					<p class="newsletter-error">{message}</p>
+					<p class="newsletter-error" role="alert">{message}</p>
 				{/if}
 				<p class="newsletter-hint">DSGVO-konform. Double-Opt-In. Jederzeit abmeldbar.</p>
 			</form>
@@ -88,6 +95,18 @@
 		box-shadow: var(--shadow-card);
 		position: relative;
 		overflow: hidden;
+	}
+
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
 	}
 
 	.newsletter-card::before {
@@ -148,6 +167,11 @@
 		box-shadow: var(--input-focus-ring);
 	}
 
+	.newsletter-input:focus-visible {
+		outline: 2px solid var(--color-focus);
+		outline-offset: 3px;
+	}
+
 	.newsletter-btn {
 		padding: 14px 28px;
 		background: var(--color-accent-honey);
@@ -180,7 +204,7 @@
 	}
 
 	.newsletter-error {
-		color: var(--color-danger);
+		color: var(--color-danger-foreground);
 		font-size: var(--font-size-sm);
 		margin: 0;
 	}
@@ -209,7 +233,7 @@
 	}
 
 	.newsletter-success p {
-		color: var(--color-accent-teal);
+		color: var(--color-accent-teal-foreground);
 		margin: 0;
 		font-size: var(--font-size-base);
 	}
@@ -225,6 +249,17 @@
 
 		.newsletter-btn {
 			width: 100%;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.newsletter-input,
+		.newsletter-btn {
+			transition: none;
+		}
+
+		.newsletter-btn:hover:not(:disabled) {
+			transform: none;
 		}
 	}
 </style>

@@ -6,6 +6,10 @@
 
 	let scrolled = $state(false);
 	let mobileOpen = $state(false);
+	/** @type {HTMLElement | null} */
+	let headerElement = $state(null);
+	/** @type {HTMLButtonElement | null} */
+	let burgerButton = $state(null);
 
 	function handleScroll() {
 		scrolled = typeof window !== 'undefined' && window.scrollY > 20;
@@ -14,32 +18,56 @@
 	function closeMobile() {
 		mobileOpen = false;
 	}
+
+	/** @param {string} path */
+	function isActive(path) {
+		/** @type {string} */
+		const pathname = $page.url.pathname;
+		return pathname === path || pathname.startsWith(`${path}/`);
+	}
+
+	/** @param {KeyboardEvent} event */
+	function handleKeydown(event) {
+		if (event.key === 'Escape' && mobileOpen) {
+			mobileOpen = false;
+			requestAnimationFrame(() => burgerButton?.focus());
+		}
+	}
+
+	/** @param {MouseEvent | PointerEvent} event */
+	function handleOutsideClick(event) {
+		if (mobileOpen && headerElement && !event.composedPath().includes(headerElement)) {
+			mobileOpen = false;
+		}
+	}
 </script>
 
-<svelte:window onscroll={handleScroll} />
+<svelte:window onscroll={handleScroll} onkeydown={handleKeydown} onclick={handleOutsideClick} />
 
-<header class="header" class:scrolled>
+<header class="header" class:scrolled bind:this={headerElement}>
 	<div class="header-inner">
-		<a href="/" class="logo" onclick={closeMobile}>
+		<a href="/" class="logo" onclick={closeMobile} aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 			<span class="logo-text">TRMT</span>
 		</a>
 
 		<!-- Desktop Nav -->
 		<nav class="nav-desktop">
-			<a href="/blog" class="nav-link" class:active={$page.url.pathname.startsWith('/blog')}>Blog</a>
-			<a href="/tools/bildprompt-library" class="nav-link" class:active={$page.url.pathname.startsWith('/tools')}>Tools</a>
-			<a href="/podcast" class="nav-link" class:active={$page.url.pathname.startsWith('/podcast')}>Zum Hören</a>
-			<a href="/about" class="nav-link" class:active={$page.url.pathname.startsWith('/about')}>Über TRMT</a>
+			<a href="/blog" class="nav-link" class:active={isActive('/blog')} aria-current={isActive('/blog') ? 'page' : undefined}>Blog</a>
+			<a href="/tools/bildprompt-library" class="nav-link" class:active={isActive('/tools')} aria-current={isActive('/tools') ? 'page' : undefined}>Tools</a>
+			<a href="/podcast" class="nav-link" class:active={isActive('/podcast')} aria-current={isActive('/podcast') ? 'page' : undefined}>Zum Hören</a>
+			<a href="/about" class="nav-link" class:active={isActive('/about')} aria-current={isActive('/about') ? 'page' : undefined}>Über TRMT</a>
 		</nav>
 
 		<div class="header-actions">
 			<ThemeToggle variant="icon" />
 			<button
+				bind:this={burgerButton}
 				class="burger"
 				class:open={mobileOpen}
 				onclick={() => mobileOpen = !mobileOpen}
-				aria-label="Menü"
+				aria-label={mobileOpen ? 'Menü schließen' : 'Menü öffnen'}
 				aria-expanded={mobileOpen}
+				aria-controls="mobile-navigation"
 			>
 				<span class="burger-line"></span>
 				<span class="burger-line"></span>
@@ -50,11 +78,11 @@
 
 	<!-- Mobile Nav -->
 	{#if mobileOpen}
-		<nav class="nav-mobile">
-			<a href="/blog" class="nav-link-mobile" class:active={$page.url.pathname.startsWith('/blog')} onclick={closeMobile}>Blog</a>
-			<a href="/tools/bildprompt-library" class="nav-link-mobile" class:active={$page.url.pathname.startsWith('/tools')} onclick={closeMobile}>Tools</a>
-			<a href="/podcast" class="nav-link-mobile" class:active={$page.url.pathname.startsWith('/podcast')} onclick={closeMobile}>Zum Hören</a>
-			<a href="/about" class="nav-link-mobile" class:active={$page.url.pathname.startsWith('/about')} onclick={closeMobile}>Über TRMT</a>
+		<nav id="mobile-navigation" class="nav-mobile">
+			<a href="/blog" class="nav-link-mobile" class:active={isActive('/blog')} aria-current={isActive('/blog') ? 'page' : undefined} onclick={closeMobile}>Blog</a>
+			<a href="/tools/bildprompt-library" class="nav-link-mobile" class:active={isActive('/tools')} aria-current={isActive('/tools') ? 'page' : undefined} onclick={closeMobile}>Tools</a>
+			<a href="/podcast" class="nav-link-mobile" class:active={isActive('/podcast')} aria-current={isActive('/podcast') ? 'page' : undefined} onclick={closeMobile}>Zum Hören</a>
+			<a href="/about" class="nav-link-mobile" class:active={isActive('/about')} aria-current={isActive('/about') ? 'page' : undefined} onclick={closeMobile}>Über TRMT</a>
 		</nav>
 	{/if}
 </header>
@@ -91,7 +119,7 @@
 	.header-inner {
 		max-width: 1152px;
 		margin: 0 auto;
-		padding: 16px 1rem;
+		padding: 6px 1rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -109,7 +137,7 @@
 		font-family: var(--font-display);
 		font-weight: var(--font-weight-extrabold);
 		font-size: var(--font-size-xl);
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 		letter-spacing: var(--letter-spacing-wide);
 		transition: all var(--transition-normal);
 		text-shadow:
@@ -118,7 +146,7 @@
 	}
 
 	.logo:hover .logo-text {
-		color: var(--color-accent-honey-hover);
+		color: var(--color-accent-honey-foreground);
 		text-shadow:
 			0 0 10px rgba(212, 137, 62, 0.6),
 			0 0 25px rgba(212, 137, 62, 0.35),
@@ -129,6 +157,10 @@
 	.nav-desktop { display: flex; align-items: center; gap: 32px; }
 
 	.nav-link {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		min-width: 44px;
 		color: var(--color-text-muted);
 		text-decoration: none;
 		font-size: var(--font-size-base);
@@ -139,7 +171,7 @@
 
 	.nav-link:hover { color: var(--color-text); }
 
-	.nav-link.active { color: var(--color-accent-honey); }
+	.nav-link.active { color: var(--color-accent-honey-foreground); }
 
 	.nav-link.active::after {
 		content: '';
@@ -203,7 +235,10 @@
 	}
 
 	.nav-link-mobile {
-		display: block;
+		display: flex;
+		align-items: center;
+		min-height: 44px;
+		min-width: 44px;
 		padding: 14px 0;
 		color: var(--color-text-muted);
 		text-decoration: none;
@@ -218,11 +253,25 @@
 	}
 
 	.nav-link-mobile:hover { color: var(--color-text); }
-	.nav-link-mobile.active { color: var(--color-accent-honey); }
+	.nav-link-mobile.active { color: var(--color-accent-honey-foreground); }
 
 	@media (max-width: 640px) {
 		.nav-desktop { display: none; }
 		.burger { display: flex; }
 		.nav-mobile { display: flex; }
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.header,
+		.logo-text,
+		.nav-link,
+		.nav-link-mobile,
+		.burger-line {
+			transition: none;
+		}
+
+		.nav-mobile {
+			animation: none;
+		}
 	}
 </style>

@@ -4,13 +4,10 @@ import { getLatestEpisode } from '$lib/utils/episodes';
 export const prerender = true;
 
 export async function load() {
-	const [posts, latestEpisode] = await Promise.all([
-		getPosts(),
-		getLatestEpisode()
-	]);
+	const [posts, latestEpisode] = await Promise.all([getPosts(), getLatestEpisode()]);
 
 	return {
-		posts,
+		posts: posts.slice(0, 6),
 		latestEpisode,
 		totalCount: posts.length + (latestEpisode ? 1 : 0)
 	};

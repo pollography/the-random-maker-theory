@@ -7,6 +7,7 @@
 		variant = 'icon',
 		class: className = '',
 	} = $props();
+	const nextAction = $derived($theme === 'dark' ? 'Helles Design aktivieren' : 'Dunkles Design aktivieren');
 
 	function handleToggle() {
 		theme.toggleTheme();
@@ -17,8 +18,9 @@
 	<button
 		class="theme-toggle {className}"
 		onclick={handleToggle}
-		aria-label="Toggle theme"
-		title={$theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+		aria-label={nextAction}
+		title={nextAction}
+		aria-pressed={$theme === 'light'}
 	>
 		<span class="icon">
 			{#if $theme === 'dark'}
@@ -47,12 +49,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 40px;
-		height: 40px;
+		width: 44px;
+		height: 44px;
 		border-radius: 50%;
 		border: 1px solid var(--color-border-subtle);
 		background: var(--color-surface);
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 		cursor: pointer;
 		transition: all var(--transition-normal);
 	}

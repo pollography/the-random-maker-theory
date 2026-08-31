@@ -18,7 +18,7 @@
 		<div class="footer-grid">
 			<!-- About Section -->
 			<div>
-				<h3 style="font-family: var(--font-display); font-weight: var(--font-weight-bold); font-size: var(--font-size-xl); margin: 0 0 1rem 0; color: var(--color-accent-honey);">
+				<h3 style="font-family: var(--font-display); font-weight: var(--font-weight-bold); font-size: var(--font-size-xl); margin: 0 0 1rem 0; color: var(--color-accent-honey-foreground);">
 					{siteConfig.shortName}
 				</h3>
 				<p style="color: var(--color-text-muted); font-size: var(--font-size-sm); margin: 0; line-height: var(--line-height-relaxed);">
@@ -113,6 +113,10 @@
 	}
 
 	:global(.footer-link) {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		min-width: 44px;
 		color: var(--color-text-muted);
 		text-decoration: none;
 		font-size: var(--font-size-sm);
@@ -120,7 +124,7 @@
 	}
 
 	:global(.footer-link:hover) {
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 	}
 
 	@media (max-width: 768px) {

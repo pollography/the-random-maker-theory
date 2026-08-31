@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { tick } from 'svelte';
 	import PromptCard from './PromptCard.svelte';
+	import PromptLightbox from './PromptLightbox.svelte';
 	import { filterPrompts, getCategoryCounts } from '$lib/utils/prompt-library.js';
 
 	type Prompt = {
@@ -8,6 +10,7 @@
 		title: string;
 		category: string;
 		image: string;
+		displayImage?: string | null;
 		alt: string;
 		articleSlug: string;
 		useCases: string[];
@@ -26,10 +29,24 @@
 	let filteredPrompts = $derived(filterPrompts(prompts, categories, query, activeCategory) as Prompt[]);
 	let categoryCounts = $derived(getCategoryCounts(prompts, categories) as Record<string, number>);
 	let categoryLabels = $derived(new Map(categories.map((category) => [category.id, category.label])));
+	let activePrompt = $state<Prompt | null>(null);
+	let returnFocusElement: HTMLButtonElement | null = null;
 
 	function resetFilters() {
 		query = '';
 		activeCategory = 'all';
+	}
+
+	function openPreview(prompt: Prompt, trigger: HTMLButtonElement) {
+		returnFocusElement = trigger;
+		activePrompt = prompt;
+	}
+
+	async function closePreview() {
+		activePrompt = null;
+		await tick();
+		returnFocusElement?.focus();
+		returnFocusElement = null;
 	}
 </script>
 
@@ -86,8 +103,13 @@
 	<section class="results" aria-label="Gefundene Bildprompts">
 		{#if filteredPrompts.length > 0}
 			<div class="prompt-grid">
-				{#each filteredPrompts as prompt (prompt.id)}
-					<PromptCard {prompt} categoryLabel={categoryLabels.get(prompt.category) ?? prompt.category} />
+				{#each filteredPrompts as prompt, index (prompt.id)}
+					<PromptCard
+						{prompt}
+						categoryLabel={categoryLabels.get(prompt.category) ?? prompt.category}
+						onPreview={openPreview}
+						priority={index === 0}
+					/>
 				{/each}
 			</div>
 		{:else}
@@ -99,6 +121,8 @@
 		{/if}
 	</section>
 </div>
+
+<PromptLightbox prompt={activePrompt} onClose={closePreview} />
 
 <style>
 	.sr-only {

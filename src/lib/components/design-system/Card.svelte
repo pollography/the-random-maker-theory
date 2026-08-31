@@ -50,4 +50,18 @@
 		box-shadow: var(--shadow-neo);
 		transform: translateY(-2px);
 	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.card {
+			transition: none;
+		}
+
+		.card.interactive:hover {
+			transform: none;
+		}
+
+		:global([data-theme='light']) .card.interactive:hover {
+			transform: none;
+		}
+	}
 </style>

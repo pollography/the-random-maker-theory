@@ -6,6 +6,7 @@
  * @property {string} category
  * @property {string} status
  * @property {string | null} image
+ * @property {string | null} [displayImage]
  * @property {string | null} alt
  * @property {string | null} articleSlug
  * @property {string[]} useCases
@@ -70,6 +71,16 @@ export function getCategoryCounts(prompts, categories) {
 }
 
 /**
+ * Resolve the compact card asset while keeping the canonical image for the lightbox.
+ *
+ * @param {string} imagePath
+ */
+export function getPromptThumbnail(imagePath) {
+	const filename = imagePath.split('/').at(-1);
+	return `/images/blog/ki-bildprompts/thumbs/${filename}`;
+}
+
+/**
  * Validate the canonical data without importing Node-only filesystem modules.
  * Tests and local generators can inject an image check.
  *
@@ -104,6 +115,9 @@ export function validatePromptLibrary(data, options = {}) {
 			if (!prompt.articleSlug) errors.push(`${prompt.command} is tested but has no article.`);
 			if (prompt.image && options.imageExists && !options.imageExists(prompt.image)) {
 				errors.push(`${prompt.command} references a missing image: ${prompt.image}`);
+			}
+			if (prompt.displayImage && options.imageExists && !options.imageExists(prompt.displayImage)) {
+				errors.push(`${prompt.command} references a missing display image: ${prompt.displayImage}`);
 			}
 		} else if (prompt.status !== 'idea') {
 			errors.push(`${prompt.command ?? prompt.id} has an unsupported status.`);

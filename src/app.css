@@ -1,5 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import './lib/design-system/tokens.css';
+
+@font-face {
+	font-family: 'Instrument Serif';
+	src: url('/fonts/instrument-serif-regular.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Instrument Serif';
+	src: url('/fonts/instrument-serif-italic.woff2') format('woff2');
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('/fonts/inter-latin-variable.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 300 800;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	src: url('/fonts/jetbrains-mono-latin-variable.woff2') format('woff2');
+	font-style: normal;
+	font-weight: 400 600;
+	font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -27,6 +58,33 @@ body::before {
 
 html {
 	scroll-behavior: smooth;
+}
+
+:focus-visible {
+	outline: 2px solid var(--color-focus);
+	outline-offset: 3px;
+}
+
+.skip-link {
+	position: fixed;
+	top: 0;
+	left: 1rem;
+	z-index: var(--z-toast);
+	padding: 0.75rem 1rem;
+	background: var(--color-overlay);
+	color: var(--color-text);
+	text-decoration: none;
+	transform: translateY(-120%);
+}
+
+.skip-link:focus-visible {
+	transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
 }
 
 body {

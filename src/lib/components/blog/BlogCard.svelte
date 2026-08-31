@@ -79,7 +79,7 @@
 	}
 
 	.card-accent {
-		color: var(--color-accent-honey);
+		color: var(--color-accent-honey-foreground);
 		font-style: italic;
 	}
 
@@ -106,5 +106,15 @@
 
 	:global(.card:hover) .card-thumbnail img {
 		transform: scale(1.03);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.card-thumbnail img {
+			transition: none;
+		}
+
+		:global(.card:hover) .card-thumbnail img {
+			transform: none;
+		}
 	}
 </style>
