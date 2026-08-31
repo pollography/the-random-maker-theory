@@ -27,6 +27,7 @@
 		<!-- Desktop Nav -->
 		<nav class="nav-desktop">
 			<a href="/blog" class="nav-link" class:active={$page.url.pathname.startsWith('/blog')}>Blog</a>
+			<a href="/tools/bildprompt-library" class="nav-link" class:active={$page.url.pathname.startsWith('/tools')}>Tools</a>
 			<a href="/podcast" class="nav-link" class:active={$page.url.pathname.startsWith('/podcast')}>Zum Hören</a>
 			<a href="/about" class="nav-link" class:active={$page.url.pathname.startsWith('/about')}>Über TRMT</a>
 		</nav>
@@ -51,6 +52,7 @@
 	{#if mobileOpen}
 		<nav class="nav-mobile">
 			<a href="/blog" class="nav-link-mobile" class:active={$page.url.pathname.startsWith('/blog')} onclick={closeMobile}>Blog</a>
+			<a href="/tools/bildprompt-library" class="nav-link-mobile" class:active={$page.url.pathname.startsWith('/tools')} onclick={closeMobile}>Tools</a>
 			<a href="/podcast" class="nav-link-mobile" class:active={$page.url.pathname.startsWith('/podcast')} onclick={closeMobile}>Zum Hören</a>
 			<a href="/about" class="nav-link-mobile" class:active={$page.url.pathname.startsWith('/about')} onclick={closeMobile}>Über TRMT</a>
 		</nav>

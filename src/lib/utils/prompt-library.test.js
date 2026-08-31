@@ -141,3 +141,16 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(page, /PDF-Cheat-Sheet/);
 	assert.match(page, /\/downloads\/trmt-bildprompt-cheatsheet\.pdf/);
 });
+
+test('the public library is discoverable from navigation and the sitemap', async () => {
+	const [header, footer, sitemap] = await Promise.all([
+		readFile(join(projectRoot, 'src', 'lib', 'components', 'layout', 'Header.svelte'), 'utf8'),
+		readFile(join(projectRoot, 'src', 'lib', 'components', 'layout', 'Footer.svelte'), 'utf8'),
+		readFile(join(projectRoot, 'src', 'routes', 'sitemap.xml', '+server.ts'), 'utf8')
+	]);
+
+	assert.equal((header.match(/href="\/tools\/bildprompt-library"/g) ?? []).length, 2);
+	assert.match(header, /pathname\.startsWith\('\/tools'\)/);
+	assert.match(footer, /href="\/tools\/bildprompt-library"[^>]*>Bildprompt-Library<\/a>/);
+	assert.match(sitemap, /\$\{siteConfig\.url\}\/tools\/bildprompt-library/);
+});

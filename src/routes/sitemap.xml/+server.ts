@@ -49,6 +49,12 @@ export async function GET() {
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>${siteConfig.url}/tools/bildprompt-library</loc>
+    <lastmod>${latestPostDate}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>${siteConfig.url}/podcast</loc>
     <lastmod>${latestPostDate}</lastmod>
     <changefreq>weekly</changefreq>
