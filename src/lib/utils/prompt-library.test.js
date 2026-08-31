@@ -140,6 +140,7 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(page, /Bildprompt-Library/);
 	assert.match(page, /PDF-Cheat-Sheet/);
 	assert.match(page, /\/downloads\/trmt-bildprompt-cheatsheet\.pdf/);
+	assert.match(page, /@media \(max-width: 760px\)[\s\S]*h1 \{ font-size:/);
 });
 
 test('the public library is discoverable from navigation and the sitemap', async () => {

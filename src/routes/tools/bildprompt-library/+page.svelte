@@ -139,6 +139,7 @@
 
 	@media (max-width: 760px) {
 		.tool-hero { align-items: stretch; flex-direction: column; gap: 22px; padding-top: 34px; }
+		h1 { font-size: clamp(2.2rem, 10vw, 2.5rem); letter-spacing: -0.04em; }
 		.download-button { align-self: flex-start; }
 		.library-note { align-items: flex-start; flex-direction: column; padding: 24px; }
 	}
