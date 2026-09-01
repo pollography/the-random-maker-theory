@@ -38,6 +38,9 @@ test('fonts are local and both LCP display faces are preloaded', async () => {
 test('video uses a local keyboard-operable facade before loading privacy-enhanced YouTube', async () => {
 	const page = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
 	assert.match(page, /let videoLoaded = \$state\(false\)/);
+	assert.match(page, /let videoPosterReady = \$state\(false\)/);
+	assert.match(page, /rootMargin:\s*'200px'/);
+	assert.match(page, /\{#if videoPosterReady\}[\s\S]*prompt-engineering-trmt-002\.webp/);
 	assert.match(page, /type="button"/);
 	assert.match(page, /Video abspielen:/);
 	assert.match(page, /youtube-nocookie\.com\/embed\/KWIH_InMQZ8/);
@@ -52,14 +55,22 @@ test('topic artwork stays within the homepage image budget', async () => {
 	const topicsDir = join(projectRoot, 'static', 'images', 'homepage', 'topics');
 	const files = (await readdir(topicsDir)).filter((file) => file.endsWith('.webp')).sort();
 	assert.deepEqual(files, [
+		'automatisierung-thumb.webp',
 		'automatisierung.webp',
+		'fotografie-thumb.webp',
 		'fotografie.webp',
+		'ki-tech-thumb.webp',
 		'ki-tech.webp',
+		'maker-diy-thumb.webp',
 		'maker-diy.webp',
+		'produktivitaet-thumb.webp',
 		'produktivitaet.webp'
 	]);
 
 	const sizes = await Promise.all(files.map(async (file) => (await stat(join(topicsDir, file))).size));
-	for (const size of sizes) assert.ok(size <= 35 * 1024, `topic image is ${size} bytes`);
-	assert.ok(sizes.reduce((sum, size) => sum + size, 0) <= 175 * 1024);
+	for (const [index, size] of sizes.entries()) {
+		const limit = files[index].includes('-thumb.') ? 15 * 1024 : 35 * 1024;
+		assert.ok(size <= limit, `${files[index]} is ${size} bytes`);
+	}
+	assert.ok(sizes.reduce((sum, size) => sum + size, 0) <= 165 * 1024);
 });

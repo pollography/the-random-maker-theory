@@ -27,6 +27,8 @@ test('homepage exposes five concise topic links without emoji pillar copy', asyn
 		assert.match(page, new RegExp(`tag: '${tag}'`));
 	}
 	assert.equal((page.match(/\/images\/homepage\/topics\//g) ?? []).length, 5);
+	assert.match(page, /getImageSeo\(\s*pillar\.image/);
+	assert.match(page, /srcset=\{pillar\.imageSeo\.srcset\}/);
 	assert.doesNotMatch(page, /pillar\.desc|pillar\.highlights|pillar\.icon/);
 });
 

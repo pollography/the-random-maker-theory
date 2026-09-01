@@ -6988,13 +6988,47 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/homepage/topics/automatisierung-thumb.webp": {
+		"width": 320,
+		"height": 320,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/automatisierung-thumb.webp",
+				"width": 320
+			},
+			{
+				"src": "/images/homepage/topics/automatisierung.webp",
+				"width": 512
+			}
+		]
+	},
 	"/images/homepage/topics/automatisierung.webp": {
 		"width": 512,
 		"height": 512,
 		"format": "webp",
 		"variants": [
 			{
+				"src": "/images/homepage/topics/automatisierung-thumb.webp",
+				"width": 320
+			},
+			{
 				"src": "/images/homepage/topics/automatisierung.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/fotografie-thumb.webp": {
+		"width": 320,
+		"height": 320,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/fotografie-thumb.webp",
+				"width": 320
+			},
+			{
+				"src": "/images/homepage/topics/fotografie.webp",
 				"width": 512
 			}
 		]
@@ -7005,7 +7039,26 @@ export const imageMetadata = {
 		"format": "webp",
 		"variants": [
 			{
+				"src": "/images/homepage/topics/fotografie-thumb.webp",
+				"width": 320
+			},
+			{
 				"src": "/images/homepage/topics/fotografie.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/ki-tech-thumb.webp": {
+		"width": 320,
+		"height": 320,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/ki-tech-thumb.webp",
+				"width": 320
+			},
+			{
+				"src": "/images/homepage/topics/ki-tech.webp",
 				"width": 512
 			}
 		]
@@ -7016,7 +7069,26 @@ export const imageMetadata = {
 		"format": "webp",
 		"variants": [
 			{
+				"src": "/images/homepage/topics/ki-tech-thumb.webp",
+				"width": 320
+			},
+			{
 				"src": "/images/homepage/topics/ki-tech.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/maker-diy-thumb.webp": {
+		"width": 320,
+		"height": 320,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/maker-diy-thumb.webp",
+				"width": 320
+			},
+			{
+				"src": "/images/homepage/topics/maker-diy.webp",
 				"width": 512
 			}
 		]
@@ -7027,7 +7099,26 @@ export const imageMetadata = {
 		"format": "webp",
 		"variants": [
 			{
+				"src": "/images/homepage/topics/maker-diy-thumb.webp",
+				"width": 320
+			},
+			{
 				"src": "/images/homepage/topics/maker-diy.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/produktivitaet-thumb.webp": {
+		"width": 320,
+		"height": 320,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/produktivitaet-thumb.webp",
+				"width": 320
+			},
+			{
+				"src": "/images/homepage/topics/produktivitaet.webp",
 				"width": 512
 			}
 		]
@@ -7037,6 +7128,10 @@ export const imageMetadata = {
 		"height": 512,
 		"format": "webp",
 		"variants": [
+			{
+				"src": "/images/homepage/topics/produktivitaet-thumb.webp",
+				"width": 320
+			},
 			{
 				"src": "/images/homepage/topics/produktivitaet.webp",
 				"width": 512

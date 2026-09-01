@@ -5,6 +5,7 @@
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 	import { pageFAQs } from '$lib/data/pageFAQs';
 	import { buildImageObject } from '$lib/utils/image-rights.js';
+	import { getImageSeo } from '$lib/utils/image-seo.js';
 
 	/** @type {{ data: { posts: any[]; latestEpisode: any; totalCount: number } }} */
 	let { data } = $props();
@@ -25,6 +26,9 @@
 	});
 
 	let videoLoaded = $state(false);
+	let videoPosterReady = $state(false);
+	/** @type {HTMLButtonElement | null} */
+	let videoPosterRef = $state(null);
 
 	// Count-up animation — SSR-friendly: start at totalCount so no "0" flash.
 	// untrack() prevents Svelte from flagging this one-shot capture as a
@@ -51,6 +55,18 @@
 			});
 		}, { threshold: 0.5 });
 		observer.observe(counterRef);
+		return () => observer.disconnect();
+	});
+
+	$effect(() => {
+		if (!videoPosterRef || videoPosterReady) return;
+		const observer = new IntersectionObserver((entries) => {
+			if (entries.some((entry) => entry.isIntersecting)) {
+				videoPosterReady = true;
+				observer.disconnect();
+			}
+		}, { rootMargin: '200px' });
+		observer.observe(videoPosterRef);
 		return () => observer.disconnect();
 	});
 
@@ -100,7 +116,13 @@
 			tag: 'produktivitaet',
 			image: '/images/homepage/topics/produktivitaet.webp'
 		}
-	];
+	].map((pillar) => ({
+		...pillar,
+		imageSeo: getImageSeo(
+			pillar.image,
+			'(max-width: 768px) 42vw, (max-width: 1024px) 30vw, 220px'
+		)
+	}));
 </script>
 
 <svelte:head>
@@ -179,7 +201,16 @@
 		{#each pillars as pillar}
 			<a href="/tags/{pillar.tag}" class="topic-card">
 				<div class="topic-image">
-					<img src={pillar.image} alt="" loading="lazy" decoding="async" width="512" height="512" />
+					<img
+						src={pillar.image}
+						srcset={pillar.imageSeo.srcset}
+						sizes={pillar.imageSeo.sizes}
+						alt=""
+						loading="lazy"
+						decoding="async"
+						width={pillar.imageSeo.width ?? 512}
+						height={pillar.imageSeo.height ?? 512}
+					/>
 				</div>
 				<div class="topic-copy">
 					<h3>{pillar.title}</h3>
@@ -228,16 +259,23 @@
 				<button
 					type="button"
 					class="video-facade"
+					bind:this={videoPosterRef}
 					aria-label="Video abspielen: Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini"
+					onmouseenter={() => (videoPosterReady = true)}
+					onfocus={() => (videoPosterReady = true)}
 					onclick={() => (videoLoaded = true)}
 				>
-					<img
-						src="/images/video/prompt-engineering-trmt-002.webp"
-						alt=""
-						width="1280"
-						height="720"
-						loading="lazy"
-					/>
+					<div class="video-poster">
+						{#if videoPosterReady}
+							<img
+								src="/images/video/prompt-engineering-trmt-002.webp"
+								alt=""
+								width="1280"
+								height="720"
+								decoding="async"
+							/>
+						{/if}
+					</div>
 					<span class="video-play" aria-hidden="true">▶</span>
 				</button>
 			{/if}
@@ -662,6 +700,15 @@
 		object-fit: cover;
 	}
 
+	.video-poster {
+		position: absolute;
+		inset: 0;
+		background:
+			radial-gradient(circle at 50% 44%, rgba(58, 176, 162, 0.18), transparent 34%),
+			radial-gradient(circle at 48% 56%, rgba(212, 137, 62, 0.18), transparent 45%),
+			var(--color-elevated);
+	}
+
 	.video-play {
 		position: absolute;
 		top: 50%;
@@ -880,7 +927,7 @@
 
 	@media (max-width: 480px) {
 		.hero-badge { font-size: 0.68rem; }
-		.hero-title { font-size: clamp(42px, 13vw, 58px); }
+		.hero-title { font-size: clamp(42px, 11vw, 50px); }
 		.hero-promise { font-size: 25px; }
 		.hero-actions { width: 100%; gap: 10px; }
 		.hero-actions a { flex: 1 1 150px; justify-content: center; padding-inline: 16px; }
