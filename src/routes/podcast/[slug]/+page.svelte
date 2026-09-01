@@ -2,6 +2,8 @@
 	import { siteConfig } from '$lib/config';
 
 	let { data } = $props();
+	let canonicalUrl = $derived(`${siteConfig.url}/podcast/${data.episode.slug}`);
+	let socialImageUrl = $derived(new URL(data.socialImage, siteConfig.url).toString());
 
 	let formattedDate = $derived(new Date(data.episode.date).toLocaleDateString('de-DE', {
 		year: 'numeric',
@@ -15,6 +17,14 @@
 	<meta name="description" content={data.episode.description} />
 	<meta property="og:title" content={data.episode.title} />
 	<meta property="og:description" content={data.episode.description} />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={canonicalUrl} />
+	<meta property="og:image" content={socialImageUrl} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={data.episode.title} />
+	<meta name="twitter:description" content={data.episode.description} />
+	<meta name="twitter:image" content={socialImageUrl} />
+	<link rel="canonical" href={canonicalUrl} />
 </svelte:head>
 
 <article class="max-w-3xl mx-auto py-12">

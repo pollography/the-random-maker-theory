@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onDestroy, tick } from 'svelte';
+	import { getImageSeo } from '$lib/utils/image-seo.js';
 
 	type Prompt = {
 		command: string;
@@ -14,6 +15,8 @@
 	let closeButton = $state<HTMLButtonElement>();
 	let bodyScrollLocked = false;
 	let previousBodyOverflow = '';
+	let imageSrc = $derived(prompt ? prompt.displayImage ?? prompt.image : null);
+	let imageSeo = $derived(getImageSeo(imageSrc, '(max-width: 1120px) calc(100vw - 32px), 1120px'));
 
 	function lockBodyScroll() {
 		if (bodyScrollLocked) return;
@@ -80,7 +83,15 @@
 			</button>
 
 			<div class="image-stage" class:transparent-canvas={Boolean(prompt.displayImage)}>
-				<img src={prompt.displayImage ?? prompt.image} alt={prompt.alt} />
+				<img
+					src={imageSrc}
+					srcset={imageSeo.srcset}
+					sizes={imageSeo.sizes}
+					alt={prompt.alt}
+					width={imageSeo.width}
+					height={imageSeo.height}
+					decoding="async"
+				/>
 			</div>
 
 			<div class="caption">

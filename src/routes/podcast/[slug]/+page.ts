@@ -22,12 +22,12 @@ export async function load({ params }) {
 
 	// Only surface the blog link if the referenced post is actually published.
 	// Drafts and stale slugs would otherwise prerender as 404s.
-	const blogSlugResolved = episode.blogSlug
-		? (await getPost(episode.blogSlug))?.slug ?? null
-		: null;
+	const linkedPost = episode.blogSlug ? await getPost(episode.blogSlug) : null;
+	const blogSlugResolved = linkedPost?.slug ?? null;
 
 	return {
 		episode: { ...episode, blogSlug: blogSlugResolved },
 		content,
+		socialImage: linkedPost?.heroImage ?? '/images/og/default.webp',
 	};
 }

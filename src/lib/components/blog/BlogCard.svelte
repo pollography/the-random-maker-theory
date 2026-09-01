@@ -3,12 +3,17 @@
 <script>
 	import Card from '../design-system/Card.svelte';
 	import TagList from '../shared/TagList.svelte';
+	import { getImageSeo } from '$lib/utils/image-seo.js';
 
 	let { post } = $props();
 
 	let thumbnailSrc = $derived(
 		post.heroImage ? post.heroImage.replace('.webp', '-thumb.webp') : null
 	);
+	let imageSeo = $derived(getImageSeo(
+		thumbnailSrc || post.heroImage,
+		'(max-width: 768px) calc(100vw - 32px), (max-width: 1024px) calc(50vw - 36px), 400px'
+	));
 
 	let formattedDate = $derived(new Date(post.date).toLocaleDateString('de-DE', {
 		year: 'numeric',
@@ -35,7 +40,16 @@
 		<!-- Thumbnail -->
 		{#if post.heroImage}
 			<div class="card-thumbnail">
-				<img src={thumbnailSrc || post.heroImage} alt={post.title} loading="lazy" width="400" height="225" />
+				<img
+					src={thumbnailSrc || post.heroImage}
+					srcset={imageSeo.srcset}
+					sizes={imageSeo.sizes}
+					alt={post.title}
+					loading="lazy"
+					decoding="async"
+					width={imageSeo.width ?? 400}
+					height={imageSeo.height ?? 225}
+				/>
 			</div>
 		{/if}
 

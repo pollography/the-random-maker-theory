@@ -3,9 +3,14 @@
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import MediaBanner from '$lib/components/blog/MediaBanner.svelte';
 	import { siteConfig } from '$lib/config';
+	import { getImageSeo } from '$lib/utils/image-seo.js';
 
 	let { data } = $props();
 	let metaTitle = $derived(data.post.seoTitle || data.post.title);
+	let heroImageSeo = $derived(getImageSeo(
+		data.post.heroImage,
+		'(max-width: 768px) calc(100vw - 32px), 768px'
+	));
 
 	// Ensure ISO 8601 dates with timezone for Schema.org
 	function toISO(dateStr) {
@@ -184,10 +189,14 @@
 			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 			<img
 				src={data.post.heroImage}
+				srcset={heroImageSeo.srcset}
+				sizes={heroImageSeo.sizes}
 				alt={data.post.title}
 				loading="eager"
-				width="1920"
-				height="1080"
+				fetchpriority="high"
+				decoding="async"
+				width={heroImageSeo.width ?? 1200}
+				height={heroImageSeo.height ?? 675}
 				style="cursor: zoom-in;"
 				onclick={() => openLightbox(data.post.heroImage, data.post.title)}
 				onkeydown={(e) => e.key === 'Enter' && openLightbox(data.post.heroImage, data.post.title)}

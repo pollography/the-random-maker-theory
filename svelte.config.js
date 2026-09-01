@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-vercel';
 import { mdsvex } from 'mdsvex';
+import { rehypeImageSeo } from './src/lib/utils/rehype-image-seo.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -7,6 +8,7 @@ const config = {
 	preprocess: [
 		mdsvex({
 			extensions: ['.md'],
+			rehypePlugins: [rehypeImageSeo],
 			layout: {
 				blog: './src/lib/components/layout/BlogLayout.svelte',
 				podcast: './src/lib/components/layout/PodcastLayout.svelte'

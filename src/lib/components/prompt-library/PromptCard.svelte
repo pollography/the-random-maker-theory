@@ -2,6 +2,7 @@
 	import { onDestroy } from 'svelte';
 	import { copyPromptText } from '$lib/utils/prompt-actions.js';
 	import { getPromptCopyText, getPromptThumbnail } from '$lib/utils/prompt-library.js';
+	import { getImageSeo } from '$lib/utils/image-seo.js';
 
 	type Prompt = {
 		id: string;
@@ -30,6 +31,10 @@
 	} = $props();
 	let previewImage = $derived(prompt.displayImage ?? prompt.image);
 	let thumbnailImage = $derived(getPromptThumbnail(previewImage));
+	let imageSeo = $derived(getImageSeo(
+		thumbnailImage,
+		'(max-width: 720px) calc(100vw - 40px), (max-width: 1100px) calc(50vw - 42px), 340px'
+	));
 	let copyText = $derived(getPromptCopyText(prompt));
 	let status = $state('');
 	let statusState = $state<'success' | 'error'>('success');
@@ -69,10 +74,14 @@
 	>
 		<img
 			src={thumbnailImage}
+			srcset={imageSeo.srcset}
+			sizes={imageSeo.sizes}
 			alt={prompt.alt}
 			loading={priority ? 'eager' : 'lazy'}
 			fetchpriority={priority ? 'high' : 'auto'}
 			decoding="async"
+			width={imageSeo.width}
+			height={imageSeo.height}
 		/>
 	</button>
 

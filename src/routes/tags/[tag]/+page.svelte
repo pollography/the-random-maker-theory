@@ -32,9 +32,10 @@
 	<meta property="og:url" content="https://therandommakertheory.com/tags/{data.tag}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
-	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="{tagInfo.title} | TRMT" />
 	<meta name="twitter:description" content={tagInfo.metaDesc} />
+	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
 	<link rel="canonical" href="https://therandommakertheory.com/tags/{data.tag}" />
 
 	<!-- FAQPage Schema.org für Featured Snippets -->
