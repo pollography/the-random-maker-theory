@@ -55,4 +55,11 @@ The only partially successful visual experiment is the two-layer moiré portrait
 
 ## Release verification
 
-Pending until the guarded main push and production deployment complete. The final commit, GitHub Actions run, live HTTP checks, canonical, Article JSON-LD, sitemap, RSS and live PDF hash will be appended after deployment.
+- Release commit: `1606e1c69f5ceb62a38a71c99fb415377838f6d8`, fast-forwarded to `origin/main` from verified base `7c5142e730c611bb5ea3e9f2b2d36ea86bfab3ac`.
+- GitHub/Vercel run: `33481203621`, **PASS** in 1 minute 11 seconds.
+- Live HTTP: article, library, blog list, sitemap, RSS and all three prompt PDFs return **200**.
+- New WebP delivery: **54/54 PASS** with status 200 and content type `image/webp` (24 result images, four boards, hero, article thumbnail and 24 library thumbnails).
+- Live article: correct title, date and canonical URL. Structured data is a valid `BlogPosting`, the specific Schema.org subtype of `Article`, with the correct headline, publication date and hero image.
+- Discovery: blog list, `/sitemap.xml` and `/rss.xml` all contain the new article. The image sitemap contains the new hero.
+- Live PDF: **13 pages**, byte-identical to the approved local file, SHA-256 `46FF6D415E073BE4E46F2D71E304E52FECB172CCA9F1C609C8402F3D8DE46BD4`.
+- Google Search Console: authenticated property access confirmed. URL Inspection currently reports `URL ist nicht auf Google` and `URL ist Google nicht bekannt`, which is expected for the just-published URL. The `Indexierung beantragen` action is available but was not submitted in the unattended browser run because that external form action requires an immediate user confirmation. Sitemap and RSS discovery are already live.
