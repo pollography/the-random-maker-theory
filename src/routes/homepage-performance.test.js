@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { existsSync } from 'node:fs';
-import { readFile } from 'node:fs/promises';
+import { readFile, readdir, stat } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
@@ -46,4 +46,20 @@ test('video uses a local keyboard-operable facade before loading privacy-enhance
 		existsSync(join(projectRoot, 'static', 'images', 'video', 'prompt-engineering-trmt-002.webp')),
 		true
 	);
+});
+
+test('topic artwork stays within the homepage image budget', async () => {
+	const topicsDir = join(projectRoot, 'static', 'images', 'homepage', 'topics');
+	const files = (await readdir(topicsDir)).filter((file) => file.endsWith('.webp')).sort();
+	assert.deepEqual(files, [
+		'automatisierung.webp',
+		'fotografie.webp',
+		'ki-tech.webp',
+		'maker-diy.webp',
+		'produktivitaet.webp'
+	]);
+
+	const sizes = await Promise.all(files.map(async (file) => (await stat(join(topicsDir, file))).size));
+	for (const size of sizes) assert.ok(size <= 35 * 1024, `topic image is ${size} bytes`);
+	assert.ok(sizes.reduce((sum, size) => sum + size, 0) <= 175 * 1024);
 });

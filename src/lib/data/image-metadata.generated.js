@@ -6988,6 +6988,61 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/homepage/topics/automatisierung.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/automatisierung.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/fotografie.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/fotografie.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/ki-tech.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/ki-tech.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/maker-diy.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/maker-diy.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/produktivitaet.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/produktivitaet.webp",
+				"width": 512
+			}
+		]
+	},
 	"/images/og/default.webp": {
 		"width": 1920,
 		"height": 1080,
