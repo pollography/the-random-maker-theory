@@ -93,6 +93,8 @@ class PrecisePromptGuideTests(unittest.TestCase):
 
     def test_pdf_text_contains_every_full_prompt_once(self):
         text = re.sub(r"\s+", " ", "\n".join(page.extract_text() or "" for page in PdfReader(str(PUBLIC_OUTPUT)).pages))
+        self.assertIn("[[DOPPELTE KLAMMERN]]", text)
+        self.assertIn("vor dem Absenden", text)
         for group in self.groups:
             for prompt in group["prompts"]:
                 normalized_prompt = re.sub(r"\s+", " ", prompt["promptText"])

@@ -40,7 +40,7 @@ def load_library(path: Path = DATA_PATH) -> dict[str, Any]:
 
 
 def build_page_groups(data: dict[str, Any]) -> list[dict[str, Any]]:
-    """Split the 36 Part 3 prompts into twelve stable groups of three."""
+    """Split the 36 Part 3 prompts into eighteen readable groups of two."""
 
     prompts = [
         prompt
@@ -49,8 +49,8 @@ def build_page_groups(data: dict[str, Any]) -> list[dict[str, Any]]:
         and prompt.get("status") == "tested"
     ]
     return [
-        {"prompts": prompts[index : index + 3]}
-        for index in range(0, len(prompts), 3)
+        {"prompts": prompts[index : index + 2]}
+        for index in range(0, len(prompts), 2)
     ]
 
 
@@ -61,8 +61,8 @@ def validate_export(groups: list[dict[str, Any]]) -> None:
     commands = [prompt["command"] for prompt in prompts]
     verdicts = [prompt["verdict"] for prompt in prompts]
 
-    if len(groups) != 12 or any(len(group["prompts"]) != 3 for group in groups):
-        raise ValueError("Expected twelve pages containing three prompts each")
+    if len(groups) != 18 or any(len(group["prompts"]) != 2 for group in groups):
+        raise ValueError("Expected eighteen pages containing two prompts each")
     if len(prompts) != 36 or len(set(commands)) != 36:
         raise ValueError("Expected 36 unique Part 3 prompts")
     if verdicts.count("PASS") != 32 or verdicts.count("TEILWEISE") != 4:
@@ -145,6 +145,21 @@ def wrap_text(text: str, font_name: str, font_size: float, max_width: float) -> 
     return lines
 
 
+def fit_prompt_lines(
+    text: str, max_width: float, max_height: float
+) -> tuple[float, float, list[str]]:
+    """Keep every copyable template at or above the readable 10.5 pt floor."""
+
+    font_size = 11.2
+    while font_size >= 10.5:
+        leading = font_size * 1.34
+        lines = wrap_text(text, "Helvetica", font_size, max_width)
+        if len(lines) * leading <= max_height:
+            return font_size, leading, lines
+        font_size = round(font_size - 0.1, 1)
+    raise ValueError("Prompt text does not fit at the required minimum of 10.5 pt")
+
+
 def draw_card(
     pdf: canvas.Canvas,
     prompt: dict[str, Any],
@@ -155,54 +170,82 @@ def draw_card(
 ) -> None:
     """Draw one full prompt card with image, verdict and tested text."""
 
-    padding = 10
-    image_height = 185
-    image_y = y + height - padding - image_height
+    padding = 14
+    image_size = 136
 
     pdf.setFillColor(SURFACE)
     pdf.setStrokeColor(SURFACE_EDGE)
     pdf.roundRect(x, y, width, height, 8, stroke=1, fill=1)
 
     image_path = PROJECT_ROOT / "static" / prompt["image"].lstrip("/")
-    draw_fitted_image(pdf, image_path, x + padding, image_y, width - 2 * padding, image_height)
+    draw_fitted_image(
+        pdf,
+        image_path,
+        x + padding,
+        y + height - padding - image_size,
+        image_size,
+        image_size,
+    )
 
-    title_y = image_y - 18
+    text_x = x + padding + image_size + 14
+    title_width = width - (text_x - x) - padding
+    title_y = y + height - 25
     pdf.setFillColor(TEXT)
-    pdf.setFont("Helvetica-Bold", 11)
-    pdf.drawString(x + padding, title_y, prompt["title"])
+    pdf.setFont("Helvetica-Bold", 13.8)
+    for line in wrap_text(prompt["title"], "Helvetica-Bold", 13.8, title_width)[:2]:
+        pdf.drawString(text_x, title_y, line)
+        title_y -= 17
 
     pdf.setFillColor(HONEY)
-    pdf.setFont("Courier-Bold", 8.5)
-    pdf.drawString(x + padding, title_y - 15, prompt["command"])
+    pdf.setFont("Courier-Bold", 8.8)
+    pdf.drawString(text_x, title_y - 3, prompt["command"])
 
     verdict = prompt["verdict"]
     pdf.setFillColor(TEAL if verdict == "PASS" else PARTIAL)
-    pdf.setFont("Helvetica-Bold", 7.5)
-    pdf.drawRightString(x + width - padding, title_y - 15, verdict)
-
-    prompt_y = title_y - 34
-    pdf.setFillColor(MUTED)
-    pdf.setFont("Helvetica-Bold", 6.5)
-    pdf.drawString(x + padding, prompt_y, "GETESTETER PROMPT")
-
-    text_size = 7.2
-    lines = wrap_text(prompt["promptText"], "Helvetica", text_size, width - 2 * padding)
-    line_height = 9.2
-    text_y = prompt_y - 12
-    pdf.setFillColor(TEXT)
-    pdf.setFont("Helvetica", text_size)
-    for line in lines[:13]:
-        pdf.drawString(x + padding, text_y, line)
-        text_y -= line_height
+    pdf.setFont("Helvetica-Bold", 8.2)
+    pdf.drawRightString(x + width - padding, y + height - image_size - padding + 6, verdict)
 
     use_cases = " · ".join(prompt["useCases"])
-    use_y = y + 14
-    pdf.setFillColor(MUTED)
-    pdf.setFont("Helvetica-Bold", 6.5)
-    pdf.drawString(x + padding, use_y + 10, "IDEAL FÜR")
+    pdf.setFillColor(TEAL)
+    pdf.setFont("Helvetica", 8.3)
+    use_y = title_y - 20
+    for line in wrap_text(use_cases, "Helvetica", 8.3, title_width)[:4]:
+        pdf.drawString(text_x, use_y, line)
+        use_y -= 11
+
+    divider_y = y + height - padding - image_size - 15
+    pdf.setStrokeColor(SURFACE_EDGE)
+    pdf.line(x + padding, divider_y, x + width - padding, divider_y)
+
+    prompt_panel_y = y + padding
+    prompt_panel_height = divider_y - prompt_panel_y - 10
+    pdf.setFillColor(BACKGROUND)
+    pdf.roundRect(
+        x + padding,
+        prompt_panel_y,
+        width - 2 * padding,
+        prompt_panel_height,
+        5,
+        stroke=0,
+        fill=1,
+    )
+
+    label_y = divider_y - 28
+    pdf.setFillColor(HONEY)
+    pdf.setFont("Helvetica-Bold", 8.5)
+    pdf.drawString(x + 2 * padding, label_y, "COPY-PASTE TEMPLATE")
+
+    prompt_top = label_y - 20
+    prompt_bottom = prompt_panel_y + 14
+    font_size, leading, lines = fit_prompt_lines(
+        prompt["promptText"], width - 4 * padding, prompt_top - prompt_bottom
+    )
     pdf.setFillColor(TEXT)
-    pdf.setFont("Helvetica", 7.2)
-    pdf.drawString(x + padding, use_y, use_cases)
+    pdf.setFont("Helvetica", font_size)
+    text_y = prompt_top
+    for line in lines:
+        pdf.drawString(x + 2 * padding, text_y, line)
+        text_y -= leading
 
 
 def draw_page(
@@ -215,10 +258,10 @@ def draw_page(
 
     page_width, page_height = landscape(A4)
     margin_x = 24
-    card_gap = 9
-    card_top = page_height - 78
-    card_bottom = 35
-    card_width = (page_width - 2 * margin_x - 2 * card_gap) / 3
+    card_gap = 14
+    card_top = page_height - 88
+    card_bottom = 44
+    card_width = (page_width - 2 * margin_x - card_gap) / 2
     card_height = card_top - card_bottom
 
     pdf.setFillColor(BACKGROUND)
@@ -232,7 +275,11 @@ def draw_page(
     pdf.drawString(margin_x, page_height - 44, "36 ausführliche Bildprompts im echten Test")
     pdf.setFillColor(MUTED)
     pdf.setFont("Helvetica", 8)
-    pdf.drawString(margin_x, page_height - 58, "Ergebnisbild, vollständiger Prompt, Nutzen und ehrliche Bewertung")
+    pdf.drawString(
+        margin_x,
+        page_height - 58,
+        "Replace [[PLACEHOLDERS]] before sending, then upload your own reference image.",
+    )
 
     for index, prompt in enumerate(group["prompts"]):
         x = margin_x + index * (card_width + card_gap)
@@ -258,7 +305,7 @@ def generate_pdf(output_path: Path = QA_OUTPUT) -> Path:
     pdf = canvas.Canvas(str(output_path), pagesize=landscape(A4), pageCompression=1)
     pdf.setTitle("TRMT Ultimate Bildprompts Part 3")
     pdf.setAuthor("The Random Maker Theory")
-    pdf.setSubject("36 getestete ausführliche Bildprompts mit Ergebnisbildern")
+    pdf.setSubject("36 universelle Bildprompt-Vorlagen mit Ergebnisbildern")
 
     for page_number, group in enumerate(groups, start=1):
         draw_page(pdf, group, page_number, len(groups))

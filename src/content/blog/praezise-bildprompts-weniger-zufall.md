@@ -65,7 +65,9 @@ Das klingt erstmal nach ziemlich viel. Praktisch sind es zehn kurze Entscheidung
 9. **Materiallogik:** Wie verhält sich Papier, Holz, Metall, Garn, Glas oder Flüssigkeit wirklich?
 10. **Preserve und Avoid:** Was muss gleich bleiben und was darf auf keinen Fall entstehen?
 
-Gerade die letzten beiden Punkte machen viel aus. `Erhalte Gesicht, Glatze, Bart und Brille` ist ein anderer Auftrag als nur `mach daraus Kintsugi`. Und `kein zweites Gesicht` ist bei einem Prisma-Effekt keine übertriebene Vorsicht. Das war in meinem ersten Versuch tatsächlich nötig.
+Gerade die letzten beiden Punkte machen viel aus. `Erhalte Identität, Frisur, Gesichtsbehaarung, Accessoires und Kleidung aus der Referenz` ist ein anderer Auftrag als nur `mach daraus Kintsugi`. Und `kein zweites Gesicht` ist bei einem Prisma-Effekt keine übertriebene Vorsicht. Das war in meinem ersten Versuch tatsächlich nötig.
+
+Wichtig: Die Ergebnisbilder zeigen weiterhin mein festes Testporträt. Die kopierbaren Prompts sind aber keine Beschreibung dieser Person mehr. Ersetze vor dem Absenden alles in `[[DOPPELTEN KLAMMERN]]`. Alle übrigen erkennbaren Merkmale übernimmt die Vorlage direkt aus deinem hochgeladenen Referenzbild.
 
 ## 1. Historische Druck- und Fotoverfahren
 
@@ -80,7 +82,7 @@ Diese sechs Prompts verändern die Bildsprache stark, halten das Motiv aber bewu
 Der begrenzte Farbraum funktioniert hier erstaunlich gut. Die Farn-Photogramme geben dem Bild eine zweite Ebene, ohne Gesicht und Bart zu verschlucken.
 
 ```prompt
-Nutze mein hochgeladenes Porträt als feste Identitätsreferenz. Erstelle ein einzelnes Brustporträt als handbeschichtete botanische Cyanotypie auf warmweißem Baumwollpapier. Verwende ausschließlich tiefes Preußischblau und Papierweiß, sichtbare Pinselränder der lichtempfindlichen Beschichtung und wenige feine Farn-Photogramme rund um die Person. Erhalte Glatze, Gesichtsproportionen, langen Bart, Pilotenbrille, freundliches Lächeln und Hoodie-Silhouette. Frontal, Kopf und Bart vollständig sichtbar, Format 4:5. Keine weiteren Farben, keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle ein einzelnes Brustporträt als handbeschichtete botanische Cyanotypie auf warmweißem Baumwollpapier. Verwende ausschließlich tiefes Preußischblau und Papierweiß, sichtbare Pinselränder der lichtempfindlichen Beschichtung und wenige feine Farn-Photogramme rund um die Person. Erhalte Gesichtsproportionen, Frisur oder Kopfform, Gesichtsbehaarung, Accessoires, Ausdruck und Kleidungssilhouette aus der Referenz. Frontal, vollständig sichtbar, Format [[Z. B. 4:5]]. Keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 2. Zweifarbige Risographie
@@ -90,7 +92,7 @@ Nutze mein hochgeladenes Porträt als feste Identitätsreferenz. Erstelle ein ei
 Hier sind die kleinen Druckfehler Teil des Looks. Der Prompt begrenzt die Fehlpassung trotzdem, damit aus Risographie nicht einfach nur ein kaputter RGB-Versatz wird.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Drucke die Person als echte zweifarbige Risographie mit fluoreszierendem Orange und Türkis auf warmem ungestrichenem Papier. Grobe Rasterpunkte, sichtbare Papierfasern und eine kleine absichtliche Farbfehlpassung von höchstens zwei Millimetern. Glatze, langer dunkler Bart, orange Pilotenbrille, Lächeln und Hoodie bleiben eindeutig erkennbar. Zentriertes Brustporträt, Format 4:5. Keine zusätzlichen Schmuckfarben, kein glatter Digitalverlauf, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Drucke die Person als echte zweifarbige Risographie mit [[DRUCKFARBE 1]] und [[DRUCKFARBE 2]] auf warmem ungestrichenem Papier. Grobe Rasterpunkte, sichtbare Papierfasern und eine kleine absichtliche Farbfehlpassung von höchstens zwei Millimetern. Erhalte Identität, Frisur oder Kopfform, Gesichtsbehaarung, Accessoires, Ausdruck und Kleidung aus der Referenz. Zentriertes Brustporträt, Format [[Z. B. 4:5]]. Keine zusätzlichen Schmuckfarben, kein glatter Digitalverlauf, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 3. Reduktions-Linolschnitt
@@ -100,7 +102,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Drucke die Person als echte z
 Schwarze Schnittflächen, türkiser Hoodie und orange Brille erzeugen schon bei kleiner Darstellung eine klare Silhouette. Das ist für Thumbnails oft wertvoller als feine fotorealistische Details.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Erstelle einen handgedruckten dreifarbigen Reduktions-Linolschnitt: kräftige schwarze Schnittflächen, eine türkise Druckplatte für den Hoodie und eine gebrannt-orange Platte für die Brille. Zeige unregelmäßige handgeschnitzte Kerben, leicht ungleichmäßigen Farbauftrag und faseriges Druckpapier. Erhalte Gesichtsform, Glatze, langen Bart und freundlichen Ausdruck. Frontal, Brustporträt, Format 4:5. Keine Comic-Sprechblasen, kein glatter Vektorlook, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle einen handgedruckten dreifarbigen Reduktions-Linolschnitt: kräftige schwarze Schnittflächen, eine Druckplatte in [[AKZENTFARBE 1]] und eine weitere in [[AKZENTFARBE 2]]. Ordne die Akzentfarben zwei tatsächlich sichtbaren Kleidungs- oder Accessoire-Details aus der Referenz zu. Zeige handgeschnitzte Kerben, ungleichmäßigen Farbauftrag und faseriges Papier. Erhalte Identität und Ausdruck. Frontal, Format [[Z. B. 4:5]]. Keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 4. Fiktiver Sicherheitsstich
@@ -110,7 +112,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Erstelle einen handgedruckten
 Bei diesem Motiv ist die Abgrenzung wichtig. Der Prompt fordert ausdrücklich ein eigenständiges Kunstblatt und verbietet Geldwert, Siegel und offizielle Merkmale.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Gestalte ein eigenständiges Kunstblatt im Stil eines feinen Sicherheitsstichs: dichte Guilloché-Kurven, präzise Kreuzschraffur, ornamentale Anti-Fälschungs-Geometrie, Dunkelblau und warmes Orange auf cremefarbenem Papier. Das Porträt bleibt frontal und freundlich; Glatze, langer Bart und Pilotenbrille sind klar lesbar. Es muss eindeutig ein Kunstprint sein und darf nicht wie echtes Geld oder ein offizielles Dokument wirken. Keine Zahlen, Währungssymbole, Siegel, Unterschriften, Schrift, Logos oder Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Gestalte ein eigenständiges Kunstblatt im Stil eines feinen Sicherheitsstichs: dichte Guilloché-Kurven, präzise Kreuzschraffur und ornamentale Anti-Fälschungs-Geometrie in [[HAUPTFARBE]] und [[AKZENTFARBE]] auf cremefarbenem Papier. Das Porträt bleibt frontal; Identität, Frisur, Gesichtsbehaarung, Accessoires und Ausdruck bleiben klar lesbar. Eindeutig Kunstprint, kein Geld oder offizielles Dokument. Keine Zahlen, Siegel, Unterschriften, Schrift, Logos oder Wasserzeichen.
 ```
 
 ### 5. Nassplatten-Kollodium
@@ -120,7 +122,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Gestalte ein eigenständiges 
 Der interessante Teil ist nicht bloß der Vintage-Look. Moderne Brille und Hoodie bleiben bewusst im historischen Verfahren erhalten. Genau dieser Widerspruch macht das Bild eigenständig.
 
 ```prompt
-Nutze mein hochgeladenes Porträt als feste Identitätsreferenz. Erzeuge ein authentisch wirkendes Nassplatten-Kollodium-Porträt auf einer dunklen Metallplatte: silbergraues Monochrom, geringe Schärfentiefe, weiches historisches Studiolicht, dunkler Randabfall sowie wenige kleine Emulsionsschlieren und Altersmarken. Die moderne Pilotenbrille und der Hoodie bleiben bewusst erhalten; Gesicht, Glatze, Bartform und Lächeln dürfen sich nicht ändern. Zentriertes Brustporträt, Format 4:5. Kein Kostüm, keine historische Kulisse, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erzeuge ein authentisch wirkendes Nassplatten-Kollodium-Porträt auf einer dunklen Metallplatte: silbergraues Monochrom, geringe Schärfentiefe, weiches historisches Studiolicht, dunkler Randabfall sowie wenige Emulsionsschlieren und Altersmarken. Alle modernen Merkmale, Accessoires und Kleidungsdetails aus der Referenz bleiben bewusst erhalten; Identität und Ausdruck dürfen sich nicht ändern. Zentriertes Brustporträt, Format [[Z. B. 4:5]]. Kein Kostüm, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 6. Falschfarben-Infrarot
@@ -130,7 +132,7 @@ Nutze mein hochgeladenes Porträt als feste Identitätsreferenz. Erzeuge ein aut
 Ohne klare Farben wird daraus schnell beliebiger Neon-Cyberpunk. Deshalb definiert der Prompt Haut, Bart, Hoodie und Vegetation getrennt.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Erstelle eine realistische Falschfarben-Infrarotfotografie als Brustporträt. Haut hell und natürlich detailliert, Bart beinahe schwarz, Hoodie leuchtend türkis, Hintergrundvegetation in klaren Korall- und Rotorangetönen. Erhalte Gesichtsproportionen, Glatze, orange Pilotenbrille und freundliches Lächeln. Frontal, Augen scharf, Format 4:5, glaubwürdige fotografische Textur. Kein Cyberpunk, kein Neonstadt-Hintergrund, keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle eine realistische Falschfarben-Infrarotfotografie als Brustporträt. Haut hell und natürlich detailliert, Haare und Gesichtsbehaarung dunkel, Kleidung in [[KLEIDUNGSFARBE]] und Hintergrundvegetation in [[VEGETATIONSFARBE]]. Erhalte Gesichtsproportionen, Frisur, Accessoires und Ausdruck aus der Referenz. Frontal, Augen scharf, Format [[Z. B. 4:5]], glaubwürdige Fototextur. Kein Cyberpunk, keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ## 2. Handwerkliche Materialporträts
@@ -146,7 +148,7 @@ Bei diesen Prompts reicht ein Stilwort besonders selten. Holz, Papier, Emaille, 
 Sieben bis neun Lagen, sichtbare Schnittkanten und echte Schlagschatten sorgen dafür, dass das Ergebnis wie ein gebautes Objekt wirkt. Nicht wie eine flache Vektorillustration mit Papierfilter.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Baue das Brustporträt als reale Papier-Schattenbox aus sieben bis neun klar getrennten Lagen schweren Schnittpapiers. Sichtbare Schnittkanten und echte Schlagschatten zwischen den Ebenen; Palette aus Creme, Türkis, Orange und Anthrazit. Gesicht, Glatze, langer Bart, Pilotenbrille und Lächeln bleiben klar erkennbar. Frontal, vollständig im Rahmen, Format 4:5. Keine flache Vektorillustration, keine Origami-Figur, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Baue das Brustporträt als reale Papier-Schattenbox aus sieben bis neun klar getrennten Lagen schweren Schnittpapiers. Sichtbare Schnittkanten und echte Schlagschatten; Palette aus Creme, Anthrazit, [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Identität, Frisur oder Kopfform, Gesichtsbehaarung, Accessoires und Ausdruck bleiben erkennbar. Frontal, vollständig im Rahmen, Format [[Z. B. 4:5]]. Keine flache Vektorillustration, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 8. Holz-Marquetterie
@@ -156,7 +158,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Baue das Brustporträt als re
 Die Holzmaserung folgt im Bart sichtbar der Form. Dieses kleine Detail verkauft das Material besser als zehn zusätzliche Stiladjektive.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Setze das Porträt als handgefertigte Marquetterie-Tafel aus exakt eingepassten Furnieren um: Walnuss, Ahorn und Ebenholz für Haut und Bart, gefärbtes türkises Furnier für den Hoodie, dünne orange Einlage für die Pilotenbrille. Der Bart folgt sichtbar der Richtung der Holzmaserung. Satinierte Oberfläche, gerade von vorn fotografiert, Format 4:5. Keine gemalte Holztextur, kein 3D-Plastik, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Setze es als handgefertigte Marquetterie-Tafel aus exakt eingepassten Furnieren um: Walnuss, Ahorn und Ebenholz für Haut, Haare und Schatten; gefärbte Furniere in [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]] für zwei markante Details aus der Referenz. Die Holzmaserung folgt den realen Formen. Satinierte Oberfläche, frontal fotografiert, Format [[Z. B. 4:5]]. Keine gemalte Holztextur, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 9. Cloisonné-Emaille
@@ -166,7 +168,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Setze das Porträt als handge
 Der Prompt beschreibt Zellen, Metalldrähte, leicht durchscheinende Emaille und Brennunregelmäßigkeiten. Damit bekommt das Modell ein Herstellungsprinzip statt nur das Wort `Emaille`.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Gestalte eine physische Cloisonné-Emaille-Plakette. Feine dunkle Metalldrähte teilen Gesicht, Glatze, langen Bart, orange Brille und türkisen Hoodie in große herstellbar wirkende Zellen. Fülle sie mit leicht durchscheinender Emaille in Türkis, Amber, Creme und Schwarz; zeige kleine Unregelmäßigkeiten vom Brennen und polierte Metallkanten. Frontal, rechteckige Plakette, Format 4:5. Kein Kirchenfenster, keine losen Glasscherben, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Gestalte eine physische Cloisonné-Emaille-Plakette. Feine dunkle Metalldrähte teilen Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidung in große herstellbar wirkende Zellen. Fülle sie mit leicht durchscheinender Emaille in Creme, Schwarz, [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]; zeige Brennunregelmäßigkeiten und polierte Metallkanten. Frontal, Format [[Z. B. 4:5]]. Kein Kirchenfenster, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 10. Kintsugi-Porzellanbüste
@@ -176,7 +178,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Gestalte eine physische Clois
 Kintsugi kann schnell in wildes Gold-Dekor kippen. Wenige glaubwürdige Bruchlinien und schmale Fugen halten die Idee ruhig und lesbar.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Forme eine realistische weiße Porzellanbüste derselben Person mit orange glasierter Pilotenbrille und türkis glasiertem Hoodie-Kragen. Wenige glaubwürdige Bruchlinien über Kopf, Wange und Schulter sind mit schmalen goldenen Kintsugi-Fugen repariert. Erhalte Gesichtsproportionen, Glatze, langen Bart und freundliches Lächeln. Fotografiere die Büste auf einem neutralen Museumsockel, Format 4:5. Keine zerstörten oder fehlenden Teile, keine dramatischen Goldornamente, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Forme eine realistische weiße Porzellanbüste. Glasiere zwei tatsächlich vorhandene Kleidungs- oder Accessoire-Details in [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Wenige glaubwürdige Bruchlinien über Kopf, Wange und Schulter sind mit schmalen goldenen Kintsugi-Fugen repariert. Erhalte Gesichtsproportionen, Frisur, Gesichtsbehaarung und Ausdruck. Neutraler Museumsockel, Format [[Z. B. 4:5]]. Keine fehlenden Teile, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 11. Getuftetes Wandporträt
@@ -186,7 +188,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Forme eine realistische weiß
 Loop- und Cut-Pile-Garn geben dem Bild sichtbare Tiefe. Der Ausschluss von Stickerei, Plüschfigur und Fotodruck verhindert drei naheliegende Fehlinterpretationen.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Erstelle ein tatsächlich gefertigtes, rechteckiges getuftetes Wandporträt mit dickem Loop- und Cut-Pile-Garn. Sichtbare Fasern, klare vereinfachte Farbflächen und saubere Außenkante. Türkis für den Hoodie, Orange für die Pilotenbrille, Creme für die Haut, Schwarz und Dunkelbraun für den langen Bart. Gerade von vorn als physisches Textil fotografiert, Format 4:5. Keine Stickerei im Rahmen, keine Plüschfigur, kein Fotodruck, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle ein tatsächlich gefertigtes, rechteckiges getuftetes Wandporträt mit dickem Loop- und Cut-Pile-Garn. Sichtbare Fasern, klare vereinfachte Farbflächen und saubere Außenkante. Übernimm Haut-, Haar-, Kleidungs- und Accessoirefarben aus der Referenz; verstärke zwei markante Details mit [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Frontal als physisches Textil fotografiert, Format [[Z. B. 4:5]]. Keine Stickerei, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 12. Kupfer-Repoussé-Medaillon
@@ -196,7 +198,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Erstelle ein tatsächlich gef
 Auch hier muss das Material arbeiten. Werkzeugspuren, polierte Höhen und Patina in den Vertiefungen erklären dem Modell, wie das Relief entstanden sein soll.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Treibe das Gesicht als rundes Kupfer-Repoussé-Medaillon aus einem einzigen Metallblech. Kopf, Nase, Brille und langer Bart stehen als plastisches Relief hervor; sichtbare handgetriebene Werkzeugspuren, polierte warme Kupferhöhen und türkis oxidierte Patina in den Vertiefungen. Orangefarbene Brillengläser bleiben als dezente Emaille-Einlage erkennbar. Fotografiere das Medaillon auf neutralem Stein, quadratisch. Keine Münze, kein Geldwert, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Treibe das Gesicht als rundes Kupfer-Repoussé-Medaillon aus einem einzigen Metallblech. Kopf, Nase, Frisur, Gesichtsbehaarung und vorhandene Accessoires stehen als plastisches Relief hervor; sichtbare Werkzeugspuren, polierte Kupferhöhen und [[PATINAFARBE]] in den Vertiefungen. Ein markantes Detail erhält eine dezente Emaille-Einlage in [[AKZENTFARBE]]. Auf neutralem Stein, quadratisch. Keine Münze, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ## 3. Optik, Licht und Dunkelkammer
@@ -212,7 +214,7 @@ Optische Effekte greifen schnell direkt ins Gesicht ein. Deshalb sind die Preser
 Der sichtbare Lichtkegel und der Helligkeitsabfall machen aus farbigen Flächen eine glaubwürdige Projektion. Der Prompt verbietet deshalb auch die bequeme Ersatzlösung: generischen Neon-Glow.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Zeige dieselbe Person als matte weiße Gipsbüste in einer dunklen Galerie. Ein echter Projektor wirft scharf begrenzte türkise und amberfarbene geometrische Lichtflächen über Gesicht, Pilotenbrille, Bart und Hoodie. Sichtbarer Lichtkegel und glaubwürdiger Helligkeitsabfall; die Farbflächen sind nur projiziert und nicht aufgedruckt. Frontal, Brustbild, Format 4:5. Keine zweite Projektion, keine Schrift, kein Logo, kein Wasserzeichen und keine generische Neonbeleuchtung.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Zeige die Person als matte weiße Gipsbüste in einer dunklen Galerie. Ein echter Projektor wirft scharf begrenzte geometrische Lichtflächen in [[LICHTFARBE 1]] und [[LICHTFARBE 2]] über Gesicht, Frisur, Accessoires und Kleidung. Sichtbarer Lichtkegel und glaubwürdiger Helligkeitsabfall; nur projiziert, nicht aufgedruckt. Frontal, Format [[Z. B. 4:5]]. Keine zweite Projektion, keine Schrift, kein Logo, kein Wasserzeichen und kein generischer Neon-Glow.
 ```
 
 ### 14. Kontrollierte Prisma-Refraktion
@@ -222,7 +224,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Zeige dieselbe Person als mat
 Der erste Versuch erzeugte ein zweites Gesicht. Die korrigierte Fassung begrenzt den Effekt auf die linke untere Ecke und nennt die typischen Fehler ausdrücklich.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Erstelle genau ein fotorealistisches Brustporträt derselben Person. Platziere ein kleines dreieckiges Glasprisma nahe am unteren linken Objektivrand. Es erzeugt nur einen kontrollierten Regenbogenreflex und eine schmale farbige Kantenverschiebung in der linken unteren Ecke; das vollständige Gesicht bleibt einmalig, scharf und frei. Erhalte Glatze, langen Bart, orange Pilotenbrille, Lächeln und türkisen Hoodie. Dunkler neutraler Hintergrund, quadratisch. Kein zweites Gesicht, kein Geisterprofil, kein doppeltes Auge, kein Kaleidoskop, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle genau ein fotorealistisches Brustporträt. Platziere ein kleines dreieckiges Glasprisma nahe am [[POSITION AM OBJEKTIVRAND]]. Es erzeugt nur einen kontrollierten Regenbogenreflex und eine schmale farbige Kantenverschiebung in einer Bildecke; das vollständige Gesicht bleibt einmalig, scharf und frei. Erhalte Identität, Frisur, Gesichtsbehaarung, Accessoires, Ausdruck und Kleidung. Hintergrund [[HINTERGRUNDFARBE]], Format [[Z. B. 1:1]]. Kein zweites Gesicht, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 15. Langzeitbelichtete Lichtmalerei
@@ -232,7 +234,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Erstelle genau ein fotorealis
 Der kurze Blitz friert die Person ein. Eine einzige kontrollierte Lichtspur sorgt für Bewegung, ohne Augen und Mund mit buntem Chaos zuzuschmieren.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Fotografiere die Person in einer einzigen Langzeitbelichtung vor tiefschwarzem Hintergrund. Ein kurzer Blitz friert Gesicht, Glatze, Bart, orange Brille und türkisen Hoodie scharf ein. Eine einzige durchgehende Lichtspur zeichnet eine kontrollierte türkis-orange Spirale hinter und um die Person, ohne Augen oder Mund zu überdecken. Frontal, Brustporträt, Format 4:5. Keine zufälligen Lichtkritzeleien, keine Laserstrahlen, keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Fotografiere die Person in einer einzigen Langzeitbelichtung vor tiefschwarzem Hintergrund. Ein kurzer Blitz friert Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidung scharf ein. Eine einzige durchgehende Lichtspur zeichnet eine kontrollierte Spirale in [[LICHTFARBE 1]] und [[LICHTFARBE 2]] hinter und um die Person, ohne Augen oder Mund zu überdecken. Frontal, Format [[Z. B. 4:5]]. Keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 16. Zweilagiger Moiré-Siebdruck
@@ -242,7 +244,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Fotografiere die Person in ei
 Das ist der eine Test, den ich nicht schönreden will. Auch die zweite Fassung wirkt eher wie eine starke Liniengrafik als wie ein deutliches Moiré mit breiten Interferenzbändern. Die Idee ist spannend. Die Reproduzierbarkeit bleibt in diesem Test aber **nur teilweise bestätigt**.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Rekonstruiere das Brustporträt als echten zweilagigen Moiré-Siebdruck. Ebene 1 besteht aus dichten schwarzen konzentrischen Konturlinien, die Kopf, Gesicht, Brille, langen Bart und Hoodie formen. Ebene 2 ist ein zweites halbtransparentes Linienfeld, exakt um sieben Grad gedreht, sodass breite deutlich sichtbare Interferenzbänder über das Motiv laufen. Brille als eine flache orange Schmuckfarbe, Hoodie mit einer dünnen türkisen Kontur. Weißes Papier, quadratisch. Genau zwei Linienebenen, keine normale Gravur, keine Guilloché-Ornamente, keine Rasterpunkte, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Rekonstruiere es als echten zweilagigen Moiré-Siebdruck. Ebene 1 besteht aus dichten schwarzen konzentrischen Konturlinien, die Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidung formen. Ebene 2 ist ein halbtransparentes Linienfeld, exakt um [[DREHWINKEL, z. B. 7 Grad]] gedreht, sodass breite Interferenzbänder entstehen. Nutze [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]] für zwei reale Details. Weißes Papier, quadratisch. Genau zwei Linienebenen, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 17. Solarisation aus der Dunkelkammer
@@ -252,7 +254,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Rekonstruiere das Brustportr�
 Teilweise Tonwertumkehr und feine Konturlinien liefern einen klaren Dunkelkammer-Look. Die Ausschlüsse verhindern, dass daraus ein Röntgenbild oder Horror-Make-up wird.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Erzeuge einen echten schwarzweißen Silbergelatine-Abzug mit kontrollierter Dunkelkammer-Solarisation: teilweise Tonwertumkehr, tiefe Schwarztöne und feine leuchtende Konturlinien um Glatze, Gesicht, Pilotenbrille und langen Bart. Sichtbare Faserpapier-Textur und sehr dezente chemische Randhöfe. Frontal, Kopf und Bart vollständig sichtbar, quadratisch. Kein Röntgenbild, kein Negativfilmrahmen, kein Horror-Make-up, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erzeuge einen echten schwarzweißen Silbergelatine-Abzug mit kontrollierter Dunkelkammer-Solarisation: teilweise Tonwertumkehr, tiefe Schwarztöne und feine leuchtende Konturlinien um Gesicht, Frisur, Gesichtsbehaarung und Accessoires. Sichtbare Faserpapier-Textur und sehr dezente chemische Randhöfe. Frontal, vollständig sichtbar, Format [[Z. B. 1:1]]. Kein Röntgenbild, kein Horror-Make-up, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 18. Lichtkaustik durch Strukturglas
@@ -262,7 +264,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Erzeuge einen echten schwarzw
 Kaustik sind die gebündelten Lichtmuster, die durch Brechung entstehen. Zwei strukturierte Glasscheiben und klar definierte Farben machen den Effekt konkreter als ein allgemeines `dramatisches Licht`.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Fotografiere die Person realistisch in einem dunklen Studio. Türkises und warmes amberfarbenes Licht wird durch zwei strukturierte Glasscheiben gebrochen und erzeugt klar definierte Kaustik-Muster auf Kopf, Gesicht, Bart und Hoodie. Die Muster folgen glaubwürdig den Oberflächen; Augen und Gesicht bleiben gut lesbar. Erhalte Glatze, lange Bartform, orange Pilotenbrille und Lächeln. Brustporträt, Format 4:5. Keine Wasseroberfläche, kein Cyberpunk, kein allgemeiner Neon-Glow, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Fotografiere die Person realistisch in einem dunklen Studio. Licht in [[LICHTFARBE 1]] und [[LICHTFARBE 2]] wird durch zwei strukturierte Glasscheiben gebrochen und erzeugt klar definierte Kaustik-Muster auf Kopf, Gesicht, Haaren, Accessoires und Kleidung. Die Muster folgen glaubwürdig den Oberflächen; Augen und Gesicht bleiben lesbar. Erhalte Identität und Ausdruck. Format [[Z. B. 4:5]]. Kein Cyberpunk, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ## 4. Konkrete Motive statt bloßer Stilwechsel
@@ -303,7 +305,7 @@ Diese sechs Ideen sind für mich die stärkste Gruppe. Sie ändern nicht einfach
 Die Person besteht komplett aus realen Objekten. Genau diese Regel verhindert, dass Werkzeuge nur als Dekoration um ein normales Gesicht herumliegen.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Lege Hunderte echte Werkstattobjekte auf einer dunklen Fläche so exakt an, dass sie aus frontaler Entfernung das erkennbare Gesicht bilden. Orange Schutzbrillenteile formen die Pilotenbrille, schwarze Kabel, Bohrer und Bits den langen Bart, türkise Werkzeugteile den Hoodie. Es darf keine normale menschliche Haut sichtbar sein; das Gesicht entsteht vollständig aus den realen Objekten. Gerade von oben fotografiert, quadratisch. Keine schwebenden Teile, keine zusätzlichen Gesichter, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Lege Hunderte echte [[OBJEKTFAMILIE, z. B. Werkstattwerkzeuge]] auf einer dunklen Fläche so an, dass sie aus frontaler Entfernung das erkennbare Gesicht bilden. Ordne Form und Farbe der Objekte den tatsächlich sichtbaren Haaren, Gesichtsbehaarungen, Accessoires und Kleidungsflächen aus der Referenz zu. Keine menschliche Haut; das Gesicht entsteht vollständig aus realen Objekten. Von oben, Format [[Z. B. 1:1]]. Keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 20. Porträt als Luftlandschaft
@@ -313,7 +315,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Lege Hunderte echte Werkstatt
 Das Bild soll zuerst wie eine glaubwürdige Landschaft wirken. Das Gesicht entsteht erst in der Gesamtsicht. Diese Reihenfolge hält die Idee subtiler als eine simple Fotocollage.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Erzeuge eine glaubwürdige senkrechte Luftaufnahme aus Feldern, Hecken, Straßen, Wald und Wasser. Erst aus der Gesamtsicht soll die Landschaft subtil das bekannte Gesicht mit Glatze und langem Bart bilden. Zwei orange Gewächshausdächer deuten die Pilotenbrille an; türkisfarbene Seen formen die Hoodie-Silhouette. Das Bild muss zuerst wie eine reale Landschaft und erst danach wie ein Porträt wirken. Quadratisch. Keine normale menschliche Haut, keine Collagekante, keine Gebäude-Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erzeuge eine glaubwürdige senkrechte Luftaufnahme aus [[LANDSCHAFTSELEMENTEN, z. B. Feldern, Hecken, Straßen, Wald und Wasser]]. Erst aus der Gesamtsicht soll die Landschaft subtil Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidungssilhouette aus der Referenz bilden. Übernimm zwei markante Referenzfarben als natürliche Landschaftsfarben. Zuerst reale Landschaft, dann Porträt. Format [[Z. B. 1:1]]. Keine Haut, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 21. Schattenporträt aus Gegenständen
@@ -323,7 +325,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Erzeuge eine glaubwürdige se
 Eine einzige Lichtquelle und eine plausible Schattenrichtung sind hier wichtiger als ein langer Stilabsatz. Das Motiv könnte man theoretisch sogar physisch nachbauen.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Arrangiere gewöhnliche Maker-Werkzeuge knapp unterhalb des Bildes so, dass eine einzige seitliche Lichtquelle ihren Schatten auf eine warme weiße Wand wirft. Nur der gemeinsame Schatten bildet klar die Silhouette von Glatze, Pilotenbrille, Nase, Lächeln und langem Bart. Einige der realen Werkzeuge dürfen am unteren Rand sichtbar sein, aber kein normales Gesicht. Frontal, quadratisch, physikalisch plausible Schattenrichtung. Keine zweite Lichtquelle, kein gemalter Schatten, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Arrangiere [[OBJEKTE, z. B. Maker-Werkzeuge]] knapp unterhalb des Bildes so, dass eine einzige seitliche Lichtquelle ihren Schatten auf eine warme weiße Wand wirft. Nur der gemeinsame Schatten bildet klar die tatsächliche Silhouette von Kopf, Frisur, Gesichtsbehaarung und Accessoires. Einige reale Objekte dürfen am unteren Rand sichtbar sein, aber kein normales Gesicht. Frontal, Format [[Z. B. 1:1]], physikalisch plausibel. Keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 22. Anamorphes Straßenwandbild
@@ -333,7 +335,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Arrangiere gewöhnliche Maker
 Ein anamorphes Bild funktioniert nur von einem bestimmten Standpunkt. Deshalb nennt der Prompt zwei Wände, den Boden und genau eine Kameraansicht. Sonst entsteht einfach ein normales Mural.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Male ein großes anamorphes geometrisches Wandbild über zwei rechtwinklige Betonwände und den Boden. Aus genau einem klaren Kamerastandpunkt richten sich die verzerrten Fragmente zum erkennbaren Porträt mit Glatze, langem Bart, orange Pilotenbrille und türkisem Hoodie aus. Aus allen anderen Winkeln wären es nur auseinandergezogene Formen. Realistisches Tageslicht, leere urbane Umgebung, 16:9. Keine Zuschauer, keine Wörter, kein Graffiti-Tag, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Male ein großes anamorphes geometrisches Wandbild über zwei rechtwinklige Betonwände und den Boden. Aus genau einem Kamerastandpunkt richten sich die verzerrten Fragmente zum erkennbaren Porträt mit tatsächlicher Frisur, Gesichtsbehaarung, Accessoires und Kleidung aus. Nutze [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Aus anderen Winkeln nur auseinandergezogene Formen. Tageslicht, leere Umgebung, Format [[Z. B. 16:9]]. Keine Wörter, kein Logo und kein Wasserzeichen.
 ```
 
 ### 23. Lebende Topiary-Büste
@@ -343,7 +345,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Male ein großes anamorphes g
 Die Büste besteht vollständig aus Zweigen und Blättern. Brille und Hoodie werden nur mit Gartenmaterial angedeutet. So bleibt die Idee in einer gemeinsamen Materialwelt.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Schneide eine physisch plausible lebende Topiary-Büste aus dichtem dunkelgrünem Laub. Glatze, Gesicht und langer Bart entstehen ausschließlich aus sorgfältig geformten Zweigen und Blättern. Eine orange transparente Gartenrahmen-Brille und ein Ring aus kleinen türkisen Blüten deuten Brille und Hoodie an. Zeige die Büste vollständig auf einem steinernen Gartensockel, Format 4:5. Keine menschliche Haut, keine Plastikpflanze, keine zusätzliche Figur, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Schneide eine physisch plausible lebende Topiary-Büste aus dichtem dunkelgrünem Laub. Gesicht, Frisur, Gesichtsbehaarung und Kleidungssilhouette entstehen ausschließlich aus geformten Zweigen und Blättern. Deute vorhandene Accessoires mit [[MATERIAL ODER PFLANZE]] in [[AKZENTFARBE]] an. Zeige die Büste vollständig auf einem steinernen Gartensockel, Format [[Z. B. 4:5]]. Keine menschliche Haut, keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ### 24. Magnetische Ferrofluid-Büste
@@ -353,7 +355,7 @@ Nutze mein Porträt als feste Identitätsreferenz. Schneide eine physisch plausi
 Ferrofluid wird schnell zu einem schwarzen Monster oder einer festen Metallskulptur. Oberflächenspannung, Tropfen, Spiegelungen und magnetisch geformte Spitzen halten das Material lesbar.
 
 ```prompt
-Nutze mein Porträt als feste Identitätsreferenz. Forme eine erkennbare Büste aus glänzend schwarzem Ferrofluid über einem mattschwarzen Becken. Verdeckte Magnetfelder ziehen feine reale Flüssigkeitsspitzen so zusammen, dass Glatze, Gesicht und langer Bart lesbar werden. Ergänze nur orange Glas-Pilotenbrillen und ein sehr zurückhaltendes türkises Kantenlicht. Realistische Oberflächenspannung, Spiegelungen und Tropfen, dunkles Studio, Format 4:5. Keine feste Metallskulptur, kein Monster, keine zusätzliche Person, keine Schrift, kein Logo und kein Wasserzeichen.
+Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Forme eine erkennbare Büste aus glänzend schwarzem Ferrofluid über einem mattschwarzen Becken. Verdeckte Magnetfelder ziehen reale Flüssigkeitsspitzen so zusammen, dass Gesicht, Frisur, Gesichtsbehaarung und Kleidungssilhouette lesbar werden. Erhalte vorhandene Accessoires als [[ACCESSOIRE-MATERIAL]] und nutze ein zurückhaltendes Kantenlicht in [[AKZENTFARBE]]. Realistische Oberflächenspannung, dunkles Studio, Format [[Z. B. 4:5]]. Keine Schrift, kein Logo und kein Wasserzeichen.
 ```
 
 ## Drei Folgeprompts für kontrollierte Änderungen
@@ -363,19 +365,19 @@ Wenn das Grundmotiv stimmt, würde ich nicht wieder alles von vorn beschreiben. 
 ### Nur die Farbpalette ändern
 
 ```prompt
-Behalte das letzte Bild einschließlich Identität, Bildausschnitt, Material und Komposition unverändert. Ändere ausschließlich die Palette von Türkis/Orange zu Dunkelblau/Kupfer. Keine neuen Gegenstände, keine zusätzliche Schrift und kein neues Gesicht.
+Behalte das letzte Bild einschließlich Identität, Bildausschnitt, Material und Komposition unverändert. Ändere ausschließlich die Palette von [[AKTUELLE FARBE 1]] und [[AKTUELLE FARBE 2]] zu [[NEUE FARBE 1]] und [[NEUE FARBE 2]]. Keine neuen Gegenstände, keine zusätzliche Schrift und kein neues Gesicht.
 ```
 
 ### Nur das Format für ein Thumbnail ändern
 
 ```prompt
-Behalte Identität, Materialtechnik und Licht unverändert. Erzeuge nur eine 16:9-Fassung mit der Person im rechten Drittel und 40 Prozent ruhiger negativer Fläche links. Füge dort keinen Text und keine Dekoration ein.
+Behalte Identität, Materialtechnik und Licht unverändert. Erzeuge nur eine Fassung im Format [[Z. B. 16:9]] mit der Person auf [[POSITION, Z. B. RECHTES DRITTEL]] und [[ANTEIL, Z. B. 40 PROZENT]] ruhiger negativer Fläche auf [[SEITE, Z. B. LINKS]]. Füge dort keinen Text und keine Dekoration ein.
 ```
 
 ### Nur einen konkreten Fehler reparieren
 
 ```prompt
-Behalte das letzte Ergebnis als feste Referenz. Entferne ausschließlich [FEHLER]. Stelle [GESCHÜTZTES DETAIL] exakt wieder her. Verändere sonst weder Gesicht, Farbe, Material, Bildausschnitt noch Hintergrund.
+Behalte das letzte Ergebnis als feste Referenz. Entferne ausschließlich [[FEHLER]]. Stelle [[GESCHÜTZTES DETAIL]] exakt wieder her. Verändere sonst weder Gesicht, Farbe, Material, Bildausschnitt noch Hintergrund.
 ```
 
 ## Was du trotz präzisem Prompt weiter prüfen musst

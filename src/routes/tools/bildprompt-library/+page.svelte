@@ -64,7 +64,7 @@
 			<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
 				<path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
 			</svg>
-			<span><strong>36 ausführliche Prompts</strong><small>Mit Ergebnissen · 12 Seiten</small></span>
+			<span><strong>36 ausführliche Prompts</strong><small>Größere Schrift · 18 Seiten</small></span>
 		</a>
 		<a class="download-button secondary" href="/downloads/trmt-praezise-bildprompts.pdf" download>
 			<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
@@ -80,7 +80,7 @@
 <section class="library-note">
 	<div>
 		<h2>Von der schnellen Idee zum steuerbaren Motiv</h2>
-		<p>Alle Bilder zeigen echte Tests mit demselben Ausgangsporträt. Kurzprompts helfen beim Erkunden; die präzisen Creative Briefs legen Motiv, Material, Komposition und geschützte Details deutlich genauer fest.</p>
+		<p>Alle Bilder zeigen echte Tests mit demselben Ausgangsporträt. Die ausführlichen Texte darunter sind universelle Vorlagen: Ersetze jeden [[PLATZHALTER]] vor dem Absenden und lade dein eigenes Referenzbild hoch. Merkmale ohne Platzhalter übernimmt der Prompt direkt aus deinem Bild.</p>
 	</div>
 	<nav class="guide-links" aria-label="Artikel zur Bildprompt-Serie">
 		<a href="/blog/50-bildprompts-echt-getestet">50 Prompts im Test</a>

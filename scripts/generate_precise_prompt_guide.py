@@ -327,6 +327,13 @@ def draw_cover(pdf: canvas.Canvas) -> None:
     pdf.setFont("TRMT-Regular", 13)
     pdf.setFillColor(MUTED)
     pdf.drawString(margin, page_height - 92, "Weniger Zufall. Mehr Kontrolle über Motiv, Material, Licht und Identität.")
+    pdf.setFillColor(TEAL)
+    pdf.setFont("TRMT-Bold", 8)
+    pdf.drawString(
+        margin,
+        page_height - 112,
+        "[[DOPPELTE KLAMMERN]] vor dem Absenden ersetzen und eigenes Referenzbild hochladen.",
+    )
 
     hero_path = PROJECT_ROOT / "static" / "images" / "blog" / "praezise-bildprompts-weniger-zufall-1.webp"
     draw_contained_image(pdf, hero_path, margin, 102, page_width - 2 * margin, 360)

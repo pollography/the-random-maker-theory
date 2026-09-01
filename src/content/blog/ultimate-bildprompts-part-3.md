@@ -41,6 +41,8 @@ Das ist weniger magisch. Dafür kannst du das Ergebnis viel besser nachbauen.
 
 Für 32 Tests habe ich wieder dasselbe bereinigte Ausgangsporträt verwendet. Gesicht, Glatze, langer dunkler Bart, orangefarbene Brille und türkiser Hoodie sind starke Anker. Man erkennt ziemlich schnell, ob die Identität erhalten bleibt.
 
+Die Ergebnisbilder dokumentieren genau diesen Test. Die kopierbaren Vorlagen darunter sind dagegen bewusst allgemein gebaut. Ersetze vor dem Absenden alles in `[[DOPPELTEN KLAMMERN]]` und lade dein eigenes Referenzbild hoch. Merkmale wie Frisur, Gesichtsbehaarung, Accessoires, Kleidung, Produktfarbe oder Material übernimmt der Prompt aus deiner Referenz, nicht aus meinem Beispiel.
+
 ![Bereinigtes Ausgangsporträt für 32 der 36 Bildtests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
 Vier Ideen ergeben mit einem Menschen wenig Sinn. Produktwinkel, Shopseite, technische Zerlegung und Werbemotiv habe ich deshalb an derselben ungebadgeten Systemkamera getestet.
@@ -64,7 +66,7 @@ Diese sechs Prompts sind weniger Show und mehr Werkzeug. Sie helfen beim Planen 
 **PASS** · **Nutzen:** Making-of-Posts, Kursmaterial, Social Media und Produktionsvisualisierung.
 
 ```prompt
-Turn the reference portrait into a realistic behind-the-scenes studio photograph. Show the same man full body in front of a white seamless backdrop, with photographer, camera, softboxes, reflector and floor marks visible. Preserve his face, bald head, long dark beard, orange aviator glasses and turquoise hoodie.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn it into a realistic behind-the-scenes studio photograph. Show the referenced person full body in front of a white seamless backdrop, with photographer, camera, softboxes, reflector and floor marks visible. Preserve identity, body proportions, hairstyle or head shape, facial hair, eyewear, expression, clothing and original colors. Output ratio: [[ASPECT RATIO, e.g. 4:5]].
 ```
 
 ### 2. Sechs Lichtstimmungen: `/relightingGrid`
@@ -74,7 +76,7 @@ Turn the reference portrait into a realistic behind-the-scenes studio photograph
 **PASS** · **Nutzen:** Lichtplanung, Thumbnail-Look, Fotografie-Erklärung und Mood-Vergleich.
 
 ```prompt
-Create a clean 2x3 relighting grid of the same portrait. Keep identity, pose, crop, expression, glasses, beard and hoodie identical. Change only the light: flat front light, soft window light, Rembrandt light, dramatic side light, split light and strong rim light.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a clean 2x3 relighting grid. Keep identity, pose, crop, expression, hairstyle, facial hair, accessories, clothing and colors identical. Change only the light: flat front light, soft window light, Rembrandt light, dramatic side light, split light and strong rim light. Do not add labels or redesign the person.
 ```
 
 ### 3. Brennweitenvergleich: `/lensGrid`
@@ -86,7 +88,7 @@ Create a clean 2x3 relighting grid of the same portrait. Keep identity, pose, cr
 Die Staffelung sieht sauber aus. Die Gesichtsperspektive unterscheidet sich aber weniger deutlich als bei einem echten kontrollierten Brennweitentest. Als grobes Moodboard okay. Als optische Lehrtafel wäre mir das zu ungenau.
 
 ```prompt
-Create a five-panel portrait comparison of the same person photographed at 24mm, 35mm, 50mm, 85mm and 135mm. Keep subject distance and framing logically adjusted, identity and lighting consistent, and make perspective compression clearly visible.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a five-panel comparison photographed at 24mm, 35mm, 50mm, 85mm and 135mm. Keep identity, styling and lighting consistent, adjust camera distance to maintain [[FRAMING, e.g. head-and-shoulders]], and make perspective compression clearly visible. No labels or invented facial details.
 ```
 
 ### 4. Mundformen für Sprache: `/visemeSheet`
@@ -96,7 +98,7 @@ Create a five-panel portrait comparison of the same person photographed at 24mm,
 **PASS** · **Nutzen:** Lip-Sync, KI-Video, Character Animation und Avatar-Referenz.
 
 ```prompt
-Create a clean 3x5 viseme reference sheet of the same person. Keep head angle, identity, glasses, beard, lighting and crop fixed. Show clearly different mouth shapes for silence, A, E, I, O, U, M/B/P, F/V, L, W/Q, wide smile, open jaw and rounded lips. No labels.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a clean 3x5 viseme sheet. Keep head angle, identity, hairstyle, facial hair, eyewear, accessories, lighting and crop fixed. Show clearly different mouth shapes for silence, A, E, I, O, U, M/B/P, F/V, L, W/Q, wide smile, open jaw and rounded lips. Background: [[BACKGROUND COLOR]]. No labels.
 ```
 
 ### 5. Gehzyklus: `/walkCycle`
@@ -106,7 +108,7 @@ Create a clean 3x5 viseme reference sheet of the same person. Keep head angle, i
 **PASS** · **Nutzen:** Animation, Motion Design, Sprite- und Video-Referenz.
 
 ```prompt
-Create an eight-frame side-view walk-cycle reference strip of the same man in turquoise hoodie, dark trousers and white sneakers. Show consecutive contact, down, passing and up phases on a plain white background. Preserve body proportions and identity.
+Use the uploaded full-body image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create an eight-frame side-view walk-cycle strip showing consecutive contact, down, passing and up phases. Preserve identity, body proportions, hairstyle, clothing, footwear and all original colors. Use a plain [[BACKGROUND COLOR]] background and do not add labels.
 ```
 
 ### 6. Einstellungsgrößen: `/shotBreakdown`
@@ -116,7 +118,7 @@ Create an eight-frame side-view walk-cycle reference strip of the same man in tu
 **PASS** · **Nutzen:** Storyboards, YouTube-Shootplanung, Regie und KI-Video-Prompts.
 
 ```prompt
-Create a clean 3x3 cinematography shot-size sheet of the same man: extreme close-up, close-up, medium close-up, medium shot, medium full shot, full shot, long shot, low angle and high angle. Preserve identity, outfit and white studio setting. No text.
+Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a clean 3x3 cinematography sheet: extreme close-up, close-up, medium close-up, medium shot, medium full shot, full shot, long shot, low angle and high angle. Preserve identity, body proportions, outfit, accessories and the [[REFERENCE SETTING OR NEW SETTING]]. No text.
 ```
 
 ## 2. Experimentelle Fotoverfahren
@@ -130,7 +132,7 @@ Hier wird es etwas wilder. Einige Begriffe beschreiben echte fotografische oder 
 **PASS** · **Nutzen:** Science-Look, Tech-Thumbnail und visuelles Storytelling.
 
 ```prompt
-Transform the portrait into a convincing scientific thermal-camera image with a blue-to-red-to-yellow heat palette, visible temperature differences across face, glasses, beard and hoodie, dark blue background, same frontal identity.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Transform it into a convincing scientific thermal-camera image with a blue-to-red-to-yellow heat palette and visible temperature differences across skin, hair, accessories and clothing. Preserve identity, pose and every recognizable silhouette detail. Background: [[BACKGROUND COLOR, e.g. dark blue]].
 ```
 
 ### 8. Sichtbare Luftströmungen: `/schlieren`
@@ -140,7 +142,7 @@ Transform the portrait into a convincing scientific thermal-camera image with a 
 **PASS** · **Nutzen:** Physik-, Atem-, Wärme- und Soundthemen.
 
 ```prompt
-Create a monochrome schlieren-photography portrait of the same man. Show fine refractive air currents curling around his face, beard and shoulders against a black background, silver edge detail, laboratory optical-imaging aesthetic.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a monochrome schlieren-photography portrait. Show fine refractive air currents curling around the face, hair, accessories and shoulders against a [[BACKGROUND COLOR, e.g. black]] background, with silver edge detail and a laboratory optical-imaging aesthetic. Preserve identity and expression.
 ```
 
 ### 9. Flachbettscanner-Porträt: `/scanography`
@@ -152,7 +154,7 @@ Create a monochrome schlieren-photography portrait of the same man. Show fine re
 Der Scannerkontext ist eindeutig. Die typische zeilenweise Scan-Anmutung könnte aber konsequenter sein. Das Bild versteht also die Szene besser als das eigentliche Verfahren.
 
 ```prompt
-Recreate the portrait as true flatbed scanography: face and hoodie close to scanner glass, shallow depth, dark surrounding scanner lid, subtle dust and glass texture, hard lateral scanner light, slight contact distortion.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Recreate it as true flatbed scanography: face and upper clothing close to scanner glass, shallow depth, dark surrounding scanner lid, subtle dust and glass texture, hard lateral scanner light and slight contact distortion. Preserve identity, hairstyle, accessories and clothing details. Output ratio: [[ASPECT RATIO]].
 ```
 
 ### 10. Fotogramm: `/photogram`
@@ -162,7 +164,7 @@ Recreate the portrait as true flatbed scanography: face and hoodie close to scan
 **PASS** · **Nutzen:** Poster, Retro-Art, Cover und Druckgrafik.
 
 ```prompt
-Turn the portrait into a high-contrast black-and-white darkroom photogram. Make the head, aviator glasses, beard and hoodie readable as direct-contact silhouettes and translucent outlines on aged photographic paper, with dust and chemical edge marks.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn it into a high-contrast black-and-white darkroom photogram. Make the head shape, hairstyle, facial features, accessories and clothing silhouette readable as direct-contact shadows and translucent outlines on aged photographic paper, with dust and chemical edge marks. Output ratio: [[ASPECT RATIO]].
 ```
 
 ### 11. Chemigramm: `/chemigram`
@@ -174,7 +176,7 @@ Turn the portrait into a high-contrast black-and-white darkroom photogram. Make 
 Das Resultat ist stark. Es wirkt stellenweise aber eher wie Tusche oder eine Ätzzeichnung als eindeutig wie ein Chemigramm. Für Kunst super. Für eine Erklärung des echten Verfahrens nicht sauber genug.
 
 ```prompt
-Create a handmade chemigram portrait on photographic paper using developer and fixer stains, branching chemical textures, sepia-black tonal blooms and distressed paper edges. Keep the man recognisable through glasses, bald head, beard and smile.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a handmade chemigram on photographic paper using developer and fixer stains, branching chemical textures, sepia-black tonal blooms and distressed paper edges. Keep the person recognizable through the actual face shape, hairstyle, facial hair, accessories and expression shown in the reference. Output ratio: [[ASPECT RATIO]].
 ```
 
 ### 12. Slit-Scan-Verzerrung: `/slitScan`
@@ -184,7 +186,7 @@ Create a handmade chemigram portrait on photographic paper using developer and f
 **PASS** · **Nutzen:** Musikvisual, Motion-Art und Themen rund um Zeit oder Bewegung.
 
 ```prompt
-Create a horizontal slit-scan portrait: keep the left half of the man's face recognisable and stretch the right half into long time-sliced horizontal bands. Preserve turquoise and orange colour cues on a black background.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a horizontal slit-scan portrait: keep the left half of the face recognizable and stretch the right half into long time-sliced horizontal bands. Preserve the reference image's own identity, styling and colors against a [[BACKGROUND COLOR, e.g. black]] background.
 ```
 
 ## 3. Porträts aus echten Materialien
@@ -198,7 +200,7 @@ Das ist für mich die stärkste Gruppe. Faden, Draht, Pflanzen, Sand, Eis und Pa
 **PASS** · **Nutzen:** Maker-Content, Geschenkidee und DIY-Thumbnail.
 
 ```prompt
-Rebuild the portrait as real nail-and-thread string art mounted on a circular wooden board. Use black thread for facial features and beard, orange thread for glasses and turquoise thread for the hoodie. Photograph the physical artwork.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Rebuild it as real nail-and-thread string art on a circular wooden board. Use [[BASE THREAD COLOR]] for the main facial structure and [[ACCENT COLOR 1]] plus [[ACCENT COLOR 2]] for two distinctive features taken from the reference. Preserve the actual hairstyle, facial hair, accessories and clothing silhouette. Photograph the physical artwork.
 ```
 
 ### 14. Drahtskulptur: `/wirePortrait`
@@ -208,7 +210,7 @@ Rebuild the portrait as real nail-and-thread string art mounted on a circular wo
 **PASS** · **Nutzen:** Ausstellungskonzept, Skulpturidee und 3D-Visualisierung.
 
 ```prompt
-Transform the subject into a freestanding wire portrait sculpture in a modern gallery. Use black, copper-orange and turquoise wire to define the bald head, glasses, beard, smile and hoodie. Realistic shadows and physical construction.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Transform the person into a freestanding wire sculpture in a modern gallery. Use [[BASE WIRE COLOR]], [[ACCENT COLOR 1]] and [[ACCENT COLOR 2]] to define the real head shape, hairstyle, facial features, accessories, expression and clothing silhouette. Show realistic shadows and physically plausible construction.
 ```
 
 ### 15. Gepresste Pflanzen: `/pressedFlowers`
@@ -218,7 +220,7 @@ Transform the subject into a freestanding wire portrait sculpture in a modern ga
 **PASS** · **Nutzen:** Geschenk, Papeterie, nachhaltiges Branding und Poster.
 
 ```prompt
-Create the portrait as a handmade collage of pressed flowers, leaves and petals on textured cream paper. Use orange petals for glasses, dark botanicals for beard and blue petals for the hoodie. Preserve the recognisable smile.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a handmade collage of pressed flowers, leaves and petals on textured [[PAPER COLOR]] paper. Map [[ACCENT COLOR 1]] and [[ACCENT COLOR 2]] botanicals to two recognizable features from the reference, while darker plants define shadows and outlines. Preserve the actual hairstyle, accessories, expression and clothing silhouette.
 ```
 
 ### 16. Sandskulptur: `/sandSculpture`
@@ -228,7 +230,7 @@ Create the portrait as a handmade collage of pressed flowers, leaves and petals 
 **PASS** · **Nutzen:** Sommercontent, Eventidee und virales Vorher-nachher.
 
 ```prompt
-Turn the same man into a highly detailed life-size sand sculpture on a beach. Sculpt the bald head, aviator glasses, beard texture, smile and hoodie folds entirely from wet sand. Natural daylight and ocean background.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn the person into a highly detailed life-size wet-sand sculpture on a beach. Sculpt the actual head shape, hairstyle, facial features, accessories, expression and clothing folds entirely from sand. Use [[LIGHTING, e.g. soft daylight]] with an ocean background. Do not invent or remove identity features.
 ```
 
 ### 17. Eisskulptur: `/iceSculpture`
@@ -238,7 +240,7 @@ Turn the same man into a highly detailed life-size sand sculpture on a beach. Sc
 **PASS** · **Nutzen:** Winterkampagne, Eventvisualisierung und Premium-Thumbnail.
 
 ```prompt
-Transform the portrait into a transparent carved ice bust outdoors at blue hour. Preserve glasses, beard curls, smile and hoodie silhouette in clear ice with bubbles, frost and cyan reflections.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Transform it into a transparent carved ice bust outdoors at blue hour. Preserve the actual head shape, hairstyle, facial hair, accessories, expression and clothing silhouette in clear ice with bubbles, frost and [[REFLECTION COLOR, e.g. cyan]] reflections.
 ```
 
 ### 18. Buchschnitt-Porträt: `/foreEdgePainting`
@@ -248,7 +250,7 @@ Transform the portrait into a transparent carved ice bust outdoors at blue hour.
 **PASS** · **Nutzen:** Buchcontent, Publishing, Kunsthandwerk und Geschenkideen.
 
 ```prompt
-Show a real closed hardcover book whose fanned page edges reveal a detailed fore-edge painting of the reference portrait. Preserve orange glasses, dark beard and turquoise hoodie; warm library setting, realistic paper texture.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Show a real closed hardcover book whose fanned page edges reveal a detailed fore-edge painting of that person. Preserve identity, hairstyle, facial hair, accessories, expression, clothing and the reference colors. Place it in a [[SETTING, e.g. warm library]] with realistic paper texture.
 ```
 
 ## 4. Maker-, Tech- und Wow-Motive
@@ -262,7 +264,7 @@ Diese sechs Motive sind natürlich nicht automatisch baubar. Als Visualisierung 
 **PASS** · **Nutzen:** Eventpitch, Festival, Markenstunt und spektakuläres Thumbnail.
 
 ```prompt
-Create a night photograph of a large outdoor drone light show forming the man's portrait in the sky. Thousands of blue, orange and white light points clearly define his bald head, glasses, beard, smile and hoodie.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a night photograph of a large outdoor drone light show forming that person's portrait in the sky. Thousands of [[LIGHT COLOR 1]], [[LIGHT COLOR 2]] and white light points must define the actual head shape, hairstyle, facial features, accessories, expression and clothing silhouette. No text or logos.
 ```
 
 ### 20. Klangmuster-Porträt: `/cymatics`
@@ -272,7 +274,7 @@ Create a night photograph of a large outdoor drone light show forming the man's 
 **PASS** · **Nutzen:** Musik, Akustik, Wissenschaft und visuelle Experimente.
 
 ```prompt
-Create a real cymatics or Chladni-plate experiment in which fine sand on a vibrating black plate forms the man's recognisable face, orange glasses and turquoise hoodie, surrounded by standing-wave geometry. Laboratory macro photograph.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a real cymatics or Chladni-plate experiment in which fine sand on a vibrating [[PLATE COLOR]] plate forms the person's recognizable face, hairstyle, accessories and clothing silhouette, surrounded by standing-wave geometry. Preserve the reference's distinctive shapes without adding new features. Laboratory macro photograph.
 ```
 
 ### 21. Leiterplatten-Porträt: `/pcbPortrait`
@@ -282,7 +284,7 @@ Create a real cymatics or Chladni-plate experiment in which fine sand on a vibra
 **PASS** · **Nutzen:** Elektronik-Branding, PCB-Art und Tech-Cover.
 
 ```prompt
-Design a functioning black printed circuit board whose copper traces, vias and components form the reference portrait. Orange copper defines glasses and facial features; turquoise traces define the hoodie. Top-down product photograph.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Design a functioning [[PCB COLOR]] printed circuit board whose traces, vias and components form the recognizable face, hairstyle, accessories and clothing silhouette. Use [[TRACE COLOR 1]] and [[TRACE COLOR 2]] to distinguish two real features from the reference. Top-down product photograph, no text or logo.
 ```
 
 ### 22. Oszilloskop-Linienbild: `/oscilloscope`
@@ -292,7 +294,7 @@ Design a functioning black printed circuit board whose copper traces, vias and c
 **PASS** · **Nutzen:** Retro-Tech, Audio, Synthesizer und Maker-Channel.
 
 ```prompt
-Display the man's portrait as a continuous green vector trace on a vintage analog oscilloscope CRT. Clearly draw the bald head, aviator glasses, beard, smile and hoodie in glowing phosphor lines; dark workshop setting.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Display it as a continuous [[PHOSPHOR COLOR, e.g. green]] vector trace on a vintage analog oscilloscope CRT. Clearly draw the actual head shape, hairstyle, facial features, accessories, expression and clothing silhouette in glowing lines. Dark workshop setting, no text.
 ```
 
 ### 23. Lentikulardruck: `/lenticular`
@@ -304,7 +306,7 @@ Display the man's portrait as a continuous green vector trace on a vintage analo
 Das statische Bild kann den echten Wechsel zwischen zwei Blickwinkeln natürlich nur andeuten. Die physische Oberfläche und das Prinzip sind trotzdem klar lesbar.
 
 ```prompt
-Photograph a physical lenticular portrait print in a clear acrylic frame. Visible vertical ridges combine two expressions of the same man while preserving orange glasses and turquoise hoodie; oblique light proves the real lenticular surface.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Photograph a physical lenticular print in a clear acrylic frame. Visible vertical ridges combine [[EXPRESSION 1]] and [[EXPRESSION 2]] while preserving identity, hairstyle, facial hair, accessories, clothing and original colors. Oblique light must prove the real lenticular surface.
 ```
 
 ### 24. Hologramm-Büste: `/hologram`
@@ -314,7 +316,7 @@ Photograph a physical lenticular portrait print in a clear acrylic frame. Visibl
 **PASS** · **Nutzen:** Zukunftsvisual, Tech-Keynote und Themen rund um KI, AR oder VR.
 
 ```prompt
-Create a realistic tabletop volumetric hologram projector displaying a cyan-blue bust of the same smiling man. Preserve bald head, orange glasses, long beard and hoodie silhouette as luminous scan lines in a dark room.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a realistic tabletop volumetric hologram projector displaying a [[HOLOGRAM COLOR, e.g. cyan-blue]] bust of the person. Preserve the actual head shape, hairstyle, facial hair, accessories, expression and clothing silhouette as luminous scan lines in a dark room.
 ```
 
 ## 5. Raw Camera Looks und Creator-Szenen
@@ -328,7 +330,7 @@ Ein perfektes Studiofoto sieht schnell nach Werbung aus. Diese Gruppe macht gena
 **PASS** · **Nutzen:** Authentischer Social-Post, Street-Look und Musikvisual.
 
 ```prompt
-Make this look like a raw handheld phone snapshot outside a convenience store at night: slight motion blur, imperfect focus, mixed neon and fluorescent light, wet pavement, casual framing. Preserve the same person and clothes.
+Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Make it look like a raw handheld phone snapshot outside [[NIGHT LOCATION, e.g. a convenience store]]: slight motion blur, imperfect focus, mixed neon and fluorescent light, wet pavement and casual framing. Preserve identity, body proportions, clothing, accessories and original colors.
 ```
 
 ### 26. Direktblitz-Schnappschuss: `/pointAndShoot`
@@ -338,7 +340,7 @@ Make this look like a raw handheld phone snapshot outside a convenience store at
 **PASS** · **Nutzen:** Partylook, Retro-Cover und Social-Media-Story.
 
 ```prompt
-Recreate the portrait as a late-1990s point-and-shoot film snapshot indoors: harsh direct flash, dark background, visible grain, slight red-eye, casual off-centre crop and date-free lab-print aesthetic.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Recreate it as a late-1990s point-and-shoot film snapshot in [[INDOOR LOCATION]]: harsh direct flash, dark background, visible grain, slight red-eye, casual off-center crop and date-free lab-print aesthetic. Preserve identity, styling and clothing.
 ```
 
 ### 27. Frühe Digitalkamera: `/digicam2003`
@@ -348,7 +350,7 @@ Recreate the portrait as a late-1990s point-and-shoot film snapshot indoors: har
 **PASS** · **Nutzen:** Y2K-Look, Meme, Nostalgie und Musikvisual.
 
 ```prompt
-Turn this into an early-2000s compact digital-camera photo: cool white balance, blown flash highlights, mild JPEG artefacts, deep depth of field, ordinary living-room background and unpolished consumer-camera realism.
+Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn it into an early-2000s compact digital-camera photo: cool white balance, blown flash highlights, mild JPEG artifacts, deep depth of field, [[EVERYDAY INDOOR BACKGROUND]] and unpolished consumer-camera realism. Preserve identity, styling and clothing.
 ```
 
 ### 28. Soft-Mist-Porträt: `/softMist`
@@ -358,7 +360,7 @@ Turn this into an early-2000s compact digital-camera photo: cool white balance, 
 **PASS** · **Nutzen:** Profilbild, Artist-Porträt und Editorial.
 
 ```prompt
-Create a cinematic portrait using a strong black-pro-mist diffusion filter: glowing highlights, soft halation around the orange glasses, low-contrast shadows, shallow depth of field and gentle window light. Keep identity accurate.
+Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a cinematic portrait with a strong black-pro-mist diffusion filter: glowing highlights, soft halation around the brightest existing details, low-contrast shadows, shallow depth of field and [[LIGHT DIRECTION, e.g. gentle window light]]. Preserve identity, hairstyle, accessories, clothing and original colors.
 ```
 
 ### 29. Nachtportrait mit Blitz: `/directFlash`
@@ -368,7 +370,7 @@ Create a cinematic portrait using a strong black-pro-mist diffusion filter: glow
 **PASS** · **Nutzen:** Eventreportage, Streetstyle, Thumbnail und Pressebild.
 
 ```prompt
-Photograph the same man outdoors at blue hour with strong on-camera direct flash. Bright crisp subject, dark city background, specular highlights on orange glasses, candid documentary energy, no studio polish.
+Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Photograph the person outdoors at blue hour with strong on-camera direct flash. Keep the subject bright and crisp against a [[BACKGROUND, e.g. dark city]], with specular highlights on existing reflective details, candid documentary energy and no studio polish. Preserve identity and styling.
 ```
 
 ### 30. 360-Grad-Werkstatt: `/equirectangular360`
@@ -380,7 +382,7 @@ Photograph the same man outdoors at blue hour with strong on-camera direct flash
 Die typische Verzerrung ist klar. Der Einzeltest wurde aber aus einer Vergleichstafel geschnitten und ist dadurch quadratisch statt im geforderten 2:1-Format. Für eine echte 360-Grad-Ausgabe müsste ich das Bild separat neu rendern.
 
 ```prompt
-Place the same man inside a fully detailed maker workshop and render a true 2:1 equirectangular 360-degree panorama with ceiling and floor distortion, seamless left and right edges and the subject standing near the centre.
+Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Place the person inside a fully detailed [[360-DEGREE ENVIRONMENT, e.g. maker workshop]] and render a true 2:1 equirectangular panorama with ceiling and floor distortion, seamless left and right edges and the subject standing near the center. Preserve identity, body proportions and clothing.
 ```
 
 ### 31. Suchbild in der Menge: `/crowdSearch`
@@ -390,7 +392,7 @@ Place the same man inside a fully detailed maker workshop and render a true 2:1 
 **PASS** · **Nutzen:** Community-Post, Gewinnspiel, Engagement-Visual und Messeartikel.
 
 ```prompt
-Create a dense overhead photo of a busy maker convention with hundreds of people and booths. Hide the same bald bearded man in orange glasses and turquoise hoodie clearly but not centrally, like a classic visual search puzzle.
+Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a dense overhead photo of [[CROWDED EVENT, e.g. a maker convention]] with hundreds of people and booths. Hide the referenced person clearly but not centrally like a classic visual-search puzzle. Preserve their actual hairstyle, facial hair, accessories, clothing and colors so they remain findable without inventing new traits.
 ```
 
 ### 32. Creator-Livestream: `/creatorLivestream`
@@ -400,7 +402,7 @@ Create a dense overhead photo of a busy maker convention with hundreds of people
 **PASS** · **Nutzen:** Stream-Konzept, Kurswerbung und Social-Mockup.
 
 ```prompt
-Create a realistic vertical creator livestream interface showing the same man at a workbench presenting a small electronic build. Include camera view, readable live comments, viewer count and reaction controls without using real platform branding.
+Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a realistic vertical creator-livestream interface showing the person at [[WORKSPACE OR LOCATION]] presenting [[PROJECT OR OBJECT]]. Preserve identity, styling and clothing. Include camera view, readable live comments, viewer count and reaction controls without real platform branding.
 ```
 
 ## 6. Produktbilder und Interface-Ideen
@@ -414,7 +416,7 @@ Für diese vier Tests habe ich das Porträt bewusst beiseitegelegt. Eine Kamera 
 **PASS** · **Nutzen:** Shop, Kleinanzeigen, Produktdokumentation und Designprüfung.
 
 ```prompt
-Create a clean 2x3 product-photography grid of the exact unbranded black mirrorless camera: three-quarter front, side, top, lens close-up, in-hand scale and exploded lens view. Keep geometry and materials consistent.
+Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Create a clean 2x3 product-photography grid: three-quarter front, side, top, [[DETAIL CLOSE-UP]], [[SCALE CONTEXT]] and a carefully separated exploded view. Preserve the exact geometry, materials, surface finish, colors and every visible mark from the reference. Do not invent branding or components.
 ```
 
 ### 34. Shopseite: `/productDetailPage`
@@ -426,7 +428,7 @@ Create a clean 2x3 product-photography grid of the exact unbranded black mirrorl
 Die Oberfläche sieht erstaunlich glaubwürdig aus. Preise, technische Daten, Bewertungen und Liefertermine sind aber erfunden. Für ein Mockup okay. Für einen echten Shop müssten sämtliche Angaben aus echten Produktdaten kommen.
 
 ```prompt
-Design a polished German mobile e-commerce product-detail page for the exact black mirrorless camera. Include image gallery, title, rating, price, feature cards, delivery, accessories and purchase buttons. Clean teal-accented UI.
+Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Design a polished [[LANGUAGE]] mobile e-commerce product-detail page for it. Include an image gallery, [[PRODUCT TITLE]], rating, [[PRICE]], feature cards, delivery, accessories and purchase buttons. Preserve the product's exact geometry, materials, colors and visible branding status. Use a clean [[UI ACCENT COLOR]] interface without inventing specifications.
 ```
 
 ### 35. Technische Zerlegung: `/museumBreakdown`
@@ -438,7 +440,7 @@ Design a polished German mobile e-commerce product-detail page for the exact bla
 Visuell ist das richtig stark. Technisch darf man die Grafik trotzdem nicht mit einer echten Explosionszeichnung verwechseln. Die KI kennt die exakten inneren Bauteile dieser erfundenen Kamera nicht.
 
 ```prompt
-Create a German museum-style technical breakdown poster of the exact black mirrorless camera. Show the complete camera plus separated lens groups, sensor, shutter, circuit board, housings, controls, battery, material samples and assembly sequence.
+Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Create a [[LANGUAGE]] museum-style technical breakdown poster. Show the complete object plus [[KNOWN INTERNAL COMPONENTS]], housings, controls, material samples and a plausible assembly sequence. Preserve the exact exterior geometry, materials, colors and branding status. Do not invent unsupported technical labels; mark uncertain internals as conceptual.
 ```
 
 ### 36. Premium-Werbemotiv: `/premiumProductAd`
@@ -448,7 +450,7 @@ Create a German museum-style technical breakdown poster of the exact black mirro
 **PASS** · **Nutzen:** Kampagne, Hero-Bild, Launch-Visual und Produktthumbnail.
 
 ```prompt
-Create a premium cinematic advertising image of the exact unbranded black mirrorless camera floating above a dark stone pedestal. Use cyan edge light, warm amber rim light, subtle particles and a macro inset of the control dial. No logo or slogan.
+Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Create a premium cinematic advertising image with the object floating above a [[PEDESTAL MATERIAL]] pedestal. Use [[EDGE-LIGHT COLOR]], [[RIM-LIGHT COLOR]], subtle particles and a macro inset of [[DETAIL TO HIGHLIGHT]]. Preserve exact geometry, materials, colors and visible branding status. Add no new logo, slogan or product feature.
 ```
 
 ## Was in dieser Runde am besten funktioniert

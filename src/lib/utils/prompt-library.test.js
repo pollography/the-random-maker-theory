@@ -172,6 +172,8 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(library, /Prompt suchen/);
 	assert.match(library, /filterPrompts/);
 	assert.match(page, /Bildprompt-Library/);
+	assert.match(page, /\[\[PLATZHALTER\]\]/);
+	assert.match(page, /vor dem Absenden/);
 	assert.match(page, /Kurzprompt-Cheat-Sheet/);
 	assert.match(page, /\/downloads\/trmt-bildprompt-cheatsheet\.pdf/);
 	assert.match(page, /\/downloads\/trmt-ultimate-bildprompts-part-3\.pdf/);
