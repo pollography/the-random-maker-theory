@@ -14,6 +14,7 @@ const seoTitles = {
 	'kuerzeste-bildprompts-infografiken-wissen.md': 'KI-Bildprompts für Infografiken & Wissen',
 	'kuerzeste-bildprompts-welten-filmszenen.md': 'KI-Bildprompts für Welten & Filmszenen',
 	'ultimate-bildprompts-part-2.md': '36 KI-Bildprompts für Creator & Miniwelten',
+	'praezise-bildprompts-weniger-zufall.md': '24 präzise Bildprompts mit echten Beispielen',
 	'bildprompts-spielzeug-sammlerstuecke.md': 'KI-Bildprompts für Sammelfiguren & Spielzeug',
 	'bildprompts-miniaturwelten.md': 'KI-Bildprompts für Miniaturwelten',
 	'bildprompts-comics-retro.md': 'KI-Bildprompts für Comics & Retro-Looks',
@@ -39,7 +40,7 @@ test('blog metadata supports a separate SEO title without replacing the visible 
 	assert.match(page, /data\.post\.title\.indexOf\(accent\)/);
 });
 
-test('all 15 image-prompt articles have distinct, compact search titles', async () => {
+test('all 16 image-prompt articles have distinct, compact search titles', async () => {
 	const seen = new Set();
 
 	for (const [filename, expected] of Object.entries(seoTitles)) {
@@ -55,6 +56,7 @@ test('the prompt hubs connect readers with the filterable library', async () => 
 	for (const filename of [
 		'50-bildprompts-echt-getestet.md',
 		'ultimate-bildprompts-part-2.md',
+		'praezise-bildprompts-weniger-zufall.md',
 		'ein-foto-vier-slash-befehle-ki-bilder.md'
 	]) {
 		const article = await readRepoFile(`content/blog/${filename}`);

@@ -25,7 +25,7 @@ titleAccent: "Part 3"
 
 Was passiert, wenn aus einem normalen Porträt ein Fadenbild, ein Drohnenschwarm, eine Leiterplatte oder ein Hologramm werden soll? Ich habe 36 neue Ideen am selben Ausgangsbild getestet. Hier siehst du jeden Prompt, das echte Ergebnis und die Stellen, an denen die KI eben doch geschummelt hat.
 
-[Alle 123 getesteten Prompts durchsuchen](/tools/bildprompt-library) · [Part-3-PDF herunterladen](/downloads/trmt-ultimate-bildprompts-part-3.pdf)
+[Alle 147 getesteten Prompts durchsuchen](/tools/bildprompt-library) · [Part-3-PDF herunterladen](/downloads/trmt-ultimate-bildprompts-part-3.pdf)
 
 ![Alle 36 Ergebnisse aus dem dritten Bildprompt-Test auf einem Kontaktbogen](/images/blog/ultimate-bildprompts-part-3-overview.webp)
 
@@ -465,4 +465,4 @@ Ein guter Bildprompt muss nicht ewig lang sein. Er muss nur die Teile benennen, 
 
 Die Slash-Namen helfen mir beim Merken. Der vollständige Prompt erzeugt das brauchbare Ergebnis. Diese Trennung behalte ich für die nächsten Tests bei.
 
-[Alle 123 Prompts in der Library öffnen](/tools/bildprompt-library) · [Das Part-3-PDF herunterladen](/downloads/trmt-ultimate-bildprompts-part-3.pdf) · [Zurück zu Part 2](/blog/ultimate-bildprompts-part-2)
+[Alle 147 Prompts in der Library öffnen](/tools/bildprompt-library) · [Das Part-3-PDF herunterladen](/downloads/trmt-ultimate-bildprompts-part-3.pdf) · [Zurück zu Part 2](/blog/ultimate-bildprompts-part-2)

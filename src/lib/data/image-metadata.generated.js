@@ -3246,6 +3246,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/01-cyanotype-botanical.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/01-cyanotype-botanical.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/01-turnaround.webp": {
 		"width": 480,
 		"height": 403,
@@ -3276,6 +3287,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/02-risograph-two-ink.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/02-risograph-two-ink.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/03-pose-pack.webp": {
 		"width": 384,
 		"height": 480,
@@ -3288,6 +3310,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/03-pose-pack.webp",
 				"width": 960
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/03-reduction-linocut.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/03-reduction-linocut.webp",
+				"width": 480
 			}
 		]
 	},
@@ -3306,6 +3339,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/04-security-engraving.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/04-security-engraving.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/05-character-sheet.webp": {
 		"width": 340,
 		"height": 480,
@@ -3318,6 +3362,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/05-character-sheet.webp",
 				"width": 849
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/05-wet-plate-collodion.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/05-wet-plate-collodion.webp",
+				"width": 480
 			}
 		]
 	},
@@ -3336,6 +3391,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/06-false-color-infrared.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/06-false-color-infrared.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/07-body-language.webp": {
 		"width": 387,
 		"height": 480,
@@ -3348,6 +3414,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/07-body-language.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/07-paper-cut-shadowbox.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/07-paper-cut-shadowbox.webp",
+				"width": 480
 			}
 		]
 	},
@@ -3366,6 +3443,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/08-wood-marquetry.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/08-wood-marquetry.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/09-age-progression.webp": {
 		"width": 480,
 		"height": 480,
@@ -3381,6 +3469,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/09-cloisonne-enamel.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/09-cloisonne-enamel.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/10-character-evolution.webp": {
 		"width": 480,
 		"height": 397,
@@ -3393,6 +3492,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/10-character-evolution.webp",
 				"width": 1380
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/10-kintsugi-porcelain-bust.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/10-kintsugi-porcelain-bust.webp",
+				"width": 480
 			}
 		]
 	},
@@ -3518,6 +3628,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/11-sticker-transparent.webp",
 				"width": 1254
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/11-tufted-textile-portrait.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/11-tufted-textile-portrait.webp",
+				"width": 480
 			}
 		]
 	},
@@ -3647,6 +3768,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/12-copper-repousse-medallion.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/12-copper-repousse-medallion.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/12-sticker-pack-transparent.webp": {
 		"width": 480,
 		"height": 480,
@@ -3710,6 +3842,28 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/13-projection-mapped-bust.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/13-projection-mapped-bust.webp",
+				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/14-prism-refraction.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/14-prism-refraction.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/14-reaction-pack.webp": {
 		"width": 480,
 		"height": 403,
@@ -3740,6 +3894,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/15-long-exposure-light-painting.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/15-long-exposure-light-painting.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/16-miniature.webp": {
 		"width": 480,
 		"height": 480,
@@ -3752,6 +3917,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/16-miniature.webp",
 				"width": 1254
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/16-moire-line-portrait.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/16-moire-line-portrait.webp",
+				"width": 480
 			}
 		]
 	},
@@ -3770,6 +3946,28 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/17-solarized-darkroom-print.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/17-solarized-darkroom-print.webp",
+				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/18-caustic-light-portrait.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/18-caustic-light-portrait.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/18-clone-scene.webp": {
 		"width": 480,
 		"height": 480,
@@ -3785,6 +3983,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/19-maker-tool-assemblage.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/19-maker-tool-assemblage.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/19-multiverse.webp": {
 		"width": 387,
 		"height": 480,
@@ -3797,6 +4006,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/19-multiverse.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/20-aerial-landscape-portrait.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/20-aerial-landscape-portrait.webp",
+				"width": 480
 			}
 		]
 	},
@@ -3830,6 +4050,28 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/21-shadow-only-portrait.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/21-shadow-only-portrait.webp",
+				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/22-anamorphic-street-mural.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/22-anamorphic-street-mural.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/22-time-travel.webp": {
 		"width": 387,
 		"height": 480,
@@ -3857,6 +4099,28 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/23-future-version.webp",
 				"width": 1125
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/23-living-topiary-bust.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/23-living-topiary-bust.webp",
+				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/24-ferrofluid-portrait-bust.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/24-ferrofluid-portrait-bust.webp",
+				"width": 480
 			}
 		]
 	},
@@ -6129,6 +6393,344 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/perfekt-prompten-llm-guide-3.webp",
 				"width": 1920
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts-weniger-zufall-1-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts-weniger-zufall-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/praezise-bildprompts-weniger-zufall-1.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts-weniger-zufall-1.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts-weniger-zufall-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/praezise-bildprompts-weniger-zufall-1.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/01-cyanotype-botanical.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/01-cyanotype-botanical.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/01-print-photo-processes-board.webp": {
+		"width": 1200,
+		"height": 800,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/01-print-photo-processes-board.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/02-handmade-materials-board.webp": {
+		"width": 1200,
+		"height": 800,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/02-handmade-materials-board.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/02-risograph-two-ink.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/02-risograph-two-ink.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/03-optical-darkroom-board.webp": {
+		"width": 1200,
+		"height": 800,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/03-optical-darkroom-board.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/03-reduction-linocut.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/03-reduction-linocut.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/04-conceptual-motifs-board.webp": {
+		"width": 1200,
+		"height": 800,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/04-conceptual-motifs-board.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/04-security-engraving.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/04-security-engraving.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/05-wet-plate-collodion.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/05-wet-plate-collodion.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/06-false-color-infrared.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/06-false-color-infrared.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/07-paper-cut-shadowbox.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/07-paper-cut-shadowbox.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/08-wood-marquetry.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/08-wood-marquetry.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/09-cloisonne-enamel.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/09-cloisonne-enamel.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/10-kintsugi-porcelain-bust.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/10-kintsugi-porcelain-bust.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/11-tufted-textile-portrait.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/11-tufted-textile-portrait.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/12-copper-repousse-medallion.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/12-copper-repousse-medallion.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/13-projection-mapped-bust.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/13-projection-mapped-bust.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/14-prism-refraction.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/14-prism-refraction.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/15-long-exposure-light-painting.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/15-long-exposure-light-painting.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/16-moire-line-portrait.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/16-moire-line-portrait.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/17-solarized-darkroom-print.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/17-solarized-darkroom-print.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/18-caustic-light-portrait.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/18-caustic-light-portrait.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/19-maker-tool-assemblage.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/19-maker-tool-assemblage.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/20-aerial-landscape-portrait.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/20-aerial-landscape-portrait.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/21-shadow-only-portrait.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/21-shadow-only-portrait.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/22-anamorphic-street-mural.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/22-anamorphic-street-mural.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/23-living-topiary-bust.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/23-living-topiary-bust.webp",
+				"width": 512
+			}
+		]
+	},
+	"/images/blog/praezise-bildprompts/24-ferrofluid-portrait-bust.webp": {
+		"width": 512,
+		"height": 512,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/praezise-bildprompts/24-ferrofluid-portrait-bust.webp",
+				"width": 512
 			}
 		]
 	},

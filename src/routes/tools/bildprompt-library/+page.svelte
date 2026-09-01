@@ -6,7 +6,7 @@
 	const prompts = getPublicPrompts(promptData);
 	const categories = promptData.categories;
 	const canonicalUrl = 'https://therandommakertheory.com/tools/bildprompt-library';
-	const pageDescription = '123 getestete Bildprompts mit echten Ergebnissen, 87 Kurzprompts und 36 ausführlichen Vorlagen. Kostenlos suchen, filtern, kopieren und als PDF laden.';
+	const pageDescription = '147 getestete Bildprompts mit echten Ergebnissen: 87 Kurzprompts, 36 ausführliche Vorlagen und 24 präzise Creative Briefs. Kostenlos suchen, kopieren und als PDF laden.';
 	const collectionSchema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'CollectionPage',
@@ -27,17 +27,17 @@
 </script>
 
 <svelte:head>
-	<title>123 Bildprompts mit Beispielen | Kostenlose Library | TRMT</title>
+	<title>147 Bildprompts mit Beispielen | Kostenlose Library | TRMT</title>
 	<meta name="description" content={pageDescription} />
-	<meta property="og:title" content="123 Bildprompts mit echten Beispielen | TRMT" />
+	<meta property="og:title" content="147 Bildprompts mit echten Beispielen | TRMT" />
 	<meta property="og:description" content={pageDescription} />
 	<meta property="og:url" content={canonicalUrl} />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="https://therandommakertheory.com/images/blog/50-bildprompts-echt-getestet-1.webp" />
+	<meta property="og:image" content="https://therandommakertheory.com/images/blog/praezise-bildprompts-weniger-zufall-1.webp" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="123 Bildprompts mit echten Beispielen | TRMT" />
+	<meta name="twitter:title" content="147 Bildprompts mit echten Beispielen | TRMT" />
 	<meta name="twitter:description" content={pageDescription} />
-	<meta name="twitter:image" content="https://therandommakertheory.com/images/blog/50-bildprompts-echt-getestet-1.webp" />
+	<meta name="twitter:image" content="https://therandommakertheory.com/images/blog/praezise-bildprompts-weniger-zufall-1.webp" />
 	<link rel="canonical" href={canonicalUrl} />
 	{@html `<script type="application/ld+json">${collectionSchema}</script>`}
 </svelte:head>
@@ -45,7 +45,7 @@
 <section class="tool-hero">
 	<div class="hero-copy">
 		<h1>Bildprompt-Library</h1>
-		<p>Ein Ausgangsbild, 123 echte Tests. Durchsuche 87 Kurzprompts und 36 ausführliche Vorlagen, kopiere deinen Favoriten und probiere ihn mit einem eigenen Bild aus.</p>
+		<p>Ein Ausgangsbild, 147 echte Tests. Durchsuche 87 Kurzprompts, 36 ausführliche Vorlagen und 24 präzise Creative Briefs, kopiere deinen Favoriten und probiere ihn mit einem eigenen Bild aus.</p>
 	</div>
 
 	<div class="download-actions" aria-label="Kostenlose Prompt-Downloads">
@@ -61,6 +61,12 @@
 			</svg>
 			<span><strong>36 ausführliche Prompts</strong><small>Mit Ergebnissen · 12 Seiten</small></span>
 		</a>
+		<a class="download-button secondary" href="/downloads/trmt-praezise-bildprompts.pdf" download>
+			<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+				<path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<span><strong>24 präzise Prompts</strong><small>Creative Briefs · 13 Seiten</small></span>
+		</a>
 	</div>
 </section>
 
@@ -68,12 +74,13 @@
 
 <section class="library-note">
 	<div>
-		<h2>Kurzer Prompt, überraschendes Ergebnis</h2>
-		<p>Die Bilder zeigen echte Tests mit demselben Ausgangsporträt. Trotzdem sind Ein-Wort-Prompts kein fester Befehlssatz: Modell, Version und Ausgangsbild können das Ergebnis deutlich verändern.</p>
+		<h2>Von der schnellen Idee zum steuerbaren Motiv</h2>
+		<p>Alle Bilder zeigen echte Tests mit demselben Ausgangsporträt. Kurzprompts helfen beim Erkunden; die präzisen Creative Briefs legen Motiv, Material, Komposition und geschützte Details deutlich genauer fest.</p>
 	</div>
 	<nav class="guide-links" aria-label="Artikel zur Bildprompt-Serie">
 		<a href="/blog/50-bildprompts-echt-getestet">50 Prompts im Test</a>
 		<a href="/blog/ultimate-bildprompts-part-2">36 weitere Prompts</a>
+		<a href="/blog/praezise-bildprompts-weniger-zufall">24 präzise Prompts</a>
 		<a href="/blog/ein-foto-vier-slash-befehle-ki-bilder">Vier Slash-Prompts im Vergleich</a>
 	</nav>
 </section>

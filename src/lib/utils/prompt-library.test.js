@@ -40,11 +40,18 @@ const expectedCategoryIds = [
 	'produkt-design'
 ];
 
-test('canonical library exposes exactly 123 tested prompts and keeps research ideas private', () => {
+test('canonical library exposes exactly 147 tested prompts and keeps research ideas private', () => {
 	const publicPrompts = getPublicPrompts(data);
 	const allPrompts = /** @type {Array<{ status: string }>} */ (data.prompts);
 
-	assert.equal(publicPrompts.length, 123);
+	assert.equal(publicPrompts.length, 147);
+	assert.equal(publicPrompts.filter((prompt) => prompt.promptType === 'detailed').length, 60);
+	assert.equal(
+		publicPrompts.filter(
+			(prompt) => prompt.articleSlug === 'praezise-bildprompts-weniger-zufall'
+		).length,
+		24
+	);
 	assert.ok(allPrompts.some((prompt) => prompt.status === 'idea'));
 	assert.ok(publicPrompts.every((prompt) => prompt.status === 'tested' && prompt.image));
 	assert.ok(publicPrompts.every((prompt) => prompt.command.startsWith('/')));
@@ -139,10 +146,10 @@ test('category counts cover all tested prompts and preserve zero-safe output', (
 	const publicPrompts = getPublicPrompts(data);
 	const counts = getCategoryCounts(publicPrompts, data.categories);
 
-	assert.equal(counts.all, 123);
+	assert.equal(counts.all, 147);
 	assert.equal(
 		expectedCategoryIds.reduce((total, categoryId) => total + counts[categoryId], 0),
-		123
+		147
 	);
 	for (const categoryId of expectedCategoryIds) assert.ok(counts[categoryId] > 0);
 });
@@ -168,6 +175,7 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(page, /Kurzprompt-Cheat-Sheet/);
 	assert.match(page, /\/downloads\/trmt-bildprompt-cheatsheet\.pdf/);
 	assert.match(page, /\/downloads\/trmt-ultimate-bildprompts-part-3\.pdf/);
+	assert.match(page, /\/downloads\/trmt-praezise-bildprompts\.pdf/);
 	assert.match(page, /@media \(max-width: 760px\)[\s\S]*h1 \{ font-size:/);
 });
 

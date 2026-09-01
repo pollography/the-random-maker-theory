@@ -352,6 +352,18 @@ export const blogImageUsage = {
 		"/images/blog/perfekt-prompten-llm-guide-2.webp",
 		"/images/blog/perfekt-prompten-llm-guide-3.webp"
 	],
+	"praezise-bildprompts-weniger-zufall": [
+		"/images/blog/praezise-bildprompts-weniger-zufall-1.webp",
+		"/images/blog/praezise-bildprompts/01-print-photo-processes-board.webp",
+		"/images/blog/praezise-bildprompts/02-handmade-materials-board.webp",
+		"/images/blog/praezise-bildprompts/03-optical-darkroom-board.webp",
+		"/images/blog/praezise-bildprompts/19-maker-tool-assemblage.webp",
+		"/images/blog/praezise-bildprompts/20-aerial-landscape-portrait.webp",
+		"/images/blog/praezise-bildprompts/21-shadow-only-portrait.webp",
+		"/images/blog/praezise-bildprompts/22-anamorphic-street-mural.webp",
+		"/images/blog/praezise-bildprompts/23-living-topiary-bust.webp",
+		"/images/blog/praezise-bildprompts/24-ferrofluid-portrait-bust.webp"
+	],
 	"prompt-engineering-lernen-2026": [
 		"/images/blog/prompt-engineering-lernen-2026-1.webp"
 	],

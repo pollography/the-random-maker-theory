@@ -92,7 +92,11 @@
 		<div class="command-row">
 			<div class="command-label">
 				<code>{prompt.command}</code>
-				{#if prompt.promptType === 'detailed'}<span>Ausführlicher Prompt</span>{/if}
+				{#if prompt.articleSlug === 'praezise-bildprompts-weniger-zufall'}
+					<span>Präziser Prompt</span>
+				{:else if prompt.promptType === 'detailed'}
+					<span>Ausführlicher Prompt</span>
+				{/if}
 			</div>
 			<button type="button" class="copy-button" onclick={copyPrompt} aria-label="Prompt kopieren: {prompt.command}">
 				<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
