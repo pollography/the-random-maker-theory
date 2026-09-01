@@ -8,10 +8,15 @@ async function readArticle() {
 	return readFile(articleUrl, 'utf8');
 }
 
+/** @param {string} article */
 function bodyWithoutFrontmatter(article) {
 	return article.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '').trim();
 }
 
+/**
+ * @param {string} article
+ * @param {string} heading
+ */
 function sectionByHeading(article, heading) {
 	const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 	const match = article.match(new RegExp(`${escapedHeading}\\r?\\n[\\s\\S]*?(?=\\r?\\n## |$)`));
