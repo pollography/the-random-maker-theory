@@ -99,7 +99,7 @@ Nach der redaktionellen Prüfung kann der finale Artikel als gemeinsamer Medien-
 ```powershell
 $finalSource = notebooklm source add final-article.md --type file -n $notebookId --json | ConvertFrom-Json
 $finalArticleSourceId = $finalSource.source.id
-notebooklm source wait -s $finalArticleSourceId -n $notebookId --json
+notebooklm source wait $finalArticleSourceId -n $notebookId --json
 ```
 
 `source.id` kommt aus der JSON-Antwort. `$finalArticleSourceId` ist der lokal vergebene Name dafür. Erst nach `source wait` beziehen sich spätere Formate auf dieselben bestätigten Aussagen statt auf eine lose Stichwortliste.

@@ -101,8 +101,9 @@ test('waits for Deep Research and scopes planned media to the final article sour
 	assert.match(bridge, /Erst danach importiert/i);
 	assert.match(workflow, /\$finalSource\s*=\s*notebooklm source add[^\n]*--type file[^\n]*--json\s*\|\s*ConvertFrom-Json/);
 	assert.match(workflow, /\$finalArticleSourceId\s*=\s*\$finalSource\.source\.id/);
+	assert.match(workflow, /notebooklm source wait \$finalArticleSourceId -n \$notebookId --json/);
 	assert.ok(
-		workflow.indexOf('notebooklm source wait') > workflow.indexOf('$finalArticleSourceId = $finalSource.source.id'),
+		workflow.indexOf('notebooklm source wait $finalArticleSourceId -n $notebookId --json') > workflow.indexOf('$finalArticleSourceId = $finalSource.source.id'),
 		'Source wait must use the assigned final article source ID'
 	);
 	assert.match(workflow, /(?:Audio|Video|Infografik|Slides)/i);
