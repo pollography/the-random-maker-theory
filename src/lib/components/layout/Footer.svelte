@@ -84,6 +84,7 @@
 			<div style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center;">
 				<a href="/impressum" class="footer-link">Impressum</a>
 				<a href="/datenschutz" class="footer-link">Datenschutz</a>
+				<a href="/bildrechte" class="footer-link">Bildrechte</a>
 			</div>
 			<p style="margin: 0; color: var(--color-text-dim); font-size: var(--font-size-sm);">
 				&copy; {new Date().getFullYear()} {siteConfig.name}. Alle Rechte vorbehalten.

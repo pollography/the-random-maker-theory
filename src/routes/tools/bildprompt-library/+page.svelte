@@ -1,6 +1,7 @@
 <script lang="ts">
 	import PromptLibrary from '$lib/components/prompt-library/PromptLibrary.svelte';
 	import promptData from '$lib/data/image-prompts.json';
+	import { buildImageObject } from '$lib/utils/image-rights.js';
 	import { getPublicPrompts } from '$lib/utils/prompt-library.js';
 
 	const prompts = getPublicPrompts(promptData);
@@ -19,8 +20,12 @@
 			itemListElement: prompts.map((prompt, index) => ({
 				'@type': 'ListItem',
 				position: index + 1,
-				name: `${prompt.command} – ${prompt.title}`,
-				url: `https://therandommakertheory.com/blog/${prompt.articleSlug}`
+				item: {
+					'@type': 'CreativeWork',
+					name: `${prompt.command} – ${prompt.title}`,
+					url: `https://therandommakertheory.com/blog/${prompt.articleSlug}`,
+					image: buildImageObject(prompt.image, `${prompt.command} – ${prompt.title}`)
+				}
 			}))
 		}
 	});

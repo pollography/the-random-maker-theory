@@ -60,6 +60,11 @@ export async function GET() {
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>${siteConfig.url}/bildrechte</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
   ${validPosts
 		.map(
 			(post) => `

@@ -35,3 +35,31 @@ test('image-heavy cards publish intrinsic dimensions and responsive sources', ()
 		assert.match(source, /height=/);
 	}
 });
+
+test('public image rights identify just.pollo and cover article and library images', () => {
+	const config = read('src/lib/config.ts');
+	const homepage = read('src/routes/+page.svelte');
+	const article = read('src/routes/blog/[slug]/+page.svelte');
+	const library = read('src/routes/tools/bildprompt-library/+page.svelte');
+
+	assert.match(config, /creatorName:\s*'just\.pollo'/);
+	assert.match(config, /creditText:\s*'The Random Maker Theory \/ just\.pollo'/);
+	assert.match(homepage, /buildImageObject/);
+	assert.match(article, /buildImageObjects/);
+	assert.match(article, /blogImageUsage/);
+	assert.match(library, /buildImageObject/);
+});
+
+test('image rights page is discoverable and states the permission boundary', () => {
+	const rightsPage = read('src/routes/bildrechte/+page.svelte');
+	const config = read('src/lib/config.ts');
+	const footer = read('src/lib/components/layout/Footer.svelte');
+	const sitemap = read('src/routes/sitemap.xml/+server.ts');
+
+	assert.match(rightsPage, /siteConfig\.imageRights\.creatorName/);
+	assert.match(rightsPage, /siteConfig\.imageRights\.rightsUsageTerms/);
+	assert.match(config, /Alle Rechte vorbehalten/);
+	assert.match(config, /vorherige schriftliche Genehmigung/);
+	assert.match(footer, /href="\/bildrechte"/);
+	assert.match(sitemap, /\/bildrechte/);
+});

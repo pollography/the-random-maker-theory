@@ -4,6 +4,7 @@
 	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 	import { pageFAQs } from '$lib/data/pageFAQs';
+	import { buildImageObject } from '$lib/utils/image-rights.js';
 
 	/** @type {{ data: { posts: any[]; latestEpisode: any; totalCount: number } }} */
 	let { data } = $props();
@@ -151,6 +152,7 @@
 		"alternateName": "TRMT",
 		"url": "https://therandommakertheory.com",
 		"description": "Dein deutsches Tech-Magazin: KI-Tools, Maker-Projekte, Smart Home, Automatisierung und Produktivität.",
+		"image": buildImageObject('/images/og/default.webp', 'The Random Maker Theory'),
 		"inLanguage": "de-DE",
 		"publisher": {
 			"@type": "Organization",

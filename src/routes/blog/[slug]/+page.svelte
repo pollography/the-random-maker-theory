@@ -3,6 +3,8 @@
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import MediaBanner from '$lib/components/blog/MediaBanner.svelte';
 	import { siteConfig } from '$lib/config';
+	import { blogImageUsage } from '$lib/data/blog-image-usage.generated.js';
+	import { buildImageObjects } from '$lib/utils/image-rights.js';
 	import { getImageSeo } from '$lib/utils/image-seo.js';
 
 	let { data } = $props();
@@ -10,6 +12,10 @@
 	let heroImageSeo = $derived(getImageSeo(
 		data.post.heroImage,
 		'(max-width: 768px) calc(100vw - 32px), 768px'
+	));
+	let articleImages = $derived(buildImageObjects(
+		blogImageUsage[data.post.slug] ?? [data.post.heroImage || '/images/og/default.webp'],
+		data.post.title
 	));
 
 	// Ensure ISO 8601 dates with timezone for Schema.org
@@ -125,7 +131,7 @@
 				"url": "https://therandommakertheory.com/favicon.svg"
 			}
 		},
-		"image": `https://therandommakertheory.com${data.post.heroImage || '/images/og/default.webp'}`,
+		"image": articleImages,
 		"inLanguage": "de-DE",
 		"mainEntityOfPage": {
 			"@type": "WebPage",
