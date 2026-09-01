@@ -1,181 +1,131 @@
 ---
-title: "NotebookLM heißt jetzt Gemini Notebook: Kostenlos recherchieren, Audio, Video & Bilder bauen"
-seoTitle: "Gemini Notebook kostenlos: Recherche, Audio & Video"
-description: "NotebookLM heißt jetzt Gemini Notebook. Der kostenlose Standardzugang bündelt Deep Research, Audio, Video und Infografiken; Codex steuert den Workflow."
+title: "Der eigentliche NotebookLM-Hack: Codex verbindet Recherche und Medien mit notebooklm-py"
+seoTitle: "notebooklm-py mit Codex: NotebookLM per Agent steuern"
+description: "notebooklm-py verbindet Codex oder Claude Code mit NotebookLM. So steuert der Agent Deep Research, Artikel-Briefings und Medien in einem Workflow."
 slug: "gemini-notebook-kostenlos-codex-content-workflow"
 date: "2026-09-01"
-tags: ["notebooklm", "gemini-notebook", "codex", "claude-code", "content-workflow", "deep-research"]
+tags: ["notebooklm-py", "notebooklm", "codex", "claude-code", "content-workflow", "deep-research"]
 category: "ki-tools"
 draft: false
-titleAccent: "Kostenlos recherchieren"
-readingTime: 11
+titleAccent: "NotebookLM-Hack"
+readingTime: 12
 ---
 
-# NotebookLM heißt jetzt Gemini Notebook: Kostenlos recherchieren, Audio, Video & Bilder bauen
+# Der eigentliche NotebookLM-Hack: Codex verbindet Recherche und Medien mit notebooklm-py
 
-NotebookLM heißt seit Juli 2026 offiziell Gemini Notebook. Der neue Name ist noch ungewohnt. Das eigentlich Spannende ist aber etwas anderes: Gemini Notebook bietet einen ziemlich großen Teil der Recherche und Medienproduktion schon im kostenlosen Standardzugang an.
+Du sagst Codex oder Claude Code, welchen Artikel du brauchst. `notebooklm-py` ist dabei die Brücke, über die der Agent NotebookLM Deep Research starten kann, statt dass du Material zwischen Tabs und Tools hin- und herkopierst.
 
-Gemini Notebook kann im Web recherchieren, Quellen sammeln und daraus einen Bericht bauen. Aus demselben Quellenpaket entstehen anschließend ein podcast-artiges Audio Overview, ein Video Overview, eine Infografik als PNG oder ein Slide Deck. Codex oder Claude Code führt den Ablauf, prüft die wichtigen Aussagen und schreibt daraus den eigentlichen Artikel.
+Der Recherche-Pilot ist praktisch getestet. Der nächste Schritt, Outline, Abschnittsbriefings und später Medien aus einem geprüften Artikel abzuleiten, ist die technisch gestützte Ausbaustufe.
 
-Genau diese Kombination ist für mich so spannend: Recherche, Quellenbasis, Audio, Video und visuelle Formate hängen an einem gemeinsamen Wissenskern. Dafür brauche ich keinen zusätzlichen kostenpflichtigen Gemini-Notebook-Plan. Unbegrenzt ist das Ganze nicht. Aber der kostenlose Einstieg ist deutlich größer, als mein bisheriger Entwurf erkennen ließ.
+Die wichtige Verschiebung ist klein, aber ziemlich stark: NotebookLM sammelt und sortiert das Material. Codex oder Claude Code macht daraus einen nachvollziehbaren Artikel und prüft die entscheidenden Stellen am Original.
 
 <div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
   <span class="rf-label" aria-hidden="true">TL;DR</span>
   <ul>
-    <li>Gemini Notebook Standard, früher NotebookLM, lässt sich mit einem Gmail-Konto kostenlos nutzen.</li>
-    <li>Schon der kostenlose Zugang enthält Deep Research, Reports, Audio Overviews, Video Overviews sowie begrenzte Infografiken und Slide Decks.</li>
-    <li>Codex oder Claude Code steuert den Ablauf. Gemini Notebook übernimmt die breite Recherche und hält die Rohquellen.</li>
-    <li>Aus einem geprüften Artikelkern können ein podcast-artiges Audio Overview, ein Video, eine Infografik und Slides entstehen.</li>
-    <li>Mein Live-Pilot lief mit höheren Kontingenten. Dass der Kern auch kostenlos verfügbar ist, stammt aus der aktuellen Google-Dokumentation.</li>
-    <li>Ab 2. September 2026 führt Google flexible, rechenbasierte Nutzungslimits ein. Kostenlos heißt außerdem nicht, dass Codex oder Claude Code selbst kostenlos sind.</li>
+    <li><code>notebooklm-py</code> verbindet den Schreibagenten mit NotebookLM über eine inoffizielle CLI-, Python- und Agent-Skill-Schicht.</li>
+    <li>NotebookLM übernimmt breite Deep Research und liefert einen kontrollierten Quellenkern. Codex oder Claude Code schreibt und prüft den finalen Artikel.</li>
+    <li>Der reale Pilot fand 62 Kandidaten und wählte 50 zitierte Kandidaten aus. Er hat zugleich eine schlechte erste Quellentriage sichtbar gemacht.</li>
+    <li>Der finale Artikel kann der gemeinsame Medien-Master für Audio, Video, eine Infografik und Slides werden. Dieser vollständige Medien-Loop wurde hier noch nicht durchlaufen.</li>
+    <li>Der NotebookLM-Standardzugang kann breite Recherche aus dem bezahlten Agent-Kontext heraushalten. Er macht Codex oder Claude Code nicht gratis, und eine prozentuale Ersparnis ist nicht gemessen.</li>
   </ul>
 </div>
 
-## Was daran wirklich kostenlos ist
+## Der eigentliche Hack ist die Brücke
 
-Google unterscheidet zwischen Gemini Notebook Standard und mehreren bezahlten Stufen. Für Standard nennt die offizielle Hilfe ausdrücklich eine kostenlose Anmeldung mit einem Gmail-Konto. Deep Research, Reports, Audio Overviews und Video Overviews gehören dazu. Infografiken und Slide Decks sind ebenfalls verfügbar, im kostenlosen Zugang aber begrenzt.
+NotebookLM allein ist ein Recherche-Arbeitsraum. Du legst ein Notebook an, fügst Quellen hinzu, stellst Fragen und startest anschließend Medienaufgaben selbst. Das ist nützlich, aber der Wechsel zwischen Recherche, Briefing und Schreibagent bleibt an dir hängen.
 
-Bei meiner Prüfung am 1. September 2026 zeigte die Hilfe noch feste Tages- und Monatskontingente. Google hat allerdings bereits eine Umstellung angekündigt: Ab 2. September sollen flexible, rechenbasierte Limits ausgerollt werden. Dann zählen unter anderem die Komplexität des Auftrags, die Chatlänge, die Anzahl der Quellen und das verwendete Format. Das Kontingent soll sich alle fünf Stunden erneuern.
+Mit `notebooklm-py` kann der Agent diese klar abgegrenzten Schritte anstoßen: ein Notebook anlegen, Quellen hinzufügen, strukturierte Fragen stellen und später eine Medienaufgabe vorbereiten. Er bekommt dadurch keine Zaubermacht und veröffentlicht nichts selbst. Aber die Recherche wird Teil eines zusammenhängenden Workflows statt eines zweiten Arbeitsplatzes.
 
-Google sagt ausdrücklich, dass der Zugriff auf die bisherigen Funktionen erhalten bleibt. Deshalb werbe ich hier nicht mit einer festen Zahl an kostenlosen Audio oder Video Overviews pro Tag. Der wichtige Punkt bleibt: Für den Einstieg muss ich keinen zusätzlichen Gemini-Notebook-Tarif buchen. Bezahlte Pläne geben mir höhere Kontingente.
+Der Ablauf passt als Recherche-Ebene in [meinen allgemeinen Content-Pipeline-Aufbau](/blog/meine-content-pipeline-ai-agents-2026). Hier geht es bewusst um diese Verbindung, nicht um eine allgemeine NotebookLM-Featureliste.
 
-Mein eigener Live-Pilot lief mit einem Konto, das höhere Limits hat. Ich behaupte deshalb nicht, dass ich genau diesen großen Test komplett im kostenlosen Standardzugang durchgeführt habe. Die kostenlose Verfügbarkeit stammt aus der aktuellen Google-Dokumentation.
+## Ist notebooklm-py eine NotebookLM API?
 
-## Warum das mehr ist als ein kostenloses Recherche-Tool
+Kurz: technisch ja, offiziell nein. `notebooklm-py` bietet eine inoffizielle Python-API, eine CLI und einen Agent Skill. Es ist **nicht die offizielle Google-API** für NotebookLM.
 
-Kostenlose KI-Suche allein wäre inzwischen kein besonders wilder Aufhänger. Spannend wird Gemini Notebook durch das, was nach der Recherche passiert.
+Das Projekt steht unter der MIT-Lizenz. Für diesen Workflow ist [die Repository-Version](https://github.com/teng-lin/notebooklm-py), konkret [Release v0.8.1](https://github.com/teng-lin/notebooklm-py/releases/tag/v0.8.1), die relevante Grundlage. Wer jeden Schalter nachschlagen will, findet ihn in der [fest gepinnten CLI-Referenz für v0.8.1](https://github.com/teng-lin/notebooklm-py/blob/v0.8.1/docs/cli-reference.md).
 
-Ein Notebook kann heute mehrere Aufgaben zusammenhalten:
+Der Beweis im Artikel bleibt bewusst klein:
 
-| Aus denselben Quellen | Ergebnis |
-| --- | --- |
-| Deep Research und Webquellen | mehrseitiger Recherchebericht |
-| geprüfter Quellenkern | Antworten mit Quellenhinweisen |
-| freigegebener Artikelkern | podcast-artiges Audio Overview |
-| derselbe Wissenskern | Video Overview mit eigenen Visuals |
-| verdichtete Aussagen und Daten | Infografik als herunterladbare PNG-Datei |
-| Struktur und Kernaussagen | Slide Deck |
+```powershell
+notebooklm source add-research --prompt-file research-query.md --mode deep --no-wait -n $notebookId --json
+notebooklm research import --run-id $runId --cited-only --max-sources 20 -n $notebookId --json
+notebooklm ask --prompt-file outline.md -n $notebookId --json
+```
 
-Das ist für mich der eigentliche Unterschied. Ich muss Recherche, podcast-artiges Audio, Video und Visuals nicht in vier voneinander getrennten Tools neu erklären. Die Formate können aus derselben Quellenbasis entstehen.
+Die erste Zeile startet Deep Research mit einer gespeicherten Recherchefrage und wartet nicht auf den ganzen Lauf. Die zweite importiert aus dem fertigen Lauf nur zitierte Quellen in begrenzter Menge. Die dritte stellt dem Notebook eine Outline-Frage aus einer Datei und gibt das Ergebnis maschinenlesbar zurück.
 
-Bei „Bildern“ ist eine Grenze wichtig: Gemini Notebook kann Infografiken und Visuals für Videos oder Slides erzeugen. Es ersetzt keinen klassischen Foto-Generator für freie Editorial-Fotos oder eine komplette Bildstrecke. Für den Workflow sage ich deshalb bewusst **Bilder und Infografiken**, nicht „Gemini Notebook fotografiert mir alles“.
+Das ist absichtlich kein Installations-Tutorial. Der entscheidende Punkt ist die Rolle: NotebookLM mit Claude Code oder Codex erhält eine kontrollierbare Recherche-Verbindung, bleibt aber von einer nicht offiziellen Google-API abhängig.
 
-## Die Rollen sind überraschend einfach
+## Was heute schon getestet ist
 
-Codex oder Claude Code ist die Regie. Gemini Notebook ist die Recherche- und Medienbasis.
+Der Research-Pilot begann mit drei Startquellen. Deep Research ergänzte daraus 62 Quellenkandidaten; 50 zitierte Kandidaten wurden für den Import ausgewählt.
 
-| Aufgabe | Wer sie übernimmt |
-| --- | --- |
-| Leserfrage und Ziel festlegen | Codex oder Claude Code |
-| bekannte gute Startquellen mitgeben | Codex oder Claude Code |
-| breit im Web recherchieren | Gemini Notebook Deep Research |
-| Rohquellen und Bericht zusammenhalten | Gemini Notebook |
-| wichtige Aussagen am Original prüfen | Codex oder Claude Code |
-| Artikel in meiner Sprache schreiben | Codex oder Claude Code |
-| Audio, Video, Infografik oder Slides ableiten | Gemini Notebook |
-| alles vollständig prüfen und freigeben | ich |
+Der erste Durchlauf war zugleich der Warnschuss. Die automatische Triage behandelte ihren eigenen Research-Report zu stark wie eine Primärquelle und bevorzugte damit Material, das für den späteren Artikel nicht stabil genug war. Auch ein erfolgreicher Import ist also kein Beweis für eine gute Quellenauswahl.
 
-Gemini Notebook schreibt damit nicht einfach meine Website voll. Es übernimmt die große Fleißarbeit hinter dem Artikel. Der Schreibagent bekommt anschließend nur die Quellen und Aussagen, die wirklich etwas tragen.
+Das Ergebnis ist ein fester Prüfschritt: Quellen werden ausgewählt, ihre Originalstellen geprüft und erst dann als Belegkern an den Schreibagenten gegeben. Getestet wurde die Recherche und diese Auswahlgrenze. Audio, Video, Infografik oder Slides wurden in diesem Pilot nicht als fertige Artikelmedien produziert.
 
-## Warum ich die Recherche aus Codex auslagere
+## So soll der komplette Workflow funktionieren
 
-Wenn Codex selbst 50 Webseiten, mehrere PDFs und alle Zwischenberichte lesen soll, landet sehr viel Rohmaterial im Arbeitskontext. Das kann funktionieren. Es ist aber nicht automatisch die sinnvollste Verwendung eines bezahlten Agenten-Kontingents.
+Das ist die Zielarchitektur für einen wiederholbaren, quellennahen Ablauf. Sie trennt, was bereits getestet ist, von der geplanten Ausbaustufe.
 
-In meinem Workflow darf Gemini Notebook die große Suche übernehmen. Codex erhält danach höchstens acht Kernquellen, zwölf wichtige Aussagen und ein kurzes Belegpaket. Wenn eine Aussage öffentlich etwas behauptet, öffnet Codex gezielt die Originalstelle und prüft sie.
+### 1. Der Auftrag startet im Content-Skill
 
-Das begrenzt den Materialberg, den der Schreibagent verarbeiten muss. Eine konkrete Token- oder Zeitersparnis habe ich noch nicht sauber gemessen. Ich kann deshalb nicht ehrlich behaupten, der Ablauf spare pauschal 70 Prozent Kosten oder verdopple meine Geschwindigkeit.
+Der Content-Skill hält Leserfrage, Zielgruppe und Anspruch fest. So startet der Agent nicht mit „Schreib mal etwas über NotebookLM“, sondern mit einer konkreten Frage, die der fertige Artikel beantworten soll.
 
-Der wirtschaftliche Gedanke ist trotzdem klar: Die breite Recherche und mehrere Medienausgaben liegen in einer Gemini-Notebook-Ebene, die bereits kostenlos nutzbar ist. Codex oder Claude Code konzentriert sich auf Planung, Prüfung, Schreiben und die Verbindung mit meinem Projekt. Ob meine bezahlten Kontingente dadurch in der Praxis deutlich länger halten, will ich mit weiteren Artikeln messen.
+### 2. notebooklm-py startet Deep Research
 
-Meine [allgemeine Content-Pipeline mit AI Agents](/blog/meine-content-pipeline-ai-agents-2026) zeigt den breiteren Ablauf. Hier geht es bewusst nur um die neue Recherche- und Medienebene mit Gemini Notebook.
+Der Agent legt bei Bedarf ein Notebook an, gibt gute Startquellen mit und startet Deep Research. Dadurch beginnt die Suche nicht bei einem zufälligen Suchtreffer.
 
-## Mein Workflow in neun Schritten
+### 3. Aus Kandidaten wird ein geprüfter Quellenkern
 
-### 1. Codex bekommt eine echte Leserfrage
+Kandidaten sind noch keine Belege. Der Agent begrenzt die Auswahl, prüft Originalquellen und dokumentiert Widersprüche oder offene Punkte, bevor der Artikel darauf aufbaut.
 
-„Schreib etwas über Gemini Notebook“ ist viel zu offen. Besser ist: Wie kann ein Solo-Creator kostenlos breit recherchieren und aus derselben Quellenbasis einen Artikel, ein podcast-artiges Audio Overview, ein Video und Bilder ableiten?
+### 4. NotebookLM baut Outline und Abschnittsbriefings
 
-Diese Frage hält später alle Formate zusammen.
+Outline und Abschnittsbriefings entstehen als normale `ask --prompt-file`-Aufrufe. Sie sind keine besonderen NotebookLM-Artefakte. Sie geben dem Schreibagenten eine Struktur, ersetzen aber nicht die Quellenprüfung.
 
-### 2. Gute Startquellen kommen zuerst hinein
+### 5. Codex oder Claude Code schreibt den Artikel
 
-Wenn ich eine offizielle Dokumentation, das ursprüngliche GitHub-Projekt oder einen wichtigen Test kenne, gebe ich diese Links direkt mit. So beginnt Deep Research nicht bei irgendeinem zufälligen Suchtreffer.
+Codex oder Claude Code schreibt den Text lokal aus dem geprüften Kern, den Briefings und dem Projektkontext. NotebookLM schreibt nicht direkt in die öffentliche Website.
 
-### 3. Gemini Notebook sucht selbst nach den Lücken
+### 6. Der fertige Text wird zum Medien-Master
 
-Der Auftrag verlangt nach Primärquellen, aktuellen Angaben, Widersprüchen und einer vernünftigen Gegenposition. Deep Research darf dafür sehr breit suchen. Google beschreibt die Funktion als Rechercheagenten, der Hunderte Websites untersuchen und daraus einen mehrseitigen Bericht erstellen kann.
+Nach der redaktionellen Prüfung kann der finale Artikel als gemeinsamer Medien-Master dienen. Dann beziehen sich spätere Formate auf dieselben bestätigten Aussagen statt auf eine lose Stichwortliste.
 
-### 4. Aus vielen Treffern wird ein kleiner Quellenkern
+### 7. Audio, Video, Infografik und Slides entstehen danach
 
-Gemini Notebook sortiert die Kandidaten vor. Danach prüft Codex, welche Quellen wirklich nah am Ursprung sind und welche nur andere Seiten zusammenfassen.
+Audio, Video, Infografik und Slides sind danach mögliche Ableitungen. Sie bleiben Entwürfe, bis Inhalt, sichtbarer Text, Quellenbezug und die vollständige Ausgabe geprüft wurden.
 
-Mein Ziel sind höchstens acht starke Kernquellen. Der Rest bleibt im Notebook und muss nicht komplett in den Schreibagenten wandern.
+## Warum das günstiger sein kann – und was wirklich kostenlos ist
 
-### 5. Nur belegbare Aussagen gehen zurück an Codex
+Der mögliche Kostenvorteil kommt nicht aus einer magischen Rechnung. Vollständiges Rohmaterial kann in NotebookLM recherchiert und sortiert werden, statt den gesamten Bestand in den Kontext des Schreibagenten zu laden.
 
-Das kleine Paket enthält maximal zwölf Aussagen. Jede Aussage braucht eine Quelle, eine auffindbare Stelle und eine sichtbare Grenze. Was sich nicht sauber zurückführen lässt, bleibt offen oder fliegt raus.
+Codex oder Claude Code bekommt trotzdem nicht nur eine Zusammenfassung. Für Planung, Belegprüfung, Prosa und Projektintegration braucht der Agent den kuratierten Quellenkern und bezahlten Kontext. NotebookLM-Standardzugang und ein kostenpflichtiges Agent-Abo sind zwei getrennte Dinge.
 
-### 6. Der Artikel entsteht neu
+Der Standardzugang kann die breite Recherche zugänglich machen. Das sagt nichts über garantierte Limits, Dauer oder eine konkrete Ersparnis aus. Eine solche Wirkung müsste über mehrere reale Artikel gemessen werden.
 
-Das Belegpaket ist kein fertiger Blogtext. Codex baut daraus einen eigenen Einstieg, eine verständliche Reihenfolge und meine Sprache. Gemini Notebook darf Fakten sortieren. Es darf keine persönlichen Erfahrungen erfinden.
+## Wo der Workflow bewusst stoppt
 
-### 7. Der geprüfte Artikelkern geht zurück zu Gemini Notebook
+Die Verbindung kann ausfallen, wenn eine lokale Sitzung abläuft oder sich die inoffiziellen Endpunkte ändern. Quoten und Rate Limits können einen Lauf ebenfalls bremsen oder abbrechen. Ein technisch erfolgreicher Befehl macht daraus kein inhaltlich vollständiges Ergebnis.
 
-Erst wenn die Aussagen stimmen, wird aus dem Text eine Medienvorlage. Gemini Notebook bekommt die ausgewählten Quellen, den geprüften Artikelkern und einen konkreten Auftrag für das nächste Format.
+Darum endet der Workflow vor automatischer Veröffentlichung. Originalquellen werden geprüft, unklare Aussagen bleiben draußen, und erzeugte Medien werden vollständig angesehen oder angehört. Erst danach kann jemand entscheiden, ob ein Artikel, Audio, Video, eine Infografik oder Slides wirklich veröffentlicht werden sollen.
 
-### 8. Ein Thema wird zu mehreren Formaten
+## Für wen sich die Kombination lohnt
 
-Je nach Zweck entsteht ein Audio Overview, Video Overview, eine Infografik oder ein Slide Deck. Ich muss das Thema dabei nicht jedes Mal von null erklären. Die Quellenbasis bleibt dieselbe.
+Die Kombination passt zu Solo-Creatorn, die Codex oder Claude Code schon einsetzen und wiederholbare Recherche mit klaren Quellen brauchen. Sie passt weniger, wenn du nur schnell eine einzelne Antwort suchst oder jede Quelle ohnehin selbst im Browser lesen willst.
 
-### 9. Jedes Ergebnis bleibt zuerst ein Entwurf
+Wenn du den Agenten-Teil davor einordnen willst, lies [mein Claude-Code-Setup](/blog/claude-code-ultimate-setup-produktivitaet-2026). Die Installation erkläre ich hier absichtlich nicht noch einmal.
 
-Ein gut klingendes Audio Overview kann eine Aussage trotzdem falsch zuspitzen. Ein Video kann ein Bild zeigen, das die Quellen nicht hergeben. Eine Infografik kann Zahlen falsch beschriften. Deshalb prüfe ich jedes Format vollständig, bevor irgendetwas veröffentlicht wird.
+## Fazit: NotebookLM macht die Fleißarbeit, Codex den Artikel
 
-## Warum ich den Hybrid-Modus am stärksten finde
+Der Produktivitätsgewinn entsteht nicht durch eine besonders lange Liste an NotebookLM-Funktionen. Er entsteht durch die Brücke: `notebooklm-py` lässt den Schreibagenten Recherche geordnet anstoßen, ohne die Verantwortung für Auswahl, Prüfung und Veröffentlichung abzugeben.
 
-Ich kann den Ablauf auf drei Arten starten:
-
-- **Curated:** Ich gebe alle Quellen vor. Das passt zu engen Tests und bekannten Dokumentationen.
-- **Deep:** Gemini Notebook sucht selbstständig zu einer offenen Frage. Das ist breit, braucht aber mehr Kontrolle.
-- **Hybrid:** Ich setze starke Startquellen. Gemini Notebook sucht die Lücken und Gegenpositionen.
-
-Für größere TRMT-Artikel ist Hybrid mein Favorit. Die Recherche bekommt einen vernünftigen Startpunkt, bleibt aber offen genug für Quellen, an die ich selbst nicht gedacht habe.
-
-## Der Live-Pilot war stark und gleichzeitig ein guter Warnschuss
-
-Für meinen Test gab ich drei Startquellen vor und ließ Deep Research den Rest suchen. Der Lauf meldete 62 gefundene Quellen und 50 zitierte Kandidaten. Nach dem Import zeigte die unabhängige Quellenliste sogar mehr Einträge als erwartet.
-
-Auch die erste automatische Kernauswahl lag daneben. Gemini Notebook behandelte seinen eigenen Recherchebericht wie eine Primärquelle und priorisierte mehrere Seiten, die für den Artikel zu schwach oder schlicht unnötig waren.
-
-Genau deshalb ist der Workflow nicht „Knopf drücken und blind veröffentlichen“. Gemini Notebook kann breit suchen und aus einem Quellenpaket mehrere Formate erzeugen. Die wichtigen Aussagen und die endgültige Quellenauswahl prüft Codex danach noch einmal am Original.
-
-Der Fehler macht das kostenlose Angebot für mich nicht kleiner. Im Gegenteil. Ich bekomme eine ziemlich mächtige Recherche- und Medienbasis. Ich muss sie nur wie ein Werkzeug behandeln und nicht wie eine Wahrheitmaschine.
-
-## Der inoffizielle Haken bei Codex und Claude Code
-
-Die automatische Steuerung läuft weiterhin über [`notebooklm-py`](https://github.com/teng-lin/notebooklm-py). Das Open-Source-Projekt steht unter der MIT-Lizenz und stellt eine Kommandozeile, eine Python-Schnittstelle und einen Agent-Skill für Codex, Claude Code und andere Agenten bereit.
-
-Das Projekt stammt nicht von Google und nutzt interne Schnittstellen. Wenn Google etwas ändert, kann die Verbindung brechen. Die lokale Login-Sitzung muss außerdem wie ein Schlüssel behandelt werden. Sie gehört weder in den Website-Code noch in einen öffentlichen Download.
-
-Mein Ablauf stoppt deshalb bei unvollständigen Ergebnissen. Er veröffentlicht nichts automatisch. Das klingt weniger spektakulär als eine vollautomatische Content-Maschine, ist aber sehr viel vernünftiger.
-
-## Ist das nun der beste kostenlose KI-Content-Workflow?
-
-Für einen Solo-Creator ist die Kombination gerade absurd stark: Gemini Notebook recherchiert bereits im kostenlosen Standardzugang, hält die Quellen zusammen und erzeugt daraus Audio, Video, Infografiken und Slides. Codex oder Claude Code übernimmt die Teile, bei denen Planung, Kontrolle, Sprache und Projektwissen wichtiger sind.
-
-Für mich steckt die Besonderheit in dieser Mischung innerhalb eines einzigen quellengebundenen Arbeitsraums. Der kostenlose Einstieg deckt bereits mehrere Schritte ab. Ein vollständiger Marktvergleich ist das nicht.
-
-Ob mein Workflow am Ende wirklich schneller und günstiger ist, muss ich noch messen. Der wichtigste Vorteil ist aber jetzt schon klarer als im ersten Entwurf: Ich kann die große Recherche und mehrere Content-Formate in Gemini Notebook bündeln, ohne dafür sofort einen weiteren Bezahlplan zu brauchen.
-
-Und genau deshalb ist dieser Workflow für mich gerade einer der spannendsten Wege, um aus einer guten Frage einen Artikel, ein podcast-artiges Audio Overview, ein Video und visuelle Inhalte zu bauen.
+Genau diese Trennung macht den Ablauf brauchbar. NotebookLM hält die breite Recherche zusammen. Codex oder Claude Code formt daraus einen überprüften Artikel. Alles Weitere bleibt eine bewusst geprüfte Ausbaustufe.
 
 ## Quellen und Einstiegspunkte
 
-- [Google: Aus NotebookLM wird Gemini Notebook](https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/)
-- [Google: Flexible Nutzungslimits ab 2. September 2026](https://blog.google/innovation-and-ai/products/gemini-notebook/new-flexible-usage-limits/)
-- [Google-Hilfe: Kostenloser Standardzugang, Limits und höhere Tarife](https://support.google.com/gemininotebook/answer/16213268?hl=en)
-- [Google-Hilfe: Quellen finden und Deep Research](https://support.google.com/gemininotebook/answer/16215270?co=GENIE.Platform%3DDesktop&hl=en-GB)
-- [Google-Hilfe: Infografiken erstellen und als PNG herunterladen](https://support.google.com/gemininotebook/answer/16758265?hl=en-GB)
-- [Google: Audio und Video Overviews in mehr als 80 Sprachen](https://blog.google/innovation-and-ai/models-and-research/google-labs/notebook-lm-audio-video-overviews-more-languages-longer-content/)
-- [Google: Notebook-Inhalte in mehrere Formate überführen](https://blog.google/innovation-and-ai/products/notebooklm/notebooklm-google-io-2026/)
 - [`notebooklm-py` auf GitHub](https://github.com/teng-lin/notebooklm-py)
+- [`notebooklm-py` Release v0.8.1](https://github.com/teng-lin/notebooklm-py/releases/tag/v0.8.1)
+- [CLI-Referenz für v0.8.1](https://github.com/teng-lin/notebooklm-py/blob/v0.8.1/docs/cli-reference.md)
+- [Google-Hilfe: Quellen finden und Deep Research](https://support.google.com/gemininotebook/answer/16215270?co=GENIE.Platform%3DDesktop&hl=en-GB)
+- [Google-Hilfe: Standardzugang und Nutzungslimits](https://support.google.com/gemininotebook/answer/16213268?hl=en)
