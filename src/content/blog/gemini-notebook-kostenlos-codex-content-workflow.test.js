@@ -12,6 +12,13 @@ function bodyWithoutFrontmatter(article) {
 	return article.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '').trim();
 }
 
+function sectionByHeading(article, heading) {
+	const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+	const match = article.match(new RegExp(`${escapedHeading}\\r?\\n[\\s\\S]*?(?=\\r?\\n## |$)`));
+	assert.ok(match, `missing section: ${heading}`);
+	return match[0];
+}
+
 test('publishes the approved notebooklm-py bridge metadata and opening', async () => {
 	const article = await readArticle();
 	const body = bodyWithoutFrontmatter(article);
@@ -40,6 +47,9 @@ test('publishes the approved notebooklm-py bridge metadata and opening', async (
 
 test('separates the tested research pilot from the planned media architecture', async () => {
 	const article = await readArticle();
+	const pilot = sectionByHeading(article, '## Was heute schon getestet ist');
+	const workflow = sectionByHeading(article, '## So soll der komplette Workflow funktionieren');
+	const cost = sectionByHeading(article, '## Warum das günstiger sein kann – und was wirklich kostenlos ist');
 
 	for (const heading of [
 		'## Der eigentliche Hack ist die Brücke',
@@ -53,17 +63,39 @@ test('separates the tested research pilot from the planned media architecture', 
 		assert.match(article, new RegExp(heading.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
 	}
 
-	assert.match(article, /62[^.\n]{0,100}(?:Kandidaten|Quellen)/i);
-	assert.match(article, /50[^.\n]{0,100}(?:Kandidaten|Quellen)/i);
-	assert.match(article, /(?:Pilot|praktisch getestet)/i);
-	assert.match(article, /(?:Zielarchitektur|Ausbaustufe|soll der komplette Workflow)/i);
-	assert.match(article, /Audio/i);
-	assert.match(article, /Video/i);
-	assert.match(article, /Infografik/i);
-	assert.match(article, /Slides|Slide Deck/i);
-	assert.match(article, /source add-research/);
-	assert.match(article, /research import/);
-	assert.match(article, /ask --prompt-file/);
+	assert.match(pilot, /62[^.\n]{0,100}(?:Kandidaten|Quellen)/i);
+	assert.match(pilot, /50[^.\n]{0,100}(?:Kandidaten|Quellen)/i);
+	assert.match(pilot, /(?:Pilot|praktisch getestet|Getestet wurde)/i);
+	assert.match(pilot, /40[^.\n]{0,100}importiert/i);
+	assert.match(pilot, /Quellenliste[^.\n]{0,100}52 Quellen/i);
+	assert.match(pilot, /(?:keine|nicht)[^.\n]{0,100}(?:Artikelmedien|Audio|Video|Infografik|Slides)[^.\n]{0,100}(?:produziert|erzeugt)/i);
+	assert.match(workflow, /(?:Zielarchitektur|Ausbaustufe|soll der komplette Workflow)/i);
+	assert.match(workflow, /Audio/i);
+	assert.match(workflow, /Video/i);
+	assert.match(workflow, /Infografik/i);
+	assert.match(workflow, /Slides|Slide Deck/i);
+	assert.match(workflow, /notebooklm source add[^\n]*--type file/);
+	assert.match(workflow, /-s \$finalArticleSourceId/);
+	assert.match(cost, /Codex oder Claude Code[^.\n]{0,120}(?:nicht gratis|nicht kostenlos|kostenpflichtig)/i);
+});
+
+test('waits for Deep Research and scopes planned media to the final article source', async () => {
+	const article = await readArticle();
+	const bridge = sectionByHeading(article, '## Ist notebooklm-py eine NotebookLM API?');
+	const workflow = sectionByHeading(article, '## So soll der komplette Workflow funktionieren');
+
+	const researchStart = bridge.indexOf('notebooklm source add-research');
+	const researchWait = bridge.indexOf('notebooklm research wait --timeout 1800 -n $notebookId --json');
+	const researchImport = bridge.indexOf('notebooklm research import');
+	assert.ok(researchStart >= 0, 'missing Deep Research command');
+	assert.ok(researchWait > researchStart, 'Research wait must follow the Deep Research command');
+	assert.ok(researchImport > researchWait, 'Research import must follow confirmed completion');
+	assert.match(bridge, /\$runId[^.\n]{0,140}(?:erste|JSON).{0,80}(?:Antwort|response)/i);
+	assert.match(bridge, /Status[^.\n]{0,120}abgeschlossen/i);
+	assert.match(bridge, /Erst danach importiert/i);
+	assert.match(workflow, /finalen Markdown-Artikel[^.\n]{0,120}notebooklm source add[^\n]*--type file/i);
+	assert.match(workflow, /(?:Audio|Video|Infografik|Slides)/i);
+	assert.match(workflow, /ausschließlich `-s \$finalArticleSourceId`/i);
 });
 
 test('keeps primary sources, internal intent roles, and honest claim boundaries', async () => {

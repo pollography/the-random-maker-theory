@@ -8,7 +8,7 @@ tags: ["notebooklm-py", "notebooklm", "codex", "claude-code", "content-workflow"
 category: "ki-tools"
 draft: false
 titleAccent: "NotebookLM-Hack"
-readingTime: 12
+readingTime: 7
 ---
 
 # Der eigentliche NotebookLM-Hack: Codex verbindet Recherche und Medien mit notebooklm-py
@@ -17,13 +17,13 @@ Du sagst Codex oder Claude Code, welchen Artikel du brauchst. `notebooklm-py` is
 
 Der Recherche-Pilot ist praktisch getestet. Der nächste Schritt, Outline, Abschnittsbriefings und später Medien aus einem geprüften Artikel abzuleiten, ist die technisch gestützte Ausbaustufe.
 
-Die wichtige Verschiebung ist klein, aber ziemlich stark: NotebookLM sammelt und sortiert das Material. Codex oder Claude Code macht daraus einen nachvollziehbaren Artikel und prüft die entscheidenden Stellen am Original.
+Die wichtige Verschiebung ist klein, aber ziemlich stark: NotebookLM sammelt und sortiert das Material. Claude Code oder Codex erhält über `notebooklm-py` den geprüften Kern, formt daraus einen nachvollziehbaren Artikel und prüft die entscheidenden Stellen am Original.
 
 <div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
   <span class="rf-label" aria-hidden="true">TL;DR</span>
   <ul>
     <li><code>notebooklm-py</code> verbindet den Schreibagenten mit NotebookLM über eine inoffizielle CLI-, Python- und Agent-Skill-Schicht.</li>
-    <li>NotebookLM übernimmt breite Deep Research und liefert einen kontrollierten Quellenkern. Codex oder Claude Code schreibt und prüft den finalen Artikel.</li>
+    <li>NotebookLM übernimmt eine breite Deep-Research-Suche und liefert einen kontrollierten Quellenkern. Codex oder Claude Code schreibt und prüft den finalen Artikel.</li>
     <li>Der reale Pilot fand 62 Kandidaten und wählte 50 zitierte Kandidaten aus. Er hat zugleich eine schlechte erste Quellentriage sichtbar gemacht.</li>
     <li>Der finale Artikel kann der gemeinsame Medien-Master für Audio, Video, eine Infografik und Slides werden. Dieser vollständige Medien-Loop wurde hier noch nicht durchlaufen.</li>
     <li>Der NotebookLM-Standardzugang kann breite Recherche aus dem bezahlten Agent-Kontext heraushalten. Er macht Codex oder Claude Code nicht gratis, und eine prozentuale Ersparnis ist nicht gemessen.</li>
@@ -48,11 +48,12 @@ Der Beweis im Artikel bleibt bewusst klein:
 
 ```powershell
 notebooklm source add-research --prompt-file research-query.md --mode deep --no-wait -n $notebookId --json
+notebooklm research wait --timeout 1800 -n $notebookId --json
 notebooklm research import --run-id $runId --cited-only --max-sources 20 -n $notebookId --json
 notebooklm ask --prompt-file outline.md -n $notebookId --json
 ```
 
-Die erste Zeile startet Deep Research mit einer gespeicherten Recherchefrage und wartet nicht auf den ganzen Lauf. Die zweite importiert aus dem fertigen Lauf nur zitierte Quellen in begrenzter Menge. Die dritte stellt dem Notebook eine Outline-Frage aus einer Datei und gibt das Ergebnis maschinenlesbar zurück.
+Die erste Zeile startet Deep Research mit einer gespeicherten Recherchefrage und wartet nicht auf den ganzen Lauf. `$runId` kommt aus der JSON-Antwort der ersten Zeile. Die zweite Zeile wartet, bis der Status den Lauf als abgeschlossen bestätigt. Erst danach importiert die dritte Zeile die zitierten Quellen. Die vierte stellt dem Notebook eine Outline-Frage aus einer Datei und gibt das Ergebnis maschinenlesbar zurück.
 
 Das ist absichtlich kein Installations-Tutorial. Der entscheidende Punkt ist die Rolle: NotebookLM mit Claude Code oder Codex erhält eine kontrollierbare Recherche-Verbindung, bleibt aber von einer nicht offiziellen Google-API abhängig.
 
@@ -61,6 +62,8 @@ Das ist absichtlich kein Installations-Tutorial. Der entscheidende Punkt ist die
 Der Research-Pilot begann mit drei Startquellen. Deep Research ergänzte daraus 62 Quellenkandidaten; 50 zitierte Kandidaten wurden für den Import ausgewählt.
 
 Der erste Durchlauf war zugleich der Warnschuss. Die automatische Triage behandelte ihren eigenen Research-Report zu stark wie eine Primärquelle und bevorzugte damit Material, das für den späteren Artikel nicht stabil genug war. Auch ein erfolgreicher Import ist also kein Beweis für eine gute Quellenauswahl.
+
+Beim Research-/Import-Reporting standen 40 importierte Quellen. Der unabhängige Readback der Quellenliste zeigte dagegen 52 Quellen. `--max-sources` hat in diesem Lauf keine harte Obergrenze bewiesen. Genau deshalb gehört eine Quellenlisten-Prüfung in den festen Ablauf.
 
 Das Ergebnis ist ein fester Prüfschritt: Quellen werden ausgewählt, ihre Originalstellen geprüft und erst dann als Belegkern an den Schreibagenten gegeben. Getestet wurde die Recherche und diese Auswahlgrenze. Audio, Video, Infografik oder Slides wurden in diesem Pilot nicht als fertige Artikelmedien produziert.
 
@@ -90,17 +93,17 @@ Codex oder Claude Code schreibt den Text lokal aus dem geprüften Kern, den Brie
 
 ### 6. Der fertige Text wird zum Medien-Master
 
-Nach der redaktionellen Prüfung kann der finale Artikel als gemeinsamer Medien-Master dienen. Dann beziehen sich spätere Formate auf dieselben bestätigten Aussagen statt auf eine lose Stichwortliste.
+Nach der redaktionellen Prüfung kann der finale Artikel als gemeinsamer Medien-Master dienen. Dafür lädt die Zielarchitektur den finalen Markdown-Artikel mit `notebooklm source add final-article.md --type file -n $notebookId --json` als eigene NotebookLM-Quelle hoch. Die JSON-Antwort liefert ihre `finalArticleSourceId`. Dann beziehen sich spätere Formate auf dieselben bestätigten Aussagen statt auf eine lose Stichwortliste.
 
 ### 7. Audio, Video, Infografik und Slides entstehen danach
 
-Audio, Video, Infografik und Slides sind danach mögliche Ableitungen. Sie bleiben Entwürfe, bis Inhalt, sichtbarer Text, Quellenbezug und die vollständige Ausgabe geprüft wurden.
+Audio, Video, Infografik und Slides sind danach mögliche Ableitungen. In der Zielarchitektur erhalten sie ausschließlich `-s $finalArticleSourceId`, also genau den finalen Artikel als Quelle. Das ist geplant und noch nicht als vollständiger End-to-End-Medien-Loop getestet. Sie bleiben Entwürfe, bis Inhalt, sichtbarer Text, Quellenbezug und die vollständige Ausgabe geprüft wurden.
 
 ## Warum das günstiger sein kann – und was wirklich kostenlos ist
 
 Der mögliche Kostenvorteil kommt nicht aus einer magischen Rechnung. Vollständiges Rohmaterial kann in NotebookLM recherchiert und sortiert werden, statt den gesamten Bestand in den Kontext des Schreibagenten zu laden.
 
-Codex oder Claude Code bekommt trotzdem nicht nur eine Zusammenfassung. Für Planung, Belegprüfung, Prosa und Projektintegration braucht der Agent den kuratierten Quellenkern und bezahlten Kontext. NotebookLM-Standardzugang und ein kostenpflichtiges Agent-Abo sind zwei getrennte Dinge.
+Codex oder Claude Code wird dadurch nicht kostenlos. Für Planung, Belegprüfung, Prosa und Projektintegration braucht der Agent den kuratierten Quellenkern und bezahlten Kontext. NotebookLM-Standardzugang und ein kostenpflichtiges Agent-Abo sind zwei getrennte Dinge.
 
 Der Standardzugang kann die breite Recherche zugänglich machen. Das sagt nichts über garantierte Limits, Dauer oder eine konkrete Ersparnis aus. Eine solche Wirkung müsste über mehrere reale Artikel gemessen werden.
 
