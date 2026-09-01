@@ -1,6 +1,6 @@
 <script>
 	import { untrack } from 'svelte';
-	import BlogCard from '$lib/components/blog/BlogCard.svelte';
+	import HomepagePostCard from '$lib/components/blog/HomepagePostCard.svelte';
 	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 	import { pageFAQs } from '$lib/data/pageFAQs';
@@ -24,7 +24,6 @@
 		}))
 	});
 
-	let scrollY = $state(0);
 	let videoLoaded = $state(false);
 
 	// Count-up animation — SSR-friendly: start at totalCount so no "0" flash.
@@ -72,49 +71,37 @@
 
 	const pillars = [
 		{
-			icon: '🤖',
 			title: 'KI & Tech',
-			category: 'Reviews · News · Tutorials',
-			desc: 'Was taugt wirklich? ChatGPT, Claude, Gemini, Midjourney, Leonardo AI und dutzende andere KI-Tools im ehrlichen Praxistest. Keine gesponserten Lobeshymnen, sondern echte Erfahrung nach Wochen der Nutzung. Dazu aktuelle KI-News, wenn was Relevantes passiert. Vergleiche zwischen Tools, Prompt-Engineering Guides und Tutorials, die auch Einsteiger abholen. Von Text-KI über Bildgenerierung bis Audio und Video: hier erfährst du, was sich lohnt und was nur Hype ist.',
-			highlights: ['Tool-Reviews', 'KI-News', 'Prompt-Guides', 'Vergleiche', 'Tutorials'],
-			tag: 'ki-tools'
+			short: 'Tools · Tests · Trends',
+			tag: 'ki-tools',
+			image: '/images/homepage/topics/ki-tech.webp'
 		},
 		{
-			icon: '🔧',
 			title: 'Maker & DIY',
-			category: 'Projekte · Anleitungen · Hardware',
-			desc: 'Projekte zum Nachbauen mit Arduino, ESP32, Raspberry Pi und 3D-Drucker. Von smarten Sensoren fürs Terrarium über LED-Strips mit WLED bis zum eigenen Wetterstation-Dashboard. Jedes Projekt kommt mit Teileliste, Schaltplan und vollständigem Code. Dazu Grundlagen-Tutorials für Einsteiger, die noch nie gelötet haben. 3D-Druck Guides mit Slicer-Settings, Material-Tipps und Design-Workflows. Basteln mit Hirn statt Pinterest-Deko.',
-			highlights: ['Arduino', 'ESP32', '3D-Druck', 'Smart Home', 'Raspberry Pi'],
-			tag: 'maker'
+			short: 'Bauen · Drucken · Löten',
+			tag: 'maker',
+			image: '/images/homepage/topics/maker-diy.webp'
 		},
 		{
-			icon: '⚡',
 			title: 'Automatisierung',
-			category: 'Workflows · Scripts · DevOps',
-			desc: 'Workflows bauen mit n8n, Make und Zapier. Alles was du einmal einrichtest und nie wieder anfassen musst. Shell-Scripts für den Alltag, Cron-Jobs die im Hintergrund laufen, API-Anbindungen zwischen Tools. Vom simplen Backup-Script bis zur kompletten Content-Pipeline. Dazu Docker-Setups, Self-Hosting Guides und Server-Konfiguration. Repetitive Arbeit ist Zeitverschwendung: automatisiere oder lass es sein.',
-			highlights: ['n8n-Workflows', 'API-Guides', 'Shell-Scripts', 'Docker', 'Self-Hosting'],
-			tag: 'automatisierung'
+			short: 'Workflows · Scripts · APIs',
+			tag: 'automatisierung',
+			image: '/images/homepage/topics/automatisierung.webp'
 		},
 		{
-			icon: '📸',
 			title: 'Fotografie',
-			category: 'KI-Editing · Gear · Workflows',
-			desc: 'Wo KI auf Bildbearbeitung trifft. Lightroom AI Masking, Topaz Photo AI, Luminar Neo, Generative Fill in Photoshop. Ehrliche Tool-Reviews nach Monaten echter Nutzung, nicht nach 5 Minuten Ausprobieren. Dazu Editing-Workflows die wirklich Zeit sparen, Gear-Reviews von Kameras und Objektiven, und Tipps für Fotografen die ihre Arbeit mit KI-Tools aufwerten wollen, ohne dass es fake aussieht.',
-			highlights: ['Lightroom-KI', 'Editing-Workflows', 'Gear-Reviews', 'Topaz & Luminar', 'Photoshop KI'],
-			tag: 'fotografie'
+			short: 'Editing · Gear · Ideen',
+			tag: 'fotografie',
+			image: '/images/homepage/topics/fotografie.webp'
 		},
 		{
-			icon: '🧠',
 			title: 'Produktivität',
-			category: 'Systeme · Tools · Mindset',
-			desc: 'Obsidian als Second Brain, Notion-Setups die man tatsächlich nutzt, PARA-Methode in der Praxis. Systeme die funktionieren, auch wenn die Motivation mal komplett fehlt. Fokus-Strategien für Leute mit ADHS-Brain, Tool-Vergleiche zwischen Notion, Obsidian, Logseq und Co. Dazu Tipps für digitale Ordnung, Journaling-Workflows und alles was hilft, den eigenen Kopf zu entlasten und trotzdem nichts zu vergessen.',
-			highlights: ['Obsidian', 'Second Brain', 'PARA-Methode', 'Fokus-Hacks', 'Notion'],
-			tag: 'produktivitaet'
+			short: 'Systeme · Fokus · Ordnung',
+			tag: 'produktivitaet',
+			image: '/images/homepage/topics/produktivitaet.webp'
 		}
 	];
 </script>
-
-<svelte:window bind:scrollY={scrollY} />
 
 <svelte:head>
 	<title>TRMT — Tech, KI, Maker & Produktivität | Blog</title>
@@ -168,69 +155,57 @@
 	<h1 class="hero-title">
 		The <em class="hero-accent">Random</em> Maker Theory
 	</h1>
-	<p class="hero-subtitle">Content, den ich <em class="hero-accent">selbst</em> lese.</p>
+	<p class="hero-promise">Entdecken. Verstehen. Und alles <em class="hero-accent">Frei Schnauze.</em></p>
+	<p class="hero-intro">
+		Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
+	</p>
 	<div class="hero-actions">
-		<a href="/blog" class="btn-metallic btn-honey"><span>Zum Blog</span></a>
-		<a href="/podcast" class="btn-metallic btn-teal"><span>Zum Hören</span></a>
+		<a href="#latest-posts" class="btn-metallic btn-honey"><span>Neue Beiträge</span></a>
+		<a href="#topics" class="btn-metallic btn-teal"><span>Themen entdecken</span></a>
 	</div>
 	<div class="hero-counter" bind:this={counterRef}>
 		<span class="counter-number">{displayCount}</span>
 		<span class="counter-sep">·</span>
 		<span class="counter-label">Artikel & Episoden</span>
 	</div>
-	<div class="scroll-hint" class:hidden={scrollY > 100}>
-		<span class="scroll-arrow">↓</span>
-	</div>
 </section>
 
-<!-- ═══════ ENTDECKEN ═══════ -->
-<section class="discover-section">
-	<div class="discover-inner">
-		<h2 class="intro-headline">Entdecken. Verstehen. Und alles <span class="intro-accent">Frei Schnauze.</span></h2>
-		<p class="intro-text">
-			Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
-		</p>
+<!-- ═══════ THEMEN ═══════ -->
+<section class="section topics-section" id="topics" aria-labelledby="topics-title">
+	<div class="section-header topics-header">
+		<h2 class="section-title" id="topics-title">Womit willst du anfangen?</h2>
 	</div>
-</section>
-
-<!-- ═══════ 5 CONTENT-SÄULEN ═══════ -->
-<section class="section pillars-section">
-	<div class="section-header">
-		<h2 class="section-title">Was dich hier erwartet</h2>
-	</div>
-	<div class="pillars-list">
-		{#each pillars as pillar, i}
-			<a href="/tags/{pillar.tag}" class="pillar-card" class:pillar-honey={i % 2 === 0} class:pillar-teal={i % 2 !== 0}>
-				<div class="pillar-icon-col">
-					<span class="pillar-icon-large">{pillar.icon}</span>
+	<div class="topics-grid">
+		{#each pillars as pillar}
+			<a href="/tags/{pillar.tag}" class="topic-card">
+				<div class="topic-image">
+					<img src={pillar.image} alt="" loading="lazy" decoding="async" width="512" height="512" />
 				</div>
-				<div class="pillar-content">
-					<span class="pillar-category">{pillar.category}</span>
-					<h3 class="pillar-title">{pillar.title}</h3>
-					<p class="pillar-desc">{pillar.desc}</p>
-					<div class="pillar-highlights">
-						{#each pillar.highlights as tag}
-							<span class="pillar-tag">{tag}</span>
-						{/each}
-					</div>
-					<span class="pillar-cta">Entdecken →</span>
+				<div class="topic-copy">
+					<h3>{pillar.title}</h3>
+					<p>{pillar.short}</p>
 				</div>
 			</a>
 		{/each}
 	</div>
 </section>
 
-<!-- ═══════ NEUESTE POSTS ═══════ -->
-<section class="section">
+<!-- ═══════ HANDVERLESENE POSTS ═══════ -->
+<section class="section posts-section" id="latest-posts" aria-labelledby="latest-posts-title">
 	<div class="section-header">
-		<h2 class="section-title">Neueste Posts</h2>
-		<a href="/blog" class="section-link">Alle ansehen →</a>
+		<h2 class="section-title" id="latest-posts-title">Neu & handverlesen</h2>
+		<a href="/blog" class="section-link">Alle Beiträge ansehen →</a>
 	</div>
-	<div class="posts-grid">
-		{#each posts.slice(0, 6) as post (post.slug)}
-			<BlogCard {post} />
-		{/each}
-	</div>
+	{#if posts[0]}
+		<div class="editorial-posts">
+			<HomepagePostCard post={posts[0]} featured />
+			<div class="secondary-posts">
+				{#each posts.slice(1) as post (post.slug)}
+					<HomepagePostCard {post} />
+				{/each}
+			</div>
+		</div>
+	{/if}
 </section>
 
 <!-- ═══════ BOTTOM SECTIONS ═══════ -->
@@ -310,15 +285,14 @@
 	/* ── HERO ── */
 	.hero {
 		text-align: center;
-		min-height: 85svh;
+		min-height: clamp(520px, 66svh, 680px);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		padding: 40px 0 60px;
+		padding: 88px 0 48px;
 		margin-top: -56px;
-		padding-top: 56px;
 	}
 
 	.hero-badge {
@@ -328,7 +302,7 @@
 		color: var(--color-accent-teal-foreground);
 		letter-spacing: var(--letter-spacing-wider);
 		text-transform: uppercase;
-		margin-bottom: 24px;
+		margin-bottom: 18px;
 		padding: 6px 16px;
 		border: 1px solid var(--color-accent-teal-subtle);
 		border-radius: var(--radius-full);
@@ -338,11 +312,11 @@
 	.hero-title {
 		font-family: var(--font-display);
 		font-weight: 400;
-		font-size: clamp(44px, 8vw, 80px);
+		font-size: clamp(44px, 7vw, 76px);
 		line-height: 1.05;
 		letter-spacing: -0.02em;
 		color: var(--color-text);
-		margin: 0 0 20px;
+		margin: 0 0 16px;
 		opacity: 0.95;
 	}
 
@@ -360,15 +334,22 @@
 		color: hsl(38 85% 58%);
 	}
 
-	.hero-subtitle {
+	.hero-promise {
 		font-family: var(--font-display);
-		font-style: italic;
-		font-size: var(--font-size-xl);
+		font-size: clamp(26px, 3.4vw, 38px);
+		font-weight: 400;
+		line-height: 1.15;
+		letter-spacing: -0.01em;
+		color: var(--color-text);
+		margin: 0 0 12px;
+	}
+
+	.hero-intro {
+		max-width: 720px;
+		margin: 0 0 28px;
+		font-size: var(--font-size-md);
+		line-height: 1.65;
 		color: var(--color-text-muted);
-		max-width: 480px;
-		margin: 0 auto 40px;
-		line-height: var(--line-height-relaxed);
-		letter-spacing: 0.02em;
 	}
 
 	.hero-actions {
@@ -376,27 +357,6 @@
 		gap: 16px;
 		justify-content: center;
 		flex-wrap: wrap;
-	}
-
-	.scroll-hint {
-		position: absolute;
-		bottom: 20px;
-		left: 50%;
-		transform: translateX(-50%);
-		transition: opacity 0.4s ease;
-	}
-	.scroll-hint.hidden { opacity: 0; }
-
-	.scroll-arrow {
-		display: inline-block;
-		color: var(--color-text-dim);
-		font-size: 1.25rem;
-		animation: bounce 2s infinite;
-	}
-
-	@keyframes bounce {
-		0%, 100% { transform: translateY(0); }
-		50% { transform: translateY(6px); }
 	}
 
 	/* ── BUTTONS ── */
@@ -437,44 +397,12 @@
 		display: inline-flex;
 		align-items: baseline;
 		gap: 8px;
-		margin-top: 32px;
+		margin-top: 24px;
 	}
 
 	.counter-sep {
 		color: var(--color-text-dim);
 		font-size: 1rem;
-	}
-
-	/* ── DISCOVER SECTION (Headline + Text) ── */
-	.discover-section {
-		padding: 32px 0 24px;
-	}
-
-	.discover-inner {
-		max-width: 680px;
-		margin: 0 auto;
-		text-align: center;
-	}
-
-	.intro-headline {
-		font-family: var(--font-display);
-		font-weight: 400;
-		font-size: clamp(24px, 4vw, 36px);
-		color: var(--color-text);
-		margin: 0 0 20px;
-		letter-spacing: -0.01em;
-		opacity: 0.95;
-	}
-
-	.intro-accent {
-		color: var(--color-accent-honey-foreground);
-	}
-
-	.intro-text {
-		font-size: var(--font-size-md);
-		color: var(--color-text-muted);
-		line-height: 1.75;
-		margin: 0;
 	}
 
 	/* ── COUNTER (inline in hero) ── */
@@ -493,162 +421,14 @@
 		color: var(--color-text-dim);
 	}
 
-	/* ── PILLARS (C+D Hybrid: Teal Category + Alternating Colors) ── */
-	.pillars-section {
-		padding: 48px 0;
-	}
-
-	.pillars-list {
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
-	}
-
-	.pillar-card {
-		display: grid;
-		grid-template-columns: 64px 1fr;
-		gap: 24px;
-		align-items: start;
-		padding: 32px;
-		background: var(--color-surface);
-		border: 1px solid var(--color-border-subtle);
-		border-radius: var(--radius-xl);
-		text-decoration: none;
-		transition: all 0.25s ease;
-		color: inherit;
-	}
-
-	/* Pillars — Pollo's flip (2026-04-23):
-	 * DEFAULT = dark and calm (Galaxy Forge surface),
-	 * HOVER   = lifts to elevated + honey-glow + warmer tint.
-	 * Alternation now only shows on hover (honey vs teal trim), not at rest,
-	 * so the feed scans quiet and the active card sings.
-	 */
-	.pillar-card {
-		background: var(--color-surface);
-		border: 1px solid var(--color-border-subtle);
-	}
-	.pillar-honey,
-	.pillar-teal {
-		background: var(--color-surface);
-		border-color: var(--color-border-subtle);
-	}
-
-	.pillar-card:hover {
-		transform: scale(1.01);
-		background: var(--color-elevated);
-		border-color: rgba(212, 137, 62, 0.35);
-		box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 137, 62, 0.14);
-	}
-	.pillar-teal:hover {
-		border-color: rgba(58, 176, 162, 0.35);
-		box-shadow: 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 20px rgba(58, 176, 162, 0.14);
-	}
-
-	:global([data-theme='light']) .pillar-card {
-		background: var(--gradient-card-bg);
-		border: none;
-		box-shadow: var(--shadow-neo);
-	}
-	:global([data-theme='light']) .pillar-honey,
-	:global([data-theme='light']) .pillar-teal {
-		background: var(--gradient-card-bg);
-	}
-	:global([data-theme='light']) .pillar-card:hover {
-		background: rgba(0, 0, 0, 0.04);
-		box-shadow: 12px 12px 24px rgba(160, 145, 125, 0.5), -6px -6px 12px rgba(245, 238, 225, 0.6);
-	}
-
-	.pillar-icon-col {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding-top: 4px;
-	}
-
-	.pillar-icon-large {
-		font-size: 2.5rem;
-	}
-
-	.pillar-content {
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
-	}
-
-	.pillar-category {
-		font-family: var(--font-mono);
-		font-size: var(--font-size-xs);
-		color: var(--color-accent-teal-foreground);
-		text-transform: uppercase;
-		letter-spacing: 0.12em;
-	}
-
-	.pillar-title {
-		font-family: var(--font-sans);
-		font-weight: 700;
-		font-size: var(--font-size-lg);
-		color: var(--color-text);
-		letter-spacing: var(--letter-spacing-tighter);
-		margin: 0;
-	}
-
-	.pillar-desc {
-		font-size: var(--font-size-base);
-		color: var(--color-text-muted);
-		line-height: 1.75;
-		margin: 0;
-	}
-
-	.pillar-highlights {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 8px;
-		margin-top: 4px;
-	}
-
-	.pillar-tag {
-		font-size: var(--font-size-xs);
-		font-family: var(--font-mono);
-		color: var(--color-accent-teal-foreground);
-		background: var(--color-accent-teal-subtle);
-		padding: 3px 10px;
-		border-radius: var(--radius-full);
-		letter-spacing: 0.02em;
-	}
-
-	.pillar-cta {
-		display: inline-block;
-		margin-top: 8px;
-		font-family: var(--font-sans);
-		font-size: var(--font-size-sm);
-		font-weight: var(--font-weight-semibold);
-		color: var(--color-accent-honey-foreground);
-		transition: all var(--transition-normal);
-	}
-
-	.pillar-card:hover .pillar-cta {
-		transform: translateX(4px);
-		text-shadow: 0 0 12px rgba(212, 137, 62, 0.5);
-	}
-
-	.pillar-honey:hover .pillar-cta {
-		color: var(--color-accent-honey-foreground);
-	}
-
-	.pillar-teal:hover .pillar-cta {
-		color: var(--color-accent-teal-foreground);
-		text-shadow: 0 0 12px rgba(58, 176, 162, 0.5);
-	}
-
 	/* ── SECTIONS ── */
-	.section { padding: 48px 0 56px; }
+	.section { padding: 42px 0 50px; }
 
 	.section-header {
 		display: flex;
 		align-items: baseline;
 		justify-content: space-between;
-		margin-bottom: 32px;
+		margin-bottom: 24px;
 	}
 
 	.section-title {
@@ -679,11 +459,85 @@
 		transform: translateX(2px);
 	}
 
-	/* ── POSTS GRID ── */
-	.posts-grid {
+	/* ── TOPIC NAVIGATOR ── */
+	.topics-section { padding-top: 22px; }
+	.topics-header { margin-bottom: 20px; }
+
+	.topics-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 24px;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 12px;
+	}
+
+	.topic-card {
+		min-width: 0;
+		overflow: hidden;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-xl);
+		color: inherit;
+		text-decoration: none;
+		transition: border-color var(--transition-normal), transform var(--transition-normal);
+		scroll-snap-align: start;
+	}
+
+	.topic-card:hover {
+		border-color: rgba(58, 176, 162, 0.42);
+		transform: translateY(-2px);
+	}
+
+	.topic-image {
+		aspect-ratio: 1;
+		overflow: hidden;
+		background: var(--color-elevated);
+	}
+
+	.topic-image img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform var(--transition-normal);
+	}
+
+	.topic-card:hover img { transform: scale(1.025); }
+
+	.topic-copy { padding: 14px 14px 16px; }
+
+	.topic-copy h3 {
+		margin: 0 0 5px;
+		font-family: var(--font-display);
+		font-size: clamp(19px, 2vw, 23px);
+		font-weight: 400;
+		line-height: 1.1;
+		color: var(--color-text);
+	}
+
+	.topic-copy p {
+		margin: 0;
+		font-family: var(--font-mono);
+		font-size: 0.68rem;
+		line-height: 1.45;
+		color: var(--color-text-dim);
+	}
+
+	:global([data-theme='light']) .topic-card {
+		background: var(--gradient-card-bg);
+		border-color: transparent;
+		box-shadow: var(--shadow-neo);
+	}
+
+	/* ── EDITORIAL POSTS ── */
+	.editorial-posts {
+		display: grid;
+		grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+		gap: 18px;
+	}
+
+	.secondary-posts {
+		display: grid;
+		grid-template-rows: repeat(3, minmax(0, 1fr));
+		gap: 12px;
 	}
 
 	/* ── BOTTOM SECTIONS ── */
@@ -958,10 +812,6 @@
 		color: var(--color-accent-teal-foreground);
 	}
 
-	:global([data-theme='light']) .discover-section {
-		background: transparent;
-	}
-
 	:global([data-theme='light']) .newsletter-card-wrap :global(.newsletter-card) {
 		box-shadow: var(--shadow-neo);
 	}
@@ -998,41 +848,47 @@
 
 	/* ── RESPONSIVE ── */
 	@media (max-width: 1024px) {
-		.posts-grid { grid-template-columns: repeat(2, 1fr); }
+		.topics-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+		.editorial-posts { grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr); }
 	}
 
 	@media (max-width: 768px) {
-		.hero { min-height: 85svh; padding: 56px 0 40px; margin-top: -56px; }
-		.discover-section { padding: 24px 0 16px; }
+		.hero { min-height: auto; padding: 94px 0 44px; margin-top: -56px; }
+		.hero-intro { max-width: 600px; font-size: var(--font-size-base); }
 		.bottom-grid { grid-template-columns: 1fr; }
 		.bottom-card { padding: 24px; }
-		.posts-grid { grid-template-columns: 1fr; }
-		.pillar-card {
-			grid-template-columns: 48px 1fr;
-			padding: 24px;
-			gap: 16px;
+		.topics-grid {
+			grid-template-columns: none;
+			grid-auto-flow: column;
+			grid-auto-columns: minmax(156px, 42vw);
+			overflow-x: auto;
+			overflow-y: hidden;
+			scroll-snap-type: x mandatory;
+			overscroll-behavior-inline: contain;
+			scrollbar-width: thin;
+			padding: 4px 2px 16px;
 		}
-		.pillar-icon-large { font-size: 2rem; }
-		.pillar-title { font-size: var(--font-size-lg); }
+		.editorial-posts {
+			grid-template-columns: 1fr;
+		}
+		.secondary-posts { grid-template-rows: none; }
 		.hero-counter { margin-top: 24px; }
 	}
 
 	@media (max-width: 480px) {
-		.pillar-card {
-			grid-template-columns: 1fr;
-			text-align: center;
-		}
-		.pillar-icon-col { justify-content: center; }
-		.pillar-highlights { justify-content: center; }
+		.hero-badge { font-size: 0.68rem; }
+		.hero-title { font-size: clamp(42px, 13vw, 58px); }
+		.hero-promise { font-size: 25px; }
+		.hero-actions { width: 100%; gap: 10px; }
+		.hero-actions a { flex: 1 1 150px; justify-content: center; padding-inline: 16px; }
+		.section-header { align-items: center; gap: 12px; }
+		.section-link { font-size: var(--font-size-sm); text-align: right; }
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.scroll-hint,
 		.hero-accent,
 		.btn-honey,
 		.btn-teal,
-		.pillar-card,
-		.pillar-cta,
 		.section-link,
 		.video-play,
 		.faq-item,
@@ -1040,13 +896,17 @@
 			transition: none;
 		}
 
-		.scroll-arrow {
-			animation: none;
+		.topic-card {
+			transition: none;
 		}
 
+		.topic-card img {
+			transition: none;
+		}
 		.btn-honey:hover,
 		.btn-teal:hover,
-		.pillar-card:hover,
+		.topic-card:hover,
+		.topic-card:hover img,
 		.section-link:hover,
 		.video-facade:hover .video-play {
 			transform: none;

@@ -84,7 +84,8 @@ test('focus and reduced motion are explicit without a global animation kill', as
 	assert.match(page, /typeof window\.matchMedia === 'function'/);
 	assert.match(page, /matchMedia\('\(prefers-reduced-motion: reduce\)'\)\.matches/);
 	assert.match(page, /\.video-facade:focus-visible\s*\{[^}]*outline:\s*3px solid var\(--color-focus\)/);
-	assert.match(page, /@media \(prefers-reduced-motion: reduce\)\s*\{[\s\S]*?\.scroll-arrow\s*\{[^}]*animation:\s*none/);
+	assert.doesNotMatch(page, /class="scroll-hint"/);
+	assert.match(page, /@media \(prefers-reduced-motion: reduce\)\s*\{[\s\S]*?\.topic-card\s*\{[^}]*transition:\s*none/);
 	assert.match(header, /@media \(prefers-reduced-motion: reduce\)\s*\{[\s\S]*?\.nav-mobile\s*\{[^}]*animation:\s*none/);
 	assert.doesNotMatch(layout, /:global\(html\)\s*\{[^}]*scroll-behavior:\s*smooth/);
 });
