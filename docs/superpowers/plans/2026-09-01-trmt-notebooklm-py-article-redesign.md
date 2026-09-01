@@ -11,7 +11,7 @@
 ## Global Constraints
 
 - Keep the public slug exactly `gemini-notebook-kostenlos-codex-content-workflow`.
-- Edit only `src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.md`, its new focused test, deterministic generated metadata if prebuild changes it, and the already approved spec/plan documents.
+- Inside the Git repository, edit only `src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.md`, its new focused test, deterministic generated metadata if prebuild changes it, and the already approved spec/plan documents. The post-deployment Obsidian receipt remains the one explicit external documentation write.
 - Preserve `date: "2026-09-01"`, `category: "ki-tools"`, `draft: false`, and the existing empty image assignment; do not add or regenerate a hero image.
 - Do not edit the homepage, neighboring articles, local/global skills, NotebookLM account state, or unrelated dirty worktrees.
 - Do not run NotebookLM while the local login is expired; the article is based on the completed research pilot and verified v0.8.1 capabilities.
@@ -46,15 +46,16 @@ Ubersuggest was authenticated and queried on 01.09.2026 with the verified German
 
 ---
 
-### Task 1: Lock the approved article contract with a failing test
+### Task 1: Rebuild the article through the approved RED-GREEN contract
 
 **Files:**
 - Create: `src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.test.js`
-- Read: `src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.md`
+- Modify: `src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.md:1-181`
+- Regenerate if changed: `src/lib/data/blog-image-usage.generated.js`
 
 **Interfaces:**
-- Consumes: the current published Markdown and the approved exact title/metadata from the design spec.
-- Produces: a focused `node:test` contract that fails on the old NotebookLM-feature-first article and passes only when the bridge-first redesign is present.
+- Consumes: the current published Markdown, the approved design, v0.8.1 repository/release/CLI documentation, current Google product-help links, the 62/50 pilot evidence, and the Germany keyword snapshot above.
+- Produces: one publishable German article plus a focused `node:test` contract, with bridge-first intent, a compact command proof, explicit tested/planned separation, two scoped internal links, and no new media dependency.
 
 - [ ] **Step 1: Create the focused regression test**
 
@@ -174,18 +175,7 @@ git status --short
 
 Expected: only the new test plus the already committed spec/plan history; no source file has been changed by the RED test.
 
-### Task 2: Rebuild the article around the notebooklm-py bridge
-
-**Files:**
-- Modify: `src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.md:1-181`
-- Test: `src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.test.js`
-- Regenerate if changed: `src/lib/data/blog-image-usage.generated.js`
-
-**Interfaces:**
-- Consumes: the Task 1 contract, the approved design, the v0.8.1 repository/release/CLI documentation, current Google product-help links, the 62/50 pilot evidence, and the Germany keyword snapshot above.
-- Produces: one publishable German article with bridge-first intent, a compact command proof, explicit tested/planned separation, two scoped internal links, and no new media dependency.
-
-- [ ] **Step 1: Replace the frontmatter exactly**
+- [ ] **Step 4: Replace the frontmatter exactly**
 
 Use this frontmatter and retain no old title or description:
 
@@ -204,7 +194,7 @@ readingTime: 12
 ---
 ```
 
-- [ ] **Step 2: Write a new opening and TL;DR that state the real hook**
+- [ ] **Step 5: Write a new opening and TL;DR that state the real hook**
 
 Write three short opening paragraphs before the TL;DR:
 
@@ -220,7 +210,7 @@ Then use the existing `rf-block rf-tldr` component with exactly five reader-faci
 - The final article can become the single media master for Audio, Video, an infographic, and slides, but that final media loop has not yet been fully run here.
 - NotebookLM's standard access can keep broad research outside paid agent context; it does not make Codex or Claude Code free and no percentage saving has been measured.
 
-- [ ] **Step 3: Build the body with this exact heading sequence and claim map**
+- [ ] **Step 6: Build the body with this exact heading sequence and claim map**
 
 Use this Markdown structure without inserting another generic NotebookLM feature overview before the bridge:
 
@@ -265,7 +255,7 @@ Fill those sections with the following exact responsibilities:
 - `Für wen sich die Kombination lohnt`: target solo creators already using Codex or Claude Code and wanting repeatable, source-grounded research. Link “mein Claude-Code-Setup” once to `/blog/claude-code-ultimate-setup-produktivitaet-2026` without re-explaining installation.
 - `Fazit`: repeat that the bridge, not the raw NotebookLM feature count, creates the productivity gain.
 
-- [ ] **Step 4: Add one compact command proof instead of a CLI tutorial**
+- [ ] **Step 7: Add one compact command proof instead of a CLI tutorial**
 
 In the API/bridge section, include this readable excerpt and explain each line in one plain-language sentence:
 
@@ -277,7 +267,7 @@ notebooklm ask --prompt-file outline.md -n $notebookId --json
 
 Do not add installation boilerplate or a complete CLI reference. Link the pinned CLI documentation for readers who want every option.
 
-- [ ] **Step 5: End with only primary and directly useful sources**
+- [ ] **Step 8: End with only primary and directly useful sources**
 
 The final source list must include:
 
@@ -291,7 +281,7 @@ The final source list must include:
 
 Keep another current Google link only if it supports a remaining concrete product claim in the final prose. Remove any source that no longer supports a used claim.
 
-- [ ] **Step 6: Run the focused test and correct the article until GREEN**
+- [ ] **Step 9: Run the focused test and correct the article until GREEN**
 
 Run:
 
@@ -301,7 +291,7 @@ node --test src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.te
 
 Expected: 3 tests pass, 0 fail.
 
-- [ ] **Step 7: Regenerate deterministic image metadata**
+- [ ] **Step 10: Regenerate deterministic image metadata**
 
 Run:
 
@@ -312,7 +302,7 @@ git diff -- src/lib/data/blog-image-usage.generated.js
 
 Expected: the slug remains mapped to `[]`. If the generator makes no semantic change, do not include the generated file in the commit.
 
-- [ ] **Step 8: Commit the complete article slice**
+- [ ] **Step 11: Commit the complete article slice**
 
 Run:
 
@@ -324,54 +314,7 @@ git commit -m "fix: center notebooklm-py in Gemini Notebook workflow"
 
 Expected: the commit contains the article and test, plus generated image metadata only when it actually changed.
 
-### Task 3: Run independent editorial, SEO, and technical review
-
-**Files:**
-- Review: `src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.md`
-- Review: `src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.test.js`
-- Reference: `docs/superpowers/specs/2026-09-01-trmt-notebooklm-py-article-redesign-design.md`
-
-**Interfaces:**
-- Consumes: the green article slice from Task 2.
-- Produces: a PASS or a concrete patch for factual, language, SEO, or contract defects; no unrelated article edits.
-
-- [ ] **Step 1: Dispatch a fresh independent reviewer with this exact brief**
-
-```text
-Review exactly the notebooklm-py article and its focused test against the approved design. Check: bridge-first focus in title and first 100 words; tested Research pilot versus planned End-to-End architecture; v0.8.1 command accuracy; unofficial API wording; free NotebookLM versus possibly paid Codex/Claude; no measured savings claim; natural German without needless technical jargon; one distinct internal-link role for the broad pipeline article and one for the Claude Code setup article; no n8n; no slug or media change. Treat primary GitHub/Google sources as authority. Report findings by severity and do not edit files.
-```
-
-Expected: reviewer returns PASS or file-and-line-specific findings.
-
-- [ ] **Step 2: Apply every material finding in the article or focused test**
-
-Use `apply_patch` and change only the two Task 2 files. Do not weaken a truthful test merely to accept faulty copy. If the reviewer proposes a claim not supported by a primary source, omit that claim.
-
-- [ ] **Step 3: Re-run the focused test after review corrections**
-
-Run:
-
-```powershell
-node --test src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.test.js
-git diff --check HEAD
-```
-
-Expected: 3 tests pass and no whitespace errors.
-
-- [ ] **Step 4: Commit review corrections only when a diff exists**
-
-Run:
-
-```powershell
-git status --short
-git add -- src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.md src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.test.js
-git diff --cached --check
-git commit -m "fix: tighten notebooklm-py article claims"
-```
-
-Expected: either one small correction commit or no commit when the reviewer returned PASS.
-
-### Task 4: Verify, publish, and read back the corrected live article
+### Task 2: Verify, publish, and read back the corrected live article
 
 **Files:**
 - Verify: all files changed since `origin/main`
