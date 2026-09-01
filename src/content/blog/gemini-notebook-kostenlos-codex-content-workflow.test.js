@@ -76,6 +76,9 @@ test('separates the tested research pilot from the planned media architecture', 
 	assert.match(workflow, /Slides|Slide Deck/i);
 	assert.match(workflow, /notebooklm source add[^\n]*--type file/);
 	assert.match(workflow, /-s \$finalArticleSourceId/);
+	assert.match(workflow, /Zielarchitektur/i);
+	assert.match(workflow, /(?:geplant|Ausbaustufe)/i);
+	assert.match(workflow, /nicht[^.\n]{0,120}vollständiger End-to-End-Medien-Loop getestet/i);
 	assert.match(cost, /Codex oder Claude Code[^.\n]{0,120}(?:nicht gratis|nicht kostenlos|kostenpflichtig)/i);
 });
 
@@ -90,12 +93,21 @@ test('waits for Deep Research and scopes planned media to the final article sour
 	assert.ok(researchStart >= 0, 'missing Deep Research command');
 	assert.ok(researchWait > researchStart, 'Research wait must follow the Deep Research command');
 	assert.ok(researchImport > researchWait, 'Research import must follow confirmed completion');
-	assert.match(bridge, /\$runId[^.\n]{0,140}(?:erste|JSON).{0,80}(?:Antwort|response)/i);
+	assert.match(bridge, /\$researchStart\s*=\s*notebooklm source add-research[^\n]*--json\s*\|\s*ConvertFrom-Json/);
+	assert.match(bridge, /\$researchStart\.poll_task_id/);
+	assert.match(bridge, /\$researchStart\.task_id/);
+	assert.match(bridge, /\$runId[^.\n]{0,140}(?:lokal|Variable)/i);
 	assert.match(bridge, /Status[^.\n]{0,120}abgeschlossen/i);
 	assert.match(bridge, /Erst danach importiert/i);
-	assert.match(workflow, /finalen Markdown-Artikel[^.\n]{0,120}notebooklm source add[^\n]*--type file/i);
+	assert.match(workflow, /\$finalSource\s*=\s*notebooklm source add[^\n]*--type file[^\n]*--json\s*\|\s*ConvertFrom-Json/);
+	assert.match(workflow, /\$finalArticleSourceId\s*=\s*\$finalSource\.source\.id/);
+	assert.ok(
+		workflow.indexOf('notebooklm source wait') > workflow.indexOf('$finalArticleSourceId = $finalSource.source.id'),
+		'Source wait must use the assigned final article source ID'
+	);
 	assert.match(workflow, /(?:Audio|Video|Infografik|Slides)/i);
 	assert.match(workflow, /ausschließlich `-s \$finalArticleSourceId`/i);
+	assert.match(bridge, /Über notebooklm-py erhalten Claude Code oder Codex eine kontrollierbare Recherche-Verbindung zu NotebookLM\./);
 });
 
 test('keeps primary sources, internal intent roles, and honest claim boundaries', async () => {
@@ -114,7 +126,7 @@ test('keeps primary sources, internal intent roles, and honest claim boundaries'
 	assert.match(article, /NotebookLM[- ]API/i);
 	assert.match(article, /inoffiziell/i);
 	assert.match(article, /MIT/);
-	assert.match(article, /Claude Code und NotebookLM|NotebookLM mit Claude Code/i);
+	assert.match(article, /Über notebooklm-py erhalten Claude Code oder Codex eine kontrollierbare Recherche-Verbindung zu NotebookLM\.|Codex oder Claude Code[^.\n]{0,120}NotebookLM/i);
 	assert.match(article, /nicht(?:[^.\n]{0,80})offizielle Google-API/i);
 	assert.doesNotMatch(article, /\bn8n\b/i);
 	assert.doesNotMatch(article, /\bkomplett kostenlos\b|\bsteuert alles\b|\bEin-Klick-Autopilot\b/i);

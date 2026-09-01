@@ -47,15 +47,16 @@ Das Projekt steht unter der MIT-Lizenz. Für diesen Workflow ist [die Repository
 Der Beweis im Artikel bleibt bewusst klein:
 
 ```powershell
-notebooklm source add-research --prompt-file research-query.md --mode deep --no-wait -n $notebookId --json
+$researchStart = notebooklm source add-research --prompt-file research-query.md --mode deep --no-wait -n $notebookId --json | ConvertFrom-Json
+$runId = if ($researchStart.poll_task_id) { $researchStart.poll_task_id } else { $researchStart.task_id }
 notebooklm research wait --timeout 1800 -n $notebookId --json
 notebooklm research import --run-id $runId --cited-only --max-sources 20 -n $notebookId --json
 notebooklm ask --prompt-file outline.md -n $notebookId --json
 ```
 
-Die erste Zeile startet Deep Research mit einer gespeicherten Recherchefrage und wartet nicht auf den ganzen Lauf. `$runId` kommt aus der JSON-Antwort der ersten Zeile. Die zweite Zeile wartet, bis der Status den Lauf als abgeschlossen bestätigt. Erst danach importiert die dritte Zeile die zitierten Quellen. Die vierte stellt dem Notebook eine Outline-Frage aus einer Datei und gibt das Ergebnis maschinenlesbar zurück.
+Die erste Zeile startet Deep Research mit einer gespeicherten Recherchefrage und wartet nicht auf den ganzen Lauf. Die JSON-Antwort enthält `task_id` und optional `poll_task_id`, nicht `$runId`. `$runId` ist eine lokale Variable: Sie nimmt `poll_task_id`, wenn es vorhanden ist, sonst `task_id`. Die dritte Zeile wartet, bis der Status den Lauf als abgeschlossen bestätigt. Erst danach importiert die vierte Zeile die zitierten Quellen. Die fünfte stellt dem Notebook eine Outline-Frage aus einer Datei und gibt das Ergebnis maschinenlesbar zurück.
 
-Das ist absichtlich kein Installations-Tutorial. Der entscheidende Punkt ist die Rolle: NotebookLM mit Claude Code oder Codex erhält eine kontrollierbare Recherche-Verbindung, bleibt aber von einer nicht offiziellen Google-API abhängig.
+Das ist absichtlich kein Installations-Tutorial. Der entscheidende Punkt ist die Rolle: Über notebooklm-py erhalten Claude Code oder Codex eine kontrollierbare Recherche-Verbindung zu NotebookLM. Sie bleibt von einer nicht offiziellen Google-API abhängig.
 
 ## Was heute schon getestet ist
 
@@ -69,7 +70,7 @@ Das Ergebnis ist ein fester Prüfschritt: Quellen werden ausgewählt, ihre Origi
 
 ## So soll der komplette Workflow funktionieren
 
-Das ist die Zielarchitektur für einen wiederholbaren, quellennahen Ablauf. Sie trennt, was bereits getestet ist, von der geplanten Ausbaustufe.
+Das ist die geplante Zielarchitektur für einen wiederholbaren, quellennahen Ablauf. Sie trennt, was bereits getestet ist, von der Ausbaustufe.
 
 ### 1. Der Auftrag startet im Content-Skill
 
@@ -93,7 +94,15 @@ Codex oder Claude Code schreibt den Text lokal aus dem geprüften Kern, den Brie
 
 ### 6. Der fertige Text wird zum Medien-Master
 
-Nach der redaktionellen Prüfung kann der finale Artikel als gemeinsamer Medien-Master dienen. Dafür lädt die Zielarchitektur den finalen Markdown-Artikel mit `notebooklm source add final-article.md --type file -n $notebookId --json` als eigene NotebookLM-Quelle hoch. Die JSON-Antwort liefert ihre `finalArticleSourceId`. Dann beziehen sich spätere Formate auf dieselben bestätigten Aussagen statt auf eine lose Stichwortliste.
+Nach der redaktionellen Prüfung kann der finale Artikel als gemeinsamer Medien-Master dienen. Dafür lädt die Zielarchitektur den finalen Markdown-Artikel als eigene NotebookLM-Quelle hoch:
+
+```powershell
+$finalSource = notebooklm source add final-article.md --type file -n $notebookId --json | ConvertFrom-Json
+$finalArticleSourceId = $finalSource.source.id
+notebooklm source wait -s $finalArticleSourceId -n $notebookId --json
+```
+
+`source.id` kommt aus der JSON-Antwort. `$finalArticleSourceId` ist der lokal vergebene Name dafür. Erst nach `source wait` beziehen sich spätere Formate auf dieselben bestätigten Aussagen statt auf eine lose Stichwortliste.
 
 ### 7. Audio, Video, Infografik und Slides entstehen danach
 
