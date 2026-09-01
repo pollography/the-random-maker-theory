@@ -18,8 +18,8 @@ Die Ergebnisbilder und die redaktionellen Testbeschreibungen bleiben bewusst unv
 
 ## PDF-Prüfung
 
-- `trmt-ultimate-bildprompts-part-3.pdf`: 18 Seiten, A4 quer, 3.302.497 Byte, SHA-256 `AA21BE3126D836B446C1190B4CF62D8CDE30CDB03C020A1DFFCB7941A695F1FA`.
-- `trmt-praezise-bildprompts.pdf`: 13 Seiten, A4 quer, 2.318.786 Byte, SHA-256 `6036FB55B0CDC480CB9E674A50ECA965E79F6332DC10777D047BE485CA839DF4`.
+- `trmt-ultimate-bildprompts-part-3.pdf`: 18 Seiten, A4 quer, 3.302.497 Byte, SHA-256 `179009BAE7764E0BE1C0D33EEAB1FCCF919301F4B18506E4D497667C797EFB0B`.
+- `trmt-praezise-bildprompts.pdf`: 13 Seiten, A4 quer, 2.318.786 Byte, SHA-256 `6D6DDEEC313C91D21446149462A18557E05B4E1C553E6F0A93D9BAC722AEF404`.
 - Öffentliche Dateien und QA-Kopien sind jeweils byteidentisch.
 - Alle 31 Seiten wurden als Rasterbilder gerendert und visuell geprüft: keine abgeschnittenen Texte, keine Überlagerungen, keine fehlenden Seiten.
 - Part 3 zeigt jetzt zwei statt drei Prompt-Karten pro Seite und verwendet mindestens 10,5 pt für den Prompttext.
