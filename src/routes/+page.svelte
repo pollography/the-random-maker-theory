@@ -1,5 +1,4 @@
 <script>
-	import { untrack } from 'svelte';
 	import HomepagePostCard from '$lib/components/blog/HomepagePostCard.svelte';
 	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
@@ -30,34 +29,6 @@
 	/** @type {HTMLButtonElement | null} */
 	let videoPosterRef = $state(null);
 
-	// Count-up animation — SSR-friendly: start at totalCount so no "0" flash.
-	// untrack() prevents Svelte from flagging this one-shot capture as a
-	// reactive-state leak; the IntersectionObserver later reassigns it anyway.
-	let displayCount = $state(untrack(() => data.totalCount));
-	/** @type {HTMLDivElement | null} */
-	let counterRef = $state(null);
-	let hasAnimated = false;
-
-	$effect(() => {
-		if (!counterRef) return;
-		if (typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-			hasAnimated = true;
-			displayCount = totalCount;
-			return;
-		}
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting && !hasAnimated && totalCount > 0) {
-					hasAnimated = true;
-					displayCount = 0;
-					animateCount(totalCount);
-				}
-			});
-		}, { threshold: 0.5 });
-		observer.observe(counterRef);
-		return () => observer.disconnect();
-	});
-
 	$effect(() => {
 		if (!videoPosterRef || videoPosterReady) return;
 		const observer = new IntersectionObserver((entries) => {
@@ -69,21 +40,6 @@
 		observer.observe(videoPosterRef);
 		return () => observer.disconnect();
 	});
-
-	/** @param {number} target */
-	function animateCount(target) {
-		const duration = 1200;
-		const start = performance.now();
-		/** @param {number} now */
-		function tick(now) {
-			const elapsed = now - start;
-			const progress = Math.min(elapsed / duration, 1);
-			const eased = 1 - Math.pow(1 - progress, 3);
-			displayCount = Math.round(eased * target);
-			if (progress < 1) requestAnimationFrame(tick);
-		}
-		requestAnimationFrame(tick);
-	}
 
 	const pillars = [
 		{
@@ -178,15 +134,16 @@
 		The <em class="hero-accent">Random</em> Maker Theory
 	</h1>
 	<p class="hero-promise">Entdecken. Verstehen. Und alles <em class="hero-accent">Frei Schnauze.</em></p>
-	<p class="hero-intro">
-		Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität. Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!
-	</p>
+	<div class="hero-intro">
+		<p class="hero-intro-line">Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität.</p>
+		<p class="hero-intro-line">Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!</p>
+	</div>
 	<div class="hero-actions">
 		<a href="#latest-posts" class="btn-metallic btn-honey"><span>Neue Beiträge</span></a>
 		<a href="#topics" class="btn-metallic btn-teal"><span>Themen entdecken</span></a>
 	</div>
-	<div class="hero-counter" bind:this={counterRef}>
-		<span class="counter-number">{displayCount}</span>
+	<div class="hero-counter">
+		<span class="counter-number">{totalCount}</span>
 		<span class="counter-sep">·</span>
 		<span class="counter-label">Artikel & Episoden</span>
 	</div>
@@ -389,6 +346,8 @@
 		line-height: 1.65;
 		color: var(--color-text-muted);
 	}
+
+	.hero-intro-line { margin: 0; }
 
 	.hero-actions {
 		display: flex;

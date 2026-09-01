@@ -35,6 +35,12 @@ test('fonts are local and both LCP display faces are preloaded', async () => {
 	assert.match(html, /instrument-serif-italic\.woff2/);
 });
 
+test('critical hero copy avoids a count-up repaint during LCP', async () => {
+	const page = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
+	assert.match(page, /class="counter-number">\{totalCount\}/);
+	assert.doesNotMatch(page, /displayCount|animateCount|counterRef/);
+});
+
 test('video uses a local keyboard-operable facade before loading privacy-enhanced YouTube', async () => {
 	const page = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
 	assert.match(page, /let videoLoaded = \$state\(false\)/);

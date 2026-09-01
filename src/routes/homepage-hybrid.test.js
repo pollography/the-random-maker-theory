@@ -14,6 +14,7 @@ test('homepage merges its positioning into the hero and removes the old subtitle
 	assert.doesNotMatch(page, /Content, den ich/);
 	assert.match(page, /Entdecken\. Verstehen\. Und alles/);
 	assert.match(page, /Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität/);
+	assert.equal((page.match(/class="hero-intro-line"/g) ?? []).length, 2);
 	assert.match(page, /href="#latest-posts"/);
 	assert.match(page, /href="#topics"/);
 });
