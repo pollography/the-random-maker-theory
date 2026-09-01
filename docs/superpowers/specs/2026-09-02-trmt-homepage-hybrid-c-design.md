@@ -1,6 +1,6 @@
 # TRMT Homepage Hybrid C Design
 
-**Status:** zur schriftlichen Freigabe
+**Status:** freigegeben am 2. September 2026
 **Basis:** `origin/main` bei `9e5e36b` im isolierten Worktree `codex/trmt-homepage-hybrid-c`
 **Ziel:** Die Homepage so verdichten, dass neue Besucher TRMT sofort verstehen und bereits direkt nach dem ersten Themenueberblick relevante Blogbeitraege sehen.
 
@@ -148,6 +148,14 @@ Die Implementierung gilt nur dann als abgeschlossen, wenn frisch belegt ist:
 8. Die Blogbeitraege beginnen erheblich frueher als auf der aktuellen Homepage; die langen Themenbeschreibungen sind nicht mehr vorhanden.
 9. Alle fuenf Bilder haben feste Dimensionen, passende Formate, zusammen hoechstens 175 KiB und verursachen keinen sichtbaren Layout-Shift.
 10. Die Seite bleibt ohne JavaScript in sinnvoller Lesereihenfolge und alle primaeren Wege funktionieren als normale Links.
+
+### Harte Performance- und SEO-Grenze
+
+Vor der ersten Codeaenderung wird die aktuelle Homepage mit einer festen Lighthouse-Version und identischem Testprofil mehrfach gemessen. Dieselbe Messung wird nach der Umsetzung lokal gegen den unveraenderten Basisstand wiederholt. Der Median ist die Vergleichsgroesse; ein einzelner schwankender Lauf entscheidet nicht.
+
+Die neue Homepage darf den gemessenen Performance- oder SEO-Score nicht verschlechtern. LCP, CLS, TBT, Gesamttransfer und eigenes JavaScript duerfen gegen die kontrollierte Baseline nicht regressieren. Die fuenf neuen Themenbilder muessen innerhalb des festgelegten Gesamtbudgets bleiben und duerfen weder LCP-Ressource noch Layout-Shift verursachen. Wenn die Werte schlechter sind, ist die Umsetzung nicht abgeschlossen: Bildgewicht, Ladeverhalten oder Layout werden innerhalb des bestaetigten Designs korrigiert und erneut gemessen.
+
+Der vom Nutzer beobachtete Google-PageSpeed-Wert nahe 100 wird nicht aus Erinnerung als Messwert uebernommen, sondern vor der Aenderung frisch erhoben. Ein spaeterer echter Produktionswert bleibt bis zu einem separat autorisierten Deployment `UNKNOWN`.
 
 ## Rollback und Freigabegrenzen
 
