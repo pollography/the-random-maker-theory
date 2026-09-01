@@ -21,10 +21,15 @@
 	/** @param {string | undefined} category */
 	function getCategoryLabel(category) {
 		switch (category) {
+			case 'ki-news':
 			case 'ki-tools': return 'KI & Tech';
+			case 'diy':
 			case 'maker': return 'Maker & DIY';
+			case 'automation':
 			case 'automatisierung': return 'Automatisierung';
+			case 'photography':
 			case 'fotografie': return 'Fotografie';
+			case 'productivity':
 			case 'produktivitaet': return 'Produktivität';
 			default: return category || 'Artikel';
 		}
