@@ -1,6 +1,6 @@
 # TRMT NotebookLM Content Pipeline ohne n8n
 
-Status: Sicherheits- und Staging-Pilot umgesetzt; Google-Login und erster Cloud-Run noch offen
+Status: Sicherheits-, Staging- und Cloud-Pilot umgesetzt; Artikel bleibt Draft-only, Medien und Veröffentlichung sind offen
 
 ## Entscheidung
 
@@ -15,9 +15,10 @@ Die schwere Recherche und Medienerzeugung läuft bei Google. Lokal bleiben ein k
 - Python: 3.10 bis 3.14 unterstützt; lokal ist Python 3.12 vorhanden
 - wichtige Grenze: undokumentierte Google-Endpunkte, Rate Limits und mögliche Response-Änderungen
 - Login-Dateien sind wie Kontozugangsdaten zu behandeln und dürfen nie in Repository, Run-Manifest oder Logs gelangen
-- Notebook-Limits hängen vom Google-Tarif ab; der konkrete TRMT-Account-Tier ist noch nicht geprüft
+- Der Live-Readback am 01.09.2026 bestätigte Tier Pro sowie Limits von 500 Notebooks und 300 Quellen je Notebook
 - `notebooklm-py==0.8.1` ist isoliert per `uv tool` installiert und der lokale Versions-Readback ist grün
-- zwei offizielle interaktive Login-Läufe (gebündeltes Chromium und Chrome) endeten ohne erkannte Anmeldung; es wurde noch kein Auth-Profil gespeichert
+- der interaktive Chrome-Login wurde am 01.09.2026 erkannt; Auth-Test und Token-Fetch sind grün, Auth-Dateien bleiben außerhalb des Repositorys
+- das Pilotnotebook enthält zehn von zehn freigegebenen Quellen im Status `ready`; zwei Reports wurden vollständig erzeugt und lokal heruntergeladen
 
 Quellen: [Release v0.8.1](https://github.com/teng-lin/notebooklm-py/releases/tag/v0.8.1), [Stability](https://github.com/teng-lin/notebooklm-py/blob/main/docs/stability.md), [Security](https://github.com/teng-lin/notebooklm-py/blob/main/docs/security.md), [Google NotebookLM limits](https://support.google.com/gemininotebook/answer/16215270?hl=en-GB)
 
@@ -181,7 +182,7 @@ Podcast, Video und Infografik bleiben Entwürfe, bis ein Mensch sie vollständig
 
 ## Aktueller Ausführungsstand und verbleibende Grenzen
 
-- Installation ist erfolgt; der nächste Schritt bleibt der einmalige interaktive Google-Login durch den Nutzer
+- Installation, interaktiver Login, Live-Quota-Readback und erster Cloud-Pilot sind erfolgt
 - keine Auth-Dateien im Projekt
 - kein Schreiben in `src/content/blog` oder `src/content/podcast` durch den Runner
 - kein Aufruf der bestehenden `scripts/daily-content.py`, weil sie Git, Push und Suchmaschinenmeldung koppelt
@@ -189,17 +190,20 @@ Podcast, Video und Infografik bleiben Entwürfe, bis ein Mensch sie vollständig
 - der globale `pollo-blog`-Skill enthält nach ausdrücklicher Freigabe einen eigenen NotebookLM-Evidence-Importvertrag
 - der lokale Runner `scripts/notebooklm_content_pilot.py` validiert Upload-Gates, begrenzt den Pilot auf zehn Quellen, blockiert private/gefährliche URLs und Secret-Querys, prüft DNS plus Redirect-Ziel, erzwingt das ignorierte Staging-Root, neutralisiert CSV-Formeln, redigiert Event-Logs und prüft eindeutiges `draft: true` plus SHA-256
 - 17 fokussierte Sicherheits- und Skill-Verträge sowie beide nativen Skill-Validatoren sind grün
-- der vorbereitete Run liegt ausschließlich im ignorierten `output/content-runs/2026-08-31--ki-content-pipeline-ohne-n8n/`
-- kein Notebook, keine Quelle und kein Report wurde cloudseitig erzeugt, solange `notebooklm auth check --test --passive --json` nicht `status: ok` und `checks.token_fetch: true` meldet
+- der ausgeführte Run liegt ausschließlich im ignorierten `output/content-runs/2026-08-31--ki-content-pipeline-ohne-n8n/`
+- zehn Quellen wurden strikt sequenziell importiert; der unabhängige Source-List-Readback bestätigt `10 ready`, `0 non-ready`
+- zwei NotebookLM-Reports sind `completed`; der erste automatische Report bleibt wegen einer nicht importierten Quellenangabe bewusst nur Arbeitsmaterial
+- das kuratierte lokale Paket enthält 16 belegte Claims, Source-ID-/Passagen-Receipts, einen neu aufgebauten 1380-Wörter-Artikelentwurf und ein `TEILWEISE`-QA-Verdict für Draft-only
+- kein Schreiben nach `src/content`, keine Mediengenerierung, kein `draft: false`, kein Artikel-Commit und keine Veröffentlichung
 
 ## Kleinster sicherer Pilot
 
 Ein einziges, nicht zeitkritisches TRMT-Thema mit höchstens zehn freigegebenen Quellen:
 
-1. `notebooklm-py==0.8.1` isoliert installieren und Login manuell durchführen. Installation ist erledigt; Login ist noch offen.
-2. Auth-Test ausführen, ohne Auth-Dateien auszulesen oder zu protokollieren. Der erwartete Fail-closed-Readback ist aktuell rot, weil noch kein Profil existiert.
-3. Zehn Quellen im ersten Pilot strikt sequenziell importieren.
-4. Evidence-Paket erzeugen und gegen die Originalquellen prüfen.
-5. Einen Artikelentwurf ausschließlich im ignorierten `output/`-Run ablegen.
-6. Qualität, Zeitbedarf, Fehler und Quota bewerten.
-7. Erst danach über Podcast-/Videoerzeugung und die dauerhafte Skill-Integration entscheiden.
+1. `[PASS]` `notebooklm-py==0.8.1` isoliert installiert und Login manuell durchgeführt.
+2. `[PASS]` Auth-Test ausgeführt, ohne Auth-Dateien ins Projekt oder Standardlog zu übernehmen.
+3. `[PASS]` Zehn Quellen strikt sequenziell importiert und vollständig als `ready` bestätigt.
+4. `[PASS]` Evidence-Paket erzeugt, Schwächen sichtbar dokumentiert und verwendete Claims gegen Source-ID-/Passagenbelege geprüft.
+5. `[PASS]` Artikelentwurf ausschließlich im ignorierten `output/`-Run abgelegt.
+6. `[PASS]` Quota, technische Zustände und lokale Artefaktkonsistenz geprüft.
+7. `[OFFEN]` Podcast, Video, Infografik, Übernahme in `src/content` und Veröffentlichung benötigen jeweils eine spätere Freigabe.
