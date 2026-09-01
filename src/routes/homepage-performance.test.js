@@ -8,10 +8,11 @@ import test from 'node:test';
 const routesRoot = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(routesRoot, '..', '..');
 
-test('homepage data is server-only and returns only six post records', async () => {
+test('homepage data is server-only and returns four curated post records', async () => {
 	assert.equal(existsSync(join(routesRoot, '+page.ts')), false);
 	const loader = await readFile(join(routesRoot, '+page.server.ts'), 'utf8');
-	assert.match(loader, /posts:\s*posts\.slice\(0,\s*6\)/);
+	assert.match(loader, /selectHomepagePosts\(posts,\s*FEATURED_POST_SLUG,\s*4\)/);
+	assert.doesNotMatch(loader, /posts\.slice\(0,\s*6\)/);
 	assert.match(loader, /totalCount:\s*posts\.length\s*\+\s*\(latestEpisode\s*\?\s*1\s*:\s*0\)/);
 });
 
