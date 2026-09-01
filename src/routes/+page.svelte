@@ -460,6 +460,9 @@
 	}
 
 	/* ── TOPIC NAVIGATOR ── */
+	.topics-section,
+	.posts-section { scroll-margin-top: 76px; }
+
 	.topics-section { padding-top: 22px; }
 	.topics-header { margin-bottom: 20px; }
 

@@ -39,6 +39,7 @@ test('homepage presents one featured and three compact article cards directly af
 	assert.match(page, /Neu & handverlesen/);
 	assert.match(page, /<HomepagePostCard post=\{posts\[0\]\} featured/);
 	assert.match(page, /posts\.slice\(1\)/);
+	assert.match(page, /\.topics-section,[\s\S]*?\.posts-section\s*\{\s*scroll-margin-top:\s*76px/);
 	assert.match(card, /featured = false/);
 	assert.match(card, /loading="lazy"/);
 	assert.match(card, /href="\/blog\/\{post\.slug\}"/);
