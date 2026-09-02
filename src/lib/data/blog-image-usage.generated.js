@@ -136,6 +136,9 @@ export const blogImageUsage = {
 	"claude-cowork-einladung-kostenlos-testen": [
 		"/images/blog/claude-cowork-einladung-kostenlos-testen-1.webp"
 	],
+	"claude-fable-5-1-preis-benchmarks": [
+		"/images/blog/claude-fable-5-1-preis-benchmarks-1.webp"
+	],
 	"ein-foto-vier-slash-befehle-ki-bilder": [
 		"/images/blog/ein-foto-vier-slash-befehle-ki-bilder-1.webp",
 		"/images/blog/ein-foto-vier-slash-befehle-ki-bilder-ausgangsbild.webp",

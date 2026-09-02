@@ -856,6 +856,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/claude-fable-5-1-preis-benchmarks-1-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/claude-fable-5-1-preis-benchmarks-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/claude-fable-5-1-preis-benchmarks-1.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/claude-fable-5-1-preis-benchmarks-1.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/claude-fable-5-1-preis-benchmarks-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/claude-fable-5-1-preis-benchmarks-1.webp",
+				"width": 1200
+			}
+		]
+	},
 	"/images/blog/ein-foto-vier-slash-befehle-ki-bilder-1-thumb.webp": {
 		"width": 400,
 		"height": 225,

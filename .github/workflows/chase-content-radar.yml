@@ -1,0 +1,112 @@
+name: Chase Content Radar
+
+on:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: chase-content-radar
+  cancel-in-progress: false
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Fetch and classify new source items
+        run: node scripts/chase-content-radar.mjs > "$RUNNER_TEMP/chase-radar.json"
+
+      - name: Create or enrich durable research issues
+        uses: actions/github-script@v8
+        env:
+          RADAR_FILE: ${{ runner.temp }}/chase-radar.json
+        with:
+          script: |
+            const fs = require('node:fs');
+            const radar = JSON.parse(fs.readFileSync(process.env.RADAR_FILE, 'utf8'));
+            const { owner, repo } = context.repo;
+            const labels = [
+              { name: 'chase-radar', color: 'D4893E', description: 'Remote Themenradar fuer neue Chase-AI-Quellen' },
+              { name: 'research-needed', color: '3AB0A2', description: 'Unabhaengige Primaerrecherche erforderlich' },
+              { name: 'source-ready', color: '0E8A16', description: 'Video und passender Blog-Hinweis erkannt' }
+            ];
+
+            for (const label of labels) {
+              try {
+                await github.rest.issues.createLabel({ owner, repo, ...label });
+              } catch (error) {
+                if (error.status !== 422) throw error;
+              }
+            }
+
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: 'all',
+              labels: 'chase-radar',
+              per_page: 100
+            });
+
+            for (const candidate of radar.candidates) {
+              const sourceMarker = `<!-- chase-source:${candidate.key} -->`;
+              const videoMarker = candidate.relatedVideoId
+                ? `<!-- chase-source:youtube:${candidate.relatedVideoId} -->`
+                : null;
+              const existing = issues.find((issue) =>
+                issue.body?.includes(sourceMarker) || (videoMarker && issue.body?.includes(videoMarker))
+              );
+
+              if (existing) {
+                if (!existing.body?.includes(sourceMarker)) {
+                  const updatedBody = `${existing.body}\n\n## Passender Blog-Hinweis erkannt\n\n${candidate.issueBody}`;
+                  const existingLabelNames = (existing.labels ?? [])
+                    .map((label) => typeof label === 'string' ? label : label.name)
+                    .filter(Boolean);
+                  await github.rest.issues.update({
+                    owner,
+                    repo,
+                    issue_number: existing.number,
+                    body: updatedBody,
+                    state: 'open',
+                    labels: [...new Set([...existingLabelNames, 'source-ready'])]
+                  });
+                  existing.body = updatedBody;
+                  existing.labels = [...new Set([...existingLabelNames, 'source-ready'])];
+                }
+                continue;
+              }
+
+              const created = await github.rest.issues.create({
+                owner,
+                repo,
+                title: candidate.issueTitle,
+                body: candidate.issueBody,
+                labels: [
+                  'chase-radar',
+                  'research-needed',
+                  ...(candidate.relatedVideoId ? ['source-ready'] : [])
+                ]
+              });
+              // Keep the in-memory index current so a video and its matching blog
+              // discovered in the same run become one issue instead of two.
+              issues.push(created.data);
+            }
+
+            core.summary
+              .addHeading('Chase Content Radar')
+              .addRaw(`Gepruefte Feed-Eintraege: ${radar.sourceCounts.youtube} YouTube, ${radar.sourceCounts.blog} Blog.\n`)
+              .addRaw(`Neue Kandidaten seit dem Bootstrap: ${radar.candidateCount}.`)
+              .write();
