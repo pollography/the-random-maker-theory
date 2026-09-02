@@ -42,6 +42,8 @@ Mit `notebooklm-py` kann der Agent diese klar abgegrenzten Schritte anstoßen: e
 
 Der Ablauf passt als Recherche-Ebene in [meinen allgemeinen Content-Pipeline-Aufbau](/blog/meine-content-pipeline-ai-agents-2026). Hier geht es bewusst um diese Verbindung, nicht um eine allgemeine NotebookLM-Featureliste.
 
+![Miniaturfigur trägt einen geprüften Quellenstapel über eine Brücke vom Rechercheberg zur Schreibseite](/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge.webp)
+
 ## Ist notebooklm-py eine NotebookLM API?
 
 Kurz: technisch ja, offiziell nein. `notebooklm-py` bietet eine inoffizielle Python-API, eine CLI und einen Agent Skill. Es ist **nicht die offizielle Google-API** für NotebookLM.
@@ -71,6 +73,8 @@ Der erste Durchlauf war zugleich der Warnschuss. Die automatische Triage behande
 Beim Research-/Import-Reporting standen 40 importierte Quellen. Der unabhängige Readback der Quellenliste zeigte dagegen 52 Quellen. `--max-sources` hat in diesem Lauf keine harte Obergrenze bewiesen. Genau deshalb gehört eine Quellenlisten-Prüfung in den festen Ablauf.
 
 Das Ergebnis ist ein fester Prüfschritt: Quellen werden ausgewählt, ihre Originalstellen geprüft und erst dann als Belegkern an den Schreibagenten gegeben. Getestet wurde die Recherche und diese Auswahlgrenze. Audio, Video, Infografik oder Slides wurden in diesem Pilot nicht als fertige Artikelmedien produziert.
+
+![Miniaturfigur prüft eine Quellenkarte unter einer großen Lupe; daneben liegen Rohmaterial und geprüfter Quellenkern](/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check.webp)
 
 ## So soll der komplette Workflow funktionieren
 

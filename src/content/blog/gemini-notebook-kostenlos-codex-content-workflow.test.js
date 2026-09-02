@@ -7,6 +7,14 @@ import { readImageDimensions } from '../../../scripts/generate-image-metadata.mj
 const articleUrl = new URL('./gemini-notebook-kostenlos-codex-content-workflow.md', import.meta.url);
 const heroUrl = new URL('../../../static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2.webp', import.meta.url);
 const thumbUrl = new URL('../../../static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2-thumb.webp', import.meta.url);
+const inlineImageUrls = [
+	new URL('../../../static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge.webp', import.meta.url),
+	new URL('../../../static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check.webp', import.meta.url)
+];
+const inlineThumbUrls = [
+	new URL('../../../static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge-thumb.webp', import.meta.url),
+	new URL('../../../static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check-thumb.webp', import.meta.url)
+];
 
 async function readArticle() {
 	return readFile(articleUrl, 'utf8');
@@ -45,6 +53,36 @@ test('ships a native 16:9 hero and matching thumbnail', async () => {
 	assert.deepEqual(readImageDimensions(thumbPath), { width: 400, height: 225, format: 'webp' });
 	assert.ok((await stat(heroPath)).size <= 180 * 1024, 'hero should stay within the 180 KB budget');
 	assert.ok((await stat(thumbPath)).size <= 60 * 1024, 'thumbnail should stay within the 60 KB budget');
+});
+
+test('places two responsive 16:9 explanations in their matching sections', async () => {
+	const article = await readArticle();
+	const bridge = sectionByHeading(article, '## Der eigentliche Hack ist die Brücke');
+	const pilot = sectionByHeading(article, '## Was heute schon getestet ist');
+	const inlineImages = article.match(
+		/^!\[[^\]]+\]\(\/images\/blog\/gemini-notebook-kostenlos-codex-content-workflow-(?:bridge|source-check)\.webp\)$/gm
+	) ?? [];
+
+	assert.equal(inlineImages.length, 2, 'the article should contain exactly two explanatory images');
+	assert.match(
+		bridge,
+		/!\[Miniaturfigur trägt einen geprüften Quellenstapel über eine Brücke vom Rechercheberg zur Schreibseite\]\(\/images\/blog\/gemini-notebook-kostenlos-codex-content-workflow-bridge\.webp\)/
+	);
+	assert.match(
+		pilot,
+		/!\[Miniaturfigur prüft eine Quellenkarte unter einer großen Lupe; daneben liegen Rohmaterial und geprüfter Quellenkern\]\(\/images\/blog\/gemini-notebook-kostenlos-codex-content-workflow-source-check\.webp\)/
+	);
+
+	for (const imageUrl of inlineImageUrls) {
+		const imagePath = fileURLToPath(imageUrl);
+		assert.deepEqual(readImageDimensions(imagePath), { width: 1200, height: 675, format: 'webp' });
+		assert.ok((await stat(imagePath)).size <= 180 * 1024, `${imagePath} exceeds the 180 KB budget`);
+	}
+	for (const thumbUrl of inlineThumbUrls) {
+		const thumbPath = fileURLToPath(thumbUrl);
+		assert.deepEqual(readImageDimensions(thumbPath), { width: 400, height: 225, format: 'webp' });
+		assert.ok((await stat(thumbPath)).size <= 60 * 1024, `${thumbPath} exceeds the 60 KB budget`);
+	}
 });
 
 test('uses the route-owned H1 and opens with a two-sentence main thesis', async () => {

@@ -1206,6 +1206,66 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check.webp",
+				"width": 1200
+			}
+		]
+	},
 	"/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-1-chart.webp": {
 		"width": 1200,
 		"height": 651,
