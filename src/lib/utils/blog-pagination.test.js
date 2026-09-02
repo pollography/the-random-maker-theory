@@ -61,6 +61,14 @@ test('rejects non-integer and out-of-range pages', () => {
 	}
 });
 
+test('rejects a page size that is not a positive integer', () => {
+	const posts = [post('one', '2026-01-01')];
+
+	for (const pageSize of [0, -1, 1.5, Number.NaN, Number.POSITIVE_INFINITY]) {
+		assert.throws(() => paginatePosts(posts, 1, pageSize), RangeError);
+	}
+});
+
 test('does not mutate or trust the caller sort order', () => {
 	const posts = [post('older', '2026-01-01'), post('newer', '2026-02-01')];
 

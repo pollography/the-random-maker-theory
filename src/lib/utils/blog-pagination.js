@@ -15,6 +15,9 @@ export function createArchivePageData(posts, page, pageSize = DEFAULT_PAGE_SIZE)
 	if (!Number.isInteger(page) || page < 1) {
 		throw new RangeError('Archive page must be a positive integer.');
 	}
+	if (!Number.isInteger(pageSize) || pageSize < 1) {
+		throw new RangeError('Archive page size must be a positive integer.');
+	}
 
 	const sortedPosts = sortArchivePosts(posts);
 	const totalCount = sortedPosts.length;
