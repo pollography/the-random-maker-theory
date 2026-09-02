@@ -46,7 +46,7 @@
 		...topic,
 		imageSeo: getImageSeo(
 			topic.image,
-			'(max-width: 768px) 42vw, (max-width: 1024px) 30vw, 220px'
+			'(max-width: 768px) 43vw, (max-width: 1024px) 18vw, 168px'
 		)
 	}));
 </script>
@@ -442,8 +442,11 @@
 
 	.topics-grid {
 		display: grid;
-		grid-template-columns: repeat(5, minmax(0, 1fr));
-		gap: 12px;
+		grid-template-columns: repeat(5, minmax(0, 168px));
+		justify-content: space-between;
+		gap: clamp(12px, 2vw, 28px);
+		max-width: 980px;
+		margin-inline: auto;
 	}
 
 	.topic-card {
@@ -464,7 +467,7 @@
 	}
 
 	.topic-image {
-		aspect-ratio: 2 / 1;
+		aspect-ratio: 1 / 1;
 		overflow: hidden;
 		background: var(--color-elevated);
 	}
@@ -873,7 +876,9 @@
 		.topics-grid {
 			grid-template-columns: none;
 			grid-auto-flow: column;
-			grid-auto-columns: minmax(176px, 56vw);
+			grid-auto-columns: minmax(152px, 43vw);
+			justify-content: start;
+			max-width: none;
 			overflow-x: auto;
 			overflow-y: hidden;
 			scroll-snap-type: x mandatory;
@@ -881,7 +886,6 @@
 			scrollbar-width: thin;
 			padding: 2px 2px 6px;
 		}
-		.topic-image { aspect-ratio: 2.3 / 1; }
 		.topic-copy { padding: 7px 9px 8px; }
 		.topic-copy h3 { margin-bottom: 3px; font-size: 18px; }
 		.topic-copy p { font-size: 0.62rem; white-space: nowrap; }

@@ -91,9 +91,11 @@
 
 	.post-card.featured {
 		grid-template-columns: 1fr;
-		grid-template-rows: minmax(230px, 1fr) auto;
-		min-height: 100%;
+		grid-template-rows: auto auto;
+		min-height: 0;
 	}
+
+	.post-card:not(.featured) { align-items: center; }
 
 	.post-card.without-image {
 		grid-template-columns: 1fr;
@@ -104,9 +106,15 @@
 	}
 
 	.post-image {
+		aspect-ratio: 16 / 9;
 		min-width: 0;
 		overflow: hidden;
 		background: var(--color-elevated);
+	}
+
+	.post-card:not(.featured) .post-image {
+		margin: 12px 0 12px 12px;
+		border-radius: var(--radius-lg);
 	}
 
 	.post-image img {
@@ -194,7 +202,7 @@
 		}
 
 		.featured .post-image {
-			aspect-ratio: 1;
+			aspect-ratio: 16 / 9;
 			border-radius: var(--radius-lg);
 			margin: 14px 0 14px 14px;
 		}
