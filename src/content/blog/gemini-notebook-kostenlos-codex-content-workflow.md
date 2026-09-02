@@ -1,23 +1,25 @@
 ---
-title: "Der eigentliche NotebookLM-Hack: Codex verbindet Recherche und Medien mit notebooklm-py"
-seoTitle: "notebooklm-py mit Codex: NotebookLM per Agent steuern"
-description: "notebooklm-py verbindet Codex oder Claude Code mit NotebookLM. So steuert der Agent Deep Research, Artikel-Briefings und Medien in einem Workflow."
+title: "Free Deep Research via notebooklm-py: Content-Workflow für Claude Code & Codex"
+seoTitle: "notebooklm-py: Kostenlose NotebookLM-Recherche für Claude Code & Codex"
+description: "notebooklm-py verbindet Claude Code und Codex mit dem kostenlosen Standardzugang von Gemini Notebook für Deep Research. Die Agenten bleiben kostenpflichtig."
 slug: "gemini-notebook-kostenlos-codex-content-workflow"
 date: "2026-09-01"
 tags: ["notebooklm-py", "notebooklm", "codex", "claude-code", "content-workflow", "deep-research"]
 category: "ki-tools"
 draft: false
-titleAccent: "NotebookLM-Hack"
+titleAccent: "Free Deep Research"
 readingTime: 7
 ---
 
-# Der eigentliche NotebookLM-Hack: Codex verbindet Recherche und Medien mit notebooklm-py
+# Free Deep Research via notebooklm-py: Content-Workflow für Claude Code & Codex
 
-Du sagst Codex oder Claude Code, welchen Artikel du brauchst. `notebooklm-py` ist dabei die Brücke, über die der Agent NotebookLM Deep Research starten kann, statt dass du Material zwischen Tabs und Tools hin- und herkopierst.
+Du sagst Claude Code oder Codex, welchen Artikel du brauchst. Über `notebooklm-py` startet der Agent Deep Research in Gemini Notebook und verlagert die breite Recherche in dessen kostenlosen Standardzugang, statt jedes Rohdokument im bezahlten Agentenkontext zu verarbeiten.
 
-Der Recherche-Pilot ist praktisch getestet. Der nächste Schritt, Outline, Abschnittsbriefings und später Medien aus einem geprüften Artikel abzuleiten, ist die technisch gestützte Ausbaustufe.
+[NotebookLM heißt seit dem 16. Juli 2026 offiziell Gemini Notebook](https://blog.google/intl/de-de/produkte/suchen-entdecken/notebooklm-wird-gemini-notebook/). Das Open-Source-Projekt `notebooklm-py` behält seinen bisherigen Paketnamen; deshalb tauchen hier beide Begriffe auf.
 
-Die wichtige Verschiebung ist klein, aber ziemlich stark: NotebookLM sammelt und sortiert das Material. Claude Code oder Codex erhält über `notebooklm-py` den geprüften Kern, formt daraus einen nachvollziehbaren Artikel und prüft die entscheidenden Stellen am Original.
+Gemini Notebook sammelt Quellen und bereitet Outline sowie Abschnittsbriefings vor. Claude Code oder Codex schreibt daraus den Artikel. Der geprüfte Text kann anschließend wieder die Grundlage für Audio, Video, Infografiken und Slides in Gemini Notebook werden.
+
+Praktisch getestet ist bisher der Recherche-Pilot. Outline, Abschnittsbriefings und der komplette Medien-Loop sind die technisch gestützte Ausbaustufe und werden hier nicht als bereits fertiger Autopilot verkauft.
 
 <div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
   <span class="rf-label" aria-hidden="true">TL;DR</span>

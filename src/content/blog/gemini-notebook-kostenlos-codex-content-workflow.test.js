@@ -31,23 +31,27 @@ test('publishes the approved notebooklm-py bridge metadata and opening', async (
 
 	assert.match(
 		article,
-		/^title: "Der eigentliche NotebookLM-Hack: Codex verbindet Recherche und Medien mit notebooklm-py"$/m
+		/^title: "Free Deep Research via notebooklm-py: Content-Workflow für Claude Code & Codex"$/m
 	);
-	assert.match(article, /^seoTitle: "notebooklm-py mit Codex: NotebookLM per Agent steuern"$/m);
+	assert.match(article, /^seoTitle: "notebooklm-py: Kostenlose NotebookLM-Recherche für Claude Code & Codex"$/m);
+	assert.match(article, /^titleAccent: "Free Deep Research"$/m);
 	assert.match(article, /^slug: "gemini-notebook-kostenlos-codex-content-workflow"$/m);
 	assert.match(article, /^date: "2026-09-01"$/m);
 	assert.match(article, /^category: "ki-tools"$/m);
 	assert.match(article, /^draft: false$/m);
 	assert.match(
 		body,
-		/^# Der eigentliche NotebookLM-Hack: Codex verbindet Recherche und Medien mit notebooklm-py$/m
+		/^# Free Deep Research via notebooklm-py: Content-Workflow für Claude Code & Codex$/m
 	);
 	assert.match(opening, /notebooklm-py/i);
 	assert.match(opening, /Codex|Claude Code/);
 	assert.match(opening, /Deep Research/);
+	assert.match(opening, /NotebookLM heißt seit dem 16\. Juli 2026 offiziell Gemini Notebook/);
 
 	const description = article.match(/^description: "([^"]+)"$/m)?.[1] ?? '';
 	assert.ok(description.length >= 120 && description.length <= 160, `description has ${description.length} chars`);
+	assert.match(description, /Gemini Notebook/);
+	assert.match(description, /Agenten bleiben kostenpflichtig/);
 });
 
 test('separates the tested research pilot from the planned media architecture', async () => {
