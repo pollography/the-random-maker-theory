@@ -20,7 +20,7 @@ before(async () => {
 		root: projectRoot,
 		appType: 'custom',
 		logLevel: 'error',
-		server: { middlewareMode: true }
+		server: { middlewareMode: true, hmr: false }
 	});
 });
 
