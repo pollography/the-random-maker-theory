@@ -2,6 +2,7 @@
 	import HomepagePostCard from '$lib/components/blog/HomepagePostCard.svelte';
 	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
+	import { CORE_TOPICS } from '$lib/data/core-topics.js';
 	import { pageFAQs } from '$lib/data/pageFAQs';
 	import { buildImageObject } from '$lib/utils/image-rights.js';
 	import { getImageSeo } from '$lib/utils/image-seo.js';
@@ -41,41 +42,10 @@
 		return () => observer.disconnect();
 	});
 
-	const pillars = [
-		{
-			title: 'KI & Tech',
-			short: 'Tools · Tests · Trends',
-			tag: 'ki-tools',
-			image: '/images/homepage/topics/ki-tech.webp'
-		},
-		{
-			title: 'Maker & DIY',
-			short: 'Bauen · Drucken · Löten',
-			tag: 'maker',
-			image: '/images/homepage/topics/maker-diy.webp'
-		},
-		{
-			title: 'Automatisierung',
-			short: 'Workflows · Scripts · APIs',
-			tag: 'automatisierung',
-			image: '/images/homepage/topics/automatisierung.webp'
-		},
-		{
-			title: 'Fotografie',
-			short: 'Editing · Gear · Ideen',
-			tag: 'fotografie',
-			image: '/images/homepage/topics/fotografie.webp'
-		},
-		{
-			title: 'Produktivität',
-			short: 'Systeme · Fokus · Ordnung',
-			tag: 'produktivitaet',
-			image: '/images/homepage/topics/produktivitaet.webp'
-		}
-	].map((pillar) => ({
-		...pillar,
+	const topics = CORE_TOPICS.map((topic) => ({
+		...topic,
 		imageSeo: getImageSeo(
-			pillar.image,
+			topic.image,
 			'(max-width: 768px) 42vw, (max-width: 1024px) 30vw, 220px'
 		)
 	}));
@@ -139,8 +109,8 @@
 		<p class="hero-intro-line">Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!</p>
 	</div>
 	<div class="hero-actions">
-		<a href="#latest-posts" class="btn-metallic btn-honey"><span>Neue Beiträge</span></a>
-		<a href="#topics" class="btn-metallic btn-teal"><span>Themen entdecken</span></a>
+		<a href="/blog" class="btn-metallic btn-honey"><span>Alle Beiträge</span></a>
+		<a href="#topics" class="btn-metallic btn-teal"><span>Themen wählen</span></a>
 	</div>
 	<div class="hero-counter">
 		<span class="counter-number">{totalCount}</span>
@@ -155,23 +125,23 @@
 		<h2 class="section-title" id="topics-title">Womit willst du anfangen?</h2>
 	</div>
 	<div class="topics-grid">
-		{#each pillars as pillar}
-			<a href="/tags/{pillar.tag}" class="topic-card">
+		{#each topics as topic}
+			<a href="/tags/{topic.slug}" class="topic-card">
 				<div class="topic-image">
 					<img
-						src={pillar.image}
-						srcset={pillar.imageSeo.srcset}
-						sizes={pillar.imageSeo.sizes}
+						src={topic.image}
+						srcset={topic.imageSeo.srcset}
+						sizes={topic.imageSeo.sizes}
 						alt=""
 						loading="lazy"
 						decoding="sync"
-						width={pillar.imageSeo.width ?? 512}
-						height={pillar.imageSeo.height ?? 512}
+						width={topic.imageSeo.width ?? 512}
+						height={topic.imageSeo.height ?? 512}
 					/>
 				</div>
 				<div class="topic-copy">
-					<h3>{pillar.title}</h3>
-					<p>{pillar.short}</p>
+					<h3>{topic.name}</h3>
+					<p>{topic.short}</p>
 				</div>
 			</a>
 		{/each}
@@ -194,6 +164,11 @@
 			</div>
 		</div>
 	{/if}
+	<div class="homepage-context">
+		<p>
+			Bei TRMT findest du praktische Artikel, nachvollziehbare Anleitungen und persönliche Einordnungen rund um <a href="/tags/ki-tools"><strong>KI-Tools</strong></a>, Tech und digitale Workflows. In <a href="/tags/maker"><strong>Maker &amp; DIY</strong></a> geht es um ESP32, 3D-Druck und Smart Home; bei <a href="/tags/automatisierung"><strong>Automatisierung</strong></a> um n8n, Skripte und verbundene Tools. <a href="/tags/fotografie"><strong>Fotografie</strong></a> bündelt Bildbearbeitung, KI-Workflows und Technik aus der Praxis. Unter <a href="/tags/produktivitaet"><strong>Produktivität</strong></a> findest du Systeme für Wissen, Fokus und digitale Ordnung. Wähle ein Thema oder spring direkt ins vollständige Blogarchiv - alle Beiträge bleiben frei zugänglich und lassen sich ohne Anmeldung lesen.
+		</p>
+	</div>
 </section>
 
 <!-- ═══════ BOTTOM SECTIONS ═══════ -->
@@ -280,13 +255,13 @@
 	/* ── HERO ── */
 	.hero {
 		text-align: center;
-		min-height: clamp(520px, 66svh, 680px);
+		min-height: clamp(430px, 54svh, 560px);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		padding: 88px 0 48px;
+		padding: 72px 0 34px;
 		margin-top: -56px;
 	}
 
@@ -360,6 +335,7 @@
 	.btn-honey, .btn-teal {
 		display: inline-flex;
 		align-items: center;
+		min-height: 44px;
 		padding: 14px 28px;
 		border-radius: var(--radius-lg);
 		font-weight: var(--font-weight-semibold);
@@ -487,7 +463,7 @@
 	}
 
 	.topic-image {
-		aspect-ratio: 1;
+		aspect-ratio: 16 / 10;
 		overflow: hidden;
 		background: var(--color-elevated);
 	}
@@ -531,6 +507,7 @@
 	.editorial-posts {
 		display: grid;
 		grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+		align-items: start;
 		gap: 18px;
 	}
 
@@ -539,6 +516,25 @@
 		grid-template-rows: repeat(3, minmax(0, 1fr));
 		gap: 12px;
 	}
+
+	.homepage-context {
+		max-width: 920px;
+		margin: 28px auto 0;
+		font-size: var(--font-size-base);
+		line-height: 1.7;
+		color: var(--color-text-muted);
+	}
+
+	.homepage-context p { margin: 0; }
+
+	.homepage-context a {
+		color: var(--color-text);
+		text-decoration-color: var(--color-accent-teal-foreground);
+		text-decoration-thickness: 1px;
+		text-underline-offset: 3px;
+	}
+
+	.homepage-context a:hover { color: var(--color-accent-teal-foreground); }
 
 	/* ── BOTTOM SECTIONS ── */
 	.bottom-sections {
@@ -857,19 +853,18 @@
 
 	/* ── RESPONSIVE ── */
 	@media (max-width: 1024px) {
-		.topics-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 		.editorial-posts { grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr); }
 	}
 
 	@media (max-width: 768px) {
-		.hero { min-height: auto; padding: 94px 0 44px; margin-top: -56px; }
+		.hero { min-height: auto; padding: 78px 0 32px; margin-top: -56px; }
 		.hero-intro { max-width: 600px; font-size: var(--font-size-base); }
 		.bottom-grid { grid-template-columns: 1fr; }
 		.bottom-card { padding: 24px; }
 		.topics-grid {
 			grid-template-columns: none;
 			grid-auto-flow: column;
-			grid-auto-columns: minmax(156px, 42vw);
+			grid-auto-columns: minmax(176px, 56vw);
 			overflow-x: auto;
 			overflow-y: hidden;
 			scroll-snap-type: x mandatory;

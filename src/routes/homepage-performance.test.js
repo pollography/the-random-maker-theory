@@ -62,6 +62,9 @@ test('topic artwork stays within the homepage image budget', async () => {
 	const topicsDir = join(projectRoot, 'static', 'images', 'homepage', 'topics');
 	const page = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
 	assert.match(page, /class="topic-image"[\s\S]*decoding="sync"/);
+	assert.match(page, /loading="lazy"/);
+	assert.match(page, /width=\{topic\.imageSeo\.width \?\? 512\}/);
+	assert.match(page, /height=\{topic\.imageSeo\.height \?\? 512\}/);
 	const files = (await readdir(topicsDir)).filter((file) => file.endsWith('.webp')).sort();
 	assert.deepEqual(files, [
 		'automatisierung-thumb.webp',

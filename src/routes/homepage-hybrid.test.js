@@ -15,7 +15,7 @@ test('homepage merges its positioning into the hero and removes the old subtitle
 	assert.match(page, /Entdecken\. Verstehen\. Und alles/);
 	assert.match(page, /Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität/);
 	assert.equal((page.match(/class="hero-intro-line"/g) ?? []).length, 2);
-	assert.match(page, /href="#latest-posts"/);
+	assert.match(page, /href="\/blog"[^>]*>\s*<span>Alle Beiträge<\/span>/);
 	assert.match(page, /href="#topics"/);
 });
 
@@ -23,14 +23,13 @@ test('homepage exposes five concise topic links without emoji pillar copy', asyn
 	const page = await read('src', 'routes', '+page.svelte');
 	assert.match(page, /id="topics"/);
 	assert.match(page, /Womit willst du anfangen\?/);
-	assert.match(page, /href="\/tags\/\{pillar\.tag\}"/);
-	for (const tag of ['ki-tools', 'maker', 'automatisierung', 'fotografie', 'produktivitaet']) {
-		assert.match(page, new RegExp(`tag: '${tag}'`));
-	}
-	assert.equal((page.match(/\/images\/homepage\/topics\//g) ?? []).length, 5);
-	assert.match(page, /getImageSeo\(\s*pillar\.image/);
-	assert.match(page, /srcset=\{pillar\.imageSeo\.srcset\}/);
-	assert.doesNotMatch(page, /pillar\.desc|pillar\.highlights|pillar\.icon/);
+	assert.match(page, /import \{ CORE_TOPICS \} from '\$lib\/data\/core-topics\.js';/);
+	assert.match(page, /const topics = CORE_TOPICS\.map\(/);
+	assert.match(page, /href="\/tags\/\{topic\.slug\}"/);
+	assert.match(page, /getImageSeo\(\s*topic\.image/);
+	assert.match(page, /srcset=\{topic\.imageSeo\.srcset\}/);
+	assert.doesNotMatch(page, /const pillars = \[/);
+	assert.doesNotMatch(page, /topic\.desc|topic\.highlights|topic\.icon/);
 });
 
 test('homepage presents one featured and three compact article cards directly after topics', async () => {
