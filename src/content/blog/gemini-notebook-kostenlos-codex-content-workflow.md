@@ -9,7 +9,8 @@ category: "ki-tools"
 draft: false
 titleAccent: "Free Deep Research"
 readingTime: 7
-heroImage: "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-1.webp"
+heroImage: "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2.webp"
+heroImageThumb: "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2-thumb.webp"
 ---
 
 Breite Webrecherche kostet in Claude Code und Codex schnell viel Kontext, obwohl Gemini Notebook Deep Research bereits im kostenlosen Standardzugang mitbringt. `notebooklm-py` verbindet beide Seiten: Der Agent stößt die Recherche dort an und verarbeitet anschließend nur den geprüften Quellenkern weiter; dieser Artikel zeigt, was davon heute wirklich funktioniert und wo die Grenzen liegen.

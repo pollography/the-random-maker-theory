@@ -1,8 +1,12 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, stat } from 'node:fs/promises';
 import test from 'node:test';
+import { fileURLToPath } from 'node:url';
+import { readImageDimensions } from '../../../scripts/generate-image-metadata.mjs';
 
 const articleUrl = new URL('./gemini-notebook-kostenlos-codex-content-workflow.md', import.meta.url);
+const heroUrl = new URL('../../../static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2.webp', import.meta.url);
+const thumbUrl = new URL('../../../static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2-thumb.webp', import.meta.url);
 
 async function readArticle() {
 	return readFile(articleUrl, 'utf8');
@@ -23,6 +27,25 @@ function sectionByHeading(article, heading) {
 	assert.ok(match, `missing section: ${heading}`);
 	return match[0];
 }
+
+test('ships a native 16:9 hero and matching thumbnail', async () => {
+	const article = await readArticle();
+	const heroPath = fileURLToPath(heroUrl);
+	const thumbPath = fileURLToPath(thumbUrl);
+
+	assert.match(
+		article,
+		/^heroImage: "\/images\/blog\/gemini-notebook-kostenlos-codex-content-workflow-2\.webp"$/m
+	);
+	assert.match(
+		article,
+		/^heroImageThumb: "\/images\/blog\/gemini-notebook-kostenlos-codex-content-workflow-2-thumb\.webp"$/m
+	);
+	assert.deepEqual(readImageDimensions(heroPath), { width: 1200, height: 675, format: 'webp' });
+	assert.deepEqual(readImageDimensions(thumbPath), { width: 400, height: 225, format: 'webp' });
+	assert.ok((await stat(heroPath)).size <= 180 * 1024, 'hero should stay within the 180 KB budget');
+	assert.ok((await stat(thumbPath)).size <= 60 * 1024, 'thumbnail should stay within the 60 KB budget');
+});
 
 test('uses the route-owned H1 and opens with a two-sentence main thesis', async () => {
 	const article = await readArticle();
