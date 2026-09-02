@@ -9,7 +9,7 @@
 	let imageSeo = $derived(getImageSeo(
 		thumbnailSrc || post.heroImage,
 		featured
-			? '(max-width: 768px) calc(100vw - 32px), (max-width: 1200px) 52vw, 620px'
+			? '(max-width: 768px) 132px, (max-width: 1200px) 52vw, 620px'
 			: '(max-width: 768px) 132px, (max-width: 1200px) 16vw, 180px'
 	));
 	let formattedDate = $derived(new Date(post.date).toLocaleDateString('de-DE', {
@@ -183,10 +183,22 @@
 
 	@media (max-width: 768px) {
 		.post-card.featured {
-			grid-template-rows: minmax(190px, 48vw) auto;
+			align-items: start;
+			grid-template-columns: clamp(96px, 24vw, 132px) minmax(0, 1fr);
+			grid-template-rows: auto;
+			min-height: 0;
 		}
 
-		.featured .post-copy { padding: 22px; }
+		.featured .post-image {
+			aspect-ratio: 1;
+			border-radius: var(--radius-lg);
+			margin: 14px 0 14px 14px;
+		}
+
+		.featured .post-copy { padding: 14px; }
+		.featured h3 { font-size: clamp(19px, 5vw, 24px); }
+		.featured .post-description { display: none; }
+		.featured .post-cta { margin-top: 12px; }
 	}
 
 	@media (max-width: 420px) {

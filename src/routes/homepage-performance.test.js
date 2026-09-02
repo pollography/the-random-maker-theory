@@ -46,6 +46,8 @@ test('the now-visible featured article image is eager and high priority', async 
 	const card = await readFile(join(projectRoot, 'src', 'lib', 'components', 'blog', 'HomepagePostCard.svelte'), 'utf8');
 	assert.match(card, /loading=\{featured \? 'eager' : 'lazy'\}/);
 	assert.match(card, /fetchpriority=\{featured \? 'high' : undefined\}/);
+	assert.match(card, /\(max-width: 768px\) 132px/);
+	assert.match(card, /grid-template-columns:\s*clamp\(96px, 24vw, 132px\) minmax\(0, 1fr\)/);
 });
 
 test('video uses a local keyboard-operable facade before loading privacy-enhanced YouTube', async () => {
