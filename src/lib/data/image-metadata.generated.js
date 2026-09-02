@@ -1116,6 +1116,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/gemini-notebook-kostenlos-codex-content-workflow-1-thumb.webp": {
+		"width": 640,
+		"height": 360,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-1-thumb.webp",
+				"width": 640
+			},
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-1.webp",
+				"width": 1280
+			}
+		]
+	},
+	"/images/blog/gemini-notebook-kostenlos-codex-content-workflow-1.webp": {
+		"width": 1280,
+		"height": 720,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-1-thumb.webp",
+				"width": 640
+			},
+			{
+				"src": "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-1.webp",
+				"width": 1280
+			}
+		]
+	},
 	"/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-1-chart.webp": {
 		"width": 1200,
 		"height": 651,

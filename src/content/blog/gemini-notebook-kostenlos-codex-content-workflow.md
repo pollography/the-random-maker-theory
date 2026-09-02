@@ -9,6 +9,7 @@ category: "ki-tools"
 draft: false
 titleAccent: "Free Deep Research"
 readingTime: 7
+heroImage: "/images/blog/gemini-notebook-kostenlos-codex-content-workflow-1.webp"
 ---
 
 # Free Deep Research via notebooklm-py: Content-Workflow für Claude Code & Codex
