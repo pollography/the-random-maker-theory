@@ -4,7 +4,7 @@ seoTitle: "KI-Bildprompts für Technik & Innenansichten"
 slug: "kuerzeste-bildprompts-technik-innenansichten"
 date: "2026-08-30"
 description: "Neun Ein-Wort-Bildprompts für Blueprint, Explosionsansicht, Querschnitt und Anleitung. Mit Porträt-Test und zusätzlichem Produktvergleich."
-tags: ["ki-bilder", "prompts", "maker", "produktdesign", "infografik"]
+tags: ["ki-tools", "ki-bilder", "prompts", "fotografie", "produktdesign", "infografik"]
 category: "ki-tools"
 draft: false
 readingTime: 12

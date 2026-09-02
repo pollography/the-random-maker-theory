@@ -3,7 +3,7 @@ title: "Ultimate Bildprompts: 36 neue Tests"
 slug: "ultimate-bildprompts-part-3"
 date: "2026-08-31"
 description: "36 neue KI-Bildprompts mit echten Vorher-nachher-Beispielen, kopierbaren Prompts, Use Cases und ehrlicher Bewertung."
-tags: ["ki-bilder", "prompts", "tutorial", "creator", "fotografie", "maker"]
+tags: ["ki-tools", "ki-bilder", "prompts", "tutorial", "creator", "fotografie"]
 category: "ki-tools"
 draft: false
 readingTime: 22
