@@ -164,7 +164,7 @@
 						sizes={pillar.imageSeo.sizes}
 						alt=""
 						loading="lazy"
-						decoding="async"
+						decoding="sync"
 						width={pillar.imageSeo.width ?? 512}
 						height={pillar.imageSeo.height ?? 512}
 					/>

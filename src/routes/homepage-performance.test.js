@@ -4,6 +4,7 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
+import { imageMetadata } from '../lib/data/image-metadata.generated.js';
 
 const routesRoot = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(routesRoot, '..', '..');
@@ -59,6 +60,8 @@ test('video uses a local keyboard-operable facade before loading privacy-enhance
 
 test('topic artwork stays within the homepage image budget', async () => {
 	const topicsDir = join(projectRoot, 'static', 'images', 'homepage', 'topics');
+	const page = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
+	assert.match(page, /class="topic-image"[\s\S]*decoding="sync"/);
 	const files = (await readdir(topicsDir)).filter((file) => file.endsWith('.webp')).sort();
 	assert.deepEqual(files, [
 		'automatisierung-thumb.webp',
@@ -77,6 +80,11 @@ test('topic artwork stays within the homepage image budget', async () => {
 	for (const [index, size] of sizes.entries()) {
 		const limit = files[index].includes('-thumb.') ? 15 * 1024 : 35 * 1024;
 		assert.ok(size <= limit, `${files[index]} is ${size} bytes`);
+		if (files[index].includes('-thumb.')) {
+			const metadata = imageMetadata[`/images/homepage/topics/${files[index]}`];
+			assert.equal(metadata.width, 320, `${files[index]} width`);
+			assert.equal(metadata.height, 320, `${files[index]} height`);
+		}
 	}
 	assert.ok(sizes.reduce((sum, size) => sum + size, 0) <= 165 * 1024);
 });
