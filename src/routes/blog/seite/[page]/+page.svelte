@@ -4,4 +4,4 @@
 	let { data } = $props();
 </script>
 
-<BlogArchive {...data} showFaq={true} />
+<BlogArchive {...data} showFaq={false} />
