@@ -1,96 +1,171 @@
 <script>
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import { siteConfig } from '$lib/config';
+	import { CORE_TOPICS } from '$lib/data/core-topics';
 	import { getTagDescription } from '$lib/data/tagDescriptions';
 	import { tagFAQs } from '$lib/data/tagFAQs';
 
 	let { data } = $props();
+	const tagFAQsBySlug = /** @type {Record<string, { q: string; a: string }[]>} */ (tagFAQs);
+	let isCoreTopic = $derived(data.isCoreTopic);
 	let tagInfo = $derived(getTagDescription(data.tag));
-	let faqs = $derived(tagFAQs[data.tag] || []);
+	let topicName = $derived(data.topic?.name ?? tagInfo.title);
+	let faqs = $derived(isCoreTopic ? tagFAQsBySlug[data.tag] || [] : []);
+	let canonicalUrl = $derived(`${siteConfig.url}/tags/${data.tag}`);
+	let pageTitle = $derived(isCoreTopic
+		? `${topicName}: Artikel, Guides und Projekte | TRMT`
+		: `${tagInfo.title} — Artikel & Guides | TRMT`);
+	let pageDescription = $derived(isCoreTopic
+		? `${topicName} bei TRMT: ${tagInfo.metaDesc}`
+		: tagInfo.metaDesc);
+	let visiblePosts = $derived(isCoreTopic ? [...data.starterPosts, ...data.remainingPosts] : data.posts);
+	let relatedTopics = $derived(isCoreTopic ? CORE_TOPICS.filter((topic) => topic.slug !== data.tag) : []);
 
-	// FAQPage Schema.org JSON-LD
-	let faqSchema = $derived(faqs.length > 0 ? JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		"mainEntity": faqs.map(faq => ({
-			"@type": "Question",
-			"name": faq.q,
-			"acceptedAnswer": {
-				"@type": "Answer",
-				"text": faq.a
-			}
+	let breadcrumbSchema = $derived(isCoreTopic ? JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		'@id': `${canonicalUrl}#breadcrumb`,
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Startseite', item: siteConfig.url },
+			{ '@type': 'ListItem', position: 2, name: topicName, item: canonicalUrl }
+		]
+	}) : null);
+	let collectionPageSchema = $derived(isCoreTopic ? JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		'@id': `${canonicalUrl}#collection`,
+		url: canonicalUrl,
+		name: pageTitle,
+		mainEntity: {
+			'@type': 'ItemList',
+			'@id': `${canonicalUrl}#items`,
+			numberOfItems: visiblePosts.length,
+			itemListElement: visiblePosts.map((post, index) => ({
+				'@type': 'ListItem',
+				position: index + 1,
+				item: { '@id': `${siteConfig.url}/blog/${post.slug}` }
+			}))
+		}
+	}) : null);
+	let faqSchema = $derived(isCoreTopic && faqs.length > 0 ? JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		'@id': `${canonicalUrl}#faq`,
+		mainEntity: faqs.map((faq) => ({
+			'@type': 'Question',
+			name: faq.q,
+			acceptedAnswer: { '@type': 'Answer', text: faq.a }
 		}))
 	}) : null);
 </script>
 
 <svelte:head>
-	<title>{tagInfo.title} — Artikel & Guides | TRMT</title>
-	<meta name="description" content={tagInfo.metaDesc} />
-	<meta name="keywords" content="{data.tag}, {tagInfo.title}, TRMT, Tech Blog" />
-	<meta property="og:title" content="{tagInfo.title} | TRMT" />
-	<meta property="og:description" content={tagInfo.metaDesc} />
-	<meta property="og:url" content="https://therandommakertheory.com/tags/{data.tag}" />
+	<title>{pageTitle}</title>
+	<meta name="description" content={pageDescription} />
+	<meta name="keywords" content={`${data.tag}, ${tagInfo.title}, TRMT, Tech Blog`} />
+	<meta name="robots" content={isCoreTopic ? 'index,follow' : 'noindex,follow'} />
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:description" content={pageDescription} />
+	<meta property="og:url" content={canonicalUrl} />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
+	<meta property="og:image" content={`${siteConfig.url}/images/og/default.webp`} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="{tagInfo.title} | TRMT" />
-	<meta name="twitter:description" content={tagInfo.metaDesc} />
-	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
-	<link rel="canonical" href="https://therandommakertheory.com/tags/{data.tag}" />
+	<meta name="twitter:title" content={pageTitle} />
+	<meta name="twitter:description" content={pageDescription} />
+	<meta name="twitter:image" content={`${siteConfig.url}/images/og/default.webp`} />
+	<link rel="canonical" href={canonicalUrl} />
 
-	<!-- FAQPage Schema.org für Featured Snippets -->
-	{#if faqSchema}
-		{@html `<script type="application/ld+json">${faqSchema}</script>`}
+	{#if isCoreTopic}
+		{@html `<script type="application/ld+json">${breadcrumbSchema}</script>`}
+		{@html `<script type="application/ld+json">${collectionPageSchema}</script>`}
+		{#if faqSchema}
+			{@html `<script type="application/ld+json">${faqSchema}</script>`}
+		{/if}
 	{/if}
 </svelte:head>
 
-<!-- Tag Header mit SEO-Content -->
-<section class="tag-header">
-	<div class="tag-icon">{tagInfo.icon}</div>
-	<h1 class="tag-title">
-		{tagInfo.title}
-	</h1>
-	<p class="tag-intro">
-		{tagInfo.intro}
-	</p>
-	<div class="tag-meta">
-		<span class="tag-count">{data.posts.length} {data.posts.length === 1 ? 'Artikel' : 'Artikel'}</span>
-		<a href="/blog" class="tag-back">← Alle Themen</a>
-	</div>
-</section>
+{#if isCoreTopic}
+	<nav class="breadcrumb" aria-label="Breadcrumb">
+		<a href="/">Startseite</a>
+		<span aria-hidden="true">/</span>
+		<span aria-current="page">{topicName}</span>
+	</nav>
+{/if}
 
-<!-- Posts Grid -->
-<section class="tag-posts">
-	<div class="tag-grid">
-		{#each data.posts as post (post.slug)}
-			<BlogCard {post} />
-		{/each}
-	</div>
-
-	{#if data.posts.length === 0}
-		<div class="tag-empty">
-			<p>Noch keine Artikel mit diesem Tag. Kommt bald!</p>
-			<a href="/blog" class="tag-empty-link">
-				← Zurück zum Blog
-			</a>
+<section class="tag-header" class:core-hub={isCoreTopic}>
+	{#if isCoreTopic}
+		<div class="tag-header-copy">
+			<p class="eyebrow">Thema</p>
+			<h1 class="tag-title">{topicName}</h1>
+			<p class="tag-intro">{tagInfo.intro}</p>
+		</div>
+		<div class="tag-header-meta">
+			<span class="tag-count">{data.posts.length} {data.posts.length === 1 ? 'Artikel' : 'Artikel'}</span>
+			<a href="/blog" class="tag-back">Alle Beiträge</a>
+		</div>
+	{:else}
+		<div class="tag-icon" aria-hidden="true">{tagInfo.icon}</div>
+		<div>
+			<h1 class="tag-title">{tagInfo.title}</h1>
+			<p class="tag-intro">{tagInfo.intro}</p>
+			<div class="tag-header-meta">
+				<span class="tag-count">{data.posts.length} {data.posts.length === 1 ? 'Artikel' : 'Artikel'}</span>
+				<a href="/blog" class="tag-back">Alle Beiträge</a>
+			</div>
 		</div>
 	{/if}
 </section>
 
-<!-- FAQ-Sektion für SEO -->
-{#if faqs.length > 0}
-	<section class="faq-section">
-		<h2 class="faq-heading">Häufige Fragen zu {tagInfo.title}</h2>
+{#if isCoreTopic}
+	<section class="tag-posts starter-posts" aria-labelledby="starter-heading">
+		<div class="section-heading">
+			<h2 id="starter-heading">Hier anfangen</h2>
+			<p>Drei redaktionell ausgewählte Einstiege in dieses Thema.</p>
+		</div>
+		<div class="tag-grid">
+			{#each data.starterPosts as post (post.slug)}
+				<BlogCard {post} />
+			{/each}
+		</div>
+	</section>
+
+	{#if data.remainingPosts.length > 0}
+		<section class="tag-posts" aria-labelledby="all-posts-heading">
+			<div class="section-heading"><h2 id="all-posts-heading">Alle Artikel</h2></div>
+			<div class="tag-grid">
+				{#each data.remainingPosts as post (post.slug)}
+					<BlogCard {post} />
+				{/each}
+			</div>
+		</section>
+	{/if}
+
+	<section class="related-topics" aria-labelledby="related-topics-heading">
+		<h2 id="related-topics-heading">Weitere Themen</h2>
+		<nav aria-label="Weitere Kernthemen" class="related-topic-links">
+			{#each relatedTopics as topic (topic.slug)}
+				<a href={`/tags/${topic.slug}`}>{topic.name}</a>
+			{/each}
+		</nav>
+	</section>
+{:else}
+	<section class="tag-posts">
+		<div class="tag-grid">
+			{#each data.posts as post (post.slug)}
+				<BlogCard {post} />
+			{/each}
+		</div>
+	</section>
+{/if}
+
+{#if isCoreTopic && faqs.length > 0}
+	<section class="faq-section" aria-labelledby="faq-heading">
+		<h2 id="faq-heading" class="faq-heading">Häufige Fragen zu {topicName}</h2>
 		<div class="faq-list">
-			{#each faqs as faq, i}
-				<details class="faq-item" class:faq-item-teal={i % 3 === 1}>
-					<summary class="faq-question">
-						<span class="faq-q-text">{faq.q}</span>
-						<span class="faq-chevron">›</span>
-					</summary>
-					<div class="faq-answer">
-						<p>{faq.a}</p>
-					</div>
+			{#each faqs as faq, index}
+				<details class="faq-item" class:faq-item-teal={index % 3 === 1}>
+					<summary class="faq-question"><span>{faq.q}</span><span class="faq-chevron" aria-hidden="true">›</span></summary>
+					<div class="faq-answer"><p>{faq.a}</p></div>
 				</details>
 			{/each}
 		</div>
@@ -98,206 +173,45 @@
 {/if}
 
 <style>
-	.tag-header {
-		padding: 48px 0 32px;
-		max-width: 720px;
-	}
-
-	.tag-icon {
-		font-size: 3rem;
-		margin-bottom: 16px;
-	}
-
-	.tag-title {
-		font-family: var(--font-display);
-		font-weight: 400;
-		font-size: clamp(32px, 6vw, 48px);
-		color: var(--color-text);
-		margin: 0 0 20px;
-		line-height: 1.1;
-		opacity: 0.95;
-	}
-
-	.tag-intro {
-		font-size: var(--font-size-md);
-		color: var(--color-text-muted);
-		line-height: 1.75;
-		margin: 0 0 24px;
-	}
-
-	.tag-meta {
-		display: flex;
-		align-items: center;
-		gap: 20px;
-	}
-
-	.tag-count {
-		font-family: var(--font-mono);
-		font-size: var(--font-size-sm);
-		color: var(--color-accent-teal);
-		background: var(--color-accent-teal-subtle);
-		padding: 4px 12px;
-		border-radius: var(--radius-full);
-	}
-
-	.tag-back {
-		font-size: var(--font-size-sm);
-		color: var(--color-accent-honey);
-		text-decoration: none;
-		font-weight: var(--font-weight-semibold);
-		transition: all var(--transition-normal);
-	}
-
-	.tag-back:hover {
-		color: var(--color-accent-honey-hover);
-		text-shadow: 0 0 12px rgba(212, 137, 62, 0.4);
-	}
-
-	.tag-posts {
-		padding: 32px 0 48px;
-	}
-
-	.tag-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 24px;
-	}
-
-	.tag-empty {
-		text-align: center;
-		padding: 48px;
-	}
-
-	.tag-empty p {
-		color: var(--color-text-muted);
-		font-size: var(--font-size-lg);
-		margin: 0 0 16px;
-	}
-
-	.tag-empty-link {
-		color: var(--color-accent-honey);
-		text-decoration: none;
-		font-weight: var(--font-weight-semibold);
-		transition: color var(--transition-normal);
-	}
-
-	.tag-empty-link:hover {
-		color: var(--color-accent-honey-hover);
-	}
-
-	/* FAQ Section */
-	.faq-section {
-		padding: 48px 0 64px;
-		max-width: 800px;
-	}
-
-	.faq-heading {
-		font-family: var(--font-display);
-		font-weight: 400;
-		font-style: italic;
-		font-size: clamp(24px, 4vw, 32px);
-		color: var(--color-accent-honey);
-		margin: 0 0 32px;
-		padding-top: 40px;
-		border-top: 1px solid var(--color-border);
-	}
-
-	.faq-list {
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-	}
-
-	.faq-item {
-		background: rgba(255, 255, 255, 0.02);
-		border: 1px solid rgba(212, 137, 62, 0.1);
-		border-radius: var(--radius-lg);
-		overflow: hidden;
-		transition: border-color var(--transition-normal), background var(--transition-normal);
-	}
-
-	.faq-item:hover {
-		border-color: rgba(212, 137, 62, 0.25);
-		background: rgba(255, 255, 255, 0.03);
-	}
-
-	.faq-item-teal {
-		border-color: rgba(58, 176, 162, 0.1);
-	}
-
-	.faq-item-teal:hover {
-		border-color: rgba(58, 176, 162, 0.25);
-	}
-
-	.faq-item[open] {
-		border-color: rgba(212, 137, 62, 0.2);
-		background: rgba(212, 137, 62, 0.03);
-	}
-
-	.faq-item-teal[open] {
-		border-color: rgba(58, 176, 162, 0.2);
-		background: rgba(58, 176, 162, 0.03);
-	}
-
-	.faq-question {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 16px;
-		padding: 20px 24px;
-		cursor: pointer;
-		list-style: none;
-		user-select: none;
-	}
-
-	.faq-question::-webkit-details-marker {
-		display: none;
-	}
-
-	.faq-q-text {
-		font-family: var(--font-sans);
-		font-size: var(--font-size-md);
-		font-weight: var(--font-weight-semibold);
-		color: var(--color-text);
-		line-height: 1.4;
-	}
-
-	.faq-chevron {
-		font-size: 24px;
-		color: var(--color-accent-honey);
-		transition: transform var(--transition-normal);
-		flex-shrink: 0;
-	}
-
-	.faq-item-teal .faq-chevron {
-		color: var(--color-accent-teal);
-	}
-
-	.faq-item[open] .faq-chevron {
-		transform: rotate(90deg);
-	}
-
-	.faq-answer {
-		padding: 0 24px 20px;
-	}
-
-	.faq-answer p {
-		font-size: var(--font-size-base);
-		color: var(--color-text-muted);
-		line-height: 1.75;
-		margin: 0;
-	}
-
-	@media (max-width: 1024px) {
-		.tag-grid { grid-template-columns: repeat(2, 1fr); }
-	}
-
+	.breadcrumb { display: flex; gap: 8px; padding-top: 28px; color: var(--color-text-muted); font-size: var(--font-size-sm); }
+	.breadcrumb a, .tag-back, .related-topic-links a { color: var(--color-accent-honey); font-weight: var(--font-weight-semibold); text-decoration: none; }
+	.breadcrumb a:hover, .tag-back:hover, .related-topic-links a:hover { color: var(--color-accent-honey-hover); }
+	.tag-header { display: flex; gap: 20px; max-width: 760px; padding: 40px 0 24px; }
+	.tag-header.core-hub { display: grid; grid-template-columns: minmax(0, 1fr) minmax(180px, 240px); align-items: end; gap: 32px; max-width: none; padding-top: 24px; }
+	.tag-header-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+	.core-hub .tag-header-meta { align-content: end; flex-direction: column; align-items: flex-start; padding-bottom: 4px; }
+	.eyebrow { color: var(--color-accent-teal); font-family: var(--font-mono); font-size: var(--font-size-sm); letter-spacing: .08em; margin: 0 0 12px; text-transform: uppercase; }
+	.tag-icon { font-size: 2.25rem; line-height: 1; padding-top: 8px; }
+	.tag-title { color: var(--color-text); font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 3.5rem); font-weight: 400; line-height: 1.1; margin: 0 0 16px; }
+	.tag-intro { color: var(--color-text-muted); font-size: var(--font-size-md); line-height: 1.75; margin: 0 0 20px; max-width: 760px; }
+	.tag-count { background: var(--color-accent-teal-subtle); border-radius: var(--radius-full); color: var(--color-accent-teal); font-family: var(--font-mono); font-size: var(--font-size-sm); padding: 4px 12px; white-space: nowrap; }
+	.tag-posts { padding: 32px 0 16px; }
+	.starter-posts { border-top: 1px solid var(--color-border); }
+	.section-heading { align-items: baseline; display: flex; flex-wrap: wrap; gap: 12px 20px; margin-bottom: 20px; }
+	.section-heading h2, .related-topics h2 { color: var(--color-text); font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 400; margin: 0; }
+	.section-heading p { color: var(--color-text-muted); margin: 0; }
+	.tag-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.related-topics { border-top: 1px solid var(--color-border); padding: 40px 0; }
+	.related-topic-links { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 18px; }
+	.related-topic-links a { border-bottom: 1px solid transparent; min-height: 44px; padding: 10px 0; }
+	.related-topic-links a:hover { border-color: currentColor; }
+	.faq-section { max-width: 800px; padding: 32px 0 64px; }
+	.faq-heading { border-top: 1px solid var(--color-border); color: var(--color-accent-honey); font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 400; margin: 0 0 24px; padding-top: 32px; }
+	.faq-list { display: flex; flex-direction: column; gap: 10px; }
+	.faq-item { background: var(--color-surface); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); overflow: hidden; }
+	.faq-question { align-items: center; cursor: pointer; display: flex; font-weight: var(--font-weight-semibold); gap: 16px; justify-content: space-between; list-style: none; padding: 18px 24px; }
+	.faq-question::-webkit-details-marker { display: none; }
+	.faq-chevron { color: var(--color-accent-honey); font-size: 1.25rem; font-weight: 700; }
+	.faq-item-teal .faq-chevron { color: var(--color-accent-teal); }
+	.faq-answer { color: var(--color-text-muted); line-height: 1.75; padding: 0 24px 18px; }
+	.faq-answer p { margin: 0; }
+	@media (max-width: 1024px) { .tag-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 	@media (max-width: 768px) {
+		.tag-header.core-hub { grid-template-columns: 1fr; gap: 16px; }
+		.core-hub .tag-header-meta { align-items: flex-start; flex-direction: row; }
 		.tag-grid { grid-template-columns: 1fr; }
-		.tag-header { padding: 32px 0 24px; }
-		.faq-section { padding: 32px 0 48px; }
+		.tag-header { padding-top: 32px; }
 		.faq-question { padding: 16px 20px; }
 		.faq-answer { padding: 0 20px 16px; }
-		.faq-q-text { font-size: var(--font-size-base); }
 	}
 </style>

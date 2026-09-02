@@ -1,6 +1,6 @@
 import { getPosts } from '$lib/utils/posts';
 import { getEpisodes } from '$lib/utils/episodes';
-import { getAllTags } from '$lib/utils/posts';
+import { CORE_TOPIC_SLUGS } from '$lib/data/core-topics';
 import { siteConfig } from '$lib/config';
 import promptData from '$lib/data/image-prompts.json';
 import { blogImageUsage } from '$lib/data/blog-image-usage.generated.js';
@@ -10,7 +10,6 @@ import { escapeXml, renderImageEntries } from '$lib/utils/image-sitemap.js';
 export async function GET() {
 	const posts = await getPosts();
 	const episodes = await getEpisodes();
-	const tags = await getAllTags();
 	const libraryImages = getPublicPrompts(promptData).map((prompt) => prompt.image);
 
 	// Use most recent post date for dynamic pages
@@ -94,7 +93,7 @@ export async function GET() {
   `
 		)
 		.join('')}
-  ${tags
+	${CORE_TOPIC_SLUGS
 		.map(
 			(tag) => `
   <url>
