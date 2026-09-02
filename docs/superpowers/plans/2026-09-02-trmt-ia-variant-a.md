@@ -329,7 +329,7 @@ node C:\Users\Pollo\.agents\skills\impeccable\scripts\detect.mjs --json --scope 
 
 Expected: no unexplained blocking finding.
 
-- [ ] **Step 6: Repeat controlled performance comparison**
+- [x] **Step 6: Repeat controlled performance comparison**
 
 Repeat the pinned-version three-run mobile and desktop Lighthouse profiles with cold cache. Expected: median Performance and SEO scores, LCP, CLS, TBT, transfer and own JS do not regress. Compare deterministic HTML/Page-Data raw+gzip and image requests/bytes.
 
@@ -341,10 +341,10 @@ Create a review package from merge base `167a5f7` through HEAD. Reviewer must re
 
 Run `git diff --check`, `git diff --cached --check`, `git status --short`, untracked inventory, and `git diff --stat 167a5f7...HEAD`. Expected: only approved files, no image assets, no secrets, no unrelated canonical-checkout changes.
 
-- [ ] **Step 9: Push and production verification**
+- [x] **Step 9: Push and production verification**
 
 Push only the verified feature branch, integrate linearly into `origin/main` without taking dirty canonical-checkout state, and wait for the Linux GitHub Actions/Vercel run to pass. Then verify live HTTP 200/404 behavior, canonical/robots/schema, sitemap five-tag set, crawlable pagination, CTA targets, responsive first viewport and PageSpeed/Lighthouse evidence. If production verification fails, stop rollout or make a scoped tested fix; never report completion from deployment start alone.
 
-- [ ] **Step 10: Record durable handoff**
+- [x] **Step 10: Record durable handoff**
 
 Update the TRMT Obsidian audit note with final SHAs, test counts, performance comparison, deployment URL/status, live checks and any explicit UNKNOWN. Do not write global memory files.
