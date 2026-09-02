@@ -189,6 +189,10 @@
 			min-height: 0;
 		}
 
+		.post-card.featured.without-image {
+			grid-template-columns: 1fr;
+		}
+
 		.featured .post-image {
 			aspect-ratio: 1;
 			border-radius: var(--radius-lg);
