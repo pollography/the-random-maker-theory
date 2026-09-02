@@ -66,11 +66,11 @@ test('places two responsive 16:9 explanations in their matching sections', async
 	assert.equal(inlineImages.length, 2, 'the article should contain exactly two explanatory images');
 	assert.match(
 		bridge,
-		/!\[Miniaturfigur trägt einen geprüften Quellenstapel über eine Brücke vom Rechercheberg zur Schreibseite\]\(\/images\/blog\/gemini-notebook-kostenlos-codex-content-workflow-bridge\.webp\)/
+		/!\[Miniaturfigur verbindet zwei Arbeitsstränge mit einer großen Messingkupplung zwischen Quellenarchiv und Schreibseite\]\(\/images\/blog\/gemini-notebook-kostenlos-codex-content-workflow-bridge\.webp\)/
 	);
 	assert.match(
 		pilot,
-		/!\[Miniaturfigur prüft eine Quellenkarte unter einer großen Lupe; daneben liegen Rohmaterial und geprüfter Quellenkern\]\(\/images\/blog\/gemini-notebook-kostenlos-codex-content-workflow-source-check\.webp\)/
+		/!\[Miniaturfigur prüft eine Quellenkarte an einem leuchtenden Archivfenster zwischen Rohmaterial und geprüftem Quellenstapel\]\(\/images\/blog\/gemini-notebook-kostenlos-codex-content-workflow-source-check\.webp\)/
 	);
 
 	for (const imageUrl of inlineImageUrls) {
