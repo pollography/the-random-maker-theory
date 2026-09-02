@@ -10,7 +10,7 @@
 
 ## Global Constraints
 
-- Basis ist `313ad9043358859b564bcb552d0ed51b84dd0083` auf Branch `codex/trmt-ia-variant-a`.
+- Basis ist `167a5f7840df6205a3c68c174450151f2d70b48b` auf Branch `codex/trmt-ia-variant-a`.
 - Keine neuen npm-Abhaengigkeiten und keine neuen oder geaenderten Bilddateien.
 - Die fuenf Kern-Hubs sind exakt `ki-tools`, `maker`, `automatisierung`, `fotografie`, `produktivitaet`.
 - `/blog` zeigt exakt 12 Artikel pro servergerenderter Seite; Sortierung `date DESC, slug ASC`.
@@ -65,7 +65,7 @@ Extend `homepage-posts.test.js` with posts whose raw categories differ but norma
 
 - [ ] **Step 2: Run RED**
 
-Run: `node --test src/lib/data/core-topics.test.js src/lib/utils/homepage-posts.test.js`  
+Run: `node --test src/lib/data/core-topics.test.js src/lib/utils/homepage-posts.test.js`
 Expected: FAIL because `core-topics.js` and normalized selection do not exist.
 
 - [ ] **Step 3: Implement the core configuration and normalized selection**
@@ -82,7 +82,7 @@ Use the other twelve exact starter slugs from the approved spec. Add `ki-tools` 
 
 - [ ] **Step 4: Run GREEN and focused regressions**
 
-Run: `node --test src/lib/data/core-topics.test.js src/lib/utils/homepage-posts.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js`  
+Run: `node --test src/lib/data/core-topics.test.js src/lib/utils/homepage-posts.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js`
 Expected: all tests PASS.
 
 - [ ] **Step 5: Commit**
@@ -137,7 +137,7 @@ Add cases for 0, 1 and 12 posts plus invalid pages. Invalid pages must throw `Ra
 
 - [ ] **Step 2: Run RED**
 
-Run: `node --test src/lib/utils/blog-pagination.test.js src/routes/blog/blog-archive.test.js`  
+Run: `node --test src/lib/utils/blog-pagination.test.js src/routes/blog/blog-archive.test.js`
 Expected: FAIL because utility, routes and component do not exist.
 
 - [ ] **Step 3: Implement pagination utility and server loaders**
@@ -168,7 +168,7 @@ Page 1 passes `showFaq={true}`; later pages pass `false`. Canonical and title ar
 
 - [ ] **Step 5: Run GREEN and route-contract regressions**
 
-Run: `node --test src/lib/utils/blog-pagination.test.js src/routes/blog/blog-archive.test.js`  
+Run: `node --test src/lib/utils/blog-pagination.test.js src/routes/blog/blog-archive.test.js`
 Expected: all tests PASS, including exactly one server-rendered archive link per published slug and canonical handling.
 
 - [ ] **Step 6: Commit**
@@ -211,7 +211,7 @@ Assert all five unchanged image paths still come from `CORE_TOPICS`, all images 
 
 - [ ] **Step 3: Run RED**
 
-Run: `node --test src/routes/homepage-ia.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js`  
+Run: `node --test src/routes/homepage-ia.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js`
 Expected: FAIL on old CTAs, local pillar duplication and missing orientation block.
 
 - [ ] **Step 4: Implement compact homepage**
@@ -222,7 +222,7 @@ No static image file changes are permitted.
 
 - [ ] **Step 5: Run GREEN and focused regressions**
 
-Run: `node --test src/routes/homepage-ia.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js src/routes/homepage-a11y.test.js src/lib/utils/homepage-posts.test.js`  
+Run: `node --test src/routes/homepage-ia.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js src/routes/homepage-a11y.test.js src/lib/utils/homepage-posts.test.js`
 Expected: all tests PASS.
 
 - [ ] **Step 6: Commit**
@@ -264,7 +264,7 @@ Load every configured starter slug and assert existence plus exact canonical cor
 
 - [ ] **Step 2: Run RED**
 
-Run: `node --test src/routes/tag-hubs.test.js src/routes/image-seo-contract.test.js`  
+Run: `node --test src/routes/tag-hubs.test.js src/routes/image-seo-contract.test.js`
 Expected: FAIL because hub data, robots logic and five-tag sitemap filter do not exist.
 
 - [ ] **Step 3: Implement server tag loader**
@@ -281,7 +281,7 @@ Replace `getAllTags()` for sitemap tag generation with `CORE_TOPIC_SLUGS`. Keep 
 
 - [ ] **Step 6: Run GREEN and regressions**
 
-Run: `node --test src/routes/tag-hubs.test.js src/routes/image-seo-contract.test.js src/routes/trmt-image-prompts-seo.test.js`  
+Run: `node --test src/routes/tag-hubs.test.js src/routes/image-seo-contract.test.js src/routes/trmt-image-prompts-seo.test.js`
 Expected: all tests PASS and sitemap tag count is exactly five.
 
 - [ ] **Step 7: Commit**
@@ -335,11 +335,11 @@ Repeat the pinned-version three-run mobile and desktop Lighthouse profiles with 
 
 - [ ] **Step 7: Independent whole-branch review**
 
-Create a review package from merge base `313ad904` through HEAD. Reviewer must return both spec-compliance and code-quality approval; fix Critical/Important findings with reproducing tests and re-review.
+Create a review package from merge base `167a5f7` through HEAD. Reviewer must return both spec-compliance and code-quality approval; fix Critical/Important findings with reproducing tests and re-review.
 
 - [ ] **Step 8: Scope and cleanliness gate**
 
-Run `git diff --check`, `git diff --cached --check`, `git status --short`, untracked inventory, and `git diff --stat 313ad904...HEAD`. Expected: only approved files, no image assets, no secrets, no unrelated canonical-checkout changes.
+Run `git diff --check`, `git diff --cached --check`, `git status --short`, untracked inventory, and `git diff --stat 167a5f7...HEAD`. Expected: only approved files, no image assets, no secrets, no unrelated canonical-checkout changes.
 
 - [ ] **Step 9: Push and production verification**
 

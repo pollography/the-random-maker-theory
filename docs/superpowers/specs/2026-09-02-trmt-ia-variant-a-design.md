@@ -2,7 +2,7 @@
 
 **Status:** vom Nutzer am 2. September 2026 als Richtung A bestaetigt; schriftliches Spec-Review offen
 
-**Basis:** `origin/main` bei `313ad9043358859b564bcb552d0ed51b84dd0083`
+**Basis:** `origin/main` bei `167a5f7840df6205a3c68c174450151f2d70b48b`
 
 **Arbeitsbereich:** isolierter Worktree `D:\AI_Workspaces\Claude_Code\.release-worktrees\trmt-ia-variant-a-20260902`, Branch `codex/trmt-ia-variant-a`
 
