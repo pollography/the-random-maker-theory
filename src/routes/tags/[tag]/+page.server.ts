@@ -21,7 +21,7 @@ export async function load({ params }) {
 		.sort((first, second) => Date.parse(second.date) - Date.parse(first.date) || first.slug.localeCompare(second.slug));
 	const topic = getCoreTopic(tag) ?? null;
 	const isCoreTopic = topic !== null;
-	const configuredStarterSlugs: string[] = topic?.starterSlugs ?? [];
+	const configuredStarterSlugs = topic?.starterSlugs ?? [];
 	const starterPosts = isCoreTopic
 		? configuredStarterSlugs.map((slug) => {
 			const post = posts.find((candidate) => candidate.slug === slug);
