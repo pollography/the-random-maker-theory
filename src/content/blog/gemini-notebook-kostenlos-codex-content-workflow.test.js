@@ -24,10 +24,11 @@ function sectionByHeading(article, heading) {
 	return match[0];
 }
 
-test('publishes the approved notebooklm-py bridge metadata and opening', async () => {
+test('uses the route-owned H1 and opens with a two-sentence main thesis', async () => {
 	const article = await readArticle();
 	const body = bodyWithoutFrontmatter(article);
 	const opening = body.slice(0, 1400);
+	const thesis = body.split(/\r?\n\r?\n/, 1)[0];
 
 	assert.match(
 		article,
@@ -39,10 +40,15 @@ test('publishes the approved notebooklm-py bridge metadata and opening', async (
 	assert.match(article, /^date: "2026-09-01"$/m);
 	assert.match(article, /^category: "ki-tools"$/m);
 	assert.match(article, /^draft: false$/m);
-	assert.match(
-		body,
-		/^# Free Deep Research via notebooklm-py: Content-Workflow für Claude Code & Codex$/m
+	assert.doesNotMatch(body, /^#\s+/m, 'the blog route owns the single public H1');
+	assert.equal(
+		(thesis.match(/[.!?](?=\s|$)/g) ?? []).length,
+		2,
+		'the opening thesis should make the situation and article payoff scannable in two sentences'
 	);
+	assert.match(thesis, /Breite Webrecherche[^.]+(?:Kontext|kostenpflichtigen Agentenkontext)/i);
+	assert.match(thesis, /Gemini Notebook[^.]+kostenlosen Standardzugang/i);
+	assert.match(thesis, /dieser Artikel zeigt/i);
 	assert.match(opening, /notebooklm-py/i);
 	assert.match(opening, /Codex|Claude Code/);
 	assert.match(opening, /Deep Research/);

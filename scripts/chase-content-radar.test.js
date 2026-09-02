@@ -98,10 +98,10 @@ test('issue body makes the independent-research and human-release gates explicit
 	assert.match(body, /<!-- chase-source:youtube:onL8VFMzxsA -->/);
 });
 
-test('GitHub workflow runs remotely every 15 minutes and can create durable radar issues', () => {
+test('GitHub workflow runs remotely every four hours and can create durable radar issues', () => {
 	const workflow = readFileSync('.github/workflows/chase-content-radar.yml', 'utf8');
 
-	assert.match(workflow, /cron: ['"]7,22,37,52 \* \* \* \*['"]/);
+	assert.match(workflow, /cron: ['"]7 \*\/4 \* \* \*['"]/);
 	assert.match(workflow, /issues:\s*write/);
 	assert.match(workflow, /scripts\/chase-content-radar\.mjs/);
 	assert.match(workflow, /actions\/github-script@v8/);

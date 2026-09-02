@@ -2,7 +2,7 @@ name: Chase Content Radar
 
 on:
   schedule:
-    - cron: '7,22,37,52 * * * *'
+    - cron: '7 */4 * * *'
   workflow_dispatch:
 
 permissions:
