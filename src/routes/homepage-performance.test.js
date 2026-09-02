@@ -42,6 +42,12 @@ test('critical hero copy avoids a count-up repaint during LCP', async () => {
 	assert.doesNotMatch(page, /displayCount|animateCount|counterRef/);
 });
 
+test('the now-visible featured article image is eager and high priority', async () => {
+	const card = await readFile(join(projectRoot, 'src', 'lib', 'components', 'blog', 'HomepagePostCard.svelte'), 'utf8');
+	assert.match(card, /loading=\{featured \? 'eager' : 'lazy'\}/);
+	assert.match(card, /fetchpriority=\{featured \? 'high' : undefined\}/);
+});
+
 test('video uses a local keyboard-operable facade before loading privacy-enhanced YouTube', async () => {
 	const page = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
 	assert.match(page, /let videoLoaded = \$state\(false\)/);
@@ -61,6 +67,7 @@ test('video uses a local keyboard-operable facade before loading privacy-enhance
 test('topic artwork stays within the homepage image budget', async () => {
 	const topicsDir = join(projectRoot, 'static', 'images', 'homepage', 'topics');
 	const page = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
+	assert.match(page, /\(max-width: 768px\) 42vw/);
 	assert.match(page, /class="topic-image"[\s\S]*decoding="sync"/);
 	assert.match(page, /loading="lazy"/);
 	assert.match(page, /width=\{topic\.imageSeo\.width \?\? 512\}/);

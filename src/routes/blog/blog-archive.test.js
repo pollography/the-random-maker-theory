@@ -86,6 +86,8 @@ test('shared archive keeps the desktop header compact and groups its summary on 
 	assert.match(archive, /<div class="blog-header-copy">/);
 	assert.match(archive, /<div class="blog-header-meta">[\s\S]*?blog-intro[\s\S]*?blog-count/);
 	assert.match(archive, /\.blog-header\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)\s+minmax\(280px,\s*360px\)/);
+	assert.match(archive, /font-size:\s*clamp\(2\.5rem,\s*6vw,\s*3\.5rem\)/);
+	assert.match(archive, /\.topic-nav a, \.pagination a\s*\{[^}]*display:\s*inline-flex;[^}]*min-height:\s*44px/);
 	assert.match(archive, />Zurück<\/a>/);
 });
 

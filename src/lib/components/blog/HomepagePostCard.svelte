@@ -49,8 +49,9 @@
 				srcset={imageSeo.srcset}
 				sizes={imageSeo.sizes}
 				alt=""
-				loading="lazy"
-				decoding="async"
+				loading={featured ? 'eager' : 'lazy'}
+				fetchpriority={featured ? 'high' : undefined}
+				decoding={featured ? 'sync' : 'async'}
 				width={imageSeo.width ?? 640}
 				height={imageSeo.height ?? 360}
 			/>

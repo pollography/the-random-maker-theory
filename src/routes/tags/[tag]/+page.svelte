@@ -173,8 +173,8 @@
 {/if}
 
 <style>
-	.breadcrumb { display: flex; gap: 8px; padding-top: 28px; color: var(--color-text-muted); font-size: var(--font-size-sm); }
-	.breadcrumb a, .tag-back, .related-topic-links a { color: var(--color-accent-honey); font-weight: var(--font-weight-semibold); text-decoration: none; }
+	.breadcrumb { align-items: center; display: flex; gap: 8px; padding-top: 16px; color: var(--color-text-muted); font-size: var(--font-size-sm); }
+	.breadcrumb a, .tag-back, .related-topic-links a { align-items: center; color: var(--color-accent-honey); display: inline-flex; font-weight: var(--font-weight-semibold); min-height: 44px; text-decoration: none; }
 	.breadcrumb a:hover, .tag-back:hover, .related-topic-links a:hover { color: var(--color-accent-honey-hover); }
 	.tag-header { display: flex; gap: 20px; max-width: 760px; padding: 40px 0 24px; }
 	.tag-header.core-hub { display: grid; grid-template-columns: minmax(0, 1fr) minmax(180px, 240px); align-items: end; gap: 32px; max-width: none; padding-top: 24px; }

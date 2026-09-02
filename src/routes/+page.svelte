@@ -46,7 +46,7 @@
 		...topic,
 		imageSeo: getImageSeo(
 			topic.image,
-			'(max-width: 768px) 56vw, (max-width: 1024px) 30vw, 220px'
+			'(max-width: 768px) 42vw, (max-width: 1024px) 30vw, 220px'
 		)
 	}));
 </script>

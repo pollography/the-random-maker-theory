@@ -45,6 +45,7 @@ test('five configured core topics own the tag hub and sitemap contracts', () => 
 	assert.match(tagPageSource, /BreadcrumbList/);
 	assert.match(tagPageSource, /CollectionPage/);
 	assert.match(tagPageSource, /Weitere Themen/);
+	assert.match(tagPageSource, /\.breadcrumb a, \.tag-back, \.related-topic-links a\s*\{[^}]*display:\s*inline-flex;[^}]*min-height:\s*44px/);
 	assert.match(sitemapSource, /CORE_TOPIC_SLUGS/);
 });
 
