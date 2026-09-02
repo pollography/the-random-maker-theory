@@ -4,7 +4,7 @@ seoTitle: "notebooklm-py: Kostenlose NotebookLM-Recherche für Claude Code & Cod
 description: "notebooklm-py verbindet Claude Code und Codex mit dem kostenlosen Standardzugang von Gemini Notebook für Deep Research. Die Agenten bleiben kostenpflichtig."
 slug: "gemini-notebook-kostenlos-codex-content-workflow"
 date: "2026-09-01"
-tags: ["notebooklm-py", "notebooklm", "codex", "claude-code", "content-workflow", "deep-research"]
+tags: ["notebooklm-py", "notebooklm", "codex", "claude-code", "content-workflow", "deep-research", "ki-tools"]
 category: "ki-tools"
 draft: false
 titleAccent: "Free Deep Research"

@@ -26,6 +26,22 @@ test('falls back to the newest post when the configured slug is missing', () => 
 	);
 });
 
+test('keeps normalized category families unique until every available family is selected', () => {
+	const aliasedPosts = [
+		{ slug: 'featured-news', category: 'ki-news' },
+		{ slug: 'ai-tool', category: 'ai' },
+		{ slug: 'automation', category: 'automation' },
+		{ slug: 'smart-home', category: 'smart-home' },
+		{ slug: 'photo', category: 'photography' },
+		{ slug: 'second-ai', category: 'ki-tools' }
+	];
+
+	assert.deepEqual(
+		selectHomepagePosts(aliasedPosts, 'featured-news', 5).map((post) => post.slug),
+		['featured-news', 'automation', 'smart-home', 'photo', 'ai-tool']
+	);
+});
+
 test('returns no posts for an empty source list', () => {
 	assert.deepEqual(selectHomepagePosts([], 'missing'), []);
 });

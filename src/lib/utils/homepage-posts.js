@@ -1,3 +1,5 @@
+import { normalizeTopicFamily } from '../data/core-topics.js';
+
 /**
  * Select a featured homepage post, then prefer recent posts from other categories.
  * The source list is expected to already be sorted newest first.
@@ -14,14 +16,15 @@ export function selectHomepagePosts(posts, featuredSlug, limit = 4) {
 	const featured = posts.find((post) => post.slug === featuredSlug) ?? posts[0];
 	const selected = [featured];
 	const usedSlugs = new Set([featured.slug]);
-	const usedCategories = new Set(featured.category ? [featured.category] : []);
+	const usedFamilies = new Set([normalizeTopicFamily(featured.category)]);
 
 	for (const post of posts) {
 		if (selected.length >= limit) break;
-		if (usedSlugs.has(post.slug) || !post.category || usedCategories.has(post.category)) continue;
+		const family = normalizeTopicFamily(post.category);
+		if (usedSlugs.has(post.slug) || usedFamilies.has(family)) continue;
 		selected.push(post);
 		usedSlugs.add(post.slug);
-		usedCategories.add(post.category);
+		usedFamilies.add(family);
 	}
 
 	for (const post of posts) {

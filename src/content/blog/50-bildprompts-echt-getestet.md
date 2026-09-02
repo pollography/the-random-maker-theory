@@ -4,7 +4,7 @@ seoTitle: "50 KI-Bilder-Prompts: getestete Beispiele"
 slug: "50-bildprompts-echt-getestet"
 date: "2026-08-30"
 description: "50 extrem kurze Bildprompts im Praxistest: echte Ergebnisse mit demselben Porträt, sinnvolle Use Cases und fertige Folgeprompts zum Kopieren."
-tags: ["ki-bilder", "prompts", "tutorial", "chatgpt", "workflow"]
+tags: ["ki-bilder", "prompts", "tutorial", "chatgpt", "workflow", "ki-tools"]
 category: "ki-tools"
 draft: false
 readingTime: 12
