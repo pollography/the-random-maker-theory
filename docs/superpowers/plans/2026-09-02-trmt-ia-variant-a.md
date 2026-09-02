@@ -39,7 +39,7 @@
 - Produces: `CORE_TOPICS`, `CORE_TOPIC_SLUGS`, `getCoreTopic(slug)`, `normalizeTopicFamily(category)`.
 - Preserves: `selectHomepagePosts(posts, featuredSlug, limit = 4)`.
 
-- [ ] **Step 1: Write failing configuration and selection tests**
+- [x] **Step 1: Write failing configuration and selection tests**
 
 ```js
 import test from 'node:test';
@@ -63,12 +63,12 @@ test('normalizes visible category aliases before homepage selection', () => {
 
 Extend `homepage-posts.test.js` with posts whose raw categories differ but normalized families collide; assert the result contains at most one post per family until all available families are exhausted.
 
-- [ ] **Step 2: Run RED**
+- [x] **Step 2: Run RED**
 
 Run: `node --test src/lib/data/core-topics.test.js src/lib/utils/homepage-posts.test.js`
 Expected: FAIL because `core-topics.js` and normalized selection do not exist.
 
-- [ ] **Step 3: Implement the core configuration and normalized selection**
+- [x] **Step 3: Implement the core configuration and normalized selection**
 
 `core-topics.js` exports frozen records containing `slug`, `name`, `short`, `image`, `starterSlugs`, and `categoryAliases`. Implement `normalizeTopicFamily` with the exact alias families from the spec and `other:<value>` fallback. Update `selectHomepagePosts` to store normalized families instead of raw categories.
 
@@ -80,12 +80,12 @@ The `ki-tools` starter slugs are:
 
 Use the other twelve exact starter slugs from the approved spec. Add `ki-tools` once to each of the two approved article tag arrays without changing any other frontmatter or body line.
 
-- [ ] **Step 4: Run GREEN and focused regressions**
+- [x] **Step 4: Run GREEN and focused regressions**
 
 Run: `node --test src/lib/data/core-topics.test.js src/lib/utils/homepage-posts.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js`
 Expected: all tests PASS.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```powershell
 git add src/lib/data/core-topics.js src/lib/data/core-topics.test.js src/lib/utils/homepage-posts.js src/lib/utils/homepage-posts.test.js src/content/blog/50-bildprompts-echt-getestet.md src/content/blog/gemini-notebook-kostenlos-codex-content-workflow.md
@@ -111,7 +111,7 @@ git commit -m "feat: define TRMT core topic model"
 - Page data: `{ posts, currentPage, totalPages, totalCount }`.
 - `BlogArchive.svelte` consumes page data plus `showFaq` and owns archive markup/head model shared by page 1 and later pages.
 
-- [ ] **Step 1: Write failing pagination tests**
+- [x] **Step 1: Write failing pagination tests**
 
 ```js
 test('sorts by date descending and slug ascending', () => {
@@ -135,16 +135,16 @@ test('splits thirteen posts into twelve plus one without overlap', () => {
 
 Add cases for 0, 1 and 12 posts plus invalid pages. Invalid pages must throw `RangeError` from the pure utility.
 
-- [ ] **Step 2: Run RED**
+- [x] **Step 2: Run RED**
 
 Run: `node --test src/lib/utils/blog-pagination.test.js src/routes/blog/blog-archive.test.js`
 Expected: FAIL because utility, routes and component do not exist.
 
-- [ ] **Step 3: Implement pagination utility and server loaders**
+- [x] **Step 3: Implement pagination utility and server loaders**
 
 `paginatePosts` must clone/sort the input, calculate `totalPages = Math.max(1, Math.ceil(totalCount / pageSize))`, reject non-integer/out-of-range pages, and return only the page slice. Page 1 imports it from `+page.server.ts`. Dynamic `entries()` calculates and returns only strings `2..N`; `load()` accepts only `/^[1-9]\d*$/` and page number >= 2, translating invalid/range errors to SvelteKit `error(404)`.
 
-- [ ] **Step 4: Implement shared archive UI**
+- [x] **Step 4: Implement shared archive UI**
 
 Replace the stateful load-more button with real links. `BlogArchive.svelte` renders:
 
@@ -166,12 +166,12 @@ Replace the stateful load-more button with real links. `BlogArchive.svelte` rend
 
 Page 1 passes `showFaq={true}`; later pages pass `false`. Canonical and title are self-referential. The JSON-LD `ItemList` uses global positions `(currentPage - 1) * 12 + index + 1`.
 
-- [ ] **Step 5: Run GREEN and route-contract regressions**
+- [x] **Step 5: Run GREEN and route-contract regressions**
 
 Run: `node --test src/lib/utils/blog-pagination.test.js src/routes/blog/blog-archive.test.js`
 Expected: all tests PASS, including exactly one server-rendered archive link per published slug and canonical handling.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```powershell
 git add src/lib/utils/blog-pagination.js src/lib/utils/blog-pagination.test.js src/lib/components/blog/BlogArchive.svelte src/routes/blog src/routes/blog/seite
@@ -192,11 +192,11 @@ git commit -m "feat: add crawlable blog pagination"
 - Consumes: `CORE_TOPICS` for all five navigator cards.
 - Preserves: current topic image paths, video facade, podcast, newsletter, FAQ and four-post payload.
 
-- [ ] **Step 1: Record controlled Lighthouse/payload baseline**
+- [x] **Step 1: Record controlled Lighthouse/payload baseline**
 
 Record Lighthouse version, three cold-cache mobile runs, three cold-cache desktop runs, and medians for score/LCP/CLS/TBT/transfer/own JS. Record homepage HTML/Page-Data raw+gzip and initial image requests/bytes. Store only the compact numeric result in the implementation report outside committed source.
 
-- [ ] **Step 2: Write failing homepage contract tests**
+- [x] **Step 2: Write failing homepage contract tests**
 
 Assert source contains:
 
@@ -209,23 +209,23 @@ assert.doesNotMatch(source, /const pillars = \[/);
 
 Assert all five unchanged image paths still come from `CORE_TOPICS`, all images remain lazy/dimensioned, and the exact approved orientation copy is present.
 
-- [ ] **Step 3: Run RED**
+- [x] **Step 3: Run RED**
 
 Run: `node --test src/routes/homepage-ia.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js`
 Expected: FAIL on old CTAs, local pillar duplication and missing orientation block.
 
-- [ ] **Step 4: Implement compact homepage**
+- [x] **Step 4: Implement compact homepage**
 
 Import `CORE_TOPICS`, derive image SEO metadata without duplicating topic facts, change CTA labels/destinations, render the exact approved paragraph under the four-post grid, and reduce layout height. Desktop topic images use a compact landscape aspect; mobile cards remain horizontally scrollable. The image-less featured card uses content height rather than stretching to the right column.
 
 No static image file changes are permitted.
 
-- [ ] **Step 5: Run GREEN and focused regressions**
+- [x] **Step 5: Run GREEN and focused regressions**
 
 Run: `node --test src/routes/homepage-ia.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js src/routes/homepage-a11y.test.js src/lib/utils/homepage-posts.test.js`
 Expected: all tests PASS.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```powershell
 git add src/routes/+page.svelte src/routes/homepage-ia.test.js src/routes/homepage-hybrid.test.js src/routes/homepage-performance.test.js
@@ -247,7 +247,7 @@ git commit -m "feat: surface TRMT articles earlier"
 - Consumes: `CORE_TOPICS`, `CORE_TOPIC_SLUGS`, `getCoreTopic`.
 - Tag page data adds `{ isCoreTopic, topic, starterPosts, remainingPosts }`.
 
-- [ ] **Step 1: Write failing hub and sitemap tests**
+- [x] **Step 1: Write failing hub and sitemap tests**
 
 Tests must assert:
 
@@ -262,29 +262,29 @@ assert.match(sitemapSource, /CORE_TOPIC_SLUGS/);
 
 Load every configured starter slug and assert existence plus exact canonical core tag. Assert an unknown tag throws 404 and a known non-core tag returns `isCoreTopic: false`.
 
-- [ ] **Step 2: Run RED**
+- [x] **Step 2: Run RED**
 
 Run: `node --test src/routes/tag-hubs.test.js src/routes/image-seo-contract.test.js`
 Expected: FAIL because hub data, robots logic and five-tag sitemap filter do not exist.
 
-- [ ] **Step 3: Implement server tag loader**
+- [x] **Step 3: Implement server tag loader**
 
 Fetch all published tags and reject missing params with `error(404)`. For core topics, resolve configured starter posts in configured order and remove those slugs from the dated remainder. Return only serializable metadata. For non-core tags, return the existing exact-tag post list with empty starter data.
 
-- [ ] **Step 4: Implement hub and thin-tag render paths**
+- [x] **Step 4: Implement hub and thin-tag render paths**
 
 Core hubs render `index,follow`, unique metadata, Self-Canonical, breadcrumb, `Hier anfangen`, remaining posts, related core topics, visible FAQ when available, `BreadcrumbList` and `CollectionPage.mainEntity` -> `ItemList`. Non-core tags render `noindex,follow`, no structured collection/FAQ schema, compact header and ordinary post grid. Remove the visible emoji icon from core hub headers only.
 
-- [ ] **Step 5: Restrict sitemap tag URLs**
+- [x] **Step 5: Restrict sitemap tag URLs**
 
 Replace `getAllTags()` for sitemap tag generation with `CORE_TOPIC_SLUGS`. Keep all valid article and episode URLs unchanged. Do not add paginated archive URLs.
 
-- [ ] **Step 6: Run GREEN and regressions**
+- [x] **Step 6: Run GREEN and regressions**
 
 Run: `node --test src/routes/tag-hubs.test.js src/routes/image-seo-contract.test.js src/routes/trmt-image-prompts-seo.test.js`
 Expected: all tests PASS and sitemap tag count is exactly five.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```powershell
 git add src/routes/tags src/routes/sitemap.xml/+server.ts src/routes/tag-hubs.test.js src/routes/image-seo-contract.test.js
@@ -303,23 +303,23 @@ git commit -m "feat: strengthen core topic hubs"
 - Consumes the complete branch.
 - Produces release evidence and a production deployment only after all gates pass.
 
-- [ ] **Step 1: Run complete focused Node suite**
+- [x] **Step 1: Run complete focused Node suite**
 
 Run all repository `*.test.js` files with `node --test`. Expected: 0 failures.
 
-- [ ] **Step 2: Compare Svelte diagnostics as a normalized set**
+- [x] **Step 2: Compare Svelte diagnostics as a normalized set**
 
 Run `npm run check` and parse diagnostics into `file|severity|message`. Expected: no new diagnostics relative to the recorded 78-error/9-warning baseline and none in changed files.
 
-- [ ] **Step 3: Build and crawl**
+- [x] **Step 3: Build and crawl**
 
 Run `npm run build`. Local Vite/SvelteKit compilation must finish; if Windows ends at the known adapter symlink `EPERM`, do not call this a full build. Before production, require a green Linux GitHub Actions/Vercel build. Crawl the built/preview routes with JavaScript disabled and assert page 1 through N expose every published article slug exactly once, invalid pages/tags return 404, and no primary path requires hydration.
 
-- [ ] **Step 4: Browser QA**
+- [x] **Step 4: Browser QA**
 
 Use the in-app Browser workflow against a local preview. Check homepage, `/blog`, `/blog/seite/2`, one core hub and one non-core tag at 1440 x 1000, 390 x 844 and 320 CSS pixels/200 percent text zoom. Verify page identity, meaningful DOM, no framework overlay, console health, screenshots, CTA/pagination interactions, no horizontal page overflow, focus and `aria-current`.
 
-- [ ] **Step 5: Run Impeccable detector**
+- [x] **Step 5: Run Impeccable detector**
 
 Run once after UI completion:
 
@@ -333,11 +333,11 @@ Expected: no unexplained blocking finding.
 
 Repeat the pinned-version three-run mobile and desktop Lighthouse profiles with cold cache. Expected: median Performance and SEO scores, LCP, CLS, TBT, transfer and own JS do not regress. Compare deterministic HTML/Page-Data raw+gzip and image requests/bytes.
 
-- [ ] **Step 7: Independent whole-branch review**
+- [x] **Step 7: Independent whole-branch review**
 
 Create a review package from merge base `167a5f7` through HEAD. Reviewer must return both spec-compliance and code-quality approval; fix Critical/Important findings with reproducing tests and re-review.
 
-- [ ] **Step 8: Scope and cleanliness gate**
+- [x] **Step 8: Scope and cleanliness gate**
 
 Run `git diff --check`, `git diff --cached --check`, `git status --short`, untracked inventory, and `git diff --stat 167a5f7...HEAD`. Expected: only approved files, no image assets, no secrets, no unrelated canonical-checkout changes.
 
