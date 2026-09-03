@@ -1,6 +1,6 @@
 # Claude Fable 5.1 markiert Texte: Was das Wasserzeichen wirklich erkennt — Handoff
 
-Updated: 2026-09-03T03:44:00Z
+Updated: 2026-09-03T03:45:30Z
 
 ## Verified now
 
@@ -11,6 +11,7 @@ Updated: 2026-09-03T03:44:00Z
 - Complete tests passed 125/125; exact eight-token transcript overlap, public radar-source leakage, embedded images and body H1 counts are all zero.
 - Desktop at 1440 px and mobile at 390 px each render one H1 with no page-level overflow. The six proof-boundary cards stack into one column on mobile.
 - Draft PR 2 is open and both Vercel checks pass.
+- Radar issue 1 links to the verified Draft PR and no longer carries `research-needed`.
 
 ## Exact working paths and URLs
 
