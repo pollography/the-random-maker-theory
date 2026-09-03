@@ -197,21 +197,34 @@ ${summary}
 `;
 }
 
-async function fetchXml(url, label) {
-	const controller = new AbortController();
-	const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
-	try {
-		const response = await fetch(url, {
-			headers: { 'user-agent': 'TRMT-Chase-Content-Radar/1.0 (+https://therandommakertheory.com)' },
-			signal: controller.signal
-		});
-		if (!response.ok) throw new Error(`${label} returned HTTP ${response.status}`);
-		const xml = await response.text();
-		if (!xml.trim()) throw new Error(`${label} returned an empty response`);
-		return xml;
-	} finally {
-		clearTimeout(timeout);
+export function youtubeFeedCandidates({ youtubeFeed, channelId }) {
+	const uploadsPlaylist = channelId?.startsWith('UC')
+		? `https://www.youtube.com/feeds/videos.xml?playlist_id=UU${channelId.slice(2)}`
+		: null;
+	return [...new Set([youtubeFeed, uploadsPlaylist].filter(Boolean))];
+}
+
+export async function fetchXmlFromCandidates(urls, label, { fetchImpl = fetch } = {}) {
+	let lastError = null;
+	for (const url of urls) {
+		const controller = new AbortController();
+		const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+		try {
+			const response = await fetchImpl(url, {
+				headers: { 'user-agent': 'TRMT-Chase-Content-Radar/1.0 (+https://therandommakertheory.com)' },
+				signal: controller.signal
+			});
+			if (!response.ok) throw new Error(`${label} returned HTTP ${response.status}`);
+			const xml = await response.text();
+			if (!xml.trim()) throw new Error(`${label} returned an empty response`);
+			return xml;
+		} catch (error) {
+			lastError = error;
+		} finally {
+			clearTimeout(timeout);
+		}
 	}
+	throw new Error(`${label} failed across ${urls.length} endpoint(s): ${lastError?.message ?? 'no endpoint configured'}`);
 }
 
 async function main() {
@@ -221,8 +234,8 @@ async function main() {
 		: DEFAULT_CONFIG;
 	const config = JSON.parse(await readFile(configUrl, 'utf8'));
 	const [youtubeXml, blogXml] = await Promise.all([
-		fetchXml(config.youtubeFeed, 'YouTube feed'),
-		fetchXml(config.blogFeed, 'Blog feed')
+		fetchXmlFromCandidates(youtubeFeedCandidates(config), 'YouTube feed'),
+		fetchXmlFromCandidates([config.blogFeed], 'Blog feed')
 	]);
 	const result = collectCandidates({
 		youtubeXml,
