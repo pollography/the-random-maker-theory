@@ -13,15 +13,15 @@
 </script>
 
 <svelte:head>
-	<title>{data.episode.title} | TRMT</title>
+	<title>Podcast: {data.episode.title} | TRMT</title>
 	<meta name="description" content={data.episode.description} />
-	<meta property="og:title" content={data.episode.title} />
+	<meta property="og:title" content={`Podcast: ${data.episode.title}`} />
 	<meta property="og:description" content={data.episode.description} />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content={canonicalUrl} />
 	<meta property="og:image" content={socialImageUrl} />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={data.episode.title} />
+	<meta name="twitter:title" content={`Podcast: ${data.episode.title}`} />
 	<meta name="twitter:description" content={data.episode.description} />
 	<meta name="twitter:image" content={socialImageUrl} />
 	<link rel="canonical" href={canonicalUrl} />

@@ -36,6 +36,8 @@ npm run build
 
 Preview with `npm run preview`.
 
+On Windows, `@sveltejs/adapter-vercel` creates route symlinks in `.vercel/output`. If the build ends after successful Vite/Svelte compilation with `EPERM: operation not permitted, symlink`, enable Windows Developer Mode once or run the terminal elevated. The production build runs on Vercel's Linux environment and does not need this Windows privilege. See [`docs/development/WINDOWS-VERCEL-BUILD.md`](docs/development/WINDOWS-VERCEL-BUILD.md).
+
 ## Project Structure
 
 ```

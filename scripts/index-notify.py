@@ -5,16 +5,15 @@ Benachrichtigt Suchmaschinen nach jedem Deploy ueber neue/aktualisierte Seiten.
 
 Methoden:
 1. IndexNow (Bing, Yandex, Naver, DuckDuckGo - braucht API Key in static/)
-2. Google Search Console API (optional, fuer URL-spezifische Indexierung)
 
 HINWEIS: Google/Bing Sitemap Ping Endpoints sind seit 2023 deprecated.
-IndexNow ist jetzt der Standard-Weg fuer sofortige Indexierung.
+Google entdeckt TRMT ueber die Sitemap und Search Console. Die Google Indexing
+API ist fuer normale Blogartikel nicht zulaessig.
 
 USAGE:
-  python index-notify.py                    # IndexNow + optional GSC
+  python index-notify.py                    # Neue URLs via IndexNow melden
   python index-notify.py --urls-only        # Nur neue URLs submitten
   python index-notify.py --setup-indexnow   # IndexNow Key generieren
-  python index-notify.py --setup-gsc        # Google Search Console einrichten
   python index-notify.py --dry-run          # Nur anzeigen, nichts senden
 """
 
@@ -35,8 +34,6 @@ SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 INDEXNOW_KEY_FILE = PROJECT_DIR / "static" / "indexnow-key.txt"
 LAST_URLS_FILE = SCRIPT_DIR / ".last-indexed-urls.json"
-GSC_CREDENTIALS_FILE = SCRIPT_DIR / "gsc-service-account.json"
-GSC_PROPERTY = "https://therandommakertheory.com/"
 
 
 # ============================================================
@@ -127,92 +124,6 @@ def submit_indexnow(urls, key=None):
 
 
 # ============================================================
-# Google Search Console API (URL Inspection + Indexing)
-# ============================================================
-
-def setup_gsc():
-    """Anleitung fuer Google Search Console API Setup."""
-    print("=== Google Search Console API Setup ===\n")
-    print("Fuer automatische URL-Indexierung bei Google:\n")
-    print("1. Google Cloud Console: https://console.cloud.google.com")
-    print("2. Neues Projekt erstellen (oder bestehendes nutzen)")
-    print("3. 'Web Search Indexing API' aktivieren")
-    print("   -> APIs & Services -> Library -> 'Indexing API' suchen")
-    print("4. Service Account erstellen:")
-    print("   -> APIs & Services -> Credentials -> Create Credentials")
-    print("   -> Service Account -> Name: 'trmt-indexing'")
-    print("5. JSON Key erstellen:")
-    print("   -> Service Account anklicken -> Keys -> Add Key -> JSON")
-    print(f"6. JSON-Datei hierher kopieren: {GSC_CREDENTIALS_FILE}")
-    print("7. Service Account Email in Search Console als 'Owner' hinzufuegen:")
-    print("   -> Search Console -> Settings -> Users and permissions")
-    print("   -> Add user -> Email aus dem JSON (endet auf @...iam.gserviceaccount.com)")
-    print("   -> Permission: Owner")
-    print("\nDanach: python index-notify.py")
-    print("Das Script nutzt dann automatisch die Google Indexing API.")
-
-
-def submit_to_google(urls):
-    """URLs via Google Indexing API submitten."""
-    if not GSC_CREDENTIALS_FILE.exists():
-        print("[SKIP] Google Indexing API: Kein Service Account.")
-        print("       Nutze --setup-gsc fuer Setup-Anleitung.")
-        return False
-
-    try:
-        from google.oauth2 import service_account
-        from googleapiclient.discovery import build
-    except ImportError:
-        print("[SKIP] Google Indexing API: google-api-python-client nicht installiert.")
-        print("       pip install google-api-python-client google-auth")
-        return False
-
-    try:
-        credentials = service_account.Credentials.from_service_account_file(
-            str(GSC_CREDENTIALS_FILE),
-            scopes=["https://www.googleapis.com/auth/indexing"]
-        )
-        service = build("indexing", "v3", credentials=credentials)
-    except Exception as e:
-        print(f"[ERROR] Google Auth fehlgeschlagen: {e}")
-        return False
-
-    success_count = 0
-    error_count = 0
-
-    # Google Indexing API: Max 200 Requests/Tag fuer neue Properties
-    # Nur neue URLs submitten, nicht alle
-    for url in urls[:200]:
-        try:
-            body = {
-                "url": url,
-                "type": "URL_UPDATED"
-            }
-            service.urlNotifications().publish(body=body).execute()
-            success_count += 1
-            # Rate limiting: max 1 Request pro Sekunde
-            time.sleep(1.1)
-        except Exception as e:
-            error_str = str(e)
-            if "429" in error_str or "rateLimitExceeded" in error_str:
-                print(f"[WAIT] Google Rate Limit nach {success_count} URLs. Stop.")
-                break
-            else:
-                error_count += 1
-                if error_count <= 3:
-                    print(f"[WARN] Google Indexing ({url}): {e}")
-                elif error_count == 4:
-                    print("[WARN] Weitere Fehler unterdrueckt...")
-
-    if success_count > 0:
-        print(f"[OK] Google Indexing API: {success_count} URLs submitted")
-    if error_count > 0:
-        print(f"[WARN] Google Indexing API: {error_count} Fehler")
-
-    return success_count > 0
-
-
-# ============================================================
 # Sitemap + URL Tracking
 # ============================================================
 
@@ -260,8 +171,6 @@ def main():
     parser = argparse.ArgumentParser(description="TRMT Auto-Indexing")
     parser.add_argument("--setup-indexnow", action="store_true",
                         help="IndexNow API Key generieren")
-    parser.add_argument("--setup-gsc", action="store_true",
-                        help="Google Search Console API Setup-Anleitung")
     parser.add_argument("--urls-only", action="store_true",
                         help="Nur neue URLs submitten")
     parser.add_argument("--dry-run", action="store_true",
@@ -272,10 +181,6 @@ def main():
 
     if args.setup_indexnow:
         setup_indexnow()
-        return
-
-    if args.setup_gsc:
-        setup_gsc()
         return
 
     print("=== TRMT Auto-Indexing ===\n")
@@ -320,12 +225,7 @@ def main():
         submit_indexnow(urls_to_submit)
         print()
 
-        # 4. Google Indexing API (wenn eingerichtet)
-        print("--- Google Indexing API ---")
-        submit_to_google(urls_to_submit)
-        print()
-
-    # 5. URL-Stand speichern
+    # 4. URL-Stand speichern
     save_indexed_urls(all_urls)
     print(f"URL-Stand gespeichert ({len(all_urls)} URLs)")
     print("\nFertig!")

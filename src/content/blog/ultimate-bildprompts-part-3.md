@@ -467,4 +467,4 @@ Ein guter Bildprompt muss nicht ewig lang sein. Er muss nur die Teile benennen, 
 
 Die Slash-Namen helfen mir beim Merken. Der vollständige Prompt erzeugt das brauchbare Ergebnis. Diese Trennung behalte ich für die nächsten Tests bei.
 
-[Alle 147 Prompts in der Library öffnen](/tools/bildprompt-library) · [Das Part-3-PDF herunterladen](/downloads/trmt-ultimate-bildprompts-part-3.pdf) · [Zurück zu Part 2](/blog/ultimate-bildprompts-part-2)
+[Alle 147 Prompts in der Library öffnen](/tools/bildprompt-library) · [Das Part-3-PDF herunterladen](/downloads/trmt-ultimate-bildprompts-part-3.pdf) · [24 präzise Creative Briefs vergleichen](/blog/praezise-bildprompts-weniger-zufall) · [Zurück zu Part 2](/blog/ultimate-bildprompts-part-2)
