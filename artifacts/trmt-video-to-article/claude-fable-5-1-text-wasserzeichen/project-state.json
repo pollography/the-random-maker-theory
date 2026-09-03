@@ -3,14 +3,14 @@
   "slug": "claude-fable-5-1-text-wasserzeichen",
   "title": "Claude Fable 5.1 markiert Texte: Was das Wasserzeichen wirklich erkennt",
   "created_at": "2026-09-03T03:27:31Z",
-  "updated_at": "2026-09-03T03:40:38Z",
-  "phase": "release",
-  "status": "active",
+  "updated_at": "2026-09-03T03:44:00Z",
+  "phase": "complete",
+  "status": "complete",
   "publication_status": "draft",
   "source_completeness": "complete",
   "visual_style_status": "not-needed",
-  "current_step": "Create and verify the authorized Draft PR",
-  "next_step": "Link the Draft PR in radar issue 1 and remove research-needed",
+  "current_step": "Draft PR 2 is open and its Vercel checks pass",
+  "next_step": "Keep the article in draft until publication is reviewed and explicitly approved",
   "blockers": [],
   "approvals": {
     "article_scope": {
@@ -35,5 +35,5 @@
       "decided_at": null
     }
   },
-  "last_verified_at": "2026-09-03T03:40:38Z"
+  "last_verified_at": "2026-09-03T03:44:00Z"
 }

@@ -1,6 +1,6 @@
 # Claude Fable 5.1 markiert Texte: Was das Wasserzeichen wirklich erkennt — Handoff
 
-Updated: 2026-09-03T03:40:38Z
+Updated: 2026-09-03T03:44:00Z
 
 ## Verified now
 
@@ -10,6 +10,7 @@ Updated: 2026-09-03T03:40:38Z
 - Focused article tests passed 2/2 after the required failing state.
 - Complete tests passed 125/125; exact eight-token transcript overlap, public radar-source leakage, embedded images and body H1 counts are all zero.
 - Desktop at 1440 px and mobile at 390 px each render one H1 with no page-level overflow. The six proof-boundary cards stack into one column on mobile.
+- Draft PR 2 is open and both Vercel checks pass.
 
 ## Exact working paths and URLs
 
@@ -18,6 +19,7 @@ Updated: 2026-09-03T03:40:38Z
 - Draft: `src/content/blog/claude-fable-5-1-text-wasserzeichen.md`
 - Preview: `http://127.0.0.1:5187/preview/claude-fable-5-1-text-wasserzeichen` during QA
 - Radar issue: `https://github.com/pollography/the-random-maker-theory/issues/1`
+- Draft PR: `https://github.com/pollography/the-random-maker-theory/pull/2`
 
 ## Completed changes
 
@@ -38,4 +40,4 @@ Updated: 2026-09-03T03:40:38Z
 
 ## Next safe action
 
-Commit the verified draft scope, push the isolated branch and open the authorized Draft PR. Let remote CI provide the platform build result.
+Leave the article in draft until its publication is reviewed and explicitly approved. Do not merge or publish automatically.
