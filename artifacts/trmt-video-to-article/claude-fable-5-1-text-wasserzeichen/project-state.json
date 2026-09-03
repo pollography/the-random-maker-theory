@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "slug": "claude-fable-5-1-text-wasserzeichen",
+  "title": "Claude Fable 5.1 markiert Texte: Was das Wasserzeichen wirklich erkennt",
+  "created_at": "2026-09-03T03:27:31Z",
+  "updated_at": "2026-09-03T07:20:54Z",
+  "phase": "release",
+  "status": "active",
+  "publication_status": "ready",
+  "source_completeness": "complete",
+  "visual_style_status": "approved",
+  "current_step": "Run final release QA on the published article and approved hero scope",
+  "next_step": "Merge Draft PR 2 after remote checks, then verify the live URL",
+  "blockers": [],
+  "approvals": {
+    "article_scope": {
+      "status": "approved",
+      "scope": [
+        "One German draft article for radar issue 1",
+        "Separate codex branch and draft pull request"
+      ],
+      "evidence": "Heartbeat automation instructions for trmt-themenradar-redaktionspipeline",
+      "decided_at": "2026-09-03T03:26:47Z"
+    },
+    "visual_direction": {
+      "status": "approved",
+      "scope": [
+        "static/images/blog/claude-fable-5-1-text-wasserzeichen-1.webp",
+        "static/images/blog/claude-fable-5-1-text-wasserzeichen-1-thumb.webp",
+        "static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2.webp",
+        "static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2-thumb.webp"
+      ],
+      "evidence": "User message on 2026-09-03: the current image direction is approved and the needed images may go onto the website.",
+      "decided_at": "2026-09-03T07:20:54Z"
+    },
+    "publication": {
+      "status": "approved",
+      "scope": [
+        "src/content/blog/claude-fable-5-1-text-wasserzeichen.md",
+        "static/images/blog/claude-fable-5-1-text-wasserzeichen-1.webp",
+        "static/images/blog/claude-fable-5-1-text-wasserzeichen-1-thumb.webp",
+        "static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2.webp",
+        "static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2-thumb.webp"
+      ],
+      "evidence": "User message on 2026-09-03 explicitly authorized putting the verified article and image scope onto the website.",
+      "decided_at": "2026-09-03T07:20:54Z"
+    }
+  },
+  "last_verified_at": "2026-09-03T07:20:54Z"
+}
