@@ -6,9 +6,11 @@ slug: "claude-fable-5-1-text-wasserzeichen"
 date: "2026-09-03"
 tags: ["claude", "fable-5-1", "ki-tools", "analyse", "eu-ai-act"]
 category: "ki-tools"
-draft: true
+draft: false
 titleAccent: "Wasserzeichen"
 readingTime: 8
+heroImage: "/images/blog/claude-fable-5-1-text-wasserzeichen-1.webp"
+heroImageThumb: "/images/blog/claude-fable-5-1-text-wasserzeichen-1-thumb.webp"
 ---
 
 **Claude Fable 5.1 versieht neu erzeugte Texte mit einem unsichtbaren statistischen Wasserzeichen. Der Marker verrät weder deine Identität noch beweist er menschliche oder künstliche Autorschaft; dieser Artikel zeigt, was tatsächlich erkannt wird, wo die Grenzen liegen und warum redaktionelle Verantwortung wichtiger bleibt als ein Detektorwert.**

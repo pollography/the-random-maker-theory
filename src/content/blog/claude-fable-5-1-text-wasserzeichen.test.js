@@ -1,10 +1,14 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
+import { fileURLToPath } from 'node:url';
+import { readImageDimensions } from '../../../scripts/generate-image-metadata.mjs';
 
 const articlePath = new URL('./claude-fable-5-1-text-wasserzeichen.md', import.meta.url);
+const heroPath = new URL('../../../static/images/blog/claude-fable-5-1-text-wasserzeichen-1.webp', import.meta.url);
+const thumbPath = new URL('../../../static/images/blog/claude-fable-5-1-text-wasserzeichen-1-thumb.webp', import.meta.url);
 
-test('watermark article stays draft-only, independently sourced and useful without becoming an evasion guide', () => {
+test('watermark article is publication-ready, independently sourced and useful without becoming an evasion guide', () => {
 	const article = readFileSync(articlePath, 'utf8');
 	const body = article.replace(/^---[\s\S]*?---\s*/, '');
 	const headings = body.match(/^##\s+.+/gm) ?? [];
@@ -14,7 +18,9 @@ test('watermark article stays draft-only, independently sourced and useful witho
 	assert.match(article, /^seoTitle: "Claude Fable 5\.1 Wasserzeichen: Funktion und Grenzen"$/m);
 	assert.match(article, /^slug: "claude-fable-5-1-text-wasserzeichen"$/m);
 	assert.match(article, /^date: "2026-09-03"$/m);
-	assert.match(article, /^draft:\s*true$/m);
+	assert.match(article, /^draft:\s*false$/m);
+	assert.match(article, /^heroImage: "\/images\/blog\/claude-fable-5-1-text-wasserzeichen-1\.webp"$/m);
+	assert.match(article, /^heroImageThumb: "\/images\/blog\/claude-fable-5-1-text-wasserzeichen-1-thumb\.webp"$/m);
 	assert.doesNotMatch(body, /^#\s+/m, 'the route owns the single public H1');
 	assert.ok(opening.length >= 180 && opening.length <= 520, `opening thesis length was ${opening.length}`);
 	assert.match(opening, /Claude Fable 5\.1/);
@@ -32,6 +38,11 @@ test('watermark article stays draft-only, independently sourced and useful witho
 	assert.doesNotMatch(article, /chase|youtube|slePq-H-TMA|transkript/i);
 	assert.doesNotMatch(article, /ollama|lokales modell|detektor austricksen|watermark entfernen/i);
 	assert.doesNotMatch(article, /ich habe getestet|mein test|wir haben/i);
+});
+
+test('watermark article ships a native 16:9 hero and thumbnail', () => {
+	assert.deepEqual(readImageDimensions(fileURLToPath(heroPath)), { width: 1200, height: 675, format: 'webp' });
+	assert.deepEqual(readImageDimensions(fileURLToPath(thumbPath)), { width: 400, height: 225, format: 'webp' });
 });
 
 test('watermark article distinguishes signal, authorship and legal disclosure', () => {

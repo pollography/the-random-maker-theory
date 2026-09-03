@@ -1,6 +1,37 @@
 {
   "schema_version": 1,
   "project_slug": "claude-fable-5-1-text-wasserzeichen",
-  "assets": [],
-  "editorial_decision": "No visual is contentually necessary for the draft; no borrowed or generated asset is included."
+  "assets": [
+    {
+      "id": "ASSET-001",
+      "role": "hero",
+      "path": "static/images/blog/claude-fable-5-1-text-wasserzeichen-1.webp",
+      "status": "final",
+      "prompt_or_capture_source": "visual-brief.md#final-generation-direction",
+      "reference_images": [
+        "static/images/blog/gemini-notebook-kostenlos-codex-content-workflow-2.webp",
+        "C:/Users/Pollo/.codex/skills/pollo-blog/assets/trmt-crafted-editorial-material-reference-v2.webp",
+        "C:/Users/Pollo/.codex/skills/pollo-blog/assets/trmt-crafted-editorial-comedy-reference-v1.webp"
+      ],
+      "one_second_sentence": "A blank paper ribbon reveals a hidden statistical pattern only while passing through a keyed scanner.",
+      "dimensions": {"width": 1200, "height": 675},
+      "alt_text": "Mini-Pollo zieht ein scheinbar leeres Papierband durch einen schlüssellochförmigen Scanner, der ein Punktmuster sichtbar macht.",
+      "creator": "just.pollo",
+      "license": "Original TRMT publication asset; no third-party screenshot, logo or interface."
+    },
+    {
+      "id": "ASSET-002",
+      "role": "thumbnail",
+      "path": "static/images/blog/claude-fable-5-1-text-wasserzeichen-1-thumb.webp",
+      "status": "final",
+      "prompt_or_capture_source": "Responsive derivative of ASSET-001",
+      "reference_images": ["static/images/blog/claude-fable-5-1-text-wasserzeichen-1.webp"],
+      "one_second_sentence": "The keyed scanner still reveals the hidden paper pattern at card size.",
+      "dimensions": {"width": 400, "height": 225},
+      "alt_text": "",
+      "creator": "just.pollo",
+      "license": "Responsive derivative of the original TRMT hero asset."
+    }
+  ],
+  "editorial_decision": "A dedicated hero now explains the invisible-pattern mechanism and remains distinct from the independently approved NotebookLM workflow image."
 }

@@ -6,12 +6,12 @@
 | Claim fidelity | PASS | Evidence ledger separates vendor claims, published research, EU rules and omitted radar claims. | Human editorial review before merge. |
 | Public provenance | PASS | Public copy links primary sources, contains no creator/video attribution and shares zero exact eight-token windows with the English radar transcript. | None for draft. |
 | Article structure | PASS | No body H1; 1–2 sentence thesis; scan block, responsive proof cards, practical sequence and FAQ present. | Human editorial review before merge. |
-| Visual gate | PASS | No visual is necessary; no screenshot or generated image included. | None for draft. |
-| Links and assets | PASS | Primary and internal links are explicit; article has no asset dependency. | Check rendered links during browser QA. |
-| Desktop/mobile preview | PASS | Browser readback at 1440 px and 390 px found exactly one H1, no page-level overflow and six responsive proof cards; both layouts were visually inspected. | None for draft. |
-| Targeted tests | PASS | Focused test passed 2/2 after a verified missing-file RED state; complete suite passed 125/125. | None for draft. |
+| Visual gate | PASS | Original 16:9 keyed-scanner hero uses one complete approximately 59%-high Mini-Pollo, one readable cause-and-effect, physical contact and no text/logo/interface contamination. | None. |
+| Links and assets | PASS | Primary and internal links are explicit; 1200 × 675 hero and 400 × 225 thumbnail exist and are present in generated metadata. | None. |
+| Desktop/mobile preview | PASS | Fresh browser readback at 1440 px and 390 px found exactly one H1 and no page-level overflow. The hero renders at 736 × 414 px and 326 × 183 px; both crops were visually inspected. | Repeat against the live URL after merge. |
+| Targeted tests | PASS | Fable and NotebookLM publication/hero contracts passed 9/9 after the required RED state; the complete suite passed 126/126. | None. |
 | Build and static check | TEILWEISE | Vite compiled complete client and server bundles. The Vercel adapter then hit the known Windows `EPERM` symlink restriction. `svelte-check` reports 99 existing errors and 9 warnings in ten unchanged files, with no diagnostic in the article or its test. | Let remote CI run in the Draft PR; do not claim a clean project-wide check. |
-| Release scope | PASS | Isolated branch; article remains `draft: true`; main checkout untouched. | Push branch and create Draft PR only. |
+| Release scope | PASS | User approved the exact article plus Fable hero and NotebookLM hero replacement; the article is `draft: false` in the isolated branch and the dirty main checkout remains untouched. | Merge only after final local and remote checks pass. |
 
 ## Known baseline failures
 
@@ -20,5 +20,5 @@
 
 ## Final boundary
 
-- Draft readiness: PASS with the two project-baseline limitations above recorded for remote CI and human review.
-- Publication readiness: UNKNOWN; human review and explicit merge/publication approval remain required.
+- Draft readiness: PASS.
+- Publication readiness: PASS for the approved scope, subject to remote deployment and live-URL verification.
