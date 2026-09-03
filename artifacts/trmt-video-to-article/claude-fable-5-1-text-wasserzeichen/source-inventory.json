@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "project_slug": "claude-fable-5-1-text-wasserzeichen",
+  "source_completeness": "complete",
+  "sources": [
+    {
+      "id": "S-RADAR-VIDEO",
+      "type": "video",
+      "locator": "https://www.youtube.com/watch?v=slePq-H-TMA",
+      "status": "extracted",
+      "paired_source_ids": ["S-RADAR-CAPTIONS"],
+      "notes": "Internal topic radar only. Captions plus eight scene-aware frames were inspected; wording, hooks, screenshots and experience claims are excluded from public copy.",
+      "sha256": "2431041a6070fb2cc577883ecf1c193fa8256283fc149fc366465e73c8c00885",
+      "duration_seconds": 614,
+      "page_count": null
+    },
+    {
+      "id": "S-RADAR-CAPTIONS",
+      "type": "transcript",
+      "locator": "C:\\Users\\Pollo\\AppData\\Local\\Temp\\trmt-chase-slePq-H-TMA-20260903\\transcript.txt",
+      "status": "extracted",
+      "paired_source_ids": ["S-RADAR-VIDEO"],
+      "notes": "Cleaned English captions used only to inventory topic claims before independent verification.",
+      "sha256": "c6f541cd21534e77ea0ab9965a85d91a3382e854b6dc0c17713d278071d5e95c",
+      "duration_seconds": null,
+      "page_count": null
+    },
+    {
+      "id": "S-ANTHROPIC-LAUNCH",
+      "type": "url",
+      "locator": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Primary source for Fable 5.1 availability, launch-time watermark scope and private detection API.",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null
+    },
+    {
+      "id": "S-ANTHROPIC-WATERMARK",
+      "type": "url",
+      "locator": "https://www.anthropic.com/news/claude-text-watermark",
+      "status": "available",
+      "paired_source_ids": ["S-NATURE-SYNTHID"],
+      "notes": "Primary vendor explanation for mechanism, limits, privacy, editing, translations, code and C2PA.",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null
+    },
+    {
+      "id": "S-EU-GUIDELINES",
+      "type": "url",
+      "locator": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-ai-transparency-obligations",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official EU source for Article 50 application date and provider/deployer distinction.",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null
+    },
+    {
+      "id": "S-DEEPMIND-SYNTHID",
+      "type": "url",
+      "locator": "https://deepmind.google/blog/watermarking-ai-generated-text-and-video-with-synthid/",
+      "status": "available",
+      "paired_source_ids": ["S-NATURE-SYNTHID"],
+      "notes": "Primary developer explanation for token-probability modulation and non-silver-bullet boundary.",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null
+    },
+    {
+      "id": "S-NATURE-SYNTHID",
+      "type": "url",
+      "locator": "https://www.nature.com/articles/s41586-024-08025-4",
+      "status": "available",
+      "paired_source_ids": ["S-ANTHROPIC-WATERMARK", "S-DEEPMIND-SYNTHID"],
+      "notes": "Open-access research paper for SynthID-Text sampling, detection and quality evaluation.",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null
+    },
+    {
+      "id": "S-TRMT-FABLE-PRICE",
+      "type": "markdown",
+      "locator": "src/content/blog/claude-fable-5-1-preis-benchmarks.md",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Existing TRMT article used only for internal continuity and to avoid duplicating the price/benchmark angle.",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null
+    }
+  ],
+  "pairings": [
+    {
+      "source_ids": ["S-RADAR-VIDEO", "S-RADAR-CAPTIONS"],
+      "reason": "Captions establish spoken claims while scene-aware frames establish what was visibly shown; neither is public evidence."
+    },
+    {
+      "source_ids": ["S-ANTHROPIC-WATERMARK", "S-DEEPMIND-SYNTHID", "S-NATURE-SYNTHID"],
+      "reason": "Vendor-specific implementation claims are separated from the underlying published method and its measured limits."
+    }
+  ],
+  "missing_or_unavailable": []
+}

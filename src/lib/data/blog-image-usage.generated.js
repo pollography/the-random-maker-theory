@@ -139,6 +139,7 @@ export const blogImageUsage = {
 	"claude-fable-5-1-preis-benchmarks": [
 		"/images/blog/claude-fable-5-1-preis-benchmarks-1.webp"
 	],
+	"claude-fable-5-1-text-wasserzeichen": [],
 	"ein-foto-vier-slash-befehle-ki-bilder": [
 		"/images/blog/ein-foto-vier-slash-befehle-ki-bilder-1.webp",
 		"/images/blog/ein-foto-vier-slash-befehle-ki-bilder-ausgangsbild.webp",
