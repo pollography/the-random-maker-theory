@@ -6,8 +6,8 @@
 | --- | --- | --- |
 | Google Images Discovery | PASS | Die bestehende `/sitemap.xml` nutzt die Google-Image-Erweiterung. Eine zweite Bild-Sitemap ist nicht notwendig. |
 | Bilddateien und Metadaten | PASS | Alle referenzierten Prompt-, Artikel- und Live-Sitemap-Bilder sind erreichbar und lokal bekannt. |
-| Große Bildvorschauen | PARTIAL | `max-image-preview:large` ist lokal global ergänzt und geprüft; der Produktions-Readback folgt nach dem Release. |
-| Doppelte Seitentitel | PARTIAL | Podcast-Detailseiten erhalten lokal den Präfix `Podcast:`. Damit werden die vier aktuell gemeldeten Blog/Podcast-Paare unterschieden; der Produktions-Readback folgt nach dem Release. |
+| Große Bildvorschauen | PASS | `max-image-preview:large` ist global veröffentlicht und auf der Produktionsdomain bestätigt. |
+| Doppelte Seitentitel | PASS | Podcast-Detailseiten verwenden live den Präfix `Podcast:` und unterscheiden damit die vier gemeldeten Blog/Podcast-Paare. |
 | Google Indexing API | PASS | Die ungeeignete automatische Übermittlung normaler Blogseiten ist aus beiden Skripten entfernt. |
 | Inhaltliche Kannibalisierung | PASS | Der stärkste Themencluster `prompt engineering` verteilt 214 Impressionen auf genau eine URL. Aktuell ist keine Kannibalisierung belegt. Die übrigen Gruppen bleiben Beobachtungskandidaten. |
 | Search Console Live-Daten | PASS | Mit `info@pollography.de` geprüft: Property aktiv, Sitemap erfolgreich, keine manuelle Maßnahme, kein Sicherheitsproblem. |
@@ -36,7 +36,7 @@ Lokal ergänzt:
 
 - `<meta name="robots" content="max-image-preview:large" />` in `src/app.html`
 
-Diese Direktive wird mit diesem freigegebenen Release veröffentlicht und danach live geprüft.
+Diese Direktive ist veröffentlicht und auf `https://therandommakertheory.com/` live bestätigt.
 
 ## Technischer SEO-Readback
 
@@ -136,3 +136,6 @@ Interne Beobachtungsschwelle, keine Google-Regel: mindestens 50 Impressionen fü
 - `npm run build`: Svelte-/Vite-Anwendung vollständig kompiliert; danach bekannte Windows-`EPERM`-Sperre beim Vercel-Adapter-Symlink für `api/indexnow.func`
 - `git diff --check`: bestanden; nur Zeilenende-Hinweise
 - Search Console read-only geprüft; kein Nutzerrecht geändert, kein Sitemap-Eintrag entfernt und kein Indexierungsrequest ausgelöst
+- Vercel Preview- und Produktionsbuild unter Linux: vollständig bestanden
+- Produktions-Readback: Startseite, Podcast, Library, Hub und Sitemap HTTP 200; große Bildvorschau, Podcast-Titel, 147 beschreibende Library-Anker, beide Hub-Links sowie 95 Seiten- und 611 Bild-Sitemap-Einträge bestätigt
+- Pull Request 3 in `main` integriert; der anschließende Git-basierte Produktionsbuild ist `Ready` und bedient `https://therandommakertheory.com`
