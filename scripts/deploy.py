@@ -3,7 +3,8 @@
 TRMT Unified Deploy & Index Script
 ===================================
 Ein Script fuer alles: Git commit/push, Vercel deploy abwarten,
-Suchmaschinen benachrichtigen (IndexNow + Google Indexing API).
+Suchmaschinen benachrichtigen (IndexNow). Google entdeckt TRMT ueber die
+Sitemap und Search Console; die Google Indexing API ist fuer Blogartikel nicht zulaessig.
 
 USAGE:
   python scripts/deploy.py                # Full deploy: git + index
@@ -39,7 +40,6 @@ SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 INDEXNOW_KEY_FILE = PROJECT_DIR / "static" / "indexnow-key.txt"
 LAST_URLS_FILE = SCRIPT_DIR / ".last-indexed-urls.json"
-GSC_CREDENTIALS_FILE = SCRIPT_DIR / "gsc-service-account.json"
 
 # Farben fuer Terminal Output (Windows + Unix)
 if sys.platform == "win32":
@@ -277,63 +277,6 @@ def submit_indexnow(urls, dry_run=False):
 
 
 # ============================================================
-# Google Indexing API
-# ============================================================
-
-def submit_google(urls, dry_run=False):
-    if not GSC_CREDENTIALS_FILE.exists():
-        log_skip("Google Indexing API: Kein Service Account (gsc-service-account.json)")
-        return False
-
-    try:
-        from google.oauth2 import service_account
-        from googleapiclient.discovery import build
-    except ImportError:
-        log_skip("Google API Libraries fehlen: pip install google-api-python-client google-auth")
-        return False
-
-    if dry_run:
-        log_info(f"[DRY RUN] Wuerde {len(urls)} URLs an Google senden")
-        return True
-
-    try:
-        credentials = service_account.Credentials.from_service_account_file(
-            str(GSC_CREDENTIALS_FILE),
-            scopes=["https://www.googleapis.com/auth/indexing"]
-        )
-        service = build("indexing", "v3", credentials=credentials)
-    except Exception as e:
-        log_err(f"Google Auth fehlgeschlagen: {e}")
-        return False
-
-    success_count = 0
-    error_count = 0
-
-    for url in urls[:200]:  # Max 200/Tag fuer neue Properties
-        try:
-            service.urlNotifications().publish(
-                body={"url": url, "type": "URL_UPDATED"}
-            ).execute()
-            success_count += 1
-            time.sleep(1.1)  # Rate limit: 1 req/s
-        except Exception as e:
-            error_str = str(e)
-            if "429" in error_str or "rateLimitExceeded" in error_str:
-                log_warn(f"Google Rate Limit nach {success_count} URLs. Stop.")
-                break
-            error_count += 1
-            if error_count <= 3:
-                log_warn(f"Google ({url}): {e}")
-
-    if success_count > 0:
-        log_ok(f"Google Indexing API: {success_count} URLs submitted")
-    if error_count > 0:
-        log_warn(f"Google Indexing API: {error_count} Fehler")
-
-    return success_count > 0
-
-
-# ============================================================
 # Sitemap + URL Tracking
 # ============================================================
 
@@ -387,12 +330,6 @@ def main():
     if args.setup:
         print(f"{BOLD}--- IndexNow Setup ---{RESET}")
         setup_indexnow()
-        print(f"\n{BOLD}--- Google Indexing API ---{RESET}")
-        if GSC_CREDENTIALS_FILE.exists():
-            log_ok("Service Account vorhanden")
-        else:
-            log_warn("gsc-service-account.json fehlt")
-            log_info("Setup: python scripts/deploy.py (altes Script: --setup-gsc)")
         return
 
     # ---- PHASE 1: GIT DEPLOY ----
@@ -443,10 +380,6 @@ def main():
         # IndexNow (Bing, Yandex, DuckDuckGo, Naver)
         print()
         submit_indexnow(urls_to_submit, dry_run=args.dry_run)
-
-        # Google Indexing API
-        print()
-        submit_google(urls_to_submit, dry_run=args.dry_run)
 
     # URL-Stand speichern
     if not args.dry_run:

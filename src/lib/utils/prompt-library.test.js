@@ -168,6 +168,11 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(card, /copyPromptText/);
 	assert.match(card, /getPromptCopyText/);
 	assert.match(card, /Ausführlicher Prompt/);
+	assert.match(
+		card,
+		/<a href="\/blog\/\{prompt\.articleSlug\}">\{prompt\.title\}: Beispiel &amp; Anwendung<\/a>/
+	);
+	assert.doesNotMatch(card, />Beispiel &amp; Anwendung<\/a>/);
 	assert.match(library, /type="search"/);
 	assert.match(library, /Prompt suchen/);
 	assert.match(library, /filterPrompts/);

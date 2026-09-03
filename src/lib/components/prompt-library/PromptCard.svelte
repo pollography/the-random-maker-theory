@@ -121,7 +121,7 @@
 		</ul>
 
 		<div class="card-footer">
-			<a href="/blog/{prompt.articleSlug}">Beispiel &amp; Anwendung</a>
+			<a href="/blog/{prompt.articleSlug}">{prompt.title}: Beispiel &amp; Anwendung</a>
 			<p class:error={statusState === 'error'} aria-live="polite">{status}</p>
 		</div>
 	</div>

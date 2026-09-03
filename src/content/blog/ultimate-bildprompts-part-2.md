@@ -180,3 +180,5 @@ Für Ideenfindung reichen fünf Sekunden und ein Begriff. Für ein Thumbnail, ei
 Genau deshalb zeigt diese Serie beides: die spontane Magie des Ein-Wort-Prompts und den weniger spektakulären Schritt, der das Ergebnis tatsächlich brauchbar macht.
 
 [Mit den ersten 50 Bildprompts beginnen](/blog/50-bildprompts-echt-getestet) · [Teil 1 mit Spielzeug und Sammlerstücken öffnen](/blog/bildprompts-spielzeug-sammlerstuecke)
+
+Wenn dir ein Begriff allein zu zufällig ist: [36 ausführliche Bildprompts mit Platzhaltern öffnen](/blog/ultimate-bildprompts-part-3) · [24 präzise Creative Briefs für mehr Kontrolle öffnen](/blog/praezise-bildprompts-weniger-zufall)

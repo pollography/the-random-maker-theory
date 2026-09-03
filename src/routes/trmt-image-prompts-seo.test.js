@@ -73,6 +73,23 @@ test('the prompt hubs connect readers with the filterable library', async () => 
 	assert.match(people, /\]\(\/blog\/ein-foto-vier-slash-befehle-ki-bilder\)/);
 });
 
+test('the established prompt hubs lead to both detailed-prompt collections', async () => {
+	const [mainHub, partTwo, partThree, precisePrompts] = await Promise.all([
+		readRepoFile('content/blog/50-bildprompts-echt-getestet.md'),
+		readRepoFile('content/blog/ultimate-bildprompts-part-2.md'),
+		readRepoFile('content/blog/ultimate-bildprompts-part-3.md'),
+		readRepoFile('content/blog/praezise-bildprompts-weniger-zufall.md')
+	]);
+
+	for (const hub of [mainHub, partTwo]) {
+		assert.match(hub, /\]\(\/blog\/ultimate-bildprompts-part-3\)/);
+		assert.match(hub, /\]\(\/blog\/praezise-bildprompts-weniger-zufall\)/);
+	}
+
+	assert.match(partThree, /\]\(\/blog\/praezise-bildprompts-weniger-zufall\)/);
+	assert.match(precisePrompts, /\]\(\/blog\/ultimate-bildprompts-part-3\)/);
+});
+
 test('the filterable library links to both editorial hubs and the explainer', async () => {
 	const library = await readRepoFile('routes/tools/bildprompt-library/+page.svelte');
 	for (const route of [

@@ -17,6 +17,11 @@ test('sitemap declares and emits Google image entries', () => {
 	assert.match(sitemap, /renderImageEntries/);
 });
 
+test('global head allows large Google image previews', () => {
+	const app = read('src/app.html');
+	assert.match(app, /<meta name="robots" content="max-image-preview:large" \/>/);
+});
+
 test('podcast and tag pages publish explicit social preview images', () => {
 	const podcast = read('src/routes/podcast/[slug]/+page.svelte');
 	const tags = read('src/routes/tags/[tag]/+page.svelte');

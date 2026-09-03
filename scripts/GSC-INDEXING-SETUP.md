@@ -1,72 +1,28 @@
-# Google Indexing API Setup (optional, aber geil)
+# Google-Indexierung fuer TRMT
 
-IndexNow deckt Bing, Yandex, DuckDuckGo und Naver ab.
-Fuer Google brauchst du die Indexing API separat.
+## Was nicht verwendet wird
 
-## Was das bringt
-- Neue Blog-Posts werden Google direkt gemeldet
-- Laeuft automatisch mit `deploy.bat`
-- Statt Tage/Wochen warten: Stunden
+Die Google Indexing API ist kein allgemeiner Beschleuniger fuer Blogartikel. Google erlaubt sie nur fuer Seiten mit `JobPosting` oder fuer Livestream-Seiten mit `BroadcastEvent` in einem `VideoObject`. TRMT hat keine solchen Seitentypen, deshalb senden `index-notify.py` und `deploy.py` keine TRMT-URLs an diese API.
 
-## Schritt 1: Google Cloud Console
+## Unterstuetzter Google-Weg
 
-Falls du schon ein Projekt hast (z.B. TRMT-YouTube), nutze das.
+1. Im Chrome-Profil `info@pollography` mit `TEAM Pollography (info@pollography.de)` arbeiten.
+2. In der Google Search Console die bestaetigte Property `https://therandommakertheory.com/` oeffnen.
+3. Die bereits erfolgreich eingereichte Sitemap `https://therandommakertheory.com/sitemap.xml` wird von Google wiederholt gelesen. Sie muss nicht nach jedem Artikel neu eingereicht werden.
+4. Nach einem Release im Bericht **Seitenindexierung** auf neue Fehler oder ausgeschlossene kanonische URLs pruefen.
+5. Im Bericht **Leistung** die letzten 28 Tage mit dem vorherigen Zeitraum vergleichen. Fuer die Bild-Lane den Suchtyp **Bild** separat auswaehlen.
+6. Nur einzelne wichtige neue oder deutlich ueberarbeitete URLs bei Bedarf mit der URL-Pruefung kontrollieren und dort einen erneuten Crawl anfragen. Das ist eine manuelle Anfrage und nicht die Indexing API.
 
-1. https://console.cloud.google.com
-2. **APIs & Services** -> **Library**
-3. Suche: `Web Search Indexing API` (NICHT "Custom Search")
-4. **Enable**
+Die Sitemap steht bereits in `static/robots.txt`. Sie enthaelt normale Seiten-URLs und die zugeordneten Bilder ueber Googles Image-Sitemap-Erweiterung.
 
-## Schritt 2: Service Account erstellen
+Ausfuehrliche Betriebs- und Berechtigungshinweise stehen in `docs/seo/SEARCH-CONSOLE-OPERATIONS.md`.
 
-1. **APIs & Services** -> **Credentials**
-2. **+ CREATE CREDENTIALS** -> **Service account**
-   - Name: `trmt-indexing`
-   - Create and Continue
-   - Role: kannst du skippen -> Done
-3. Klick auf den neuen Service Account
-4. Tab **Keys** -> **Add Key** -> **Create new key** -> **JSON**
-5. Datei hierhin verschieben:
+## Andere Suchmaschinen
 
-```
-the-random-maker-theory/scripts/gsc-service-account.json
-```
+`python scripts/index-notify.py` bleibt fuer IndexNow zustaendig. Das betrifft unterstuetzende Suchmaschinen, aber nicht Google.
 
-## Schritt 3: Service Account in Search Console eintragen
+## Quellen
 
-1. Oeffne die JSON-Datei und kopiere die `client_email` (sieht so aus: `trmt-indexing@trmt-youtube-xxxx.iam.gserviceaccount.com`)
-2. Geh zu https://search.google.com/search-console
-3. **Settings** (Zahnrad) -> **Users and permissions**
-4. **Add user**
-   - Email: die `client_email` von oben einfuegen
-   - Permission: **Owner**
-   - Add
-
-## Schritt 4: Python-Pakete
-
-```bash
-pip install google-api-python-client google-auth
-```
-
-(Wenn du YouTube-Upload schon eingerichtet hast, ist das schon installiert)
-
-## Schritt 5: Testen
-
-```bash
-cd the-random-maker-theory
-python scripts/index-notify.py --dry-run
-```
-
-Sollte zeigen: "Google Indexing API: X URLs submitted" (im nicht-dry-run Modus)
-
-## Limits
-
-- Neue Properties: 200 URLs/Tag
-- Etablierte Properties: bis zu 2.000 URLs/Tag
-- Das Script respektiert Rate Limits automatisch
-
-## Fertig
-
-Ab jetzt meldet `deploy.bat` nach jedem Push automatisch neue URLs an:
-- Bing, Yandex, DuckDuckGo, Naver (via IndexNow)
-- Google (via Indexing API)
+- https://developers.google.com/search/apis/indexing-api/v3/using-api
+- https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+- https://support.google.com/webmasters/answer/7451001

@@ -257,6 +257,8 @@ Darunter sind Begriffe wie `/tinyWorkers`, `/designerToy`, `/comicStrip`, `/plus
 
 [36 neue Ultimate Bildprompts mit allen Ergebnissen öffnen](/blog/ultimate-bildprompts-part-2)
 
+Wenn dir ein einzelner Begriff zu zufällig ist, kannst du direkt mit mehr Kontrolle weitermachen: [36 ausführliche Bildprompts mit Platzhaltern](/blog/ultimate-bildprompts-part-3) oder [24 präzise Creative Briefs mit echten Beispielen](/blog/praezise-bildprompts-weniger-zufall).
+
 ## Mein Fazit
 
 Der kürzeste Prompt ist selten der fertige Prompt.

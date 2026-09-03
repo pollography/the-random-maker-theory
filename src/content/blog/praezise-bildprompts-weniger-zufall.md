@@ -401,6 +401,8 @@ Der entscheidende Schritt ist nicht, möglichst viele Adjektive anzuhäufen. Du 
 
 Alle 24 Creative Briefs liegen zusammen mit den 87 kurzen Tests in der [TRMT Bildprompt-Library](/tools/bildprompt-library). Dort kannst du nach Einsatz und Kategorie filtern, das echte Ergebnis öffnen und den vollständigen Prompt direkt kopieren. Für offline gibt es zusätzlich das [PDF mit allen 24 präzisen Bildprompts](/downloads/trmt-praezise-bildprompts.pdf).
 
+Noch mehr Vorlagen mit austauschbaren Platzhaltern findest du in den [36 ausführlichen Bildprompts aus Part 3](/blog/ultimate-bildprompts-part-3).
+
 ## Quellen zur Prompt-Struktur
 
 - [OpenAI: GPT Image Prompting Guide](https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide)
