@@ -2,13 +2,15 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { test } from 'node:test';
 
-import {
+import * as radarModule from './chase-content-radar.mjs';
+
+const {
 	buildIssueBody,
 	collectCandidates,
 	pairBlogWithVideos,
 	parseBlogRss,
 	parseYouTubeAtom
-} from './chase-content-radar.mjs';
+} = radarModule;
 
 const youtubeFixture = `<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:yt="http://www.youtube.com/xml/schemas/2015">
@@ -98,10 +100,37 @@ test('issue body makes the independent-research and human-release gates explicit
 	assert.match(body, /<!-- chase-source:youtube:onL8VFMzxsA -->/);
 });
 
-test('GitHub workflow runs remotely every four hours and can create durable radar issues', () => {
+test('YouTube acquisition falls back from the channel feed to the uploads playlist', async () => {
+	assert.equal(typeof radarModule.youtubeFeedCandidates, 'function');
+	assert.equal(typeof radarModule.fetchXmlFromCandidates, 'function');
+
+	const urls = radarModule.youtubeFeedCandidates({
+		channelId: 'UCoy6cTJ7Tg0dqS-DI-_REsA',
+		youtubeFeed: 'https://www.youtube.com/feeds/videos.xml?channel_id=UCoy6cTJ7Tg0dqS-DI-_REsA'
+	});
+	const requested = [];
+	const xml = await radarModule.fetchXmlFromCandidates(urls, 'YouTube feed', {
+		fetchImpl: async (url) => {
+			requested.push(url);
+			if (requested.length === 1) {
+				return { ok: false, status: 404, text: async () => '' };
+			}
+			return { ok: true, status: 200, text: async () => youtubeFixture };
+		}
+	});
+
+	assert.equal(xml, youtubeFixture);
+	assert.deepEqual(requested, [
+		'https://www.youtube.com/feeds/videos.xml?channel_id=UCoy6cTJ7Tg0dqS-DI-_REsA',
+		'https://www.youtube.com/feeds/videos.xml?playlist_id=UUoy6cTJ7Tg0dqS-DI-_REsA'
+	]);
+});
+
+test('GitHub workflow runs at 07:07 and 18:07 in Europe/Berlin and can create durable radar issues', () => {
 	const workflow = readFileSync('.github/workflows/chase-content-radar.yml', 'utf8');
 
-	assert.match(workflow, /cron: ['"]7 \*\/4 \* \* \*['"]/);
+	assert.match(workflow, /cron: ['"]7 7,18 \* \* \*['"]/);
+	assert.match(workflow, /timezone: ['"]Europe\/Berlin['"]/);
 	assert.match(workflow, /issues:\s*write/);
 	assert.match(workflow, /scripts\/chase-content-radar\.mjs/);
 	assert.match(workflow, /actions\/github-script@v8/);
