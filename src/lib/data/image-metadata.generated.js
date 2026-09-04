@@ -1296,6 +1296,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/gpt-6-astra-claude-fable-5-1-vergleich-1-thumb.webp": {
+		"width": 800,
+		"height": 450,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/gpt-6-astra-claude-fable-5-1-vergleich-1-thumb.webp",
+				"width": 800
+			},
+			{
+				"src": "/images/blog/gpt-6-astra-claude-fable-5-1-vergleich-1.webp",
+				"width": 1600
+			}
+		]
+	},
+	"/images/blog/gpt-6-astra-claude-fable-5-1-vergleich-1.webp": {
+		"width": 1600,
+		"height": 900,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/gpt-6-astra-claude-fable-5-1-vergleich-1-thumb.webp",
+				"width": 800
+			},
+			{
+				"src": "/images/blog/gpt-6-astra-claude-fable-5-1-vergleich-1.webp",
+				"width": 1600
+			}
+		]
+	},
 	"/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-1-chart.webp": {
 		"width": 1200,
 		"height": 651,

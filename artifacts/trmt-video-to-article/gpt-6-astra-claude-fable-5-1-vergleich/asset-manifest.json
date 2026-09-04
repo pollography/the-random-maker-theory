@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-claude-fable-5-1-vergleich",
+  "assets": [
+    {
+      "id": "V-001-hero",
+      "path": "static/images/blog/gpt-6-astra-claude-fable-5-1-vergleich-1.webp",
+      "role": "article_hero",
+      "dimensions": "1600x900",
+      "bytes": 108920,
+      "sha256": "08D82B2F9149B23845206CE8F2242EC3C89EBBDDF839466C708805756C37DB87",
+      "origin": "OpenAI built-in image generation with user-approved local character references",
+      "rights": "newly generated project asset; no source screenshot or third-party editorial image",
+      "qa": "pass"
+    },
+    {
+      "id": "V-001-thumb",
+      "path": "static/images/blog/gpt-6-astra-claude-fable-5-1-vergleich-1-thumb.webp",
+      "role": "responsive_thumbnail",
+      "dimensions": "800x450",
+      "bytes": 33090,
+      "sha256": "F2A4EC9DDE4BCA7A00A278F2F3C5D5590D20725862059C0688C265632C681554",
+      "origin": "derived from V-001-hero",
+      "rights": "same as V-001-hero",
+      "qa": "pass"
+    }
+  ]
+}
