@@ -1,6 +1,6 @@
 # GPT-6 Astra vs. Claude Fable 5.1 - Handoff
 
-Updated: 2026-09-04T16:37:13Z
+Updated: 2026-09-04T16:39:11Z
 
 ## Verified now
 
@@ -16,6 +16,7 @@ Updated: 2026-09-04T16:37:13Z
 - Hero: `static/images/blog/gpt-6-astra-claude-fable-5-1-vergleich-1.webp`
 - Repository: `https://github.com/pollography/the-random-maker-theory`
 - Radar issue: `https://github.com/pollography/the-random-maker-theory/issues/7`
+- Draft PR: `https://github.com/pollography/the-random-maker-theory/pull/8`
 - Local preview: `http://127.0.0.1:5197/preview/gpt-6-astra-claude-fable-5-1-vergleich`
 
 ## Completed changes
@@ -24,6 +25,7 @@ Updated: 2026-09-04T16:37:13Z
 - Added native 16:9 hero and responsive thumbnail plus generated metadata entries.
 - Added a focused article contract test and full evidence/rights/QA dossier.
 - Preserved `draft: true`; no production publication or main-branch mutation.
+- Opened Draft PR #8 and verified both Vercel checks successfully.
 
 ## Open, unknown, or blocked
 
@@ -39,4 +41,4 @@ Updated: 2026-09-04T16:37:13Z
 
 ## Next safe action
 
-Open the verified Draft PR, link it to issue #7 and remove `research-needed` only after the PR exists.
+Human editorial review of Draft PR #8. Refresh volatile prices and rollout status immediately before any later publication.

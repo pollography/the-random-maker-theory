@@ -12,6 +12,7 @@
 | Desktop/mobile preview | PASS | Local preview rendered at desktop and 390x844; one H1; hero loaded 1600x900; no document-level horizontal overflow; table has its own scroll area | None |
 | Targeted tests | PASS | 2/2 article contract tests; draft QA 0 errors; 135/135 repository JS tests when node_modules is excluded | None |
 | Production build | PASS WITH BASELINE WARNINGS | `npm run build` completed; Svelte emitted existing Card/MindMap warnings | Existing warnings are outside this article scope |
+| Remote Draft PR checks | PASS | Draft PR #8 is open; Vercel deployment and Preview Comments both succeeded | None |
 | Release scope | PASS | Diff contains only article, test, two generated images, generated metadata and dossier | Keep `draft: true`; do not merge/publish without human review |
 
 ## Known baseline failures
