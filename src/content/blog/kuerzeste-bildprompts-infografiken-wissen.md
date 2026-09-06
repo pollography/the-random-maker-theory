@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/kuerzeste-bildprompts-infografiken-wissen-1-thumb.
 titleAccent: "Infografiken & Wissen"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">Teil 5</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>Sechs Mini-Prompts erzeugen Mindmaps, Lernkarten, Infografiken, Timelines und Vergleiche.</li>
 		<li>Die Layouts sind oft erstaunlich brauchbar.</li>
@@ -31,9 +31,11 @@ Die sechs Prompts in diesem Teil erzeugten erstaunlich schnell typische Wissensf
 
 Das ist der entscheidende Unterschied zwischen **Informationsdesign** und **Information**.
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 35. `/mindMap`: Persönlichkeit aus dem Nichts
 
@@ -59,7 +61,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine neue Mind
 
 **Für dieses Beispiel eingesetzt:** Projekte, Lernen, Werkzeuge, Ideen, Ziele und Experimente.
 
-![Ergebnis des kontrollierten Prompts: Mindmap mit sechs vorgegebenen Hauptästen](/images/blog/ki-bildprompts/followups/35-mind-map-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: mindmap mit sechs vorgegebenen Hauptästen](/images/blog/ki-bildprompts/followups/35-mind-map-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage behält die Mindmap-Struktur, ersetzt erfundene Eigenschaften aber durch sechs von dir festgelegte Hauptäste.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -90,7 +98,13 @@ Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle e
 
 **Für dieses Beispiel eingesetzt:** Cyan als Rahmenfarbe.
 
-![Ergebnis des kontrollierten Prompts: leere Lernkarte mit Platzhalterlinien](/images/blog/ki-bildprompts/followups/36-flashcard-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: leere Lernkarte mit Platzhalterlinien](/images/blog/ki-bildprompts/followups/36-flashcard-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage erzeugt nur das Gerüst einer Lernkarte und ersetzt erfundene Definitionen durch sichtbare Platzhalterlinien.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -119,7 +133,13 @@ Das Ergebnis sah nach einer fertigen Style-Infografik aus: Porträt, Farbpalette
 Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle eine neue 4:5-Infografik-Vorlage mit einem großen Motivfeld, genau fünf Farbfeldern, genau vier neutralen kreisförmigen Icon-Platzhaltern und genau drei leeren Textbereichen aus grauen Linien. Übernimm die erkennbaren Merkmale des Motivs aus Bild 1. Keine Eigenschaften, Fakten, Wörter, Buchstaben, Zahlen oder Logos erfinden.
 ```
 
-![Ergebnis des kontrollierten Prompts: textfreie Infografik-Vorlage](/images/blog/ki-bildprompts/followups/37-infographic-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: textfreie Infografik-Vorlage](/images/blog/ki-bildprompts/followups/37-infographic-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage reduziert die fertige wirkende Infografik auf ein visuelles Wireframe ohne erfundene Aussagen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -150,7 +170,13 @@ Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle e
 
 **Für dieses Beispiel eingesetzt:** 2021, 2022, 2023, 2024, 2025 und 2026.
 
-![Ergebnis des kontrollierten Prompts: Timeline mit sechs vorgegebenen Jahreszahlen](/images/blog/ki-bildprompts/followups/38-timeline-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: timeline mit sechs vorgegebenen Jahreszahlen](/images/blog/ki-bildprompts/followups/38-timeline-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage behält die horizontale Zeitachse, verwendet aber ausschließlich sechs von dir vorgegebene Jahreszahlen und leere Inhaltsflächen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -179,7 +205,13 @@ Das Ergebnis kombinierte großes Porträt, Farbfelder, Symbole, kleine Beispielb
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen visuellen Character Guide ohne Fließtext. Zeige genau ein großes Porträt, eine Frontansicht, eine Profilansicht, fünf Farbfelder und drei Detailausschnitte charakteristischer sichtbarer Merkmale aus Bild 1. Verwende ausschließlich die Labels „Porträt“, „Profil“, „Farben“ und „Details“. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine weiteren Wörter oder Logos.
 ```
 
-![Ergebnis des kontrollierten Prompts: klar begrenzter Character Guide](/images/blog/ki-bildprompts/followups/39-visual-guide-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: klar begrenzter Character Guide](/images/blog/ki-bildprompts/followups/39-visual-guide-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage verwandelt den vagen Guide in ein fest definiertes Character-Board mit nur vier erlaubten Labels.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -208,7 +240,13 @@ Die KI stellte zwei fast identische Porträts nebeneinander. Rechts wirkte das G
 Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle einen sauberen 16:9-Vergleich. Links erscheint das Motiv aus Bild 1 als farbige Fotodarstellung, rechts dasselbe Motiv als schwarzweiße Bleistiftzeichnung. Identischer Ausschnitt, identische Position und identischer Ausdruck. Keine Beschriftung, kein Rahmen, keine weiteren Veränderungen und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: Foto und Bleistiftzeichnung im direkten Vergleich](/images/blog/ki-bildprompts/followups/40-comparison-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: foto und Bleistiftzeichnung im direkten Vergleich](/images/blog/ki-bildprompts/followups/40-comparison-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage definiert ein einziges sichtbares Vergleichskriterium: Foto links, Bleistiftzeichnung rechts.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

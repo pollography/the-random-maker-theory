@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { copyPromptText } from '$lib/utils/prompt-actions.js';
-	import { getPromptCopyText, getPromptThumbnail } from '$lib/utils/prompt-library.js';
+	import { fillPromptTemplate, getPromptCopyText, getPromptThumbnail } from '$lib/utils/prompt-library.js';
 	import { getImageSeo } from '$lib/utils/image-seo.js';
 
 	type Prompt = {
@@ -19,18 +19,28 @@
 		controlledPromptText?: string;
 		controlledImage?: string;
 		controlledAlt?: string;
+		controlledEvidenceStatus?: string;
+		comparisonVerdict?: string;
+		comparisonReason?: string;
+		controlledInputNote?: string;
+		controlledExampleValues?: Partial<Record<string, string>>;
+		controlledSecondaryPromptText?: string;
+		controlledSecondaryLabel?: string;
+		controlledSecondaryExampleValues?: Partial<Record<string, string>>;
 	};
 
 	let {
 		prompt,
 		categoryLabel,
 		onPreview,
-		priority = false
+		priority = false,
+		controlledSearchMatch = false
 	}: {
 		prompt: Prompt;
 		categoryLabel: string;
 		onPreview: (prompt: Prompt, trigger: HTMLButtonElement) => void;
 		priority?: boolean;
+		controlledSearchMatch?: boolean;
 	} = $props();
 	let activeVariant = $state<'short' | 'controlled'>('short');
 	let hasControlledVariant = $derived(Boolean(
@@ -62,6 +72,25 @@
 		'(max-width: 720px) calc(100vw - 40px), (max-width: 1100px) calc(50vw - 42px), 340px'
 	));
 	let copyText = $derived(getPromptCopyText(prompt, activeVariant));
+	let exampleCopyText = $derived(getPromptCopyText(prompt, 'controlled-example'));
+	let evidenceLabel = $derived(
+		prompt.controlledEvidenceStatus === 'retested'
+			? 'Mit dieser Vorlage neu getestet'
+			: 'Beispiel für die gewünschte Richtung'
+	);
+	let verdictLabel = $derived(
+		prompt.comparisonVerdict === 'short'
+			? 'Ein-Wort-Test gewinnt'
+			: prompt.comparisonVerdict === 'controlled'
+				? 'Kontrollierte Vorlage gewinnt'
+				: 'Kommt auf dein Ziel an'
+	);
+	let exampleEntries = $derived(Object.entries(prompt.controlledExampleValues ?? {}));
+	let secondaryExampleEntries = $derived(Object.entries(prompt.controlledSecondaryExampleValues ?? {}));
+	let secondaryExampleCopyText = $derived(fillPromptTemplate(
+		prompt.controlledSecondaryPromptText ?? '',
+		prompt.controlledSecondaryExampleValues
+	));
 	let status = $state('');
 	let statusState = $state<'success' | 'error'>('success');
 	let statusTimer: ReturnType<typeof setTimeout> | undefined;
@@ -75,13 +104,17 @@
 		}, 2800);
 	}
 
-	async function copyPrompt() {
+	async function copyTextValue(text: string, successMessage = 'Kopiert') {
 		try {
-			await copyPromptText(copyText, navigator.clipboard, document);
-			showStatus('Kopiert', 'success');
+			await copyPromptText(text, navigator.clipboard, document);
+			showStatus(successMessage, 'success');
 		} catch {
 			showStatus('Bitte manuell markieren', 'error');
 		}
+	}
+
+	function copyPrompt() {
+		return copyTextValue(copyText);
 	}
 
 	onDestroy(() => {
@@ -114,6 +147,11 @@
 	<div class="card-body">
 		<p class="category">{categoryLabel}</p>
 		<h2>{prompt.title}</h2>
+		{#if controlledSearchMatch}
+			<button type="button" class="search-match" onclick={() => activeVariant = 'controlled'}>
+				Treffer in der kontrollierten Vorlage
+			</button>
+		{/if}
 
 		{#if hasControlledVariant}
 			<div class="variant-switch" role="group" aria-label="{prompt.title}: Promptvariante wählen">
@@ -123,8 +161,11 @@
 			<p class="variant-note">
 				{activeVariant === 'short'
 					? 'Schneller Überraschungstest mit dem kurzen Begriff.'
-					: 'Gleiche Idee, genauer vorgegeben und nur mit dem Originalbild.'}
+					: 'Gleiche Idee, genauer vorgegeben und mit den dafür genannten Originalbildern.'}
 			</p>
+			{#if activeVariant === 'controlled'}
+				<p class:verified={prompt.controlledEvidenceStatus === 'retested'} class="evidence-note">{evidenceLabel}</p>
+			{/if}
 		{/if}
 
 		<div class="command-row">
@@ -150,13 +191,49 @@
 		{#if activeVariant === 'controlled' && prompt.controlledPromptText}
 			<details class="prompt-details">
 				<summary>Kontrollierten Prompt anzeigen</summary>
+				{#if prompt.controlledInputNote}<p class="input-note"><strong>Dafür brauchst du:</strong> {prompt.controlledInputNote}</p>{/if}
 				<p>{prompt.controlledPromptText}</p>
+				{#if exampleEntries.length > 0}
+					<div class="example-values">
+						<strong>Beispiel aus diesem Test</strong>
+						<dl>
+							{#each exampleEntries as [field, value]}
+								<div><dt>{field}</dt><dd>{value}</dd></div>
+							{/each}
+						</dl>
+						<button type="button" onclick={() => copyTextValue(exampleCopyText, 'Beispiel kopiert')}>Beispiel-Prompt kopieren</button>
+					</div>
+				{/if}
+				{#if prompt.controlledSecondaryPromptText}
+					<div class="secondary-prompt">
+						<strong>{prompt.controlledSecondaryLabel ?? 'Zweiter Schritt'}</strong>
+						<p>{prompt.controlledSecondaryPromptText}</p>
+						{#if secondaryExampleEntries.length > 0}
+							<dl>
+								{#each secondaryExampleEntries as [field, value]}
+									<div><dt>{field}</dt><dd>{value}</dd></div>
+								{/each}
+							</dl>
+						{/if}
+						<button type="button" onclick={() => copyTextValue(prompt.controlledSecondaryPromptText ?? '', 'Schritt 2 kopiert')}>Neutrale Vorlage kopieren</button>
+						{#if secondaryExampleEntries.length > 0}
+							<button type="button" onclick={() => copyTextValue(secondaryExampleCopyText, 'Beispiel 2 kopiert')}>Beispiel aus Schritt 2 kopieren</button>
+						{/if}
+					</div>
+				{/if}
 			</details>
 		{:else if prompt.promptType === 'detailed' && prompt.promptText}
 			<details class="prompt-details">
 				<summary>Vollständigen Prompt anzeigen</summary>
 				<p>{prompt.promptText}</p>
 			</details>
+		{/if}
+
+		{#if hasControlledVariant && prompt.comparisonReason}
+			<div class="verdict">
+				<strong>Direkter Vergleich: {verdictLabel}</strong>
+				<p>{prompt.comparisonReason}</p>
+			</div>
 		{/if}
 
 		<ul class="use-cases" aria-label="Einsatzmöglichkeiten">
@@ -304,6 +381,29 @@
 		line-height: 1.4;
 	}
 
+	.search-match {
+		align-self: flex-start;
+		margin-top: 8px;
+		padding: 5px 8px;
+		background: color-mix(in srgb, var(--color-accent-teal) 11%, transparent);
+		border: 1px solid color-mix(in srgb, var(--color-accent-teal) 32%, transparent);
+		border-radius: var(--radius-full);
+		color: var(--color-accent-teal);
+		font-size: 0.62rem;
+		font-weight: 800;
+		cursor: pointer;
+	}
+
+	.evidence-note {
+		margin: 7px 2px 0;
+		color: var(--color-text-dim);
+		font-size: 0.63rem;
+		font-weight: 750;
+		line-height: 1.35;
+	}
+
+	.evidence-note.verified { color: var(--color-accent-teal); }
+
 	.command-row {
 		display: flex;
 		align-items: center;
@@ -357,6 +457,52 @@
 		font-size: 0.65rem;
 		line-height: 1.55;
 	}
+
+	.prompt-details .input-note {
+		font-family: var(--font-sans);
+	}
+
+	.example-values,
+	.secondary-prompt {
+		margin-top: 11px;
+		padding-top: 10px;
+		border-top: 1px solid var(--color-border-subtle);
+		color: var(--color-text-muted);
+		font-size: 0.66rem;
+	}
+
+	.example-values dl,
+	.secondary-prompt dl { display: grid; gap: 5px; margin: 8px 0; }
+	.example-values dl div,
+	.secondary-prompt dl div { display: grid; grid-template-columns: minmax(80px, 0.7fr) 1.3fr; gap: 8px; }
+	.example-values dt,
+	.secondary-prompt dt { color: var(--color-text-dim); font-family: var(--font-mono); }
+	.example-values dd,
+	.secondary-prompt dd { margin: 0; }
+	.example-values button,
+	.secondary-prompt button {
+		min-height: 36px;
+		padding: 7px 9px;
+		background: var(--color-surface);
+		border: 1px solid var(--color-border-soft);
+		border-radius: var(--radius-sm);
+		color: var(--color-text);
+		font: 750 0.66rem var(--font-sans);
+		cursor: pointer;
+	}
+
+	.secondary-prompt button + button { margin-left: 6px; }
+
+	.verdict {
+		margin-top: 12px;
+		padding: 10px 11px;
+		background: color-mix(in srgb, var(--color-accent-honey) 7%, var(--color-base));
+		border: 1px solid color-mix(in srgb, var(--color-accent-honey) 22%, var(--color-border-subtle));
+		border-radius: var(--radius-md);
+	}
+
+	.verdict strong { color: var(--color-text); font-size: 0.68rem; line-height: 1.35; }
+	.verdict p { margin: 4px 0 0; color: var(--color-text-muted); font-size: 0.65rem; line-height: 1.45; }
 
 	code {
 		min-width: 0;

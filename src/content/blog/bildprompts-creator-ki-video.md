@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/bildprompts-creator-ki-video-1-thumb.webp"
 titleAccent: "Creator & KI-Video"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>`/brandBoard`, `/merchMockup`, `/contactSheet` und `/storyboard` liefern sofort brauchbare Konzeptbilder.</li>
 		<li>Branding, Produktversprechen und Texte werden ungefragt erfunden und dürfen nicht ungeprüft veröffentlicht werden.</li>
@@ -29,9 +29,11 @@ Diese sechs Begriffe zielen genau auf diese Pipeline. Einige liefern überrasche
 
 ![Ausgangsporträt für die Creator- und Video-Tests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 81. `/brandBoard`: Eine komplette Marke aus dem Nichts
 
@@ -57,7 +59,13 @@ Nutze ausschließlich Bild 1 als feste Personen- oder Motivreferenz. Erstelle ei
 
 **Für dieses Beispiel eingesetzt:** Nordlicht Studio; warm, klar und neugierig; Türkis, Orange, Anthrazit und warmes Weiß; geometrisch und freundlich.
 
-![Ergebnis des kontrollierten Prompts: begrenztes Brand-Moodboard ohne erfundene Versprechen](/images/blog/ki-bildprompts/followups/81-brand-board-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: begrenztes Brand-Moodboard ohne erfundene Versprechen](/images/blog/ki-bildprompts/followups/81-brand-board-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage begrenzt das Board auf vorgegebene Werte, Farben und Anwendungen. Erfundenes Markenversprechen und scheinbar fertige Strategie fallen weg.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -90,7 +98,13 @@ Nutze ausschließlich Bild 1 als feste Motivreferenz. Erstelle ein Packaging-Moo
 
 **Für dieses Beispiel eingesetzt:** Kameragurt; naturfarbener Karton, dunkle Schiebebox und helle Stoffhülle.
 
-![Ergebnis des kontrollierten Prompts: drei textfreie Verpackungsrichtungen für einen Kameragurt](/images/blog/ki-bildprompts/followups/82-packaging-board-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: drei textfreie Verpackungsrichtungen für einen Kameragurt](/images/blog/ki-bildprompts/followups/82-packaging-board-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage zeigt drei unterschiedliche Verpackungsrichtungen nur über Form, Material und Farbe. Leistungsversprechen und erfundene Prüfzeichen sind ausdrücklich ausgeschlossen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -121,7 +135,13 @@ Nutze ausschließlich Bild 1 als feste Motivreferenz. Erstelle ein neutrales Mer
 
 **Für dieses Beispiel eingesetzt:** Schwarzer Hoodie, weiße Tasse, weißes T-Shirt und naturfarbene Stofftasche.
 
-![Ergebnis des kontrollierten Prompts: vier Merch-Produkte mit derselben freigestellten Illustration](/images/blog/ki-bildprompts/followups/83-merch-mockup-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: vier Merch-Produkte mit derselben freigestellten Illustration](/images/blog/ki-bildprompts/followups/83-merch-mockup-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage reduziert den Test auf vier feste Produkte und verwendet überall dieselbe freigestellte Illustration statt eines rechteckig aufgedruckten Fotos.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -152,7 +172,13 @@ Genau so ein Blatt ist wertvoll, wenn eine Person später in mehreren Szenen auf
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein konsistentes 3×2-Kontaktblatt mit genau sechs Ansichten in dieser Reihenfolge: 1 Front, 2 Dreiviertel links, 3 linkes Profil, 4 Dreiviertel rechts, 5 rechtes Profil und 6 Rücken. Halte Identität, Kleidung, Accessoires, Brennweite, Kamerahöhe und weiche Studiobeleuchtung möglichst konstant. Beschrifte jedes Feld nur mit der passenden Ziffer 1 bis 6. Neutraler Hintergrund, keine zusätzlichen Posen, keine Wörter und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: nummeriertes Kontaktblatt mit sechs festen Blickwinkeln](/images/blog/ki-bildprompts/followups/84-contact-sheet-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: nummeriertes Kontaktblatt mit sechs festen Blickwinkeln](/images/blog/ki-bildprompts/followups/84-contact-sheet-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage erzeugt sechs fest definierte Blickwinkel unter möglichst gleichen Bedingungen. Die Ziffern dienen als robuste Auswahlhilfe und ersetzen fehleranfällige KI-Beschriftungen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -209,7 +235,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein Storyboard
 
 **Für dieses Beispiel eingesetzt:** Die Person kommt an einem Bergsee an, packt die Kamera aus, sucht den Bildausschnitt, fotografiert, prüft das Display und geht bei Abendlicht weiter; türkise und orange Akzente.
 
-![Ergebnis des kontrollierten Prompts: sechsteiliges Storyboard mit vorgegebenem Fotoablauf](/images/blog/ki-bildprompts/followups/85-storyboard-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: sechsteiliges Storyboard mit vorgegebenem Fotoablauf](/images/blog/ki-bildprompts/followups/85-storyboard-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage bindet das Storyboard an eine vorgegebene Handlung. Sechs feste Bilder zeigen den Ablauf, ohne einen neuen Plot, Dialog oder Werbeslogan zu erfinden.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -242,7 +274,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein zweigeteil
 
 **Für dieses Beispiel eingesetzt:** Links steht die Person frontal und neutral vor einem geschlossenen weißen Studiotor; rechts ist das Tor geöffnet und die Person zeigt lächelnd in das Fotostudio; nur Tor, Ausdruck und Armhaltung verändern sich.
 
-![Ergebnis des kontrollierten Prompts: konsistentes Start- und Endbild vor demselben Studiotor](/images/blog/ki-bildprompts/followups/86-first-last-frame-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: konsistentes Start- und Endbild vor demselben Studiotor](/images/blog/ki-bildprompts/followups/86-first-last-frame-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage definiert Anfang und Ende als zwei vergleichbare Bilder. Kamera, Umgebung und Person bleiben gleich; nur die ausdrücklich beschriebene Veränderung findet statt.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

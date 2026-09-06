@@ -4160,6 +4160,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/followups/64-fantasy-newspaper-retested.webp": {
+		"width": 1055,
+		"height": 1491,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/followups/64-fantasy-newspaper-retested.webp",
+				"width": 1055
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/followups/65-film-strip-followup.webp": {
 		"width": 1254,
 		"height": 1254,
@@ -4314,6 +4325,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/followups/77-hairstyle-grid-retested.webp": {
+		"width": 1254,
+		"height": 1254,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/followups/77-hairstyle-grid-retested.webp",
+				"width": 1254
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/followups/78-fix-lighting-followup.webp": {
 		"width": 1126,
 		"height": 1397,
@@ -4332,6 +4354,17 @@ export const imageMetadata = {
 		"variants": [
 			{
 				"src": "/images/blog/ki-bildprompts/followups/79-cover-pack-followup.webp",
+				"width": 1672
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/followups/79-cover-pack-retested.webp": {
+		"width": 1672,
+		"height": 941,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/followups/79-cover-pack-retested.webp",
 				"width": 1672
 			}
 		]
@@ -6639,6 +6672,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/64-fantasy-newspaper-retested.webp": {
+		"width": 283,
+		"height": 400,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/64-fantasy-newspaper-retested.webp",
+				"width": 283
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/64-fantasy-newspaper.webp": {
 		"width": 387,
 		"height": 480,
@@ -6977,6 +7021,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/77-hairstyle-grid-retested.webp": {
+		"width": 400,
+		"height": 400,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/77-hairstyle-grid-retested.webp",
+				"width": 400
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/77-hairstyle-grid.webp": {
 		"width": 480,
 		"height": 480,
@@ -7026,6 +7081,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/thumbs/79-cover-pack-followup.webp",
 				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/79-cover-pack-retested.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/79-cover-pack-retested.webp",
+				"width": 400
 			}
 		]
 	},

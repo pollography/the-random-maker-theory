@@ -2,7 +2,7 @@
 	import { tick } from 'svelte';
 	import PromptCard from './PromptCard.svelte';
 	import PromptLightbox from './PromptLightbox.svelte';
-	import { filterPrompts, getCategoryCounts } from '$lib/utils/prompt-library.js';
+	import { filterPrompts, getCategoryCounts, getPromptSearchMatch } from '$lib/utils/prompt-library.js';
 
 	type Prompt = {
 		id: string;
@@ -19,6 +19,14 @@
 		controlledPromptText?: string;
 		controlledImage?: string;
 		controlledAlt?: string;
+		controlledEvidenceStatus?: string;
+		comparisonVerdict?: string;
+		comparisonReason?: string;
+		controlledInputNote?: string;
+		controlledExampleValues?: Partial<Record<string, string>>;
+		controlledSecondaryPromptText?: string;
+		controlledSecondaryLabel?: string;
+		controlledSecondaryExampleValues?: Partial<Record<string, string>>;
 	};
 
 	type Category = {
@@ -114,6 +122,7 @@
 						categoryLabel={categoryLabels.get(prompt.category) ?? prompt.category}
 						onPreview={openPreview}
 						priority={index === 0}
+						controlledSearchMatch={getPromptSearchMatch(prompt, categories, query) === 'controlled'}
 					/>
 				{/each}
 			</div>

@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/kuerzeste-bildprompts-avatare-reaktionen-1-thumb.w
 titleAccent: "Avatare & Reaktionen"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">Teil 2</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>Sieben Mini-Prompts machen aus einem Porträt Sticker, Reaktionen, Avatare und extreme Größenwechsel.</li>
 		<li>Stickerpacks und Reaction Packs sind schnell brauchbar, müssen aber für echte Transparenz meist nachbearbeitet werden.</li>
@@ -26,9 +26,11 @@ In diesem Teil wird aus dem Porträt kein Character Sheet, sondern ein kleines C
 
 Ich habe alle sieben Begriffe wieder mit demselben Ausgangsbild getestet. Genau dadurch wird sichtbar, wie gut Brille, Bart, Gesicht und Hoodie über sehr unterschiedliche Stile hinweg erhalten bleiben.
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 11. `/sticker`: ein einzelner Cutout
 
@@ -54,7 +56,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen einzelne
 
 **Für dieses Beispiel eingesetzt:** Eine ruhige dunkelviolette Fläche, die sich deutlich von Person und weißer Kontur trennt.
 
-![Ergebnis des kontrollierten Prompts: einzelner Porträt-Sticker auf einfarbigem Hintergrund](/images/blog/ki-bildprompts/followups/11-sticker-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: einzelner Porträt-Sticker auf einfarbigem Hintergrund](/images/blog/ki-bildprompts/followups/11-sticker-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage setzt den Sticker ohne äußeren Schlagschatten auf eine ruhige, kontrastierende Farbfläche. Diese lässt sich anschließend in einem Bildeditor sauber transparent machen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -85,7 +93,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen einzelne
 
 **Für dieses Beispiel eingesetzt:** Eine Herzgeste mit beiden Händen und ein warmes Lächeln; dunkellila Hintergrundfläche.
 
-![Ergebnis des kontrollierten Prompts: einzelne Herzgeste als freigestellter Sticker](/images/blog/ki-bildprompts/followups/12-sticker-pack-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: einzelne Herzgeste als freigestellter Sticker](/images/blog/ki-bildprompts/followups/12-sticker-pack-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage beschreibt Geste und Ausdruck direkt und erzeugt genau einen Sticker statt eines neuen Neuner-Rasters.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -114,7 +128,13 @@ Das Ergebnis war kein reines Emoji-Set. Es mischte stilisierte Porträtreaktione
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 3×2-Raster mit sechs Porträt-Emojis derselben Person: lachen, staunen, nachdenken, feiern, müde und genervt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in allen Feldern. Einheitliche Kopfgröße, getrennte weiße Stickerkonturen und ein ruhiger heller Hintergrund ohne Muster oder Gegenstände. Keine zusätzlichen Symbole, kein Transparenz-Schachbrett, kein Text und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: sechs einheitliche Porträt-Emojis ohne Zusatzsymbole](/images/blog/ki-bildprompts/followups/13-emoji-pack-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: sechs einheitliche Porträt-Emojis ohne Zusatzsymbole](/images/blog/ki-bildprompts/followups/13-emoji-pack-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -145,7 +165,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 
 
 **Für dieses Beispiel eingesetzt:** Deutlich überrascht mit weit geöffneten Augen und leicht geöffnetem Mund.
 
-![Ergebnis des kontrollierten Prompts: einzelne überraschte Reaktion als quadratisches Porträt](/images/blog/ki-bildprompts/followups/14-reaction-pack-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: einzelne überraschte Reaktion als quadratisches Porträt](/images/blog/ki-bildprompts/followups/14-reaction-pack-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -176,7 +202,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 
 
 **Für dieses Beispiel eingesetzt:** Frontale Ansicht mit ruhigem, freundlichem Ausdruck.
 
-![Ergebnis des kontrollierten Prompts: sauber zentrierter einzelner Avatar](/images/blog/ki-bildprompts/followups/15-avatar-pack-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: sauber zentrierter einzelner Avatar](/images/blog/ki-bildprompts/followups/15-avatar-pack-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage legt Blickwinkel, Ausdruck, Zentrierung und Kopfraum direkt für ein einzelnes Profilporträt fest.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -205,7 +237,13 @@ Das Ergebnis war eine winzige Figur auf einer Fingerspitze. Die übergroßen Pro
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine realistische 16:9-Produktaufnahme. Die Miniatur steht auf einem kleinen mattschwarzen Sockel auf einem kreativen Arbeitstisch mit wenigen unscharfen Werkzeugen im Hintergrund. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in die Figur. Makrofotografie, geringe Schärfentiefe, weiches Seitenlicht und freie Fläche rechts. Kein Text, keine sichtbare Marke und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: Miniaturfigur als Produktaufnahme auf einem Arbeitstisch](/images/blog/ki-bildprompts/followups/16-miniature-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: miniaturfigur als Produktaufnahme auf einem Arbeitstisch](/images/blog/ki-bildprompts/followups/16-miniature-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -234,7 +272,13 @@ Der Größenwechsel funktionierte sofort. Die Person stand als Riese zwischen Ho
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine glaubwürdige 16:9-Filmszene auf Straßenniveau. Die riesige Person steht ruhig zwischen Hochhäusern, wird aus leichter Froschperspektive fotografiert und schaut freundlich nach unten. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Stimmige atmosphärische Perspektive und realistische Kontaktschatten; unbeschädigte Stadt, keine Schrift, keine Logos und keine Panikszene.
 ```
 
-![Ergebnis des kontrollierten Prompts: friedliche Riesenszene aus Straßenperspektive](/images/blog/ki-bildprompts/followups/17-giantify-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: friedliche Riesenszene aus Straßenperspektive](/images/blog/ki-bildprompts/followups/17-giantify-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

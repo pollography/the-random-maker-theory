@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/bildprompts-stoff-knete-glas-1-thumb.webp"
 titleAccent: "Stoff & Knete"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>Alle sechs Materialbegriffe erzeugten sofort klar unterscheidbare Stile.</li>
 		<li>Brille, Glatze, Bart und Hoodie blieben als Identitätsanker erstaunlich stabil.</li>
@@ -29,9 +29,11 @@ Diese Gruppe war im Test besonders konsistent. Jeder Mini-Prompt löste eine erk
 
 ![Ausgangsporträt für die Materialtests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 69. `/scribble`: Eher Buntstift als schnelle Kritzelei
 
@@ -55,11 +57,17 @@ Der Begriff führte nicht zu einer chaotischen Randkritzelei, sondern zu einer d
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeichne die Person als lockere farbige Kritzelei auf weißem Papier. Verwende unregelmäßige Buntstift- und Finelinerlinien, sichtbare Suchstriche und einige bewusst offene Flächen. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Brustporträt im Format 4:5, keine Schrift, kein Logo und kein fotorealistisches Finish.
 ```
 
-![Ergebnis des kontrollierten Prompts: lockeres Kritzelporträt mit offenen Linien](/images/blog/ki-bildprompts/followups/69-scribble-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: lockeres Kritzelporträt mit offenen Linien](/images/blog/ki-bildprompts/followups/69-scribble-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
-	<p>Die Zeichnung wirkt nun spontaner und unperfekter. Suchlinien und weiße Zwischenräume unterscheiden sie klar vom ersten detaillierten Ergebnis.</p>
+	<p>Die Zeichnung wirkt nun spontaner und unperfekter. Suchlinien und weiße Zwischenräume unterscheiden sie klar vom Ein-Wort-Ergebnis.</p>
 </div>
 
 ## 70. `/claymation`: Sichtbar modellierte Knete
@@ -84,7 +92,13 @@ Haut, Ohren, Brille, Bart und Hoodie sehen aus handgeformter Modelliermasse geba
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Verwandle die Person in eine handgeformte Stop-Motion-Knetfigur mit sichtbaren Fingerabdrücken, leicht unregelmäßigen Kanten und einzelnen modellierten Strukturen. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Weiches Miniatur-Studiolicht, weißer Hintergrund, Brustporträt 4:5, kein Text und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: handmodellierte Knetfigur mit sichtbaren Spuren](/images/blog/ki-bildprompts/followups/70-claymation-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: handmodellierte Knetfigur mit sichtbaren Spuren](/images/blog/ki-bildprompts/followups/70-claymation-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -113,7 +127,13 @@ Aus dem Porträt wurde eine sitzende Plüschpuppe mit großen dunklen Augen, wei
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Entwirf eine eigenständige Plüschfigur mit weichen kurzen Armen und Beinen sowie freundlich gestickten Augen. Übertrage Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in klare textile Formen. Zeige die ganze sitzende Figur frontal als quadratisches Produktfoto vor weißem Hintergrund. Keine Marke, kein Text und kein Zubehör.
 ```
 
-![Ergebnis des kontrollierten Prompts: einzelne sitzende Plüschfigur](/images/blog/ki-bildprompts/followups/71-plush-toy-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: einzelne sitzende Plüschfigur](/images/blog/ki-bildprompts/followups/71-plush-toy-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -142,7 +162,13 @@ Hier sind sogar Haut und Brille als Garnstruktur interpretiert. Die Figur hat ty
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige eine handgehäkelte Amigurumi-Figur mit runder Kopfform und deutlich sichtbaren Garnmaschen. Übertrage Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 konsequent in gehäkelte Formen. Frontales 4:5-Produktfoto, weiches Licht, weißer Hintergrund. Keine Anleitung, kein Text, kein Logo und keine zusätzlichen Gegenstände.
 ```
 
-![Ergebnis des kontrollierten Prompts: einzelne Amigurumi-Figur mit sichtbaren Maschen](/images/blog/ki-bildprompts/followups/72-amigurumi-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: einzelne Amigurumi-Figur mit sichtbaren Maschen](/images/blog/ki-bildprompts/followups/72-amigurumi-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -176,7 +202,13 @@ Das Ergebnis sieht wie eine dichte Maschinenstickerei aus. Sogar Hautfalten, Bri
 Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Reduziere das Motiv zu einem stickbar wirkenden runden Patch mit höchstens acht Vollfarben, klaren geschlossenen Flächen und kräftiger Außenkontur. Vereinfache feine sichtbare Strukturen aus Bild 1, ohne die Wiedererkennbarkeit zu verlieren. Keine feinen Hautdetails, Verläufe, Schrift oder Logos. Zeige den Patch frontal auf neutralem Stoff im Format 1:1. Dies ist ein Stilkonzept, keine Stickdatei.
 ```
 
-![Ergebnis des kontrollierten Prompts: vereinfachtes Patch-Motiv auf Stoff](/images/blog/ki-bildprompts/followups/73-embroidery-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: vereinfachtes Patch-Motiv auf Stoff](/images/blog/ki-bildprompts/followups/73-embroidery-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -207,7 +239,13 @@ Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Gestalte e
 
 **Für dieses Beispiel eingesetzt:** Türkis, tiefes Blau, Orange und warmes Gold.
 
-![Ergebnis des kontrollierten Prompts: symmetrisches Glasfenster aus vier Farbfamilien](/images/blog/ki-bildprompts/followups/74-stained-glass-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: symmetrisches Glasfenster aus vier Farbfamilien](/images/blog/ki-bildprompts/followups/74-stained-glass-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

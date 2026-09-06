@@ -13,13 +13,13 @@ heroImageThumb: "/images/blog/bildprompts-comics-retro-1-thumb.webp"
 titleAccent: "Comics & Retro"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>`/comicStrip`, `/fantasyNewspaper`, `/filmStrip`, `/travelScrapbook` und `/tarotCard` erzeugten sofort erkennbare Layouts.</li>
 		<li>Text und Fakten sehen oft überzeugend aus, sind aber frei erfunden.</li>
 		<li>`/gameScreen` veränderte das Porträt in diesem Test praktisch gar nicht.</li>
-		<li>Für einen brauchbaren Comic oder Artikel müssen Handlung und Wortlaut im Folgeprompt festgelegt werden.</li>
+		<li>Für einen brauchbaren Comic oder Artikel müssen Handlung und Wortlaut in der kontrollierten Vorlage festgelegt werden.</li>
 	</ul>
 </div>
 
@@ -27,9 +27,11 @@ Ein Retro-Rahmen macht aus einem Porträt noch keine Geschichte. Aber er kann in
 
 Ich habe sechs kurze Begriffe getestet. Fünf bauten sofort komplette Gestaltungen. Einer tat fast nichts. Gerade der Vergleich zeigt, wann ein Ein-Wort-Prompt als Ideenmaschine funktioniert und wann er klare Regie braucht.
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ![Ausgangsporträt für die Comic- und Retrotests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
@@ -57,7 +59,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen quadrati
 
 **Für dieses Beispiel eingesetzt:** Ein missglückter Möbelaufbau in vier Schritten mit den kurzen Texten „Das geht schnell“, „Wo ist Teil B?“, „Ah“ und „Jetzt hält es“.
 
-![Ergebnis des kontrollierten Prompts: vierteiliger Comic über einen Möbelaufbau](/images/blog/ki-bildprompts/followups/63-comic-strip-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: vierteiliger Comic über einen Möbelaufbau](/images/blog/ki-bildprompts/followups/63-comic-strip-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage ersetzt die erfundenen Sprechblasen durch vier vorgegebene Szenen und Texte und hält die Person über alle Panels zusammen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -88,7 +96,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Gestalte eine fiktional
 
 **Für dieses Beispiel eingesetzt:** Fantasy-Ort „Bergtal mit Burg“, Titel „DIE MAKER-POST“, Hauptüberschrift „DAS TOR IST OFFEN“ sowie die Nebenmeldungen „DRACHE GESICHTET“, „WERKSTATT-RAT“ und „TRANK DES TAGES“.
 
-![Ergebnis des kontrollierten Prompts: einheitlich gedruckte Fantasy-Zeitung](/images/blog/ki-bildprompts/followups/64-fantasy-newspaper-followup.webp)
+
+
+**Belegstatus:** Mit dieser Vorlage neu getestet.
+
+![Neu getestetes Ergebnis der kontrollierten Vorlage: Fantasy-Zeitung in einheitlicher Holzschnittoptik](/images/blog/ki-bildprompts/followups/64-fantasy-newspaper-retested.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage ersetzt die erfundenen Meldungen durch vorgegebenen Text und passt das helle Farbfoto an Papierfarbe, Druckkontrast und Holzschnittstil der Zeitung an. Das Porträt wird dafür entsättigt und nahezu monochrom in den Druck eingebaut.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -117,7 +131,13 @@ Das Ergebnis kombinierte neun Ansichten und Emotionen in einem analogen Filmrahm
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen quadratischen analogen Kontaktbogen mit neun Porträts: Frontansicht, linkes Profil, rechtes Profil, Lachen, Nachdenken, Überraschung, ernstes Gesicht, Blick nach oben und Zwinkern. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Verwende in jedem Feld denselben Bildausschnitt, dieselbe Brennweitenwirkung und dasselbe Licht. Schwarzer generischer Filmrahmen mit ausschließlich der Aufschrift „ANALOG FILM 400“, keine reale Filmmarke, keine weiteren Wörter und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: analoger Kontaktbogen mit neun kontrollierten Porträts](/images/blog/ki-bildprompts/followups/65-film-strip-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: analoger Kontaktbogen mit neun kontrollierten Porträts](/images/blog/ki-bildprompts/followups/65-film-strip-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage baut den Kontaktbogen mit festgelegten Blickwinkeln und Mimiken neu auf und verhindert erfundene Filmmarken.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -138,7 +158,7 @@ Das Modell setzte das Porträt zwischen Bergsee, Italien, Wüstenstraße und Str
 
 **Was der kontrollierte Prompt macht:** Er ersetzt den freigestellten Studioeindruck durch ein Porträt in einer sichtbaren Reiseumgebung und gleicht Farbe, Körnung, Kontrast und Alterung an die übrigen Scrapbook-Fotos an.
 
-**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1, vier eigene Reisefotos als Bilder 2 bis 5 und optional eine Layoutreferenz als Bild 6. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
 **Kopierbare kontrollierte Vorlage:**
 
@@ -148,7 +168,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz, die Bilder 2 bis 5 als 
 
 **Für dieses Beispiel eingesetzt:** Die vier Landschaften der vorhandenen, ausdrücklich fiktionalen Testseite dienen nur als Demoorte. Das zentrale Porträt wird in die Bergsee-Landschaft versetzt; die vier neutralen Bildunterschriften lauten „BERGSEE“, „ALTSTADT“, „WÜSTENSTRASSE“ und „KÜSTE“.
 
-![Ergebnis des kontrollierten Prompts: farblich einheitliches Reisetagebuch mit Porträt am Bergsee](/images/blog/ki-bildprompts/followups/66-travel-scrapbook-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: farblich einheitliches Reisetagebuch mit Porträt am Bergsee](/images/blog/ki-bildprompts/followups/66-travel-scrapbook-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage ersetzt den freigestellten Studioeindruck durch ein Porträt in einer sichtbaren Reiseumgebung und gleicht Farbe, Körnung, Kontrast und Alterung an die übrigen Scrapbook-Fotos an.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -179,7 +205,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Gestalte eine originell
 
 **Für dieses Beispiel eingesetzt:** Thema „Neugier“, Kompass als zentrales Symbol, Wildblumen, die Farben Türkis, Orange, Gold und warmes Papier sowie der Titel „NEUGIER“.
 
-![Ergebnis des kontrollierten Prompts: eigenständige Orakelkarte zum Thema Neugier](/images/blog/ki-bildprompts/followups/67-tarot-card-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: eigenständige Orakelkarte zum Thema Neugier](/images/blog/ki-bildprompts/followups/67-tarot-card-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -212,7 +244,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Verwandle die Person in
 
 **Für dieses Beispiel eingesetzt:** Spielgenre „Adventure“ und die Farbpalette Türkis, Dunkelblau und Orange.
 
-![Ergebnis des kontrollierten Prompts: vollständiger Adventure-Charakterauswahl-Bildschirm](/images/blog/ki-bildprompts/followups/68-game-screen-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: vollständiger Adventure-Charakterauswahl-Bildschirm](/images/blog/ki-bildprompts/followups/68-game-screen-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage ersetzt das fast unveränderte Porträt durch einen eindeutig lesbaren Charakterauswahl-Bildschirm mit festgelegter Figur, Perspektive und Oberfläche.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/kuerzeste-bildprompts-welten-filmszenen-1-thumb.we
 titleAccent: "Welten & Filmszenen"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">Teil 6</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>Zehn Mini-Prompts setzen dasselbe Porträt in neue Umgebungen und Filmwelten.</li>
 		<li>Underwater, Cyberpunk, Portal und Movie Scene lieferten sofort lesbare Einzelmotive.</li>
@@ -27,9 +27,11 @@ Der letzte Teil macht aus dem Ausgangsporträt kein Raster, sondern eine Szene.
 
 Unterwasser, im All, in einer zerstörten Zukunft oder mitten in einer nassen Filmstraße: Diese Begriffe liefern die stärksten Einzelbilder der Serie. Sie eignen sich besonders gut als Storyboard-Start, Thumbnail-Hook oder Personenreferenz für ein KI-Video.
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 41. `/environmentExpand`: mehr Bild um die Person
 
@@ -55,7 +57,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erweitere die Szene auf
 
 **Für dieses Beispiel eingesetzt:** Ein nahtloser heller Studiohintergrund.
 
-![Ergebnis des kontrollierten Prompts: 16:9-Ganzkörperbild mit Freiraum](/images/blog/ki-bildprompts/followups/41-environment-expand-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: 16:9-Ganzkörperbild mit Freiraum](/images/blog/ki-bildprompts/followups/41-environment-expand-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage verwandelt das zufällige Outpainting in einen gezielten 16:9-Header mit klarer Freifläche.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -86,7 +94,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Worl
 
 **Für dieses Beispiel eingesetzt:** Maker auf einer schwimmenden Werkstattinsel, umgeben von modularen Gebäuden, Windrädern und kleinen Luftschiffen.
 
-![Ergebnis des kontrollierten Prompts: Maker auf einer schwimmenden Werkstattinsel](/images/blog/ki-bildprompts/followups/42-world-build-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: maker auf einer schwimmenden Werkstattinsel](/images/blog/ki-bildprompts/followups/42-world-build-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -117,7 +131,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 16:9-Stand
 
 **Für dieses Beispiel eingesetzt:** Ein sonnendurchflutetes Korallenriff mit kleinen Fischen.
 
-![Ergebnis des kontrollierten Prompts: breite Unterwasserszene mit Bewegungsrichtung](/images/blog/ki-bildprompts/followups/43-underwater-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: breite Unterwasserszene mit Bewegungsrichtung](/images/blog/ki-bildprompts/followups/43-underwater-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -148,7 +168,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Welt
 
 **Für dieses Beispiel eingesetzt:** Die Erde am Horizont und eine leuchtende Galaxie im Hintergrund.
 
-![Ergebnis des kontrollierten Prompts: markenlose Weltraumszene](/images/blog/ki-bildprompts/followups/44-space-scene-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: markenlose Weltraumszene](/images/blog/ki-bildprompts/followups/44-space-scene-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -179,7 +205,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 16:9-Cyber
 
 **Für dieses Beispiel eingesetzt:** Eine regennasse Neonstraße bei Nacht.
 
-![Ergebnis des kontrollierten Prompts: Cyberpunk-Thumbnail mit dunkler Freifläche](/images/blog/ki-bildprompts/followups/45-cyberpunk-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: cyberpunk-Thumbnail mit dunkler Freifläche](/images/blog/ki-bildprompts/followups/45-cyberpunk-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -210,7 +242,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Post
 
 **Für dieses Beispiel eingesetzt:** Warmes Abendlicht; die Person repariert vor einer improvisierten Werkstatt ein Solarmodul.
 
-![Ergebnis des kontrollierten Prompts: hoffnungsvolle Reparaturszene nach der Apokalypse](/images/blog/ki-bildprompts/followups/46-post-apocalypse-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: hoffnungsvolle Reparaturszene nach der Apokalypse](/images/blog/ki-bildprompts/followups/46-post-apocalypse-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -241,7 +279,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 
 
 **Für dieses Beispiel eingesetzt:** Eine dunkle, futuristische Halle mit kühlem Gegenlicht.
 
-![Ergebnis des kontrollierten Prompts: späteres Standbild mit fast geschlossenem Portal](/images/blog/ki-bildprompts/followups/47-portal-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: späteres Standbild mit fast geschlossenem Portal](/images/blog/ki-bildprompts/followups/47-portal-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -272,7 +316,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Trau
 
 **Für dieses Beispiel eingesetzt:** Ein schmaler Weg zwischen schwebenden Inseln und leuchtenden Portalen bei weichem Morgenlicht.
 
-![Ergebnis des kontrollierten Prompts: klar aufgebaute Traumlandschaft](/images/blog/ki-bildprompts/followups/48-dreamscape-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: klar aufgebaute Traumlandschaft](/images/blog/ki-bildprompts/followups/48-dreamscape-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -303,7 +353,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Dopp
 
 **Für dieses Beispiel eingesetzt:** Eine neblige Maker-Werkstatt mit warmen Lampen als Innenmotiv.
 
-![Ergebnis des kontrollierten Prompts: Profil-Doppelbelichtung mit Werkstatt](/images/blog/ki-bildprompts/followups/49-double-exposure-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: profil-Doppelbelichtung mit Werkstatt](/images/blog/ki-bildprompts/followups/49-double-exposure-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -332,7 +388,13 @@ Der letzte Prompt setzte die Person nachts in eine nasse, warm beleuchtete Stadt
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 16:9-Filmstill: Die Person geht auf einer regennassen Straße auf die Kamera zu und blickt leicht nach links. Halbnahe Perspektive auf Augenhöhe, natürlicher Schritt, dezentes Lächeln, 35-mm-Filmlook. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Schrift oder Logos.
 ```
 
-![Ergebnis des kontrollierten Prompts: gerichtetes Filmstill in einer regennassen Straße](/images/blog/ki-bildprompts/followups/50-movie-scene-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: gerichtetes Filmstill in einer regennassen Straße](/images/blog/ki-bildprompts/followups/50-movie-scene-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage gibt dem Filmstill eine eindeutige Handlung und Kameraposition, ohne daraus einen Videoauftrag zu machen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

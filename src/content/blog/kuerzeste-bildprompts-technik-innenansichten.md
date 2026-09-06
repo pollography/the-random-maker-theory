@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/kuerzeste-bildprompts-technik-innenansichten-1-thu
 titleAccent: "Technik & Innenansichten"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">Teil 4</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>Neun technische Mini-Prompts erzeugen Querschnitte, Blueprints, Explosionsansichten und Anleitungen.</li>
 		<li>Am Porträt sind viele Ergebnisse surreal oder inhaltlich erfunden.</li>
@@ -34,9 +34,11 @@ Danach habe ich `/explodedView` zusätzlich mit einer neutralen, fiktiven Kamera
 	<p>Diese Bilder sind visuelle Konzepte. Verwende sie nicht als anatomische, medizinische, elektrische, mechanische oder sicherheitsrelevante Anleitung. Bauteile, Reihenfolgen, Maße und Beschriftungen können frei erfunden sein.</p>
 </div>
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 26. `/cutaway`: ein Blick ins Innere
 
@@ -60,7 +62,13 @@ Die KI teilte das Gesicht vertikal und setzte auf eine Seite mechanische Innente
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine rein fiktive 16:9-Cyborg-Illustration. Die linke Hälfte der Person bleibt menschlich, die rechte Hälfte wird eindeutig mechanisch und besteht aus erfundenen leuchtenden Platten, Kabeln und Gelenken. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Organe, keine medizinische Beschriftung, keine Marke, kein Text und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: eindeutig fiktionale Cyborg-Halbierung](/images/blog/ki-bildprompts/followups/26-cutaway-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: eindeutig fiktionale Cyborg-Halbierung](/images/blog/ki-bildprompts/followups/26-cutaway-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage macht aus dem zufälligen Pseudo-Innenleben eine klar fiktionale Cyborg-Gestaltung ohne anatomischen Anspruch.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -89,7 +97,13 @@ Das Modell zerlegte Kopf, Brille, Bart, Gesicht und Hoodie in schwebende Ebenen.
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine saubere 16:9-Illustration, in der sichtbare Bestandteile der Person als vier vollständige künstlerische Ebenen entlang einer zentralen Achse schweben: Accessoires, Gesichtsebene, äußere Formmerkmale und Kleidung. Übernimm Identität und erkennbare Merkmale aus Bild 1. Gleichmäßige Abstände, dunkler Studiohintergrund, keine technischen Labels, keine anatomische Behauptung, kein Text und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: geordnete künstlerische Explosionsansicht](/images/blog/ki-bildprompts/followups/27-exploded-view-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: geordnete künstlerische Explosionsansicht](/images/blog/ki-bildprompts/followups/27-exploded-view-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage ordnet die schwebenden Bildebenen symmetrisch und behandelt sie ausdrücklich als künstlerische Metapher.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -124,7 +138,7 @@ Plötzlich ergab die Ausgabe Sinn. Gehäuse, Objektiv, Sensorbereich, Platinen u
 Nutze ausschließlich Bild 1 als feste Produktreferenz. Erstelle eine neue unbeschriftete Explosionsgrafik des Produkts mit logisch ausgerichteten, visuell plausiblen Baugruppen entlang einer horizontalen Achse. Erhalte äußere Form, Proportionen, Farben und Materialien aus Bild 1. Das Bild bleibt ein Designkonzept und behauptet keine echte Konstruktion. Keine Marke, kein Text, keine Maße, keine Pfeile und keine zusätzlichen Zierteile.
 ```
 
-![Ergebnis des zweiten Produktprompts: bereinigte Explosionsgrafik einer fiktiven Kamera](/images/blog/ki-bildprompts/followups/extra-product-exploded-view-followup.webp)
+![Zielbeispiel der kontrollierten Produktvorlage: bereinigte Explosionsgrafik einer fiktiven Kamera](/images/blog/ki-bildprompts/followups/extra-product-exploded-view-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -153,7 +167,13 @@ Das Porträt wurde zu einer weißen Linienzeichnung auf blauem Raster. Dazu kame
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine frontale symmetrische 16:9-Blueprint-Illustration der Person. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 als präzise weiße Konturlinien auf dunkelblauem Raster. Keine Maßlinien, Pfeile, Beschriftungen, Zahlen, Eigenschaften, technischen Behauptungen oder Logos.
 ```
 
-![Ergebnis des kontrollierten Prompts: textfreie Blueprint-Illustration](/images/blog/ki-bildprompts/followups/28-blueprint-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: textfreie Blueprint-Illustration](/images/blog/ki-bildprompts/followups/28-blueprint-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage behält nur den Blueprint-Look und entfernt sämtliche scheinbar technischen Maße, Eigenschaften und Zahlen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -182,7 +202,13 @@ Das Ergebnis zeigte einen Schädel und Oberkörper im Röntgenstil. Bart und Bri
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine eindeutig stilisierte Science-Fiction-Röntgenillustration als Halbporträt. Zeige eine abstrakte leuchtende innere Struktur ohne realistische Anatomie; Kleidung, Accessoires und andere äußerlich erkennbare Merkmale aus Bild 1 bleiben als klare Lichtkontur sichtbar. Keine medizinischen Labels, Diagnose, Messwerte, Wörter oder Logos.
 ```
 
-![Ergebnis des kontrollierten Prompts: stilisierte Science-Fiction-Röntgenfigur](/images/blog/ki-bildprompts/followups/29-xray-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: stilisierte Science-Fiction-Röntgenfigur](/images/blog/ki-bildprompts/followups/29-xray-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage macht den Röntgenlook ausdrücklich stilisiert und bringt die äußerlich sichtbare Personensilhouette zurück.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -211,7 +237,13 @@ Die KI kombinierte das Porträt mit einer anatomischen Gesichtshälfte und viele
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Eine Hälfte bleibt ein stilisiertes Porträt, die andere Hälfte wird als abstraktes Netz aus farbigen Lichtlinien und geometrischen Knoten dargestellt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Organe, Muskeln, Knochen, Labels, Fachbegriffe, Wörter oder Logos.
 ```
 
-![Ergebnis des kontrollierten Prompts: abstrakte Split-Face-Lichtstruktur](/images/blog/ki-bildprompts/followups/30-anatomy-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: abstrakte Split-Face-Lichtstruktur](/images/blog/ki-bildprompts/followups/30-anatomy-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage ersetzt die scheinbar medizinische Gesichtshälfte durch ein abstraktes Netz aus Lichtlinien.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -242,7 +274,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen abstrakt
 
 **Für dieses Beispiel eingesetzt:** Geometrische Ebenen für Ideen, Technik und Kreativität in Türkis, Orange und warmem Gelb.
 
-![Ergebnis des kontrollierten Prompts: abstrakter geometrischer Identitäts-Querschnitt](/images/blog/ki-bildprompts/followups/31-cross-section-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: abstrakter geometrischer Identitäts-Querschnitt](/images/blog/ki-bildprompts/followups/31-cross-section-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage deutet den Querschnitt als farbige Schichten einer Idee neu und entfernt jede anatomische Darstellung.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -271,7 +309,13 @@ Statt die Person zusammenzubauen, konzentrierte sich das Modell auf das auffäll
 Nutze ausschließlich Bild 1 als feste Objektreferenz. Erstelle eine neutrale 3×2-Montagegrafik für das fiktive Objekt. Zeige pro Feld genau einen klaren visuellen Schritt von getrennten Hauptteilen bis zur vollständigen Form; erfinde keine verborgenen technischen Details. Einheitliche Perspektive, heller Hintergrund, keine Texte, Zahlen, Pfeile, Werkzeugsymbole, Marken, Maße oder Sicherheitsversprechen.
 ```
 
-![Ergebnis des kontrollierten Prompts: textfreie Montagefolge in sechs Feldern](/images/blog/ki-bildprompts/followups/32-assembly-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: textfreie Montagefolge in sechs Feldern](/images/blog/ki-bildprompts/followups/32-assembly-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage baut eine neutrale sechsphasige Montagefolge ohne Text, Werkzeugsymbole oder Sicherheitsbehauptungen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -300,7 +344,13 @@ Hier wurden Kopf, Ohren, Brille, Bart und Hoodie auseinandergezogen. Das Ergebni
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine symmetrische künstlerische Demontage der sichtbaren Figur in fünf vollständigen Ebenen: Accessoires, Gesichtsebene, äußere Formmerkmale, Kleidung und Schatten. Übernimm Identität und erkennbare Merkmale aus Bild 1. Alle Ebenen bleiben unbeschädigt, dunkler Studiohintergrund, keine Beschriftung, kein Text und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: symmetrische Demontage in fünf Bildebenen](/images/blog/ki-bildprompts/followups/33-disassembly-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: symmetrische Demontage in fünf Bildebenen](/images/blog/ki-bildprompts/followups/33-disassembly-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage ordnet die surreale Demontage in fünf vollständige, unbeschädigte Ebenen auf einer Symmetrieachse.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -329,7 +379,13 @@ Das Modell baute eine fertige Erklärtafel mit mehreren Schritten rund um das Po
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine saubere 16:9-How-it-works-Vorlage mit der Person klein in der Mitte und vier großen leeren Bildfeldern darum. Verwende ausschließlich die Zahlen „1“, „2“, „3“ und „4“ an den Feldern. Viel freie Fläche für später gesetzte Bilder und Texte, klare Leserichtung, keine Symbole, Aussagen, weiteren Wörter oder Logos.
 ```
 
-![Ergebnis des kontrollierten Prompts: leere Vier-Schritt-Vorlage ohne erfundenen Prozess](/images/blog/ki-bildprompts/followups/34-how-it-works-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: leere Vier-Schritt-Vorlage ohne erfundenen Prozess](/images/blog/ki-bildprompts/followups/34-how-it-works-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage entfernt den erfundenen Prozess und erzeugt stattdessen nur ein nutzbares Vier-Schritt-Grundlayout.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

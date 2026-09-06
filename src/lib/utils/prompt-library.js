@@ -15,6 +15,14 @@
  * @property {string} [controlledPromptText]
  * @property {string} [controlledImage]
  * @property {string} [controlledAlt]
+ * @property {string} [controlledEvidenceStatus]
+ * @property {string} [comparisonVerdict]
+ * @property {string} [comparisonReason]
+ * @property {string} [controlledInputNote]
+ * @property {Partial<Record<string, string>>} [controlledExampleValues]
+ * @property {string} [controlledSecondaryPromptText]
+ * @property {string} [controlledSecondaryLabel]
+ * @property {Partial<Record<string, string>>} [controlledSecondaryExampleValues]
  * @property {string} [series]
  * @property {string} [verdict]
  */
@@ -34,7 +42,7 @@ export function getPublicPrompts(data) {
 /**
  * Filter public prompts by category and a case-insensitive free-text query.
  *
- * @param {Array<{ command: string, promptText?: string, controlledPromptText?: string, title: string, category: string, useCases: string[] }>} prompts
+ * @param {Array<{ command: string, promptText?: string, controlledPromptText?: string, controlledSecondaryPromptText?: string, controlledSecondaryLabel?: string, title: string, category: string, useCases: string[] }>} prompts
  * @param {Array<{ id: string, label: string }>} categories
  * @param {string} [query]
  * @param {string} [categoryId]
@@ -51,6 +59,8 @@ export function filterPrompts(prompts, categories, query = '', categoryId = 'all
 			prompt.command,
 			prompt.promptText ?? '',
 			prompt.controlledPromptText ?? '',
+			prompt.controlledSecondaryLabel ?? '',
+			prompt.controlledSecondaryPromptText ?? '',
 			prompt.title,
 			categoryLabels.get(prompt.category) ?? '',
 			...(prompt.useCases ?? [])
@@ -63,14 +73,65 @@ export function filterPrompts(prompts, categories, query = '', categoryId = 'all
 }
 
 /**
+ * Tell the card whether a query matched normal card content or only the
+ * otherwise collapsed controlled prompt.
+ *
+ * @param {{ command: string, promptText?: string, controlledPromptText?: string, controlledSecondaryPromptText?: string, controlledSecondaryLabel?: string, title: string, category: string, useCases: string[] }} prompt
+ * @param {Array<{ id: string, label: string }>} categories
+ * @param {string} [query]
+ * @returns {'visible' | 'controlled' | 'none'}
+ */
+export function getPromptSearchMatch(prompt, categories, query = '') {
+	const terms = query.trim().toLocaleLowerCase('de-DE').split(/\s+/).filter(Boolean);
+	if (terms.length === 0) return 'visible';
+
+	const categoryLabel = categories.find((category) => category.id === prompt.category)?.label ?? '';
+	const visibleHaystack = [
+		prompt.command,
+		prompt.promptText ?? '',
+		prompt.title,
+		categoryLabel,
+		...(prompt.useCases ?? [])
+	]
+		.join(' ')
+		.toLocaleLowerCase('de-DE');
+	const controlledHaystack = [
+		prompt.controlledPromptText ?? '',
+		prompt.controlledSecondaryLabel ?? '',
+		prompt.controlledSecondaryPromptText ?? ''
+	]
+		.join(' ')
+		.toLocaleLowerCase('de-DE');
+	if (terms.every((term) => visibleHaystack.includes(term))) return 'visible';
+	if (terms.every((term) => `${visibleHaystack} ${controlledHaystack}`.includes(term))) return 'controlled';
+	return 'none';
+}
+
+/**
+ * Fill every explicit [[FIELD]] in a reusable prompt with documented demo
+ * values. Unknown fields remain visible instead of disappearing silently.
+ *
+ * @param {string} promptText
+ * @param {Partial<Record<string, string>>} [exampleValues]
+ */
+export function fillPromptTemplate(promptText, exampleValues = {}) {
+	return promptText.replace(/\[\[([^\]]+)\]\]/g, (placeholder, field) => {
+		return exampleValues[field]?.trim() || placeholder;
+	});
+}
+
+/**
  * Return the text that reproduces the tested result.
  * Existing one-word entries copy their slash command; detailed entries copy
  * the full tested prompt instead of pretending the mnemonic is a model command.
  *
- * @param {{ promptText?: string, controlledPromptText?: string, command: string }} prompt
- * @param {'short' | 'controlled'} [variant]
+ * @param {{ promptText?: string, controlledPromptText?: string, controlledExampleValues?: Partial<Record<string, string>>, command: string }} prompt
+ * @param {'short' | 'controlled' | 'controlled-example'} [variant]
  */
 export function getPromptCopyText(prompt, variant = 'short') {
+	if (variant === 'controlled-example' && prompt.controlledPromptText?.trim()) {
+		return fillPromptTemplate(prompt.controlledPromptText.trim(), prompt.controlledExampleValues);
+	}
 	if (variant === 'controlled' && prompt.controlledPromptText?.trim()) {
 		return prompt.controlledPromptText.trim();
 	}
@@ -150,8 +211,39 @@ export function validatePromptLibrary(data, options = {}) {
 			if (controlledFields.some(Boolean) && !controlledFields.every((value) => value?.trim())) {
 				errors.push(`${prompt.command} has an incomplete controlled variant.`);
 			}
-			if (prompt.controlledPromptText?.trim() && /\bBild 2\b/i.test(prompt.controlledPromptText)) {
-				errors.push(`${prompt.command} controlled variant depends on Bild 2.`);
+			if (prompt.controlledPromptText?.trim() && /Ein-Wort-Ergebnis|Kurzprompt-Ergebnis/i.test(prompt.controlledPromptText)) {
+				errors.push(`${prompt.command} controlled variant depends on the short result.`);
+			}
+			if (prompt.controlledPromptText?.trim()) {
+				if (!['direction', 'retested'].includes(prompt.controlledEvidenceStatus ?? '')) {
+					errors.push(`${prompt.command} needs a controlled evidence status.`);
+				}
+				if (!['short', 'controlled', 'depends'].includes(prompt.comparisonVerdict ?? '')) {
+					errors.push(`${prompt.command} needs a comparison verdict.`);
+				}
+				if (!prompt.comparisonReason?.trim()) errors.push(`${prompt.command} needs a comparison reason.`);
+				if (!prompt.controlledInputNote?.trim()) errors.push(`${prompt.command} needs a controlled input note.`);
+
+				const placeholders = [
+					...prompt.controlledPromptText.matchAll(/\[\[([^\]]+)\]\]/g)
+				].map((match) => match[1]);
+				if (placeholders.length > 0) {
+					const keys = Object.keys(prompt.controlledExampleValues ?? {}).sort();
+					const expected = [...new Set(placeholders)].sort();
+					if (JSON.stringify(keys) !== JSON.stringify(expected)) {
+						errors.push(`${prompt.command} example fields do not match its placeholders.`);
+					}
+				}
+				const secondaryPlaceholders = [
+					...(prompt.controlledSecondaryPromptText ?? '').matchAll(/\[\[([^\]]+)\]\]/g)
+				].map((match) => match[1]);
+				if (secondaryPlaceholders.length > 0) {
+					const keys = Object.keys(prompt.controlledSecondaryExampleValues ?? {}).sort();
+					const expected = [...new Set(secondaryPlaceholders)].sort();
+					if (JSON.stringify(keys) !== JSON.stringify(expected)) {
+						errors.push(`${prompt.command} secondary example fields do not match its placeholders.`);
+					}
+				}
 			}
 			if (
 				prompt.controlledImage &&

@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/bildprompts-spielzeug-sammlerstuecke-1-thumb.webp"
 titleAccent: "Sammelfiguren"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>Alle sechs Begriffe erzeugten klar erkennbare Sammelobjekte.</li>
 		<li>Am stärksten sind `/starterPack`, `/designerToy` und `/tradingCard`.</li>
@@ -29,9 +29,11 @@ Für diesen Teil habe ich dasselbe Porträt mit sechs extrem kurzen Begriffen ge
 
 ![Ausgangsporträt für die Spielzeug- und Sammeltests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 51. `/starterPack`: Eine Person als Set
 
@@ -59,7 +61,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 4:5-Starte
 
 **Für dieses Beispiel eingesetzt:** Kamera, Notizbuch, Kopfhörer, Tasse und Schreibtischlampe.
 
-![Ergebnis des kontrollierten Prompts: Starter-Pack mit genau fünf Gegenständen](/images/blog/ki-bildprompts/followups/51-starter-pack-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: starter-Pack mit genau fünf Gegenständen](/images/blog/ki-bildprompts/followups/51-starter-pack-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage begrenzt das Starter-Pack auf genau fünf von dir gewählte Gegenstände und verhindert zusätzliche erfundene Hobbys.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -88,7 +96,13 @@ Hier war die Interpretation eindeutig: übergroßer Kopf, kleiner Körper, dunkl
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Verwandle die Person in eine freundliche Wackelkopffigur mit sehr großem Kopf und kleinem Körper. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Die Figur steht vollständig sichtbar auf einem schlichten runden Sockel. Quadratisches Produktfoto vor hellgrauem Hintergrund, weiches Studiolicht, kein Text und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: kontrollierte Wackelkopffigur auf neutralem Sockel](/images/blog/ki-bildprompts/followups/52-bobblehead-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: kontrollierte Wackelkopffigur auf neutralem Sockel](/images/blog/ki-bildprompts/followups/52-bobblehead-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -117,7 +131,13 @@ Das Ergebnis ging deutlich weiter als der Wackelkopf. Die Person wurde zu einer 
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein eigenständiges Designer Toy aus glänzendem Vinyl: kompakter Körper, leicht übergroßer Kopf und freundliche große Augen. Übernimm die auffälligsten sichtbaren Merkmale, Kleidung und Accessoires aus Bild 1. Freistehendes 3:4-Produktfoto vor weißem Hintergrund, keine bekannte Figurenmarke, kein Logo und keine Verpackung.
 ```
 
-![Ergebnis des kontrollierten Prompts: markenfreies Designer Toy](/images/blog/ki-bildprompts/followups/53-designer-toy-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: markenfreies Designer Toy](/images/blog/ki-bildprompts/followups/53-designer-toy-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -146,7 +166,13 @@ Statt eines freigestellten Produktshots entstand gleich eine komplette Schreibti
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige eine kleine Sammlerfigur der Person auf einem modernen Holzschreibtisch. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Die Figur steht auf einem neutralen Sockel ohne Schrift; daneben liegen ausschließlich eine schlichte Tasse und ein geschlossenes Notizbuch. Nahes 16:9-Produktfoto mit glaubwürdiger Größe, weiches Fensterlicht, keine Logos oder Texte.
 ```
 
-![Ergebnis des kontrollierten Prompts: kleine Schreibtischfigur mit zwei Requisiten](/images/blog/ki-bildprompts/followups/54-desk-figurine-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: kleine Schreibtischfigur mit zwei Requisiten](/images/blog/ki-bildprompts/followups/54-desk-figurine-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -177,7 +203,13 @@ Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Gestalte e
 
 **Für dieses Beispiel eingesetzt:** Dunkelblau, Türkis und Orange.
 
-![Ergebnis des kontrollierten Prompts: textfreie Sammelkarten-Grundlage](/images/blog/ki-bildprompts/followups/55-trading-card-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: textfreie Sammelkarten-Grundlage](/images/blog/ki-bildprompts/followups/55-trading-card-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -208,7 +240,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Gestalte eine geordnete
 
 **Für dieses Beispiel eingesetzt:** Kamera, Stern, Berg, Buch, Blitz, Glühbirne, Schraubenschlüssel und Tasse.
 
-![Ergebnis des kontrollierten Prompts: geordnete Kollektion aus acht neutralen Pins](/images/blog/ki-bildprompts/followups/56-pin-collection-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: geordnete Kollektion aus acht neutralen Pins](/images/blog/ki-bildprompts/followups/56-pin-collection-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

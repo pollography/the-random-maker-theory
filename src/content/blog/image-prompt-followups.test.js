@@ -42,7 +42,7 @@ function promptBlocks(section) {
 
 function followupImage(section) {
 	return section.match(
-		/!\[[^\]]+\]\((\/images\/blog\/ki-bildprompts\/followups\/(\d{2})-[a-z0-9-]+-followup\.webp)\)/
+		/!\[[^\]]+\]\((\/images\/blog\/ki-bildprompts\/followups\/(\d{2})-[a-z0-9-]+(?:-followup|-retested)\.webp)\)/
 	);
 }
 
@@ -52,6 +52,9 @@ test('all 86 short-prompt entries pair with an independent controlled counter-te
 	for (const file of articleFiles) {
 		const article = await readFile(new URL(file, contentRoot), 'utf8');
 		assert.match(article, /neuen Chat/i, `${file} needs the fresh-chat rule`);
+		assert.match(article, /\/tools\/bildprompt-library/, `${file} needs a direct library link`);
+		assert.match(article, /aria-label="Kurz gesagt"/, `${file} needs the public summary label`);
+		assert.doesNotMatch(article, /aria-label="TL;DR"/, `${file} still exposes TL;DR`);
 		assert.match(
 			article,
 			/Ein-Wort-Ergebnis[^\r\n]+(?:nicht|keine)[^\r\n]+Referenz|(?:nicht|keine)[^\r\n]+Ein-Wort-Ergebnis[^\r\n]+Referenz/i,
@@ -74,17 +77,23 @@ test('all 86 short-prompt entries pair with an independent controlled counter-te
 			`${label} needs a concrete counter-test purpose`
 		);
 		assert.match(body, /\*\*Dafür hochladen:\*\*\s+\S/, `${label} needs explicit inputs`);
+		assert.match(body, /\*\*Kopierbare kontrollierte Vorlage:\*\*/, `${label} needs the controlled template label`);
 		assert.match(
 			body,
-			/\*\*Kopierbare kontrollierte Vorlage:\*\*/,
-			`${label} needs the controlled template label`
+			/\*\*Belegstatus:\*\* (?:Beispiel für die gewünschte Richtung|Mit dieser Vorlage neu getestet)\./,
+			`${label} needs an honest public evidence label`
+		);
+		assert.match(
+			body,
+			/\*\*Vergleich:\*\* (?:Ein-Wort-Test gewinnt|Kontrollierte Vorlage gewinnt|Kommt auf dein Ziel an)\./,
+			`${label} needs a direct comparison verdict`
 		);
 
 		const blocks = promptBlocks(body);
 		assert.ok(blocks.length >= 2, `${label} needs short and controlled prompt blocks`);
 		const controlledPrompt = blocks[1];
 		assert.match(controlledPrompt, /^Nutze ausschließlich Bild 1\b/i, `${label} must start from Bild 1 only`);
-		assert.doesNotMatch(controlledPrompt, /\bBild 2\b/i, `${label} still depends on Bild 2`);
+		assert.doesNotMatch(controlledPrompt, /Ein-Wort-Ergebnis|Kurzprompt-Ergebnis/i, `${label} still depends on the short result`);
 		assert.doesNotMatch(controlledPrompt, hardcodedTestSubject, `${label} hardcodes the test portrait`);
 
 		if (controlledPrompt.includes('[[')) {
@@ -98,7 +107,7 @@ test('all 86 short-prompt entries pair with an independent controlled counter-te
 		if (blocks.slice(2).some((block) => !block.startsWith('/'))) {
 			assert.match(
 				body,
-				/^#{2,3} (?:Mit dem Ergebnis weiterarbeiten|Bonus-Test: neun bewusst feminine Frisuren|Kontrollierte Variante)$/m,
+				/^#{2,3} (?:Mit dem Ergebnis weiterarbeiten|Bonus-Test: neun bewusst feminine Frisuren|Kontrollierte Variante|Schritt 2: Vier ausgewählte Farben sichtbar vergleichen)$/m,
 				`${label} has an extra prompt without a clearly separated follow-up section`
 			);
 		}
@@ -140,14 +149,18 @@ test('color analysis evaluates the photo before applying recommendations near th
 	const article = await readFile(new URL('bildprompts-portraet-verbessern.md', contentRoot), 'utf8');
 	const section = numberedSections(article).find(({ number }) => number === 76);
 	assert.ok(section);
-	const controlledPrompt = promptBlocks(section.body)[1];
+	const blocks = promptBlocks(section.body);
+	const controlledPrompt = blocks[1];
 
 	assert.match(controlledPrompt, /(?:Eignung|geeignet|ungeeignet)/i);
 	assert.match(controlledPrompt, /(?:Licht|Farbstich)/i);
 	assert.match(controlledPrompt, /(?:Unsicherheit|Sicherheit|vorläufig)/i);
 	assert.match(controlledPrompt, /schriftlich/i);
-	assert.match(controlledPrompt, /(?:Kleidung|Stoff).{0,80}(?:Gesicht|gesichtsnah)/is);
-	assert.doesNotMatch(controlledPrompt, /vier gleichberechtigte Farbvergleiche/i);
+	assert.doesNotMatch(controlledPrompt, /Erzeuge danach|2×2|2x2/i);
+	assert.match(section.body, /^### Schritt 2: Vier ausgewählte Farben sichtbar vergleichen$/m);
+	assert.match(blocks[2], /(?:Kleidung|Stoff).{0,100}(?:Gesicht|gesichtsnah)/is);
+	assert.match(section.body, /getönte Brille|orangefarbene Brille/i);
+	assert.match(section.body, /kräftige Kleidung|türkise(?:r|n|s)? Hoodie/i);
 	assert.match(section.body, /76-color-analysis-applied-followup\.webp/);
 });
 

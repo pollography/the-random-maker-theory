@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/bildprompts-miniaturwelten-1-thumb.webp"
 titleAccent: "Miniaturwelten"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>`/tinyWorkers` ist der stärkste Prompt dieser Gruppe und eignet sich hervorragend für klare Thumbnail-Geschichten.</li>
 		<li>`/miniMe` wurde als jüngere Doppelgänger-Version verstanden, nicht als winzige Kopie.</li>
@@ -29,9 +29,11 @@ Ich habe sechs kurze Begriffe mit demselben Porträt getestet. Die Resultate rei
 
 ![Ausgangsporträt für die Miniaturtests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 57. `/miniMe`: Kleiner oder jünger?
 
@@ -55,7 +57,13 @@ Ich hatte mit einer winzigen Kopie gerechnet. Das Modell interpretierte „Mini 
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige die erwachsene Person in normaler Größe und direkt neben einem Schuh eine etwa 15 Zentimeter hohe Miniaturversion derselben erwachsenen Person. Beide haben dieselbe Identität, Altersstufe, Kleidung, Accessoires und andere erkennbare Merkmale wie in Bild 1. Fotorealistischer heller Studioboden, 16:9, kein Kind, kein Text und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: erwachsene Person neben ihrer winzigen Kopie](/images/blog/ki-bildprompts/followups/57-mini-me-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: erwachsene Person neben ihrer winzigen Kopie](/images/blog/ki-bildprompts/followups/57-mini-me-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -86,7 +94,13 @@ Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle e
 
 **Für dieses Beispiel eingesetzt:** Zwölf Arbeiter in orangefarbener Kleidung reinigen die Brille, prüfen den Bart und reparieren eine Naht am Hoodie.
 
-![Ergebnis des kontrollierten Prompts: zwölf Miniaturarbeiter mit klaren Aufgaben](/images/blog/ki-bildprompts/followups/58-tiny-workers-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: zwölf Miniaturarbeiter mit klaren Aufgaben](/images/blog/ki-bildprompts/followups/58-tiny-workers-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -117,7 +131,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Baue ein detailliertes 
 
 **Für dieses Beispiel eingesetzt:** Kreatives Studio mit Kamera, Stativ, Laptop und Schreibtischlampe.
 
-![Ergebnis des kontrollierten Prompts: offenes Studio-Diorama mit vier Requisiten](/images/blog/ki-bildprompts/followups/59-diorama-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: offenes Studio-Diorama mit vier Requisiten](/images/blog/ki-bildprompts/followups/59-diorama-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -146,7 +166,13 @@ Die Schneekugel funktionierte sofort: Glaskuppel, Schnee, kleine Tannen und das 
 Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Setze das Motiv aus Bild 1 als kleine Büste in eine elegante Schneekugel. Innen liegen feiner Schnee und genau drei kleine Tannen. Übernimm die erkennbaren Merkmale aus Bild 1. Der dunkle Sockel bleibt vollständig leer. Realistische Glasreflexe, zentriertes 4:5-Produktfoto, weißer Hintergrund, kein Text und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: unbeschriftete Schneekugel mit drei Tannen](/images/blog/ki-bildprompts/followups/60-snow-globe-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: unbeschriftete Schneekugel mit drei Tannen](/images/blog/ki-bildprompts/followups/60-snow-globe-followup.webp)
+
+**Vergleich:** Ein-Wort-Test gewinnt. Der Kurzprompt liefert hier bereits die stärkere Überraschung und ist genau deshalb der spannendere Ideenstart.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -182,7 +208,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine papierpup
 
 **Für dieses Beispiel eingesetzt:** Jacke, Hemd, Pullover, Hose, Rock und ein Paar Schuhe.
 
-![Ergebnis des kontrollierten Prompts: Papierpuppen-Illustration mit sechs Kleidungsstücken](/images/blog/ki-bildprompts/followups/61-paper-doll-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: papierpuppen-Illustration mit sechs Kleidungsstücken](/images/blog/ki-bildprompts/followups/61-paper-doll-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -213,7 +245,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige genau eine kleine
 
 **Für dieses Beispiel eingesetzt:** Cremefarbene Maschine mit blauen und orangefarbenen Details.
 
-![Ergebnis des kontrollierten Prompts: generische Kapselmaschine mit einer Figur](/images/blog/ki-bildprompts/followups/62-gachapon-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: generische Kapselmaschine mit einer Figur](/images/blog/ki-bildprompts/followups/62-gachapon-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

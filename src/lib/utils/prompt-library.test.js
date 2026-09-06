@@ -6,7 +6,9 @@ import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 
 import {
+	fillPromptTemplate,
 	filterPrompts,
+	getPromptSearchMatch,
 	getCategoryCounts,
 	getPromptCopyText,
 	getPublicPrompts,
@@ -69,14 +71,60 @@ test('the 86 numbered short tests pair their original result with one controlled
 	for (const prompt of pairedPrompts) {
 		const controlledPromptText = /** @type {string} */ (prompt.controlledPromptText);
 		assert.match(controlledPromptText, /^Nutze ausschließlich Bild 1\b/i, prompt.command);
-		assert.doesNotMatch(controlledPromptText, /\bBild 2\b/i, prompt.command);
+		assert.doesNotMatch(controlledPromptText, /Ein-Wort-Ergebnis|Kurzprompt-Ergebnis/i, prompt.command);
 		assert.ok(prompt.controlledImage, `${prompt.command} needs a controlled image`);
 		assert.ok(prompt.controlledAlt, `${prompt.command} needs controlled alt text`);
+		assert.ok(
+			['direction', 'retested'].includes(prompt.controlledEvidenceStatus ?? ''),
+			`${prompt.command} needs an honest evidence status`
+		);
+		assert.ok(
+			['short', 'controlled', 'depends'].includes(prompt.comparisonVerdict ?? ''),
+			`${prompt.command} needs a comparison verdict`
+		);
+		assert.ok(prompt.comparisonReason?.trim(), `${prompt.command} needs a comparison reason`);
+		assert.ok(prompt.controlledInputNote?.trim(), `${prompt.command} needs an input note`);
 		assert.equal(
 			existsSync(join(staticRoot, prompt.controlledImage.replace(/^\//, ''))),
 			true,
 			`${prompt.command} is missing ${prompt.controlledImage}`
 		);
+	}
+});
+
+test('every controlled placeholder has a concrete library example and produces a copy-ready prompt', () => {
+	const pairedPrompts = getPublicPrompts(data).filter((prompt) => prompt.controlledPromptText);
+
+	for (const prompt of pairedPrompts) {
+		const controlledPromptText = /** @type {string} */ (prompt.controlledPromptText);
+		const placeholders = [...controlledPromptText.matchAll(/\[\[([^\]]+)\]\]/g)].map(
+			(match) => match[1]
+		);
+		if (placeholders.length === 0) continue;
+
+		assert.ok(prompt.controlledExampleValues, `${prompt.command} needs example values`);
+		assert.deepEqual(
+			Object.keys(prompt.controlledExampleValues).sort(),
+			[...new Set(placeholders)].sort(),
+			`${prompt.command} example fields do not match its placeholders`
+		);
+		const examplePrompt = fillPromptTemplate(
+			controlledPromptText,
+			prompt.controlledExampleValues
+		);
+		assert.doesNotMatch(examplePrompt, /\[\[[^\]]+\]\]/, `${prompt.command} still has placeholders`);
+		assert.equal(getPromptCopyText(prompt, 'controlled-example'), examplePrompt);
+
+		if (prompt.controlledSecondaryPromptText?.includes('[[')) {
+			const secondaryPlaceholders = [
+				...prompt.controlledSecondaryPromptText.matchAll(/\[\[([^\]]+)\]\]/g)
+			].map((match) => match[1]);
+			assert.deepEqual(
+				Object.keys(prompt.controlledSecondaryExampleValues ?? {}).sort(),
+				[...new Set(secondaryPlaceholders)].sort(),
+				`${prompt.command} secondary example fields do not match its placeholders`
+			);
+		}
 	}
 });
 
@@ -144,6 +192,24 @@ test('search finds commands, titles, category labels, and use cases without case
 		),
 		['/colorAnalysis']
 	);
+	assert.deepEqual(
+		filterPrompts(publicPrompts, data.categories, 'Vier ausgewählte Farben visualisieren', 'all').map(
+			(prompt) => prompt.command
+		),
+		['/colorAnalysis']
+	);
+});
+
+test('search exposes whether a result only matched the controlled template', () => {
+	const prompt = getPublicPrompts(data).find((entry) => entry.command === '/colorAnalysis');
+	assert.ok(prompt);
+	assert.equal(getPromptSearchMatch(prompt, data.categories, 'Fotoeignung Farbstich'), 'controlled');
+	assert.equal(
+		getPromptSearchMatch(prompt, data.categories, 'Vier ausgewählte Farben visualisieren'),
+		'controlled'
+	);
+	assert.equal(getPromptSearchMatch(prompt, data.categories, 'Farben rund um das Porträt'), 'visible');
+	assert.equal(getPromptSearchMatch(prompt, data.categories, 'does-not-exist'), 'none');
 });
 
 test('copying respects short, controlled and existing detailed variants', () => {
@@ -155,6 +221,7 @@ test('copying respects short, controlled and existing detailed variants', () => 
 	assert.ok(detailedPrompt);
 	assert.equal(getPromptCopyText(shortPrompt), '/posepack');
 	assert.match(getPromptCopyText(shortPrompt, 'controlled'), /^Nutze ausschließlich Bild 1/i);
+	assert.doesNotMatch(getPromptCopyText(shortPrompt, 'controlled-example'), /\[\[/);
 	assert.match(getPromptCopyText(detailedPrompt), /behind-the-scenes studio photograph/i);
 	assert.equal(detailedPrompt.promptType, 'detailed');
 });
@@ -203,6 +270,11 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(card, /activeVariant/);
 	assert.match(card, /controlledPromptText/);
 	assert.match(card, /controlledImage/);
+	assert.match(card, /Beispiel-Prompt kopieren/);
+	assert.match(card, /Beispiel für die gewünschte Richtung/);
+	assert.match(card, /Mit dieser Vorlage neu getestet/);
+	assert.match(card, /Treffer in der kontrollierten Vorlage/);
+	assert.match(card, /Direkter Vergleich/);
 	assert.match(card, /getPromptCopyText\(prompt, activeVariant\)/);
 	assert.match(library, /getesteten Ideen/);
 	assert.match(
@@ -216,6 +288,9 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(page, /Bildprompt-Library/);
 	assert.match(page, /\[\[PLATZHALTER\]\]/);
 	assert.match(page, /vor dem Absenden/);
+	assert.match(page, /Zielbeispiel/);
+	assert.match(page, /neu getestet/);
+	assert.doesNotMatch(page, /samt eigenem Ergebnisbild/);
 	assert.match(page, /Kurzprompt-Cheat-Sheet/);
 	assert.match(page, /\/downloads\/trmt-bildprompt-cheatsheet\.pdf/);
 	assert.match(page, /\/downloads\/trmt-ultimate-bildprompts-part-3\.pdf/);

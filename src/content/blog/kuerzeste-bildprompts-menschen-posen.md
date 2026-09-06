@@ -3,7 +3,7 @@ title: "Die kürzesten Bildprompts: Menschen & Posen"
 seoTitle: "Kurze KI-Bildprompts für Menschen & Posen"
 slug: "kuerzeste-bildprompts-menschen-posen"
 date: "2026-08-30"
-description: "Acht extrem kurze Bildprompts für Posen, Mimik, Kleidung und Character Sheets. Mit echten Ergebnissen und Folgeprompts für einzelne Motive."
+description: "Acht extrem kurze Bildprompts für Posen, Mimik, Kleidung und Character Sheets. Mit echten Ergebnissen und kontrollierten Vorlagen für einzelne Motive."
 tags: ["ki-bilder", "prompts", "portrait", "character-design", "tutorial"]
 category: "ki-tools"
 draft: false
@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/kuerzeste-bildprompts-menschen-posen-1-thumb.webp"
 titleAccent: "Menschen & Posen"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">Teil 1</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>Acht Mini-Prompts erzeugen Ansichten, Mimik, Posen, Kleidung und Character Sheets aus einem Porträt.</li>
 		<li>Am zuverlässigsten waren klare visuelle Konzepte wie Posepack, Outfitvarianten und Turnaround.</li>
@@ -33,9 +33,11 @@ Wenn du zuerst nur die vier wichtigsten Begriffe ausprobieren möchtest, findest
 
 Die markanten Merkmale helfen der KI sichtbar bei der Wiedererkennung. Trotzdem bleibt nicht jede Version identisch. Besonders Ganzkörperansichten, Hände und seitliche Profile verändern die Person teilweise.
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 1. `/turnaround`: mehrere Blickwinkel
 
@@ -59,7 +61,13 @@ Bei mir entstand ein sauberes Raster mit Front, Dreiviertelansichten, Profilen u
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes Ganzkörperbild im Format 4:5 in neutraler A-Pose, frontal zur Kamera. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Gleichmäßiges weiches Studiolicht, schlichter heller Hintergrund, vollständige Figur einschließlich Füßen. Kein Raster, keine Beschriftung und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: einzelne Ganzkörperansicht in neutraler A-Pose](/images/blog/ki-bildprompts/followups/01-turnaround-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: einzelne Ganzkörperansicht in neutraler A-Pose](/images/blog/ki-bildprompts/followups/01-turnaround-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage fordert aus dem Original direkt eine einzelne Ganzkörperreferenz mit festem Format, neutraler Pose und vollständigen Füßen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -90,7 +98,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 
 
 **Für dieses Beispiel eingesetzt:** Eine aufgeregte, freudige Mimik mit geöffnetem Mund und sichtbar gespannter Haltung.
 
-![Ergebnis des kontrollierten Prompts: aufgeregtes Thumbnail mit freier dunkler Fläche](/images/blog/ki-bildprompts/followups/02-expression-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: aufgeregtes Thumbnail mit freier dunkler Fläche](/images/blog/ki-bildprompts/followups/02-expression-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -133,7 +147,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 
 
 **Für dieses Beispiel eingesetzt:** Eine natürliche gehende Pose in leichter Dreiviertelansicht.
 
-![Ergebnis des kontrollierten Prompts: einzelne gehende Ganzkörperpose](/images/blog/ki-bildprompts/followups/03-pose-pack-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: einzelne gehende Ganzkörperpose](/images/blog/ki-bildprompts/followups/03-pose-pack-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage beschreibt die gewünschte Pose und den Kamerawinkel direkt und erzeugt daraus ein eigenständiges Ganzkörpermotiv.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -164,7 +184,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 
 
 **Für dieses Beispiel eingesetzt:** Eine direkte Zeigegeste zur Kamera mit entschlossen-freundlichem Ausdruck.
 
-![Ergebnis des kontrollierten Prompts: einzelne Zeigegeste mit freier Fläche links](/images/blog/ki-bildprompts/followups/04-action-poses-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: einzelne Zeigegeste mit freier Fläche links](/images/blog/ki-bildprompts/followups/04-action-poses-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage beschreibt Geste und Ausdruck direkt, fordert saubere Hände und reserviert im Thumbnail gezielt Platz für eine spätere Überschrift.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -193,7 +219,13 @@ Das Character Sheet kombinierte Ganzkörperansichten, Gesichtsausdrücke, Farbfl
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein neues sauberes Character Sheet mit Frontansicht, linker Profilansicht, Rückansicht und drei Porträts mit freundlichem, ernstem und überraschtem Ausdruck. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Verwende ausschließlich die Labels „FRONT“, „PROFIL“, „RÜCKEN“, „FREUNDLICH“, „ERNST“ und „ÜBERRASCHT“. Keine Eigenschaften, Notizen, Logos oder weiteren Wörter.
 ```
 
-![Ergebnis des kontrollierten Prompts: bereinigtes Character Sheet mit deutschen Labels](/images/blog/ki-bildprompts/followups/05-character-sheet-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: bereinigtes Character Sheet mit deutschen Labels](/images/blog/ki-bildprompts/followups/05-character-sheet-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage entfernt erfundene Eigenschaften und reduziert die Tafel auf festgelegte Ansichten, Ausdrücke und geprüfte Labels.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -224,7 +256,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 
 
 **Für dieses Beispiel eingesetzt:** Deutlich überrascht mit geöffneten Augen und leicht geöffnetem Mund.
 
-![Ergebnis des kontrollierten Prompts: einzelnes quadratisches Porträt mit verwirrter Mimik](/images/blog/ki-bildprompts/followups/06-emotion-grid-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: einzelnes quadratisches Porträt mit verwirrter Mimik](/images/blog/ki-bildprompts/followups/06-emotion-grid-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -253,11 +291,17 @@ Ich hatte mehrere Varianten erwartet. Tatsächlich entstand ein einzelnes Halbpo
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 2×3-Raster mit sechs klar unterschiedlichen Formen von Körpersprache: offen, nachdenklich, selbstbewusst, skeptisch, begeistert und entspannt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in allen Feldern. Halbkörperansichten vor einem schlichten hellen Hintergrund, anatomisch saubere Hände, keine Beschriftung und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: sechs bewusst unterschiedliche Körpersprachen](/images/blog/ki-bildprompts/followups/07-body-language-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: sechs bewusst unterschiedliche Körpersprachen](/images/blog/ki-bildprompts/followups/07-body-language-followup.webp)
+
+**Vergleich:** Kommt auf dein Ziel an. Der Kurzprompt ist schneller und überraschender; die längere Vorlage lohnt sich, sobald Format oder Motiv planbar sein müssen.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
-	<p>Der Folgeauftrag liefert wirklich eine Auswahl statt nur einer zufälligen Armhaltung. Die sechs Felder unterscheiden sich sichtbar, ohne dafür erfundene Labels ins Bild zu schreiben.</p>
+	<p>Die kontrollierte Vorlage liefert wirklich eine Auswahl statt nur einer zufälligen Armhaltung. Die sechs Felder unterscheiden sich sichtbar, ohne dafür erfundene Labels ins Bild zu schreiben.</p>
 </div>
 
 ## 8. `/outfitVariants`: sechs neue Looks
@@ -284,7 +328,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 
 
 **Für dieses Beispiel eingesetzt:** Ein dunkler, sportlich-eleganter Look ohne sichtbare Marken.
 
-![Ergebnis des kontrollierten Prompts: ausgewähltes Outfit als einzelnes Ganzkörperporträt](/images/blog/ki-bildprompts/followups/08-outfit-variants-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: ausgewähltes Outfit als einzelnes Ganzkörperporträt](/images/blog/ki-bildprompts/followups/08-outfit-variants-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage beschreibt das gewünschte Outfit direkt und erzeugt daraus ein einzelnes Ganzkörperporträt.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -303,7 +353,7 @@ Nur `nimm Bild 4` ist riskant. Das Modell kann von links nach rechts, nach Bedeu
 
 Für den direkten Alltag finde ich `/posepack` und `/emotionGrid` am stärksten. Beide liefern nicht unbedingt das fertige Bild, aber sofort mehrere Richtungen, aus denen sich ein konkretes Motiv auswählen lässt.
 
-Der wichtigste Befund bleibt trotzdem der Unterschied zwischen `/expression` und `/expressions`: Diese Wörter sind keine stabilen Menübefehle. Sie sind winzige Anstöße für das Modell. Genau deshalb lohnt sich der zweite, präzise Folgeprompt.
+Der wichtigste Befund bleibt trotzdem der Unterschied zwischen `/expression` und `/expressions`: Diese Wörter sind keine stabilen Menübefehle. Sie sind winzige Anstöße für das Modell. Genau deshalb lohnt sich der kontrollierte Gegenversuch.
 
 [Zur Übersicht mit allen 50 Bildprompts](/blog/50-bildprompts-echt-getestet)
 

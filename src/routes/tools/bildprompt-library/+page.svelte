@@ -7,7 +7,7 @@
 	const prompts = getPublicPrompts(promptData);
 	const categories = promptData.categories;
 	const canonicalUrl = 'https://therandommakertheory.com/tools/bildprompt-library';
-	const pageDescription = '147 getestete Bildideen mit echten Ergebnissen: 86 direkte Vergleiche aus Ein-Wort-Test und kontrollierter Vorlage plus 60 ausführliche Prompts. Kostenlos suchen und kopieren.';
+	const pageDescription = '147 Bildideen mit echten Kurzprompt-Tests, kontrollierten Vorlagen, ehrlichen Zielbeispielen und direkten Vergleichsurteilen. Kostenlos suchen und kopieren.';
 	const collectionSchema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'CollectionPage',
@@ -80,7 +80,7 @@
 		<p class="eyebrow">Direkter Vergleich</p>
 		<h2 id="comparison-note-title">Kurz ausprobieren oder gezielt nachbauen</h2>
 	</div>
-	<p>Wähle in einer Karte <strong>Ein-Wort-Test</strong> für den schnellen Spaß oder <strong>Kontrollierte Vorlage</strong> für den ausführlichen Prompt samt eigenem Ergebnisbild. Für einen fairen Gegenversuch startest du einen neuen Chat und lädst nur dein Originalbild hoch. Das Kurzprompt-Ergebnis wird nicht als Referenz mitgegeben.</p>
+		<p>Wähle in einer Karte <strong>Ein-Wort-Test</strong> für den schnellen Spaß oder <strong>Kontrollierte Vorlage</strong> für den ausführlichen Gegenversuch. Jede Karte sagt dir, ob das Bild mit genau dieser Vorlage neu getestet wurde oder als ehrliches Zielbeispiel die gewünschte Richtung zeigt. Für einen fairen Vergleich startest du einen neuen Chat und lädst nur die in der Vorlage genannten Originale hoch. Das Kurzprompt-Ergebnis wird nicht als Referenz mitgegeben.</p>
 </section>
 
 <PromptLibrary {prompts} {categories} />
@@ -88,7 +88,7 @@
 <section class="library-note">
 	<div>
 		<h2>Von der schnellen Idee zum steuerbaren Motiv</h2>
-		<p>Alle Bilder zeigen echte Tests mit demselben Ausgangsporträt. Die Vorlagen bleiben universell: Ersetze jeden [[PLATZHALTER]] vor dem Absenden und lade dein eigenes Referenzbild hoch. Echte Folgeaufträge wie Rasterfeld auswählen werden in den Artikeln separat als Weiterarbeit erklärt.</p>
+		<p>Die Kurzprompt-Bilder zeigen echte Ein-Wort-Tests mit demselben Ausgangsporträt. Bei jeder kontrollierten Variante steht sichtbar <strong>Mit dieser Vorlage neu getestet</strong> oder <strong>Beispiel für die gewünschte Richtung</strong>. Ersetze jeden [[PLATZHALTER]] vor dem Absenden. Die Beispielwerte aus dem Artikel kannst du daneben direkt als vollständigen Beispiel-Prompt kopieren.</p>
 	</div>
 	<nav class="guide-links" aria-label="Artikel zur Bildprompt-Serie">
 		<a href="/blog/50-bildprompts-echt-getestet">50 Prompts im Test</a>

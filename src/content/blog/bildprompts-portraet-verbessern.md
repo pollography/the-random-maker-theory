@@ -13,8 +13,8 @@ heroImageThumb: "/images/blog/bildprompts-portraet-verbessern-1-thumb.webp"
 titleAccent: "dein Porträt"
 ---
 
-<div class="rf-block rf-tldr" role="note" aria-label="TL;DR">
-	<span class="rf-label" aria-hidden="true">TL;DR</span>
+<div class="rf-block rf-tldr" role="note" aria-label="Kurz gesagt">
+	<span class="rf-label" aria-hidden="true">Kurz gesagt</span>
 	<ul>
 		<li>`/hairstyleGrid` liefert sofort neun sichtbare Frisurenideen.</li>
 		<li>`/colorAnalysis` erzeugt eine überzeugende Beratungstafel, deren Diagnose aber nicht automatisch stimmt.</li>
@@ -31,9 +31,11 @@ Für diesen Test habe ich wieder dasselbe helle Porträt verwendet. Das ist wich
 
 ![Ausgangsporträt für die Porträt- und Looktests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gewünschte Richtung. Nur wo ausdrücklich „Mit dieser Vorlage neu getestet“ steht, stammt es aus einem frischen Lauf mit der jetzt kopierbaren Vorlage. Eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
 
-**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade die unter „Dafür hochladen“ genannten Originale hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
+
+[Alle Ein-Wort-Tests und kontrollierten Vorlagen direkt vergleichen](/tools/bildprompt-library).
 
 ## 75. `/studioHeadshot`: Kaum Veränderung bei gutem Ausgangsbild
 
@@ -59,7 +61,13 @@ Das ist logisch: Das Ausgangsbild war bereits frontal, hell und freigestellt. Be
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein professionelles Brustporträt mit direktem Blick, natürlicher Hautstruktur und einem ruhigen freundlichen Ausdruck. Verwende einen neutralen warmgrauen Hintergrund, ein weiches Hauptlicht von links und dezentes Aufhelllicht von rechts. Übernimm Identität, Kleidung, Accessoires und alle anderen erkennbaren Merkmale aus Bild 1. Format 4:5, keine Beauty-Überglättung, kein Text und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: kontrolliertes Studio-Porträt vor warmgrauem Hintergrund](/images/blog/ki-bildprompts/followups/75-studio-headshot-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: kontrolliertes Studio-Porträt vor warmgrauem Hintergrund](/images/blog/ki-bildprompts/followups/75-studio-headshot-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage legt Ausschnitt, Hintergrund und Licht fest, ohne das Gesicht zu erfinden oder die Haut glattzubügeln.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -87,10 +95,28 @@ Trotzdem ist die Diagnose nicht belastbar. Orange getönte Gläser, türkiser Ho
 **Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze ausschließlich Bild 1 als feste Personenreferenz. Prüfe zuerst schriftlich die Fotoeignung für eine vorläufige Farbanalyse: Beleuchtung, Weißabgleich, Farbstich, getönte Brille, kräftige Kleidung nahe am Gesicht und sichtbare Display- oder Kameraverfälschungen. Wenn das Foto ungeeignet ist, stoppe und bitte um ein neutrales Tageslichtporträt statt eine Saison oder einen Unterton zu erraten. Wenn es ausreicht, nenne schriftlich 1. erkennbare Warm-Kühl-Tendenz, 2. Kontrastwirkung, 3. Sicherheit und Unsicherheit der Einschätzung, 4. vier empfehlenswerte Farbrichtungen und 5. vier eher schwierige Farbrichtungen. Kennzeichne alles ausdrücklich als vorläufigen visuellen Eindruck, nicht als Diagnose. Erzeuge danach ein textfreies 4:5-Vergleichsbild als 2×2-Raster mit vier identischen Brustporträts. Wende die vier empfohlenen Farben als matte Kleidung oder Stoff direkt gesichtsnah an. Halte Hautfarbe, Gesicht, Ausdruck, Accessoires, Licht, Hintergrund, Ausschnitt und Farbkorrektur in allen Feldern identisch. Keine losen Farbpaletten, keine Farbbalken, keine Wörter, Zahlen, Logos oder Saisonlabels.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Prüfe schriftlich die Fotoeignung für eine vorläufige Farbanalyse. Beurteile Beleuchtung, Weißabgleich, Farbstich, getönte Brille, kräftige Kleidung nahe am Gesicht und sichtbare Display- oder Kameraverfälschungen. Wenn das Foto ungeeignet ist, stoppe und bitte um ein neutrales Tageslichtporträt, statt eine Saison oder einen Unterton zu erraten. Wenn es ausreicht, nenne 1. die erkennbare Warm-Kühl-Tendenz, 2. die Kontrastwirkung, 3. Sicherheit und Unsicherheit der Einschätzung, 4. vier empfehlenswerte Farbrichtungen und 5. vier eher schwierige Farbrichtungen. Kennzeichne alles ausdrücklich als vorläufigen visuellen Eindruck, nicht als Diagnose. Erzeuge in diesem Schritt kein Bild.
 ```
 
-![Kontrollierter Farbvergleich mit vier identischen Porträts und vier gesichtsnah angewandten Stofffarben](/images/blog/ki-bildprompts/followups/76-color-analysis-applied-followup.webp)
+### Was beim Testfoto passiert
+
+Das Ausgangsporträt trägt eine orangefarbene, getönte Brille und einen kräftig türkisen Hoodie direkt am Gesicht. Deshalb wäre die ehrliche Antwort auf Schritt 1: Für eine belastbare Farbanalyse ist dieses Foto ungeeignet. Das Modell sollte hier stoppen und ein neutrales Tageslichtporträt ohne getönte Brille und ohne kräftige Kleidung anfordern.
+
+Das ist kein misslungener Test, sondern genau die Schutzfunktion des Prompts. Die folgende Visualisierung zeigt nur, wie vier bereits ausgewählte Farbrichtungen am Gesicht verglichen werden können.
+
+### Schritt 2: Vier ausgewählte Farben sichtbar vergleichen
+
+```prompt
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein textfreies 4:5-Vergleichsbild als 2×2-Raster mit vier identischen Brustporträts. Wende diese vier vorher festgelegten Farben als matte Kleidung oder Stoff direkt gesichtsnah an: oben links [[FARBE 1]], oben rechts [[FARBE 2]], unten links [[FARBE 3]], unten rechts [[FARBE 4]]. Halte Hautfarbe, Gesicht, Ausdruck, Accessoires, Licht, Hintergrund, Ausschnitt und Farbkorrektur in allen Feldern identisch. Keine losen Farbpaletten, keine Farbbalken, keine Wörter, Zahlen, Logos oder Saisonlabels.
+```
+
+**Beispielwerte aus diesem Artikel:** FARBE 1: Terrakotta; FARBE 2: Petrol; FARBE 3: Olivgrün; FARBE 4: Aubergine.
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: vier gesichtsnah angewandte Stofffarben](/images/blog/ki-bildprompts/followups/76-color-analysis-applied-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Der Ein-Wort-Test erfindet nur eine Palette; der zweistufige Ablauf prüft zuerst das Foto und visualisiert erst danach bewusst ausgewählte Farben.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -121,10 +147,18 @@ Der Prompt erzeugte ein sauberes 3×3-Raster: Glatze, Buzz Cut, Crew Cut, Short 
 **Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein quadratisches 3×3-Frisurenraster. Halte Gesicht, Ausdruck, Kleidung, Accessoires, Licht und Kamerawinkel in allen neun Feldern so konstant wie möglich. Varianten in dieser Reihenfolge: 1 ohne Kopfhaar, 2 Buzz Cut, 3 Crew Cut, 4 kurzer Crop, 5 Pompadour, 6 Seitenscheitel, 7 Quiff, 8 zurückgekämmt, 9 strukturierter Fade. Beschrifte die Felder ausschließlich mit den Ziffern 1 bis 9. Neutraler Hintergrund, keine weiteren Wörter und keine Veränderung des Gesichts.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein quadratisches 3×3-Frisurenraster. Halte Gesicht, Ausdruck, Kleidung, Accessoires, Licht und Kamerawinkel in allen neun Feldern so konstant wie möglich. Varianten in dieser Reihenfolge: 1 [[FRISUR 1]], 2 [[FRISUR 2]], 3 [[FRISUR 3]], 4 [[FRISUR 4]], 5 [[FRISUR 5]], 6 [[FRISUR 6]], 7 [[FRISUR 7]], 8 [[FRISUR 8]], 9 [[FRISUR 9]]. Beschrifte die Felder ausschließlich mit den Ziffern 1 bis 9. Neutraler Hintergrund, keine weiteren Wörter und keine Veränderung des Gesichts.
 ```
 
-![Ergebnis des kontrollierten Prompts: nummeriertes 3-mal-3-Raster mit neun Frisuren](/images/blog/ki-bildprompts/followups/77-hairstyle-grid-followup.webp)
+
+
+**Für dieses Beispiel eingesetzt:** FRISUR 1: ohne Kopfhaar; FRISUR 2: Buzz Cut; FRISUR 3: Crew Cut; FRISUR 4: kurzer Crop; FRISUR 5: Pompadour; FRISUR 6: Seitenscheitel; FRISUR 7: Quiff; FRISUR 8: zurückgekämmt; FRISUR 9: schulterlange Wellen.
+
+**Belegstatus:** Mit dieser Vorlage neu getestet.
+
+![Neu getestetes Ergebnis der kontrollierten Vorlage: neun nummerierte Frisuren einschließlich schulterlanger Wellen](/images/blog/ki-bildprompts/followups/77-hairstyle-grid-retested.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage baut ein sauberes Vergleichsraster, in dem wirklich nur die Frisur wechseln soll. Nummern statt langer Beschriftungen vermeiden zusätzlich erfundene oder fehlerhafte Wörter im Bild.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -187,7 +221,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Korrigiere darin aussch
 
 **Für dieses Beispiel eingesetzt:** Kein deutlicher Farbstich; die rechte Gesichtshälfte nur leicht angleichen; neutrales weiches Tageslicht.
 
-![Ergebnis des kontrollierten Prompts: sanft ausgeglichenes Porträt bei neutralem Licht](/images/blog/ki-bildprompts/followups/78-fix-lighting-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: sanft ausgeglichenes Porträt bei neutralem Licht](/images/blog/ki-bildprompts/followups/78-fix-lighting-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage beschreibt die konkrete Lichtkorrektur mit austauschbaren Feldern. Im Test habe ich bewusst nur eine sanfte Neutralisierung verlangt, weil das Ausgangsbild bereits ordentlich belichtet war.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -216,7 +256,13 @@ Ich erwartete mehrere Covervarianten. Das Modell interpretierte „Pack“ jedoc
 Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle sechs klar getrennte Titelbildvarianten derselben Person in einem 3×2-Raster: 1 seriöses Profil, 2 überraschter Ausdruck, 3 deutliche Zeigegeste, 4 dunkle Filmszene, 5 heller Tech-Look, 6 humorvolle Miniaturwelt. Jedes Feld wirkt wie ein eigenes 16:9-Cover und enthält freie Fläche für später hinzugefügten Titeltext. Kein Text, keine Ziffern und kein Logo.
 ```
 
-![Ergebnis des kontrollierten Prompts: sechs echte Cover-Kompositionen statt Verpackung](/images/blog/ki-bildprompts/followups/79-cover-pack-followup.webp)
+
+
+**Belegstatus:** Mit dieser Vorlage neu getestet.
+
+![Neu getestetes Ergebnis der kontrollierten Vorlage: sechs textfreie Cover-Kompositionen](/images/blog/ki-bildprompts/followups/79-cover-pack-retested.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage löst die Mehrdeutigkeit auf und fordert ausdrücklich sechs Titelbild-Kompositionen statt einer Produktverpackung.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -247,7 +293,13 @@ Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeichne eine freundlich
 
 **Für dieses Beispiel eingesetzt:** Beruf Fotograf; fotografieren, Bilder auswählen, Farben bearbeiten und ein Fotoalbum überreichen; orange und türkise Akzente.
 
-![Ergebnis des kontrollierten Prompts: Fotografen-Karikatur mit vier vorgegebenen Tätigkeiten](/images/blog/ki-bildprompts/followups/80-career-caricature-followup.webp)
+
+
+**Belegstatus:** Beispiel für die gewünschte Richtung.
+
+![Zielbeispiel der kontrollierten Vorlage: fotografen-Karikatur mit vier vorgegebenen Tätigkeiten](/images/blog/ki-bildprompts/followups/80-career-caricature-followup.webp)
+
+**Vergleich:** Kontrollierte Vorlage gewinnt. Die kontrollierte Vorlage verhindert, dass die KI den Beruf aus dem Aussehen errät. Beruf und vier echte Tätigkeiten werden als austauschbare Angaben eingesetzt und rein visuell gezeigt.
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
