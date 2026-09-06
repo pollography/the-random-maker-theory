@@ -140,10 +140,16 @@
 		</div>
 	{/if}
 	<div class="homepage-context">
-		<h2 class="context-title">Worum geht es hier?</h2>
-		<p>
-			TRMT bündelt praktische Artikel, nachvollziehbare Anleitungen und persönliche Einordnungen rund um <a href="/tags/ki-tools"><strong>KI-Tools</strong></a>, Tech und digitale Workflows. In <a href="/tags/maker"><strong>Maker &amp; DIY</strong></a> geht es um ESP32, 3D-Druck und Smart Home; bei <a href="/tags/automatisierung"><strong>Automatisierung</strong></a> um n8n, Skripte und verbundene Tools. <a href="/tags/fotografie"><strong>Fotografie</strong></a> bündelt Bildbearbeitung, KI-Workflows und Technik aus der Praxis. Unter <a href="/tags/produktivitaet"><strong>Produktivität</strong></a> findest du Systeme für Wissen, Fokus und digitale Ordnung. Wähle ein Thema oder spring direkt ins vollständige Blogarchiv - alle Beiträge bleiben frei zugänglich und lassen sich ohne Anmeldung lesen.
-		</p>
+		<div class="context-heading">
+			<h2 class="context-title">Worum geht es hier?</h2>
+			<p class="context-manifesto">Hier wird Neugier praktisch.</p>
+		</div>
+		<div class="context-copy">
+			<p>
+				TRMT bündelt praktische Artikel, nachvollziehbare Anleitungen und persönliche Einordnungen rund um <a href="/tags/ki-tools"><strong>KI-Tools</strong></a>, Tech und digitale Workflows. In <a href="/tags/maker"><strong>Maker &amp; DIY</strong></a> geht es um ESP32, 3D-Druck und Smart Home; bei <a href="/tags/automatisierung"><strong>Automatisierung</strong></a> um n8n, Skripte und verbundene Tools. <a href="/tags/fotografie"><strong>Fotografie</strong></a> bündelt Bildbearbeitung, KI-Workflows und Technik aus der Praxis. Unter <a href="/tags/produktivitaet"><strong>Produktivität</strong></a> findest du Systeme für Wissen, Fokus und digitale Ordnung.
+			</p>
+			<p class="context-note">Wähle ein Thema oder spring direkt ins vollständige Blogarchiv. Alle Beiträge bleiben frei zugänglich – ohne Anmeldung.</p>
+		</div>
 	</div>
 </section>
 
@@ -221,6 +227,7 @@
 	.topics-section,
 	.posts-section { scroll-margin-top: 76px; }
 	.topics-section { padding-top: 8px; }
+	.posts-section { padding-bottom: 0; }
 	.section-header { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
 	.section-title { margin: 0; color: var(--color-text); font-family: var(--font-display); font-size: clamp(28px, 4vw, 38px); font-weight: 400; line-height: 1.08; }
 	.section-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-accent-honey-foreground); font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); text-decoration: none; white-space: nowrap; }
@@ -239,9 +246,13 @@
 
 	.editorial-posts { display: grid; gap: 20px; }
 	.secondary-posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 18px; }
-	.homepage-context { max-width: 920px; margin: 34px auto 0; color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1.75; }
-	.context-title { margin: 0 0 10px; color: var(--color-text); font-family: var(--font-display); font-size: clamp(23px, 3vw, 29px); font-weight: 400; line-height: 1.15; }
+	.homepage-context { position: relative; display: grid; grid-template-columns: minmax(210px, .78fr) minmax(0, 2fr); gap: clamp(26px, 4vw, 52px); margin: 34px auto 0; padding: clamp(26px, 3.4vw, 42px); overflow: hidden; border-block: 1px solid var(--color-border-subtle); background: linear-gradient(112deg, rgba(58, 176, 162, .12) 0%, rgba(21, 21, 21, .74) 46%, rgba(212, 137, 62, .11) 100%); color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1.72; }
+	.context-heading { align-self: start; }
+	.context-title { margin: 0 0 12px; color: var(--color-text); font-family: var(--font-display); font-size: clamp(23px, 3vw, 29px); font-weight: 400; line-height: 1.15; }
+	.context-manifesto { max-width: 14ch; color: var(--color-accent-honey-foreground); font-family: var(--font-display); font-size: clamp(20px, 2.3vw, 27px); font-style: italic; line-height: 1.12; }
+	.context-copy { padding-left: clamp(24px, 3vw, 42px); border-left: 1px solid rgba(58, 176, 162, .35); }
 	.homepage-context p { margin: 0; }
+	.context-note { margin-top: 18px !important; padding-top: 15px; border-top: 1px solid var(--color-border-subtle); color: var(--color-text); font-size: .92rem; line-height: 1.55; }
 	.homepage-context a { color: var(--color-text); text-decoration-color: var(--color-accent-teal-foreground); text-underline-offset: 3px; }
 	.homepage-context a:hover { color: var(--color-accent-teal-foreground); }
 
@@ -268,6 +279,7 @@
 
 	:global([data-theme='light']) .topic-card,
 	:global([data-theme='light']) .bottom-card { border-color: transparent; background: var(--gradient-card-bg); box-shadow: var(--shadow-neo); }
+	:global([data-theme='light']) .homepage-context { border-color: rgba(91, 78, 57, .16); background: linear-gradient(112deg, rgba(58, 176, 162, .13) 0%, rgba(255, 252, 245, .92) 48%, rgba(212, 137, 62, .15) 100%); }
 	:global([data-theme='light']) .faq-item { border: 0; background: var(--gradient-card-bg); box-shadow: var(--shadow-neo); }
 
 	@media (max-width: 900px) {
@@ -281,6 +293,9 @@
 		.hero { padding-top: 54px; }
 		.hero-badge { display: none; }
 		.hero-intro { font-size: .92rem; }
+		.homepage-context { grid-template-columns: 1fr; gap: 18px; margin-top: 28px; padding: 22px 20px; }
+		.context-manifesto { max-width: none; }
+		.context-copy { padding-top: 18px; padding-left: 0; border-top: 1px solid rgba(58, 176, 162, .35); border-left: 0; }
 		.bottom-grid, .secondary-posts { grid-template-columns: 1fr; }
 		.secondary-posts :global(.post-card:last-child) { grid-column: auto; }
 	}
