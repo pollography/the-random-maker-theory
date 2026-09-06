@@ -48,7 +48,8 @@ test('homepage keeps the approved orientation copy and links all five hubs below
 		'um n8n, Skripte und verbundene Tools.',
 		'bündelt Bildbearbeitung, KI-Workflows und Technik aus der Praxis.',
 		'findest du Systeme für Wissen, Fokus und digitale Ordnung.',
-		'Wähle ein Thema oder spring direkt ins vollständige Blogarchiv - alle Beiträge bleiben frei zugänglich und lassen sich ohne Anmeldung lesen.'
+		'Wähle ein Thema oder spring direkt ins vollständige Blogarchiv.',
+		'Alle Beiträge bleiben frei zugänglich – ohne Anmeldung.'
 	]) {
 		assert.match(source, new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
 	}

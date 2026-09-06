@@ -64,9 +64,17 @@ test('homepage keeps real video, podcast and direct newsletter actions below the
 	assert.match(newsletter, /'Eintragen'/);
 });
 
-test('homepage gives its orientation copy a visible contextual heading', async () => {
+test('homepage turns its orientation copy into a compact editorial bridge', async () => {
 	const page = await read('src', 'routes', '+page.svelte');
 
+	assert.match(page, /class="context-heading"/);
 	assert.match(page, /<h2[^>]*class="context-title"[^>]*>Worum geht es hier\?<\/h2>/);
+	assert.match(page, /class="context-manifesto">Hier wird Neugier praktisch\.<\/p>/);
+	assert.match(page, /class="context-copy"/);
+	assert.match(page, /class="context-note"/);
+	assert.doesNotMatch(page, /context-eyebrow/);
 	assert.match(page, /TRMT bündelt praktische Artikel/);
+	assert.match(page, /\.homepage-context\s*\{[^}]*display:\s*grid[^}]*background:/s);
+	assert.match(page, /\.posts-section\s*\{[^}]*padding-bottom:\s*0/s);
+	assert.match(page, /\.bottom-sections\s*\{[^}]*padding:\s*30px 0 52px/);
 });
