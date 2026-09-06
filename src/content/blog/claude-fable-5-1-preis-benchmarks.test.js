@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
+import { imageMetadata } from '../../lib/data/image-metadata.generated.js';
 
 const articlePath = new URL('./claude-fable-5-1-preis-benchmarks.md', import.meta.url);
 
@@ -32,4 +33,19 @@ test('the new scan grammar is implemented in the shared article surface', () => 
 	assert.match(css, /\.benchmark-bars/);
 	assert.match(css, /@media \(max-width: 640px\)/);
 	assert.match(css, /\.prose table[\s\S]*overflow-x:\s*auto/);
+});
+
+test('the article uses the new native cache-return hero pair', () => {
+	const article = readFileSync(articlePath, 'utf8');
+	const master = '/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2.webp';
+	const thumb = '/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2-thumb.webp';
+
+	assert.match(article, new RegExp(`^heroImage: "${master}"$`, 'm'));
+	assert.match(article, new RegExp(`^heroImageThumb: "${thumb}"$`, 'm'));
+	assert.equal(existsSync(`static${master}`), true);
+	assert.equal(existsSync(`static${thumb}`), true);
+	assert.equal(imageMetadata[master]?.width, 1200);
+	assert.equal(imageMetadata[master]?.height, 675);
+	assert.equal(imageMetadata[thumb]?.width, 400);
+	assert.equal(imageMetadata[thumb]?.height, 225);
 });

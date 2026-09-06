@@ -886,6 +886,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2.webp",
+				"width": 1200
+			}
+		]
+	},
 	"/images/blog/claude-fable-5-1-text-wasserzeichen-1-thumb.webp": {
 		"width": 400,
 		"height": 225,
@@ -7168,6 +7198,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/homepage/topics/automatisierung-landscape-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/automatisierung-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/automatisierung-landscape.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/homepage/topics/automatisierung-landscape.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/automatisierung-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/automatisierung-landscape.webp",
+				"width": 1200
+			}
+		]
+	},
 	"/images/homepage/topics/automatisierung-thumb.webp": {
 		"width": 320,
 		"height": 320,
@@ -7195,6 +7255,36 @@ export const imageMetadata = {
 			{
 				"src": "/images/homepage/topics/automatisierung.webp",
 				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/fotografie-landscape-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/fotografie-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/fotografie-landscape.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/homepage/topics/fotografie-landscape.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/fotografie-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/fotografie-landscape.webp",
+				"width": 1200
 			}
 		]
 	},
@@ -7228,6 +7318,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/homepage/topics/ki-tech-landscape-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/ki-tech-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/ki-tech-landscape.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/homepage/topics/ki-tech-landscape.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/ki-tech-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/ki-tech-landscape.webp",
+				"width": 1200
+			}
+		]
+	},
 	"/images/homepage/topics/ki-tech-thumb.webp": {
 		"width": 320,
 		"height": 320,
@@ -7258,6 +7378,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/homepage/topics/maker-diy-landscape-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/maker-diy-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/maker-diy-landscape.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/homepage/topics/maker-diy-landscape.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/maker-diy-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/maker-diy-landscape.webp",
+				"width": 1200
+			}
+		]
+	},
 	"/images/homepage/topics/maker-diy-thumb.webp": {
 		"width": 320,
 		"height": 320,
@@ -7285,6 +7435,36 @@ export const imageMetadata = {
 			{
 				"src": "/images/homepage/topics/maker-diy.webp",
 				"width": 512
+			}
+		]
+	},
+	"/images/homepage/topics/produktivitaet-landscape-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/produktivitaet-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/produktivitaet-landscape.webp",
+				"width": 1200
+			}
+		]
+	},
+	"/images/homepage/topics/produktivitaet-landscape.webp": {
+		"width": 1200,
+		"height": 675,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/homepage/topics/produktivitaet-landscape-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/homepage/topics/produktivitaet-landscape.webp",
+				"width": 1200
 			}
 		]
 	},
@@ -7326,6 +7506,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/og/default.webp",
 				"width": 1920
+			}
+		]
+	},
+	"/images/video/ki-bildbearbeitung-trmt-003.webp": {
+		"width": 1280,
+		"height": 720,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/video/ki-bildbearbeitung-trmt-003.webp",
+				"width": 1280
 			}
 		]
 	},

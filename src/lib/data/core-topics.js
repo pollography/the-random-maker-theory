@@ -24,7 +24,7 @@ export const CORE_TOPICS = Object.freeze([
 		slug: 'ki-tools',
 		name: 'KI & Tech',
 		short: 'Tools · Tests · Trends',
-		image: '/images/homepage/topics/ki-tech.webp',
+		image: '/images/homepage/topics/ki-tech-landscape.webp',
 		starterSlugs: [
 			'perfekt-prompten-llm-guide',
 			'50-bildprompts-echt-getestet',
@@ -36,7 +36,7 @@ export const CORE_TOPICS = Object.freeze([
 		slug: 'maker',
 		name: 'Maker & DIY',
 		short: 'Bauen · Drucken · Löten',
-		image: '/images/homepage/topics/maker-diy.webp',
+		image: '/images/homepage/topics/maker-diy-landscape.webp',
 		starterSlugs: [
 			'esp32-projekte-anfaenger-2026',
 			'3d-druck-einstieg-welcher-drucker-2026',
@@ -48,7 +48,7 @@ export const CORE_TOPICS = Object.freeze([
 		slug: 'automatisierung',
 		name: 'Automatisierung',
 		short: 'Workflows · Scripts · APIs',
-		image: '/images/homepage/topics/automatisierung.webp',
+		image: '/images/homepage/topics/automatisierung-landscape.webp',
 		starterSlugs: [
 			'n8n-tutorial-deutsch-2026',
 			'n8n-workflow-beispiele-2026',
@@ -60,7 +60,7 @@ export const CORE_TOPICS = Object.freeze([
 		slug: 'fotografie',
 		name: 'Fotografie',
 		short: 'Editing · Gear · Ideen',
-		image: '/images/homepage/topics/fotografie.webp',
+		image: '/images/homepage/topics/fotografie-landscape.webp',
 		starterSlugs: [
 			'ki-fotografie-2026-was-wirklich-funktioniert',
 			'ki-bildbearbeitung-workflow-fotograf-2026',
@@ -72,7 +72,7 @@ export const CORE_TOPICS = Object.freeze([
 		slug: 'produktivitaet',
 		name: 'Produktivität',
 		short: 'Systeme · Fokus · Ordnung',
-		image: '/images/homepage/topics/produktivitaet.webp',
+		image: '/images/homepage/topics/produktivitaet-landscape.webp',
 		starterSlugs: [
 			'obsidian-fuer-adhs-system-2026',
 			'claude-code-ultimate-setup-produktivitaet-2026',

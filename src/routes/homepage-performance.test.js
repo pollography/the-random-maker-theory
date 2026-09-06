@@ -5,6 +5,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
 import { imageMetadata } from '../lib/data/image-metadata.generated.js';
+import { CORE_TOPICS } from '../lib/data/core-topics.js';
 
 const routesRoot = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(routesRoot, '..', '..');
@@ -76,29 +77,26 @@ test('topic artwork stays within the homepage image budget', async () => {
 	assert.match(page, /loading="lazy"/);
 	assert.match(page, /width=\{topic\.imageSeo\.width \?\? 1200\}/);
 	assert.match(page, /height=\{topic\.imageSeo\.height \?\? 675\}/);
-	const files = (await readdir(topicsDir)).filter((file) => file.endsWith('.webp')).sort();
-	assert.deepEqual(files, [
-		'automatisierung-thumb.webp',
-		'automatisierung.webp',
-		'fotografie-thumb.webp',
-		'fotografie.webp',
-		'ki-tech-thumb.webp',
-		'ki-tech.webp',
-		'maker-diy-thumb.webp',
-		'maker-diy.webp',
-		'produktivitaet-thumb.webp',
-		'produktivitaet.webp'
-	]);
-
-	const sizes = await Promise.all(files.map(async (file) => (await stat(join(topicsDir, file))).size));
-	for (const [index, size] of sizes.entries()) {
-		const limit = files[index].includes('-thumb.') ? 15 * 1024 : 35 * 1024;
-		assert.ok(size <= limit, `${files[index]} is ${size} bytes`);
-		if (files[index].includes('-thumb.')) {
-			const metadata = imageMetadata[`/images/homepage/topics/${files[index]}`];
-			assert.equal(metadata.width, 320, `${files[index]} width`);
-			assert.equal(metadata.height, 320, `${files[index]} height`);
-		}
+	const expectedMasters = ['automatisierung', 'fotografie', 'ki-tech', 'maker-diy', 'produktivitaet']
+		.map((name) => `${name}-landscape.webp`);
+	const expectedThumbs = expectedMasters.map((file) => file.replace('.webp', '-thumb.webp'));
+	const allFiles = await readdir(topicsDir);
+	for (const file of [...expectedMasters, ...expectedThumbs]) {
+		assert.ok(allFiles.includes(file), `${file} must exist`);
+		const metadata = imageMetadata[`/images/homepage/topics/${file}`];
+		assert.equal(metadata?.width, file.includes('-thumb.') ? 400 : 1200, `${file} width`);
+		assert.equal(metadata?.height, file.includes('-thumb.') ? 225 : 675, `${file} height`);
 	}
-	assert.ok(sizes.reduce((sum, size) => sum + size, 0) <= 165 * 1024);
+	assert.deepEqual(CORE_TOPICS.map((topic) => topic.image), [
+		'/images/homepage/topics/ki-tech-landscape.webp',
+		'/images/homepage/topics/maker-diy-landscape.webp',
+		'/images/homepage/topics/automatisierung-landscape.webp',
+		'/images/homepage/topics/fotografie-landscape.webp',
+		'/images/homepage/topics/produktivitaet-landscape.webp'
+	]);
+	const thumbSizes = await Promise.all(expectedThumbs.map(async (file) => (await stat(join(topicsDir, file))).size));
+	assert.ok(thumbSizes.reduce((sum, size) => sum + size, 0) <= 160 * 1024);
+	assert.equal(existsSync(join(projectRoot, 'static', 'images', 'video', 'ki-bildbearbeitung-trmt-003.webp')), true);
+	assert.equal(imageMetadata['/images/video/ki-bildbearbeitung-trmt-003.webp']?.width, 1280);
+	assert.equal(imageMetadata['/images/video/ki-bildbearbeitung-trmt-003.webp']?.height, 720);
 });
