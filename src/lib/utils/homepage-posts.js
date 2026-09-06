@@ -4,7 +4,7 @@ import { sortArchivePosts } from './blog-pagination.js';
  * Select the newest homepage posts using the same deterministic order as the blog archive.
  *
  * @template {{ slug: string, date: string }} T
- * @param {T[]} posts
+ * @param {T[] | null | undefined} posts
  * @param {number} [limit]
  * @returns {T[]}
  */

@@ -17,7 +17,7 @@ export function appendUniquePosts(currentPosts, incomingPosts) {
 /**
  * @template {{ slug: string }} T
  * @param {{ visiblePosts: T[], nextPage: number | null, isLoading: boolean, loadFailed: boolean, liveMessage: string }} state
- * @param {(page: number) => Promise<{ ok: boolean, status?: number, json: () => Promise<{ posts: T[], currentPage: number, totalPages: number, totalCount: number }> }>} fetchPage
+ * @param {(page: number) => Promise<{ ok: boolean, status?: number, json: () => Promise<any> }>} fetchPage
  */
 export function createBlogFeedLoader(state, fetchPage) {
 	return async function loadNext() {

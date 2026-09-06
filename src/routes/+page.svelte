@@ -21,6 +21,7 @@
 		return url?.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1] ?? '';
 	}
 
+	/** @type {Record<string, string>} */
 	const videoPosters = {
 		'l-PP-PrOdAs': '/images/video/ki-bildbearbeitung-trmt-003.webp',
 		KWIH_InMQZ8: '/images/video/prompt-engineering-trmt-002.webp'

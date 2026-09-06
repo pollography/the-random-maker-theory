@@ -1,9 +1,9 @@
 /**
  * Find the latest episode that has a usable URL in the requested field.
  *
- * @template {{ slug: string, date: string } & Record<string, unknown>} T
+ * @template {{ slug: string, date: string, audioUrl?: string, videoUrl?: string }} T
  * @param {T[]} episodes
- * @param {string} field
+ * @param {'audioUrl' | 'videoUrl'} field
  * @returns {T | null}
  */
 export function selectLatestEpisodeWithUrl(episodes, field) {

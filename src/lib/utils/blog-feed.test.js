@@ -20,6 +20,7 @@ test('loads one page at a time and stops at the final page', async () => {
 		loadFailed: false,
 		liveMessage: ''
 	};
+	/** @type {number[]} */
 	const requested = [];
 	const loadNext = createBlogFeedLoader(state, async (page) => {
 		requested.push(page);

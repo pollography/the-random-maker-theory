@@ -7,11 +7,11 @@ import test from 'node:test';
 const routesRoot = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(routesRoot, '..', '..');
 
-test('homepage shows the square topic artwork without landscape cropping', async () => {
+test('homepage topic artwork uses the same 16 by 9 format as the generated thumbnails', async () => {
 	const source = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
 
-	assert.match(source, /\.topic-image\s*\{[^}]*aspect-ratio:\s*1\s*\/\s*1/s);
-	assert.doesNotMatch(source, /\.topic-image\s*\{\s*aspect-ratio:\s*2(?:\.3)?\s*\/\s*1/);
+	assert.match(source, /\.topic-image\s*\{[^}]*aspect-ratio:\s*16\s*\/\s*9/s);
+	assert.doesNotMatch(source, /\.topic-image\s*\{[^}]*aspect-ratio:\s*1\s*\/\s*1/s);
 });
 
 test('every homepage article thumbnail keeps a 16 by 9 frame', async () => {

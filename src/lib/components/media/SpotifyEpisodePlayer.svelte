@@ -6,6 +6,7 @@
 	let activated = $state(false);
 	let playerError = $state('');
 	let embedHost = $state();
+	/** @type {{ play: () => void; destroy?: () => void } | undefined} */
 	let controller;
 
 	async function activate() {
@@ -22,6 +23,7 @@
 				{ uri: spotifyEpisodeUri(audioUrl), width: '100%', height: 152 },
 				(createdController) => {
 					controller = createdController;
+					if (!controller) return;
 					try {
 						controller.play();
 					} catch {
