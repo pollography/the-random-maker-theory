@@ -140,8 +140,9 @@
 		</div>
 	{/if}
 	<div class="homepage-context">
+		<h2 class="context-title">Worum geht es hier?</h2>
 		<p>
-			Bei TRMT findest du praktische Artikel, nachvollziehbare Anleitungen und persönliche Einordnungen rund um <a href="/tags/ki-tools"><strong>KI-Tools</strong></a>, Tech und digitale Workflows. In <a href="/tags/maker"><strong>Maker &amp; DIY</strong></a> geht es um ESP32, 3D-Druck und Smart Home; bei <a href="/tags/automatisierung"><strong>Automatisierung</strong></a> um n8n, Skripte und verbundene Tools. <a href="/tags/fotografie"><strong>Fotografie</strong></a> bündelt Bildbearbeitung, KI-Workflows und Technik aus der Praxis. Unter <a href="/tags/produktivitaet"><strong>Produktivität</strong></a> findest du Systeme für Wissen, Fokus und digitale Ordnung. Wähle ein Thema oder spring direkt ins vollständige Blogarchiv - alle Beiträge bleiben frei zugänglich und lassen sich ohne Anmeldung lesen.
+			TRMT bündelt praktische Artikel, nachvollziehbare Anleitungen und persönliche Einordnungen rund um <a href="/tags/ki-tools"><strong>KI-Tools</strong></a>, Tech und digitale Workflows. In <a href="/tags/maker"><strong>Maker &amp; DIY</strong></a> geht es um ESP32, 3D-Druck und Smart Home; bei <a href="/tags/automatisierung"><strong>Automatisierung</strong></a> um n8n, Skripte und verbundene Tools. <a href="/tags/fotografie"><strong>Fotografie</strong></a> bündelt Bildbearbeitung, KI-Workflows und Technik aus der Praxis. Unter <a href="/tags/produktivitaet"><strong>Produktivität</strong></a> findest du Systeme für Wissen, Fokus und digitale Ordnung. Wähle ein Thema oder spring direkt ins vollständige Blogarchiv - alle Beiträge bleiben frei zugänglich und lassen sich ohne Anmeldung lesen.
 		</p>
 	</div>
 </section>
@@ -232,13 +233,14 @@
 	.topic-image { overflow: hidden; aspect-ratio: 16 / 9; background: var(--color-elevated); }
 	.topic-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-normal); }
 	.topic-card:hover img { transform: scale(1.025); }
-	.topic-copy { padding: 13px 14px 15px; }
+	.topic-copy { padding: 13px 14px 15px; text-align: center; }
 	.topic-copy h3 { margin: 0 0 6px; color: var(--color-text); font-family: var(--font-display); font-size: clamp(19px, 1.8vw, 24px); font-weight: 400; line-height: 1.1; }
-	.topic-copy p { margin: 0; color: var(--color-text-dim); font-family: var(--font-mono); font-size: clamp(.62rem, .82vw, .72rem); line-height: 1.45; }
+	.topic-copy p { margin: 0; color: var(--color-text-dim); font-family: var(--font-mono); font-size: clamp(.62rem, .82vw, .72rem); line-height: 1.45; white-space: nowrap; }
 
 	.editorial-posts { display: grid; gap: 20px; }
 	.secondary-posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 18px; }
 	.homepage-context { max-width: 920px; margin: 34px auto 0; color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1.75; }
+	.context-title { margin: 0 0 10px; color: var(--color-text); font-family: var(--font-display); font-size: clamp(23px, 3vw, 29px); font-weight: 400; line-height: 1.15; }
 	.homepage-context p { margin: 0; }
 	.homepage-context a { color: var(--color-text); text-decoration-color: var(--color-accent-teal-foreground); text-underline-offset: 3px; }
 	.homepage-context a:hover { color: var(--color-accent-teal-foreground); }

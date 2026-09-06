@@ -17,7 +17,7 @@ test('homepage surfaces the blog and topic choices in the hero', async () => {
 	assert.doesNotMatch(source, /href="#topics"|Themen wählen/);
 });
 
-test('homepage navigator derives all five unchanged topic assets from CORE_TOPICS', async () => {
+test('homepage navigator derives all five topic assets from CORE_TOPICS', async () => {
 	const source = await readHomepage();
 
 	assert.match(source, /import \{ CORE_TOPICS \} from '\$lib\/data\/core-topics\.js';/);
@@ -37,11 +37,12 @@ test('homepage keeps the approved orientation copy and links all five hubs below
 	const source = await readHomepage();
 
 	assert.match(source, /class="homepage-context"/);
+	assert.match(source, /Worum geht es hier\?/);
 	for (const slug of ['ki-tools', 'maker', 'automatisierung', 'fotografie', 'produktivitaet']) {
 		assert.match(source, new RegExp(`href="/tags/${slug}"`));
 	}
 	for (const phrase of [
-		'Bei TRMT findest du praktische Artikel, nachvollziehbare Anleitungen und persönliche Einordnungen rund um',
+		'TRMT bündelt praktische Artikel, nachvollziehbare Anleitungen und persönliche Einordnungen rund um',
 		'Tech und digitale Workflows.',
 		'geht es um ESP32, 3D-Druck und Smart Home; bei',
 		'um n8n, Skripte und verbundene Tools.',
@@ -51,6 +52,12 @@ test('homepage keeps the approved orientation copy and links all five hubs below
 	]) {
 		assert.match(source, new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
 	}
+});
+
+test('automation topic stays on one concise metadata line', () => {
+	const automation = CORE_TOPICS.find((topic) => topic.slug === 'automatisierung');
+
+	assert.equal(automation?.short, 'Workflows · Scripts');
 });
 
 test('homepage latest section uses the approved lead plus three-card row', async () => {
