@@ -48,35 +48,34 @@ test('the now-visible featured article image is eager and high priority', async 
 	const card = await readFile(join(projectRoot, 'src', 'lib', 'components', 'blog', 'HomepagePostCard.svelte'), 'utf8');
 	assert.match(card, /loading=\{featured \? 'eager' : 'lazy'\}/);
 	assert.match(card, /fetchpriority=\{featured \? 'high' : undefined\}/);
-	assert.match(card, /\(max-width: 768px\) 132px/);
-	assert.match(card, /grid-template-columns:\s*clamp\(96px, 24vw, 132px\) minmax\(0, 1fr\)/);
+	assert.match(card, /\(max-width: 768px\) calc\(100vw - 32px\)/);
+	assert.match(card, /grid-template-columns:\s*minmax\(0, 1\.35fr\) minmax\(280px, \.65fr\)/);
 	assert.match(card, /\.post-card\.featured\.without-image\s*\{\s*grid-template-columns:\s*1fr/);
 });
 
 test('video uses a local keyboard-operable facade before loading privacy-enhanced YouTube', async () => {
-	const page = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
-	assert.match(page, /let videoLoaded = \$state\(false\)/);
-	assert.match(page, /let videoPosterReady = \$state\(false\)/);
-	assert.match(page, /rootMargin:\s*'200px'/);
-	assert.match(page, /\{#if videoPosterReady\}[\s\S]*prompt-engineering-trmt-002\.webp/);
-	assert.match(page, /type="button"/);
-	assert.match(page, /Video abspielen:/);
-	assert.match(page, /youtube-nocookie\.com\/embed\/KWIH_InMQZ8/);
-	assert.match(page, /\{#if videoLoaded\}[\s\S]*<iframe/);
-	assert.equal(
-		existsSync(join(projectRoot, 'static', 'images', 'video', 'prompt-engineering-trmt-002.webp')),
-		true
-	);
+	const [page, player] = await Promise.all([
+		readFile(join(routesRoot, '+page.svelte'), 'utf8'),
+		readFile(join(projectRoot, 'src', 'lib', 'components', 'media', 'LiteYouTubePlayer.svelte'), 'utf8')
+	]);
+	assert.match(page, /<LiteYouTubePlayer/);
+	assert.match(page, /latestVideo/);
+	assert.match(player, /let activated = \$state\(false\)/);
+	assert.match(player, /loading="lazy"/);
+	assert.match(player, /type="button"/);
+	assert.match(player, /Video abspielen:/);
+	assert.match(player, /youtube-nocookie\.com\/embed\/\$\{videoId\}/);
+	assert.match(player, /\{#if activated\}[\s\S]*<iframe/);
 });
 
 test('topic artwork stays within the homepage image budget', async () => {
 	const topicsDir = join(projectRoot, 'static', 'images', 'homepage', 'topics');
 	const page = await readFile(join(routesRoot, '+page.svelte'), 'utf8');
-	assert.match(page, /\(max-width: 768px\) 43vw/);
-	assert.match(page, /class="topic-image"[\s\S]*decoding="sync"/);
+	assert.match(page, /\(max-width: 768px\) 72vw/);
+	assert.match(page, /class="topic-image"[\s\S]*decoding="async"/);
 	assert.match(page, /loading="lazy"/);
-	assert.match(page, /width=\{topic\.imageSeo\.width \?\? 512\}/);
-	assert.match(page, /height=\{topic\.imageSeo\.height \?\? 512\}/);
+	assert.match(page, /width=\{topic\.imageSeo\.width \?\? 1200\}/);
+	assert.match(page, /height=\{topic\.imageSeo\.height \?\? 675\}/);
 	const files = (await readdir(topicsDir)).filter((file) => file.endsWith('.webp')).sort();
 	assert.deepEqual(files, [
 		'automatisierung-thumb.webp',

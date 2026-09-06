@@ -38,7 +38,7 @@ test('newsletter gives each input a real label and announces every request state
 	assert.match(source, /id=\{emailId\}/);
 	assert.match(source, /autocomplete="email"/);
 	assert.match(source, /aria-busy=\{status === 'loading'\}/);
-	assert.match(source, /Wird angemeldet…/);
+	assert.match(source, /Wird eingetragen…/);
 	assert.match(source, /role="status"/);
 	assert.match(source, /aria-live="polite"/);
 	assert.match(source, /role="alert"/);
@@ -70,9 +70,10 @@ test('theme action is German, stateful, and at least 44px', async () => {
 });
 
 test('focus and reduced motion are explicit without a global animation kill', async () => {
-	const [css, page, header, layout] = await Promise.all([
+	const [css, page, video, header, layout] = await Promise.all([
 		read('src', 'app.css'),
 		read('src', 'routes', '+page.svelte'),
+		read('src', 'lib', 'components', 'media', 'LiteYouTubePlayer.svelte'),
 		read('src', 'lib', 'components', 'layout', 'Header.svelte'),
 		read('src', 'routes', '+layout.svelte')
 	]);
@@ -81,7 +82,7 @@ test('focus and reduced motion are explicit without a global animation kill', as
 	assert.match(css, /outline-offset:/);
 	assert.match(css, /prefers-reduced-motion:\s*reduce/);
 	assert.doesNotMatch(css, /0\.01ms/);
-	assert.match(page, /\.video-facade:focus-visible\s*\{[^}]*outline:\s*3px solid var\(--color-focus\)/);
+	assert.match(video, /\.video-facade:focus-visible\s*\{[^}]*outline:\s*3px solid var\(--color-focus\)/);
 	assert.doesNotMatch(page, /class="scroll-hint"/);
 	assert.match(page, /@media \(prefers-reduced-motion: reduce\)\s*\{[\s\S]*?\.topic-card\s*\{[^}]*transition:\s*none/);
 	assert.match(header, /@media \(prefers-reduced-motion: reduce\)\s*\{[\s\S]*?\.nav-mobile\s*\{[^}]*animation:\s*none/);

@@ -13,8 +13,8 @@ const readHomepage = () => readFile(join(projectRoot, 'src', 'routes', '+page.sv
 test('homepage surfaces the blog and topic choices in the hero', async () => {
 	const source = await readHomepage();
 
-	assert.match(source, /href="\/blog"[^>]*>\s*<span>Alle Beiträge<\/span>/);
-	assert.match(source, /href="#topics"[^>]*>\s*<span>Themen wählen<\/span>/);
+	assert.match(source, /href="\/blog"[^>]*>\s*<span>Zum Blog<\/span>/);
+	assert.doesNotMatch(source, /href="#topics"|Themen wählen/);
 });
 
 test('homepage navigator derives all five unchanged topic assets from CORE_TOPICS', async () => {
@@ -29,8 +29,8 @@ test('homepage navigator derives all five unchanged topic assets from CORE_TOPIC
 		assert.match(topic.image, /^\/images\/homepage\/topics\/.+\.webp$/);
 	}
 	assert.match(source, /loading="lazy"/);
-	assert.match(source, /width=\{topic\.imageSeo\.width \?\? 512\}/);
-	assert.match(source, /height=\{topic\.imageSeo\.height \?\? 512\}/);
+	assert.match(source, /width=\{topic\.imageSeo\.width \?\? 1200\}/);
+	assert.match(source, /height=\{topic\.imageSeo\.height \?\? 675\}/);
 });
 
 test('homepage keeps the approved orientation copy and links all five hubs below the posts', async () => {
@@ -53,8 +53,9 @@ test('homepage keeps the approved orientation copy and links all five hubs below
 	}
 });
 
-test('homepage does not stretch an image-less featured card to the secondary column height', async () => {
+test('homepage latest section uses the approved lead plus three-card row', async () => {
 	const source = await readHomepage();
 
-	assert.match(source, /\.editorial-posts\s*\{[\s\S]*?align-items:\s*start/);
+	assert.match(source, /\.secondary-posts\s*\{[^}]*grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\)/);
+	assert.match(source, /posts\.slice\(1\)/);
 });
