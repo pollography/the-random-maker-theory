@@ -9,8 +9,8 @@ category: "ki-tools"
 draft: false
 titleAccent: "Preisvorteil"
 readingTime: 9
-heroImage: "/images/blog/claude-fable-5-1-preis-benchmarks-1.webp"
-heroImageThumb: "/images/blog/claude-fable-5-1-preis-benchmarks-1-thumb.webp"
+heroImage: "/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2.webp"
+heroImageThumb: "/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2-thumb.webp"
 ---
 
 **Claude Fable 5.1 ist nicht pauschal 25 Prozent billiger als Fable 5. Der normale Input- und Outputpreis bleibt gleich. Billiger wird vor allem wiederverwendeter Kontext: Cache Reads kosten nur noch ein Viertel.** Genau das kann lange Coding- und Agentenläufe deutlich günstiger machen.

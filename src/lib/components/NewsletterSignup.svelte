@@ -70,7 +70,7 @@
 						disabled={status === 'loading'}
 						class="newsletter-btn"
 					>
-						{status === 'loading' ? 'Wird angemeldet…' : 'Anmelden'}
+						{status === 'loading' ? 'Wird eingetragen…' : 'Eintragen'}
 					</button>
 				</div>
 				{#if status === 'error'}

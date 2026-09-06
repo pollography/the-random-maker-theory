@@ -137,7 +137,7 @@ export const blogImageUsage = {
 		"/images/blog/claude-cowork-einladung-kostenlos-testen-1.webp"
 	],
 	"claude-fable-5-1-preis-benchmarks": [
-		"/images/blog/claude-fable-5-1-preis-benchmarks-1.webp"
+		"/images/blog/claude-fable-5-1-preis-benchmarks-cache-v2.webp"
 	],
 	"claude-fable-5-1-text-wasserzeichen": [
 		"/images/blog/claude-fable-5-1-text-wasserzeichen-1.webp"

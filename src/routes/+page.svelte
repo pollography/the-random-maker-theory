@@ -1,62 +1,55 @@
 <script>
 	import HomepagePostCard from '$lib/components/blog/HomepagePostCard.svelte';
-	import EpisodeCard from '$lib/components/podcast/EpisodeCard.svelte';
+	import LiteYouTubePlayer from '$lib/components/media/LiteYouTubePlayer.svelte';
+	import SpotifyEpisodePlayer from '$lib/components/media/SpotifyEpisodePlayer.svelte';
 	import NewsletterSignup from '$lib/components/NewsletterSignup.svelte';
 	import { CORE_TOPICS } from '$lib/data/core-topics.js';
 	import { pageFAQs } from '$lib/data/pageFAQs';
 	import { buildImageObject } from '$lib/utils/image-rights.js';
 	import { getImageSeo } from '$lib/utils/image-seo.js';
 
-	/** @type {{ data: { posts: any[]; latestEpisode: any; totalCount: number } }} */
+	/** @type {{ data: { posts: any[]; latestVideo: any; latestAudio: any; totalCount: number } }} */
 	let { data } = $props();
 
 	const posts = $derived(data.posts);
-	const latestEpisode = $derived(data.latestEpisode);
+	const latestVideo = $derived(data.latestVideo);
+	const latestAudio = $derived(data.latestAudio);
 	const totalCount = $derived(data.totalCount);
 
-	const faqs = pageFAQs.home;
-	const faqSchema = JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		"mainEntity": faqs.map(faq => ({
-			"@type": "Question",
-			"name": faq.q,
-			"acceptedAnswer": { "@type": "Answer", "text": faq.a }
-		}))
-	});
+	/** @param {string | undefined} url */
+	function getYouTubeId(url) {
+		return url?.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/)?.[1] ?? '';
+	}
 
-	let videoLoaded = $state(false);
-	let videoPosterReady = $state(false);
-	/** @type {HTMLButtonElement | null} */
-	let videoPosterRef = $state(null);
-
-	$effect(() => {
-		if (!videoPosterRef || videoPosterReady) return;
-		const observer = new IntersectionObserver((entries) => {
-			if (entries.some((entry) => entry.isIntersecting)) {
-				videoPosterReady = true;
-				observer.disconnect();
-			}
-		}, { rootMargin: '200px' });
-		observer.observe(videoPosterRef);
-		return () => observer.disconnect();
-	});
+	/** @type {Record<string, string>} */
+	const videoPosters = {
+		'l-PP-PrOdAs': '/images/video/ki-bildbearbeitung-trmt-003.webp',
+		KWIH_InMQZ8: '/images/video/prompt-engineering-trmt-002.webp'
+	};
+	const videoId = $derived(getYouTubeId(latestVideo?.videoUrl));
+	const videoPoster = $derived(videoPosters[videoId] ?? '/images/video/prompt-engineering-trmt-002.webp');
 
 	const topics = CORE_TOPICS.map((topic) => ({
 		...topic,
-		imageSeo: getImageSeo(
-			topic.image,
-			'(max-width: 768px) 43vw, (max-width: 1024px) 18vw, 168px'
-		)
+		imageSeo: getImageSeo(topic.image, '(max-width: 768px) 72vw, (max-width: 1024px) 28vw, 224px')
 	}));
+
+	const faqs = pageFAQs.home;
+	const faqSchema = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'FAQPage',
+		mainEntity: faqs.map((faq) => ({
+			'@type': 'Question',
+			name: faq.q,
+			acceptedAnswer: { '@type': 'Answer', text: faq.a }
+		}))
+	});
 </script>
 
 <svelte:head>
 	<title>TRMT — Tech, KI, Maker & Produktivität | Blog</title>
 	<meta name="description" content="TRMT — Dein deutsches Tech-Magazin für KI-Tools, Maker-Projekte, Smart Home, Automatisierung und Produktivität. Reviews, Tutorials und News. Wöchentlich neu." />
 	<meta name="keywords" content="Tech Blog deutsch, KI News, KI Tools, Maker Projekte, Smart Home, Produktivität, ChatGPT Tutorial, Arduino, 3D Druck, Fotografie, Automatisierung" />
-
-	<!-- OpenGraph -->
 	<meta property="og:title" content="The Random Maker Theory — Tech, KI, Maker & Produktivität" />
 	<meta property="og:description" content="Dein deutsches Tech-Magazin: KI-Tools, Maker-Projekte, Smart Home und Produktivität. Reviews, Tutorials, News." />
 	<meta property="og:image" content="https://therandommakertheory.com/images/og/default.webp" />
@@ -64,54 +57,40 @@
 	<meta property="og:url" content="https://therandommakertheory.com" />
 	<meta property="og:locale" content="de_DE" />
 	<meta property="og:site_name" content="The Random Maker Theory" />
-
-	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="The Random Maker Theory" />
 	<meta name="twitter:description" content="Dein deutsches Tech-Magazin: KI-Tools, Maker-Projekte, Smart Home und Produktivität. Reviews, Tutorials, News." />
 	<meta name="twitter:image" content="https://therandommakertheory.com/images/og/default.webp" />
-
-	<!-- Canonical + hreflang -->
 	<link rel="canonical" href="https://therandommakertheory.com" />
 	<link rel="alternate" hreflang="de" href="https://therandommakertheory.com" />
 	<link rel="alternate" hreflang="x-default" href="https://therandommakertheory.com" />
-
-	<!-- FAQPage Schema -->
 	{@html `<script type="application/ld+json">${faqSchema}</script>`}
-
-	<!-- JSON-LD Schema -->
 	{@html `<script type="application/ld+json">${JSON.stringify({
-		"@context": "https://schema.org",
-		"@type": "WebSite",
-		"name": "The Random Maker Theory",
-		"alternateName": "TRMT",
-		"url": "https://therandommakertheory.com",
-		"description": "Dein deutsches Tech-Magazin: KI-Tools, Maker-Projekte, Smart Home, Automatisierung und Produktivität.",
-		"image": buildImageObject('/images/og/default.webp', 'The Random Maker Theory'),
-		"inLanguage": "de-DE",
-		"publisher": {
-			"@type": "Organization",
-			"name": "The Random Maker Theory",
-			"url": "https://therandommakertheory.com"
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'The Random Maker Theory',
+		alternateName: 'TRMT',
+		url: 'https://therandommakertheory.com',
+		description: 'Dein deutsches Tech-Magazin: KI-Tools, Maker-Projekte, Smart Home, Automatisierung und Produktivität.',
+		image: buildImageObject('/images/og/default.webp', 'The Random Maker Theory'),
+		inLanguage: 'de-DE',
+		publisher: {
+			'@type': 'Organization',
+			name: 'The Random Maker Theory',
+			url: 'https://therandommakertheory.com'
 		}
 	})}</script>`}
 </svelte:head>
 
-<!-- ═══════ HERO ═══════ -->
 <section class="hero">
 	<div class="hero-badge">News · Reviews · Tutorials · Projekte</div>
-	<h1 class="hero-title">
-		The <em class="hero-accent">Random</em> Maker Theory
-	</h1>
+	<h1 class="hero-title">The <em class="hero-accent">Random</em> Maker Theory</h1>
 	<p class="hero-promise">Entdecken. Verstehen. Und alles <em class="hero-accent">Frei Schnauze.</em></p>
 	<div class="hero-intro">
 		<p class="hero-intro-line">Tech, KI-Tools, Maker-Projekte, Automatisierung und Produktivität.</p>
 		<p class="hero-intro-line">Aufbereitet und erklärt, so dass es hängen bleibt. Für alle Neugierigen, die mehr wissen wollen!</p>
 	</div>
-	<div class="hero-actions">
-		<a href="/blog" class="btn-metallic btn-honey"><span>Alle Beiträge</span></a>
-		<a href="#topics" class="btn-metallic btn-teal"><span>Themen wählen</span></a>
-	</div>
+	<a href="/blog" class="btn-honey"><span>Zum Blog</span></a>
 	<div class="hero-counter">
 		<span class="counter-number">{totalCount}</span>
 		<span class="counter-sep">·</span>
@@ -119,11 +98,8 @@
 	</div>
 </section>
 
-<!-- ═══════ THEMEN ═══════ -->
-<section class="section topics-section" id="topics" aria-labelledby="topics-title">
-	<div class="section-header topics-header">
-		<h2 class="section-title" id="topics-title">Womit willst du anfangen?</h2>
-	</div>
+<section class="section topics-section" id="topics" aria-labelledby="topics-label">
+	<h2 id="topics-label" class="sr-only">Themen</h2>
 	<div class="topics-grid">
 		{#each topics as topic}
 			<a href="/tags/{topic.slug}" class="topic-card">
@@ -134,9 +110,9 @@
 						sizes={topic.imageSeo.sizes}
 						alt=""
 						loading="lazy"
-						decoding="sync"
-						width={topic.imageSeo.width ?? 512}
-						height={topic.imageSeo.height ?? 512}
+						decoding="async"
+						width={topic.imageSeo.width ?? 1200}
+						height={topic.imageSeo.height ?? 675}
 					/>
 				</div>
 				<div class="topic-copy">
@@ -148,11 +124,10 @@
 	</div>
 </section>
 
-<!-- ═══════ HANDVERLESENE POSTS ═══════ -->
 <section class="section posts-section" id="latest-posts" aria-labelledby="latest-posts-title">
 	<div class="section-header">
-		<h2 class="section-title" id="latest-posts-title">Neu & handverlesen</h2>
-		<a href="/blog" class="section-link">Alle Beiträge ansehen →</a>
+		<h2 class="section-title" id="latest-posts-title">Das Neueste aus der Werkstatt</h2>
+		<a href="/blog" class="section-link">Alle Beiträge →</a>
 	</div>
 	{#if posts[0]}
 		<div class="editorial-posts">
@@ -171,765 +146,157 @@
 	</div>
 </section>
 
-<!-- ═══════ BOTTOM SECTIONS ═══════ -->
 <div class="bottom-sections">
-	<!-- Neuestes Video -->
-	<section class="bottom-card video-card">
-		<div class="bottom-card-header">
-			<h2 class="bottom-card-title">Neuestes Video</h2>
-			<a href="https://www.youtube.com/@therandommakertheory" target="_blank" rel="noopener" class="section-link">YouTube →</a>
-		</div>
-		<div class="video-embed">
-			{#if videoLoaded}
-				<iframe
-					src="https://www.youtube-nocookie.com/embed/KWIH_InMQZ8?autoplay=1"
-					title="Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini | TRMT #002"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-				></iframe>
-			{:else}
-				<button
-					type="button"
-					class="video-facade"
-					bind:this={videoPosterRef}
-					aria-label="Video abspielen: Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini"
-					onmouseenter={() => (videoPosterReady = true)}
-					onfocus={() => (videoPosterReady = true)}
-					onclick={() => (videoLoaded = true)}
-				>
-					<div class="video-poster">
-						{#if videoPosterReady}
-							<img
-								src="/images/video/prompt-engineering-trmt-002.webp"
-								alt=""
-								width="1280"
-								height="720"
-								decoding="async"
-							/>
-						{/if}
-					</div>
-					<span class="video-play" aria-hidden="true">▶</span>
-				</button>
-			{/if}
-		</div>
-		<p class="video-title">Prompt Engineering: So holst du ALLES aus ChatGPT, Claude & Gemini</p>
-	</section>
-
-	<!-- Podcast + Newsletter nebeneinander -->
-	<div class="bottom-grid">
-		{#if latestEpisode}
-			<section class="bottom-card">
-				<div class="bottom-card-header">
-					<h2 class="bottom-card-title">Neu zum Anhören</h2>
-					<a href="/podcast" class="section-link">Alle Folgen →</a>
+	{#if latestVideo && videoId}
+		<section class="bottom-card video-card">
+			<div class="bottom-card-header">
+				<div>
+					<p class="media-eyebrow media-eyebrow--video">Neuestes Video</p>
+					<h2 class="bottom-card-title">{latestVideo.title}</h2>
 				</div>
-				<EpisodeCard episode={latestEpisode} />
+			</div>
+			<LiteYouTubePlayer
+				{videoId}
+				title={latestVideo.title}
+				poster={videoPoster}
+				youtubeUrl={latestVideo.videoUrl}
+			/>
+		</section>
+	{/if}
+
+	<div class="bottom-grid">
+		{#if latestAudio}
+			<section class="bottom-card podcast-card">
+				<div class="bottom-card-header">
+					<div>
+						<p class="media-eyebrow">Podcast</p>
+						<h2 class="bottom-card-title">Direkt anhören</h2>
+					</div>
+				</div>
+				<SpotifyEpisodePlayer
+					title={latestAudio.title}
+					description={latestAudio.description}
+					duration={latestAudio.duration}
+					audioUrl={latestAudio.audioUrl}
+					spotifyUrl={latestAudio.audioUrl}
+				/>
 			</section>
 		{/if}
 
-		<section class="bottom-card newsletter-card-wrap">
+		<section class="bottom-card newsletter-card">
 			<NewsletterSignup />
 		</section>
 	</div>
 
-	<!-- FAQ -->
 	<section class="bottom-card faq-card">
-		<h2 class="bottom-card-title" style="margin-bottom: 24px;">Häufige Fragen</h2>
-	<div class="faq-list">
-		{#each faqs as faq, i}
-			<details class="faq-item" class:faq-item-teal={i % 3 === 1}>
-				<summary class="faq-question">
-					<span class="faq-q-text">{faq.q}</span>
-					<span class="faq-chevron">›</span>
-				</summary>
-				<div class="faq-answer">
-					<p>{faq.a}</p>
-				</div>
-			</details>
-		{/each}
-	</div>
+		<h2 class="bottom-card-title faq-title">Häufige Fragen</h2>
+		<div class="faq-list">
+			{#each faqs as faq, index}
+				<details class="faq-item" class:faq-item-teal={index % 3 === 1}>
+					<summary class="faq-question"><span>{faq.q}</span><span class="faq-chevron">›</span></summary>
+					<div class="faq-answer"><p>{faq.a}</p></div>
+				</details>
+			{/each}
+		</div>
 	</section>
 </div>
 
 <style>
-	/* ── HERO ── */
-	.hero {
-		text-align: center;
-		min-height: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		position: relative;
-		padding: 54px 0 12px;
-		margin-top: -56px;
-	}
-
-	.hero-badge {
-		display: inline-block;
-		font-family: var(--font-mono);
-		font-size: var(--font-size-sm);
-		color: var(--color-accent-teal-foreground);
-		letter-spacing: var(--letter-spacing-wider);
-		text-transform: uppercase;
-		margin-bottom: 12px;
-		padding: 5px 16px;
-		border: 1px solid var(--color-accent-teal-subtle);
-		border-radius: var(--radius-full);
-		background: var(--color-accent-teal-subtle);
-	}
-
-	.hero-title {
-		font-family: var(--font-display);
-		font-weight: 400;
-		font-size: clamp(44px, 6vw, 64px);
-		line-height: 1.05;
-		letter-spacing: -0.02em;
-		color: var(--color-text);
-		margin: 0 0 8px;
-		opacity: 0.95;
-	}
-
-	.hero-accent {
-		color: var(--color-accent-honey-foreground);
-		font-style: italic;
-		transition: all 0.4s ease;
-	}
-
-	.hero-title:hover .hero-accent {
-		text-shadow:
-			0 0 12px rgba(212, 137, 62, 0.6),
-			0 0 30px rgba(212, 137, 62, 0.3),
-			0 0 60px rgba(212, 137, 62, 0.12);
-		color: hsl(38 85% 58%);
-	}
-
-	.hero-promise {
-		font-family: var(--font-display);
-		font-size: clamp(26px, 3.2vw, 36px);
-		font-weight: 400;
-		line-height: 1.15;
-		letter-spacing: -0.01em;
-		color: var(--color-text);
-		margin: 0 0 8px;
-	}
-
-	.hero-intro {
-		max-width: 720px;
-		margin: 0 0 18px;
-		font-size: var(--font-size-md);
-		line-height: 1.45;
-		color: var(--color-text-muted);
-	}
-
+	.hero { display: flex; flex-direction: column; align-items: center; padding: 46px 0 24px; text-align: center; }
+	.hero-badge { display: inline-block; margin-bottom: 14px; padding: 5px 16px; border: 1px solid var(--color-accent-teal-subtle); border-radius: var(--radius-full); background: var(--color-accent-teal-subtle); color: var(--color-accent-teal-foreground); font-family: var(--font-mono); font-size: var(--font-size-sm); letter-spacing: var(--letter-spacing-wider); text-transform: uppercase; }
+	.hero-title { margin: 0 0 8px; color: var(--color-text); font-family: var(--font-display); font-size: clamp(44px, 6vw, 68px); font-weight: 400; letter-spacing: -.025em; line-height: 1.02; }
+	.hero-accent { color: var(--color-accent-honey-foreground); font-style: italic; }
+	.hero-promise { margin: 0 0 10px; color: var(--color-text); font-family: var(--font-display); font-size: clamp(26px, 3.2vw, 36px); line-height: 1.15; }
+	.hero-intro { max-width: 730px; margin: 0 0 20px; color: var(--color-text-muted); font-size: var(--font-size-md); line-height: 1.5; }
 	.hero-intro-line { margin: 0; }
+	.btn-honey { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 30px; border-radius: var(--radius-lg); background: var(--color-accent-honey); color: var(--color-on-accent); font-weight: var(--font-weight-semibold); text-decoration: none; transition: transform var(--transition-normal), box-shadow var(--transition-normal), background var(--transition-normal); }
+	.btn-honey:hover { background: var(--color-accent-honey-hover); box-shadow: 0 10px 28px rgba(212, 137, 62, .22); transform: translateY(-2px); }
+	.hero-counter { display: inline-flex; align-items: baseline; gap: 8px; margin-top: 13px; }
+	.counter-number { color: var(--color-accent-honey-foreground); font-family: var(--font-display); font-size: 1.125rem; }
+	.counter-sep, .counter-label { color: var(--color-text-dim); }
+	.counter-label { font-family: var(--font-display); font-size: .9375rem; font-style: italic; }
 
-	.hero-actions {
-		display: flex;
-		gap: 16px;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	/* ── BUTTONS ── */
-	.btn-honey, .btn-teal {
-		display: inline-flex;
-		align-items: center;
-		min-height: 44px;
-		padding: 12px 26px;
-		border-radius: var(--radius-lg);
-		font-weight: var(--font-weight-semibold);
-		font-size: var(--font-size-base);
-		text-decoration: none;
-		transition: all var(--transition-normal);
-		border: none;
-	}
-
-	.btn-honey {
-		background: var(--color-accent-honey);
-		color: var(--color-on-accent);
-	}
-	.btn-honey:hover {
-		background: var(--color-accent-honey-hover);
-		box-shadow: 0 0 20px rgba(212, 137, 62, 0.4), 0 0 40px rgba(212, 137, 62, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
-		transform: translateY(-2px);
-	}
-
-	.btn-teal {
-		background: var(--color-accent-teal);
-		color: var(--color-on-accent);
-	}
-	.btn-teal:hover {
-		background: var(--color-accent-teal-hover);
-		box-shadow: 0 0 20px rgba(58, 176, 162, 0.4), 0 0 40px rgba(58, 176, 162, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
-		transform: translateY(-2px);
-	}
-
-	/* ── HERO COUNTER (below buttons) ── */
-	.hero-counter {
-		display: inline-flex;
-		align-items: baseline;
-		gap: 8px;
-		margin-top: 12px;
-	}
-
-	.counter-sep {
-		color: var(--color-text-dim);
-		font-size: 1rem;
-	}
-
-	/* ── COUNTER (inline in hero) ── */
-	.counter-number {
-		font-family: var(--font-display);
-		font-weight: 400;
-		font-size: 1.125rem;
-		color: var(--color-accent-honey-foreground);
-		line-height: 1;
-	}
-
-	.counter-label {
-		font-family: var(--font-display);
-		font-style: italic;
-		font-size: 0.9375rem;
-		color: var(--color-text-dim);
-	}
-
-	/* ── SECTIONS ── */
-	.section { padding: 24px 0 36px; }
-
-	.section-header {
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		margin-bottom: 16px;
-	}
-
-	.section-title {
-		font-family: var(--font-display);
-		font-weight: 400;
-		font-size: clamp(28px, 4vw, 36px);
-		color: var(--color-text);
-		margin: 0;
-		font-style: normal;
-		opacity: 0.95;
-	}
-
-	.section-link {
-		display: inline-flex;
-		align-items: center;
-		min-height: 44px;
-		color: var(--color-accent-honey-foreground);
-		text-decoration: none;
-		font-weight: var(--font-weight-semibold);
-		font-size: var(--font-size-base);
-		transition: all var(--transition-normal);
-		padding: 6px 14px;
-		border-radius: var(--radius-md);
-	}
-	.section-link:hover {
-		color: var(--color-accent-honey-foreground);
-		text-shadow: 0 0 12px rgba(212, 137, 62, 0.4);
-		transform: translateX(2px);
-	}
-
-	/* ── TOPIC NAVIGATOR ── */
+	.section { padding: 28px 0 42px; }
 	.topics-section,
 	.posts-section { scroll-margin-top: 76px; }
+	.topics-section { padding-top: 8px; }
+	.section-header { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
+	.section-title { margin: 0; color: var(--color-text); font-family: var(--font-display); font-size: clamp(28px, 4vw, 38px); font-weight: 400; line-height: 1.08; }
+	.section-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-accent-honey-foreground); font-size: var(--font-size-base); font-weight: var(--font-weight-semibold); text-decoration: none; white-space: nowrap; }
+	.section-link:hover { color: var(--color-text); }
+	.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-	.topics-section { padding-top: 8px; padding-bottom: 8px; }
-	.posts-section { padding-top: 10px; }
-	.topics-header { margin-bottom: 12px; }
-
-	.topics-grid {
-		display: grid;
-		grid-template-columns: repeat(5, minmax(0, 168px));
-		justify-content: space-between;
-		gap: clamp(12px, 2vw, 28px);
-		max-width: 980px;
-		margin-inline: auto;
-	}
-
-	.topic-card {
-		min-width: 0;
-		overflow: hidden;
-		background: var(--color-surface);
-		border: 1px solid var(--color-border-subtle);
-		border-radius: var(--radius-xl);
-		color: inherit;
-		text-decoration: none;
-		transition: border-color var(--transition-normal), transform var(--transition-normal);
-		scroll-snap-align: start;
-	}
-
-	.topic-card:hover {
-		border-color: rgba(58, 176, 162, 0.42);
-		transform: translateY(-2px);
-	}
-
-	.topic-image {
-		aspect-ratio: 1 / 1;
-		overflow: hidden;
-		background: var(--color-elevated);
-	}
-
-	.topic-image img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		transition: transform var(--transition-normal);
-	}
-
+	.topics-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(12px, 1.7vw, 22px); }
+	.topic-card { min-width: 0; overflow: hidden; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-xl); background: var(--color-surface); color: inherit; text-decoration: none; transition: border-color var(--transition-normal), transform var(--transition-normal); }
+	.topic-card:hover { border-color: rgba(58, 176, 162, .46); transform: translateY(-2px); }
+	.topic-image { overflow: hidden; aspect-ratio: 16 / 9; background: var(--color-elevated); }
+	.topic-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-normal); }
 	.topic-card:hover img { transform: scale(1.025); }
+	.topic-copy { padding: 13px 14px 15px; }
+	.topic-copy h3 { margin: 0 0 6px; color: var(--color-text); font-family: var(--font-display); font-size: clamp(19px, 1.8vw, 24px); font-weight: 400; line-height: 1.1; }
+	.topic-copy p { margin: 0; color: var(--color-text-dim); font-family: var(--font-mono); font-size: clamp(.62rem, .82vw, .72rem); line-height: 1.45; }
 
-	.topic-copy { padding: 9px 10px 11px; }
-
-	.topic-copy h3 {
-		margin: 0 0 5px;
-		font-family: var(--font-display);
-		font-size: clamp(18px, 1.8vw, 21px);
-		font-weight: 400;
-		line-height: 1.1;
-		color: var(--color-text);
-	}
-
-	.topic-copy p {
-		margin: 0;
-		font-family: var(--font-mono);
-		font-size: 0.68rem;
-		line-height: 1.45;
-		color: var(--color-text-dim);
-	}
-
-	:global([data-theme='light']) .topic-card {
-		background: var(--gradient-card-bg);
-		border-color: transparent;
-		box-shadow: var(--shadow-neo);
-	}
-
-	/* ── EDITORIAL POSTS ── */
-	.editorial-posts {
-		display: grid;
-		grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
-		align-items: start;
-		gap: 18px;
-	}
-
-	.secondary-posts {
-		display: grid;
-		grid-template-rows: repeat(3, minmax(0, 1fr));
-		gap: 12px;
-	}
-
-	.homepage-context {
-		max-width: 920px;
-		margin: 28px auto 0;
-		font-size: var(--font-size-base);
-		line-height: 1.7;
-		color: var(--color-text-muted);
-	}
-
+	.editorial-posts { display: grid; gap: 20px; }
+	.secondary-posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 18px; }
+	.homepage-context { max-width: 920px; margin: 34px auto 0; color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1.75; }
 	.homepage-context p { margin: 0; }
-
-	.homepage-context a {
-		color: var(--color-text);
-		text-decoration-color: var(--color-accent-teal-foreground);
-		text-decoration-thickness: 1px;
-		text-underline-offset: 3px;
-	}
-
+	.homepage-context a { color: var(--color-text); text-decoration-color: var(--color-accent-teal-foreground); text-underline-offset: 3px; }
 	.homepage-context a:hover { color: var(--color-accent-teal-foreground); }
 
-	/* ── BOTTOM SECTIONS ── */
-	.bottom-sections {
-		padding: 48px 0;
-		display: flex;
-		flex-direction: column;
-		gap: 24px;
-	}
-
-	.bottom-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 24px;
-		align-items: stretch;
-	}
-
-	.bottom-card {
-		background: var(--color-surface);
-		border: 1px solid var(--color-border-subtle);
-		border-radius: var(--radius-xl);
-		padding: 32px;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.bottom-card-header {
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		margin-bottom: 20px;
-	}
-
-	.bottom-card-title {
-		font-family: var(--font-display);
-		font-weight: 400;
-		font-size: clamp(22px, 3vw, 28px);
-		color: var(--color-text);
-		margin: 0;
-		opacity: 0.95;
-	}
-
-	.newsletter-card-wrap {
-		padding: 0;
-		background: transparent;
-		border: none;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.newsletter-card-wrap :global(.newsletter-wrap) {
-		margin-top: 0;
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.newsletter-card-wrap :global(.newsletter-card) {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		border-radius: var(--radius-xl);
-	}
-
-	/* Podcast card in bottom-grid: volle Hoehe */
-	.bottom-grid .bottom-card :global(.card) {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.faq-card {
-		max-width: 100%;
-	}
-
-	/* ── VIDEO EMBED ── */
-	.video-card {
-		overflow: hidden;
-	}
-
-	.video-embed {
-		position: relative;
-		width: 100%;
-		padding-bottom: 56.25%; /* 16:9 */
-		border-radius: var(--radius-lg);
-		overflow: hidden;
-		background: rgba(0, 0, 0, 0.3);
-	}
-
-	.video-embed iframe {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border: none;
-		border-radius: var(--radius-lg);
-	}
-
-	.video-facade {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		padding: 0;
-		border: none;
-		border-radius: var(--radius-lg);
-		background: transparent;
-		cursor: pointer;
-	}
-
-	.video-facade img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
-	.video-poster {
-		position: absolute;
-		inset: 0;
-		background:
-			radial-gradient(circle at 50% 44%, rgba(58, 176, 162, 0.18), transparent 34%),
-			radial-gradient(circle at 48% 56%, rgba(212, 137, 62, 0.18), transparent 45%),
-			var(--color-elevated);
-	}
-
-	.video-play {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		display: grid;
-		place-items: center;
-		width: 64px;
-		height: 64px;
-		padding-left: 4px;
-		border-radius: 50%;
-		background: rgba(0, 0, 0, 0.72);
-		color: white;
-		font-size: 1.5rem;
-		transition: transform var(--transition-normal), background var(--transition-normal);
-	}
-
-	.video-facade:hover .video-play {
-		transform: translate(-50%, -50%) scale(1.08);
-		background: var(--color-accent-honey);
-	}
-
-	.video-facade:focus-visible {
-		outline: 3px solid var(--color-focus);
-		outline-offset: -3px;
-	}
-
-	.video-title {
-		margin: 16px 0 0;
-		font-family: var(--font-display);
-		font-weight: 400;
-		font-size: clamp(18px, 2.5vw, 22px);
-		color: var(--color-accent-honey-foreground);
-		line-height: 1.3;
-		font-style: italic;
-	}
-
-	/* ── FAQ SECTION ── */
-
-	.faq-list {
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
-	}
-
-	.faq-item {
-		background: rgba(26, 26, 26, 0.6);
-		border: 1px solid var(--color-border-subtle);
-		border-radius: var(--radius-lg);
-		overflow: hidden;
-		transition: all 0.2s ease;
-	}
-
-	.faq-item:hover {
-		border-color: rgba(212, 137, 62, 0.3);
-	}
-
-	.faq-item-teal:hover {
-		border-color: rgba(58, 176, 162, 0.3);
-	}
-
-	.faq-item[open] {
-		background: rgba(212, 137, 62, 0.03);
-		border-color: rgba(212, 137, 62, 0.2);
-	}
-
-	.faq-item-teal[open] {
-		background: rgba(58, 176, 162, 0.03);
-		border-color: rgba(58, 176, 162, 0.2);
-	}
-
-	.faq-question {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 16px;
-		padding: 18px 24px;
-		cursor: pointer;
-		list-style: none;
-		font-weight: var(--font-weight-semibold);
-		font-size: var(--font-size-base);
-		color: var(--color-text);
-		line-height: 1.5;
-	}
-
+	.bottom-sections { display: flex; flex-direction: column; gap: 24px; padding: 30px 0 52px; }
+	.bottom-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+	.bottom-card { min-width: 0; padding: clamp(22px, 3vw, 32px); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-xl); background: var(--color-surface); }
+	.bottom-card-header { display: flex; justify-content: space-between; margin-bottom: 20px; }
+	.bottom-card-title { max-width: 920px; margin: 0; color: var(--color-text); font-family: var(--font-display); font-size: clamp(23px, 3vw, 32px); font-weight: 400; line-height: 1.15; }
+	.media-eyebrow { margin: 0 0 7px; color: var(--color-accent-teal-foreground); font-family: var(--font-mono); font-size: .72rem; font-weight: var(--font-weight-semibold); letter-spacing: .13em; text-transform: uppercase; }
+	.media-eyebrow--video { color: #f05a63; }
+	.newsletter-card { display: flex; padding: 0; overflow: hidden; }
+	.newsletter-card :global(.newsletter-wrap) { width: 100%; margin-top: 0; }
+	.newsletter-card :global(.newsletter-card) { height: 100%; border: 0; border-radius: 0; box-shadow: none; }
+	.faq-title { margin-bottom: 24px; }
+	.faq-list { display: flex; flex-direction: column; gap: 8px; }
+	.faq-item { overflow: hidden; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); background: rgba(26, 26, 26, .6); }
+	.faq-question { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; color: var(--color-text); cursor: pointer; font-weight: var(--font-weight-semibold); line-height: 1.5; list-style: none; }
 	.faq-question::-webkit-details-marker { display: none; }
-	.faq-question::marker { display: none; content: ''; }
+	.faq-chevron { flex-shrink: 0; color: var(--color-accent-honey-foreground); font-size: 1.25rem; font-weight: 700; transition: transform var(--transition-normal); }
+	.faq-item-teal .faq-chevron { color: var(--color-accent-teal-foreground); }
+	.faq-item[open] .faq-chevron { transform: rotate(90deg); }
+	.faq-answer { padding: 0 24px 18px; }
+	.faq-answer p { margin: 0; color: var(--color-text-muted); line-height: 1.75; }
 
-	.faq-chevron {
-		flex-shrink: 0;
-		font-size: 1.25rem;
-		color: var(--color-accent-honey-foreground);
-		transition: transform 0.2s ease;
-		font-weight: 700;
-	}
+	:global([data-theme='light']) .topic-card,
+	:global([data-theme='light']) .bottom-card { border-color: transparent; background: var(--gradient-card-bg); box-shadow: var(--shadow-neo); }
+	:global([data-theme='light']) .faq-item { border: 0; background: var(--gradient-card-bg); box-shadow: var(--shadow-neo); }
 
-	.faq-item[open] .faq-chevron {
-		transform: rotate(90deg);
-	}
-
-	.faq-item-teal .faq-chevron {
-		color: var(--color-accent-teal-foreground);
-	}
-
-	.faq-answer {
-		padding: 0 24px 18px;
-	}
-
-	.faq-answer p {
-		margin: 0;
-		font-size: var(--font-size-base);
-		color: var(--color-text-muted);
-		line-height: 1.75;
-	}
-
-	:global([data-theme='light']) .faq-item {
-		background: var(--gradient-card-bg);
-		border: none;
-		box-shadow: var(--shadow-neo);
-	}
-
-	:global([data-theme='light']) .faq-item[open] {
-		background: rgba(212, 137, 62, 0.04);
-	}
-
-	:global([data-theme='light']) .faq-item-teal[open] {
-		background: rgba(58, 176, 162, 0.04);
-	}
-
-	/* ── LIGHT MODE CLAYMORPHISM ── */
-	:global([data-theme='light']) .bottom-card {
-		background: var(--gradient-card-bg);
-		border: none;
-		box-shadow: var(--shadow-neo);
-	}
-
-	:global([data-theme='light']) .bottom-card:hover {
-		box-shadow: 12px 12px 24px rgba(160, 145, 125, 0.45), -6px -6px 12px rgba(245, 238, 225, 0.6);
-	}
-
-	:global([data-theme='light']) .hero-counter {
-		background: var(--gradient-card-bg);
-		border: none;
-		box-shadow: 6px 6px 14px rgba(160, 145, 125, 0.35), -4px -4px 10px rgba(245, 238, 225, 0.5);
-	}
-
-	:global([data-theme='light']) .hero-badge {
-		background: var(--gradient-card-bg);
-		border: none;
-		box-shadow: 4px 4px 10px rgba(160, 145, 125, 0.3), -3px -3px 8px rgba(245, 238, 225, 0.45);
-		color: var(--color-accent-teal-foreground);
-	}
-
-	:global([data-theme='light']) .newsletter-card-wrap :global(.newsletter-card) {
-		box-shadow: var(--shadow-neo);
-	}
-
-	:global([data-theme='light']) .section-link {
-		background: var(--gradient-card-bg);
-		box-shadow: 4px 4px 8px rgba(160, 145, 125, 0.25), -2px -2px 6px rgba(245, 238, 225, 0.4);
-		border-radius: var(--radius-lg);
-	}
-
-	:global([data-theme='light']) .section-link:hover {
-		box-shadow: 6px 6px 14px rgba(160, 145, 125, 0.4), -4px -4px 10px rgba(245, 238, 225, 0.55);
-	}
-
-	:global([data-theme='light']) .btn-honey {
-		box-shadow: 6px 6px 14px rgba(160, 145, 125, 0.4), -4px -4px 10px rgba(245, 238, 225, 0.5);
-	}
-
-	:global([data-theme='light']) .btn-teal {
-		box-shadow: 6px 6px 14px rgba(160, 145, 125, 0.4), -4px -4px 10px rgba(245, 238, 225, 0.5);
-	}
-
-	:global([data-theme='light']) .btn-honey:hover,
-	:global([data-theme='light']) .btn-teal:hover {
-		box-shadow: 8px 8px 20px rgba(160, 145, 125, 0.5), -6px -6px 14px rgba(245, 238, 225, 0.6);
-	}
-
-	:global([data-theme='light']) .hero-title:hover .hero-accent {
-		text-shadow:
-			0 0 10px rgba(196, 133, 76, 0.4),
-			0 0 25px rgba(196, 133, 76, 0.2);
-		color: hsl(38 80% 48%);
-	}
-
-	/* ── RESPONSIVE ── */
-	@media (max-width: 1024px) {
-		.editorial-posts { grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr); }
+	@media (max-width: 900px) {
+		.topics-grid { grid-auto-flow: column; grid-auto-columns: minmax(200px, 38vw); grid-template-columns: none; overflow-x: auto; overflow-y: hidden; padding: 3px 3px 10px; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; }
+		.topic-card { scroll-snap-align: start; }
+		.secondary-posts { grid-template-columns: 1fr 1fr; }
+		.secondary-posts :global(.post-card:last-child) { grid-column: 1 / -1; }
 	}
 
 	@media (max-width: 768px) {
-		.hero { min-height: auto; padding: 66px 0 10px; margin-top: -56px; }
+		.hero { padding-top: 54px; }
 		.hero-badge { display: none; }
-		.hero-intro {
-			max-width: 600px;
-			margin-bottom: 12px;
-			font-size: 0.9rem;
-			line-height: 1.4;
-		}
-		.bottom-grid { grid-template-columns: minmax(0, 1fr); }
-		.bottom-card { min-width: 0; padding: 24px; }
-		.topics-section { padding-top: 4px; padding-bottom: 4px; }
-		.topics-header { margin-bottom: 8px; }
-		.topics-grid {
-			grid-template-columns: none;
-			grid-auto-flow: column;
-			grid-auto-columns: minmax(152px, 43vw);
-			justify-content: start;
-			max-width: none;
-			overflow-x: auto;
-			overflow-y: hidden;
-			scroll-snap-type: x mandatory;
-			overscroll-behavior-inline: contain;
-			scrollbar-width: thin;
-			padding: 2px 2px 6px;
-		}
-		.topic-copy { padding: 7px 9px 8px; }
-		.topic-copy h3 { margin-bottom: 3px; font-size: 18px; }
-		.topic-copy p { font-size: 0.62rem; white-space: nowrap; }
-		.editorial-posts {
-			grid-template-columns: 1fr;
-		}
-		.secondary-posts { grid-template-rows: none; }
-		.hero-counter { display: none; }
+		.hero-intro { font-size: .92rem; }
+		.bottom-grid, .secondary-posts { grid-template-columns: 1fr; }
+		.secondary-posts :global(.post-card:last-child) { grid-column: auto; }
 	}
 
 	@media (max-width: 480px) {
-		.hero-title { font-size: clamp(37px, 10.2vw, 44px); }
+		.hero-title { font-size: clamp(37px, 10.5vw, 44px); }
 		.hero-promise { font-size: 21px; }
-		.hero-actions { width: 100%; gap: 10px; }
-		.hero-actions a { flex: 1 1 150px; justify-content: center; padding-inline: 16px; }
-		.section-header { align-items: center; gap: 12px; }
-		.section-link { font-size: var(--font-size-sm); text-align: right; }
+		.topics-grid { grid-auto-columns: minmax(218px, 76vw); }
+		.section-header { align-items: flex-end; gap: 12px; }
+		.section-link { font-size: var(--font-size-sm); }
+		.bottom-card { padding: 20px; }
+		.newsletter-card { padding: 0; }
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		.hero-accent,
-		.btn-honey,
-		.btn-teal,
-		.section-link,
-		.video-play,
-		.faq-item,
-		.faq-chevron {
-			transition: none;
-		}
-
-		.topic-card {
-			transition: none;
-		}
-
-		.topic-card img {
-			transition: none;
-		}
-		.btn-honey:hover,
-		.btn-teal:hover,
-		.topic-card:hover,
-		.topic-card:hover img,
-		.section-link:hover,
-		.video-facade:hover .video-play {
-			transform: none;
-		}
+		.btn-honey, .faq-chevron { transition: none; }
+		.topic-card { transition: none; }
+		.topic-image img { transition: none; }
+		.btn-honey:hover, .topic-card:hover, .topic-card:hover img { transform: none; }
 	}
 </style>

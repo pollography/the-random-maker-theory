@@ -49,9 +49,10 @@ test('page one uses a server loader and the shared crawlable archive', async () 
 });
 
 test('later archive pages have strict 404 validation and prerender entries', async () => {
-	const [loader, page] = await Promise.all([
+	const [loader, page, api] = await Promise.all([
 		read('src', 'routes', 'blog', 'seite', '[page]', '+page.server.ts'),
-		read('src', 'routes', 'blog', 'seite', '[page]', '+page.svelte')
+		read('src', 'routes', 'blog', 'seite', '[page]', '+page.svelte'),
+		read('src', 'routes', 'api', 'blog', 'seite', '[page]', '+server.ts')
 	]);
 
 	assert.match(loader, /export async function entries\(\)/);
@@ -61,9 +62,13 @@ test('later archive pages have strict 404 validation and prerender entries', asy
 	assert.match(loader, /error\(404\)/);
 	assert.match(page, /BlogArchive/);
 	assert.match(page, /showFaq=\{false\}/);
+	assert.match(api, /createArchivePageData/);
+	assert.match(api, /export const GET/);
+	assert.match(api, /json\(/);
+	assert.match(api, /pageNumber < 2/);
 });
 
-test('shared archive renders normal topic and pagination links with page-specific metadata', async () => {
+test('shared archive keeps crawlable pages but progressively loads page one automatically', async () => {
 	const archive = await read('src', 'lib', 'components', 'blog', 'BlogArchive.svelte');
 
 	assert.match(archive, /CORE_TOPICS/);
@@ -73,6 +78,13 @@ test('shared archive renders normal topic and pagination links with page-specifi
 	assert.match(archive, /href=\{pageHref\(currentPage - 1\)\}/);
 	assert.match(archive, /href=\{pageHref\(currentPage \+ 1\)\}/);
 	assert.match(archive, /aria-current=\{pageNumber === currentPage \? 'page' : undefined\}/);
+	assert.match(archive, /IntersectionObserver/);
+	assert.match(archive, /rootMargin:\s*['"](?:[6-9]\d\d)px 0px['"]/);
+	assert.match(archive, /aria-live="polite"/);
+	assert.match(archive, /Alle Artikel geladen/);
+	assert.match(archive, /Erneut versuchen/);
+	assert.match(archive, /<noscript>[\s\S]*href=\{pageHref\(2\)\}/);
+	assert.match(archive, /\{#if currentPage > 1\}[\s\S]*?<nav class="pagination"/);
 	assert.match(archive, /rel="canonical" href=\{canonicalUrl\}/);
 	assert.match(archive, /'@type': 'CollectionPage'/);
 	assert.match(archive, /mainEntity:\s*\{\s*'@type': 'ItemList'/);
@@ -95,7 +107,7 @@ test('shared archive has one server-rendered article-card loop', async () => {
 	const archive = await read('src', 'lib', 'components', 'blog', 'BlogArchive.svelte');
 
 	assert.equal((archive.match(/<BlogCard \{post\} \/>/g) ?? []).length, 1);
-	assert.match(archive, /\{#each posts as post \(post\.slug\)\}/);
+	assert.match(archive, /\{#each renderedPosts as post \(post\.slug\)\}/);
 });
 
 test('real server loaders return bounded slices and reject noncanonical or out-of-range pages', async () => {
@@ -121,6 +133,19 @@ test('real server loaders return bounded slices and reject noncanonical or out-o
 	for (const page of ['1', '01', '0', String(pageOne.totalPages + 1)]) {
 		await assert.rejects(() => pagedLoader.load({ params: { page } }), isNotFound);
 	}
+});
+
+test('the progressive endpoint returns the same bounded canonical page data', async () => {
+	const api = await vite.ssrLoadModule('/src/routes/api/blog/seite/[page]/+server.ts');
+	const response = await api.GET({ params: { page: '2' } });
+	const payload = await response.json();
+
+	assert.equal(response.status, 200);
+	assert.equal(payload.currentPage, 2);
+	assert.ok(payload.posts.length > 0 && payload.posts.length <= 12);
+	assert.ok(payload.totalPages >= 2);
+	assert.ok(payload.totalCount > payload.posts.length);
+	await assert.rejects(() => api.GET({ params: { page: '1' } }), isNotFound);
 });
 
 test('real SSR archive HTML exposes cards, links, canonicals, FAQ scope, and global ItemList positions', async () => {
