@@ -11,7 +11,7 @@
 ## Global Constraints
 
 - Kein weiterer schwerer Kartencontainer.
-- Aufmacher exakt `Hier wird Neugier praktisch.` und Überschrift exakt `Worum geht es hier?`.
+- Überschrift exakt `Worum geht es hier?`; die nachgeordnete Leitzeile lautet exakt `Hier wird Neugier praktisch.`.
 - Vor einem Play-Klick keine YouTube- oder Spotify-Iframes.
 - Desktop zweispaltig; Mobil gestapelt und ohne globalen horizontalen Overflow.
 - Abstand zwischen Editorial Bridge und Videomodul ungefähr 28 bis 32 Pixel.
@@ -27,12 +27,12 @@
 
 **Interfaces:**
 - Consumes: bestehende CSS-Tokens und die fünf vorhandenen Tag-Links.
-- Produces: `.context-heading`, `.context-eyebrow`, `.context-copy` und `.context-note` innerhalb von `.homepage-context`.
+- Produces: `.context-heading`, `.context-manifesto`, `.context-copy` und `.context-note` innerhalb von `.homepage-context`.
 
 - [ ] **Step 1: Failing regression tests schreiben**
 
 ```js
-assert.match(page, /class="context-eyebrow">Hier wird Neugier praktisch\.<\/p>/);
+assert.match(page, /class="context-manifesto">Hier wird Neugier praktisch\.<\/p>/);
 assert.match(page, /class="context-heading"/);
 assert.match(page, /class="context-copy"/);
 assert.match(page, /class="context-note"/);
@@ -51,8 +51,8 @@ Expected: FAIL, weil Aufmacher, Strukturklassen, Bridge-Hintergrund und Spacing-
 ```svelte
 <div class="homepage-context">
 	<div class="context-heading">
-		<p class="context-eyebrow">Hier wird Neugier praktisch.</p>
 		<h2 class="context-title">Worum geht es hier?</h2>
+		<p class="context-manifesto">Hier wird Neugier praktisch.</p>
 	</div>
 	<div class="context-copy">
 		<p>TRMT bündelt praktische Artikel, nachvollziehbare Anleitungen und persönliche Einordnungen rund um KI-Tools, Tech und digitale Workflows. In Maker &amp; DIY geht es um ESP32, 3D-Druck und Smart Home; bei Automatisierung um n8n, Skripte und verbundene Tools. Fotografie bündelt Bildbearbeitung, KI-Workflows und Technik aus der Praxis. Unter Produktivität findest du Systeme für Wissen, Fokus und digitale Ordnung.</p>

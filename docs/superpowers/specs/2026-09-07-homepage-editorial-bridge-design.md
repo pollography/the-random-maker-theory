@@ -8,8 +8,8 @@ Der Abschnitt `Worum geht es hier?` soll nicht mehr wie ein freischwebender Text
 
 - Kein weiterer schwerer Kartencontainer.
 - Eine ruhige Editorial Bridge mit feinem Petrol-zu-Honig-Hintergrund, dünnen Trennlinien und bewusstem Innenraum.
-- Der kurze Aufmacher lautet `Hier wird Neugier praktisch.`; die vorhandene Überschrift `Worum geht es hier?` bleibt bestehen.
-- Desktop: Aufmacher und Überschrift links, Erklärung rechts; eine feine vertikale Linie trennt beide Bereiche.
+- Die vorhandene Überschrift `Worum geht es hier?` bleibt bestehen. Der kurze Satz `Hier wird Neugier praktisch.` folgt darunter als eigenständige redaktionelle Leitzeile, nicht als generischer Kicker über der Überschrift.
+- Desktop: Überschrift und Leitzeile links, Erklärung rechts; eine feine vertikale Linie trennt beide Bereiche.
 - Mobil: natürliche Stapelung ohne vertikale Linie und mit kompaktem Innenabstand.
 - Der vorhandene Inhalt und die fünf Themenlinks bleiben erhalten. Der letzte Gedanke wird als eigene kurze Abschlusszeile abgesetzt: `Wähle ein Thema oder spring direkt ins vollständige Blogarchiv. Alle Beiträge bleiben frei zugänglich – ohne Anmeldung.`
 - Der Abstand zum folgenden Videomodul sinkt von rund 72 auf ungefähr 28 bis 32 Pixel.
