@@ -4281,14 +4281,25 @@ export const imageMetadata = {
 			}
 		]
 	},
-	"/images/blog/ki-bildprompts/followups/76-color-analysis-followup.webp": {
+	"/images/blog/ki-bildprompts/followups/76-color-analysis-applied-followup.webp": {
 		"width": 1122,
 		"height": 1402,
 		"format": "webp",
 		"variants": [
 			{
-				"src": "/images/blog/ki-bildprompts/followups/76-color-analysis-followup.webp",
+				"src": "/images/blog/ki-bildprompts/followups/76-color-analysis-applied-followup.webp",
 				"width": 1122
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/followups/77-hairstyle-grid-feminine-bonus.webp": {
+		"width": 1254,
+		"height": 1254,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/followups/77-hairstyle-grid-feminine-bonus.webp",
+				"width": 1254
 			}
 		]
 	},
@@ -4457,6 +4468,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/01-turnaround-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/01-turnaround-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/01-turnaround.webp": {
 		"width": 480,
 		"height": 403,
@@ -4469,6 +4491,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/01-turnaround.webp",
 				"width": 1369
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/02-expression-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/02-expression-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -4498,6 +4531,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/03-pose-pack-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/03-pose-pack-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/03-pose-pack.webp": {
 		"width": 384,
 		"height": 480,
@@ -4520,6 +4564,17 @@ export const imageMetadata = {
 		"variants": [
 			{
 				"src": "/images/blog/ki-bildprompts/thumbs/03-reduction-linocut.webp",
+				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/04-action-poses-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/04-action-poses-followup.webp",
 				"width": 480
 			}
 		]
@@ -4550,6 +4605,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/05-character-sheet-followup.webp": {
+		"width": 320,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/05-character-sheet-followup.webp",
+				"width": 320
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/05-character-sheet.webp": {
 		"width": 340,
 		"height": 480,
@@ -4572,6 +4638,17 @@ export const imageMetadata = {
 		"variants": [
 			{
 				"src": "/images/blog/ki-bildprompts/thumbs/05-wet-plate-collodion.webp",
+				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/06-emotion-grid-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/06-emotion-grid-followup.webp",
 				"width": 480
 			}
 		]
@@ -4602,6 +4679,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/07-body-language-followup.webp": {
+		"width": 320,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/07-body-language-followup.webp",
+				"width": 320
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/07-body-language.webp": {
 		"width": 387,
 		"height": 480,
@@ -4625,6 +4713,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/thumbs/07-paper-cut-shadowbox.webp",
 				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/08-outfit-variants-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/08-outfit-variants-followup.webp",
+				"width": 384
 			}
 		]
 	},
@@ -4654,6 +4753,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/09-age-progression-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/09-age-progression-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/09-age-progression.webp": {
 		"width": 480,
 		"height": 480,
@@ -4676,6 +4786,17 @@ export const imageMetadata = {
 		"variants": [
 			{
 				"src": "/images/blog/ki-bildprompts/thumbs/09-cloisonne-enamel.webp",
+				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/10-character-evolution-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/10-character-evolution-followup.webp",
 				"width": 480
 			}
 		]
@@ -4813,6 +4934,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/thumbs/109-lenticular-portrait.webp",
 				"width": 400
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/11-sticker-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/11-sticker-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -4979,6 +5111,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/12-sticker-pack-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/12-sticker-pack-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/12-sticker-pack-transparent.webp": {
 		"width": 480,
 		"height": 480,
@@ -5027,6 +5170,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/13-emoji-pack-followup.webp": {
+		"width": 480,
+		"height": 320,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/13-emoji-pack-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/13-emoji-pack.webp": {
 		"width": 480,
 		"height": 480,
@@ -5064,6 +5218,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/14-reaction-pack-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/14-reaction-pack-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/14-reaction-pack.webp": {
 		"width": 480,
 		"height": 403,
@@ -5076,6 +5241,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/14-reaction-pack.webp",
 				"width": 1369
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/15-avatar-pack-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/15-avatar-pack-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5105,6 +5281,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/16-miniature-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/16-miniature-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/16-miniature.webp": {
 		"width": 480,
 		"height": 480,
@@ -5127,6 +5314,17 @@ export const imageMetadata = {
 		"variants": [
 			{
 				"src": "/images/blog/ki-bildprompts/thumbs/16-moire-line-portrait.webp",
+				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/17-giantify-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/17-giantify-followup.webp",
 				"width": 480
 			}
 		]
@@ -5168,6 +5366,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/18-clone-scene-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/18-clone-scene-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/18-clone-scene.webp": {
 		"width": 480,
 		"height": 480,
@@ -5190,6 +5399,17 @@ export const imageMetadata = {
 		"variants": [
 			{
 				"src": "/images/blog/ki-bildprompts/thumbs/19-maker-tool-assemblage.webp",
+				"width": 480
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/19-multiverse-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/19-multiverse-followup.webp",
 				"width": 480
 			}
 		]
@@ -5220,6 +5440,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/20-evolution-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/20-evolution-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/20-evolution.webp": {
 		"width": 480,
 		"height": 480,
@@ -5232,6 +5463,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/20-evolution.webp",
 				"width": 1254
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/21-before-after-followup.webp": {
+		"width": 480,
+		"height": 400,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/21-before-after-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5272,6 +5514,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/22-time-travel-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/22-time-travel-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/22-time-travel.webp": {
 		"width": 387,
 		"height": 480,
@@ -5284,6 +5537,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/22-time-travel.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/23-future-version-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/23-future-version-followup.webp",
+				"width": 384
 			}
 		]
 	},
@@ -5324,6 +5588,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/24-past-version-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/24-past-version-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/24-past-version.webp": {
 		"width": 387,
 		"height": 480,
@@ -5336,6 +5611,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/24-past-version.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/25-alternate-reality-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/25-alternate-reality-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5354,6 +5640,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/26-cutaway-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/26-cutaway-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/26-cutaway.webp": {
 		"width": 387,
 		"height": 480,
@@ -5366,6 +5663,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/26-cutaway.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/27-exploded-view-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/27-exploded-view-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5384,6 +5692,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/28-blueprint-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/28-blueprint-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/28-blueprint.webp": {
 		"width": 480,
 		"height": 480,
@@ -5396,6 +5715,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/28-blueprint.webp",
 				"width": 1254
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/29-xray-followup.webp": {
+		"width": 387,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/29-xray-followup.webp",
+				"width": 387
 			}
 		]
 	},
@@ -5414,6 +5744,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/30-anatomy-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/30-anatomy-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/30-anatomy.webp": {
 		"width": 387,
 		"height": 480,
@@ -5426,6 +5767,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/30-anatomy.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/31-cross-section-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/31-cross-section-followup.webp",
+				"width": 384
 			}
 		]
 	},
@@ -5444,6 +5796,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/32-assembly-followup.webp": {
+		"width": 480,
+		"height": 320,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/32-assembly-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/32-assembly.webp": {
 		"width": 480,
 		"height": 480,
@@ -5456,6 +5819,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/32-assembly.webp",
 				"width": 1254
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/33-disassembly-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/33-disassembly-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5474,6 +5848,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/34-how-it-works-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/34-how-it-works-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/34-how-it-works.webp": {
 		"width": 387,
 		"height": 480,
@@ -5486,6 +5871,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/34-how-it-works.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/35-mind-map-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/35-mind-map-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5504,6 +5900,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/36-flashcard-followup.webp": {
+		"width": 319,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/36-flashcard-followup.webp",
+				"width": 319
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/36-flashcard.webp": {
 		"width": 387,
 		"height": 480,
@@ -5516,6 +5923,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/36-flashcard.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/37-infographic-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/37-infographic-followup.webp",
+				"width": 384
 			}
 		]
 	},
@@ -5534,6 +5952,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/38-timeline-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/38-timeline-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/38-timeline.webp": {
 		"width": 480,
 		"height": 383,
@@ -5546,6 +5975,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/38-timeline.webp",
 				"width": 1404
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/39-visual-guide-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/39-visual-guide-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5564,6 +6004,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/40-comparison-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/40-comparison-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/40-comparison.webp": {
 		"width": 480,
 		"height": 319,
@@ -5576,6 +6027,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/40-comparison.webp",
 				"width": 1537
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/41-environment-expand-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/41-environment-expand-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5594,6 +6056,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/42-world-build-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/42-world-build-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/42-world-build.webp": {
 		"width": 387,
 		"height": 480,
@@ -5606,6 +6079,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/42-world-build.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/43-underwater-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/43-underwater-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5624,6 +6108,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/44-space-scene-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/44-space-scene-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/44-space-scene.webp": {
 		"width": 480,
 		"height": 480,
@@ -5636,6 +6131,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/44-space-scene.webp",
 				"width": 1254
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/45-cyberpunk-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/45-cyberpunk-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5654,6 +6160,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/46-post-apocalypse-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/46-post-apocalypse-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/46-post-apocalypse.webp": {
 		"width": 386,
 		"height": 480,
@@ -5666,6 +6183,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/46-post-apocalypse.webp",
 				"width": 1125
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/47-portal-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/47-portal-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5684,6 +6212,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/48-dreamscape-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/48-dreamscape-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/48-dreamscape.webp": {
 		"width": 387,
 		"height": 480,
@@ -5696,6 +6235,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/48-dreamscape.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/49-double-exposure-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/49-double-exposure-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5714,6 +6264,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/50-movie-scene-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/50-movie-scene-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/50-movie-scene.webp": {
 		"width": 480,
 		"height": 386,
@@ -5726,6 +6287,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/50-movie-scene.webp",
 				"width": 1398
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/51-starter-pack-followup.webp": {
+		"width": 320,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/51-starter-pack-followup.webp",
+				"width": 320
 			}
 		]
 	},
@@ -5744,6 +6316,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/52-bobblehead-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/52-bobblehead-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/52-bobblehead.webp": {
 		"width": 388,
 		"height": 480,
@@ -5756,6 +6339,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/52-bobblehead.webp",
 				"width": 1127
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/53-designer-toy-followup.webp": {
+		"width": 360,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/53-designer-toy-followup.webp",
+				"width": 360
 			}
 		]
 	},
@@ -5774,6 +6368,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/54-desk-figurine-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/54-desk-figurine-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/54-desk-figurine.webp": {
 		"width": 387,
 		"height": 480,
@@ -5786,6 +6391,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/54-desk-figurine.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/55-trading-card-followup.webp": {
+		"width": 320,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/55-trading-card-followup.webp",
+				"width": 320
 			}
 		]
 	},
@@ -5804,6 +6420,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/56-pin-collection-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/56-pin-collection-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/56-pin-collection.webp": {
 		"width": 386,
 		"height": 480,
@@ -5816,6 +6443,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/56-pin-collection.webp",
 				"width": 1125
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/57-mini-me-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/57-mini-me-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5834,6 +6472,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/58-tiny-workers-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/58-tiny-workers-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/58-tiny-workers.webp": {
 		"width": 387,
 		"height": 480,
@@ -5846,6 +6495,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/58-tiny-workers.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/59-diorama-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/59-diorama-followup.webp",
+				"width": 384
 			}
 		]
 	},
@@ -5864,6 +6524,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/60-snow-globe-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/60-snow-globe-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/60-snow-globe.webp": {
 		"width": 388,
 		"height": 480,
@@ -5876,6 +6547,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/60-snow-globe.webp",
 				"width": 1127
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/61-paper-doll-followup.webp": {
+		"width": 340,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/61-paper-doll-followup.webp",
+				"width": 340
 			}
 		]
 	},
@@ -5894,6 +6576,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/62-gachapon-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/62-gachapon-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/62-gachapon.webp": {
 		"width": 388,
 		"height": 480,
@@ -5906,6 +6599,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/62-gachapon.webp",
 				"width": 1127
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/63-comic-strip-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/63-comic-strip-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5924,6 +6628,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/64-fantasy-newspaper-followup.webp": {
+		"width": 340,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/64-fantasy-newspaper-followup.webp",
+				"width": 340
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/64-fantasy-newspaper.webp": {
 		"width": 387,
 		"height": 480,
@@ -5936,6 +6651,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/64-fantasy-newspaper.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/65-film-strip-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/65-film-strip-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -5954,6 +6680,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/66-travel-scrapbook-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/66-travel-scrapbook-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/66-travel-scrapbook.webp": {
 		"width": 387,
 		"height": 480,
@@ -5966,6 +6703,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/66-travel-scrapbook.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/67-tarot-card-followup.webp": {
+		"width": 320,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/67-tarot-card-followup.webp",
+				"width": 320
 			}
 		]
 	},
@@ -5984,6 +6732,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/68-game-screen-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/68-game-screen-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/68-game-screen.webp": {
 		"width": 387,
 		"height": 480,
@@ -5996,6 +6755,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/68-game-screen.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/69-scribble-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/69-scribble-followup.webp",
+				"width": 384
 			}
 		]
 	},
@@ -6014,6 +6784,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/70-claymation-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/70-claymation-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/70-claymation.webp": {
 		"width": 386,
 		"height": 480,
@@ -6026,6 +6807,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/70-claymation.webp",
 				"width": 1124
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/71-plush-toy-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/71-plush-toy-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -6044,6 +6836,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/72-amigurumi-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/72-amigurumi-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/72-amigurumi.webp": {
 		"width": 387,
 		"height": 480,
@@ -6056,6 +6859,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/72-amigurumi.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/73-embroidery-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/73-embroidery-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -6074,6 +6888,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/74-stained-glass-followup.webp": {
+		"width": 320,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/74-stained-glass-followup.webp",
+				"width": 320
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/74-stained-glass.webp": {
 		"width": 387,
 		"height": 480,
@@ -6086,6 +6911,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/74-stained-glass.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/75-studio-headshot-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/75-studio-headshot-followup.webp",
+				"width": 384
 			}
 		]
 	},
@@ -6104,6 +6940,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/76-color-analysis-applied-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/76-color-analysis-applied-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/76-color-analysis.webp": {
 		"width": 387,
 		"height": 480,
@@ -6116,6 +6963,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/76-color-analysis.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/77-hairstyle-grid-followup.webp": {
+		"width": 480,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/77-hairstyle-grid-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -6134,6 +6992,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/78-fix-lighting-followup.webp": {
+		"width": 387,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/78-fix-lighting-followup.webp",
+				"width": 387
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/78-fix-lighting.webp": {
 		"width": 387,
 		"height": 480,
@@ -6146,6 +7015,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/78-fix-lighting.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/79-cover-pack-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/79-cover-pack-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -6164,6 +7044,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/80-career-caricature-followup.webp": {
+		"width": 384,
+		"height": 480,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/80-career-caricature-followup.webp",
+				"width": 384
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/80-career-caricature.webp": {
 		"width": 387,
 		"height": 480,
@@ -6176,6 +7067,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/80-career-caricature.webp",
 				"width": 1126
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/81-brand-board-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/81-brand-board-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -6194,6 +7096,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/82-packaging-board-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/82-packaging-board-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/82-packaging-board.webp": {
 		"width": 390,
 		"height": 480,
@@ -6206,6 +7119,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/82-packaging-board.webp",
 				"width": 1131
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/83-merch-mockup-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/83-merch-mockup-followup.webp",
+				"width": 480
 			}
 		]
 	},
@@ -6224,6 +7148,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/84-contact-sheet-followup.webp": {
+		"width": 480,
+		"height": 320,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/84-contact-sheet-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/84-contact-sheet.webp": {
 		"width": 480,
 		"height": 401,
@@ -6239,6 +7174,17 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/ki-bildprompts/thumbs/85-storyboard-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/85-storyboard-followup.webp",
+				"width": 480
+			}
+		]
+	},
 	"/images/blog/ki-bildprompts/thumbs/85-storyboard.webp": {
 		"width": 388,
 		"height": 480,
@@ -6251,6 +7197,17 @@ export const imageMetadata = {
 			{
 				"src": "/images/blog/ki-bildprompts/85-storyboard.webp",
 				"width": 1127
+			}
+		]
+	},
+	"/images/blog/ki-bildprompts/thumbs/86-first-last-frame-followup.webp": {
+		"width": 480,
+		"height": 270,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/ki-bildprompts/thumbs/86-first-last-frame-followup.webp",
+				"width": 480
 			}
 		]
 	},

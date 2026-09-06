@@ -1,6 +1,6 @@
 {
 	"version": 2,
-	"updatedAt": "2026-09-01",
+	"updatedAt": "2026-09-07",
 	"sourceImage": "/images/blog/ki-bildprompts/00-ausgangsbild.webp",
 	"categories": [
 		{
@@ -126,7 +126,10 @@
 				"Charakterreferenz",
 				"3D-Moodboard",
 				"KI-Video"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes Ganzkörperbild im Format 4:5 in neutraler A-Pose, frontal zur Kamera. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Gleichmäßiges weiches Studiolicht, schlichter heller Hintergrund, vollständige Figur einschließlich Füßen. Kein Raster, keine Beschriftung und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/01-turnaround-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelne Ganzkörperansicht in neutraler A-Pose"
 		},
 		{
 			"id": "expression",
@@ -141,7 +144,10 @@
 				"Reaktionsbild",
 				"Thumbnail",
 				"Profilbild"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 16:9-Thumbnail mit [[MIMIK UND KÖRPERSPANNUNG]]. Zeige die Person groß auf der linken Seite und lasse rechts eine ruhige dunkle Fläche für späteren Text frei. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Dramatisches, aber natürliches Licht, keine Schrift, kein Logo und keine weitere Person.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/02-expression-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: aufgeregtes Thumbnail mit freier dunkler Fläche"
 		},
 		{
 			"id": "expressions",
@@ -171,7 +177,10 @@
 				"YouTube-Thumbnails",
 				"KI-Video",
 				"Personenreferenz"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes Ganzkörperbild im Format 4:5 mit [[POSE UND KAMERAWINKEL]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Ganze Figur einschließlich Füßen, anatomisch saubere Hände, neutraler Hintergrund, kein Raster, kein Text und keine weitere Person.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/03-pose-pack-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelne gehende Ganzkörperpose"
 		},
 		{
 			"id": "actionposes",
@@ -186,7 +195,10 @@
 				"YouTube-Thumbnails",
 				"Social Media",
 				"Reaktionsbilder"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 16:9-Motiv mit [[GESTE UND AUSDRUCK]]. Zeige die Person rechts und lasse links eine ruhige freie Fläche. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Korrigiere Hände anatomisch sauber. Kein Text, kein Logo und keine weitere Person.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/04-action-poses-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelne Zeigegeste mit freier Fläche links"
 		},
 		{
 			"id": "character-sheet",
@@ -201,7 +213,10 @@
 				"Charakterdesign",
 				"KI-Video",
 				"3D-Referenz"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein neues sauberes Character Sheet mit Frontansicht, linker Profilansicht, Rückansicht und drei Porträts mit freundlichem, ernstem und überraschtem Ausdruck. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Verwende ausschließlich die Labels „FRONT“, „PROFIL“, „RÜCKEN“, „FREUNDLICH“, „ERNST“ und „ÜBERRASCHT“. Keine Eigenschaften, Notizen, Logos oder weiteren Wörter.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/05-character-sheet-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: bereinigtes Character Sheet mit deutschen Labels"
 		},
 		{
 			"id": "emotion-grid",
@@ -216,7 +231,10 @@
 				"Mimikreferenz",
 				"Schauspiel",
 				"Avatare"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes quadratisches Profilbild mit der Mimik [[MIMIK]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Natürliche Haut, schlichter heller Hintergrund, kein Text, kein Rahmen und keine weitere Person.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/06-emotion-grid-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelnes quadratisches Porträt mit verwirrter Mimik"
 		},
 		{
 			"id": "body-language",
@@ -231,7 +249,10 @@
 				"Posenplanung",
 				"Storytelling",
 				"Fotoshooting"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 2×3-Raster mit sechs klar unterschiedlichen Formen von Körpersprache: offen, nachdenklich, selbstbewusst, skeptisch, begeistert und entspannt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in allen Feldern. Halbkörperansichten vor einem schlichten hellen Hintergrund, anatomisch saubere Hände, keine Beschriftung und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/07-body-language-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: sechs bewusst unterschiedliche Körpersprachen"
 		},
 		{
 			"id": "outfit-variants",
@@ -246,7 +267,10 @@
 				"Modeberatung",
 				"Kostümplanung",
 				"Personal Branding"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes Ganzkörperporträt im Format 4:5 mit dem Outfit [[OUTFIT]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1. Schlichter neutraler Studiohintergrund, vollständige Figur, keine sichtbare Marke, kein Text und keine weitere Person.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/08-outfit-variants-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: ausgewähltes Outfit als einzelnes Ganzkörperporträt"
 		},
 		{
 			"id": "sticker",
@@ -262,7 +286,10 @@
 				"Messenger",
 				"Social Media",
 				"Profilbild"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen einzelnen quadratischen Porträt-Sticker. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Gleichmäßige weiße Kontur rund um die gesamte Figur, 12 Prozent freier Rand und dahinter eine ruhige kontrastierende Fläche in [[HINTERGRUNDFARBE]] ohne Muster oder Gegenstände. Kein äußerer Schlagschatten, kein Text und kein Logo. Stelle kein Transparenz-Schachbrett dar.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/11-sticker-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelner Porträt-Sticker auf einfarbigem Hintergrund"
 		},
 		{
 			"id": "sticker-pack",
@@ -278,7 +305,10 @@
 				"Community",
 				"Messenger",
 				"Reaktionen"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen einzelnen quadratischen Porträt-Sticker mit [[GESTE UND AUSDRUCK]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Gleichmäßige weiße Kontur, 12 Prozent freier Rand und eine ruhige kontrastierende Fläche in [[HINTERGRUNDFARBE]] ohne Muster oder Gegenstände. Keine weiteren Sticker, kein Transparenz-Schachbrett, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/12-sticker-pack-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelne Herzgeste als freigestellter Sticker"
 		},
 		{
 			"id": "emoji-pack",
@@ -293,7 +323,10 @@
 				"Emojis",
 				"Social Media",
 				"Community"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 3×2-Raster mit sechs Porträt-Emojis derselben Person: lachen, staunen, nachdenken, feiern, müde und genervt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in allen Feldern. Einheitliche Kopfgröße, getrennte weiße Stickerkonturen und ein ruhiger heller Hintergrund ohne Muster oder Gegenstände. Keine zusätzlichen Symbole, kein Transparenz-Schachbrett, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/13-emoji-pack-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: sechs einheitliche Porträt-Emojis ohne Zusatzsymbole"
 		},
 		{
 			"id": "reaction-pack",
@@ -308,7 +341,10 @@
 				"Reaktionsbilder",
 				"Streaming",
 				"Thumbnails"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes quadratisches Reaktionsporträt mit der Mimik [[MIMIK]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Ruhiger heller Hintergrund ohne Muster oder Gegenstände, kein Transparenz-Schachbrett, kein Rahmen, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/14-reaction-pack-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelne überraschte Reaktion als quadratisches Porträt"
 		},
 		{
 			"id": "avatar-pack",
@@ -323,7 +359,10 @@
 				"Profilbilder",
 				"Teamseite",
 				"Social Media"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes quadratisches Profilporträt mit [[BLICKWINKEL UND AUSDRUCK]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Augen waagerecht, Gesicht mittig, 20 Prozent Kopfraum, ruhiger hellgrauer Hintergrund, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/15-avatar-pack-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: sauber zentrierter einzelner Avatar"
 		},
 		{
 			"id": "miniature",
@@ -338,7 +377,10 @@
 				"Maskottchen",
 				"Geschenkidee",
 				"Avatar"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine realistische 16:9-Produktaufnahme. Die Miniatur steht auf einem kleinen mattschwarzen Sockel auf einem kreativen Arbeitstisch mit wenigen unscharfen Werkzeugen im Hintergrund. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in die Figur. Makrofotografie, geringe Schärfentiefe, weiches Seitenlicht und freie Fläche rechts. Kein Text, keine sichtbare Marke und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/16-miniature-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Miniaturfigur als Produktaufnahme auf einem Arbeitstisch"
 		},
 		{
 			"id": "giantify",
@@ -353,7 +395,10 @@
 				"Thumbnail",
 				"Poster",
 				"Storytelling"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine glaubwürdige 16:9-Filmszene auf Straßenniveau. Die riesige Person steht ruhig zwischen Hochhäusern, wird aus leichter Froschperspektive fotografiert und schaut freundlich nach unten. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Stimmige atmosphärische Perspektive und realistische Kontaktschatten; unbeschädigte Stadt, keine Schrift, keine Logos und keine Panikszene.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/17-giantify-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: friedliche Riesenszene aus Straßenperspektive"
 		},
 		{
 			"id": "age-progression",
@@ -368,7 +413,10 @@
 				"Altersvergleich",
 				"Storytelling",
 				"Charakterdesign"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes realistisches Porträt derselben Person mit einem sichtbaren Alter von ungefähr [[ZIELALTER]] Jahren. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Verändere nur plausible altersbedingte Merkmale, nicht die grundlegende Gesichtsstruktur. Natürliche Hauttextur, ruhiger Hintergrund, kein Alterslabel, kein Raster und kein Logo. Das Ergebnis ist kreative Fiktion, keine Vorhersage.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/09-age-progression-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: älteste Rasterversion als einzelnes Porträt"
 		},
 		{
 			"id": "character-evolution",
@@ -383,7 +431,10 @@
 				"Biografie",
 				"Zeitleiste",
 				"Charakterentwicklung"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle fünf gleich große Kopf-Schulter-Porträts derselben Person mit den dargestellten Altersstufen [[ALTER 1]], [[ALTER 2]], [[ALTER 3]], [[ALTER 4]] und [[ALTER 5]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in allen Feldern. Gleiche Beleuchtung, gleicher Bildausschnitt, neutraler Hintergrund, keine Beschriftung, keine Eigenschaften und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/10-character-evolution-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: textfreie horizontale Figurenentwicklung"
 		},
 		{
 			"id": "clone-scene",
@@ -398,7 +449,10 @@
 				"Humor",
 				"Team-Motiv",
 				"Social Media"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Szene mit genau fünf eindeutig erkennbaren Klonen derselben Person in einem hellen Fotostudio. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 für alle fünf. Zeige fünf unterschiedliche Posen: stehen, sitzen, winken, nachdenken und auf etwas zeigen. Alle Körper vollständig sichtbar, konsistentes Licht, keine weitere Person, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/18-clone-scene-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: fünf Klone in unterschiedlichen Ganzkörperposen"
 		},
 		{
 			"id": "multiverse",
@@ -413,7 +467,10 @@
 				"Charaktervarianten",
 				"Poster",
 				"Storytelling"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 16:9-Filmporträt derselben Person mit [[KLEIDUNG UND STIL]] in [[SZENE ODER WELT]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1. Eine Person, glaubwürdiges Szenenlicht, keine weiteren Versionen, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/19-multiverse-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelne futuristische Multiverse-Variante"
 		},
 		{
 			"id": "evolution",
@@ -428,7 +485,10 @@
 				"Vorher-nachher",
 				"Karriere",
 				"Charakterdesign"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine saubere 16:9-Timeline mit fünf gleich großen Porträts. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Setze unter die Bilder ausschließlich die neutralen Labels „[[ALTER 1]]“, „[[ALTER 2]]“, „[[ALTER 3]]“, „[[ALTER 4]]“ und „[[ALTER 5]]“. Gleiche Beleuchtung und gleicher Ausschnitt, keine weitere Aussage und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/20-evolution-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: bereinigte Alters-Timeline mit fünf Zahlen"
 		},
 		{
 			"id": "before-after",
@@ -443,7 +503,10 @@
 				"Transformation",
 				"Tutorial",
 				"Case Study"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen direkten Vorher-nachher-Vergleich mit zwei gleich großen Feldern. Links bleibt Kleidung und Erscheinungsbild aus Bild 1 unverändert. Rechts ändert sich ausschließlich [[GEWÜNSCHTE VERÄNDERUNG]]. Identität, Accessoires, Pose, Mimik, Licht, Kamerawinkel und Ausschnitt bleiben so identisch wie möglich. Keine Beschriftung, kein Logo und keine weitere Person.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/21-before-after-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: kontrollierter Vorher-nachher-Kleidungsvergleich"
 		},
 		{
 			"id": "time-travel",
@@ -458,7 +521,10 @@
 				"Geschichte",
 				"Kostüm",
 				"Poster"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Filmszene, in der die Person aus einem leuchtenden Zeitportal in [[ORT UND JAHR]] tritt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 als bewussten Kontrast zur historischen Umgebung. Passe das Portallicht realistisch an Person und Raum an. Keine Anzeigen, Zahlen, Schriftzüge, bekannte Filmobjekte oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/22-time-travel-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Zeitreisender tritt in eine Werkstatt von 1920"
 		},
 		{
 			"id": "future-version",
@@ -473,7 +539,10 @@
 				"Sci-Fi",
 				"Personal Branding",
 				"Konzeptbild"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes Ganzkörperbild im Format 4:5 in einem hellen Raumschiff-Korridor. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Ergänze an der vorhandenen Kleidung nur dezente leuchtende Nähte. Ganze Figur sichtbar, keine Rüstung, keine Schrift, kein Logo und keine weitere Person.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/23-future-version-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: vollständige Zukunftsfigur im Raumschiff-Korridor"
 		},
 		{
 			"id": "past-version",
@@ -488,7 +557,10 @@
 				"Historie",
 				"Kostüm",
 				"Storytelling"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine Version derselben Person in [[ORT]] im Jahr [[JAHR]]. Kleidung: [[ZEITTYPISCHE KLEIDUNG]]. Fotostil: authentisch wirkendes analoges Schwarzweißporträt der Epoche mit passendem Studiohintergrund, Licht, Körnung und Kontrast. Erhalte Identität und natürliche Gesichtsmerkmale aus Bild 1, entferne aber sichtbar moderne Kleidung und Accessoires. Kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/24-past-version-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: analoges Porträt im Stil Berlins von 1925"
 		},
 		{
 			"id": "alternate-reality",
@@ -503,7 +575,10 @@
 				"Charakteridee",
 				"Rollenspiel",
 				"Filmkonzept"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine alternative Realität, in der die Person [[ROLLE ODER BERUF]] ist. Format 16:9, Umgebung [[WELT ODER ORT]], Kleidung [[KLEIDUNG]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1. Zeige eine konkrete glaubwürdige Tätigkeit, keine zweite Version der Person, keine Marke, keine Schrift und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/25-alternate-reality-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Betreiber einer nachhaltigen Zukunftswerkstatt"
 		},
 		{
 			"id": "cutaway",
@@ -518,7 +593,10 @@
 				"Produktvisualisierung",
 				"Erklärgrafik",
 				"Konzept"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine rein fiktive 16:9-Cyborg-Illustration. Die linke Hälfte der Person bleibt menschlich, die rechte Hälfte wird eindeutig mechanisch und besteht aus erfundenen leuchtenden Platten, Kabeln und Gelenken. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Organe, keine medizinische Beschriftung, keine Marke, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/26-cutaway-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: eindeutig fiktionale Cyborg-Halbierung"
 		},
 		{
 			"id": "exploded-view",
@@ -533,7 +611,10 @@
 				"Produktdesign",
 				"Montage",
 				"Technik"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine saubere 16:9-Illustration, in der sichtbare Bestandteile der Person als vier vollständige künstlerische Ebenen entlang einer zentralen Achse schweben: Accessoires, Gesichtsebene, äußere Formmerkmale und Kleidung. Übernimm Identität und erkennbare Merkmale aus Bild 1. Gleichmäßige Abstände, dunkler Studiohintergrund, keine technischen Labels, keine anatomische Behauptung, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/27-exploded-view-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: geordnete künstlerische Explosionsansicht"
 		},
 		{
 			"id": "blueprint",
@@ -548,7 +629,10 @@
 				"Moodboard",
 				"Produktidee",
 				"Poster"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine frontale symmetrische 16:9-Blueprint-Illustration der Person. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 als präzise weiße Konturlinien auf dunkelblauem Raster. Keine Maßlinien, Pfeile, Beschriftungen, Zahlen, Eigenschaften, technischen Behauptungen oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/28-blueprint-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: textfreie Blueprint-Illustration"
 		},
 		{
 			"id": "xray",
@@ -563,7 +647,10 @@
 				"Visualisierung",
 				"Sci-Fi",
 				"Konzept"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine eindeutig stilisierte Science-Fiction-Röntgenillustration als Halbporträt. Zeige eine abstrakte leuchtende innere Struktur ohne realistische Anatomie; Kleidung, Accessoires und andere äußerlich erkennbare Merkmale aus Bild 1 bleiben als klare Lichtkontur sichtbar. Keine medizinischen Labels, Diagnose, Messwerte, Wörter oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/29-xray-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: stilisierte Science-Fiction-Röntgenfigur"
 		},
 		{
 			"id": "anatomy",
@@ -578,7 +665,10 @@
 				"Lernidee",
 				"Poster",
 				"Konzeptgrafik"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Eine Hälfte bleibt ein stilisiertes Porträt, die andere Hälfte wird als abstraktes Netz aus farbigen Lichtlinien und geometrischen Knoten dargestellt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Organe, Muskeln, Knochen, Labels, Fachbegriffe, Wörter oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/30-anatomy-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: abstrakte Split-Face-Lichtstruktur"
 		},
 		{
 			"id": "cross-section",
@@ -593,7 +683,10 @@
 				"Erklärgrafik",
 				"Produkt",
 				"Architektur"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen abstrakten vertikalen Querschnitt durch die visuelle Figur: außen bleiben Identität, Accessoires und andere erkennbare Merkmale aus Bild 1 sichtbar; innen liegen mehrere farbige geometrische Ebenen für [[THEMEN ODER IDEEN]]. Keine Anatomie, Organe, Beschriftung, Wörter oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/31-cross-section-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: abstrakter geometrischer Identitäts-Querschnitt"
 		},
 		{
 			"id": "assembly",
@@ -608,7 +701,10 @@
 				"Anleitung",
 				"Produktdesign",
 				"Storyboard"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Objektreferenz. Erstelle eine neutrale 3×2-Montagegrafik für das fiktive Objekt. Zeige pro Feld genau einen klaren visuellen Schritt von getrennten Hauptteilen bis zur vollständigen Form; erfinde keine verborgenen technischen Details. Einheitliche Perspektive, heller Hintergrund, keine Texte, Zahlen, Pfeile, Werkzeugsymbole, Marken, Maße oder Sicherheitsversprechen.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/32-assembly-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: textfreie Montagefolge in sechs Feldern"
 		},
 		{
 			"id": "disassembly",
@@ -623,7 +719,10 @@
 				"Konzeptkunst",
 				"Poster",
 				"Thumbnail"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine symmetrische künstlerische Demontage der sichtbaren Figur in fünf vollständigen Ebenen: Accessoires, Gesichtsebene, äußere Formmerkmale, Kleidung und Schatten. Übernimm Identität und erkennbare Merkmale aus Bild 1. Alle Ebenen bleiben unbeschädigt, dunkler Studiohintergrund, keine Beschriftung, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/33-disassembly-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: symmetrische Demontage in fünf Bildebenen"
 		},
 		{
 			"id": "how-it-works",
@@ -638,7 +737,10 @@
 				"Erklärgrafik",
 				"Tutorial",
 				"Produktseite"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine saubere 16:9-How-it-works-Vorlage mit der Person klein in der Mitte und vier großen leeren Bildfeldern darum. Verwende ausschließlich die Zahlen „1“, „2“, „3“ und „4“ an den Feldern. Viel freie Fläche für später gesetzte Bilder und Texte, klare Leserichtung, keine Symbole, Aussagen, weiteren Wörter oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/34-how-it-works-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: leere Vier-Schritt-Vorlage ohne erfundenen Prozess"
 		},
 		{
 			"id": "mind-map",
@@ -653,7 +755,10 @@
 				"Brainstorming",
 				"Präsentation",
 				"Lernhilfe"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine neue Mindmap mit dem Porträt in der Mitte und genau diesen sechs Hauptästen: [[AST 1]], [[AST 2]], [[AST 3]], [[AST 4]], [[AST 5]], [[AST 6]]. Lass alle Unteräste leer. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine zusätzlichen Begriffe, Eigenschaften, Symbole oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/35-mind-map-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Mindmap mit sechs vorgegebenen Hauptästen"
 		},
 		{
 			"id": "flashcard",
@@ -668,7 +773,10 @@
 				"Lernen",
 				"Workshop",
 				"Social Post"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle eine leere Lernkarten-Vorlage im Hochformat. Oben ein großes Bildfeld mit dem Motiv aus Bild 1, darunter eine breite Platzhalterlinie für einen Begriff und drei Gruppen aus kurzen Platzhalterlinien. Keine lesbaren Wörter, Buchstaben oder Zahlen. Heller Hintergrund, Rahmen in [[RAHMENFARBE]], kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/36-flashcard-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: leere Lernkarte mit Platzhalterlinien"
 		},
 		{
 			"id": "infographic",
@@ -683,7 +791,10 @@
 				"Präsentation",
 				"Erklärung",
 				"Social Media"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle eine neue 4:5-Infografik-Vorlage mit einem großen Motivfeld, genau fünf Farbfeldern, genau vier neutralen kreisförmigen Icon-Platzhaltern und genau drei leeren Textbereichen aus grauen Linien. Übernimm die erkennbaren Merkmale des Motivs aus Bild 1. Keine Eigenschaften, Fakten, Wörter, Buchstaben, Zahlen oder Logos erfinden.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/37-infographic-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: textfreie Infografik-Vorlage"
 		},
 		{
 			"id": "timeline",
@@ -698,7 +809,10 @@
 				"Biografie",
 				"Prozess",
 				"Geschichte"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle eine horizontale 16:9-Timeline mit genau sechs gleichmäßig verteilten Stationen. Verwende ausschließlich diese Jahreszahlen: [[JAHR 1]], [[JAHR 2]], [[JAHR 3]], [[JAHR 4]], [[JAHR 5]], [[JAHR 6]]. Zeige das Motiv aus Bild 1 nur einmal am Start. Titel und Beschreibung jeder Station bleiben als leere Linienflächen stehen. Keine Ereignisse, weiteren Wörter, Zahlen oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/38-timeline-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Timeline mit sechs vorgegebenen Jahreszahlen"
 		},
 		{
 			"id": "visual-guide",
@@ -713,7 +827,10 @@
 				"Anleitung",
 				"Onboarding",
 				"Tutorial"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen visuellen Character Guide ohne Fließtext. Zeige genau ein großes Porträt, eine Frontansicht, eine Profilansicht, fünf Farbfelder und drei Detailausschnitte charakteristischer sichtbarer Merkmale aus Bild 1. Verwende ausschließlich die Labels „Porträt“, „Profil“, „Farben“ und „Details“. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine weiteren Wörter oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/39-visual-guide-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: klar begrenzter Character Guide"
 		},
 		{
 			"id": "comparison",
@@ -728,7 +845,10 @@
 				"Vorher-nachher",
 				"Auswahl",
 				"Produktvergleich"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle einen sauberen 16:9-Vergleich. Links erscheint das Motiv aus Bild 1 als farbige Fotodarstellung, rechts dasselbe Motiv als schwarzweiße Bleistiftzeichnung. Identischer Ausschnitt, identische Position und identischer Ausdruck. Keine Beschriftung, kein Rahmen, keine weiteren Veränderungen und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/40-comparison-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Foto und Bleistiftzeichnung im direkten Vergleich"
 		},
 		{
 			"id": "environment-expand",
@@ -743,7 +863,10 @@
 				"Formatwechsel",
 				"Thumbnail",
 				"Banner"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erweitere die Szene auf 16:9. Stelle die Person vollständig auf die linke Bildhälfte, beide Schuhe sichtbar, rechts viel ruhiger Freiraum in [[HINTERGRUNDART]]. Übernimm Identität, Kleidung, Accessoires und alle sichtbaren Merkmale aus Bild 1; erfinde verdeckte Körperbereiche so zurückhaltend wie möglich. Keine Schrift, kein Logo und keine weiteren Personen.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/41-environment-expand-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: 16:9-Ganzkörperbild mit Freiraum"
 		},
 		{
 			"id": "world-build",
@@ -758,7 +881,10 @@
 				"Worldbuilding",
 				"Game Art",
 				"Filmkonzept"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Worldbuilding-Szene: Die Person steht als [[ROLLE]] auf [[ORT]], umgeben von [[DREI WELTENELEMENTEN]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1, sofern sie nicht ausdrücklich durch die Rolle ersetzt werden. Keine Schrift, Logos oder Marken.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/42-world-build-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Maker auf einer schwimmenden Werkstattinsel"
 		},
 		{
 			"id": "underwater",
@@ -773,7 +899,10 @@
 				"Poster",
 				"Musikcover",
 				"Fantasy"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 16:9-Standbild: Die Person schwimmt von links nach rechts durch [[UNTERWASSER-UMGEBUNG]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1; Stoff und lose Details bewegen sich sichtbar im Wasser. Keine weiteren Personen, keine Schrift und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/43-underwater-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: breite Unterwasserszene mit Bewegungsrichtung"
 		},
 		{
 			"id": "space-scene",
@@ -788,7 +917,10 @@
 				"Sci-Fi",
 				"Thumbnail",
 				"Filmstill"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Weltraumszene mit der Person in einem vollständig markenlosen Raumanzug vor [[WELTRAUMKULISSE]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1, soweit sie außerhalb des Helms sichtbar sind. Keine Flaggen, Agenturpatches, Buchstaben, Zahlen oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/44-space-scene-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: markenlose Weltraumszene"
 		},
 		{
 			"id": "cyberpunk",
@@ -803,7 +935,10 @@
 				"Gaming",
 				"Poster",
 				"Profilbild"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 16:9-Cyberpunk-Thumbnail. Zeige die Person groß rechts in [[SZENE]], links bleibt ruhiger dunkler Freiraum. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 und ergänze nur dezente Lichtkanten. Keine Schriftzeichen, Logos oder Marken.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/45-cyberpunk-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Cyberpunk-Thumbnail mit dunkler Freifläche"
 		},
 		{
 			"id": "post-apocalypse",
@@ -818,7 +953,10 @@
 				"Filmkonzept",
 				"Game Art",
 				"Storytelling"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Postapokalypse-Szene bei [[LICHTSTIMMUNG]]. Die Person [[FRIEDLICHE HANDLUNG]] vor [[ORT]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1. Hoffnungsvoller Ton, keine Waffen, Schrift, Logos oder Marken.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/46-post-apocalypse-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: hoffnungsvolle Reparaturszene nach der Apokalypse"
 		},
 		{
 			"id": "portal",
@@ -833,7 +971,10 @@
 				"Transition",
 				"Thumbnail",
 				"Fantasy"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 16:9-Filmstill: Die Person steht zwei Schritte vor einem fast geschlossenen Portal, das hinter ihr nur noch als schmaler leuchtender Spalt sichtbar ist. Beschreibe die Umgebung als [[ORT ODER WELT]] und passe das Portallicht glaubwürdig an Person und Umgebung an. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine neuen Personen, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/47-portal-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: späteres Standbild mit fast geschlossenem Portal"
 		},
 		{
 			"id": "dreamscape",
@@ -848,7 +989,10 @@
 				"Kunstmotiv",
 				"Musikcover",
 				"Ideenfindung"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Traumlandschaft mit der Person auf [[WEG ODER FLÄCHE]], umgeben von [[ZWEI TRAUMELEMENTEN]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. [[LICHTSTIMMUNG]], keine Schrift, Logos oder zusätzlichen Porträts.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/48-dreamscape-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: klar aufgebaute Traumlandschaft"
 		},
 		{
 			"id": "double-exposure",
@@ -863,7 +1007,10 @@
 				"Poster",
 				"Cover",
 				"Porträtkunst"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Doppelbelichtung. Zeige das Profil der Person links; innerhalb der Silhouette erscheint [[INNENMOTIV]]. Ein sichtbares Accessoire aus Bild 1 bleibt als Farbakzent erhalten, rechts liegt ruhiger dunkler Freiraum. Übernimm Identität und erkennbare Merkmale aus Bild 1. Keine Schrift und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/49-double-exposure-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Profil-Doppelbelichtung mit Werkstatt"
 		},
 		{
 			"id": "movie-scene",
@@ -878,7 +1025,10 @@
 				"Storyboard",
 				"Thumbnail",
 				"Filmkonzept"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 16:9-Filmstill: Die Person geht auf einer regennassen Straße auf die Kamera zu und blickt leicht nach links. Halbnahe Perspektive auf Augenhöhe, natürlicher Schritt, dezentes Lächeln, 35-mm-Filmlook. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Schrift oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/50-movie-scene-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: gerichtetes Filmstill in einer regennassen Straße"
 		},
 		{
 			"id": "starter-pack",
@@ -893,7 +1043,10 @@
 				"Team-Intro",
 				"Geschenk-Mockup",
 				"Personal Brand"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 4:5-Starter-Pack-Layout mit der Person in der Mitte und genau diesen fünf Gegenständen: [[GEGENSTAND 1]], [[GEGENSTAND 2]], [[GEGENSTAND 3]], [[GEGENSTAND 4]], [[GEGENSTAND 5]]. Jeder Gegenstand liegt vollständig in einem eigenen klaren Fach. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Heller Hintergrund, keine weiteren Gegenstände, Eigenschaften, Texte, Logos oder Wasserzeichen.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/51-starter-pack-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Starter-Pack mit genau fünf Gegenständen"
 		},
 		{
 			"id": "bobblehead",
@@ -908,7 +1061,10 @@
 				"Profilavatar",
 				"Figurenkonzept",
 				"Podcast-Cover"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Verwandle die Person in eine freundliche Wackelkopffigur mit sehr großem Kopf und kleinem Körper. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Die Figur steht vollständig sichtbar auf einem schlichten runden Sockel. Quadratisches Produktfoto vor hellgrauem Hintergrund, weiches Studiolicht, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/52-bobblehead-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: kontrollierte Wackelkopffigur auf neutralem Sockel"
 		},
 		{
 			"id": "designer-toy",
@@ -923,7 +1079,10 @@
 				"Kanal-Maskottchen",
 				"Sticker",
 				"Community"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein eigenständiges Designer Toy aus glänzendem Vinyl: kompakter Körper, leicht übergroßer Kopf und freundliche große Augen. Übernimm die auffälligsten sichtbaren Merkmale, Kleidung und Accessoires aus Bild 1. Freistehendes 3:4-Produktfoto vor weißem Hintergrund, keine bekannte Figurenmarke, kein Logo und keine Verpackung.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/53-designer-toy-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: markenfreies Designer Toy"
 		},
 		{
 			"id": "desk-figurine",
@@ -938,7 +1097,10 @@
 				"Geschenkidee",
 				"Teamseite",
 				"Social Post"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige eine kleine Sammlerfigur der Person auf einem modernen Holzschreibtisch. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Die Figur steht auf einem neutralen Sockel ohne Schrift; daneben liegen ausschließlich eine schlichte Tasse und ein geschlossenes Notizbuch. Nahes 16:9-Produktfoto mit glaubwürdiger Größe, weiches Fensterlicht, keine Logos oder Texte.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/54-desk-figurine-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: kleine Schreibtischfigur mit zwei Requisiten"
 		},
 		{
 			"id": "trading-card",
@@ -953,7 +1115,10 @@
 				"Teamkarte",
 				"Spielprototyp",
 				"Community"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Gestalte eine originelle 2:3-Sammelkarten-Grundlage mit großem Motivfeld, retro-inspiriertem Rahmen in [[DREI FARBEN]], einer leeren Titelplatte oben und genau drei leeren Wertefeldern unten. Übernimm die erkennbaren Merkmale aus Bild 1. Keine lesbaren Wörter, Buchstaben oder Zahlen, keine bestehende Kartenmarke und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/55-trading-card-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: textfreie Sammelkarten-Grundlage"
 		},
 		{
 			"id": "pin-collection",
@@ -968,7 +1133,10 @@
 				"Moodboard",
 				"Community",
 				"Merch"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Gestalte eine geordnete 4:5-Kollektion aus genau acht eigenen Emaille-Pins mit ausschließlich diesen Motiven: [[MOTIV 1]], [[MOTIV 2]], [[MOTIV 3]], [[MOTIV 4]], [[MOTIV 5]], [[MOTIV 6]], [[MOTIV 7]], [[MOTIV 8]]. Präsentiere sie auf einer dunklen Sammlerkarte; daneben erscheint ein kleines Porträt mit den erkennbaren Merkmalen aus Bild 1. Keine bekannten Marken, Logos, Texte oder fremden Figuren.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/56-pin-collection-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: geordnete Kollektion aus acht neutralen Pins"
 		},
 		{
 			"id": "mini-me",
@@ -983,7 +1151,10 @@
 				"Familiengeschichte",
 				"Mentoring",
 				"Vorher-nachher"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige die erwachsene Person in normaler Größe und direkt neben einem Schuh eine etwa 15 Zentimeter hohe Miniaturversion derselben erwachsenen Person. Beide haben dieselbe Identität, Altersstufe, Kleidung, Accessoires und andere erkennbare Merkmale wie in Bild 1. Fotorealistischer heller Studioboden, 16:9, kein Kind, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/57-mini-me-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: erwachsene Person neben ihrer winzigen Kopie"
 		},
 		{
 			"id": "tiny-workers",
@@ -998,7 +1169,10 @@
 				"YouTube-Thumbnails",
 				"Reparatur",
 				"Website-Wartung"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle eine fotorealistische Miniaturwelt auf dem Motiv. Zeige genau [[ANZAHL]] winzige Arbeiter in einfarbiger neutraler Arbeitskleidung. Sie [[TÄTIGKEIT 1]], [[TÄTIGKEIT 2]] und [[TÄTIGKEIT 3]] an klar sichtbaren Bereichen des Motivs. Glaubwürdige Leitern und kleine Werkzeuge, starke Tiefenwirkung. Das Hauptmotiv bleibt erkennbar. 16:9, keine Schrift, kein Firmenlogo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/58-tiny-workers-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: zwölf Miniaturarbeiter mit klaren Aufgaben"
 		},
 		{
 			"id": "diorama",
@@ -1013,7 +1187,10 @@
 				"Berufsprofil",
 				"Setplanung",
 				"Buchcover"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Baue ein detailliertes Miniatur-Diorama in einer offenen Raum-Box. Darin steht genau eine kleine Figur der Person in [[RAUMART]]. Zeige ausschließlich diese Requisiten: [[LISTE]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Isometrische Dreiviertelansicht, sichtbare Wände und Boden, warmes Licht, 4:5. Keine erfundenen Texte oder Logos.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/59-diorama-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: offenes Studio-Diorama mit vier Requisiten"
 		},
 		{
 			"id": "snow-globe",
@@ -1028,7 +1205,10 @@
 				"Weihnachtskarte",
 				"Winterkampagne",
 				"Loop-Idee"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Setze das Motiv aus Bild 1 als kleine Büste in eine elegante Schneekugel. Innen liegen feiner Schnee und genau drei kleine Tannen. Übernimm die erkennbaren Merkmale aus Bild 1. Der dunkle Sockel bleibt vollständig leer. Realistische Glasreflexe, zentriertes 4:5-Produktfoto, weißer Hintergrund, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/60-snow-globe-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: unbeschriftete Schneekugel mit drei Tannen"
 		},
 		{
 			"id": "paper-doll",
@@ -1043,7 +1223,10 @@
 				"Outfit-Moodboard",
 				"Kostüm",
 				"Spielidee"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine papierpuppenartige A4-Hochformat-Illustration: Links steht die Person vollständig in Frontansicht, rechts liegen genau sechs austauschbare Kleidungsstücke mit klaren weißen Laschen: [[LISTE]]. Übernimm Identität und andere erkennbare Merkmale aus Bild 1; die Grundfigur trägt neutrale schlichte Unterkleidung. Schwarze Kontur, weißer Hintergrund, keine Marken, Überschrift oder dekorativen Texte. Dies ist nur eine Illustration, keine maßhaltige Druckvorlage.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/61-paper-doll-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Papierpuppen-Illustration mit sechs Kleidungsstücken"
 		},
 		{
 			"id": "gachapon",
@@ -1058,7 +1241,10 @@
 				"Blind Box",
 				"Serienfigur",
 				"Community Reward"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige genau eine kleine Sammelfigur der Person in einer transparenten Kapsel innerhalb einer generischen Capsule-Toy-Maschine. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Maschine in [[GRUNDFARBE]] mit Details in [[AKZENTFARBEN]], vollständig leere Frontfläche. Zentriertes 4:5-Produktfoto vor weißem Hintergrund, kein Preis, keine Schriftzeichen, kein Logo und keine bestehende Marke.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/62-gachapon-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: generische Kapselmaschine mit einer Figur"
 		},
 		{
 			"id": "comic-strip",
@@ -1073,7 +1259,10 @@
 				"Social Carousel",
 				"Erklärung",
 				"Storyboard"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen quadratischen Comicstrip mit vier gleich großen Panels. Panel 1: [[SZENE 1]], Sprechblase exakt „[[TEXT 1]]“. Panel 2: [[SZENE 2]], Sprechblase exakt „[[TEXT 2]]“. Panel 3: [[SZENE 3]], Sprechblase exakt „[[TEXT 3]]“. Panel 4: [[SZENE 4]], Sprechblase exakt „[[TEXT 4]]“. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in allen Panels. Kräftige Pop-Art-Farben, klare deutsche Sprechblasen, keine weiteren Wörter, keine zusätzliche Person und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/63-comic-strip-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: vierteiliger Comic über einen Möbelaufbau"
 		},
 		{
 			"id": "fantasy-newspaper",
@@ -1088,7 +1277,10 @@
 				"Rollenspiel",
 				"Escape Room",
 				"Geschenk"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Gestalte eine fiktionale Fantasy-Zeitungsseite auf gealtertem Papier im A4-Hochformat. Verwandle die Person vollständig in dieselbe schwarz-weiße Holzschnitt- und Druckrasterästhetik wie die übrigen Illustrationen. Gleiche Haut, Kleidung und Hintergrund an den warmen Papierton und den niedrigen Druckkontrast an; keine leuchtenden modernen Farben und kein neutraler Studiohintergrund. Hinter der Person liegt [[FANTASY-ORT]]. Verwende ausschließlich diese Texte: Zeitungstitel „[[TITEL]]“, Hauptüberschrift „[[ÜBERSCHRIFT]]“, Nebenmeldungen „[[TEXT 1]]“, „[[TEXT 2]]“ und „[[TEXT 3]]“. Keine weiteren Wörter, keine reale Zeitungsmarke und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/64-fantasy-newspaper-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einheitlich gedruckte Fantasy-Zeitung"
 		},
 		{
 			"id": "film-strip",
@@ -1103,7 +1295,10 @@
 				"About-Seite",
 				"Casting",
 				"Expression-Auswahl"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen quadratischen analogen Kontaktbogen mit neun Porträts: Frontansicht, linkes Profil, rechtes Profil, Lachen, Nachdenken, Überraschung, ernstes Gesicht, Blick nach oben und Zwinkern. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Verwende in jedem Feld denselben Bildausschnitt, dieselbe Brennweitenwirkung und dasselbe Licht. Schwarzer generischer Filmrahmen mit ausschließlich der Aufschrift „ANALOG FILM 400“, keine reale Filmmarke, keine weiteren Wörter und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/65-film-strip-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: analoger Kontaktbogen mit neun kontrollierten Porträts"
 		},
 		{
 			"id": "travel-scrapbook",
@@ -1118,7 +1313,10 @@
 				"Reiseidee",
 				"Geschenkseite",
 				"Jahresrückblick"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz, die Bilder 2 bis 5 als einzige Reiseorte und Bild 6 höchstens als Referenz für Seitenaufbau, Papier und Klebeband. Gestalte eine Reisetagebuch-Doppelseite im Format 4:5 aus gealtertem Papier. Zeige die Person in einem echten Bildhintergrund aus [[AUSGEWÄHLTES REISEFOTO]] statt vor einem neutralen Studiohintergrund. Gleiche dieses Personenfoto an Farbtemperatur, Filmkorn, Kontrast, Ausbleichung und Papieralterung der vier Reisefotos an, sodass es wie Teil derselben analogen Sammlung wirkt. Schreibe ausschließlich die geprüften Bildunterschriften „[[TEXT 1]]“, „[[TEXT 2]]“, „[[TEXT 3]]“ und „[[TEXT 4]]“. Ergänze Klebeband, Kartenlinien und neutrale Stempel ohne Datum. Keine erfundenen Orte, keine Zitate, keine Logos und keine weiteren Wörter.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/66-travel-scrapbook-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: farblich einheitliches Reisetagebuch mit Porträt am Bergsee"
 		},
 		{
 			"id": "tarot-card",
@@ -1133,7 +1331,10 @@
 				"Musikcover",
 				"Rollenspiel",
 				"Archetypen"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Gestalte eine originelle symbolische Orakelkarte im Hochformat 2:3. Thema: [[THEMA]]. Zentrales Symbol: [[SYMBOL]]. Pflanzen: [[PFLANZEN]]. Farbpalette: [[FARBPALETTE]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 und übersetze sie in eine historische Druckgrafik. Unten steht ausschließlich der Titel „[[TITEL]]“. Eigene Rahmengestaltung, keine Kopie einer bestehenden Karte, keine weiteren Wörter und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/67-tarot-card-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: eigenständige Orakelkarte zum Thema Neugier"
 		},
 		{
 			"id": "game-screen",
@@ -1148,7 +1349,10 @@
 				"Game-Konzept",
 				"UI-Moodboard",
 				"Charakteridee"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Verwandle die Person in den spielbaren Charakter eines fiktiven [[SPIELGENRE]]-Games. Zeige einen vollständigen Charakterauswahl-Bildschirm im Format 16:9. Links steht die Figur in Ganzkörperansicht; übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Rechts befinden sich drei neutrale Auswahlfelder für Outfit, Fähigkeit und Ausrüstung. Verwende ausschließlich die Überschrift „CHARAKTERAUSWAHL“. Eigenständiges Interface in [[FARBPALETTE]], keine reale Spielmarke, keine zusätzlichen Wörter und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/68-game-screen-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: vollständiger Adventure-Charakterauswahl-Bildschirm"
 		},
 		{
 			"id": "scribble",
@@ -1163,7 +1367,10 @@
 				"Avatar",
 				"Notizbuch-Cover",
 				"Thumbnail"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeichne die Person als lockere farbige Kritzelei auf weißem Papier. Verwende unregelmäßige Buntstift- und Finelinerlinien, sichtbare Suchstriche und einige bewusst offene Flächen. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Brustporträt im Format 4:5, keine Schrift, kein Logo und kein fotorealistisches Finish.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/69-scribble-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: lockeres Kritzelporträt mit offenen Linien"
 		},
 		{
 			"id": "claymation",
@@ -1178,7 +1385,10 @@
 				"Kinderinhalt",
 				"Erklärvideo",
 				"Kanalfigur"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Verwandle die Person in eine handgeformte Stop-Motion-Knetfigur mit sichtbaren Fingerabdrücken, leicht unregelmäßigen Kanten und einzelnen modellierten Strukturen. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Weiches Miniatur-Studiolicht, weißer Hintergrund, Brustporträt 4:5, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/70-claymation-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: handmodellierte Knetfigur mit sichtbaren Spuren"
 		},
 		{
 			"id": "plush-toy",
@@ -1193,7 +1403,10 @@
 				"Maskottchen",
 				"Geschenkidee",
 				"Shop-Mockup"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Entwirf eine eigenständige Plüschfigur mit weichen kurzen Armen und Beinen sowie freundlich gestickten Augen. Übertrage Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in klare textile Formen. Zeige die ganze sitzende Figur frontal als quadratisches Produktfoto vor weißem Hintergrund. Keine Marke, kein Text und kein Zubehör.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/71-plush-toy-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelne sitzende Plüschfigur"
 		},
 		{
 			"id": "amigurumi",
@@ -1208,7 +1421,10 @@
 				"Handarbeit",
 				"Geschenk",
 				"Profilfigur"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige eine handgehäkelte Amigurumi-Figur mit runder Kopfform und deutlich sichtbaren Garnmaschen. Übertrage Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 konsequent in gehäkelte Formen. Frontales 4:5-Produktfoto, weiches Licht, weißer Hintergrund. Keine Anleitung, kein Text, kein Logo und keine zusätzlichen Gegenstände.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/72-amigurumi-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: einzelne Amigurumi-Figur mit sichtbaren Maschen"
 		},
 		{
 			"id": "embroidery",
@@ -1223,7 +1439,10 @@
 				"Patch",
 				"Textil-Moodboard",
 				"Albumcover"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Reduziere das Motiv zu einem stickbar wirkenden runden Patch mit höchstens acht Vollfarben, klaren geschlossenen Flächen und kräftiger Außenkontur. Vereinfache feine sichtbare Strukturen aus Bild 1, ohne die Wiedererkennbarkeit zu verlieren. Keine feinen Hautdetails, Verläufe, Schrift oder Logos. Zeige den Patch frontal auf neutralem Stoff im Format 1:1. Dies ist ein Stilkonzept, keine Stickdatei.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/73-embroidery-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: vereinfachtes Patch-Motiv auf Stoff"
 		},
 		{
 			"id": "stained-glass",
@@ -1238,7 +1457,10 @@
 				"Poster",
 				"Musikcover",
 				"Einladung"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Gestalte ein eigenständiges Glasfenster-Motiv aus großen zusammenhängenden Glasflächen und klaren dunklen Bleilinien. Verwende ausschließlich [[VIER FARBEN ODER FARBFAMILIEN]]. Vereinfache kleine Details des Motivs aus Bild 1 in wenige große Segmente, ohne die Wiedererkennbarkeit zu verlieren. Hochformat 2:3, keine religiösen Symbole, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/74-stained-glass-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: symmetrisches Glasfenster aus vier Farbfamilien"
 		},
 		{
 			"id": "studio-headshot",
@@ -1253,7 +1475,10 @@
 				"Profilbild",
 				"LinkedIn",
 				"About-Seite"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein professionelles Brustporträt mit direktem Blick, natürlicher Hautstruktur und einem ruhigen freundlichen Ausdruck. Verwende einen neutralen warmgrauen Hintergrund, ein weiches Hauptlicht von links und dezentes Aufhelllicht von rechts. Übernimm Identität, Kleidung, Accessoires und alle anderen erkennbaren Merkmale aus Bild 1. Format 4:5, keine Beauty-Überglättung, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/75-studio-headshot-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: kontrolliertes Studio-Porträt vor warmgrauem Hintergrund"
 		},
 		{
 			"id": "color-analysis",
@@ -1268,7 +1493,10 @@
 				"Outfitfarben",
 				"Moodboard",
 				"Einkaufsidee"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Prüfe zuerst schriftlich die Fotoeignung für eine vorläufige Farbanalyse: Beleuchtung, Weißabgleich, Farbstich, getönte Brille, kräftige Kleidung nahe am Gesicht und sichtbare Display- oder Kameraverfälschungen. Wenn das Foto ungeeignet ist, stoppe und bitte um ein neutrales Tageslichtporträt statt eine Saison oder einen Unterton zu erraten. Wenn es ausreicht, nenne schriftlich 1. erkennbare Warm-Kühl-Tendenz, 2. Kontrastwirkung, 3. Sicherheit und Unsicherheit der Einschätzung, 4. vier empfehlenswerte Farbrichtungen und 5. vier eher schwierige Farbrichtungen. Kennzeichne alles ausdrücklich als vorläufigen visuellen Eindruck, nicht als Diagnose. Erzeuge danach ein textfreies 4:5-Vergleichsbild als 2×2-Raster mit vier identischen Brustporträts. Wende die vier empfohlenen Farben als matte Kleidung oder Stoff direkt gesichtsnah an. Halte Hautfarbe, Gesicht, Ausdruck, Accessoires, Licht, Hintergrund, Ausschnitt und Farbkorrektur in allen Feldern identisch. Keine losen Farbpaletten, keine Farbbalken, keine Wörter, Zahlen, Logos oder Saisonlabels.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/76-color-analysis-applied-followup.webp",
+			"controlledAlt": "Kontrollierter Farbvergleich mit vier identischen Porträts und vier gesichtsnah angewandten Stofffarben"
 		},
 		{
 			"id": "hairstyle-grid",
@@ -1283,7 +1511,10 @@
 				"Frisurenvergleich",
 				"Figurenentwicklung",
 				"Kostüm"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein quadratisches 3×3-Frisurenraster. Halte Gesicht, Ausdruck, Kleidung, Accessoires, Licht und Kamerawinkel in allen neun Feldern so konstant wie möglich. Varianten in dieser Reihenfolge: 1 ohne Kopfhaar, 2 Buzz Cut, 3 Crew Cut, 4 kurzer Crop, 5 Pompadour, 6 Seitenscheitel, 7 Quiff, 8 zurückgekämmt, 9 strukturierter Fade. Beschrifte die Felder ausschließlich mit den Ziffern 1 bis 9. Neutraler Hintergrund, keine weiteren Wörter und keine Veränderung des Gesichts.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/77-hairstyle-grid-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: nummeriertes 3-mal-3-Raster mit neun Frisuren"
 		},
 		{
 			"id": "fix-lighting",
@@ -1298,7 +1529,10 @@
 				"Farbstich",
 				"Schatten",
 				"Profilbild"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Korrigiere darin ausschließlich die Beleuchtung. Entferne den sichtbaren Farbstich [[FARBSTICH]] und helle die verschattete Seite [[SEITE ODER BEREICH]] natürlich auf. Erhalte Identität, Hautstruktur, Gesicht, Haare, Kleidung, Accessoires, Hintergrund und Bildausschnitt unverändert. Ziel ist [[GEWÜNSCHTES LICHT]] ohne überstrahlte Haut. Keine Änderung der Gesichtsform, keine Beauty-Retusche, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/78-fix-lighting-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: sanft ausgeglichenes Porträt bei neutralem Licht"
 		},
 		{
 			"id": "cover-pack",
@@ -1313,7 +1547,10 @@
 				"Thumbnail",
 				"Cover",
 				"Mockup"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle sechs klar getrennte Titelbildvarianten derselben Person in einem 3×2-Raster: 1 seriöses Profil, 2 überraschter Ausdruck, 3 deutliche Zeigegeste, 4 dunkle Filmszene, 5 heller Tech-Look, 6 humorvolle Miniaturwelt. Jedes Feld wirkt wie ein eigenes 16:9-Cover und enthält freie Fläche für später hinzugefügten Titeltext. Kein Text, keine Ziffern und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/79-cover-pack-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: sechs echte Cover-Kompositionen statt Verpackung"
 		},
 		{
 			"id": "career-caricature",
@@ -1328,7 +1565,10 @@
 				"LinkedIn",
 				"Teamvorstellung",
 				"Geschenk"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeichne eine freundliche Karriere-Karikatur dieser Person bei der Arbeit als [[BERUF]]. Zeige ausschließlich diese vier realen Tätigkeiten als klar erkennbare kleine Szenen oder Gegenstände: [[TÄTIGKEIT 1]], [[TÄTIGKEIT 2]], [[TÄTIGKEIT 3]] und [[TÄTIGKEIT 4]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Verwende [[FARBPALETTE]] als Akzente, dynamische handgezeichnete Linien und einen aufgeräumten Aufbau. Format 4:5, kein erfundener Slogan, keine Beschriftung, kein zusätzlicher Beruf, kein Logo und keine Signatur.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/80-career-caricature-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: Fotografen-Karikatur mit vier vorgegebenen Tätigkeiten"
 		},
 		{
 			"id": "brand-board",
@@ -1343,7 +1583,10 @@
 				"Personal Branding",
 				"Kanaldesign",
 				"Moodboard"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personen- oder Motivreferenz. Erstelle ein Brand-Moodboard für [[NAME ODER PROJEKT]]. Verwende ausschließlich diese drei Markenwerte: [[WERT 1]], [[WERT 2]] und [[WERT 3]]. Farbpalette: [[FARBEN]]. Schriftstimmung: [[BESCHREIBUNG]]. Zeige das Referenzmotiv, vier klare Farbflächen, zwei typografische Stimmungen ohne lesbaren Beispieltext und drei neutrale Anwendungen. Keine erfundene Mission, keine Produktversprechen, keine fremden Logos und keine zusätzlichen Behauptungen. Querformat 16:9.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/81-brand-board-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: begrenztes Brand-Moodboard ohne erfundene Versprechen"
 		},
 		{
 			"id": "packaging-board",
@@ -1358,7 +1601,10 @@
 				"Produktidee",
 				"Pitch",
 				"Verpackung"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Motivreferenz. Erstelle ein Packaging-Moodboard mit genau drei klar getrennten Verpackungsrichtungen für [[PRODUKT]]: [[RICHTUNG 1]], [[RICHTUNG 2]] und [[RICHTUNG 3]]. Zeige ausschließlich Verpackungsform, Material, Farbflächen und leere Platzhalterzonen. Setze das Motiv aus Bild 1 klein und dezent ein. Keine Leistungsversprechen, Prüfzeichen, Prozentwerte, Inhaltsstoffe, Zertifikate, lesbare Schrift oder reale Marke. Heller neutraler Hintergrund, Querformat 16:9.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/82-packaging-board-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: drei textfreie Verpackungsrichtungen für einen Kameragurt"
 		},
 		{
 			"id": "merch-mockup",
@@ -1373,7 +1619,10 @@
 				"Shop",
 				"Community",
 				"Produkttest"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Motivreferenz. Erstelle ein neutrales Merch-Mockup mit genau vier Produkten: [[PRODUKT 1]], [[PRODUKT 2]], [[PRODUKT 3]] und [[PRODUKT 4]]. Verwende auf jedem Produkt dieselbe vereinfachte freigestellte Illustration des Motivs aus Bild 1. Kein rechteckiger Fotohintergrund. Zeige realistische Druckgrößen, Materialfalten und natürliche Perspektiven. Heller Studiohintergrund, Querformat 16:9, keine Marke und kein zusätzlicher Text.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/83-merch-mockup-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: vier Merch-Produkte mit derselben freigestellten Illustration"
 		},
 		{
 			"id": "contact-sheet",
@@ -1388,7 +1637,10 @@
 				"KI-Video",
 				"Charakterdesign",
 				"3D-Moodboard"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein konsistentes 3×2-Kontaktblatt mit genau sechs Ansichten in dieser Reihenfolge: 1 Front, 2 Dreiviertel links, 3 linkes Profil, 4 Dreiviertel rechts, 5 rechtes Profil und 6 Rücken. Halte Identität, Kleidung, Accessoires, Brennweite, Kamerahöhe und weiche Studiobeleuchtung möglichst konstant. Beschrifte jedes Feld nur mit der passenden Ziffer 1 bis 6. Neutraler Hintergrund, keine zusätzlichen Posen, keine Wörter und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/84-contact-sheet-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: nummeriertes Kontaktblatt mit sechs festen Blickwinkeln"
 		},
 		{
 			"id": "storyboard",
@@ -1403,7 +1655,10 @@
 				"Shotlist",
 				"Reel",
 				"Werbefilm"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein Storyboard mit genau sechs nummerierten Einstellungen für diesen Ablauf: [[HANDLUNG IN SECHS KLAREN SCHRITTEN]]. Halte die Person in allen Panels wiedererkennbar. Zeige pro Panel nur die beschriebene Aktion, eine passende Einstellungsgröße und eine einfache Richtung der Kamerabewegung als Pfeil. Schwarz-weiße Skizzen mit [[AKZENTFARBEN]], Querformat 16:9. Außer den Ziffern 1 bis 6 keine Schrift, keine neue Handlung, kein Dialog, kein Slogan und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/85-storyboard-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: sechsteiliges Storyboard mit vorgegebenem Fotoablauf"
 		},
 		{
 			"id": "first-last-frame",
@@ -1418,7 +1673,10 @@
 				"KI-Video",
 				"Transformation",
 				"Keyframes"
-			]
+			],
+			"controlledPromptText": "Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein zweigeteiltes Referenzblatt: links [[STARTSITUATION]], rechts [[ENDSITUATION]]. In beiden Hälften bleiben Person, Identität, Kleidung, Accessoires, Kamera, Brennweite, Licht und Umgebung gleich. Verändere ausschließlich [[GEPLANTE VERÄNDERUNG]]. Querformat 16:9, keine Zwischenbilder, keine Beschriftung, keine Filmstreifen, kein Text und kein Logo.",
+			"controlledImage": "/images/blog/ki-bildprompts/followups/86-first-last-frame-followup.webp",
+			"controlledAlt": "Ergebnis des kontrollierten Prompts: konsistentes Start- und Endbild vor demselben Studiotor"
 		},
 		{
 			"id": "behind-the-scenes",
@@ -1429,9 +1687,13 @@
 			"image": "/images/blog/ki-bildprompts/87-behind-the-scenes.webp",
 			"alt": "Studio hinter dem Bild: echtes Ergebnis des Prompts /behindTheScenes",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Making-of", "Kursmaterial", "Social Media"],
+			"useCases": [
+				"Making-of",
+				"Kursmaterial",
+				"Social Media"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn it into a realistic behind-the-scenes studio photograph. Show the referenced person full body in front of a white seamless backdrop, with photographer, camera, softboxes, reflector and floor marks visible. Preserve identity, body proportions, hairstyle or head shape, facial hair, eyewear, expression, clothing and original colors. Output ratio: [[ASPECT RATIO, e.g. 4:5]].",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn it into a realistic behind-the-scenes studio photograph. Show the referenced person full body in front of a white seamless backdrop, with photographer, camera, softboxes, reflector and floor marks visible. Preserve identity, body proportions, hairstyle or head shape, facial hair, eyewear, expression, clothing and original colors. Output ratio: [[ASPECT RATIO, e.g. 4:5]].",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1444,9 +1706,13 @@
 			"image": "/images/blog/ki-bildprompts/88-relighting-grid.webp",
 			"alt": "Sechs Lichtstimmungen: echtes Ergebnis des Prompts /relightingGrid",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Lichtplanung", "Thumbnail", "Mood-Vergleich"],
+			"useCases": [
+				"Lichtplanung",
+				"Thumbnail",
+				"Mood-Vergleich"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a clean 2x3 relighting grid. Keep identity, pose, crop, expression, hairstyle, facial hair, accessories, clothing and colors identical. Change only the light: flat front light, soft window light, Rembrandt light, dramatic side light, split light and strong rim light. Do not add labels or redesign the person.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a clean 2x3 relighting grid. Keep identity, pose, crop, expression, hairstyle, facial hair, accessories, clothing and colors identical. Change only the light: flat front light, soft window light, Rembrandt light, dramatic side light, split light and strong rim light. Do not add labels or redesign the person.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1459,9 +1725,13 @@
 			"image": "/images/blog/ki-bildprompts/89-lens-grid.webp",
 			"alt": "Brennweitenvergleich: echtes Ergebnis des Prompts /lensGrid",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Objektivwahl", "Porträtlook", "Kaufberatung"],
+			"useCases": [
+				"Objektivwahl",
+				"Porträtlook",
+				"Kaufberatung"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a five-panel comparison photographed at 24mm, 35mm, 50mm, 85mm and 135mm. Keep identity, styling and lighting consistent, adjust camera distance to maintain [[FRAMING, e.g. head-and-shoulders]], and make perspective compression clearly visible. No labels or invented facial details.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a five-panel comparison photographed at 24mm, 35mm, 50mm, 85mm and 135mm. Keep identity, styling and lighting consistent, adjust camera distance to maintain [[FRAMING, e.g. head-and-shoulders]], and make perspective compression clearly visible. No labels or invented facial details.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "TEILWEISE",
 			"testNote": "Die Staffelung ist sauber, die Gesichtsperspektive unterscheidet sich aber weniger deutlich als bei einem echten kontrollierten Brennweitentest."
@@ -1475,9 +1745,13 @@
 			"image": "/images/blog/ki-bildprompts/90-viseme-sheet.webp",
 			"alt": "Mundformen für Sprache: echtes Ergebnis des Prompts /visemeSheet",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Lip-Sync", "KI-Video", "Avatar"],
+			"useCases": [
+				"Lip-Sync",
+				"KI-Video",
+				"Avatar"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a clean 3x5 viseme sheet. Keep head angle, identity, hairstyle, facial hair, eyewear, accessories, lighting and crop fixed. Show clearly different mouth shapes for silence, A, E, I, O, U, M/B/P, F/V, L, W/Q, wide smile, open jaw and rounded lips. Background: [[BACKGROUND COLOR]]. No labels.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a clean 3x5 viseme sheet. Keep head angle, identity, hairstyle, facial hair, eyewear, accessories, lighting and crop fixed. Show clearly different mouth shapes for silence, A, E, I, O, U, M/B/P, F/V, L, W/Q, wide smile, open jaw and rounded lips. Background: [[BACKGROUND COLOR]]. No labels.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1490,9 +1764,13 @@
 			"image": "/images/blog/ki-bildprompts/91-walk-cycle.webp",
 			"alt": "Gehzyklus: echtes Ergebnis des Prompts /walkCycle",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Animation", "Motion Design", "Video-Referenz"],
+			"useCases": [
+				"Animation",
+				"Motion Design",
+				"Video-Referenz"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded full-body image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create an eight-frame side-view walk-cycle strip showing consecutive contact, down, passing and up phases. Preserve identity, body proportions, hairstyle, clothing, footwear and all original colors. Use a plain [[BACKGROUND COLOR]] background and do not add labels.",
+			"promptText": "Use the uploaded full-body image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create an eight-frame side-view walk-cycle strip showing consecutive contact, down, passing and up phases. Preserve identity, body proportions, hairstyle, clothing, footwear and all original colors. Use a plain [[BACKGROUND COLOR]] background and do not add labels.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1505,9 +1783,13 @@
 			"image": "/images/blog/ki-bildprompts/92-shot-breakdown.webp",
 			"alt": "Einstellungsgrößen: echtes Ergebnis des Prompts /shotBreakdown",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Storyboard", "Regie", "Shootplanung"],
+			"useCases": [
+				"Storyboard",
+				"Regie",
+				"Shootplanung"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a clean 3x3 cinematography sheet: extreme close-up, close-up, medium close-up, medium shot, medium full shot, full shot, long shot, low angle and high angle. Preserve identity, body proportions, outfit, accessories and the [[REFERENCE SETTING OR NEW SETTING]]. No text.",
+			"promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a clean 3x3 cinematography sheet: extreme close-up, close-up, medium close-up, medium shot, medium full shot, full shot, long shot, low angle and high angle. Preserve identity, body proportions, outfit, accessories and the [[REFERENCE SETTING OR NEW SETTING]]. No text.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1520,9 +1802,13 @@
 			"image": "/images/blog/ki-bildprompts/93-thermography.webp",
 			"alt": "Wärmebild: echtes Ergebnis des Prompts /thermography",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Science-Look", "Tech-Thumbnail", "Storytelling"],
+			"useCases": [
+				"Science-Look",
+				"Tech-Thumbnail",
+				"Storytelling"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Transform it into a convincing scientific thermal-camera image with a blue-to-red-to-yellow heat palette and visible temperature differences across skin, hair, accessories and clothing. Preserve identity, pose and every recognizable silhouette detail. Background: [[BACKGROUND COLOR, e.g. dark blue]].",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Transform it into a convincing scientific thermal-camera image with a blue-to-red-to-yellow heat palette and visible temperature differences across skin, hair, accessories and clothing. Preserve identity, pose and every recognizable silhouette detail. Background: [[BACKGROUND COLOR, e.g. dark blue]].",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1535,9 +1821,13 @@
 			"image": "/images/blog/ki-bildprompts/94-schlieren.webp",
 			"alt": "Sichtbare Luftströmungen: echtes Ergebnis des Prompts /schlieren",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Physik", "Atem", "Sound"],
+			"useCases": [
+				"Physik",
+				"Atem",
+				"Sound"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a monochrome schlieren-photography portrait. Show fine refractive air currents curling around the face, hair, accessories and shoulders against a [[BACKGROUND COLOR, e.g. black]] background, with silver edge detail and a laboratory optical-imaging aesthetic. Preserve identity and expression.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a monochrome schlieren-photography portrait. Show fine refractive air currents curling around the face, hair, accessories and shoulders against a [[BACKGROUND COLOR, e.g. black]] background, with silver edge detail and a laboratory optical-imaging aesthetic. Preserve identity and expression.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1550,9 +1840,13 @@
 			"image": "/images/blog/ki-bildprompts/95-scanography.webp",
 			"alt": "Flachbettscanner-Porträt: echtes Ergebnis des Prompts /scanography",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Albumcover", "Kunstserie", "Editorial"],
+			"useCases": [
+				"Albumcover",
+				"Kunstserie",
+				"Editorial"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Recreate it as true flatbed scanography: face and upper clothing close to scanner glass, shallow depth, dark surrounding scanner lid, subtle dust and glass texture, hard lateral scanner light and slight contact distortion. Preserve identity, hairstyle, accessories and clothing details. Output ratio: [[ASPECT RATIO]].",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Recreate it as true flatbed scanography: face and upper clothing close to scanner glass, shallow depth, dark surrounding scanner lid, subtle dust and glass texture, hard lateral scanner light and slight contact distortion. Preserve identity, hairstyle, accessories and clothing details. Output ratio: [[ASPECT RATIO]].",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "TEILWEISE",
 			"testNote": "Der Scannerkontext ist eindeutig, die typische zeilenweise Scan-Anmutung könnte noch konsequenter sein."
@@ -1566,9 +1860,13 @@
 			"image": "/images/blog/ki-bildprompts/96-photogram.webp",
 			"alt": "Fotogramm: echtes Ergebnis des Prompts /photogram",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Poster", "Cover", "Druckgrafik"],
+			"useCases": [
+				"Poster",
+				"Cover",
+				"Druckgrafik"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn it into a high-contrast black-and-white darkroom photogram. Make the head shape, hairstyle, facial features, accessories and clothing silhouette readable as direct-contact shadows and translucent outlines on aged photographic paper, with dust and chemical edge marks. Output ratio: [[ASPECT RATIO]].",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn it into a high-contrast black-and-white darkroom photogram. Make the head shape, hairstyle, facial features, accessories and clothing silhouette readable as direct-contact shadows and translucent outlines on aged photographic paper, with dust and chemical edge marks. Output ratio: [[ASPECT RATIO]].",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1581,9 +1879,13 @@
 			"image": "/images/blog/ki-bildprompts/97-chemigram.webp",
 			"alt": "Chemigramm: echtes Ergebnis des Prompts /chemigram",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Fine Art", "Editorial", "Branding"],
+			"useCases": [
+				"Fine Art",
+				"Editorial",
+				"Branding"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a handmade chemigram on photographic paper using developer and fixer stains, branching chemical textures, sepia-black tonal blooms and distressed paper edges. Keep the person recognizable through the actual face shape, hairstyle, facial hair, accessories and expression shown in the reference. Output ratio: [[ASPECT RATIO]].",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a handmade chemigram on photographic paper using developer and fixer stains, branching chemical textures, sepia-black tonal blooms and distressed paper edges. Keep the person recognizable through the actual face shape, hairstyle, facial hair, accessories and expression shown in the reference. Output ratio: [[ASPECT RATIO]].",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "TEILWEISE",
 			"testNote": "Das Ergebnis ist stark, wirkt stellenweise aber eher wie Tusche oder Ätzzeichnung als eindeutig wie ein Chemigramm."
@@ -1597,9 +1899,13 @@
 			"image": "/images/blog/ki-bildprompts/98-slit-scan.webp",
 			"alt": "Slit-Scan-Verzerrung: echtes Ergebnis des Prompts /slitScan",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Musikvisual", "Motion Art", "Zeitthema"],
+			"useCases": [
+				"Musikvisual",
+				"Motion Art",
+				"Zeitthema"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a horizontal slit-scan portrait: keep the left half of the face recognizable and stretch the right half into long time-sliced horizontal bands. Preserve the reference image's own identity, styling and colors against a [[BACKGROUND COLOR, e.g. black]] background.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a horizontal slit-scan portrait: keep the left half of the face recognizable and stretch the right half into long time-sliced horizontal bands. Preserve the reference image's own identity, styling and colors against a [[BACKGROUND COLOR, e.g. black]] background.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1612,9 +1918,13 @@
 			"image": "/images/blog/ki-bildprompts/99-string-art.webp",
 			"alt": "Fadenbild: echtes Ergebnis des Prompts /stringArt",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["DIY", "Geschenk", "Maker-Content"],
+			"useCases": [
+				"DIY",
+				"Geschenk",
+				"Maker-Content"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Rebuild it as real nail-and-thread string art on a circular wooden board. Use [[BASE THREAD COLOR]] for the main facial structure and [[ACCENT COLOR 1]] plus [[ACCENT COLOR 2]] for two distinctive features taken from the reference. Preserve the actual hairstyle, facial hair, accessories and clothing silhouette. Photograph the physical artwork.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Rebuild it as real nail-and-thread string art on a circular wooden board. Use [[BASE THREAD COLOR]] for the main facial structure and [[ACCENT COLOR 1]] plus [[ACCENT COLOR 2]] for two distinctive features taken from the reference. Preserve the actual hairstyle, facial hair, accessories and clothing silhouette. Photograph the physical artwork.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1627,9 +1937,13 @@
 			"image": "/images/blog/ki-bildprompts/100-wire-portrait.webp",
 			"alt": "Drahtskulptur: echtes Ergebnis des Prompts /wirePortrait",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Skulpturidee", "Ausstellung", "3D-Konzept"],
+			"useCases": [
+				"Skulpturidee",
+				"Ausstellung",
+				"3D-Konzept"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Transform the person into a freestanding wire sculpture in a modern gallery. Use [[BASE WIRE COLOR]], [[ACCENT COLOR 1]] and [[ACCENT COLOR 2]] to define the real head shape, hairstyle, facial features, accessories, expression and clothing silhouette. Show realistic shadows and physically plausible construction.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Transform the person into a freestanding wire sculpture in a modern gallery. Use [[BASE WIRE COLOR]], [[ACCENT COLOR 1]] and [[ACCENT COLOR 2]] to define the real head shape, hairstyle, facial features, accessories, expression and clothing silhouette. Show realistic shadows and physically plausible construction.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1642,9 +1956,13 @@
 			"image": "/images/blog/ki-bildprompts/101-pressed-flowers.webp",
 			"alt": "Gepresste Pflanzen: echtes Ergebnis des Prompts /pressedFlowers",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Papeterie", "Poster", "Geschenk"],
+			"useCases": [
+				"Papeterie",
+				"Poster",
+				"Geschenk"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a handmade collage of pressed flowers, leaves and petals on textured [[PAPER COLOR]] paper. Map [[ACCENT COLOR 1]] and [[ACCENT COLOR 2]] botanicals to two recognizable features from the reference, while darker plants define shadows and outlines. Preserve the actual hairstyle, accessories, expression and clothing silhouette.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a handmade collage of pressed flowers, leaves and petals on textured [[PAPER COLOR]] paper. Map [[ACCENT COLOR 1]] and [[ACCENT COLOR 2]] botanicals to two recognizable features from the reference, while darker plants define shadows and outlines. Preserve the actual hairstyle, accessories, expression and clothing silhouette.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1657,9 +1975,13 @@
 			"image": "/images/blog/ki-bildprompts/102-sand-sculpture.webp",
 			"alt": "Sandskulptur: echtes Ergebnis des Prompts /sandSculpture",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Sommercontent", "Event", "Vorher-nachher"],
+			"useCases": [
+				"Sommercontent",
+				"Event",
+				"Vorher-nachher"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn the person into a highly detailed life-size wet-sand sculpture on a beach. Sculpt the actual head shape, hairstyle, facial features, accessories, expression and clothing folds entirely from sand. Use [[LIGHTING, e.g. soft daylight]] with an ocean background. Do not invent or remove identity features.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn the person into a highly detailed life-size wet-sand sculpture on a beach. Sculpt the actual head shape, hairstyle, facial features, accessories, expression and clothing folds entirely from sand. Use [[LIGHTING, e.g. soft daylight]] with an ocean background. Do not invent or remove identity features.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1672,9 +1994,13 @@
 			"image": "/images/blog/ki-bildprompts/103-ice-sculpture.webp",
 			"alt": "Eisskulptur: echtes Ergebnis des Prompts /iceSculpture",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Winterkampagne", "Event", "Thumbnail"],
+			"useCases": [
+				"Winterkampagne",
+				"Event",
+				"Thumbnail"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Transform it into a transparent carved ice bust outdoors at blue hour. Preserve the actual head shape, hairstyle, facial hair, accessories, expression and clothing silhouette in clear ice with bubbles, frost and [[REFLECTION COLOR, e.g. cyan]] reflections.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Transform it into a transparent carved ice bust outdoors at blue hour. Preserve the actual head shape, hairstyle, facial hair, accessories, expression and clothing silhouette in clear ice with bubbles, frost and [[REFLECTION COLOR, e.g. cyan]] reflections.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1687,9 +2013,13 @@
 			"image": "/images/blog/ki-bildprompts/104-fore-edge-painting.webp",
 			"alt": "Buchschnitt-Porträt: echtes Ergebnis des Prompts /foreEdgePainting",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Publishing", "Kunsthandwerk", "Geschenk"],
+			"useCases": [
+				"Publishing",
+				"Kunsthandwerk",
+				"Geschenk"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Show a real closed hardcover book whose fanned page edges reveal a detailed fore-edge painting of that person. Preserve identity, hairstyle, facial hair, accessories, expression, clothing and the reference colors. Place it in a [[SETTING, e.g. warm library]] with realistic paper texture.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Show a real closed hardcover book whose fanned page edges reveal a detailed fore-edge painting of that person. Preserve identity, hairstyle, facial hair, accessories, expression, clothing and the reference colors. Place it in a [[SETTING, e.g. warm library]] with realistic paper texture.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1702,9 +2032,13 @@
 			"image": "/images/blog/ki-bildprompts/105-drone-light-show.webp",
 			"alt": "Drohnen-Lichtbild: echtes Ergebnis des Prompts /droneLightShow",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Eventpitch", "Festival", "Markenstunt"],
+			"useCases": [
+				"Eventpitch",
+				"Festival",
+				"Markenstunt"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a night photograph of a large outdoor drone light show forming that person's portrait in the sky. Thousands of [[LIGHT COLOR 1]], [[LIGHT COLOR 2]] and white light points must define the actual head shape, hairstyle, facial features, accessories, expression and clothing silhouette. No text or logos.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a night photograph of a large outdoor drone light show forming that person's portrait in the sky. Thousands of [[LIGHT COLOR 1]], [[LIGHT COLOR 2]] and white light points must define the actual head shape, hairstyle, facial features, accessories, expression and clothing silhouette. No text or logos.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1717,9 +2051,13 @@
 			"image": "/images/blog/ki-bildprompts/106-cymatics.webp",
 			"alt": "Klangmuster-Porträt: echtes Ergebnis des Prompts /cymatics",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Musik", "Akustik", "Wissenschaft"],
+			"useCases": [
+				"Musik",
+				"Akustik",
+				"Wissenschaft"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a real cymatics or Chladni-plate experiment in which fine sand on a vibrating [[PLATE COLOR]] plate forms the person's recognizable face, hairstyle, accessories and clothing silhouette, surrounded by standing-wave geometry. Preserve the reference's distinctive shapes without adding new features. Laboratory macro photograph.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a real cymatics or Chladni-plate experiment in which fine sand on a vibrating [[PLATE COLOR]] plate forms the person's recognizable face, hairstyle, accessories and clothing silhouette, surrounded by standing-wave geometry. Preserve the reference's distinctive shapes without adding new features. Laboratory macro photograph.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1732,9 +2070,13 @@
 			"image": "/images/blog/ki-bildprompts/107-pcb-portrait.webp",
 			"alt": "Leiterplatten-Porträt: echtes Ergebnis des Prompts /pcbPortrait",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Elektronik", "PCB-Art", "Tech-Cover"],
+			"useCases": [
+				"Elektronik",
+				"PCB-Art",
+				"Tech-Cover"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Design a functioning [[PCB COLOR]] printed circuit board whose traces, vias and components form the recognizable face, hairstyle, accessories and clothing silhouette. Use [[TRACE COLOR 1]] and [[TRACE COLOR 2]] to distinguish two real features from the reference. Top-down product photograph, no text or logo.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Design a functioning [[PCB COLOR]] printed circuit board whose traces, vias and components form the recognizable face, hairstyle, accessories and clothing silhouette. Use [[TRACE COLOR 1]] and [[TRACE COLOR 2]] to distinguish two real features from the reference. Top-down product photograph, no text or logo.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1747,9 +2089,13 @@
 			"image": "/images/blog/ki-bildprompts/108-oscilloscope-portrait.webp",
 			"alt": "Oszilloskop-Linienbild: echtes Ergebnis des Prompts /oscilloscope",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Retro-Tech", "Audio", "Synthesizer"],
+			"useCases": [
+				"Retro-Tech",
+				"Audio",
+				"Synthesizer"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Display it as a continuous [[PHOSPHOR COLOR, e.g. green]] vector trace on a vintage analog oscilloscope CRT. Clearly draw the actual head shape, hairstyle, facial features, accessories, expression and clothing silhouette in glowing lines. Dark workshop setting, no text.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Display it as a continuous [[PHOSPHOR COLOR, e.g. green]] vector trace on a vintage analog oscilloscope CRT. Clearly draw the actual head shape, hairstyle, facial features, accessories, expression and clothing silhouette in glowing lines. Dark workshop setting, no text.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1762,9 +2108,13 @@
 			"image": "/images/blog/ki-bildprompts/109-lenticular-portrait.webp",
 			"alt": "Lentikulardruck: echtes Ergebnis des Prompts /lenticular",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Printprodukt", "Messe", "Interaktive Kunst"],
+			"useCases": [
+				"Printprodukt",
+				"Messe",
+				"Interaktive Kunst"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Photograph a physical lenticular print in a clear acrylic frame. Visible vertical ridges combine [[EXPRESSION 1]] and [[EXPRESSION 2]] while preserving identity, hairstyle, facial hair, accessories, clothing and original colors. Oblique light must prove the real lenticular surface.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Photograph a physical lenticular print in a clear acrylic frame. Visible vertical ridges combine [[EXPRESSION 1]] and [[EXPRESSION 2]] while preserving identity, hairstyle, facial hair, accessories, clothing and original colors. Oblique light must prove the real lenticular surface.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1777,9 +2127,13 @@
 			"image": "/images/blog/ki-bildprompts/110-hologram.webp",
 			"alt": "Hologramm-Büste: echtes Ergebnis des Prompts /hologram",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Zukunftsvisual", "Keynote", "AR und VR"],
+			"useCases": [
+				"Zukunftsvisual",
+				"Keynote",
+				"AR und VR"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a realistic tabletop volumetric hologram projector displaying a [[HOLOGRAM COLOR, e.g. cyan-blue]] bust of the person. Preserve the actual head shape, hairstyle, facial hair, accessories, expression and clothing silhouette as luminous scan lines in a dark room.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a realistic tabletop volumetric hologram projector displaying a [[HOLOGRAM COLOR, e.g. cyan-blue]] bust of the person. Preserve the actual head shape, hairstyle, facial hair, accessories, expression and clothing silhouette as luminous scan lines in a dark room.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1792,9 +2146,13 @@
 			"image": "/images/blog/ki-bildprompts/111-raw-phone-night.webp",
 			"alt": "Verwackeltes Nachtfoto: echtes Ergebnis des Prompts /rawPhoneNight",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Street-Look", "Social Post", "Musikvisual"],
+			"useCases": [
+				"Street-Look",
+				"Social Post",
+				"Musikvisual"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Make it look like a raw handheld phone snapshot outside [[NIGHT LOCATION, e.g. a convenience store]]: slight motion blur, imperfect focus, mixed neon and fluorescent light, wet pavement and casual framing. Preserve identity, body proportions, clothing, accessories and original colors.",
+			"promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Make it look like a raw handheld phone snapshot outside [[NIGHT LOCATION, e.g. a convenience store]]: slight motion blur, imperfect focus, mixed neon and fluorescent light, wet pavement and casual framing. Preserve identity, body proportions, clothing, accessories and original colors.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1807,9 +2165,13 @@
 			"image": "/images/blog/ki-bildprompts/112-point-and-shoot.webp",
 			"alt": "Direktblitz-Schnappschuss: echtes Ergebnis des Prompts /pointAndShoot",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Partylook", "Retro-Cover", "Story"],
+			"useCases": [
+				"Partylook",
+				"Retro-Cover",
+				"Story"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Recreate it as a late-1990s point-and-shoot film snapshot in [[INDOOR LOCATION]]: harsh direct flash, dark background, visible grain, slight red-eye, casual off-center crop and date-free lab-print aesthetic. Preserve identity, styling and clothing.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Recreate it as a late-1990s point-and-shoot film snapshot in [[INDOOR LOCATION]]: harsh direct flash, dark background, visible grain, slight red-eye, casual off-center crop and date-free lab-print aesthetic. Preserve identity, styling and clothing.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1822,9 +2184,13 @@
 			"image": "/images/blog/ki-bildprompts/113-digicam-2003.webp",
 			"alt": "Frühe Digitalkamera: echtes Ergebnis des Prompts /digicam2003",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Y2K", "Nostalgie", "Meme"],
+			"useCases": [
+				"Y2K",
+				"Nostalgie",
+				"Meme"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn it into an early-2000s compact digital-camera photo: cool white balance, blown flash highlights, mild JPEG artifacts, deep depth of field, [[EVERYDAY INDOOR BACKGROUND]] and unpolished consumer-camera realism. Preserve identity, styling and clothing.",
+			"promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Turn it into an early-2000s compact digital-camera photo: cool white balance, blown flash highlights, mild JPEG artifacts, deep depth of field, [[EVERYDAY INDOOR BACKGROUND]] and unpolished consumer-camera realism. Preserve identity, styling and clothing.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1837,9 +2203,13 @@
 			"image": "/images/blog/ki-bildprompts/114-soft-mist-portrait.webp",
 			"alt": "Soft-Mist-Porträt: echtes Ergebnis des Prompts /softMist",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Profilbild", "Artist-Porträt", "Editorial"],
+			"useCases": [
+				"Profilbild",
+				"Artist-Porträt",
+				"Editorial"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a cinematic portrait with a strong black-pro-mist diffusion filter: glowing highlights, soft halation around the brightest existing details, low-contrast shadows, shallow depth of field and [[LIGHT DIRECTION, e.g. gentle window light]]. Preserve identity, hairstyle, accessories, clothing and original colors.",
+			"promptText": "Use the uploaded portrait of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a cinematic portrait with a strong black-pro-mist diffusion filter: glowing highlights, soft halation around the brightest existing details, low-contrast shadows, shallow depth of field and [[LIGHT DIRECTION, e.g. gentle window light]]. Preserve identity, hairstyle, accessories, clothing and original colors.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1852,9 +2222,13 @@
 			"image": "/images/blog/ki-bildprompts/115-direct-flash.webp",
 			"alt": "Nachtportrait mit Blitz: echtes Ergebnis des Prompts /directFlash",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Streetstyle", "Event", "Pressebild"],
+			"useCases": [
+				"Streetstyle",
+				"Event",
+				"Pressebild"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Photograph the person outdoors at blue hour with strong on-camera direct flash. Keep the subject bright and crisp against a [[BACKGROUND, e.g. dark city]], with specular highlights on existing reflective details, candid documentary energy and no studio polish. Preserve identity and styling.",
+			"promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Photograph the person outdoors at blue hour with strong on-camera direct flash. Keep the subject bright and crisp against a [[BACKGROUND, e.g. dark city]], with specular highlights on existing reflective details, candid documentary energy and no studio polish. Preserve identity and styling.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1867,9 +2241,13 @@
 			"image": "/images/blog/ki-bildprompts/116-equirectangular-360.webp",
 			"alt": "360-Grad-Werkstatt: echtes Ergebnis des Prompts /equirectangular360",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Virtuelle Tour", "Raumplanung", "VR"],
+			"useCases": [
+				"Virtuelle Tour",
+				"Raumplanung",
+				"VR"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Place the person inside a fully detailed [[360-DEGREE ENVIRONMENT, e.g. maker workshop]] and render a true 2:1 equirectangular panorama with ceiling and floor distortion, seamless left and right edges and the subject standing near the center. Preserve identity, body proportions and clothing.",
+			"promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Place the person inside a fully detailed [[360-DEGREE ENVIRONMENT, e.g. maker workshop]] and render a true 2:1 equirectangular panorama with ceiling and floor distortion, seamless left and right edges and the subject standing near the center. Preserve identity, body proportions and clothing.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "TEILWEISE",
 			"testNote": "Die typische 360-Grad-Verzerrung ist sichtbar, der aus der Vergleichstafel geschnittene Einzeltest liegt aber quadratisch statt im geforderten 2:1-Format vor."
@@ -1883,9 +2261,13 @@
 			"image": "/images/blog/ki-bildprompts/117-crowd-search.webp",
 			"alt": "Suchbild in der Menge: echtes Ergebnis des Prompts /crowdSearch",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Community", "Gewinnspiel", "Messe"],
+			"useCases": [
+				"Community",
+				"Gewinnspiel",
+				"Messe"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a dense overhead photo of [[CROWDED EVENT, e.g. a maker convention]] with hundreds of people and booths. Hide the referenced person clearly but not centrally like a classic visual-search puzzle. Preserve their actual hairstyle, facial hair, accessories, clothing and colors so they remain findable without inventing new traits.",
+			"promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a dense overhead photo of [[CROWDED EVENT, e.g. a maker convention]] with hundreds of people and booths. Hide the referenced person clearly but not centrally like a classic visual-search puzzle. Preserve their actual hairstyle, facial hair, accessories, clothing and colors so they remain findable without inventing new traits.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1898,9 +2280,13 @@
 			"image": "/images/blog/ki-bildprompts/118-creator-livestream.webp",
 			"alt": "Creator-Livestream: echtes Ergebnis des Prompts /creatorLivestream",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Stream-Konzept", "Kurs", "Social Mockup"],
+			"useCases": [
+				"Stream-Konzept",
+				"Kurs",
+				"Social Mockup"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a realistic vertical creator-livestream interface showing the person at [[WORKSPACE OR LOCATION]] presenting [[PROJECT OR OBJECT]]. Preserve identity, styling and clothing. Include camera view, readable live comments, viewer count and reaction controls without real platform branding.",
+			"promptText": "Use the uploaded image of [[PERSON IN THE REFERENCE IMAGE]] as the binding reference. Create a realistic vertical creator-livestream interface showing the person at [[WORKSPACE OR LOCATION]] presenting [[PROJECT OR OBJECT]]. Preserve identity, styling and clothing. Include camera view, readable live comments, viewer count and reaction controls without real platform branding.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1913,9 +2299,13 @@
 			"image": "/images/blog/ki-bildprompts/119-product-angle-grid.webp",
 			"alt": "Sechs Produktansichten: echtes Ergebnis des Prompts /productAngleGrid",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Shop", "Kleinanzeigen", "Designprüfung"],
+			"useCases": [
+				"Shop",
+				"Kleinanzeigen",
+				"Designprüfung"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Create a clean 2x3 product-photography grid: three-quarter front, side, top, [[DETAIL CLOSE-UP]], [[SCALE CONTEXT]] and a carefully separated exploded view. Preserve the exact geometry, materials, surface finish, colors and every visible mark from the reference. Do not invent branding or components.",
+			"promptText": "Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Create a clean 2x3 product-photography grid: three-quarter front, side, top, [[DETAIL CLOSE-UP]], [[SCALE CONTEXT]] and a carefully separated exploded view. Preserve the exact geometry, materials, surface finish, colors and every visible mark from the reference. Do not invent branding or components.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1928,9 +2318,13 @@
 			"image": "/images/blog/ki-bildprompts/120-product-detail-page.webp",
 			"alt": "Shopseite: echtes Ergebnis des Prompts /productDetailPage",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["UI-Mockup", "Conversion-Test", "Produktpitch"],
+			"useCases": [
+				"UI-Mockup",
+				"Conversion-Test",
+				"Produktpitch"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Design a polished [[LANGUAGE]] mobile e-commerce product-detail page for it. Include an image gallery, [[PRODUCT TITLE]], rating, [[PRICE]], feature cards, delivery, accessories and purchase buttons. Preserve the product's exact geometry, materials, colors and visible branding status. Use a clean [[UI ACCENT COLOR]] interface without inventing specifications.",
+			"promptText": "Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Design a polished [[LANGUAGE]] mobile e-commerce product-detail page for it. Include an image gallery, [[PRODUCT TITLE]], rating, [[PRICE]], feature cards, delivery, accessories and purchase buttons. Preserve the product's exact geometry, materials, colors and visible branding status. Use a clean [[UI ACCENT COLOR]] interface without inventing specifications.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1943,9 +2337,13 @@
 			"image": "/images/blog/ki-bildprompts/121-museum-breakdown.webp",
 			"alt": "Technische Zerlegung: echtes Ergebnis des Prompts /museumBreakdown",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Erklärgrafik", "Teardown", "Produktentwicklung"],
+			"useCases": [
+				"Erklärgrafik",
+				"Teardown",
+				"Produktentwicklung"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Create a [[LANGUAGE]] museum-style technical breakdown poster. Show the complete object plus [[KNOWN INTERNAL COMPONENTS]], housings, controls, material samples and a plausible assembly sequence. Preserve the exact exterior geometry, materials, colors and branding status. Do not invent unsupported technical labels; mark uncertain internals as conceptual.",
+			"promptText": "Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Create a [[LANGUAGE]] museum-style technical breakdown poster. Show the complete object plus [[KNOWN INTERNAL COMPONENTS]], housings, controls, material samples and a plausible assembly sequence. Preserve the exact exterior geometry, materials, colors and branding status. Do not invent unsupported technical labels; mark uncertain internals as conceptual.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -1958,9 +2356,13 @@
 			"image": "/images/blog/ki-bildprompts/122-premium-product-ad.webp",
 			"alt": "Premium-Werbemotiv: echtes Ergebnis des Prompts /premiumProductAd",
 			"articleSlug": "ultimate-bildprompts-part-3",
-			"useCases": ["Kampagne", "Hero-Bild", "Launch"],
+			"useCases": [
+				"Kampagne",
+				"Hero-Bild",
+				"Launch"
+			],
 			"promptType": "detailed",
-      "promptText": "Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Create a premium cinematic advertising image with the object floating above a [[PEDESTAL MATERIAL]] pedestal. Use [[EDGE-LIGHT COLOR]], [[RIM-LIGHT COLOR]], subtle particles and a macro inset of [[DETAIL TO HIGHLIGHT]]. Preserve exact geometry, materials, colors and visible branding status. Add no new logo, slogan or product feature.",
+			"promptText": "Use the uploaded image of [[PRODUCT OR OBJECT]] as the binding reference. Create a premium cinematic advertising image with the object floating above a [[PEDESTAL MATERIAL]] pedestal. Use [[EDGE-LIGHT COLOR]], [[RIM-LIGHT COLOR]], subtle particles and a macro inset of [[DETAIL TO HIGHLIGHT]]. Preserve exact geometry, materials, colors and visible branding status. Add no new logo, slogan or product feature.",
 			"series": "ultimate-bildprompts-part-3",
 			"verdict": "PASS"
 		},
@@ -2240,202 +2642,262 @@
 			"id": "cyanotype-botanical",
 			"command": "/cyanotypeBotanical",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle ein einzelnes Brustporträt als handbeschichtete botanische Cyanotypie auf warmweißem Baumwollpapier. Verwende ausschließlich tiefes Preußischblau und Papierweiß, sichtbare Pinselränder der lichtempfindlichen Beschichtung und wenige feine Farn-Photogramme rund um die Person. Erhalte Gesichtsproportionen, Frisur oder Kopfform, Gesichtsbehaarung, Accessoires, Ausdruck und Kleidungssilhouette aus der Referenz. Frontal, vollständig sichtbar, Format [[Z. B. 4:5]]. Keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle ein einzelnes Brustporträt als handbeschichtete botanische Cyanotypie auf warmweißem Baumwollpapier. Verwende ausschließlich tiefes Preußischblau und Papierweiß, sichtbare Pinselränder der lichtempfindlichen Beschichtung und wenige feine Farn-Photogramme rund um die Person. Erhalte Gesichtsproportionen, Frisur oder Kopfform, Gesichtsbehaarung, Accessoires, Ausdruck und Kleidungssilhouette aus der Referenz. Frontal, vollständig sichtbar, Format [[Z. B. 4:5]]. Keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Botanische Cyanotypie",
 			"category": "fotoexperimente",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/01-cyanotype-botanical.webp",
 			"alt": "Botanische Cyanotypie des Ausgangsporträts in Preußischblau mit Farn-Photogrammen",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Editorial-Porträt", "Kunst- und Fotoartikel", "Poster"]
+			"useCases": [
+				"Editorial-Porträt",
+				"Kunst- und Fotoartikel",
+				"Poster"
+			]
 		},
 		{
 			"id": "risograph-two-ink",
 			"command": "/risographTwoInk",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Drucke die Person als echte zweifarbige Risographie mit [[DRUCKFARBE 1]] und [[DRUCKFARBE 2]] auf warmem ungestrichenem Papier. Grobe Rasterpunkte, sichtbare Papierfasern und eine kleine absichtliche Farbfehlpassung von höchstens zwei Millimetern. Erhalte Identität, Frisur oder Kopfform, Gesichtsbehaarung, Accessoires, Ausdruck und Kleidung aus der Referenz. Zentriertes Brustporträt, Format [[Z. B. 4:5]]. Keine zusätzlichen Schmuckfarben, kein glatter Digitalverlauf, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Drucke die Person als echte zweifarbige Risographie mit [[DRUCKFARBE 1]] und [[DRUCKFARBE 2]] auf warmem ungestrichenem Papier. Grobe Rasterpunkte, sichtbare Papierfasern und eine kleine absichtliche Farbfehlpassung von höchstens zwei Millimetern. Erhalte Identität, Frisur oder Kopfform, Gesichtsbehaarung, Accessoires, Ausdruck und Kleidung aus der Referenz. Zentriertes Brustporträt, Format [[Z. B. 4:5]]. Keine zusätzlichen Schmuckfarben, kein glatter Digitalverlauf, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Zweifarbige Risographie",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/02-risograph-two-ink.webp",
 			"alt": "Zweifarbige Risographie des Ausgangsporträts in Orange und Türkis",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Zine-Cover", "Social-Serie", "Maker-Editorial"]
+			"useCases": [
+				"Zine-Cover",
+				"Social-Serie",
+				"Maker-Editorial"
+			]
 		},
 		{
 			"id": "reduction-linocut",
 			"command": "/reductionLinocut",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle einen handgedruckten dreifarbigen Reduktions-Linolschnitt: kräftige schwarze Schnittflächen, eine Druckplatte in [[AKZENTFARBE 1]] und eine weitere in [[AKZENTFARBE 2]]. Ordne die Akzentfarben zwei tatsächlich sichtbaren Kleidungs- oder Accessoire-Details aus der Referenz zu. Zeige handgeschnitzte Kerben, ungleichmäßigen Farbauftrag und faseriges Papier. Erhalte Identität und Ausdruck. Frontal, Format [[Z. B. 4:5]]. Keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle einen handgedruckten dreifarbigen Reduktions-Linolschnitt: kräftige schwarze Schnittflächen, eine Druckplatte in [[AKZENTFARBE 1]] und eine weitere in [[AKZENTFARBE 2]]. Ordne die Akzentfarben zwei tatsächlich sichtbaren Kleidungs- oder Accessoire-Details aus der Referenz zu. Zeige handgeschnitzte Kerben, ungleichmäßigen Farbauftrag und faseriges Papier. Erhalte Identität und Ausdruck. Frontal, Format [[Z. B. 4:5]]. Keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Reduktions-Linolschnitt",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/03-reduction-linocut.webp",
 			"alt": "Dreifarbiger Reduktions-Linolschnitt des Ausgangsporträts",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Textfreies Thumbnail", "Poster", "Kapiteltrenner"]
+			"useCases": [
+				"Textfreies Thumbnail",
+				"Poster",
+				"Kapiteltrenner"
+			]
 		},
 		{
 			"id": "security-engraving",
 			"command": "/securityEngraving",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Gestalte ein eigenständiges Kunstblatt im Stil eines feinen Sicherheitsstichs: dichte Guilloché-Kurven, präzise Kreuzschraffur und ornamentale Anti-Fälschungs-Geometrie in [[HAUPTFARBE]] und [[AKZENTFARBE]] auf cremefarbenem Papier. Das Porträt bleibt frontal; Identität, Frisur, Gesichtsbehaarung, Accessoires und Ausdruck bleiben klar lesbar. Eindeutig Kunstprint, kein Geld oder offizielles Dokument. Keine Zahlen, Siegel, Unterschriften, Schrift, Logos oder Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Gestalte ein eigenständiges Kunstblatt im Stil eines feinen Sicherheitsstichs: dichte Guilloché-Kurven, präzise Kreuzschraffur und ornamentale Anti-Fälschungs-Geometrie in [[HAUPTFARBE]] und [[AKZENTFARBE]] auf cremefarbenem Papier. Das Porträt bleibt frontal; Identität, Frisur, Gesichtsbehaarung, Accessoires und Ausdruck bleiben klar lesbar. Eindeutig Kunstprint, kein Geld oder offizielles Dokument. Keine Zahlen, Siegel, Unterschriften, Schrift, Logos oder Wasserzeichen.",
 			"title": "Fiktiver Sicherheitsstich",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/04-security-engraving.webp",
 			"alt": "Künstlerischer Sicherheitsstich des Ausgangsporträts mit Guilloché-Linien",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Archivästhetik", "Intro-Grafik", "Detail-Teaser"]
+			"useCases": [
+				"Archivästhetik",
+				"Intro-Grafik",
+				"Detail-Teaser"
+			]
 		},
 		{
 			"id": "wet-plate-collodion",
 			"command": "/wetPlateCollodion",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erzeuge ein authentisch wirkendes Nassplatten-Kollodium-Porträt auf einer dunklen Metallplatte: silbergraues Monochrom, geringe Schärfentiefe, weiches historisches Studiolicht, dunkler Randabfall sowie wenige Emulsionsschlieren und Altersmarken. Alle modernen Merkmale, Accessoires und Kleidungsdetails aus der Referenz bleiben bewusst erhalten; Identität und Ausdruck dürfen sich nicht ändern. Zentriertes Brustporträt, Format [[Z. B. 4:5]]. Kein Kostüm, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erzeuge ein authentisch wirkendes Nassplatten-Kollodium-Porträt auf einer dunklen Metallplatte: silbergraues Monochrom, geringe Schärfentiefe, weiches historisches Studiolicht, dunkler Randabfall sowie wenige Emulsionsschlieren und Altersmarken. Alle modernen Merkmale, Accessoires und Kleidungsdetails aus der Referenz bleiben bewusst erhalten; Identität und Ausdruck dürfen sich nicht ändern. Zentriertes Brustporträt, Format [[Z. B. 4:5]]. Kein Kostüm, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Nassplatten-Kollodium",
 			"category": "fotoexperimente",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/05-wet-plate-collodion.webp",
 			"alt": "Silbergraues Nassplatten-Kollodium-Porträt mit moderner Brille und Hoodie",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Alt-neu-Kontrast", "Fotogeschichte", "Profilporträt"]
+			"useCases": [
+				"Alt-neu-Kontrast",
+				"Fotogeschichte",
+				"Profilporträt"
+			]
 		},
 		{
 			"id": "false-color-infrared",
 			"command": "/falseColorInfrared",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle eine realistische Falschfarben-Infrarotfotografie als Brustporträt. Haut hell und natürlich detailliert, Haare und Gesichtsbehaarung dunkel, Kleidung in [[KLEIDUNGSFARBE]] und Hintergrundvegetation in [[VEGETATIONSFARBE]]. Erhalte Gesichtsproportionen, Frisur, Accessoires und Ausdruck aus der Referenz. Frontal, Augen scharf, Format [[Z. B. 4:5]], glaubwürdige Fototextur. Kein Cyberpunk, keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle eine realistische Falschfarben-Infrarotfotografie als Brustporträt. Haut hell und natürlich detailliert, Haare und Gesichtsbehaarung dunkel, Kleidung in [[KLEIDUNGSFARBE]] und Hintergrundvegetation in [[VEGETATIONSFARBE]]. Erhalte Gesichtsproportionen, Frisur, Accessoires und Ausdruck aus der Referenz. Frontal, Augen scharf, Format [[Z. B. 4:5]], glaubwürdige Fototextur. Kein Cyberpunk, keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Falschfarben-Infrarot",
 			"category": "fotoexperimente",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/06-false-color-infrared.webp",
 			"alt": "Falschfarben-Infrarotporträt mit türkisem Hoodie und korallfarbener Vegetation",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Feed-Stopper", "Musikcover", "Tech-Cover"]
+			"useCases": [
+				"Feed-Stopper",
+				"Musikcover",
+				"Tech-Cover"
+			]
 		},
 		{
 			"id": "paper-cut-shadowbox",
 			"command": "/paperCutShadowbox",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Baue das Brustporträt als reale Papier-Schattenbox aus sieben bis neun klar getrennten Lagen schweren Schnittpapiers. Sichtbare Schnittkanten und echte Schlagschatten; Palette aus Creme, Anthrazit, [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Identität, Frisur oder Kopfform, Gesichtsbehaarung, Accessoires und Ausdruck bleiben erkennbar. Frontal, vollständig im Rahmen, Format [[Z. B. 4:5]]. Keine flache Vektorillustration, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Baue das Brustporträt als reale Papier-Schattenbox aus sieben bis neun klar getrennten Lagen schweren Schnittpapiers. Sichtbare Schnittkanten und echte Schlagschatten; Palette aus Creme, Anthrazit, [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Identität, Frisur oder Kopfform, Gesichtsbehaarung, Accessoires und Ausdruck bleiben erkennbar. Frontal, vollständig im Rahmen, Format [[Z. B. 4:5]]. Keine flache Vektorillustration, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Papier-Schattenbox",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/07-paper-cut-shadowbox.webp",
 			"alt": "Mehrlagige Papier-Schattenbox des Ausgangsporträts",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Hero-Grafik", "DIY-Artikel", "Markenwelt"]
+			"useCases": [
+				"Hero-Grafik",
+				"DIY-Artikel",
+				"Markenwelt"
+			]
 		},
 		{
 			"id": "wood-marquetry",
 			"command": "/woodMarquetry",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Setze es als handgefertigte Marquetterie-Tafel aus exakt eingepassten Furnieren um: Walnuss, Ahorn und Ebenholz für Haut, Haare und Schatten; gefärbte Furniere in [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]] für zwei markante Details aus der Referenz. Die Holzmaserung folgt den realen Formen. Satinierte Oberfläche, frontal fotografiert, Format [[Z. B. 4:5]]. Keine gemalte Holztextur, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Setze es als handgefertigte Marquetterie-Tafel aus exakt eingepassten Furnieren um: Walnuss, Ahorn und Ebenholz für Haut, Haare und Schatten; gefärbte Furniere in [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]] für zwei markante Details aus der Referenz. Die Holzmaserung folgt den realen Formen. Satinierte Oberfläche, frontal fotografiert, Format [[Z. B. 4:5]]. Keine gemalte Holztextur, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Holz-Marquetterie",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/08-wood-marquetry.webp",
 			"alt": "Handgefertigte Marquetterie des Ausgangsporträts aus verschiedenen Furnieren",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Maker-Thema", "Titelgrafik", "Produktkonzept"]
+			"useCases": [
+				"Maker-Thema",
+				"Titelgrafik",
+				"Produktkonzept"
+			]
 		},
 		{
 			"id": "cloisonne-enamel",
 			"command": "/cloisonneEnamel",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Gestalte eine physische Cloisonné-Emaille-Plakette. Feine dunkle Metalldrähte teilen Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidung in große herstellbar wirkende Zellen. Fülle sie mit leicht durchscheinender Emaille in Creme, Schwarz, [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]; zeige Brennunregelmäßigkeiten und polierte Metallkanten. Frontal, Format [[Z. B. 4:5]]. Kein Kirchenfenster, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Gestalte eine physische Cloisonné-Emaille-Plakette. Feine dunkle Metalldrähte teilen Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidung in große herstellbar wirkende Zellen. Fülle sie mit leicht durchscheinender Emaille in Creme, Schwarz, [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]; zeige Brennunregelmäßigkeiten und polierte Metallkanten. Frontal, Format [[Z. B. 4:5]]. Kein Kirchenfenster, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Cloisonné-Emaille",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/09-cloisonne-enamel.webp",
 			"alt": "Cloisonné-Emaille-Plakette mit dem Ausgangsporträt",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Emblem", "Craft-Thema", "Profilgrafik"]
+			"useCases": [
+				"Emblem",
+				"Craft-Thema",
+				"Profilgrafik"
+			]
 		},
 		{
 			"id": "kintsugi-porcelain-bust",
 			"command": "/kintsugiBust",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Forme eine realistische weiße Porzellanbüste. Glasiere zwei tatsächlich vorhandene Kleidungs- oder Accessoire-Details in [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Wenige glaubwürdige Bruchlinien über Kopf, Wange und Schulter sind mit schmalen goldenen Kintsugi-Fugen repariert. Erhalte Gesichtsproportionen, Frisur, Gesichtsbehaarung und Ausdruck. Neutraler Museumsockel, Format [[Z. B. 4:5]]. Keine fehlenden Teile, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Forme eine realistische weiße Porzellanbüste. Glasiere zwei tatsächlich vorhandene Kleidungs- oder Accessoire-Details in [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Wenige glaubwürdige Bruchlinien über Kopf, Wange und Schulter sind mit schmalen goldenen Kintsugi-Fugen repariert. Erhalte Gesichtsproportionen, Frisur, Gesichtsbehaarung und Ausdruck. Neutraler Museumsockel, Format [[Z. B. 4:5]]. Keine fehlenden Teile, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Kintsugi-Porzellanbüste",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/10-kintsugi-porcelain-bust.webp",
 			"alt": "Weiße Porzellanbüste mit schmalen goldenen Kintsugi-Fugen",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Transformation", "Resilienz", "Editorial-Metapher"]
+			"useCases": [
+				"Transformation",
+				"Resilienz",
+				"Editorial-Metapher"
+			]
 		},
 		{
 			"id": "tufted-textile-portrait",
 			"command": "/tuftedTextile",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle ein tatsächlich gefertigtes, rechteckiges getuftetes Wandporträt mit dickem Loop- und Cut-Pile-Garn. Sichtbare Fasern, klare vereinfachte Farbflächen und saubere Außenkante. Übernimm Haut-, Haar-, Kleidungs- und Accessoirefarben aus der Referenz; verstärke zwei markante Details mit [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Frontal als physisches Textil fotografiert, Format [[Z. B. 4:5]]. Keine Stickerei, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle ein tatsächlich gefertigtes, rechteckiges getuftetes Wandporträt mit dickem Loop- und Cut-Pile-Garn. Sichtbare Fasern, klare vereinfachte Farbflächen und saubere Außenkante. Übernimm Haut-, Haar-, Kleidungs- und Accessoirefarben aus der Referenz; verstärke zwei markante Details mit [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Frontal als physisches Textil fotografiert, Format [[Z. B. 4:5]]. Keine Stickerei, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Getuftetes Wandporträt",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/11-tufted-textile-portrait.webp",
 			"alt": "Getuftetes Wandporträt mit sichtbaren Garnfasern",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Merch-Idee", "Interior", "Social-Grafik"]
+			"useCases": [
+				"Merch-Idee",
+				"Interior",
+				"Social-Grafik"
+			]
 		},
 		{
 			"id": "copper-repousse-medallion",
 			"command": "/copperRepousse",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Treibe das Gesicht als rundes Kupfer-Repoussé-Medaillon aus einem einzigen Metallblech. Kopf, Nase, Frisur, Gesichtsbehaarung und vorhandene Accessoires stehen als plastisches Relief hervor; sichtbare Werkzeugspuren, polierte Kupferhöhen und [[PATINAFARBE]] in den Vertiefungen. Ein markantes Detail erhält eine dezente Emaille-Einlage in [[AKZENTFARBE]]. Auf neutralem Stein, quadratisch. Keine Münze, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Treibe das Gesicht als rundes Kupfer-Repoussé-Medaillon aus einem einzigen Metallblech. Kopf, Nase, Frisur, Gesichtsbehaarung und vorhandene Accessoires stehen als plastisches Relief hervor; sichtbare Werkzeugspuren, polierte Kupferhöhen und [[PATINAFARBE]] in den Vertiefungen. Ein markantes Detail erhält eine dezente Emaille-Einlage in [[AKZENTFARBE]]. Auf neutralem Stein, quadratisch. Keine Münze, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Kupfer-Repoussé-Medaillon",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/12-copper-repousse-medallion.webp",
 			"alt": "Kupfer-Repoussé-Medaillon mit plastischem Porträtrelief und Patina",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Maker-Handwerk", "Metallartikel", "Emblem"]
+			"useCases": [
+				"Maker-Handwerk",
+				"Metallartikel",
+				"Emblem"
+			]
 		},
 		{
 			"id": "projection-mapped-bust",
 			"command": "/projectionMappedBust",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Zeige die Person als matte weiße Gipsbüste in einer dunklen Galerie. Ein echter Projektor wirft scharf begrenzte geometrische Lichtflächen in [[LICHTFARBE 1]] und [[LICHTFARBE 2]] über Gesicht, Frisur, Accessoires und Kleidung. Sichtbarer Lichtkegel und glaubwürdiger Helligkeitsabfall; nur projiziert, nicht aufgedruckt. Frontal, Format [[Z. B. 4:5]]. Keine zweite Projektion, keine Schrift, kein Logo, kein Wasserzeichen und kein generischer Neon-Glow.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Zeige die Person als matte weiße Gipsbüste in einer dunklen Galerie. Ein echter Projektor wirft scharf begrenzte geometrische Lichtflächen in [[LICHTFARBE 1]] und [[LICHTFARBE 2]] über Gesicht, Frisur, Accessoires und Kleidung. Sichtbarer Lichtkegel und glaubwürdiger Helligkeitsabfall; nur projiziert, nicht aufgedruckt. Frontal, Format [[Z. B. 4:5]]. Keine zweite Projektion, keine Schrift, kein Logo, kein Wasserzeichen und kein generischer Neon-Glow.",
 			"title": "Projection-Mapping auf Gipsbüste",
 			"category": "maker-tech",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/13-projection-mapped-bust.webp",
 			"alt": "Weiße Gipsbüste mit projizierten türkisen und amberfarbenen Lichtflächen",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Event-Idee", "Tech-Hero", "Video-Keyframe"]
+			"useCases": [
+				"Event-Idee",
+				"Tech-Hero",
+				"Video-Keyframe"
+			]
 		},
 		{
 			"id": "prism-refraction",
 			"command": "/prismRefraction",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle genau ein fotorealistisches Brustporträt. Platziere ein kleines dreieckiges Glasprisma nahe am [[POSITION AM OBJEKTIVRAND]]. Es erzeugt nur einen kontrollierten Regenbogenreflex und eine schmale farbige Kantenverschiebung in einer Bildecke; das vollständige Gesicht bleibt einmalig, scharf und frei. Erhalte Identität, Frisur, Gesichtsbehaarung, Accessoires, Ausdruck und Kleidung. Hintergrund [[HINTERGRUNDFARBE]], Format [[Z. B. 1:1]]. Kein zweites Gesicht, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erstelle genau ein fotorealistisches Brustporträt. Platziere ein kleines dreieckiges Glasprisma nahe am [[POSITION AM OBJEKTIVRAND]]. Es erzeugt nur einen kontrollierten Regenbogenreflex und eine schmale farbige Kantenverschiebung in einer Bildecke; das vollständige Gesicht bleibt einmalig, scharf und frei. Erhalte Identität, Frisur, Gesichtsbehaarung, Accessoires, Ausdruck und Kleidung. Hintergrund [[HINTERGRUNDFARBE]], Format [[Z. B. 1:1]]. Kein zweites Gesicht, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Kontrollierte Prisma-Refraktion",
 			"category": "fotoexperimente",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/14-prism-refraction.webp",
 			"alt": "Porträt mit einem kontrollierten Regenbogenreflex durch ein kleines Prisma",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Fotothema", "Modernes Porträt", "Eyecatcher"]
+			"useCases": [
+				"Fotothema",
+				"Modernes Porträt",
+				"Eyecatcher"
+			]
 		},
 		{
 			"id": "long-exposure-light-painting",
 			"command": "/lightPainting",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Fotografiere die Person in einer einzigen Langzeitbelichtung vor tiefschwarzem Hintergrund. Ein kurzer Blitz friert Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidung scharf ein. Eine einzige durchgehende Lichtspur zeichnet eine kontrollierte Spirale in [[LICHTFARBE 1]] und [[LICHTFARBE 2]] hinter und um die Person, ohne Augen oder Mund zu überdecken. Frontal, Format [[Z. B. 4:5]]. Keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Fotografiere die Person in einer einzigen Langzeitbelichtung vor tiefschwarzem Hintergrund. Ein kurzer Blitz friert Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidung scharf ein. Eine einzige durchgehende Lichtspur zeichnet eine kontrollierte Spirale in [[LICHTFARBE 1]] und [[LICHTFARBE 2]] hinter und um die Person, ohne Augen oder Mund zu überdecken. Frontal, Format [[Z. B. 4:5]]. Keine zweite Person, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Langzeitbelichtete Lichtmalerei",
 			"category": "fotoexperimente",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/15-long-exposure-light-painting.webp",
 			"alt": "Scharfes Porträt mit einer kontrollierten türkis-orangenen Lichtspirale",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Tech-Thumbnail", "Musikcover", "Dynamischer Hero"]
+			"useCases": [
+				"Tech-Thumbnail",
+				"Musikcover",
+				"Dynamischer Hero"
+			]
 		},
 		{
 			"id": "moire-line-portrait",
 			"command": "/moirePortrait",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Rekonstruiere es als echten zweilagigen Moiré-Siebdruck. Ebene 1 besteht aus dichten schwarzen konzentrischen Konturlinien, die Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidung formen. Ebene 2 ist ein halbtransparentes Linienfeld, exakt um [[DREHWINKEL, z. B. 7 Grad]] gedreht, sodass breite Interferenzbänder entstehen. Nutze [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]] für zwei reale Details. Weißes Papier, quadratisch. Genau zwei Linienebenen, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Rekonstruiere es als echten zweilagigen Moiré-Siebdruck. Ebene 1 besteht aus dichten schwarzen konzentrischen Konturlinien, die Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidung formen. Ebene 2 ist ein halbtransparentes Linienfeld, exakt um [[DREHWINKEL, z. B. 7 Grad]] gedreht, sodass breite Interferenzbänder entstehen. Nutze [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]] für zwei reale Details. Weißes Papier, quadratisch. Genau zwei Linienebenen, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Zweilagiger Moiré-Siebdruck",
 			"category": "fotoexperimente",
 			"status": "tested",
@@ -2443,111 +2905,147 @@
 			"image": "/images/blog/praezise-bildprompts/16-moire-line-portrait.webp",
 			"alt": "Experimenteller Linien-Siebdruck mit nur teilweise sichtbarem Moiré-Effekt",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Optical Art", "Experimenteller Print", "Liniengrafik"]
+			"useCases": [
+				"Optical Art",
+				"Experimenteller Print",
+				"Liniengrafik"
+			]
 		},
 		{
 			"id": "solarized-darkroom-print",
 			"command": "/solarizedPrint",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erzeuge einen echten schwarzweißen Silbergelatine-Abzug mit kontrollierter Dunkelkammer-Solarisation: teilweise Tonwertumkehr, tiefe Schwarztöne und feine leuchtende Konturlinien um Gesicht, Frisur, Gesichtsbehaarung und Accessoires. Sichtbare Faserpapier-Textur und sehr dezente chemische Randhöfe. Frontal, vollständig sichtbar, Format [[Z. B. 1:1]]. Kein Röntgenbild, kein Horror-Make-up, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erzeuge einen echten schwarzweißen Silbergelatine-Abzug mit kontrollierter Dunkelkammer-Solarisation: teilweise Tonwertumkehr, tiefe Schwarztöne und feine leuchtende Konturlinien um Gesicht, Frisur, Gesichtsbehaarung und Accessoires. Sichtbare Faserpapier-Textur und sehr dezente chemische Randhöfe. Frontal, vollständig sichtbar, Format [[Z. B. 1:1]]. Kein Röntgenbild, kein Horror-Make-up, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Solarisation aus der Dunkelkammer",
 			"category": "fotoexperimente",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/17-solarized-darkroom-print.webp",
 			"alt": "Solarisierter Schwarzweißabzug mit leuchtenden Konturlinien",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Fotografie", "Düsteres Editorial", "Albumcover"]
+			"useCases": [
+				"Fotografie",
+				"Düsteres Editorial",
+				"Albumcover"
+			]
 		},
 		{
 			"id": "caustic-light-portrait",
 			"command": "/causticLight",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Fotografiere die Person realistisch in einem dunklen Studio. Licht in [[LICHTFARBE 1]] und [[LICHTFARBE 2]] wird durch zwei strukturierte Glasscheiben gebrochen und erzeugt klar definierte Kaustik-Muster auf Kopf, Gesicht, Haaren, Accessoires und Kleidung. Die Muster folgen glaubwürdig den Oberflächen; Augen und Gesicht bleiben lesbar. Erhalte Identität und Ausdruck. Format [[Z. B. 4:5]]. Kein Cyberpunk, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Fotografiere die Person realistisch in einem dunklen Studio. Licht in [[LICHTFARBE 1]] und [[LICHTFARBE 2]] wird durch zwei strukturierte Glasscheiben gebrochen und erzeugt klar definierte Kaustik-Muster auf Kopf, Gesicht, Haaren, Accessoires und Kleidung. Die Muster folgen glaubwürdig den Oberflächen; Augen und Gesicht bleiben lesbar. Erhalte Identität und Ausdruck. Format [[Z. B. 4:5]]. Kein Cyberpunk, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Lichtkaustik durch Strukturglas",
 			"category": "fotoexperimente",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/18-caustic-light-portrait.webp",
 			"alt": "Studio-Porträt mit klaren Lichtkaustik-Mustern in Türkis und Amber",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Foto-Editorial", "Lichtdesign", "Tech-Look"]
+			"useCases": [
+				"Foto-Editorial",
+				"Lichtdesign",
+				"Tech-Look"
+			]
 		},
 		{
 			"id": "maker-tool-assemblage",
 			"command": "/makerAssemblage",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Lege Hunderte echte [[OBJEKTFAMILIE, z. B. Werkstattwerkzeuge]] auf einer dunklen Fläche so an, dass sie aus frontaler Entfernung das erkennbare Gesicht bilden. Ordne Form und Farbe der Objekte den tatsächlich sichtbaren Haaren, Gesichtsbehaarungen, Accessoires und Kleidungsflächen aus der Referenz zu. Keine menschliche Haut; das Gesicht entsteht vollständig aus realen Objekten. Von oben, Format [[Z. B. 1:1]]. Keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Lege Hunderte echte [[OBJEKTFAMILIE, z. B. Werkstattwerkzeuge]] auf einer dunklen Fläche so an, dass sie aus frontaler Entfernung das erkennbare Gesicht bilden. Ordne Form und Farbe der Objekte den tatsächlich sichtbaren Haaren, Gesichtsbehaarungen, Accessoires und Kleidungsflächen aus der Referenz zu. Keine menschliche Haut; das Gesicht entsteht vollständig aus realen Objekten. Von oben, Format [[Z. B. 1:1]]. Keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Porträt aus Maker-Werkzeugen",
 			"category": "maker-tech",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/19-maker-tool-assemblage.webp",
 			"alt": "Porträt, das vollständig aus Werkzeugen, Kabeln und Bits gelegt wurde",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Maker-Hero", "Werkzeugartikel", "Markenmotiv"]
+			"useCases": [
+				"Maker-Hero",
+				"Werkzeugartikel",
+				"Markenmotiv"
+			]
 		},
 		{
 			"id": "aerial-landscape-portrait",
 			"command": "/aerialLandscapePortrait",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erzeuge eine glaubwürdige senkrechte Luftaufnahme aus [[LANDSCHAFTSELEMENTEN, z. B. Feldern, Hecken, Straßen, Wald und Wasser]]. Erst aus der Gesamtsicht soll die Landschaft subtil Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidungssilhouette aus der Referenz bilden. Übernimm zwei markante Referenzfarben als natürliche Landschaftsfarben. Zuerst reale Landschaft, dann Porträt. Format [[Z. B. 1:1]]. Keine Haut, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Erzeuge eine glaubwürdige senkrechte Luftaufnahme aus [[LANDSCHAFTSELEMENTEN, z. B. Feldern, Hecken, Straßen, Wald und Wasser]]. Erst aus der Gesamtsicht soll die Landschaft subtil Gesicht, Frisur, Gesichtsbehaarung, Accessoires und Kleidungssilhouette aus der Referenz bilden. Übernimm zwei markante Referenzfarben als natürliche Landschaftsfarben. Zuerst reale Landschaft, dann Porträt. Format [[Z. B. 1:1]]. Keine Haut, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Porträt als Luftlandschaft",
 			"category": "welten-filmszenen",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/20-aerial-landscape-portrait.webp",
 			"alt": "Luftlandschaft aus Feldern, Wald und Wasser, die ein Porträt bildet",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Überraschender Hero", "Geo-Thema", "Scroll-Stop-Grafik"]
+			"useCases": [
+				"Überraschender Hero",
+				"Geo-Thema",
+				"Scroll-Stop-Grafik"
+			]
 		},
 		{
 			"id": "shadow-only-portrait",
 			"command": "/shadowPortrait",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Arrangiere [[OBJEKTE, z. B. Maker-Werkzeuge]] knapp unterhalb des Bildes so, dass eine einzige seitliche Lichtquelle ihren Schatten auf eine warme weiße Wand wirft. Nur der gemeinsame Schatten bildet klar die tatsächliche Silhouette von Kopf, Frisur, Gesichtsbehaarung und Accessoires. Einige reale Objekte dürfen am unteren Rand sichtbar sein, aber kein normales Gesicht. Frontal, Format [[Z. B. 1:1]], physikalisch plausibel. Keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Arrangiere [[OBJEKTE, z. B. Maker-Werkzeuge]] knapp unterhalb des Bildes so, dass eine einzige seitliche Lichtquelle ihren Schatten auf eine warme weiße Wand wirft. Nur der gemeinsame Schatten bildet klar die tatsächliche Silhouette von Kopf, Frisur, Gesichtsbehaarung und Accessoires. Einige reale Objekte dürfen am unteren Rand sichtbar sein, aber kein normales Gesicht. Frontal, Format [[Z. B. 1:1]], physikalisch plausibel. Keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Schattenporträt aus Gegenständen",
 			"category": "fotoexperimente",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/21-shadow-only-portrait.webp",
 			"alt": "Werkzeuge werfen gemeinsam den Schatten des Ausgangsporträts an eine Wand",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Reveal-Motiv", "Maker-Video", "Realer Nachbau"]
+			"useCases": [
+				"Reveal-Motiv",
+				"Maker-Video",
+				"Realer Nachbau"
+			]
 		},
 		{
 			"id": "anamorphic-street-mural",
 			"command": "/anamorphicMural",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Male ein großes anamorphes geometrisches Wandbild über zwei rechtwinklige Betonwände und den Boden. Aus genau einem Kamerastandpunkt richten sich die verzerrten Fragmente zum erkennbaren Porträt mit tatsächlicher Frisur, Gesichtsbehaarung, Accessoires und Kleidung aus. Nutze [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Aus anderen Winkeln nur auseinandergezogene Formen. Tageslicht, leere Umgebung, Format [[Z. B. 16:9]]. Keine Wörter, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Male ein großes anamorphes geometrisches Wandbild über zwei rechtwinklige Betonwände und den Boden. Aus genau einem Kamerastandpunkt richten sich die verzerrten Fragmente zum erkennbaren Porträt mit tatsächlicher Frisur, Gesichtsbehaarung, Accessoires und Kleidung aus. Nutze [[AKZENTFARBE 1]] und [[AKZENTFARBE 2]]. Aus anderen Winkeln nur auseinandergezogene Formen. Tageslicht, leere Umgebung, Format [[Z. B. 16:9]]. Keine Wörter, kein Logo und kein Wasserzeichen.",
 			"title": "Anamorphes Straßenwandbild",
 			"category": "welten-filmszenen",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/22-anamorphic-street-mural.webp",
 			"alt": "Anamorphes Wandbild, dessen Fragmente aus einem Standpunkt das Porträt bilden",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Street Art", "Event-Idee", "Thumbnail"]
+			"useCases": [
+				"Street Art",
+				"Event-Idee",
+				"Thumbnail"
+			]
 		},
 		{
 			"id": "living-topiary-bust",
 			"command": "/topiaryBust",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Schneide eine physisch plausible lebende Topiary-Büste aus dichtem dunkelgrünem Laub. Gesicht, Frisur, Gesichtsbehaarung und Kleidungssilhouette entstehen ausschließlich aus geformten Zweigen und Blättern. Deute vorhandene Accessoires mit [[MATERIAL ODER PFLANZE]] in [[AKZENTFARBE]] an. Zeige die Büste vollständig auf einem steinernen Gartensockel, Format [[Z. B. 4:5]]. Keine menschliche Haut, keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Schneide eine physisch plausible lebende Topiary-Büste aus dichtem dunkelgrünem Laub. Gesicht, Frisur, Gesichtsbehaarung und Kleidungssilhouette entstehen ausschließlich aus geformten Zweigen und Blättern. Deute vorhandene Accessoires mit [[MATERIAL ODER PFLANZE]] in [[AKZENTFARBE]] an. Zeige die Büste vollständig auf einem steinernen Gartensockel, Format [[Z. B. 4:5]]. Keine menschliche Haut, keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Lebende Topiary-Büste",
 			"category": "material-handwerk",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/23-living-topiary-bust.webp",
 			"alt": "Lebende Topiary-Büste aus dichtem Laub mit orangefarbener Brille",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["Naturthema", "Marken-Post", "Saisonmotiv"]
+			"useCases": [
+				"Naturthema",
+				"Marken-Post",
+				"Saisonmotiv"
+			]
 		},
 		{
 			"id": "ferrofluid-portrait-bust",
 			"command": "/ferrofluidBust",
 			"promptType": "detailed",
-      "promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Forme eine erkennbare Büste aus glänzend schwarzem Ferrofluid über einem mattschwarzen Becken. Verdeckte Magnetfelder ziehen reale Flüssigkeitsspitzen so zusammen, dass Gesicht, Frisur, Gesichtsbehaarung und Kleidungssilhouette lesbar werden. Erhalte vorhandene Accessoires als [[ACCESSOIRE-MATERIAL]] und nutze ein zurückhaltendes Kantenlicht in [[AKZENTFARBE]]. Realistische Oberflächenspannung, dunkles Studio, Format [[Z. B. 4:5]]. Keine Schrift, kein Logo und kein Wasserzeichen.",
+			"promptText": "Nutze das hochgeladene Porträt von [[PERSON IM REFERENZBILD]] als feste Identitätsreferenz. Forme eine erkennbare Büste aus glänzend schwarzem Ferrofluid über einem mattschwarzen Becken. Verdeckte Magnetfelder ziehen reale Flüssigkeitsspitzen so zusammen, dass Gesicht, Frisur, Gesichtsbehaarung und Kleidungssilhouette lesbar werden. Erhalte vorhandene Accessoires als [[ACCESSOIRE-MATERIAL]] und nutze ein zurückhaltendes Kantenlicht in [[AKZENTFARBE]]. Realistische Oberflächenspannung, dunkles Studio, Format [[Z. B. 4:5]]. Keine Schrift, kein Logo und kein Wasserzeichen.",
 			"title": "Magnetische Ferrofluid-Büste",
 			"category": "maker-tech",
 			"status": "tested",
 			"image": "/images/blog/praezise-bildprompts/24-ferrofluid-portrait-bust.webp",
 			"alt": "Schwarze Ferrofluid-Büste mit feinen Flüssigkeitsspitzen und orangefarbener Brille",
 			"articleSlug": "praezise-bildprompts-weniger-zufall",
-			"useCases": ["KI- und Tech-Hero", "Profilbild", "Video-Keyframe"]
+			"useCases": [
+				"KI- und Tech-Hero",
+				"Profilbild",
+				"Video-Keyframe"
+			]
 		}
 	]
 }

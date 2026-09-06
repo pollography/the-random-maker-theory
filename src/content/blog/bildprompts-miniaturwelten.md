@@ -29,7 +29,9 @@ Ich habe sechs kurze Begriffe mit demselben Porträt getestet. Die Resultate rei
 
 ![Ausgangsporträt für die Miniaturtests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
-Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Der zweite Prompt ist ein genauer, kopierbarer Folgeauftrag. Ich schreibe jeweils dazu, welche Bilder in welcher Reihenfolge hochgeladen werden – und zeige direkt danach das wirklich erzeugte Ergebnis.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
 
 ## 57. `/miniMe`: Kleiner oder jünger?
 
@@ -43,17 +45,17 @@ Ich hatte mit einer winzigen Kopie gerechnet. Das Modell interpretierte „Mini 
 
 **Wofür sinnvoll:** Für Familiengeschichten, jüngeres Ich, Mentoring-Motive oder Vorher-nachher-Erzählungen. Wenn wirklich eine Miniatur gemeint ist, muss die relative Größe ausdrücklich in den Prompt.
 
-**Was der zweite Prompt macht:** Er definiert eine echte Miniatur derselben erwachsenen Person und schließt eine Verjüngung ausdrücklich aus.
+**Was der kontrollierte Prompt macht:** Er definiert eine echte Miniatur derselben erwachsenen Person und schließt eine Verjüngung ausdrücklich aus.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Mini-Me-Ergebnis als Bild 2 nur für die Zwei-Figuren-Idee.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für die Zwei-Figuren-Idee. Zeige die erwachsene Person in normaler Größe und direkt neben einem Schuh eine etwa 15 Zentimeter hohe Miniaturversion derselben erwachsenen Person. Beide haben dieselbe Identität, Altersstufe, Kleidung, Accessoires und andere erkennbare Merkmale wie in Bild 1. Fotorealistischer heller Studioboden, 16:9, kein Kind, kein Text und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige die erwachsene Person in normaler Größe und direkt neben einem Schuh eine etwa 15 Zentimeter hohe Miniaturversion derselben erwachsenen Person. Beide haben dieselbe Identität, Altersstufe, Kleidung, Accessoires und andere erkennbare Merkmale wie in Bild 1. Fotorealistischer heller Studioboden, 16:9, kein Kind, kein Text und kein Logo.
 ```
 
-![Ergebnis des zweiten Prompts: erwachsene Person neben ihrer winzigen Kopie](/images/blog/ki-bildprompts/followups/57-mini-me-followup.webp)
+![Ergebnis des kontrollierten Prompts: erwachsene Person neben ihrer winzigen Kopie](/images/blog/ki-bildprompts/followups/57-mini-me-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -72,19 +74,19 @@ Das Ergebnis ist genau die Art Bild, die im Feed hängen bleibt. Winzige Arbeite
 
 **Wofür sinnvoll:** Für YouTube-Thumbnails, Reinigung, Reparatur, Pflege, Transformation, Website-Wartung oder jede Geschichte über „Wir arbeiten im Hintergrund“.
 
-**Was der zweite Prompt macht:** Er legt Anzahl, Kleidung und drei konkrete Tätigkeiten der Miniaturarbeiter fest.
+**Was der kontrollierte Prompt macht:** Er legt Anzahl, Kleidung und drei konkrete Tätigkeiten der Miniaturarbeiter fest.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Tiny-Workers-Ergebnis als Bild 2 für Maßstab, Leitern und Tiefenwirkung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personen- oder Objektreferenz und Bild 2 nur als Referenz für Maßstab, Leitern und Tiefenwirkung. Erstelle eine fotorealistische Miniaturwelt auf dem Motiv. Zeige genau [[ANZAHL]] winzige Arbeiter in einfarbiger neutraler Arbeitskleidung. Sie [[TÄTIGKEIT 1]], [[TÄTIGKEIT 2]] und [[TÄTIGKEIT 3]] an klar sichtbaren Bereichen des Motivs. Glaubwürdige Leitern und kleine Werkzeuge, starke Tiefenwirkung. Das Hauptmotiv bleibt erkennbar. 16:9, keine Schrift, kein Firmenlogo.
+Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle eine fotorealistische Miniaturwelt auf dem Motiv. Zeige genau [[ANZAHL]] winzige Arbeiter in einfarbiger neutraler Arbeitskleidung. Sie [[TÄTIGKEIT 1]], [[TÄTIGKEIT 2]] und [[TÄTIGKEIT 3]] an klar sichtbaren Bereichen des Motivs. Glaubwürdige Leitern und kleine Werkzeuge, starke Tiefenwirkung. Das Hauptmotiv bleibt erkennbar. 16:9, keine Schrift, kein Firmenlogo.
 ```
 
 **Für dieses Beispiel eingesetzt:** Zwölf Arbeiter in orangefarbener Kleidung reinigen die Brille, prüfen den Bart und reparieren eine Naht am Hoodie.
 
-![Ergebnis des zweiten Prompts: zwölf Miniaturarbeiter mit klaren Aufgaben](/images/blog/ki-bildprompts/followups/58-tiny-workers-followup.webp)
+![Ergebnis des kontrollierten Prompts: zwölf Miniaturarbeiter mit klaren Aufgaben](/images/blog/ki-bildprompts/followups/58-tiny-workers-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -103,19 +105,19 @@ Der Begriff baute gleich ein komplettes Raumdiorama. Die Figur steht in einem kl
 
 **Wofür sinnvoll:** Für Arbeitsplatz-Porträts, Berufsprofile, Setplanung, Ausstellungsmodelle, Buchcover oder kleine biografische Szenen.
 
-**Was der zweite Prompt macht:** Er setzt nur die von dir genannten Requisiten in eine offene Raum-Box und verhindert zusätzliche Personen oder Fantasie-Texte.
+**Was der kontrollierte Prompt macht:** Er setzt nur die von dir genannten Requisiten in eine offene Raum-Box und verhindert zusätzliche Personen oder Fantasie-Texte.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Diorama als Bild 2 für Raum-Box, Maßstab und Perspektive.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Raum-Box, Maßstab und Perspektive. Baue ein detailliertes Miniatur-Diorama in einer offenen Raum-Box. Darin steht genau eine kleine Figur der Person in [[RAUMART]]. Zeige ausschließlich diese Requisiten: [[LISTE]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Isometrische Dreiviertelansicht, sichtbare Wände und Boden, warmes Licht, 4:5. Keine erfundenen Texte oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Baue ein detailliertes Miniatur-Diorama in einer offenen Raum-Box. Darin steht genau eine kleine Figur der Person in [[RAUMART]]. Zeige ausschließlich diese Requisiten: [[LISTE]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Isometrische Dreiviertelansicht, sichtbare Wände und Boden, warmes Licht, 4:5. Keine erfundenen Texte oder Logos.
 ```
 
 **Für dieses Beispiel eingesetzt:** Kreatives Studio mit Kamera, Stativ, Laptop und Schreibtischlampe.
 
-![Ergebnis des zweiten Prompts: offenes Studio-Diorama mit vier Requisiten](/images/blog/ki-bildprompts/followups/59-diorama-followup.webp)
+![Ergebnis des kontrollierten Prompts: offenes Studio-Diorama mit vier Requisiten](/images/blog/ki-bildprompts/followups/59-diorama-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -134,17 +136,17 @@ Die Schneekugel funktionierte sofort: Glaskuppel, Schnee, kleine Tannen und das 
 
 **Wofür sinnvoll:** Für Weihnachtskarten, Winterkampagnen, Geschenkanhänger, Saisonprofile und animierte Loop-Ideen.
 
-**Was der zweite Prompt macht:** Er begrenzt den Innenraum auf Büste, Schnee und drei Tannen und hält den Sockel vollständig unbeschriftet.
+**Was der kontrollierte Prompt macht:** Er begrenzt den Innenraum auf Büste, Schnee und drei Tannen und hält den Sockel vollständig unbeschriftet.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Snow Globe als Bild 2 für Glaskuppel, Sockel und Winterwirkung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personen- oder Objektreferenz und Bild 2 nur als Referenz für Glaskuppel, Sockel und Winterwirkung. Setze das Motiv aus Bild 1 als kleine Büste in eine elegante Schneekugel. Innen liegen feiner Schnee und genau drei kleine Tannen. Übernimm die erkennbaren Merkmale aus Bild 1. Der dunkle Sockel bleibt vollständig leer. Realistische Glasreflexe, zentriertes 4:5-Produktfoto, weißer Hintergrund, kein Text und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Setze das Motiv aus Bild 1 als kleine Büste in eine elegante Schneekugel. Innen liegen feiner Schnee und genau drei kleine Tannen. Übernimm die erkennbaren Merkmale aus Bild 1. Der dunkle Sockel bleibt vollständig leer. Realistische Glasreflexe, zentriertes 4:5-Produktfoto, weißer Hintergrund, kein Text und kein Logo.
 ```
 
-![Ergebnis des zweiten Prompts: unbeschriftete Schneekugel mit drei Tannen](/images/blog/ki-bildprompts/followups/60-snow-globe-followup.webp)
+![Ergebnis des kontrollierten Prompts: unbeschriftete Schneekugel mit drei Tannen](/images/blog/ki-bildprompts/followups/60-snow-globe-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -168,19 +170,19 @@ Das Modell erzeugte eine vollständige Papierpuppe mit Laschen und mehreren Klei
 	<p>Die sichtbaren Laschen und Größen sind nur Illustration. Für eine wirklich ausschneidbare Puppe müssen Konturen, Passform und Druckmaß in einem Layoutprogramm neu gebaut werden.</p>
 </div>
 
-**Was der zweite Prompt macht:** Er ordnet genau sechs gewünschte Kleidungsstücke neben einer frontalen Figur an und entfernt Marken sowie Dekotext.
+**Was der kontrollierte Prompt macht:** Er ordnet genau sechs gewünschte Kleidungsstücke neben einer frontalen Figur an und entfernt Marken sowie Dekotext.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Paper Doll als Bild 2 für Illustrationsstil, Konturen und Laschen.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Illustrationsstil, Konturen und Laschen. Erstelle eine papierpuppenartige A4-Hochformat-Illustration: Links steht die Person vollständig in Frontansicht, rechts liegen genau sechs austauschbare Kleidungsstücke mit klaren weißen Laschen: [[LISTE]]. Übernimm Identität und andere erkennbare Merkmale aus Bild 1; die Grundfigur trägt neutrale schlichte Unterkleidung. Schwarze Kontur, weißer Hintergrund, keine Marken, Überschrift oder dekorativen Texte. Dies ist nur eine Illustration, keine maßhaltige Druckvorlage.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine papierpuppenartige A4-Hochformat-Illustration: Links steht die Person vollständig in Frontansicht, rechts liegen genau sechs austauschbare Kleidungsstücke mit klaren weißen Laschen: [[LISTE]]. Übernimm Identität und andere erkennbare Merkmale aus Bild 1; die Grundfigur trägt neutrale schlichte Unterkleidung. Schwarze Kontur, weißer Hintergrund, keine Marken, Überschrift oder dekorativen Texte. Dies ist nur eine Illustration, keine maßhaltige Druckvorlage.
 ```
 
 **Für dieses Beispiel eingesetzt:** Jacke, Hemd, Pullover, Hose, Rock und ein Paar Schuhe.
 
-![Ergebnis des zweiten Prompts: Papierpuppen-Illustration mit sechs Kleidungsstücken](/images/blog/ki-bildprompts/followups/61-paper-doll-followup.webp)
+![Ergebnis des kontrollierten Prompts: Papierpuppen-Illustration mit sechs Kleidungsstücken](/images/blog/ki-bildprompts/followups/61-paper-doll-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -199,26 +201,26 @@ Der Rohprompt setzte die Figur direkt in eine bunte Kapselmaschine. Die Darstell
 
 **Wofür sinnvoll:** Für Blind-Box-Ideen, kleine Serienfiguren, Eventgrafiken, Community-Rewards oder ein Produktkonzept mit mehreren Varianten.
 
-**Was der zweite Prompt macht:** Er macht Maschine und Beschriftungsfläche vollständig generisch und zeigt genau eine Figur in einer Kapsel.
+**Was der kontrollierte Prompt macht:** Er macht Maschine und Beschriftungsfläche vollständig generisch und zeigt genau eine Figur in einer Kapsel.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Gachapon-Ergebnis als Bild 2 für Maschine, Kapsel und Farbverteilung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Maschine, Kapsel und Farbverteilung. Zeige genau eine kleine Sammelfigur der Person in einer transparenten Kapsel innerhalb einer generischen Capsule-Toy-Maschine. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Maschine in [[GRUNDFARBE]] mit Details in [[AKZENTFARBEN]], vollständig leere Frontfläche. Zentriertes 4:5-Produktfoto vor weißem Hintergrund, kein Preis, keine Schriftzeichen, kein Logo und keine bestehende Marke.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige genau eine kleine Sammelfigur der Person in einer transparenten Kapsel innerhalb einer generischen Capsule-Toy-Maschine. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Maschine in [[GRUNDFARBE]] mit Details in [[AKZENTFARBEN]], vollständig leere Frontfläche. Zentriertes 4:5-Produktfoto vor weißem Hintergrund, kein Preis, keine Schriftzeichen, kein Logo und keine bestehende Marke.
 ```
 
 **Für dieses Beispiel eingesetzt:** Cremefarbene Maschine mit blauen und orangefarbenen Details.
 
-![Ergebnis des zweiten Prompts: generische Kapselmaschine mit einer Figur](/images/blog/ki-bildprompts/followups/62-gachapon-followup.webp)
+![Ergebnis des kontrollierten Prompts: generische Kapselmaschine mit einer Figur](/images/blog/ki-bildprompts/followups/62-gachapon-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
 	<p>Die Maschine bleibt ohne Preis, Markenname und Fantasie-Schrift. Im Mittelpunkt steht nur die erkennbare kleine Figur in ihrer Kapsel.</p>
 </div>
 
-## So wird aus einem Raster ein einzelnes Motiv
+## Mit dem Ergebnis weiterarbeiten
 
 Bei Miniaturwelten lohnt es sich oft, zuerst mehrere Ideen zu erzeugen und dann eine Zelle auszuwählen. Benenne die Position immer von oben links und ergänze das sichtbare Motiv:
 
@@ -226,11 +228,11 @@ Hier nutze ich das bereits erzeugte Posenraster aus Teil 1 als echten Test. Ausg
 
 ![Posenraster als Ausgangsbild für die Auswahl einer einzelnen Zelle](/images/blog/ki-bildprompts/03-pose-pack.webp)
 
-**Was der zweite Prompt macht:** Er wählt eine eindeutig benannte Rasterzelle aus und baut sie als einzelnes Bild neu auf.
+**Was dieser Weiterarbeit-Prompt macht:** Er wählt eine eindeutig benannte Rasterzelle aus und baut sie als einzelnes Bild neu auf.
 
 **Dafür hochladen:** Das Raster als Bild 1 und das ursprüngliche Porträt als Bild 2 zur Stabilisierung der Identität.
 
-**Kopierbare Vorlage:**
+**Kopierbare Weiterarbeit-Vorlage:**
 
 ```prompt
 Nutze Bild 1 als Rasterreferenz und Bild 2 als feste Referenz für Identität und erkennbare Merkmale. Wähle ausschließlich Reihe [[REIHE]], Spalte [[SPALTE]], gezählt von oben links. Gemeint ist [[KURZE SICHTBARE BESCHREIBUNG DER ZELLE]]. Erzeuge daraus ein einzelnes Bild im Format [[FORMAT]]. Übernimm Motiv, Pose und Blickrichtung aus der ausgewählten Zelle sowie Identität, Kleidung und Accessoires aus Bild 2. Entferne Raster, Trennlinien und Beschriftungen. Kein Logo und kein Wasserzeichen.

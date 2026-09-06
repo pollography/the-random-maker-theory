@@ -27,7 +27,9 @@ Der letzte Teil macht aus dem Ausgangsporträt kein Raster, sondern eine Szene.
 
 Unterwasser, im All, in einer zerstörten Zukunft oder mitten in einer nassen Filmstraße: Diese Begriffe liefern die stärksten Einzelbilder der Serie. Sie eignen sich besonders gut als Storyboard-Start, Thumbnail-Hook oder Personenreferenz für ein KI-Video.
 
-Das erste Bild jedes Abschnitts bleibt das ehrliche Ergebnis des Ein-Wort-Tests. Der zweite Prompt ist ein kontrollierter Bildauftrag: mit genauer Upload-Zuordnung, einer wiederverwendbaren Vorlage und dem tatsächlich erzeugten Ergebnis direkt darunter. Auch bei den filmischen Motiven entsteht hier bewusst ein Standbild, kein Video.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
 
 ## 41. `/environmentExpand`: mehr Bild um die Person
 
@@ -41,19 +43,19 @@ Der Generator machte aus dem engen Porträt eine Ganzkörperaufnahme auf weißem
 
 **Nützlich für:** neue Seitenverhältnisse, Webseitenheader, Layoutreserve und Ganzkörperreferenzen.
 
-**Was der zweite Prompt macht:** Er verwandelt das zufällige Outpainting in einen gezielten 16:9-Header mit klarer Freifläche.
+**Was der kontrollierte Prompt macht:** Er verwandelt das zufällige Outpainting in einen gezielten 16:9-Header mit klarer Freifläche.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Environment-Expand-Ergebnis als Bild 2 für die ergänzte Ganzkörperansicht.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für die ergänzte Ganzkörperansicht. Erweitere die Szene auf 16:9. Stelle die Person vollständig auf die linke Bildhälfte, beide Schuhe sichtbar, rechts viel ruhiger Freiraum in [[HINTERGRUNDART]]. Übernimm Identität, Kleidung, Accessoires und alle sichtbaren Merkmale aus Bild 1; erfinde verdeckte Körperbereiche so zurückhaltend wie möglich. Keine Schrift, kein Logo und keine weiteren Personen.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erweitere die Szene auf 16:9. Stelle die Person vollständig auf die linke Bildhälfte, beide Schuhe sichtbar, rechts viel ruhiger Freiraum in [[HINTERGRUNDART]]. Übernimm Identität, Kleidung, Accessoires und alle sichtbaren Merkmale aus Bild 1; erfinde verdeckte Körperbereiche so zurückhaltend wie möglich. Keine Schrift, kein Logo und keine weiteren Personen.
 ```
 
 **Für dieses Beispiel eingesetzt:** Ein nahtloser heller Studiohintergrund.
 
-![Ergebnis des zweiten Prompts: 16:9-Ganzkörperbild mit Freiraum](/images/blog/ki-bildprompts/followups/41-environment-expand-followup.webp)
+![Ergebnis des kontrollierten Prompts: 16:9-Ganzkörperbild mit Freiraum](/images/blog/ki-bildprompts/followups/41-environment-expand-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -72,19 +74,19 @@ Statt einer Fantasywelt setzte die KI die Person als Bauarbeiter auf eine Bauste
 
 **Nützlich für:** visuelle Wortspiele, Baustellenmotive und Rollenideen. Für echtes Worldbuilding braucht es mehr Kontext.
 
-**Was der zweite Prompt macht:** Er löst die Mehrdeutigkeit auf und beschreibt eine konkrete erfundene Welt statt einer normalen Baustelle.
+**Was der kontrollierte Prompt macht:** Er löst die Mehrdeutigkeit auf und beschreibt eine konkrete erfundene Welt statt einer normalen Baustelle.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste World-Build-Ergebnis als Bild 2 nur für Körperhaltung und Bildtiefe.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Körperhaltung und Bildtiefe. Erstelle eine 16:9-Worldbuilding-Szene: Die Person steht als [[ROLLE]] auf [[ORT]], umgeben von [[DREI WELTENELEMENTEN]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1, sofern sie nicht ausdrücklich durch die Rolle ersetzt werden. Keine Schrift, Logos oder Marken.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Worldbuilding-Szene: Die Person steht als [[ROLLE]] auf [[ORT]], umgeben von [[DREI WELTENELEMENTEN]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1, sofern sie nicht ausdrücklich durch die Rolle ersetzt werden. Keine Schrift, Logos oder Marken.
 ```
 
 **Für dieses Beispiel eingesetzt:** Maker auf einer schwimmenden Werkstattinsel, umgeben von modularen Gebäuden, Windrädern und kleinen Luftschiffen.
 
-![Ergebnis des zweiten Prompts: Maker auf einer schwimmenden Werkstattinsel](/images/blog/ki-bildprompts/followups/42-world-build-followup.webp)
+![Ergebnis des kontrollierten Prompts: Maker auf einer schwimmenden Werkstattinsel](/images/blog/ki-bildprompts/followups/42-world-build-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -103,19 +105,19 @@ Die Person tauchte mit Hoodie, Brille und Bart zwischen Korallen und Fischen auf
 
 **Nützlich für:** Thumbnails, Musikvisuals, Fantasyszenen und humorvolle Social Posts.
 
-**Was der zweite Prompt macht:** Er macht aus dem statischen Unterwasserporträt eine breite Szene mit klarer Bewegungsrichtung.
+**Was der kontrollierte Prompt macht:** Er macht aus dem statischen Unterwasserporträt eine breite Szene mit klarer Bewegungsrichtung.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das Underwater-Ergebnis als Bild 2 für Licht, Wasserwelt und Farbstimmung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Licht, Wasserwelt und Farbstimmung. Erstelle ein 16:9-Standbild: Die Person schwimmt von links nach rechts durch [[UNTERWASSER-UMGEBUNG]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1; Stoff und lose Details bewegen sich sichtbar im Wasser. Keine weiteren Personen, keine Schrift und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 16:9-Standbild: Die Person schwimmt von links nach rechts durch [[UNTERWASSER-UMGEBUNG]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1; Stoff und lose Details bewegen sich sichtbar im Wasser. Keine weiteren Personen, keine Schrift und kein Logo.
 ```
 
 **Für dieses Beispiel eingesetzt:** Ein sonnendurchflutetes Korallenriff mit kleinen Fischen.
 
-![Ergebnis des zweiten Prompts: breite Unterwasserszene mit Bewegungsrichtung](/images/blog/ki-bildprompts/followups/43-underwater-followup.webp)
+![Ergebnis des kontrollierten Prompts: breite Unterwasserszene mit Bewegungsrichtung](/images/blog/ki-bildprompts/followups/43-underwater-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -134,19 +136,19 @@ Der erste Treffer setzte die Person in einen Raumanzug und ergänzte ungefragt e
 
 **Nützlich für:** Science-Fiction, Zukunftsthemen, KI-Video und Weltraum-Thumbnails.
 
-**Was der zweite Prompt macht:** Er fordert die Weltraumszene ausdrücklich ohne Flaggen, Agenturpatches und andere erfundene Marken an.
+**Was der kontrollierte Prompt macht:** Er fordert die Weltraumszene ausdrücklich ohne Flaggen, Agenturpatches und andere erfundene Marken an.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die bereinigte Space Scene als Bild 2 für Raumanzug, Licht und Hintergrund.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Raumanzug, Licht und Hintergrund. Erstelle eine 16:9-Weltraumszene mit der Person in einem vollständig markenlosen Raumanzug vor [[WELTRAUMKULISSE]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1, soweit sie außerhalb des Helms sichtbar sind. Keine Flaggen, Agenturpatches, Buchstaben, Zahlen oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Weltraumszene mit der Person in einem vollständig markenlosen Raumanzug vor [[WELTRAUMKULISSE]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1, soweit sie außerhalb des Helms sichtbar sind. Keine Flaggen, Agenturpatches, Buchstaben, Zahlen oder Logos.
 ```
 
 **Für dieses Beispiel eingesetzt:** Die Erde am Horizont und eine leuchtende Galaxie im Hintergrund.
 
-![Ergebnis des zweiten Prompts: markenlose Weltraumszene](/images/blog/ki-bildprompts/followups/44-space-scene-followup.webp)
+![Ergebnis des kontrollierten Prompts: markenlose Weltraumszene](/images/blog/ki-bildprompts/followups/44-space-scene-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -165,19 +167,19 @@ Neonlicht, nasse Stadt, dunkle Jacke und leuchtender Kragen: Der Stil war sofort
 
 **Nützlich für:** Tech-Content, Games, Albumcover, Filmideen und Thumbnails.
 
-**Was der zweite Prompt macht:** Er baut aus dem Porträt ein gezieltes Thumbnail mit Person rechts und ruhiger Fläche links.
+**Was der kontrollierte Prompt macht:** Er baut aus dem Porträt ein gezieltes Thumbnail mit Person rechts und ruhiger Fläche links.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das Cyberpunk-Ergebnis als Bild 2 für Neonlicht und nasse Stadt.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Neonlicht und nasse Stadt. Erstelle ein 16:9-Cyberpunk-Thumbnail. Zeige die Person groß rechts in [[SZENE]], links bleibt ruhiger dunkler Freiraum. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 und ergänze nur dezente Lichtkanten. Keine Schriftzeichen, Logos oder Marken.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 16:9-Cyberpunk-Thumbnail. Zeige die Person groß rechts in [[SZENE]], links bleibt ruhiger dunkler Freiraum. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 und ergänze nur dezente Lichtkanten. Keine Schriftzeichen, Logos oder Marken.
 ```
 
 **Für dieses Beispiel eingesetzt:** Eine regennasse Neonstraße bei Nacht.
 
-![Ergebnis des zweiten Prompts: Cyberpunk-Thumbnail mit dunkler Freifläche](/images/blog/ki-bildprompts/followups/45-cyberpunk-followup.webp)
+![Ergebnis des kontrollierten Prompts: Cyberpunk-Thumbnail mit dunkler Freifläche](/images/blog/ki-bildprompts/followups/45-cyberpunk-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -196,19 +198,19 @@ Die KI machte aus dem freundlichen Studioporträt eine Figur in staubiger Schutz
 
 **Nützlich für:** Games, Filme, Storyboards, Buchcover und Character Concepts.
 
-**Was der zweite Prompt macht:** Er ergänzt eine konkrete friedliche Handlung und ersetzt die reine Endzeitpose durch eine hoffnungsvollere Szene.
+**Was der kontrollierte Prompt macht:** Er ergänzt eine konkrete friedliche Handlung und ersetzt die reine Endzeitpose durch eine hoffnungsvollere Szene.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das Post-Apocalypse-Ergebnis als Bild 2 für Umgebung und Kostümstimmung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Umgebung und Kostümstimmung. Erstelle eine 16:9-Postapokalypse-Szene bei [[LICHTSTIMMUNG]]. Die Person [[FRIEDLICHE HANDLUNG]] vor [[ORT]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1. Hoffnungsvoller Ton, keine Waffen, Schrift, Logos oder Marken.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Postapokalypse-Szene bei [[LICHTSTIMMUNG]]. Die Person [[FRIEDLICHE HANDLUNG]] vor [[ORT]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1. Hoffnungsvoller Ton, keine Waffen, Schrift, Logos oder Marken.
 ```
 
 **Für dieses Beispiel eingesetzt:** Warmes Abendlicht; die Person repariert vor einer improvisierten Werkstatt ein Solarmodul.
 
-![Ergebnis des zweiten Prompts: hoffnungsvolle Reparaturszene nach der Apokalypse](/images/blog/ki-bildprompts/followups/46-post-apocalypse-followup.webp)
+![Ergebnis des kontrollierten Prompts: hoffnungsvolle Reparaturszene nach der Apokalypse](/images/blog/ki-bildprompts/followups/46-post-apocalypse-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -227,17 +229,19 @@ Die Person lief als Ganzkörperfigur durch ein blau leuchtendes Steinportal. Die
 
 **Nützlich für:** KI-Video-Übergänge, Fantasy, Thumbnails und Szenenwechsel.
 
-**Was der zweite Prompt macht:** Er erzeugt ein neues Standbild wenige Augenblicke später: Die Person ist näher, das Portal fast geschlossen.
+**Was der kontrollierte Prompt macht:** Er beschreibt Portalzustand, Position und Umgebung als eigenständiges Filmstill, ohne eine vorherige Szene vorauszusetzen.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das Portal-Ergebnis als Bild 2 für Figur, Portalform und Umgebung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 als feste Referenz für Portalform, Umgebung und Kameraposition. Erstelle ein neues 16:9-Standbild derselben Szene wenige Augenblicke später: Die Person steht zwei Schritte näher an der Kamera, hinter ihr ist das Portal nur noch als schmaler leuchtender Spalt geöffnet. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine neuen Personen, kein Text und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 16:9-Filmstill: Die Person steht zwei Schritte vor einem fast geschlossenen Portal, das hinter ihr nur noch als schmaler leuchtender Spalt sichtbar ist. Beschreibe die Umgebung als [[ORT ODER WELT]] und passe das Portallicht glaubwürdig an Person und Umgebung an. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine neuen Personen, kein Text und kein Logo.
 ```
 
-![Ergebnis des zweiten Prompts: späteres Standbild mit fast geschlossenem Portal](/images/blog/ki-bildprompts/followups/47-portal-followup.webp)
+**Für dieses Beispiel eingesetzt:** Eine dunkle, futuristische Halle mit kühlem Gegenlicht.
+
+![Ergebnis des kontrollierten Prompts: späteres Standbild mit fast geschlossenem Portal](/images/blog/ki-bildprompts/followups/47-portal-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -256,19 +260,19 @@ Das Porträt wurde von leuchtenden Planeten, Ballons, Portalen und farbigen Land
 
 **Nützlich für:** Musikvisuals, Cover, Gedichte, Moodboards und experimentelle Videos.
 
-**Was der zweite Prompt macht:** Er begrenzt die freie Traumwelt auf einen Weg, schwebende Inseln und Portale mit einer klaren Lichtstimmung.
+**Was der kontrollierte Prompt macht:** Er begrenzt die freie Traumwelt auf einen Weg, schwebende Inseln und Portale mit einer klaren Lichtstimmung.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Dreamscape-Ergebnis als Bild 2 für Farbwelt und surreale Stimmung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Farbwelt und surreale Stimmung. Erstelle eine 16:9-Traumlandschaft mit der Person auf [[WEG ODER FLÄCHE]], umgeben von [[ZWEI TRAUMELEMENTEN]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. [[LICHTSTIMMUNG]], keine Schrift, Logos oder zusätzlichen Porträts.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Traumlandschaft mit der Person auf [[WEG ODER FLÄCHE]], umgeben von [[ZWEI TRAUMELEMENTEN]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. [[LICHTSTIMMUNG]], keine Schrift, Logos oder zusätzlichen Porträts.
 ```
 
 **Für dieses Beispiel eingesetzt:** Ein schmaler Weg zwischen schwebenden Inseln und leuchtenden Portalen bei weichem Morgenlicht.
 
-![Ergebnis des zweiten Prompts: klar aufgebaute Traumlandschaft](/images/blog/ki-bildprompts/followups/48-dreamscape-followup.webp)
+![Ergebnis des kontrollierten Prompts: klar aufgebaute Traumlandschaft](/images/blog/ki-bildprompts/followups/48-dreamscape-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -287,19 +291,19 @@ Der Kopf und Oberkörper wurden mit einem Wald, Bergen und einer kleinen Figur �
 
 **Nützlich für:** Editorial Design, Albumcover, Poster, Biografie und emotionale Thumbnails.
 
-**Was der zweite Prompt macht:** Er legt Profil, Innenmotiv und freie Fläche fest, damit die Doppelbelichtung gezielt als Editorial-Bild funktioniert.
+**Was der kontrollierte Prompt macht:** Er legt Profil, Innenmotiv und freie Fläche fest, damit die Doppelbelichtung gezielt als Editorial-Bild funktioniert.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Double-Exposure-Version als Bild 2 für Überblendung und Tonwertwirkung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Überblendung und Tonwertwirkung. Erstelle eine 16:9-Doppelbelichtung. Zeige das Profil der Person links; innerhalb der Silhouette erscheint [[INNENMOTIV]]. Ein sichtbares Accessoire aus Bild 1 bleibt als Farbakzent erhalten, rechts liegt ruhiger dunkler Freiraum. Übernimm Identität und erkennbare Merkmale aus Bild 1. Keine Schrift und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine 16:9-Doppelbelichtung. Zeige das Profil der Person links; innerhalb der Silhouette erscheint [[INNENMOTIV]]. Ein sichtbares Accessoire aus Bild 1 bleibt als Farbakzent erhalten, rechts liegt ruhiger dunkler Freiraum. Übernimm Identität und erkennbare Merkmale aus Bild 1. Keine Schrift und kein Logo.
 ```
 
 **Für dieses Beispiel eingesetzt:** Eine neblige Maker-Werkstatt mit warmen Lampen als Innenmotiv.
 
-![Ergebnis des zweiten Prompts: Profil-Doppelbelichtung mit Werkstatt](/images/blog/ki-bildprompts/followups/49-double-exposure-followup.webp)
+![Ergebnis des kontrollierten Prompts: Profil-Doppelbelichtung mit Werkstatt](/images/blog/ki-bildprompts/followups/49-double-exposure-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -318,17 +322,17 @@ Der letzte Prompt setzte die Person nachts in eine nasse, warm beleuchtete Stadt
 
 **Nützlich für:** Filmstills, Storyboards, Thumbnail-Hintergründe, Schauspielreferenzen und KI-Video.
 
-**Was der zweite Prompt macht:** Er gibt dem Filmstill eine eindeutige Handlung und Kameraposition, ohne daraus einen Videoauftrag zu machen.
+**Was der kontrollierte Prompt macht:** Er gibt dem Filmstill eine eindeutige Handlung und Kameraposition, ohne daraus einen Videoauftrag zu machen.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Movie Scene als Bild 2 für Straße, Licht und Filmlook.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 als Referenz für Straße, Licht und Filmlook. Erstelle ein einzelnes 16:9-Filmstill: Die Person geht auf einer regennassen Straße auf die Kamera zu und blickt leicht nach links. Halbnahe Perspektive auf Augenhöhe, natürlicher Schritt, dezentes Lächeln, 35-mm-Filmlook. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Schrift oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein einzelnes 16:9-Filmstill: Die Person geht auf einer regennassen Straße auf die Kamera zu und blickt leicht nach links. Halbnahe Perspektive auf Augenhöhe, natürlicher Schritt, dezentes Lächeln, 35-mm-Filmlook. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Schrift oder Logos.
 ```
 
-![Ergebnis des zweiten Prompts: gerichtetes Filmstill in einer regennassen Straße](/images/blog/ki-bildprompts/followups/50-movie-scene-followup.webp)
+![Ergebnis des kontrollierten Prompts: gerichtetes Filmstill in einer regennassen Straße](/images/blog/ki-bildprompts/followups/50-movie-scene-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

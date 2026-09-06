@@ -12,6 +12,9 @@
  * @property {string[]} useCases
  * @property {string} [promptType]
  * @property {string} [promptText]
+ * @property {string} [controlledPromptText]
+ * @property {string} [controlledImage]
+ * @property {string} [controlledAlt]
  * @property {string} [series]
  * @property {string} [verdict]
  */
@@ -31,22 +34,23 @@ export function getPublicPrompts(data) {
 /**
  * Filter public prompts by category and a case-insensitive free-text query.
  *
- * @param {Array<{ command: string, promptText?: string, title: string, category: string, useCases: string[] }>} prompts
+ * @param {Array<{ command: string, promptText?: string, controlledPromptText?: string, title: string, category: string, useCases: string[] }>} prompts
  * @param {Array<{ id: string, label: string }>} categories
  * @param {string} [query]
  * @param {string} [categoryId]
  */
 export function filterPrompts(prompts, categories, query = '', categoryId = 'all') {
 	const categoryLabels = new Map(categories.map((category) => [category.id, category.label]));
-	const term = query.trim().toLocaleLowerCase('de-DE');
+	const terms = query.trim().toLocaleLowerCase('de-DE').split(/\s+/).filter(Boolean);
 
 	return prompts.filter((prompt) => {
 		if (categoryId !== 'all' && prompt.category !== categoryId) return false;
-		if (!term) return true;
+		if (terms.length === 0) return true;
 
 		const haystack = [
 			prompt.command,
 			prompt.promptText ?? '',
+			prompt.controlledPromptText ?? '',
 			prompt.title,
 			categoryLabels.get(prompt.category) ?? '',
 			...(prompt.useCases ?? [])
@@ -54,7 +58,7 @@ export function filterPrompts(prompts, categories, query = '', categoryId = 'all
 			.join(' ')
 			.toLocaleLowerCase('de-DE');
 
-		return haystack.includes(term);
+		return terms.every((term) => haystack.includes(term));
 	});
 }
 
@@ -63,9 +67,13 @@ export function filterPrompts(prompts, categories, query = '', categoryId = 'all
  * Existing one-word entries copy their slash command; detailed entries copy
  * the full tested prompt instead of pretending the mnemonic is a model command.
  *
- * @param {{ promptText?: string, command: string }} prompt
+ * @param {{ promptText?: string, controlledPromptText?: string, command: string }} prompt
+ * @param {'short' | 'controlled'} [variant]
  */
-export function getPromptCopyText(prompt) {
+export function getPromptCopyText(prompt, variant = 'short') {
+	if (variant === 'controlled' && prompt.controlledPromptText?.trim()) {
+		return prompt.controlledPromptText.trim();
+	}
 	return prompt.promptText?.trim() || prompt.command;
 }
 
@@ -137,6 +145,20 @@ export function validatePromptLibrary(data, options = {}) {
 			}
 			if (prompt.promptType === 'detailed' && !prompt.promptText?.trim()) {
 				errors.push(`${prompt.command} is detailed but has no full prompt text.`);
+			}
+			const controlledFields = [prompt.controlledPromptText, prompt.controlledImage, prompt.controlledAlt];
+			if (controlledFields.some(Boolean) && !controlledFields.every((value) => value?.trim())) {
+				errors.push(`${prompt.command} has an incomplete controlled variant.`);
+			}
+			if (prompt.controlledPromptText?.trim() && /\bBild 2\b/i.test(prompt.controlledPromptText)) {
+				errors.push(`${prompt.command} controlled variant depends on Bild 2.`);
+			}
+			if (
+				prompt.controlledImage &&
+				options.imageExists &&
+				!options.imageExists(prompt.controlledImage)
+			) {
+				errors.push(`${prompt.command} references a missing controlled image: ${prompt.controlledImage}`);
 			}
 		} else if (prompt.status !== 'idea') {
 			errors.push(`${prompt.command ?? prompt.id} has an unsupported status.`);

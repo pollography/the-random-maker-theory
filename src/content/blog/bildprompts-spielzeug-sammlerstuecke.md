@@ -25,11 +25,13 @@ titleAccent: "Sammelfiguren"
 
 Was wäre, wenn dein Profilbild plötzlich wie ein seltenes Sammlerstück aussieht?
 
-Für diesen Teil habe ich dasselbe Porträt mit sechs extrem kurzen Begriffen getestet. Das Modell kannte weder meine Hobbys noch gewünschte Produkte. Gerade deshalb zeigen die Ergebnisse gut, was es selbst ergänzt und wo ein zweiter Prompt nötig wird.
+Für diesen Teil habe ich dasselbe Porträt mit sechs extrem kurzen Begriffen getestet. Das Modell kannte weder meine Hobbys noch gewünschte Produkte. Gerade deshalb zeigen die Ergebnisse gut, was es selbst ergänzt und wo eine ausführliche Vorgabe nötig wird.
 
 ![Ausgangsporträt für die Spielzeug- und Sammeltests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
-Das erste Bild jedes Abschnitts bleibt der unveränderte Ein-Wort-Test. Der zweite Prompt ist dagegen ein genauer Folgeauftrag: mit Upload-Zuordnung, kopierbarer Vorlage und einem eigenen getesteten Ergebnis direkt darunter.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
 
 ## 51. `/starterPack`: Eine Person als Set
 
@@ -45,19 +47,19 @@ Der Haken: Mehrere Gegenstände und Interessen waren frei erfunden. Im Rohbild t
 
 **Wofür sinnvoll:** Als humorvolles Team-Intro, Geschenk-Mockup, About-me-Grafik oder Startpunkt für eine Personal-Brand-Illustration.
 
-**Was der zweite Prompt macht:** Er begrenzt das Starter-Pack auf genau fünf von dir gewählte Gegenstände und verhindert zusätzliche erfundene Hobbys.
+**Was der kontrollierte Prompt macht:** Er begrenzt das Starter-Pack auf genau fünf von dir gewählte Gegenstände und verhindert zusätzliche erfundene Hobbys.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Starter-Pack als Bild 2 für Verpackungsaufteilung und Fächer.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Verpackungsaufteilung und Fächer. Erstelle ein 4:5-Starter-Pack-Layout mit der Person in der Mitte und genau diesen fünf Gegenständen: [[GEGENSTAND 1]], [[GEGENSTAND 2]], [[GEGENSTAND 3]], [[GEGENSTAND 4]], [[GEGENSTAND 5]]. Jeder Gegenstand liegt vollständig in einem eigenen klaren Fach. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Heller Hintergrund, keine weiteren Gegenstände, Eigenschaften, Texte, Logos oder Wasserzeichen.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein 4:5-Starter-Pack-Layout mit der Person in der Mitte und genau diesen fünf Gegenständen: [[GEGENSTAND 1]], [[GEGENSTAND 2]], [[GEGENSTAND 3]], [[GEGENSTAND 4]], [[GEGENSTAND 5]]. Jeder Gegenstand liegt vollständig in einem eigenen klaren Fach. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Heller Hintergrund, keine weiteren Gegenstände, Eigenschaften, Texte, Logos oder Wasserzeichen.
 ```
 
 **Für dieses Beispiel eingesetzt:** Kamera, Notizbuch, Kopfhörer, Tasse und Schreibtischlampe.
 
-![Ergebnis des zweiten Prompts: Starter-Pack mit genau fünf Gegenständen](/images/blog/ki-bildprompts/followups/51-starter-pack-followup.webp)
+![Ergebnis des kontrollierten Prompts: Starter-Pack mit genau fünf Gegenständen](/images/blog/ki-bildprompts/followups/51-starter-pack-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -76,17 +78,17 @@ Hier war die Interpretation eindeutig: übergroßer Kopf, kleiner Körper, dunkl
 
 **Wofür sinnvoll:** Als Profilavatar, Geschenkidee, Figurenkonzept, Podcast-Cover oder kleines wiederkehrendes Maskottchen. Für eine echte Produktion braucht der Hersteller später Ansichten von vorn, Seite und hinten.
 
-**Was der zweite Prompt macht:** Er legt Material, Proportionen, Sockel und Produktfoto fest, ohne einzelne Merkmale der abgebildeten Person fest in die Vorlage zu schreiben.
+**Was der kontrollierte Prompt macht:** Er legt Material, Proportionen, Sockel und Produktfoto fest, ohne einzelne Merkmale der abgebildeten Person fest in die Vorlage zu schreiben.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und den ersten Bobblehead als Bild 2 für Spielzeugproportionen und Materialwirkung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Spielzeugproportionen und Materialwirkung. Verwandle die Person in eine freundliche Wackelkopffigur mit sehr großem Kopf und kleinem Körper. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Die Figur steht vollständig sichtbar auf einem schlichten runden Sockel. Quadratisches Produktfoto vor hellgrauem Hintergrund, weiches Studiolicht, kein Text und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Verwandle die Person in eine freundliche Wackelkopffigur mit sehr großem Kopf und kleinem Körper. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Die Figur steht vollständig sichtbar auf einem schlichten runden Sockel. Quadratisches Produktfoto vor hellgrauem Hintergrund, weiches Studiolicht, kein Text und kein Logo.
 ```
 
-![Ergebnis des zweiten Prompts: kontrollierte Wackelkopffigur auf neutralem Sockel](/images/blog/ki-bildprompts/followups/52-bobblehead-followup.webp)
+![Ergebnis des kontrollierten Prompts: kontrollierte Wackelkopffigur auf neutralem Sockel](/images/blog/ki-bildprompts/followups/52-bobblehead-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -105,17 +107,17 @@ Das Ergebnis ging deutlich weiter als der Wackelkopf. Die Person wurde zu einer 
 
 **Wofür sinnvoll:** Für Kanal-Maskottchen, Sticker, Community-Badges, Verpackungsideen oder eine Figurenfamilie mit wiederkehrender Formensprache.
 
-**Was der zweite Prompt macht:** Er beschränkt die Übertragung auf sichtbare Merkmale und fordert ein eigenständiges, markenfreies Vinylspielzeug ohne Verpackung.
+**Was der kontrollierte Prompt macht:** Er beschränkt die Übertragung auf sichtbare Merkmale und fordert ein eigenständiges, markenfreies Vinylspielzeug ohne Verpackung.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Designer Toy als Bild 2 für Proportionen, Glanz und Formensprache.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Proportionen, Glanz und Formensprache. Erstelle ein eigenständiges Designer Toy aus glänzendem Vinyl: kompakter Körper, leicht übergroßer Kopf und freundliche große Augen. Übernimm die auffälligsten sichtbaren Merkmale, Kleidung und Accessoires aus Bild 1. Freistehendes 3:4-Produktfoto vor weißem Hintergrund, keine bekannte Figurenmarke, kein Logo und keine Verpackung.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle ein eigenständiges Designer Toy aus glänzendem Vinyl: kompakter Körper, leicht übergroßer Kopf und freundliche große Augen. Übernimm die auffälligsten sichtbaren Merkmale, Kleidung und Accessoires aus Bild 1. Freistehendes 3:4-Produktfoto vor weißem Hintergrund, keine bekannte Figurenmarke, kein Logo und keine Verpackung.
 ```
 
-![Ergebnis des zweiten Prompts: markenfreies Designer Toy](/images/blog/ki-bildprompts/followups/53-designer-toy-followup.webp)
+![Ergebnis des kontrollierten Prompts: markenfreies Designer Toy](/images/blog/ki-bildprompts/followups/53-designer-toy-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -134,17 +136,17 @@ Statt eines freigestellten Produktshots entstand gleich eine komplette Schreibti
 
 **Wofür sinnvoll:** Als Geschenkvisualisierung, Arbeitsplatz-Meme, Teamseite, Social Post oder Thumbnail über Selbstständigkeit und Homeoffice.
 
-**Was der zweite Prompt macht:** Er reduziert die Schreibtischszene auf Figur, Tasse und Notizbuch und kontrolliert damit Maßstab und Requisiten.
+**Was der kontrollierte Prompt macht:** Er reduziert die Schreibtischszene auf Figur, Tasse und Notizbuch und kontrolliert damit Maßstab und Requisiten.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Desk Figurine als Bild 2 für Figurenstil, Sockel und Schreibtischperspektive.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Figurenstil, Sockel und Schreibtischperspektive. Zeige eine kleine Sammlerfigur der Person auf einem modernen Holzschreibtisch. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Die Figur steht auf einem neutralen Sockel ohne Schrift; daneben liegen ausschließlich eine schlichte Tasse und ein geschlossenes Notizbuch. Nahes 16:9-Produktfoto mit glaubwürdiger Größe, weiches Fensterlicht, keine Logos oder Texte.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Zeige eine kleine Sammlerfigur der Person auf einem modernen Holzschreibtisch. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Die Figur steht auf einem neutralen Sockel ohne Schrift; daneben liegen ausschließlich eine schlichte Tasse und ein geschlossenes Notizbuch. Nahes 16:9-Produktfoto mit glaubwürdiger Größe, weiches Fensterlicht, keine Logos oder Texte.
 ```
 
-![Ergebnis des zweiten Prompts: kleine Schreibtischfigur mit zwei Requisiten](/images/blog/ki-bildprompts/followups/54-desk-figurine-followup.webp)
+![Ergebnis des kontrollierten Prompts: kleine Schreibtischfigur mit zwei Requisiten](/images/blog/ki-bildprompts/followups/54-desk-figurine-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -163,19 +165,19 @@ Das Modell erzeugte eine vollständige Retro-Karte mit Rahmen, Titel und Werten.
 
 **Wofür sinnvoll:** Für Teamkarten, Geburtstagskarten, Spielprototypen, Community-Challenges oder Charakterübersichten. Bei echten Spielen sollten Regeln und Werte außerhalb des Bildmodells festgelegt werden.
 
-**Was der zweite Prompt macht:** Er baut eine textfreie Sammelkarten-Grundlage, damit Name und geprüfte Werte später zuverlässig im Layoutprogramm gesetzt werden können.
+**Was der kontrollierte Prompt macht:** Er baut eine textfreie Sammelkarten-Grundlage, damit Name und geprüfte Werte später zuverlässig im Layoutprogramm gesetzt werden können.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Trading Card als Bild 2 für Rahmen, Farbwelt und Kartenaufteilung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personen- oder Objektreferenz und Bild 2 nur als Referenz für Rahmen, Farbwelt und Kartenaufteilung. Gestalte eine originelle 2:3-Sammelkarten-Grundlage mit großem Motivfeld, retro-inspiriertem Rahmen in [[DREI FARBEN]], einer leeren Titelplatte oben und genau drei leeren Wertefeldern unten. Übernimm die erkennbaren Merkmale aus Bild 1. Keine lesbaren Wörter, Buchstaben oder Zahlen, keine bestehende Kartenmarke und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Gestalte eine originelle 2:3-Sammelkarten-Grundlage mit großem Motivfeld, retro-inspiriertem Rahmen in [[DREI FARBEN]], einer leeren Titelplatte oben und genau drei leeren Wertefeldern unten. Übernimm die erkennbaren Merkmale aus Bild 1. Keine lesbaren Wörter, Buchstaben oder Zahlen, keine bestehende Kartenmarke und kein Logo.
 ```
 
 **Für dieses Beispiel eingesetzt:** Dunkelblau, Türkis und Orange.
 
-![Ergebnis des zweiten Prompts: textfreie Sammelkarten-Grundlage](/images/blog/ki-bildprompts/followups/55-trading-card-followup.webp)
+![Ergebnis des kontrollierten Prompts: textfreie Sammelkarten-Grundlage](/images/blog/ki-bildprompts/followups/55-trading-card-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -194,19 +196,19 @@ Der Begriff erzeugte keine Produktübersicht einzelner Pins, sondern heftete ein
 
 **Wofür sinnvoll:** Als Moodboard für eigene Pins, Profilbild einer Community, Festival-Look oder visuelle Sammlung persönlicher Themen.
 
-**Was der zweite Prompt macht:** Er trennt die Pins vom Kleidungsstück und präsentiert exakt acht von dir festgelegte Motive als geordnete Produktkollektion.
+**Was der kontrollierte Prompt macht:** Er trennt die Pins vom Kleidungsstück und präsentiert exakt acht von dir festgelegte Motive als geordnete Produktkollektion.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Pin-Collection-Ergebnis als Bild 2 für Emaille-Wirkung und Farbwelt.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Emaille-Wirkung und Farbwelt. Gestalte eine geordnete 4:5-Kollektion aus genau acht eigenen Emaille-Pins mit ausschließlich diesen Motiven: [[MOTIV 1]], [[MOTIV 2]], [[MOTIV 3]], [[MOTIV 4]], [[MOTIV 5]], [[MOTIV 6]], [[MOTIV 7]], [[MOTIV 8]]. Präsentiere sie auf einer dunklen Sammlerkarte; daneben erscheint ein kleines Porträt mit den erkennbaren Merkmalen aus Bild 1. Keine bekannten Marken, Logos, Texte oder fremden Figuren.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Gestalte eine geordnete 4:5-Kollektion aus genau acht eigenen Emaille-Pins mit ausschließlich diesen Motiven: [[MOTIV 1]], [[MOTIV 2]], [[MOTIV 3]], [[MOTIV 4]], [[MOTIV 5]], [[MOTIV 6]], [[MOTIV 7]], [[MOTIV 8]]. Präsentiere sie auf einer dunklen Sammlerkarte; daneben erscheint ein kleines Porträt mit den erkennbaren Merkmalen aus Bild 1. Keine bekannten Marken, Logos, Texte oder fremden Figuren.
 ```
 
 **Für dieses Beispiel eingesetzt:** Kamera, Stern, Berg, Buch, Blitz, Glühbirne, Schraubenschlüssel und Tasse.
 
-![Ergebnis des zweiten Prompts: geordnete Kollektion aus acht neutralen Pins](/images/blog/ki-bildprompts/followups/56-pin-collection-followup.webp)
+![Ergebnis des kontrollierten Prompts: geordnete Kollektion aus acht neutralen Pins](/images/blog/ki-bildprompts/followups/56-pin-collection-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

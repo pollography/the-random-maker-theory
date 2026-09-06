@@ -16,6 +16,9 @@
 		useCases: string[];
 		promptType?: string;
 		promptText?: string;
+		controlledPromptText?: string;
+		controlledImage?: string;
+		controlledAlt?: string;
 	};
 
 	let {
@@ -29,13 +32,36 @@
 		onPreview: (prompt: Prompt, trigger: HTMLButtonElement) => void;
 		priority?: boolean;
 	} = $props();
-	let previewImage = $derived(prompt.displayImage ?? prompt.image);
+	let activeVariant = $state<'short' | 'controlled'>('short');
+	let hasControlledVariant = $derived(Boolean(
+		prompt.controlledPromptText && prompt.controlledImage && prompt.controlledAlt
+	));
+	let variantLabel = $derived(activeVariant === 'controlled' ? 'Kontrollierte Vorlage' : 'Ein-Wort-Test');
+	let previewImage = $derived(
+		activeVariant === 'controlled' && prompt.controlledImage
+			? prompt.controlledImage
+			: prompt.displayImage ?? prompt.image
+	);
+	let previewAlt = $derived(
+		activeVariant === 'controlled' && prompt.controlledAlt ? prompt.controlledAlt : prompt.alt
+	);
+	let previewPrompt = $derived(
+		activeVariant === 'controlled' && prompt.controlledImage && prompt.controlledAlt
+			? {
+					...prompt,
+					image: prompt.controlledImage,
+					displayImage: null,
+					alt: prompt.controlledAlt,
+					title: `${prompt.title}: kontrollierte Vorlage`
+				}
+			: prompt
+	);
 	let thumbnailImage = $derived(getPromptThumbnail(previewImage));
 	let imageSeo = $derived(getImageSeo(
 		thumbnailImage,
 		'(max-width: 720px) calc(100vw - 40px), (max-width: 1100px) calc(50vw - 42px), 340px'
 	));
-	let copyText = $derived(getPromptCopyText(prompt));
+	let copyText = $derived(getPromptCopyText(prompt, activeVariant));
 	let status = $state('');
 	let statusState = $state<'success' | 'error'>('success');
 	let statusTimer: ReturnType<typeof setTimeout> | undefined;
@@ -67,8 +93,8 @@
 	<button
 		type="button"
 		class="image-button"
-		class:transparent-preview={Boolean(prompt.displayImage)}
-		onclick={(event) => onPreview(prompt, event.currentTarget)}
+		class:transparent-preview={activeVariant === 'short' && Boolean(prompt.displayImage)}
+		onclick={(event) => onPreview(previewPrompt, event.currentTarget)}
 		aria-haspopup="dialog"
 		aria-label="{prompt.title} groß anzeigen"
 	>
@@ -76,7 +102,7 @@
 			src={thumbnailImage}
 			srcset={imageSeo.srcset}
 			sizes={imageSeo.sizes}
-			alt={prompt.alt}
+			alt={previewAlt}
 			loading={priority ? 'eager' : 'lazy'}
 			fetchpriority={priority ? 'high' : 'auto'}
 			decoding="async"
@@ -89,16 +115,30 @@
 		<p class="category">{categoryLabel}</p>
 		<h2>{prompt.title}</h2>
 
+		{#if hasControlledVariant}
+			<div class="variant-switch" role="group" aria-label="{prompt.title}: Promptvariante wählen">
+				<button type="button" class:active={activeVariant === 'short'} aria-pressed={activeVariant === 'short'} onclick={() => activeVariant = 'short'}>Ein-Wort-Test</button>
+				<button type="button" class:active={activeVariant === 'controlled'} aria-pressed={activeVariant === 'controlled'} onclick={() => activeVariant = 'controlled'}>Kontrollierte Vorlage</button>
+			</div>
+			<p class="variant-note">
+				{activeVariant === 'short'
+					? 'Schneller Überraschungstest mit dem kurzen Begriff.'
+					: 'Gleiche Idee, genauer vorgegeben und nur mit dem Originalbild.'}
+			</p>
+		{/if}
+
 		<div class="command-row">
 			<div class="command-label">
 				<code>{prompt.command}</code>
-				{#if prompt.articleSlug === 'praezise-bildprompts-weniger-zufall'}
+				{#if activeVariant === 'controlled'}
+					<span>Kontrolliert</span>
+				{:else if prompt.articleSlug === 'praezise-bildprompts-weniger-zufall'}
 					<span>Präziser Prompt</span>
 				{:else if prompt.promptType === 'detailed'}
 					<span>Ausführlicher Prompt</span>
 				{/if}
 			</div>
-			<button type="button" class="copy-button" onclick={copyPrompt} aria-label="Prompt kopieren: {prompt.command}">
+			<button type="button" class="copy-button" onclick={copyPrompt} aria-label="Prompt kopieren: {prompt.command}, {variantLabel}">
 				<svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
 					<rect x="8" y="8" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.8" />
 					<path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
@@ -107,7 +147,12 @@
 			</button>
 		</div>
 
-		{#if prompt.promptType === 'detailed' && prompt.promptText}
+		{#if activeVariant === 'controlled' && prompt.controlledPromptText}
+			<details class="prompt-details">
+				<summary>Kontrollierten Prompt anzeigen</summary>
+				<p>{prompt.controlledPromptText}</p>
+			</details>
+		{:else if prompt.promptType === 'detailed' && prompt.promptText}
 			<details class="prompt-details">
 				<summary>Vollständigen Prompt anzeigen</summary>
 				<p>{prompt.promptText}</p>
@@ -215,12 +260,56 @@
 		line-height: 1.35;
 	}
 
+	.variant-switch {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3px;
+		margin-top: 13px;
+		padding: 3px;
+		background: var(--color-base);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-md);
+	}
+
+	.variant-switch button {
+		min-width: 0;
+		min-height: 44px;
+		padding: 7px 8px;
+		background: transparent;
+		border: 0;
+		border-radius: calc(var(--radius-md) - 3px);
+		color: var(--color-text-muted);
+		font-family: var(--font-sans);
+		font-size: 0.65rem;
+		font-weight: 800;
+		line-height: 1.2;
+		cursor: pointer;
+	}
+
+	.variant-switch button.active {
+		background: var(--color-surface);
+		color: var(--color-text);
+		box-shadow: var(--shadow-card);
+	}
+
+	.variant-switch button:focus-visible {
+		outline: 2px solid var(--color-accent-teal);
+		outline-offset: 1px;
+	}
+
+	.variant-note {
+		margin: 7px 2px 0;
+		color: var(--color-text-dim);
+		font-size: 0.65rem;
+		line-height: 1.4;
+	}
+
 	.command-row {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 10px;
-		margin-top: 14px;
+		margin-top: 12px;
 		padding: 7px 7px 7px 11px;
 		background: var(--color-base);
 		border: 1px solid var(--color-border-subtle);
@@ -372,6 +461,7 @@
 	@media (prefers-reduced-motion: reduce) {
 		.prompt-card,
 		img,
-		.copy-button { transition: none; }
+		.copy-button,
+		.variant-switch button { transition: none; }
 	}
 </style>

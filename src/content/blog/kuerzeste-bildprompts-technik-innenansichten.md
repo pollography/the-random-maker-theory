@@ -34,7 +34,9 @@ Danach habe ich `/explodedView` zusätzlich mit einer neutralen, fiktiven Kamera
 	<p>Diese Bilder sind visuelle Konzepte. Verwende sie nicht als anatomische, medizinische, elektrische, mechanische oder sicherheitsrelevante Anleitung. Bauteile, Reihenfolgen, Maße und Beschriftungen können frei erfunden sein.</p>
 </div>
 
-Das erste Bild jedes Abschnitts bleibt das ehrliche Ergebnis des Ein-Wort-Tests. Der zweite Prompt ist jetzt als kontrollierter Kreativauftrag gekennzeichnet: mit klarer Upload-Zuordnung, kopierbarer Vorlage und einem eigenen getesteten Ergebnis. Er macht die Darstellungen nicht fachlich korrekt – er begrenzt sie bewusst auf Fiktion, Komposition und Stil.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
 
 ## 26. `/cutaway`: ein Blick ins Innere
 
@@ -48,17 +50,17 @@ Die KI teilte das Gesicht vertikal und setzte auf eine Seite mechanische Innente
 
 **Nützlich für:** Science-Fiction, Character Design, Buchcover und technische Stilfindung.
 
-**Was der zweite Prompt macht:** Er macht aus dem zufälligen Pseudo-Innenleben eine klar fiktionale Cyborg-Gestaltung ohne anatomischen Anspruch.
+**Was der kontrollierte Prompt macht:** Er macht aus dem zufälligen Pseudo-Innenleben eine klar fiktionale Cyborg-Gestaltung ohne anatomischen Anspruch.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das Cutaway-Ergebnis als Bild 2 für die vertikale Teilung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für die vertikale Teilung. Erstelle eine rein fiktive 16:9-Cyborg-Illustration. Die linke Hälfte der Person bleibt menschlich, die rechte Hälfte wird eindeutig mechanisch und besteht aus erfundenen leuchtenden Platten, Kabeln und Gelenken. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Organe, keine medizinische Beschriftung, keine Marke, kein Text und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine rein fiktive 16:9-Cyborg-Illustration. Die linke Hälfte der Person bleibt menschlich, die rechte Hälfte wird eindeutig mechanisch und besteht aus erfundenen leuchtenden Platten, Kabeln und Gelenken. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Organe, keine medizinische Beschriftung, keine Marke, kein Text und kein Logo.
 ```
 
-![Ergebnis des zweiten Prompts: eindeutig fiktionale Cyborg-Halbierung](/images/blog/ki-bildprompts/followups/26-cutaway-followup.webp)
+![Ergebnis des kontrollierten Prompts: eindeutig fiktionale Cyborg-Halbierung](/images/blog/ki-bildprompts/followups/26-cutaway-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -77,24 +79,24 @@ Das Modell zerlegte Kopf, Brille, Bart, Gesicht und Hoodie in schwebende Ebenen.
 
 **Nützlich für:** auffällige Cover, Designexperimente und visuelle Metaphern.
 
-**Was der zweite Prompt macht:** Er ordnet die schwebenden Bildebenen symmetrisch und behandelt sie ausdrücklich als künstlerische Metapher.
+**Was der kontrollierte Prompt macht:** Er ordnet die schwebenden Bildebenen symmetrisch und behandelt sie ausdrücklich als künstlerische Metapher.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Explosionsansicht als Bild 2 für Ebenenidee und Perspektive.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für die schwebende Ebenenidee. Erstelle eine saubere 16:9-Illustration, in der sichtbare Bestandteile der Person als vier vollständige künstlerische Ebenen entlang einer zentralen Achse schweben: Accessoires, Gesichtsebene, äußere Formmerkmale und Kleidung. Übernimm Identität und erkennbare Merkmale aus Bild 1. Gleichmäßige Abstände, dunkler Studiohintergrund, keine technischen Labels, keine anatomische Behauptung, kein Text und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine saubere 16:9-Illustration, in der sichtbare Bestandteile der Person als vier vollständige künstlerische Ebenen entlang einer zentralen Achse schweben: Accessoires, Gesichtsebene, äußere Formmerkmale und Kleidung. Übernimm Identität und erkennbare Merkmale aus Bild 1. Gleichmäßige Abstände, dunkler Studiohintergrund, keine technischen Labels, keine anatomische Behauptung, kein Text und kein Logo.
 ```
 
-![Ergebnis des zweiten Prompts: geordnete künstlerische Explosionsansicht](/images/blog/ki-bildprompts/followups/27-exploded-view-followup.webp)
+![Ergebnis des kontrollierten Prompts: geordnete künstlerische Explosionsansicht](/images/blog/ki-bildprompts/followups/27-exploded-view-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
 	<p>Das Motiv wirkt nun wie bewusstes Editorial Design: vier klar getrennte Ebenen statt zufällig zerlegter Körperteile, ohne den Eindruck einer technischen Erklärung.</p>
 </div>
 
-## Der faire A/B-Test mit einem Produkt
+## Extra-Test: Das gleiche Wort mit einem Produkt
 
 Für einen sinnvollen Vergleich habe ich zuerst ein neutrales, markenloses Kameramodell erzeugt.
 
@@ -110,14 +112,16 @@ Danach kam exakt derselbe Ein-Wort-Prompt:
 
 Plötzlich ergab die Ausgabe Sinn. Gehäuse, Objektiv, Sensorbereich, Platinen und Bedienelemente wurden räumlich getrennt. Die konkrete Konstruktion ist trotzdem nicht verifiziert. Als Konzeptbild für ein Produkt oder eine Präsentation ist das Ergebnis aber wesentlich brauchbarer.
 
-**Was der zweite Prompt macht:** Er räumt die Produktansicht auf, richtet alle Baugruppen auf einer Achse aus und entfernt Beschriftungen sowie erfundene Maße.
+### Kontrollierte Variante
 
-**Dafür hochladen:** Das neutrale Produktfoto als Bild 1 und die mit `/explodedView` erzeugte Produktgrafik als Bild 2.
+**Was der kontrollierte Prompt macht:** Er räumt die Produktansicht auf, richtet alle Baugruppen auf einer Achse aus und entfernt Beschriftungen sowie erfundene Maße.
 
-**Kopierbare Vorlage:**
+**Dafür hochladen:** Nur das neutrale Produktfoto als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
+
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Produktreferenz und Bild 2 nur als Layoutvorlage. Erstelle eine neue unbeschriftete Explosionsgrafik des Produkts mit logisch ausgerichteten, visuell plausiblen Baugruppen entlang einer horizontalen Achse. Erhalte äußere Form, Proportionen, Farben und Materialien aus Bild 1. Das Bild bleibt ein Designkonzept und behauptet keine echte Konstruktion. Keine Marke, kein Text, keine Maße, keine Pfeile und keine zusätzlichen Zierteile.
+Nutze ausschließlich Bild 1 als feste Produktreferenz. Erstelle eine neue unbeschriftete Explosionsgrafik des Produkts mit logisch ausgerichteten, visuell plausiblen Baugruppen entlang einer horizontalen Achse. Erhalte äußere Form, Proportionen, Farben und Materialien aus Bild 1. Das Bild bleibt ein Designkonzept und behauptet keine echte Konstruktion. Keine Marke, kein Text, keine Maße, keine Pfeile und keine zusätzlichen Zierteile.
 ```
 
 ![Ergebnis des zweiten Produktprompts: bereinigte Explosionsgrafik einer fiktiven Kamera](/images/blog/ki-bildprompts/followups/extra-product-exploded-view-followup.webp)
@@ -139,17 +143,17 @@ Das Porträt wurde zu einer weißen Linienzeichnung auf blauem Raster. Dazu kame
 
 **Nützlich für:** Maker-Poster, Thumbnail-Stil, technische Moodboards und Präsentationshintergründe.
 
-**Was der zweite Prompt macht:** Er behält nur den Blueprint-Look und entfernt sämtliche scheinbar technischen Maße, Eigenschaften und Zahlen.
+**Was der kontrollierte Prompt macht:** Er behält nur den Blueprint-Look und entfernt sämtliche scheinbar technischen Maße, Eigenschaften und Zahlen.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Blueprint-Grafik als Bild 2 für Raster und Linienästhetik.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Raster und Linienästhetik. Erstelle eine frontale symmetrische 16:9-Blueprint-Illustration der Person. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 als präzise weiße Konturlinien auf dunkelblauem Raster. Keine Maßlinien, Pfeile, Beschriftungen, Zahlen, Eigenschaften, technischen Behauptungen oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine frontale symmetrische 16:9-Blueprint-Illustration der Person. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 als präzise weiße Konturlinien auf dunkelblauem Raster. Keine Maßlinien, Pfeile, Beschriftungen, Zahlen, Eigenschaften, technischen Behauptungen oder Logos.
 ```
 
-![Ergebnis des zweiten Prompts: textfreie Blueprint-Illustration](/images/blog/ki-bildprompts/followups/28-blueprint-followup.webp)
+![Ergebnis des kontrollierten Prompts: textfreie Blueprint-Illustration](/images/blog/ki-bildprompts/followups/28-blueprint-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -168,17 +172,17 @@ Das Ergebnis zeigte einen Schädel und Oberkörper im Röntgenstil. Bart und Bri
 
 **Nützlich für:** Halloween, Science-Fiction und symbolische Visuals, nicht für Medizin.
 
-**Was der zweite Prompt macht:** Er macht den Röntgenlook ausdrücklich stilisiert und bringt die äußerlich sichtbare Personensilhouette zurück.
+**Was der kontrollierte Prompt macht:** Er macht den Röntgenlook ausdrücklich stilisiert und bringt die äußerlich sichtbare Personensilhouette zurück.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das X-Ray-Ergebnis als Bild 2 für Leucht- und Kontrastwirkung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für die blaue Leucht- und Kontrastwirkung. Erstelle eine eindeutig stilisierte Science-Fiction-Röntgenillustration als Halbporträt. Zeige eine abstrakte leuchtende innere Struktur ohne realistische Anatomie; Kleidung, Accessoires und andere äußerlich erkennbare Merkmale aus Bild 1 bleiben als klare Lichtkontur sichtbar. Keine medizinischen Labels, Diagnose, Messwerte, Wörter oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine eindeutig stilisierte Science-Fiction-Röntgenillustration als Halbporträt. Zeige eine abstrakte leuchtende innere Struktur ohne realistische Anatomie; Kleidung, Accessoires und andere äußerlich erkennbare Merkmale aus Bild 1 bleiben als klare Lichtkontur sichtbar. Keine medizinischen Labels, Diagnose, Messwerte, Wörter oder Logos.
 ```
 
-![Ergebnis des zweiten Prompts: stilisierte Science-Fiction-Röntgenfigur](/images/blog/ki-bildprompts/followups/29-xray-followup.webp)
+![Ergebnis des kontrollierten Prompts: stilisierte Science-Fiction-Röntgenfigur](/images/blog/ki-bildprompts/followups/29-xray-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -197,17 +201,17 @@ Die KI kombinierte das Porträt mit einer anatomischen Gesichtshälfte und viele
 
 **Nützlich für:** Stilprototypen und fiktive Illustrationen.
 
-**Was der zweite Prompt macht:** Er ersetzt die scheinbar medizinische Gesichtshälfte durch ein abstraktes Netz aus Lichtlinien.
+**Was der kontrollierte Prompt macht:** Er ersetzt die scheinbar medizinische Gesichtshälfte durch ein abstraktes Netz aus Lichtlinien.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die Anatomy-Grafik als Bild 2 für die geteilte Komposition.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für die vertikale Split-Face-Komposition. Eine Hälfte bleibt ein stilisiertes Porträt, die andere Hälfte wird als abstraktes Netz aus farbigen Lichtlinien und geometrischen Knoten dargestellt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Organe, Muskeln, Knochen, Labels, Fachbegriffe, Wörter oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Eine Hälfte bleibt ein stilisiertes Porträt, die andere Hälfte wird als abstraktes Netz aus farbigen Lichtlinien und geometrischen Knoten dargestellt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine Organe, Muskeln, Knochen, Labels, Fachbegriffe, Wörter oder Logos.
 ```
 
-![Ergebnis des zweiten Prompts: abstrakte Split-Face-Lichtstruktur](/images/blog/ki-bildprompts/followups/30-anatomy-followup.webp)
+![Ergebnis des kontrollierten Prompts: abstrakte Split-Face-Lichtstruktur](/images/blog/ki-bildprompts/followups/30-anatomy-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -226,19 +230,19 @@ Der Begriff erzeugte einen vertikalen Querschnitt durch Kopf und Hals. Visuell i
 
 **Nützlich für:** surreale Poster, Konzeptkunst und visuelle Metaphern.
 
-**Was der zweite Prompt macht:** Er deutet den Querschnitt als farbige Schichten einer Idee neu und entfernt jede anatomische Darstellung.
+**Was der kontrollierte Prompt macht:** Er deutet den Querschnitt als farbige Schichten einer Idee neu und entfernt jede anatomische Darstellung.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die Cross-Section-Grafik als Bild 2 für Schnittachse und Posterwirkung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Schnittachse und Posterwirkung. Erstelle einen abstrakten vertikalen Querschnitt durch die visuelle Figur: außen bleiben Identität, Accessoires und andere erkennbare Merkmale aus Bild 1 sichtbar; innen liegen mehrere farbige geometrische Ebenen für [[THEMEN ODER IDEEN]]. Keine Anatomie, Organe, Beschriftung, Wörter oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen abstrakten vertikalen Querschnitt durch die visuelle Figur: außen bleiben Identität, Accessoires und andere erkennbare Merkmale aus Bild 1 sichtbar; innen liegen mehrere farbige geometrische Ebenen für [[THEMEN ODER IDEEN]]. Keine Anatomie, Organe, Beschriftung, Wörter oder Logos.
 ```
 
 **Für dieses Beispiel eingesetzt:** Geometrische Ebenen für Ideen, Technik und Kreativität in Türkis, Orange und warmem Gelb.
 
-![Ergebnis des zweiten Prompts: abstrakter geometrischer Identitäts-Querschnitt](/images/blog/ki-bildprompts/followups/31-cross-section-followup.webp)
+![Ergebnis des kontrollierten Prompts: abstrakter geometrischer Identitäts-Querschnitt](/images/blog/ki-bildprompts/followups/31-cross-section-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -257,17 +261,17 @@ Statt die Person zusammenzubauen, konzentrierte sich das Modell auf das auffäll
 
 **Nützlich für:** Layoutideen für Anleitungen und Social-Erklärgrafiken.
 
-**Was der zweite Prompt macht:** Er baut eine neutrale sechsphasige Montagefolge ohne Text, Werkzeugsymbole oder Sicherheitsbehauptungen.
+**Was der kontrollierte Prompt macht:** Er baut eine neutrale sechsphasige Montagefolge ohne Text, Werkzeugsymbole oder Sicherheitsbehauptungen.
 
-**Dafür hochladen:** Ein klares Foto des fiktiven Objekts als Bild 1 und die Assembly-Grafik als Bild 2 für Seitenaufbau und Perspektive.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Objektreferenz und Bild 2 nur als Referenz für das Sechser-Layout. Erstelle eine neutrale 3×2-Montagegrafik für das fiktive Objekt. Zeige pro Feld genau einen klaren visuellen Schritt von getrennten Hauptteilen bis zur vollständigen Form; erfinde keine verborgenen technischen Details. Einheitliche Perspektive, heller Hintergrund, keine Texte, Zahlen, Pfeile, Werkzeugsymbole, Marken, Maße oder Sicherheitsversprechen.
+Nutze ausschließlich Bild 1 als feste Objektreferenz. Erstelle eine neutrale 3×2-Montagegrafik für das fiktive Objekt. Zeige pro Feld genau einen klaren visuellen Schritt von getrennten Hauptteilen bis zur vollständigen Form; erfinde keine verborgenen technischen Details. Einheitliche Perspektive, heller Hintergrund, keine Texte, Zahlen, Pfeile, Werkzeugsymbole, Marken, Maße oder Sicherheitsversprechen.
 ```
 
-![Ergebnis des zweiten Prompts: textfreie Montagefolge in sechs Feldern](/images/blog/ki-bildprompts/followups/32-assembly-followup.webp)
+![Ergebnis des kontrollierten Prompts: textfreie Montagefolge in sechs Feldern](/images/blog/ki-bildprompts/followups/32-assembly-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -286,17 +290,17 @@ Hier wurden Kopf, Ohren, Brille, Bart und Hoodie auseinandergezogen. Das Ergebni
 
 **Nützlich für:** Poster, Albumcover, Editorial Design und kreative Übergänge in Videos.
 
-**Was der zweite Prompt macht:** Er ordnet die surreale Demontage in fünf vollständige, unbeschädigte Ebenen auf einer Symmetrieachse.
+**Was der kontrollierte Prompt macht:** Er ordnet die surreale Demontage in fünf vollständige, unbeschädigte Ebenen auf einer Symmetrieachse.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das Disassembly-Ergebnis als Bild 2 für Tiefe und Ebenenrichtung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Tiefe und Ebenenrichtung. Erstelle eine symmetrische künstlerische Demontage der sichtbaren Figur in fünf vollständigen Ebenen: Accessoires, Gesichtsebene, äußere Formmerkmale, Kleidung und Schatten. Übernimm Identität und erkennbare Merkmale aus Bild 1. Alle Ebenen bleiben unbeschädigt, dunkler Studiohintergrund, keine Beschriftung, kein Text und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine symmetrische künstlerische Demontage der sichtbaren Figur in fünf vollständigen Ebenen: Accessoires, Gesichtsebene, äußere Formmerkmale, Kleidung und Schatten. Übernimm Identität und erkennbare Merkmale aus Bild 1. Alle Ebenen bleiben unbeschädigt, dunkler Studiohintergrund, keine Beschriftung, kein Text und kein Logo.
 ```
 
-![Ergebnis des zweiten Prompts: symmetrische Demontage in fünf Bildebenen](/images/blog/ki-bildprompts/followups/33-disassembly-followup.webp)
+![Ergebnis des kontrollierten Prompts: symmetrische Demontage in fünf Bildebenen](/images/blog/ki-bildprompts/followups/33-disassembly-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -315,17 +319,17 @@ Das Modell baute eine fertige Erklärtafel mit mehreren Schritten rund um das Po
 
 **Nützlich für:** Layout-Prototypen, nachdem der echte Prozess bereits feststeht.
 
-**Was der zweite Prompt macht:** Er entfernt den erfundenen Prozess und erzeugt stattdessen nur ein nutzbares Vier-Schritt-Grundlayout.
+**Was der kontrollierte Prompt macht:** Er entfernt den erfundenen Prozess und erzeugt stattdessen nur ein nutzbares Vier-Schritt-Grundlayout.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und optional die How-it-works-Grafik als Bild 2 für Anordnung und Leserichtung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 höchstens als Referenz für Anordnung und Leserichtung. Erstelle eine saubere 16:9-How-it-works-Vorlage mit der Person klein in der Mitte und vier großen leeren Bildfeldern darum. Verwende ausschließlich die Zahlen „1“, „2“, „3“ und „4“ an den Feldern. Viel freie Fläche für später gesetzte Bilder und Texte, klare Leserichtung, keine Symbole, Aussagen, weiteren Wörter oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine saubere 16:9-How-it-works-Vorlage mit der Person klein in der Mitte und vier großen leeren Bildfeldern darum. Verwende ausschließlich die Zahlen „1“, „2“, „3“ und „4“ an den Feldern. Viel freie Fläche für später gesetzte Bilder und Texte, klare Leserichtung, keine Symbole, Aussagen, weiteren Wörter oder Logos.
 ```
 
-![Ergebnis des zweiten Prompts: leere Vier-Schritt-Vorlage ohne erfundenen Prozess](/images/blog/ki-bildprompts/followups/34-how-it-works-followup.webp)
+![Ergebnis des kontrollierten Prompts: leere Vier-Schritt-Vorlage ohne erfundenen Prozess](/images/blog/ki-bildprompts/followups/34-how-it-works-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>

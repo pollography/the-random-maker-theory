@@ -7,7 +7,7 @@
 	const prompts = getPublicPrompts(promptData);
 	const categories = promptData.categories;
 	const canonicalUrl = 'https://therandommakertheory.com/tools/bildprompt-library';
-	const pageDescription = '147 getestete Bildprompts mit echten Ergebnissen: 87 Kurzprompts, 36 ausführliche Vorlagen und 24 präzise Creative Briefs. Kostenlos suchen, kopieren und als PDF laden.';
+	const pageDescription = '147 getestete Bildideen mit echten Ergebnissen: 86 direkte Vergleiche aus Ein-Wort-Test und kontrollierter Vorlage plus 60 ausführliche Prompts. Kostenlos suchen und kopieren.';
 	const collectionSchema = JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'CollectionPage',
@@ -50,7 +50,7 @@
 <section class="tool-hero">
 	<div class="hero-copy">
 		<h1>Bildprompt-Library</h1>
-		<p>Ein Ausgangsbild, 147 echte Tests. Durchsuche 87 Kurzprompts, 36 ausführliche Vorlagen und 24 präzise Creative Briefs, kopiere deinen Favoriten und probiere ihn mit einem eigenen Bild aus.</p>
+		<p>Ein Ausgangsbild, 147 getestete Ideen. Bei 86 Kurzprompts kannst du direkt zwischen dem überraschenden Ein-Wort-Test und einer kontrollierten, besser reproduzierbaren Vorlage wechseln.</p>
 	</div>
 
 	<div class="download-actions" aria-label="Kostenlose Prompt-Downloads">
@@ -75,12 +75,20 @@
 	</div>
 </section>
 
+<section class="comparison-note" aria-labelledby="comparison-note-title">
+	<div>
+		<p class="eyebrow">Direkter Vergleich</p>
+		<h2 id="comparison-note-title">Kurz ausprobieren oder gezielt nachbauen</h2>
+	</div>
+	<p>Wähle in einer Karte <strong>Ein-Wort-Test</strong> für den schnellen Spaß oder <strong>Kontrollierte Vorlage</strong> für den ausführlichen Prompt samt eigenem Ergebnisbild. Für einen fairen Gegenversuch startest du einen neuen Chat und lädst nur dein Originalbild hoch. Das Kurzprompt-Ergebnis wird nicht als Referenz mitgegeben.</p>
+</section>
+
 <PromptLibrary {prompts} {categories} />
 
 <section class="library-note">
 	<div>
 		<h2>Von der schnellen Idee zum steuerbaren Motiv</h2>
-		<p>Alle Bilder zeigen echte Tests mit demselben Ausgangsporträt. Die ausführlichen Texte darunter sind universelle Vorlagen: Ersetze jeden [[PLATZHALTER]] vor dem Absenden und lade dein eigenes Referenzbild hoch. Merkmale ohne Platzhalter übernimmt der Prompt direkt aus deinem Bild.</p>
+		<p>Alle Bilder zeigen echte Tests mit demselben Ausgangsporträt. Die Vorlagen bleiben universell: Ersetze jeden [[PLATZHALTER]] vor dem Absenden und lade dein eigenes Referenzbild hoch. Echte Folgeaufträge wie Rasterfeld auswählen werden in den Artikeln separat als Weiterarbeit erklärt.</p>
 	</div>
 	<nav class="guide-links" aria-label="Artikel zur Bildprompt-Serie">
 		<a href="/blog/50-bildprompts-echt-getestet">50 Prompts im Test</a>
@@ -166,6 +174,41 @@
 		opacity: 1;
 	}
 
+	.comparison-note {
+		display: grid;
+		grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.3fr);
+		gap: 28px;
+		align-items: end;
+		margin: 0 0 24px;
+		padding: 22px 24px;
+		background: color-mix(in srgb, var(--color-accent-honey) 8%, var(--color-surface));
+		border: 1px solid color-mix(in srgb, var(--color-accent-honey) 28%, var(--color-border-subtle));
+		border-radius: var(--radius-lg);
+	}
+
+	.comparison-note .eyebrow {
+		margin: 0 0 5px;
+		color: var(--color-accent-honey);
+		font-size: 0.68rem;
+		font-weight: 800;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.comparison-note h2 {
+		margin: 0;
+		color: var(--color-text);
+		font-size: clamp(1.25rem, 2.6vw, 1.75rem);
+		line-height: 1.2;
+	}
+
+	.comparison-note > p {
+		margin: 0;
+		color: var(--color-text-muted);
+		font-size: 0.86rem;
+		line-height: 1.65;
+	}
+
 	.library-note {
 		display: flex;
 		align-items: center;
@@ -196,6 +239,7 @@
 		h1 { font-size: clamp(2.2rem, 10vw, 2.5rem); letter-spacing: -0.04em; }
 		.download-actions { align-items: flex-start; }
 		.download-button { align-self: flex-start; }
+		.comparison-note { grid-template-columns: 1fr; gap: 12px; padding: 19px; }
 		.library-note { align-items: flex-start; flex-direction: column; padding: 24px; }
 	}
 </style>

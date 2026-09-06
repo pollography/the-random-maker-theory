@@ -16,6 +16,9 @@
 		useCases: string[];
 		promptType?: string;
 		promptText?: string;
+		controlledPromptText?: string;
+		controlledImage?: string;
+		controlledAlt?: string;
 	};
 
 	type Category = {
@@ -66,7 +69,7 @@
 	</label>
 
 	<p class="result-summary" aria-live="polite">
-		<strong>{filteredPrompts.length}</strong> von {prompts.length} getesteten Prompts
+		<strong>{filteredPrompts.length}</strong> von {prompts.length} getesteten Ideen
 	</p>
 </div>
 

@@ -57,6 +57,29 @@ test('canonical library exposes exactly 147 tested prompts and keeps research id
 	assert.ok(publicPrompts.every((prompt) => prompt.command.startsWith('/')));
 });
 
+test('the 86 numbered short tests pair their original result with one controlled counter-test', () => {
+	const publicPrompts = getPublicPrompts(data);
+	const shortPrompts = publicPrompts.filter((prompt) => prompt.promptType !== 'detailed');
+	const pairedPrompts = shortPrompts.filter((prompt) => prompt.controlledPromptText);
+	const shortOnlyPrompts = shortPrompts.filter((prompt) => !prompt.controlledPromptText);
+
+	assert.equal(shortPrompts.length, 87);
+	assert.equal(pairedPrompts.length, 86);
+	assert.deepEqual(shortOnlyPrompts.map((prompt) => prompt.command), ['/expressions']);
+	for (const prompt of pairedPrompts) {
+		const controlledPromptText = /** @type {string} */ (prompt.controlledPromptText);
+		assert.match(controlledPromptText, /^Nutze ausschließlich Bild 1\b/i, prompt.command);
+		assert.doesNotMatch(controlledPromptText, /\bBild 2\b/i, prompt.command);
+		assert.ok(prompt.controlledImage, `${prompt.command} needs a controlled image`);
+		assert.ok(prompt.controlledAlt, `${prompt.command} needs controlled alt text`);
+		assert.equal(
+			existsSync(join(staticRoot, prompt.controlledImage.replace(/^\//, ''))),
+			true,
+			`${prompt.command} is missing ${prompt.controlledImage}`
+		);
+	}
+});
+
 test('canonical library uses the eighteen approved categories in their stable order', () => {
 	const allCategories = /** @type {Array<{ id: string }>} */ (data.categories);
 	assert.deepEqual(
@@ -115,9 +138,15 @@ test('search finds commands, titles, category labels, and use cases without case
 		),
 		['/hologram']
 	);
+	assert.deepEqual(
+		filterPrompts(publicPrompts, data.categories, 'Fotoeignung Farbstich', 'all').map(
+			(prompt) => prompt.command
+		),
+		['/colorAnalysis']
+	);
 });
 
-test('detailed entries copy the tested full prompt while short entries keep the slash command', () => {
+test('copying respects short, controlled and existing detailed variants', () => {
 	const prompts = getPublicPrompts(data);
 	const shortPrompt = prompts.find((prompt) => prompt.command === '/posepack');
 	const detailedPrompt = prompts.find((prompt) => prompt.command === '/behindTheScenes');
@@ -125,6 +154,7 @@ test('detailed entries copy the tested full prompt while short entries keep the 
 	assert.ok(shortPrompt);
 	assert.ok(detailedPrompt);
 	assert.equal(getPromptCopyText(shortPrompt), '/posepack');
+	assert.match(getPromptCopyText(shortPrompt, 'controlled'), /^Nutze ausschließlich Bild 1/i);
 	assert.match(getPromptCopyText(detailedPrompt), /behind-the-scenes studio photograph/i);
 	assert.equal(detailedPrompt.promptType, 'detailed');
 });
@@ -168,6 +198,13 @@ test('public Svelte surface exposes the approved search, copy, status, and downl
 	assert.match(card, /copyPromptText/);
 	assert.match(card, /getPromptCopyText/);
 	assert.match(card, /Ausführlicher Prompt/);
+	assert.match(card, />Ein-Wort-Test</);
+	assert.match(card, />Kontrollierte Vorlage</);
+	assert.match(card, /activeVariant/);
+	assert.match(card, /controlledPromptText/);
+	assert.match(card, /controlledImage/);
+	assert.match(card, /getPromptCopyText\(prompt, activeVariant\)/);
+	assert.match(library, /getesteten Ideen/);
 	assert.match(
 		card,
 		/<a href="\/blog\/\{prompt\.articleSlug\}">\{prompt\.title\}: Beispiel &amp; Anwendung<\/a>/
@@ -265,6 +302,14 @@ test('prompt cards serve compact local thumbnails and defer offscreen rendering'
 			true,
 			`${prompt.command} is missing ${thumbnailPath}`
 		);
+		if (prompt.controlledImage) {
+			const controlledThumbnailPath = `/images/blog/ki-bildprompts/thumbs/${prompt.controlledImage.split('/').at(-1)}`;
+			assert.equal(
+				existsSync(join(staticRoot, controlledThumbnailPath.replace(/^\//, ''))),
+				true,
+				`${prompt.command} is missing ${controlledThumbnailPath}`
+			);
+		}
 	}
 });
 
@@ -274,7 +319,7 @@ test('library controls keep visible labels in their accessible names and contras
 		readFile(join(projectRoot, 'src', 'routes', 'tools', 'bildprompt-library', '+page.svelte'), 'utf8')
 	]);
 
-	assert.match(card, /aria-label="Prompt kopieren: \{prompt\.command\}"/);
+	assert.match(card, /aria-label="Prompt kopieren: \{prompt\.command\}, \{variantLabel\}"/);
 	assert.doesNotMatch(card, /aria-label="\{prompt\.command\} kopieren"/);
 	assert.match(page, /\.download-button small \{[^}]*color: var\(--color-on-accent\);[^}]*opacity: 1;/s);
 	assert.doesNotMatch(page, /border-left:\s*[2-9]px/);

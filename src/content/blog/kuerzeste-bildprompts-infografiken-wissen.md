@@ -31,7 +31,9 @@ Die sechs Prompts in diesem Teil erzeugten erstaunlich schnell typische Wissensf
 
 Das ist der entscheidende Unterschied zwischen **Informationsdesign** und **Information**.
 
-Das erste Bild jedes Abschnitts bleibt deshalb das ehrliche Ergebnis des Ein-Wort-Tests. Der zweite Prompt ist ein kontrollierter Folgeauftrag: Er sagt dir genau, welche Bilder du hochlädst, welche Teile erhalten bleiben und was die KI nicht erfinden darf. Direkt darunter siehst du jeweils das tatsächlich erzeugte Ergebnis.
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Die ausführliche Vorlage darunter ist ein unabhängiger kontrollierter Gegenversuch mit demselben Originalmaterial. Das folgende Bild zeigt die gezieltere Variante; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+
+**So vergleichst du fair:** Öffne für die kontrollierte Vorlage einen neuen Chat und lade nur dein ursprüngliches Ausgangsbild als Bild 1 hoch. Das Ein-Wort-Ergebnis bleibt der Vergleichsbeleg, ist aber keine Referenz für den kontrollierten Prompt.
 
 ## 35. `/mindMap`: Persönlichkeit aus dem Nichts
 
@@ -45,19 +47,19 @@ Die KI setzte das Porträt in die Mitte und ordnete außen Äste zu Persönlichk
 
 **Nützlich für:** Layoutideen, Workshop-Vorlagen, Brainstorming und visuelle Selbstreflexion.
 
-**Was der zweite Prompt macht:** Er behält die Mindmap-Struktur, ersetzt erfundene Eigenschaften aber durch sechs von dir festgelegte Hauptäste.
+**Was der kontrollierte Prompt macht:** Er behält die Mindmap-Struktur, ersetzt erfundene Eigenschaften aber durch sechs von dir festgelegte Hauptäste.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Mindmap-Ergebnis als Bild 2 für Anordnung und Farbidee.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Anordnung und Farbidee. Erstelle eine neue Mindmap mit dem Porträt in der Mitte und genau diesen sechs Hauptästen: [[AST 1]], [[AST 2]], [[AST 3]], [[AST 4]], [[AST 5]], [[AST 6]]. Lass alle Unteräste leer. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine zusätzlichen Begriffe, Eigenschaften, Symbole oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle eine neue Mindmap mit dem Porträt in der Mitte und genau diesen sechs Hauptästen: [[AST 1]], [[AST 2]], [[AST 3]], [[AST 4]], [[AST 5]], [[AST 6]]. Lass alle Unteräste leer. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine zusätzlichen Begriffe, Eigenschaften, Symbole oder Logos.
 ```
 
 **Für dieses Beispiel eingesetzt:** Projekte, Lernen, Werkzeuge, Ideen, Ziele und Experimente.
 
-![Ergebnis des zweiten Prompts: Mindmap mit sechs vorgegebenen Hauptästen](/images/blog/ki-bildprompts/followups/35-mind-map-followup.webp)
+![Ergebnis des kontrollierten Prompts: Mindmap mit sechs vorgegebenen Hauptästen](/images/blog/ki-bildprompts/followups/35-mind-map-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -76,19 +78,19 @@ Der Prompt isolierte ein Merkmal des Porträts und machte daraus eine einfache L
 
 **Nützlich für:** Kartenlayouts, Sprachlernen, Produktwissen und Kursmaterial, wenn der Inhalt vorgegeben wird.
 
-**Was der zweite Prompt macht:** Er erzeugt nur das Gerüst einer Lernkarte und ersetzt erfundene Definitionen durch sichtbare Platzhalterlinien.
+**Was der kontrollierte Prompt macht:** Er erzeugt nur das Gerüst einer Lernkarte und ersetzt erfundene Definitionen durch sichtbare Platzhalterlinien.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Flashcard als Bild 2 für Kartenformat und Hierarchie.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personen- oder Objektreferenz und Bild 2 nur als Referenz für Kartenformat und Hierarchie. Erstelle eine leere Lernkarten-Vorlage im Hochformat. Oben ein großes Bildfeld mit dem Motiv aus Bild 1, darunter eine breite Platzhalterlinie für einen Begriff und drei Gruppen aus kurzen Platzhalterlinien. Keine lesbaren Wörter, Buchstaben oder Zahlen. Heller Hintergrund, Rahmen in [[RAHMENFARBE]], kein Logo.
+Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle eine leere Lernkarten-Vorlage im Hochformat. Oben ein großes Bildfeld mit dem Motiv aus Bild 1, darunter eine breite Platzhalterlinie für einen Begriff und drei Gruppen aus kurzen Platzhalterlinien. Keine lesbaren Wörter, Buchstaben oder Zahlen. Heller Hintergrund, Rahmen in [[RAHMENFARBE]], kein Logo.
 ```
 
 **Für dieses Beispiel eingesetzt:** Cyan als Rahmenfarbe.
 
-![Ergebnis des zweiten Prompts: leere Lernkarte mit Platzhalterlinien](/images/blog/ki-bildprompts/followups/36-flashcard-followup.webp)
+![Ergebnis des kontrollierten Prompts: leere Lernkarte mit Platzhalterlinien](/images/blog/ki-bildprompts/followups/36-flashcard-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -107,17 +109,17 @@ Das Ergebnis sah nach einer fertigen Style-Infografik aus: Porträt, Farbpalette
 
 **Nützlich für:** visuelle Gliederung, Wireframes, Social-Carousel-Ideen und Präsentationslayouts.
 
-**Was der zweite Prompt macht:** Er reduziert die fertige wirkende Infografik auf ein visuelles Wireframe ohne erfundene Aussagen.
+**Was der kontrollierte Prompt macht:** Er reduziert die fertige wirkende Infografik auf ein visuelles Wireframe ohne erfundene Aussagen.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Infografik als Bild 2 für grobe Komposition und Flächenverteilung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personen- oder Objektreferenz und Bild 2 nur als Referenz für die grobe Komposition. Erstelle eine neue 4:5-Infografik-Vorlage mit einem großen Motivfeld, genau fünf Farbfeldern, genau vier neutralen kreisförmigen Icon-Platzhaltern und genau drei leeren Textbereichen aus grauen Linien. Übernimm die erkennbaren Merkmale des Motivs aus Bild 1. Keine Eigenschaften, Fakten, Wörter, Buchstaben, Zahlen oder Logos erfinden.
+Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle eine neue 4:5-Infografik-Vorlage mit einem großen Motivfeld, genau fünf Farbfeldern, genau vier neutralen kreisförmigen Icon-Platzhaltern und genau drei leeren Textbereichen aus grauen Linien. Übernimm die erkennbaren Merkmale des Motivs aus Bild 1. Keine Eigenschaften, Fakten, Wörter, Buchstaben, Zahlen oder Logos erfinden.
 ```
 
-![Ergebnis des zweiten Prompts: textfreie Infografik-Vorlage](/images/blog/ki-bildprompts/followups/37-infographic-followup.webp)
+![Ergebnis des kontrollierten Prompts: textfreie Infografik-Vorlage](/images/blog/ki-bildprompts/followups/37-infographic-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -136,19 +138,19 @@ Die KI baute eine komplette Lebenslinie mit Jahreszahlen, Altersstufen und klein
 
 **Nützlich für:** Projektverläufe, Produktgeschichte, Lernpfade und Biografien, wenn du die echten Daten lieferst.
 
-**Was der zweite Prompt macht:** Er behält die horizontale Zeitachse, verwendet aber ausschließlich sechs von dir vorgegebene Jahreszahlen und leere Inhaltsflächen.
+**Was der kontrollierte Prompt macht:** Er behält die horizontale Zeitachse, verwendet aber ausschließlich sechs von dir vorgegebene Jahreszahlen und leere Inhaltsflächen.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Timeline als Bild 2 für Leserichtung und grafischen Stil.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personen- oder Objektreferenz und Bild 2 nur als Referenz für Leserichtung und grafischen Stil. Erstelle eine horizontale 16:9-Timeline mit genau sechs gleichmäßig verteilten Stationen. Verwende ausschließlich diese Jahreszahlen: [[JAHR 1]], [[JAHR 2]], [[JAHR 3]], [[JAHR 4]], [[JAHR 5]], [[JAHR 6]]. Zeige das Motiv aus Bild 1 nur einmal am Start. Titel und Beschreibung jeder Station bleiben als leere Linienflächen stehen. Keine Ereignisse, weiteren Wörter, Zahlen oder Logos.
+Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle eine horizontale 16:9-Timeline mit genau sechs gleichmäßig verteilten Stationen. Verwende ausschließlich diese Jahreszahlen: [[JAHR 1]], [[JAHR 2]], [[JAHR 3]], [[JAHR 4]], [[JAHR 5]], [[JAHR 6]]. Zeige das Motiv aus Bild 1 nur einmal am Start. Titel und Beschreibung jeder Station bleiben als leere Linienflächen stehen. Keine Ereignisse, weiteren Wörter, Zahlen oder Logos.
 ```
 
 **Für dieses Beispiel eingesetzt:** 2021, 2022, 2023, 2024, 2025 und 2026.
 
-![Ergebnis des zweiten Prompts: Timeline mit sechs vorgegebenen Jahreszahlen](/images/blog/ki-bildprompts/followups/38-timeline-followup.webp)
+![Ergebnis des kontrollierten Prompts: Timeline mit sechs vorgegebenen Jahreszahlen](/images/blog/ki-bildprompts/followups/38-timeline-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -167,17 +169,17 @@ Das Ergebnis kombinierte großes Porträt, Farbfelder, Symbole, kleine Beispielb
 
 **Nützlich für:** Brand-Boards, Character Guides, Design-Briefings und übersichtliche Projektdokumentation.
 
-**Was der zweite Prompt macht:** Er verwandelt den vagen Guide in ein fest definiertes Character-Board mit nur vier erlaubten Labels.
+**Was der kontrollierte Prompt macht:** Er verwandelt den vagen Guide in ein fest definiertes Character-Board mit nur vier erlaubten Labels.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und den ersten Visual Guide als Bild 2 für Flächenaufteilung und Farbwirkung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Flächenaufteilung und Farbwirkung. Erstelle einen visuellen Character Guide ohne Fließtext. Zeige genau ein großes Porträt, eine Frontansicht, eine Profilansicht, fünf Farbfelder und drei Detailausschnitte charakteristischer sichtbarer Merkmale aus Bild 1. Verwende ausschließlich die Labels „Porträt“, „Profil“, „Farben“ und „Details“. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine weiteren Wörter oder Logos.
+Nutze ausschließlich Bild 1 als feste Personenreferenz. Erstelle einen visuellen Character Guide ohne Fließtext. Zeige genau ein großes Porträt, eine Frontansicht, eine Profilansicht, fünf Farbfelder und drei Detailausschnitte charakteristischer sichtbarer Merkmale aus Bild 1. Verwende ausschließlich die Labels „Porträt“, „Profil“, „Farben“ und „Details“. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Keine weiteren Wörter oder Logos.
 ```
 
-![Ergebnis des zweiten Prompts: klar begrenzter Character Guide](/images/blog/ki-bildprompts/followups/39-visual-guide-followup.webp)
+![Ergebnis des kontrollierten Prompts: klar begrenzter Character Guide](/images/blog/ki-bildprompts/followups/39-visual-guide-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
@@ -196,17 +198,17 @@ Die KI stellte zwei fast identische Porträts nebeneinander. Rechts wirkte das G
 
 **Nützlich für:** Layouts und A/B-Darstellungen, sobald du die Vergleichsfrage vorgibst.
 
-**Was der zweite Prompt macht:** Er definiert ein einziges sichtbares Vergleichskriterium: Foto links, Bleistiftzeichnung rechts.
+**Was der kontrollierte Prompt macht:** Er definiert ein einziges sichtbares Vergleichskriterium: Foto links, Bleistiftzeichnung rechts.
 
-**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Comparison-Ergebnis als Bild 2 für die Zweiteilung.
+**Dafür hochladen:** Nur dein ursprüngliches Ausgangsbild als Bild 1. Das Ein-Wort-Ergebnis wird nicht hochgeladen.
 
-**Kopierbare Vorlage:**
+**Kopierbare kontrollierte Vorlage:**
 
 ```prompt
-Nutze Bild 1 als feste Personen- oder Objektreferenz und Bild 2 nur als Referenz für die Zweiteilung. Erstelle einen sauberen 16:9-Vergleich. Links erscheint das Motiv aus Bild 1 als farbige Fotodarstellung, rechts dasselbe Motiv als schwarzweiße Bleistiftzeichnung. Identischer Ausschnitt, identische Position und identischer Ausdruck. Keine Beschriftung, kein Rahmen, keine weiteren Veränderungen und kein Logo.
+Nutze ausschließlich Bild 1 als feste Personen- oder Objektreferenz. Erstelle einen sauberen 16:9-Vergleich. Links erscheint das Motiv aus Bild 1 als farbige Fotodarstellung, rechts dasselbe Motiv als schwarzweiße Bleistiftzeichnung. Identischer Ausschnitt, identische Position und identischer Ausdruck. Keine Beschriftung, kein Rahmen, keine weiteren Veränderungen und kein Logo.
 ```
 
-![Ergebnis des zweiten Prompts: Foto und Bleistiftzeichnung im direkten Vergleich](/images/blog/ki-bildprompts/followups/40-comparison-followup.webp)
+![Ergebnis des kontrollierten Prompts: Foto und Bleistiftzeichnung im direkten Vergleich](/images/blog/ki-bildprompts/followups/40-comparison-followup.webp)
 
 <div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
 	<span class="rf-label" aria-hidden="true">Ergebnis</span>
