@@ -1,17 +1,17 @@
 import { getPosts } from '$lib/utils/posts';
-import { getLatestEpisode } from '$lib/utils/episodes';
-import { selectHomepagePosts } from '$lib/utils/homepage-posts.js';
+import { getEpisodes } from '$lib/utils/episodes';
+import { selectLatestEpisodeWithUrl } from '$lib/utils/homepage-media.js';
+import { selectLatestHomepagePosts } from '$lib/utils/homepage-posts.js';
 
 export const prerender = true;
 
-const FEATURED_POST_SLUG = 'gemini-notebook-kostenlos-codex-content-workflow';
-
 export async function load() {
-	const [posts, latestEpisode] = await Promise.all([getPosts(), getLatestEpisode()]);
+	const [posts, episodes] = await Promise.all([getPosts(), getEpisodes()]);
 
 	return {
-		posts: selectHomepagePosts(posts, FEATURED_POST_SLUG, 4),
-		latestEpisode,
-		totalCount: posts.length + (latestEpisode ? 1 : 0)
+		posts: selectLatestHomepagePosts(posts, 4),
+		latestVideo: selectLatestEpisodeWithUrl(episodes, 'videoUrl'),
+		latestAudio: selectLatestEpisodeWithUrl(episodes, 'audioUrl'),
+		totalCount: posts.length + episodes.length
 	};
 }

@@ -9,12 +9,14 @@ import { imageMetadata } from '../lib/data/image-metadata.generated.js';
 const routesRoot = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(routesRoot, '..', '..');
 
-test('homepage data is server-only and returns four curated post records', async () => {
+test('homepage data is server-only and returns four latest posts plus real media records', async () => {
 	assert.equal(existsSync(join(routesRoot, '+page.ts')), false);
 	const loader = await readFile(join(routesRoot, '+page.server.ts'), 'utf8');
-	assert.match(loader, /selectHomepagePosts\(posts,\s*FEATURED_POST_SLUG,\s*4\)/);
+	assert.match(loader, /selectLatestHomepagePosts\(posts,\s*4\)/);
+	assert.match(loader, /selectLatestEpisodeWithUrl\(episodes,\s*'videoUrl'\)/);
+	assert.match(loader, /selectLatestEpisodeWithUrl\(episodes,\s*'audioUrl'\)/);
 	assert.doesNotMatch(loader, /posts\.slice\(0,\s*6\)/);
-	assert.match(loader, /totalCount:\s*posts\.length\s*\+\s*\(latestEpisode\s*\?\s*1\s*:\s*0\)/);
+	assert.match(loader, /totalCount:\s*posts\.length\s*\+\s*episodes\.length/);
 });
 
 test('fonts are local and both LCP display faces are preloaded', async () => {
