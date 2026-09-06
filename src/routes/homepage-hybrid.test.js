@@ -31,6 +31,7 @@ test('homepage exposes five concise topic links without emoji pillar copy', asyn
 	assert.match(page, /srcset=\{topic\.imageSeo\.srcset\}/);
 	assert.doesNotMatch(page, /const pillars = \[/);
 	assert.doesNotMatch(page, /topic\.desc|topic\.highlights|topic\.icon/);
+	assert.match(page, /\.topic-copy\s*\{[^}]*text-align:\s*center/s);
 });
 
 test('homepage presents one wide lead and three full-width-image cards directly after topics', async () => {
@@ -61,4 +62,11 @@ test('homepage keeps real video, podcast and direct newsletter actions below the
 	assert.match(page, /<NewsletterSignup/);
 	assert.match(newsletter, /type="email"/);
 	assert.match(newsletter, /'Eintragen'/);
+});
+
+test('homepage gives its orientation copy a visible contextual heading', async () => {
+	const page = await read('src', 'routes', '+page.svelte');
+
+	assert.match(page, /<h2[^>]*class="context-title"[^>]*>Worum geht es hier\?<\/h2>/);
+	assert.match(page, /TRMT bündelt praktische Artikel/);
 });

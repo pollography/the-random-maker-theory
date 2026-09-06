@@ -59,8 +59,12 @@
 	{#if playerError}<p class="player-error" role="status">{playerError} Bitte versuche es noch einmal.</p>{/if}
 
 	<div class="podcast-links">
-		<a href={spotifyUrl} target="_blank" rel="noopener noreferrer">Auf Spotify öffnen →</a>
-		<a href="/podcast">Alle Folgen →</a>
+		<a class="podcast-link podcast-link--spotify" href={spotifyUrl} target="_blank" rel="noopener noreferrer">
+			Auf Spotify öffnen <span aria-hidden="true">↗</span>
+		</a>
+		<a class="podcast-link podcast-link--secondary" href="/podcast">
+			Alle Folgen <span aria-hidden="true">→</span>
+		</a>
 	</div>
 </div>
 
@@ -77,8 +81,11 @@
 	.spotify-mount { min-height: 152px; border-radius: 12px; overflow: hidden; background: #181818; }
 	.spotify-mount p { margin: 0; padding: 24px; color: #fff; }
 	.player-error { margin: 0; color: var(--color-text-muted); font-size: var(--font-size-sm); }
-	.podcast-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
-	.podcast-links a { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); text-decoration: none; }
-	.podcast-links a:hover { color: var(--color-accent-teal-foreground); }
-	@media (max-width: 520px) { .podcast-facade { grid-template-columns: 1fr; } .podcast-icon { width: 48px; height: 48px; } }
+	.podcast-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+	.podcast-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 9px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-lg); color: var(--color-text); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); text-align: center; text-decoration: none; transition: background var(--transition-normal), border-color var(--transition-normal), color var(--transition-normal), transform var(--transition-normal); }
+	.podcast-link--spotify { border-color: rgba(58, 176, 162, .65); background: rgba(58, 176, 162, .12); color: var(--color-accent-teal-foreground); }
+	.podcast-link:hover { border-color: var(--color-accent-teal); background: rgba(58, 176, 162, .18); color: var(--color-text); transform: translateY(-1px); }
+	.podcast-link:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+	@media (max-width: 520px) { .podcast-facade { grid-template-columns: 1fr; } .podcast-icon { width: 48px; height: 48px; } .podcast-links { grid-template-columns: 1fr; } }
+	@media (prefers-reduced-motion: reduce) { .podcast-link { transition: none; } .podcast-link:hover { transform: none; } }
 </style>

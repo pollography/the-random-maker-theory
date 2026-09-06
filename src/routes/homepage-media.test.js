@@ -42,6 +42,8 @@ test('YouTube stays local until its play button is activated', async () => {
 	assert.match(source, /let activated = \$state\(false\)/);
 	assert.match(source, /youtube-nocookie\.com\/embed\/\$\{videoId\}/);
 	assert.match(source, /video-frame--youtube/);
+	assert.match(source, /class="platform-button platform-button--youtube"/);
+	assert.match(source, /\.platform-button\s*\{[^}]*border:/s);
 	assert.match(source, /Auf YouTube öffnen/);
 	assert.match(rendered.body, /src="\/images\/video\/ki-bildbearbeitung-trmt-003\.webp"/);
 	assert.match(rendered.body, /Video abspielen/);
@@ -68,6 +70,9 @@ test('Spotify loads the official iframe API only after activation and keeps plat
 	assert.match(source, /loadSpotifyIframeApi/);
 	assert.match(source, /onclick=\{activate\}/);
 	assert.match(source, /controller\.play\(\)/);
+	assert.match(source, /class="podcast-link podcast-link--spotify"/);
+	assert.match(source, /class="podcast-link podcast-link--secondary"/);
+	assert.match(source, /\.podcast-link\s*\{[^}]*border:/s);
 	assert.match(source, /Auf Spotify öffnen/);
 	assert.match(source, /Alle Folgen/);
 	assert.match(loader, /open\.spotify\.com\/embed\/iframe-api\/v1/);

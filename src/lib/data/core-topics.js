@@ -47,7 +47,7 @@ export const CORE_TOPICS = Object.freeze([
 	topic({
 		slug: 'automatisierung',
 		name: 'Automatisierung',
-		short: 'Workflows · Scripts · APIs',
+		short: 'Workflows · Scripts',
 		image: '/images/homepage/topics/automatisierung-landscape.webp',
 		starterSlugs: [
 			'n8n-tutorial-deutsch-2026',

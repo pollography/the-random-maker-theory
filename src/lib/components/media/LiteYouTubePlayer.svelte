@@ -26,7 +26,9 @@
 			</button>
 		{/if}
 	</div>
-	<a class="platform-link" href={youtubeUrl} target="_blank" rel="noopener noreferrer">Auf YouTube öffnen →</a>
+	<a class="platform-button platform-button--youtube" href={youtubeUrl} target="_blank" rel="noopener noreferrer">
+		Auf YouTube öffnen <span aria-hidden="true">↗</span>
+	</a>
 </div>
 
 <style>
@@ -42,7 +44,8 @@
 	.video-play span { margin-left: 4px; font-size: clamp(1.25rem, 3vw, 1.75rem); }
 	.video-facade:hover .video-play { background: #ff3445; transform: translate(-50%, -50%) scale(1.06); }
 	.video-facade:focus-visible { outline: 3px solid var(--color-focus); outline-offset: -6px; }
-	.platform-link { justify-self: start; min-height: 44px; display: inline-flex; align-items: center; color: var(--color-text-muted); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); text-decoration: none; }
-	.platform-link:hover { color: #f05a63; }
+	.platform-button { justify-self: end; display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 44px; padding: 9px 16px; border: 1px solid rgba(240, 90, 99, .72); border-radius: var(--radius-lg); background: rgba(240, 90, 99, .08); color: #f36f77; font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); text-decoration: none; transition: background var(--transition-normal), border-color var(--transition-normal), color var(--transition-normal), transform var(--transition-normal); }
+	.platform-button:hover { border-color: #f05a63; background: #e32636; color: #fff; transform: translateY(-1px); }
+	.platform-button:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 	@media (prefers-reduced-motion: reduce) { .video-play { transition: none; } .video-facade:hover .video-play { transform: translate(-50%, -50%); } }
 </style>
