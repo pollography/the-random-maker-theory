@@ -33,6 +33,8 @@ Wenn du zuerst nur die vier wichtigsten Begriffe ausprobieren möchtest, findest
 
 Die markanten Merkmale helfen der KI sichtbar bei der Wiedererkennung. Trotzdem bleibt nicht jede Version identisch. Besonders Ganzkörperansichten, Hände und seitliche Profile verändern die Person teilweise.
 
+Das erste Bild jedes Abschnitts bleibt das ehrliche Ergebnis des kurzen Slash-Prompts. Darunter zeige ich nun, wozu der zweite Prompt dient, welche Bilder du dafür hochlädst und was bei meinem tatsächlich ausgeführten Folgeauftrag herauskam. Die kopierbaren Vorlagen übernehmen sichtbare Merkmale aus deinen Bildern; eckige Platzhalter ersetzt du durch deinen eigenen Inhalt.
+
 ## 1. `/turnaround`: mehrere Blickwinkel
 
 ```prompt
@@ -45,9 +47,22 @@ Bei mir entstand ein sauberes Raster mit Front, Dreiviertelansichten, Profilen u
 
 **Nützlich für:** Character-Referenzen, Profilabgleich, KI-Video, 3D-Blocking und konsistentere Folgegenerationen.
 
+**Was der zweite Prompt macht:** Er nutzt die verschiedenen Kopfansichten als Identitätskontrolle und baut daraus ein einzelnes, vollständiges Ganzkörperbild.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und den mit `/turnaround` erzeugten Ansichtenbogen als Bild 2.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Nutze den Turnaround als feste Personenreferenz. Erstelle daraus ein einzelnes Ganzkörperbild in neutraler A-Pose, frontal zur Kamera, weißer Studiohintergrund. Erhalte Gesichtsform, Bart, orange Brille und türkisen Hoodie. Keine Beschriftung, kein Raster und kein Logo.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 zusätzlich zur Kontrolle der Kopfansichten. Erstelle ein einzelnes Ganzkörperbild im Format 4:5 in neutraler A-Pose, frontal zur Kamera. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus den Referenzen. Gleichmäßiges weiches Studiolicht, schlichter heller Hintergrund, vollständige Figur einschließlich Füßen. Kein Raster, keine Beschriftung und kein Logo.
 ```
+
+![Ergebnis des zweiten Prompts: einzelne Ganzkörperansicht in neutraler A-Pose](/images/blog/ki-bildprompts/followups/01-turnaround-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Aus dem reinen Kopf-Turnaround wird eine einzelne, direkt nutzbare Ganzkörperreferenz. Die Person und ihr sichtbarer Look bleiben erhalten, während Raster und Beschriftungen verschwinden.</p>
+</div>
 
 ## 2. `/expression`: eine starke Mimik
 
@@ -61,9 +76,22 @@ Der Singular erzeugte in meinem Test kein Raster. Stattdessen bekam ich ein einz
 
 **Nützlich für:** Reaktionsbilder, Thumbnails, Social Posts und einzelne Emotionsreferenzen.
 
+**Was der zweite Prompt macht:** Er übernimmt gezielt die starke Mimik und setzt sie in ein Thumbnail mit bewusst freigehaltener Textfläche.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das mit `/expression` erzeugte Reaktionsbild als Bild 2.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Nutze die erzeugte aufgeregte Mimik als Referenz. Erstelle ein einzelnes 16:9-Thumbnail. Person groß links, freie dunkle Fläche rechts, gleiche Identität, orange Brille, Bart und türkiser Hoodie. Keine Schrift und kein Logo.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Mimik und Körperspannung. Erstelle ein einzelnes 16:9-Thumbnail. Zeige die Person groß auf der linken Seite und lasse rechts eine ruhige dunkle Fläche für späteren Text frei. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Dramatisches, aber natürliches Licht; keine Schrift, kein Logo und keine weitere Person.
 ```
+
+![Ergebnis des zweiten Prompts: aufgeregtes Thumbnail mit freier dunkler Fläche](/images/blog/ki-bildprompts/followups/02-expression-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die spontane Mimik bekommt eine konkrete Funktion: ein fertiger 16:9-Aufbau mit Motiv links und gut nutzbarer Ruhefläche rechts, ohne bereits Text in das Bild zu erfinden.</p>
+</div>
 
 ### Bonus: `/expressions` reagiert anders
 
@@ -89,9 +117,24 @@ Hier bekam ich sechs Ganzkörperposen: locker stehend, Arme verschränkt, gehend
 
 **Nützlich für:** Storyboards, Webseiten, Social-Media-Motive, Präsentationen und erste Bewegungsreferenzen.
 
+**Was der zweite Prompt macht:** Er löst eine gewünschte Zelle aus dem Raster und erzeugt daraus ein eigenständiges Ganzkörpermotiv.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das vollständige 2×3-Posepack als Bild 2.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Wähle aus dem 2×3-Posepack Reihe 1, Spalte 3, gezählt von oben links. Gemeint ist die gehende Pose. Erstelle daraus ein einzelnes hochauflösendes Ganzkörperbild im Format 4:5. Erhalte Gesicht, Brille, Bart, Hoodie, schwarze Hose und weiße Schuhe. Kein Raster, keine weiteren Personen und kein Text.
+Nutze Bild 1 als feste Personenreferenz. Wähle aus Bild 2, einem 2×3-Raster, Reihe [[REIHE]], Spalte [[SPALTE]], gezählt von oben links. Gemeint ist die Variante [[SICHTBARE BESCHREIBUNG]]. Erstelle daraus ein einzelnes Ganzkörperbild im Format 4:5. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1; übernimm Pose und Kamerawinkel aus der gewählten Zelle. Ganze Figur einschließlich Füßen, anatomisch saubere Hände, kein Raster, kein Text und keine weitere Person.
 ```
+
+**Für dieses Beispiel eingesetzt:** Reihe 1, Spalte 3 – die gehende Pose.
+
+![Ergebnis des zweiten Prompts: einzelne gehende Ganzkörperpose](/images/blog/ki-bildprompts/followups/03-pose-pack-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die gewählte Pose steht nun einzeln und in brauchbarer Größe zur Verfügung. Durch Reihe, Spalte und sichtbare Beschreibung ist außerdem eindeutig, welche Rasterzelle gemeint war.</p>
+</div>
 
 ## 4. `/actionposes`: Gesten für Thumbnails
 
@@ -105,9 +148,24 @@ Dieser Prompt konzentrierte sich stärker auf Gesten: zeigen, Daumen hoch, Faust
 
 **Nützlich für:** YouTube-Thumbnails, Erklärgrafiken, Call-to-Action-Bereiche und Social Ads.
 
+**Was der zweite Prompt macht:** Er wählt die direkte Zeigegeste aus, korrigiert die Hand und baut daraus ein Thumbnail mit Platz für eine Überschrift.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das vollständige 2×3-Action-Pose-Raster als Bild 2.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Wähle im 2×3-Raster Reihe 1, Spalte 1. Gemeint ist die Person, die direkt zur Kamera zeigt. Erstelle ein einzelnes 16:9-Motiv mit der Person rechts und freier Fläche links. Erhalte Gesicht, Bart, orange Brille und türkisen Hoodie. Korrigiere die Hand anatomisch sauber. Kein Text und kein Logo.
+Nutze Bild 1 als feste Personenreferenz. Wähle aus Bild 2, einem 2×3-Raster, Reihe [[REIHE]], Spalte [[SPALTE]], gezählt von oben links. Gemeint ist [[SICHTBARE BESCHREIBUNG]]. Erstelle ein einzelnes 16:9-Motiv mit der Person rechts und einer ruhigen freien Fläche links. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 sowie Geste und Ausdruck aus der gewählten Zelle. Korrigiere Hände anatomisch sauber. Kein Text, kein Logo und keine weitere Person.
 ```
+
+**Für dieses Beispiel eingesetzt:** Reihe 1, Spalte 1 – die Person zeigt direkt zur Kamera.
+
+![Ergebnis des zweiten Prompts: einzelne Zeigegeste mit freier Fläche links](/images/blog/ki-bildprompts/followups/04-action-poses-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Aus der kleinen Rasterpose wird ein klar komponiertes Thumbnail-Motiv. Die Zeigehand ist vollständig sichtbar und links bleibt genug ruhige Fläche für später gesetzten Text.</p>
+</div>
 
 ## 5. `/characterSheet`: eine komplette Referenztafel
 
@@ -121,9 +179,22 @@ Das Character Sheet kombinierte Ganzkörperansichten, Gesichtsausdrücke, Farbfl
 
 **Nützlich für:** Figurenentwicklung, Game- und Filmideen, Briefings und konsistente Bildserien.
 
+**Was der zweite Prompt macht:** Er entfernt erfundene Eigenschaften und reduziert die Tafel auf festgelegte Ansichten, Ausdrücke und geprüfte Labels.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Character Sheet als Bild 2 für Aufbau und Ansichtsreferenzen.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Nutze das Character Sheet als visuelle Referenz, aber ignoriere alle darin erzeugten Texte. Erstelle ein neues sauberes Character Sheet mit Frontansicht, linker Profilansicht, Rückansicht und drei Gesichtsausdrücken. Erhalte Identität und Kleidung. Verwende nur diese deutschen Labels: Front, Profil, Rücken, freundlich, ernst, überrascht. Keine weiteren Texte oder Logos.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Aufbau und Blickwinkel; ignoriere sämtliche Aussagen und Texte aus Bild 2. Erstelle ein neues sauberes Character Sheet mit Frontansicht, linker Profilansicht, Rückansicht und drei Porträts mit freundlichem, ernstem und überraschtem Ausdruck. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Verwende ausschließlich die Labels „FRONT“, „PROFIL“, „RÜCKEN“, „FREUNDLICH“, „ERNST“ und „ÜBERRASCHT“. Keine Eigenschaften, Notizen, Logos oder weiteren Wörter.
 ```
+
+![Ergebnis des zweiten Prompts: bereinigtes Character Sheet mit deutschen Labels](/images/blog/ki-bildprompts/followups/05-character-sheet-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die neue Tafel zeigt nur die benötigten Ansichten und Emotionen. Die zuvor erfundenen Charaktereigenschaften sind entfernt; übrig bleiben überprüfbare visuelle Referenzen.</p>
+</div>
 
 ## 6. `/emotionGrid`: neun klar getrennte Emotionen
 
@@ -137,9 +208,24 @@ Das Ergebnis war ein 3×3-Raster mit englischen Emotionslabels. Die Person blieb
 
 **Nützlich für:** Thumbnail-Varianten, Reaktionsbilder, Schauspielreferenzen, Storyboards und KI-Video.
 
+**Was der zweite Prompt macht:** Er löst eine einzelne gewünschte Emotion aus dem Raster und entfernt Rahmen sowie englische Labels.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das vollständige 3×3-Emotionsraster als Bild 2.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Wähle aus dem 3×3-Emotionsraster Reihe 2, Spalte 3, gezählt von oben links. Gemeint ist die verwirrte Mimik. Erstelle daraus ein einzelnes quadratisches Profilbild. Erhalte Identität, orange Brille, Bart und Hoodie. Natürliche Haut, sauberer weißer Hintergrund, kein Text und kein Rahmen.
+Nutze Bild 1 als feste Personenreferenz. Wähle aus Bild 2, einem 3×3-Raster, Reihe [[REIHE]], Spalte [[SPALTE]], gezählt von oben links. Gemeint ist die Mimik [[SICHTBARE BESCHREIBUNG]]. Erstelle daraus ein einzelnes quadratisches Profilbild. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 sowie den Ausdruck aus der gewählten Zelle. Natürliche Haut, schlichter heller Hintergrund, kein Text, kein Rahmen und keine weitere Person.
 ```
+
+**Für dieses Beispiel eingesetzt:** Reihe 2, Spalte 3 – die verwirrte Mimik.
+
+![Ergebnis des zweiten Prompts: einzelnes quadratisches Porträt mit verwirrter Mimik](/images/blog/ki-bildprompts/followups/06-emotion-grid-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Statt eines beschrifteten Rasters bleibt genau die ausgewählte Reaktion übrig. Das quadratische Bild kann direkt als Profil- oder Reaktionsmotiv weiterverwendet werden.</p>
+</div>
 
 ## 7. `/bodylanguage`: Körpersprache statt Raster
 
@@ -153,9 +239,22 @@ Ich hatte mehrere Varianten erwartet. Tatsächlich entstand ein einzelnes Halbpo
 
 **Nützlich für:** Über-uns-Seiten, Speaker-Profile, Autorenseiten und ruhige Businessporträts.
 
+**Was der zweite Prompt macht:** Er erweitert die zufällig gewählte Einzelpose zu sechs bewusst unterschiedlichen Formen von Körpersprache.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und optional das Kurzprompt-Ergebnis als Bild 2 für Licht und Bildausschnitt.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle auf Basis dieses Porträts ein 2×3-Raster mit sechs klar unterschiedlichen Formen von Körpersprache: offen, nachdenklich, selbstbewusst, skeptisch, begeistert und entspannt. Gleiche Person und Kleidung in allen Feldern. Weißer Hintergrund, keine Beschriftung und kein Logo.
+Nutze Bild 1 als feste Personenreferenz. Bild 2 darf nur Licht und Bildausschnitt vorgeben. Erstelle ein 2×3-Raster mit sechs klar unterschiedlichen Formen von Körpersprache: offen, nachdenklich, selbstbewusst, skeptisch, begeistert und entspannt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in allen Feldern. Halbkörperansichten vor einem schlichten hellen Hintergrund, anatomisch saubere Hände, keine Beschriftung und kein Logo.
 ```
+
+![Ergebnis des zweiten Prompts: sechs bewusst unterschiedliche Körpersprachen](/images/blog/ki-bildprompts/followups/07-body-language-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Der Folgeauftrag liefert wirklich eine Auswahl statt nur einer zufälligen Armhaltung. Die sechs Felder unterscheiden sich sichtbar, ohne dafür erfundene Labels ins Bild zu schreiben.</p>
+</div>
 
 ## 8. `/outfitVariants`: sechs neue Looks
 
@@ -169,9 +268,24 @@ Die Ausgabe zeigte sechs Outfits von Overshirt und Jeansjacke bis zu schwarzer K
 
 **Nützlich für:** Stilfindung, Moodboards, Personal Branding, Kostümideen und grobe Modeberatung.
 
+**Was der zweite Prompt macht:** Er wählt einen Look aus dem Raster und vergrößert ihn zu einem einzelnen Ganzkörperporträt.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das vollständige 2×3-Outfit-Raster als Bild 2.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Wähle aus dem 2×3-Outfit-Raster Reihe 1, Spalte 3, gezählt von oben links. Gemeint ist das dunkelblaue Sakko mit weißem Shirt. Erstelle ein einzelnes Ganzkörperporträt im Format 4:5. Übernimm genau dieses Outfit, erhalte aber Gesicht, Bart und orange Brille. Neutraler Studiohintergrund, keine Marke und kein Text.
+Nutze Bild 1 als feste Personenreferenz. Wähle aus Bild 2, einem 2×3-Raster, Reihe [[REIHE]], Spalte [[SPALTE]], gezählt von oben links. Gemeint ist das Outfit [[SICHTBARE BESCHREIBUNG]]. Erstelle ein einzelnes Ganzkörperporträt im Format 4:5. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1, aber exakt die Kleidung aus der gewählten Zelle. Schlichter neutraler Studiohintergrund, vollständige Figur, keine sichtbare Marke, kein Text und keine weitere Person.
 ```
+
+**Für dieses Beispiel eingesetzt:** Reihe 1, Spalte 3 – das dunkelblaue Sakko mit hellem Shirt.
+
+![Ergebnis des zweiten Prompts: ausgewähltes Outfit als einzelnes Ganzkörperporträt](/images/blog/ki-bildprompts/followups/08-outfit-variants-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Der ausgewählte Look steht nun einzeln statt nur als kleine Kachel bereit. Das bleibt eine Visualisierung und keine verlässliche Aussage darüber, wie echte Kleidung sitzen würde.</p>
+</div>
 
 ## Die sichere Auswahlformel
 

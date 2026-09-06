@@ -32,6 +32,8 @@ In diesem Teil geht es um jüngere und ältere Versionen, Klone, Parallelwelten,
 	<p>Altersprogressionen aus Bildgeneratoren sind erfundene Visualisierungen. Sie sagen nicht verlässlich voraus, wie eine reale Person später aussehen wird. Verwende sie für kreative Konzepte, nicht für Forensik, Medizin oder Identitätsprüfungen.</p>
 </div>
 
+Die ersten Bilder bleiben die unveränderten Ergebnisse der kurzen Begriffe. Darunter folgt jeweils ein erklärter zweiter Arbeitsauftrag mit Upload-Zuordnung, allgemeingültiger Kopiervorlage und dem tatsächlich erzeugten Ergebnis. Persönliche Merkmale werden aus deinem Referenzbild übernommen; eckige Platzhalter füllst du mit deiner eigenen Geschichte.
+
 ## 9. `/ageprogression`: vier Altersstufen
 
 ```prompt
@@ -44,9 +46,24 @@ Das Ergebnis zeigte vier beschriftete Felder von den 30ern bis zu den 60ern. Haa
 
 **Nützlich für:** Figurenentwicklung, Film-Moodboards, Biografie-Visuals und Storyboards.
 
+**Was der zweite Prompt macht:** Er wählt die älteste Zelle aus dem Raster und erzeugt daraus ein einzelnes Porträt ohne Alterslabel.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das vollständige 2×2-Altersraster als Bild 2.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Wähle aus dem 2×2-Altersraster Reihe 2, Spalte 2, gezählt von oben links. Gemeint ist die älteste Version. Erstelle daraus ein einzelnes realistisches 4:5-Porträt. Erhalte Gesichtsform, orange Brille, langen Bart und türkisen Hoodie. Natürliche Haut, kein Alterslabel, kein Raster und kein Logo.
+Nutze Bild 1 als feste Personenreferenz. Wähle aus Bild 2, einem 2×2-Altersraster, Reihe [[REIHE]], Spalte [[SPALTE]], gezählt von oben links. Gemeint ist [[SICHTBARE BESCHREIBUNG]]. Erstelle daraus ein einzelnes realistisches Porträt im Format 4:5. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 sowie die sichtbare Altersdarstellung aus der gewählten Zelle. Natürliche Hauttextur, ruhiger Hintergrund, kein Alterslabel, kein Raster und kein Logo.
 ```
+
+**Für dieses Beispiel eingesetzt:** Reihe 2, Spalte 2 – die älteste Version des Rasters.
+
+![Ergebnis des zweiten Prompts: älteste Rasterversion als einzelnes Porträt](/images/blog/ki-bildprompts/followups/09-age-progression-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die gewählte Altersidee steht nun als einzelnes Porträt ohne Raster oder Zahl zur Verfügung. Sie bleibt eine kreative Darstellung und keine reale Prognose.</p>
+</div>
 
 ## 10. `/characterEvolution`: eine ganze Lebenslinie
 
@@ -60,9 +77,24 @@ Hier entstand eine horizontale Reihe von den 20ern bis 60+. Die jüngeren Gesich
 
 **Nützlich für:** Game Characters, Comicfiguren, Film-Casting-Ideen und Lebensgeschichten.
 
+**Was der zweite Prompt macht:** Er baut die Lebenslinie neu, entfernt erfundene Eigenschaften und hält Licht, Ausschnitt sowie Kleidung über alle Stufen zusammen.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die erste Character-Evolution als Bild 2 für Anordnung und Altersübergänge.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Nutze die fünf Altersstufen nur als visuelle Vorlage. Erstelle eine neue horizontale Figurenentwicklung ohne Text: 20, 30, 40, 50 und 65 Jahre. Identität, orange Brille und türkiser Hoodie bleiben über alle Stufen konsistent. Gleiche Beleuchtung, gleicher Bildausschnitt, neutraler Hintergrund.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für die horizontale Anordnung; ignoriere sämtliche Aussagen und Texte aus Bild 2. Erstelle fünf gleich große Kopf-Schulter-Porträts derselben Person mit den dargestellten Altersstufen [[ALTER 1]], [[ALTER 2]], [[ALTER 3]], [[ALTER 4]] und [[ALTER 5]]. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in allen Feldern. Gleiche Beleuchtung, gleicher Bildausschnitt, neutraler Hintergrund, keine Beschriftung, keine Eigenschaften und kein Logo.
 ```
+
+**Für dieses Beispiel eingesetzt:** Die Altersstufen 20, 30, 40, 50 und 65 Jahre.
+
+![Ergebnis des zweiten Prompts: textfreie horizontale Figurenentwicklung](/images/blog/ki-bildprompts/followups/10-character-evolution-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die fünf Stufen lesen sich als zusammengehörige Lebenslinie, ohne der Person erfundene Ziele oder Eigenschaften zuzuschreiben.</p>
+</div>
 
 ## 18. `/cloneScene`: der überraschende Fehlschlag
 
@@ -76,9 +108,22 @@ Ich hatte eine Szene mit mehreren Kopien erwartet. Stattdessen entstand nur ein 
 
 **Nützlich für:** In dieser Form kaum. Der Begriff braucht einen Folgeprompt.
 
+**Was der zweite Prompt macht:** Er macht aus dem Fehlversuch wirklich eine Szene mit mehreren klar unterscheidbaren Klonen.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als einzige Personenreferenz; das beinahe unveränderte Kurzprompt-Ergebnis wird nicht benötigt.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle eine 16:9-Szene mit fünf eindeutig erkennbaren Klonen derselben Person in einem hellen Fotostudio. Jeder Klon trägt denselben türkisen Hoodie und die orange Brille, hat aber eine andere Pose. Ganze Körper sichtbar, keine weiteren Personen, kein Text und kein Logo.
+Nutze das hochgeladene Porträt als feste Personenreferenz. Erstelle eine 16:9-Szene mit genau fünf eindeutig erkennbaren Klonen derselben Person in einem hellen Fotostudio. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus der Referenz für alle fünf. Zeige fünf unterschiedliche Posen: stehen, sitzen, winken, nachdenken und auf etwas zeigen. Alle Körper vollständig sichtbar, konsistentes Licht, keine weitere Person, kein Text und kein Logo.
 ```
+
+![Ergebnis des zweiten Prompts: fünf Klone in unterschiedlichen Ganzkörperposen](/images/blog/ki-bildprompts/followups/18-clone-scene-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Der genaue Auftrag löst den Fehlversuch auf: Jetzt sind wirklich fünf Versionen derselben Person in einer gemeinsamen Studioszene zu sehen.</p>
+</div>
 
 ## 19. `/multiverse`: mehrere Welten auf einmal
 
@@ -92,9 +137,24 @@ Der Prompt erzeugte ein dichtes Filmplakat mit mehreren Varianten derselben Pers
 
 **Nützlich für:** Filmideen, Games, Albumcover, Kampagnenmotive und Story-Pitches.
 
+**Was der zweite Prompt macht:** Er löst eine gewünschte Variante aus der dichten Collage und baut daraus ein ruhigeres Einzelmotiv.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die Multiverse-Collage als Bild 2.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Wähle aus der Multiverse-Collage die zentrale futuristische Version mit dunkler Jacke. Erstelle daraus ein einzelnes 16:9-Filmporträt in einer neonbeleuchteten Stadt. Gleiche Identität und orange Brille, keine weiteren Versionen, kein Schriftzug und kein Logo.
+Nutze Bild 1 als feste Personenreferenz. Wähle aus Bild 2 die Variante [[SICHTBARE BESCHREIBUNG]]. Erstelle daraus ein einzelnes 16:9-Filmporträt in [[SZENE ODER WELT]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1 sowie Kleidung und Stil der gewählten Variante. Eine Person, glaubwürdiges Szenenlicht, keine weiteren Versionen, kein Text und kein Logo.
 ```
+
+**Für dieses Beispiel eingesetzt:** Die futuristische Version rechts oben mit dunkler Jacke in einer neonbeleuchteten Stadt.
+
+![Ergebnis des zweiten Prompts: einzelne futuristische Multiverse-Variante](/images/blog/ki-bildprompts/followups/19-multiverse-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Statt sieben konkurrierender Welten bleibt ein klares cineastisches Motiv. Die ausgewählte futuristische Rolle ist erkennbar, ohne dass weitere Doppelgänger ablenken.</p>
+</div>
 
 ## 20. `/evolution`: Entwicklung als Zeitleiste
 
@@ -108,9 +168,24 @@ Bei mir wurde daraus eine Reihe mit mehreren Jahrzehnten. Der Prompt ähnelt Cha
 
 **Nützlich für:** Vorher-nachher-Erzählungen, Figurenbögen und schnelle Entwicklungsübersichten.
 
+**Was der zweite Prompt macht:** Er ordnet fünf Altersstufen neu, entfernt erfundene Jahrzehnte und verwendet nur selbst festgelegte neutrale Zahlen.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die mit `/evolution` erzeugte Reihe als Bild 2 für Staffelung und Alterswirkung.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle aus der Evolution-Reihe eine saubere 16:9-Timeline mit fünf gleich großen Porträts. Entferne alle vorhandenen Texte. Setze unter die Bilder nur die neutralen Labels 20, 30, 40, 50 und 60. Identität und Beleuchtung möglichst konsistent, keine weiteren Aussagen.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Altersstaffelung und horizontale Anordnung. Erstelle eine saubere 16:9-Timeline mit fünf gleich großen Porträts. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Setze unter die Bilder ausschließlich die neutralen Labels „[[ALTER 1]]“, „[[ALTER 2]]“, „[[ALTER 3]]“, „[[ALTER 4]]“ und „[[ALTER 5]]“. Gleiche Beleuchtung und gleicher Ausschnitt, keine weitere Aussage und kein Logo.
 ```
+
+**Für dieses Beispiel eingesetzt:** Die neutralen Labels 20, 30, 40, 50 und 60.
+
+![Ergebnis des zweiten Prompts: bereinigte Alters-Timeline mit fünf Zahlen](/images/blog/ki-bildprompts/followups/20-evolution-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die neue Reihe enthält nur die fünf vorgegebenen Alterszahlen. Jahrzehnte, Titel und zusätzliche Deutungen aus dem ersten Bild sind entfernt.</p>
+</div>
 
 ## 21. `/beforeAfter`: ein direkter Vergleich
 
@@ -124,9 +199,24 @@ Das Modell setzte zwei Porträts nebeneinander und beschriftete sie als Vorher u
 
 **Nützlich für:** Layout-Prototypen und Vergleichsideen, wenn du die Veränderung danach konkret benennst.
 
+**Was der zweite Prompt macht:** Er definiert eine einzige sichtbare Veränderung und friert Gesicht, Licht, Pose und Ausschnitt für den Vergleich ein.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und optional das erste Vorher-nachher-Bild als Bild 2 für die Zweiteilung.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle einen echten Vorher-Nachher-Vergleich. Links bleibt das originale Porträt unverändert. Rechts trägt dieselbe Person statt Hoodie ein dunkelblaues Sakko und weißes Shirt. Gesicht, Bart, Brille, Licht und Ausschnitt bleiben identisch. Keine Beschriftung und kein Logo.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 höchstens als Referenz für die Zweiteilung. Erstelle einen direkten Vorher-nachher-Vergleich mit zwei gleich großen Feldern. Links bleibt Kleidung und Erscheinungsbild aus Bild 1 unverändert. Rechts ändert sich ausschließlich [[GEWÜNSCHTE VERÄNDERUNG]]. Identität, Accessoires, Pose, Mimik, Licht, Kamerawinkel und Ausschnitt bleiben so identisch wie möglich. Keine Beschriftung, kein Logo und keine weitere Person.
 ```
+
+**Für dieses Beispiel eingesetzt:** Rechts wird nur die Oberbekleidung durch ein dunkelblaues Sakko über einem hellen Shirt ersetzt.
+
+![Ergebnis des zweiten Prompts: kontrollierter Vorher-nachher-Kleidungsvergleich](/images/blog/ki-bildprompts/followups/21-before-after-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Nun gibt es tatsächlich eine klar benannte Veränderung, während Gesicht, Blick und Bildaufbau eng zusammenbleiben.</p>
+</div>
 
 ## 22. `/timeTravel`: sofort eine Geschichte
 
@@ -140,9 +230,24 @@ Hier setzte die KI die Person in eine leuchtende Zeitmaschine mit Anzeigen, Meta
 
 **Nützlich für:** Storyboards, Kurzfilme, Musikvisuals, Cover und Abenteuer-Thumbnails.
 
+**Was der zweite Prompt macht:** Er legt Zielzeit und Zielort fest und entfernt zufällige Anzeigen oder bekannte Filmzitate aus der Zeitmaschine.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das Zeitreise-Ergebnis als Bild 2 für Portallicht und technische Stimmung.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle eine 16:9-Filmszene, in der dieselbe Person aus einem leuchtenden Zeitportal in eine Werkstatt des Jahres 1920 tritt. Orange Brille und türkiser Hoodie bleiben als bewusster Kontrast erhalten. Realistische Beleuchtung, keine Zahlen, keine Schrift und kein Logo.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Portallicht und technische Stimmung. Erstelle eine 16:9-Filmszene, in der die Person aus einem leuchtenden Zeitportal in [[ORT UND JAHR]] tritt. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 als bewussten Kontrast zur historischen Umgebung. Passe das Portallicht realistisch an Person und Raum an. Keine Anzeigen, Zahlen, Schriftzüge, bekannte Filmobjekte oder Logos.
 ```
+
+**Für dieses Beispiel eingesetzt:** Eine handwerkliche Werkstatt im Jahr 1920.
+
+![Ergebnis des zweiten Prompts: Zeitreisender tritt in eine Werkstatt von 1920](/images/blog/ki-bildprompts/followups/22-time-travel-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Das Ziel der Reise ist jetzt im Bild lesbar. Portallicht und historische Werkstatt bilden eine zusammenhängende Szene ohne zufällige Jahresanzeige oder Filmzitat.</p>
+</div>
 
 ## 23. `/futureVersion`: eine futuristische Variante
 
@@ -156,9 +261,22 @@ Der Hoodie bekam leuchtende Linien, der Hintergrund wurde zu einem Science-Ficti
 
 **Nützlich für:** Tech-Thumbnails, Zukunftsartikel, Games und KI-Video-Referenzen.
 
+**Was der zweite Prompt macht:** Er erweitert das enge Porträt zu einer vollständigen Figur und begrenzt die Zukunftsdetails auf dezente leuchtende Nähte.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und die mit `/futureVersion` erzeugte Variante als Bild 2 für Material- und Lichtstil.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle aus der Zukunftsversion ein einzelnes Ganzkörperbild in einem hellen Raumschiff-Korridor. Erhalte Gesicht, Bart und orange Brille. Der türkise Hoodie darf dezente leuchtende Nähte haben. Keine Rüstung, keine Schrift, kein Logo und keine weiteren Personen.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für den futuristischen Material- und Lichtstil. Erstelle ein einzelnes Ganzkörperbild im Format 4:5 in einem hellen Raumschiff-Korridor. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Ergänze an der vorhandenen Kleidung nur dezente leuchtende Nähte. Ganze Figur sichtbar, keine Rüstung, keine Schrift, kein Logo und keine weitere Person.
 ```
+
+![Ergebnis des zweiten Prompts: vollständige Zukunftsfigur im Raumschiff-Korridor](/images/blog/ki-bildprompts/followups/23-future-version-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die Zukunftsversion ist nun als vollständige Figur brauchbar. Der Look bleibt an der ursprünglichen Kleidung verankert und kippt nicht in eine beliebige Rüstung.</p>
+</div>
 
 ## 24. `/pastVersion`: fast keine Veränderung
 
@@ -172,9 +290,24 @@ Dieser Begriff war überraschend schwach. Das Ergebnis ähnelte dem Ausgangsbild
 
 **Nützlich für:** Erst nach genauer Angabe von Jahr, Ort und Kleidung.
 
+**Was der zweite Prompt macht:** Er ersetzt das vage „früher“ durch eine konkrete Epoche, einen Ort, passende Kleidung und eine historische Fototechnik.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als feste Identitätsreferenz; das fast unveränderte Kurzprompt-Ergebnis wird nicht benötigt.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle eine Version derselben Person im Berlin des Jahres 1925. Zeittypischer dunkler Anzug, weißes Hemd, analoges Schwarzweiß-Fotoporträt und historischer Studiohintergrund. Gesichtsform und Bart erhalten. Keine moderne Brille, kein Hoodie, kein Text und kein Logo.
+Nutze das hochgeladene Porträt als feste Personenreferenz. Erstelle eine Version derselben Person in [[ORT]] im Jahr [[JAHR]]. Kleidung: [[ZEITTYPISCHE KLEIDUNG]]. Fotostil: authentisch wirkendes analoges Schwarzweißporträt der Epoche mit passendem Studiohintergrund, Licht, Körnung und Kontrast. Erhalte Identität und natürliche Gesichtsmerkmale, entferne aber sichtbar moderne Kleidung und Accessoires. Kein Text und kein Logo.
 ```
+
+**Für dieses Beispiel eingesetzt:** Berlin im Jahr 1925, dunkler Anzug mit hellem Hemd und historisches Studioporträt.
+
+![Ergebnis des zweiten Prompts: analoges Porträt im Stil Berlins von 1925](/images/blog/ki-bildprompts/followups/24-past-version-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Im Gegensatz zum Ein-Wort-Versuch ist die Epoche nun sofort an Kleidung, Schwarzweißlook, Licht und Studiokulisse erkennbar.</p>
+</div>
 
 ## 25. `/alternateReality`: neue Rolle, gleiche Person
 
@@ -188,9 +321,24 @@ Die KI verwandelte die Person in eine futuristische Maker- oder Technikerfigur v
 
 **Nützlich für:** Rollenideen, Worldbuilding, Character Design und visuelle Was-wäre-wenn-Fragen.
 
+**Was der zweite Prompt macht:** Er definiert Beruf, Welt, Kleidung und Bildformat, damit aus „alternative Realität“ eine konkrete erzählbare Rolle wird.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und optional das erste Alternate-Reality-Bild als Bild 2 für die grüne Zukunftsstimmung.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle eine alternative Realität, in der dieselbe Person Betreiber einer nachhaltigen Zukunftswerkstatt ist. 16:9, moderne grüne Stadt im Hintergrund, funktionale dunkle Jacke, orange Brille als Wiedererkennungsmerkmal. Keine Marken, keine Schrift und keine weiteren Versionen.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 höchstens als Referenz für die allgemeine Weltstimmung. Erstelle eine alternative Realität, in der die Person [[ROLLE ODER BERUF]] ist. Format 16:9, Umgebung [[WELT ODER ORT]], Kleidung [[KLEIDUNG]]. Übernimm Identität, Accessoires und andere erkennbare Merkmale aus Bild 1. Zeige eine konkrete glaubwürdige Tätigkeit, keine zweite Version der Person, keine Marke, keine Schrift und kein Logo.
 ```
+
+**Für dieses Beispiel eingesetzt:** Betreiber einer nachhaltigen Zukunftswerkstatt in einer begrünten Stadt, mit funktionaler dunkler Arbeitsjacke beim Reparieren eines kleinen Geräts.
+
+![Ergebnis des zweiten Prompts: Betreiber einer nachhaltigen Zukunftswerkstatt](/images/blog/ki-bildprompts/followups/25-alternate-reality-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die alternative Realität zeigt jetzt nicht nur einen neuen Hintergrund, sondern eine konkrete Rolle und Handlung in einer schlüssigen Zukunftswelt.</p>
+</div>
 
 ## Was diese Prompts wirklich leisten
 

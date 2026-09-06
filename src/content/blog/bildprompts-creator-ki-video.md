@@ -3,7 +3,7 @@ title: "Bildprompts für Creator und KI-Videos"
 seoTitle: "KI-Bildprompts für Creator & KI-Videos"
 slug: "bildprompts-creator-ki-video"
 date: "2026-08-31"
-description: "Sechs Mini-Prompts für Brandboard, Verpackung, Merch, Kontaktbogen, Storyboard und Start-/Endbilder plus eine konkrete KI-Video-Pipeline."
+description: "Sechs Mini-Prompts für Brandboard, Verpackung, Merch, Kontaktbogen, Storyboard und Start-/Endbilder als Vorbereitung für spätere KI-Videos."
 tags: ["ki-bilder", "prompts", "creator", "ki-video", "storyboard"]
 category: "ki-tools"
 draft: false
@@ -29,6 +29,8 @@ Diese sechs Begriffe zielen genau auf diese Pipeline. Einige liefern überrasche
 
 ![Ausgangsporträt für die Creator- und Video-Tests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Der zweite Prompt erklärt einen konkreten Folgeauftrag, nennt die benötigten Uploads und bleibt durch austauschbare Angaben kopierbar. Das Bild direkt darunter ist jeweils das tatsächlich erzeugte Ergebnis.
+
 ## 81. `/brandBoard`: Eine komplette Marke aus dem Nichts
 
 ```prompt
@@ -41,9 +43,24 @@ Das Modell baute ein vollständiges Brandboard mit Logo, Mission, Vision, Farbwe
 
 **Wofür sinnvoll:** Als schneller Richtungsvergleich für Personal Branding, Kanaldesign oder ein internes Moodboard. Nicht als fertige Marke und nicht als Ersatz für Namens-, Marken- oder Lesbarkeitsprüfung.
 
+**Was der zweite Prompt macht:** Er begrenzt das Board auf vorgegebene Werte, Farben und Anwendungen. Erfundenes Markenversprechen und scheinbar fertige Strategie fallen weg.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt oder Hauptmotiv als Bild 1 und das erste Brandboard als Bild 2 für den groben Aufbau. Eigene Logos nur zusätzlich hochladen, wenn du sie wirklich verwenden darfst.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle ein Brandboard für [NAME/PROJEKT] anhand meines Porträts. Verwende ausschließlich diese Markenwerte: [WERT 1 bis 3]. Farbpalette: [FARBEN]. Schriftstimmung: [BESCHREIBUNG]. Zeige Porträt, eine einfache eigenständige Wortmarken-Idee, Farbflächen, zwei Typografie-Richtungen und drei neutrale Anwendungen. Verwende keine erfundene Mission, keine fremden Logos und keine Produktversprechen. Querformat 16:9.
+Nutze Bild 1 als feste Personen- oder Motivreferenz und Bild 2 nur als Referenz für den groben Board-Aufbau. Erstelle ein Brand-Moodboard für [[NAME ODER PROJEKT]]. Verwende ausschließlich diese drei Markenwerte: [[WERT 1]], [[WERT 2]] und [[WERT 3]]. Farbpalette: [[FARBEN]]. Schriftstimmung: [[BESCHREIBUNG]]. Zeige das Referenzmotiv, vier klare Farbflächen, zwei typografische Stimmungen ohne lesbaren Beispieltext und drei neutrale Anwendungen. Keine erfundene Mission, keine Produktversprechen, keine fremden Logos und keine zusätzlichen Behauptungen. Querformat 16:9.
 ```
+
+**Für dieses Beispiel eingesetzt:** Nordlicht Studio; warm, klar und neugierig; Türkis, Orange, Anthrazit und warmes Weiß; geometrisch und freundlich.
+
+![Ergebnis des zweiten Prompts: begrenztes Brand-Moodboard ohne erfundene Versprechen](/images/blog/ki-bildprompts/followups/81-brand-board-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Farben, Motiv und Anwendungen bilden eine erkennbare Richtung. Das Board behauptet aber weder Mission noch Produkteigenschaften und bleibt dadurch ehrlich ein Moodboard.</p>
+</div>
 
 ## 82. `/packagingBoard`: Verpackung plus erfundene Versprechen
 
@@ -59,9 +76,24 @@ Visuell ist das ein starkes Mockup. Inhaltlich wäre eine Veröffentlichung ohne
 
 **Wofür sinnvoll:** Für frühe Verpackungsrichtungen, Pitch-Mockups und Größenverhältnisse. Alle Claims, Kennzeichnungen und Pflichtangaben müssen aus verlässlichen Produktdaten kommen.
 
+**Was der zweite Prompt macht:** Er zeigt drei unterschiedliche Verpackungsrichtungen nur über Form, Material und Farbe. Leistungsversprechen und erfundene Prüfzeichen sind ausdrücklich ausgeschlossen.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt oder Markenmotiv als Bild 1 und das erste Packaging-Board als Bild 2 für Produktgröße und Präsentationswinkel.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle ein Packaging-Moodboard mit drei unterschiedlichen Verpackungsrichtungen für [PRODUKT]. Zeige jeweils nur Form, Farbflächen und Platzhalterzonen. Verwende mein Porträt klein als Markenreferenz. Keine Leistungsversprechen, keine Prüfzeichen, keine Prozentwerte, keine Inhaltsstoffe und keine erfundenen Zertifikate. Schreibe nur „NAME“, „PRODUKT“ und „INFO“. Weißer Hintergrund, Querformat 16:9, keine reale Marke.
+Nutze Bild 1 als feste Motivreferenz und Bild 2 nur als Referenz für Produktgröße und Präsentationswinkel. Erstelle ein Packaging-Moodboard mit genau drei klar getrennten Verpackungsrichtungen für [[PRODUKT]]: [[RICHTUNG 1]], [[RICHTUNG 2]] und [[RICHTUNG 3]]. Zeige ausschließlich Verpackungsform, Material, Farbflächen und leere Platzhalterzonen. Setze das Motiv aus Bild 1 klein und dezent ein. Keine Leistungsversprechen, Prüfzeichen, Prozentwerte, Inhaltsstoffe, Zertifikate, lesbare Schrift oder reale Marke. Heller neutraler Hintergrund, Querformat 16:9.
 ```
+
+**Für dieses Beispiel eingesetzt:** Kameragurt; naturfarbener Karton, dunkle Schiebebox und helle Stoffhülle.
+
+![Ergebnis des zweiten Prompts: drei textfreie Verpackungsrichtungen für einen Kameragurt](/images/blog/ki-bildprompts/followups/82-packaging-board-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die drei Richtungen lassen Material und Form vergleichen, ohne eine Produktwirkung zu erfinden. Pflichtangaben und echte Beschriftung müssten später separat gestaltet werden.</p>
+</div>
 
 ## 83. `/merchMockup`: Sofort auf Hoodie, Tasse, Shirt und Tasche
 
@@ -75,9 +107,24 @@ Das Modell setzte das Porträt auf fünf Produkte. Dadurch lässt sich schnell e
 
 **Wofür sinnvoll:** Für Produktauswahl, erste Shopideen, Community-Abstimmungen oder die Frage, welches Motiv auf welcher Fläche funktioniert.
 
+**Was der zweite Prompt macht:** Er reduziert den Test auf vier feste Produkte und verwendet überall dieselbe freigestellte Illustration statt eines rechteckig aufgedruckten Fotos.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt oder Motiv als Bild 1 und das erste Merch-Mockup als Bild 2 für Größenverhältnisse und Studioaufbau.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle ein neutrales Merch-Mockup mit genau vier Produkten: schwarzer Hoodie, weiße Tasse, weißes T-Shirt und naturfarbene Stofftasche. Verwende auf jedem Produkt dieselbe freigestellte Illustration meines Kopfes mit Glatze, Bart und orangefarbener Brille. Kein rechteckiger Fotohintergrund. Realistische Druckgröße und Stofffalten, hellgrauer Studiohintergrund, Querformat 16:9, keine Marken und kein zusätzlicher Text.
+Nutze Bild 1 als feste Motivreferenz und Bild 2 nur als Referenz für Größenverhältnisse und Studioaufbau. Erstelle ein neutrales Merch-Mockup mit genau vier Produkten: [[PRODUKT 1]], [[PRODUKT 2]], [[PRODUKT 3]] und [[PRODUKT 4]]. Verwende auf jedem Produkt dieselbe vereinfachte freigestellte Illustration des Motivs aus Bild 1. Kein rechteckiger Fotohintergrund. Zeige realistische Druckgrößen, Materialfalten und natürliche Perspektiven. Heller Studiohintergrund, Querformat 16:9, keine Marke und kein zusätzlicher Text.
 ```
+
+**Für dieses Beispiel eingesetzt:** Schwarzer Hoodie, weiße Tasse, weißes T-Shirt und naturfarbene Stofftasche.
+
+![Ergebnis des zweiten Prompts: vier Merch-Produkte mit derselben freigestellten Illustration](/images/blog/ki-bildprompts/followups/83-merch-mockup-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Dasselbe vereinfachte Motiv ist nun auf allen vier Oberflächen vergleichbar. Es liegt nicht mehr als komplettes rechteckiges Porträt auf den Produkten.</p>
+</div>
 
 ## 84. `/contactSheet`: Die wichtigste Referenz für weitere Bilder
 
@@ -93,19 +140,46 @@ Genau so ein Blatt ist wertvoll, wenn eine Person später in mehreren Szenen auf
 
 **Wofür sinnvoll:** Für KI-Video-Referenzen, Charakterentwicklung, 3D-Moodboards, Storyboards und die Auswahl eines konkreten Blickwinkels.
 
+**Was der zweite Prompt macht:** Er erzeugt sechs fest definierte Blickwinkel unter möglichst gleichen Bedingungen. Die Ziffern dienen als robuste Auswahlhilfe und ersetzen fehleranfällige KI-Beschriftungen.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Contact-Sheet als Bild 2 für Raster, Ausschnitt und ungefähre Drehungen.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle ein konsistentes Kontaktblatt der Person aus meinem Referenzfoto mit sechs Ansichten: Front, 3/4 links, linkes Profil, 3/4 rechts, rechtes Profil und Rücken. Gleiche Kleidung, gleiche orange Brille, gleicher Bart, gleiche Brennweite und identische weiche Studiobeleuchtung in jedem Feld. Weißer Hintergrund, 3×2-Raster, kurze deutsche Labels, keine zusätzlichen Posen und kein Logo.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Raster, Ausschnitt und ungefähre Drehungen. Erstelle ein konsistentes 3×2-Kontaktblatt mit genau sechs Ansichten in dieser Reihenfolge: 1 Front, 2 Dreiviertel links, 3 linkes Profil, 4 Dreiviertel rechts, 5 rechtes Profil und 6 Rücken. Halte Identität, Kleidung, Accessoires, Brennweite, Kamerahöhe und weiche Studiobeleuchtung möglichst konstant. Beschrifte jedes Feld nur mit der passenden Ziffer 1 bis 6. Neutraler Hintergrund, keine zusätzlichen Posen, keine Wörter und kein Logo.
 ```
+
+![Ergebnis des zweiten Prompts: nummeriertes Kontaktblatt mit sechs festen Blickwinkeln](/images/blog/ki-bildprompts/followups/84-contact-sheet-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die Blickwinkel folgen nun einer festen Reihenfolge und lassen sich über Ziffer, Position und Ansicht kontrollieren. Das Blatt ist damit eine bessere Referenz als sechs lose Bilder.</p>
+</div>
 
 ### So wähle ich eine Ansicht eindeutig aus
 
-Nur „nimm Bild vier“ ist unnötig riskant. Ich nenne Position und sichtbare Ansicht:
+Nur „nimm Bild vier“ ist unnötig riskant. Ich nenne Position und sichtbare Ansicht und lade das gerade erzeugte Blatt erneut hoch.
+
+**Was dieser Auswahl-Prompt macht:** Er führt das rechte Profil aus Feld 5 als einzelnes Querformat weiter und ergänzt links bewusst freie Fläche.
+
+**Dafür hochladen:** Das gerade erzeugte Kontaktblatt als Bild 1 und dein ursprüngliches Porträt als Bild 2 zur Identitätskontrolle.
+
+**Kopierbare Vorlage:**
 
 ```prompt
-Nutze den letzten Kontaktbogen als Referenz. Wähle ausschließlich Reihe 2, Spalte 2, gezählt von oben links. Gemeint ist das rechte Profil mit orangefarbener Brille und vollständig sichtbarem Bart. Erstelle daraus ein einzelnes hochauflösendes Porträt im Format 16:9 mit zusätzlichem freien Raum auf der linken Seite. Identität, Kleidung, Winkel und Licht bleiben gleich. Kein Raster, keine Beschriftung und keine weiteren Ansichten.
+Nutze aus Bild 1 ausschließlich das Feld in Reihe [[REIHE]], Spalte [[SPALTE]], gezählt von oben links. Gemeint ist die Ansicht [[SICHTBARE ANSICHT]]. Erstelle daraus ein einzelnes hochauflösendes Porträt im Format [[FORMAT]] mit zusätzlichem freien Raum auf der [[SEITE]]. Nutze Bild 2 zur Kontrolle von Identität, Kleidung, Accessoires und anderen erkennbaren Merkmalen. Winkel und Licht bleiben wie im gewählten Feld. Kein Raster, keine Beschriftung, keine Ziffer und keine weiteren Ansichten.
 ```
 
-Wenn das Modell trotzdem die falsche Zelle nimmt, schneide ich das gewünschte Feld grob aus und lade nur diesen Ausschnitt als neue Referenz hoch.
+**Für dieses Beispiel eingesetzt:** Reihe 2, Spalte 2, rechtes Profil, Format 16:9, freie Fläche links.
+
+![Ergebnis des Auswahl-Prompts: rechtes Profil aus Feld 5 mit Freiraum links](/images/blog/ki-bildprompts/followups/extra-contact-sheet-selection-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Das richtige Feld wurde als einzelnes Bild übernommen. Ziffer, Rasterposition und sichtbare Ansicht haben gemeinsam verhindert, dass ein anderes Profil ausgewählt wurde.</p>
+	<p>Wenn das Modell trotzdem die falsche Zelle nimmt, schneide ich das gewünschte Feld grob aus und lade nur diesen Ausschnitt als neue Referenz hoch.</p>
+</div>
 
 ## 85. `/storyboard`: Erfindet gleich einen ganzen Werbefilm
 
@@ -121,9 +195,24 @@ Das ist kreativ, aber nicht mein Briefing. Für eine echte Produktion muss zuers
 
 **Wofür sinnvoll:** Für Shotlisten, Reels, Werbeideen, Musikvideos, Erklärfilme und die Vorbereitung einzelner Keyframes.
 
+**Was der zweite Prompt macht:** Er bindet das Storyboard an eine vorgegebene Handlung. Sechs feste Bilder zeigen den Ablauf, ohne einen neuen Plot, Dialog oder Werbeslogan zu erfinden.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Storyboard als Bild 2 für Zeichenstil und Panelaufteilung.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle ein Storyboard mit sechs nummerierten Einstellungen für diesen Ablauf: [HANDLUNG IN 4 BIS 6 SÄTZEN]. Die Person aus meinem Referenzfoto ist in allen passenden Panels dieselbe. Gib pro Panel nur Einstellungsgröße, sichtbare Aktion und Kamerabewegung an. Schwarz-weiße Skizzen mit türkisen und orangefarbenen Akzenten, Querformat 16:9. Keine neue Handlung, kein erfundener Dialog, kein Slogan und kein Logo.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Zeichenstil und Panelaufteilung. Erstelle ein Storyboard mit genau sechs nummerierten Einstellungen für diesen Ablauf: [[HANDLUNG IN SECHS KLAREN SCHRITTEN]]. Halte die Person in allen Panels wiedererkennbar. Zeige pro Panel nur die beschriebene Aktion, eine passende Einstellungsgröße und eine einfache Richtung der Kamerabewegung als Pfeil. Schwarz-weiße Skizzen mit [[AKZENTFARBEN]], Querformat 16:9. Außer den Ziffern 1 bis 6 keine Schrift, keine neue Handlung, kein Dialog, kein Slogan und kein Logo.
 ```
+
+**Für dieses Beispiel eingesetzt:** Die Person kommt an einem Bergsee an, packt die Kamera aus, sucht den Bildausschnitt, fotografiert, prüft das Display und geht bei Abendlicht weiter; türkise und orange Akzente.
+
+![Ergebnis des zweiten Prompts: sechsteiliges Storyboard mit vorgegebenem Fotoablauf](/images/blog/ki-bildprompts/followups/85-storyboard-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die sechs Panels erzählen jetzt den vorgegebenen Fotoablauf statt einer erfundenen Barbershop-Werbung. Das bleibt eine Bildplanung, noch kein Video.</p>
+</div>
 
 ## 86. `/firstLastFrame`: Der zweite deutliche Fehlversuch
 
@@ -139,11 +228,26 @@ Der Fehlversuch ist nachvollziehbar: Ohne Handlung weiß das Modell weder, **was
 
 **Wofür sinnvoll:** Erst mit einer klaren Bewegung oder Transformation. Start- und Endbild sollten dieselbe Kamera, Umgebung und Identität haben.
 
+**Was der zweite Prompt macht:** Er definiert Anfang und Ende als zwei vergleichbare Bilder. Kamera, Umgebung und Person bleiben gleich; nur die ausdrücklich beschriebene Veränderung findet statt.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und optional das erste First-Last-Frame-Ergebnis als Bild 2, wenn dessen Filmrahmen ausdrücklich nicht übernommen werden soll.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Erstelle ein zweigeteiltes Referenzblatt für eine KI-Videosequenz. Links steht „START“: Die Person aus meinem Foto steht frontal vor einem geschlossenen weißen Werkstatttor, Arme locker, neutraler Ausdruck. Rechts steht „ENDE“: dieselbe Person, gleiche Kamera und gleiches Licht, das Tor ist geöffnet und die Person zeigt lächelnd auf die Werkstatt. Format 16:9, gleiche Kleidung und Identität, keine Zwischenbilder, keine Filmrahmen, kein Logo.
+Nutze Bild 1 als feste Personenreferenz. Falls Bild 2 vorhanden ist, nutze es nur als Negativbeispiel und übernimm keinen Filmrahmen. Erstelle ein zweigeteiltes Referenzblatt: links [[STARTSITUATION]], rechts [[ENDSITUATION]]. In beiden Hälften bleiben Person, Identität, Kleidung, Accessoires, Kamera, Brennweite, Licht und Umgebung gleich. Verändere ausschließlich [[GEPLANTE VERÄNDERUNG]]. Querformat 16:9, keine Zwischenbilder, keine Beschriftung, keine Filmstreifen, kein Text und kein Logo.
 ```
 
-## Meine konkrete Pipeline vom Porträt zum KI-Video
+**Für dieses Beispiel eingesetzt:** Links steht die Person frontal und neutral vor einem geschlossenen weißen Studiotor; rechts ist das Tor geöffnet und die Person zeigt lächelnd in das Fotostudio; nur Tor, Ausdruck und Armhaltung verändern sich.
+
+![Ergebnis des zweiten Prompts: konsistentes Start- und Endbild vor demselben Studiotor](/images/blog/ki-bildprompts/followups/86-first-last-frame-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Zum ersten Mal sind Anfang und Ende wirklich gleichzeitig sichtbar. Das Referenzblatt löst damit den Fehlversuch, ohne schon eine Bewegung zu simulieren.</p>
+</div>
+
+## Meine konkrete Bild-Pipeline für ein späteres KI-Video
 
 Hier wird aus den einzelnen Prompts ein zusammenhängender Ablauf:
 
@@ -153,14 +257,9 @@ Hier wird aus den einzelnen Prompts ein zusammenhängender Ablauf:
 4. **Storyboard erzeugen:** Mit sechs Panels Bildaufbau und Kamerabewegung planen.
 5. **Keyframe auswählen:** Ein konkretes Panel über Reihe, Spalte und sichtbare Handlung benennen.
 6. **Start und Ende separat bauen:** Beide Bilder mit identischem Format, Winkel, Licht und Hintergrund erzeugen.
-7. **Erst dann animieren:** Die Video-KI bekommt Referenzperson, Startbild, Endbild und eine kurze Bewegungsbeschreibung.
-8. **Frame für Frame prüfen:** Gesicht, Brille, Bart, Hände, Hintergrund und unerwartete Objektwechsel kontrollieren.
+7. **Bilder exportieren und prüfen:** Identität, Hände, Hintergrund, Auflösung und Seitenverhältnis kontrollieren, bevor ein separates Videowerkzeug ins Spiel kommt.
 
-Ein Beispiel für die Bewegungsbeschreibung:
-
-```prompt
-Die Person bleibt dieselbe und bewegt sich ruhig vom Startbild zum Endbild. Sie dreht den Oberkörper leicht nach rechts, hebt den rechten Arm und zeigt anschließend mit offener Hand in die Werkstatt. Die Kamera fährt sehr langsam 20 Zentimeter nach vorn. Keine neue Kleidung, keine zusätzlichen Personen, keine Änderung an Gesicht, Bart, Brille oder Hintergrundobjekten.
-```
+Bis hierhin bleibt der Ablauf vollständig bei Bildprompts. Eine echte Animation braucht ein Videomodell, eigene Einstellungen und eine erneute Sichtprüfung über die gesamte Sequenz. Das gehört deshalb in einen separaten Praxistest und nicht als einzelner ungetesteter Acht-Sekunden-Prompt in diese Bildserie.
 
 ## Was ist davon am wertvollsten?
 

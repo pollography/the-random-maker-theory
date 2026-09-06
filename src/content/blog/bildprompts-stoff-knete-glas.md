@@ -29,6 +29,8 @@ Diese Gruppe war im Test besonders konsistent. Jeder Mini-Prompt löste eine erk
 
 ![Ausgangsporträt für die Materialtests](/images/blog/ki-bildprompts/00-ausgangsbild.webp)
 
+Das erste Bild jedes Abschnitts bleibt der ehrliche Ein-Wort-Test. Der zweite Prompt ist ein kontrollierter Stilauftrag mit klarer Upload-Zuordnung. Seine Vorlage ist auf andere Porträts übertragbar; direkt darunter zeige ich jeweils das tatsächlich erzeugte Ergebnis.
+
 ## 69. `/scribble`: Eher Buntstift als schnelle Kritzelei
 
 ```prompt
@@ -41,9 +43,22 @@ Der Begriff führte nicht zu einer chaotischen Randkritzelei, sondern zu einer d
 
 **Wofür sinnvoll:** Für persönliche Avatare, Notizbuch-Cover, Erklärgrafiken, Thumbnail-Akzente oder eine illustrierte About-Seite.
 
+**Was der zweite Prompt macht:** Er steuert die Zeichnung bewusst in Richtung lockere Kritzelei mit Suchstrichen statt detailliertem Buntstiftporträt.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Scribble-Ergebnis als Bild 2 für Farbstimmung und Papierwirkung.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Zeichne die Person aus meinem Referenzfoto als lockere farbige Kritzelei auf weißem Papier. Verwende unregelmäßige Buntstift- und Finelinerlinien, sichtbare Suchstriche und wenige offene Flächen. Erhalte Glatze, langen Bart, orange Brille und türkisen Hoodie. Brustporträt, Hochformat 4:5, keine Schrift, kein Logo und kein fotorealistisches Finish.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Farbstimmung und Papierwirkung. Zeichne die Person als lockere farbige Kritzelei auf weißem Papier. Verwende unregelmäßige Buntstift- und Finelinerlinien, sichtbare Suchstriche und einige bewusst offene Flächen. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Brustporträt im Format 4:5, keine Schrift, kein Logo und kein fotorealistisches Finish.
 ```
+
+![Ergebnis des zweiten Prompts: lockeres Kritzelporträt mit offenen Linien](/images/blog/ki-bildprompts/followups/69-scribble-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die Zeichnung wirkt nun spontaner und unperfekter. Suchlinien und weiße Zwischenräume unterscheiden sie klar vom ersten detaillierten Ergebnis.</p>
+</div>
 
 ## 70. `/claymation`: Sichtbar modellierte Knete
 
@@ -57,9 +72,22 @@ Haut, Ohren, Brille, Bart und Hoodie sehen aus handgeformter Modelliermasse geba
 
 **Wofür sinnvoll:** Für Kinderinhalte, Erklärvideos, Kanalfiguren, animierte Intros, Storyboards oder ein spielerisches Profilbild.
 
+**Was der zweite Prompt macht:** Er betont Fingerabdrücke, Modellierkanten und einzelne Knetstränge, damit das Material wirklich handgemacht wirkt.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Claymation-Ergebnis als Bild 2 für Figurenproportionen und Knetmaterial.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Verwandle die Person aus meinem Referenzfoto in eine handgeformte Stop-Motion-Knetfigur. Sichtbare Fingerabdrücke und leicht unregelmäßige Kanten, einzelne modellierte Bartsträhnen, orange Knetbrille und türkiser Knet-Hoodie. Weiches Miniatur-Studiolicht, weißer Hintergrund, Brustporträt 4:5, kein Text und kein Logo.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Figurenproportionen und Knetmaterial. Verwandle die Person in eine handgeformte Stop-Motion-Knetfigur mit sichtbaren Fingerabdrücken, leicht unregelmäßigen Kanten und einzelnen modellierten Strukturen. Übernimm Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1. Weiches Miniatur-Studiolicht, weißer Hintergrund, Brustporträt 4:5, kein Text und kein Logo.
 ```
+
+![Ergebnis des zweiten Prompts: handmodellierte Knetfigur mit sichtbaren Spuren](/images/blog/ki-bildprompts/followups/70-claymation-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Fingerabdrücke und kleine Unregelmäßigkeiten sind jetzt Teil des Stils. Die Figur wirkt dadurch weniger wie glattes 3D und stärker wie Stop Motion.</p>
+</div>
 
 ## 71. `/plushToy`: Ein komplettes Stofftier
 
@@ -73,9 +101,22 @@ Aus dem Porträt wurde eine sitzende Plüschpuppe mit großen dunklen Augen, wei
 
 **Wofür sinnvoll:** Für Maskottchen, Geschenkideen, Kinderbuchfiguren, Shop-Mockups oder eine Produktumfrage vor einer echten Entwicklung.
 
+**Was der zweite Prompt macht:** Er fordert eine einzelne vollständige Plüschfigur mit textiler Umsetzung der sichtbaren Merkmale und ohne Verpackungszubehör.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Plush Toy als Bild 2 für sitzende Form und Stoffwirkung.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Entwirf eine eigenständige Plüschfigur nach der Person aus meinem Foto. Sitzende Form, weiche kurze Arme und Beine, freundlich gestickte Augen, sicher befestigte orange Stoffbrille, dunkelbrauner Plüschbart und türkiser Hoodie. Zeige die ganze Figur als neutrales Produktfoto von vorn. Weißer Hintergrund, quadratisch, keine Marke, kein Text und kein Zubehör.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für sitzende Form und Stoffwirkung. Entwirf eine eigenständige Plüschfigur mit weichen kurzen Armen und Beinen sowie freundlich gestickten Augen. Übertrage Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 in klare textile Formen. Zeige die ganze sitzende Figur frontal als quadratisches Produktfoto vor weißem Hintergrund. Keine Marke, kein Text und kein Zubehör.
 ```
+
+![Ergebnis des zweiten Prompts: einzelne sitzende Plüschfigur](/images/blog/ki-bildprompts/followups/71-plush-toy-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Die Figur ist vollständig, frontal und ohne Ablenkung zu sehen. Das macht sie als Produktidee leichter beurteilbar, ohne Herstellbarkeit zu versprechen.</p>
+</div>
 
 ## 72. `/amigurumi`: Gehäkelt bis in den Bart
 
@@ -89,9 +130,22 @@ Hier sind sogar Haut und Brille als Garnstruktur interpretiert. Die Figur hat ty
 
 **Wofür sinnvoll:** Als visuelle Vorlage für eine Häkelidee, Geschenk-Moodboard, Profilfigur oder Motiv einer Handarbeits-Community.
 
+**Was der zweite Prompt macht:** Er überträgt alle sichtbaren Merkmale konsequent in Garn und hält die Darstellung als einzelnes Produktfoto frei von Anleitungstext.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Amigurumi als Bild 2 für Maschenbild und Figurenproportionen.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Zeige eine handgehäkelte Amigurumi-Figur nach meinem Porträt. Runde Kopfform, hautfarbenes Garn, großer dunkelbrauner Garnbart, orange gehäkelte Brille und türkiser Hoodie aus sichtbaren Maschen. Frontales Produktfoto, weiches Licht, weißer Hintergrund, Format 4:5. Keine Anleitung, kein Text, kein Logo und keine zusätzlichen Gegenstände.
+Nutze Bild 1 als feste Personenreferenz und Bild 2 nur als Referenz für Maschenbild und Figurenproportionen. Zeige eine handgehäkelte Amigurumi-Figur mit runder Kopfform und deutlich sichtbaren Garnmaschen. Übertrage Identität, Kleidung, Accessoires und andere erkennbare Merkmale aus Bild 1 konsequent in gehäkelte Formen. Frontales 4:5-Produktfoto, weiches Licht, weißer Hintergrund. Keine Anleitung, kein Text, kein Logo und keine zusätzlichen Gegenstände.
 ```
+
+![Ergebnis des zweiten Prompts: einzelne Amigurumi-Figur mit sichtbaren Maschen](/images/blog/ki-bildprompts/followups/72-amigurumi-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Gesicht, Kleidung und Accessoires bestehen sichtbar aus Garn. Das Bild funktioniert als Moodboard, bleibt aber bewusst keine Häkelanleitung.</p>
+</div>
 
 <div class="rf-block rf-callout" role="note" aria-label="Hinweis zur Herstellung">
 	<span class="rf-label" aria-hidden="true">Wichtig</span>
@@ -110,9 +164,22 @@ Das Ergebnis sieht wie eine dichte Maschinenstickerei aus. Sogar Hautfalten, Bri
 
 **Wofür sinnvoll:** Für Patch-Ideen, Textil-Moodboards, Albumcover, Vereinsmotive oder die Frage, welche Flächen und Farben als Stickmotiv funktionieren könnten.
 
+**Was der zweite Prompt macht:** Er reduziert die Optik auf höchstens acht geschlossene Farbflächen und eine kräftige Kontur, ohne echte Produktionsdaten zu behaupten.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Embroidery-Ergebnis als Bild 2 für Garnstruktur und Stoffuntergrund.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Reduziere mein Porträt zu einem tatsächlich stickbaren Patch-Motiv mit höchstens acht Vollfarben. Klare geschlossene Flächen, kräftige Außenkontur, vereinfachter Bart, orange Brille und türkiser Hoodie. Keine feinen Hautdetails und keine Verläufe. Zeige den runden Patch auf neutralem Stoff, Format 1:1, ohne Text und ohne Logo.
+Nutze Bild 1 als feste Personen- oder Objektreferenz und Bild 2 nur als Referenz für Garnstruktur und Stoffuntergrund. Reduziere das Motiv zu einem stickbar wirkenden runden Patch mit höchstens acht Vollfarben, klaren geschlossenen Flächen und kräftiger Außenkontur. Vereinfache feine sichtbare Strukturen aus Bild 1, ohne die Wiedererkennbarkeit zu verlieren. Keine feinen Hautdetails, Verläufe, Schrift oder Logos. Zeige den Patch frontal auf neutralem Stoff im Format 1:1. Dies ist ein Stilkonzept, keine Stickdatei.
 ```
+
+![Ergebnis des zweiten Prompts: vereinfachtes Patch-Motiv auf Stoff](/images/blog/ki-bildprompts/followups/73-embroidery-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Große Farbflächen und die geschlossene Kontur sind klarer als im ersten Stickporträt. Für die Produktion müsste daraus trotzdem eine echte Stickdatei aufgebaut werden.</p>
+</div>
 
 ## 74. `/stainedGlass`: Das stärkste Kunstmotiv
 
@@ -126,9 +193,24 @@ Der Prompt verwandelte das Porträt in ein leuchtendes Glasfenster aus Blau, Gol
 
 **Wofür sinnvoll:** Für Poster, Musikcover, Fantasy-Artwork, Einladungskarten, symbolische Porträts oder ein starkes Thumbnail ohne zusätzlichen Text.
 
+**Was der zweite Prompt macht:** Er vereinfacht das Porträt in große symmetrische Glasflächen und begrenzt die Farbpalette auf vier Farbfamilien.
+
+**Dafür hochladen:** Dein ursprüngliches Porträt als Bild 1 und das erste Stained Glass als Bild 2 für Glasleuchten, Bleilinien und symmetrischen Aufbau.
+
+**Kopierbare Vorlage:**
+
 ```prompt
-Gestalte ein eigenständiges Glasfenster-Porträt nach meinem Referenzfoto. Große herstellbar wirkende Glasflächen, klare dunkle Bleilinien, symmetrischer Aufbau. Farbpalette aus Türkis, tiefem Blau, Orange und warmem Gold. Die Person bleibt freundlich erkennbar, der Bart wird in wenige große Segmente vereinfacht. Hochformat 2:3, kein religiöses Symbol, kein Text und kein Logo.
+Nutze Bild 1 als feste Personen- oder Objektreferenz und Bild 2 nur als Referenz für Glasleuchten, Bleilinien und symmetrischen Aufbau. Gestalte ein eigenständiges Glasfenster-Motiv aus großen zusammenhängenden Glasflächen und klaren dunklen Bleilinien. Verwende ausschließlich [[VIER FARBEN ODER FARBFAMILIEN]]. Vereinfache kleine Details des Motivs aus Bild 1 in wenige große Segmente, ohne die Wiedererkennbarkeit zu verlieren. Hochformat 2:3, keine religiösen Symbole, kein Text und kein Logo.
 ```
+
+**Für dieses Beispiel eingesetzt:** Türkis, tiefes Blau, Orange und warmes Gold.
+
+![Ergebnis des zweiten Prompts: symmetrisches Glasfenster aus vier Farbfamilien](/images/blog/ki-bildprompts/followups/74-stained-glass-followup.webp)
+
+<div class="rf-block rf-callout" role="note" aria-label="Ergebnis">
+	<span class="rf-label" aria-hidden="true">Ergebnis</span>
+	<p>Das neue Motiv wirkt ruhiger und konstruktiver. Die Person bleibt durch die großen farbigen Segmente erkennbar, ohne kleinteilige Glasstücke zu überladen.</p>
+</div>
 
 ## Welcher Stil passt zu welchem Ziel?
 
