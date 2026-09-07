@@ -1,13 +1,63 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
-	let { data, title = 'Konzept-Map' } = $props();
+	interface MindMapNode {
+		name: string;
+		children?: MindMapNode[];
+	}
 
-	let canvas = $state(null);
+	interface Props {
+		data?: MindMapNode;
+		title?: string;
+	}
+
+	type SeoNode = {
+		name: string;
+		depth: number;
+	};
+
+	type FlatNode = {
+		idx: number;
+		name: string;
+		depth: number;
+		parentIdx: number;
+		x: number;
+		y: number;
+		z: number;
+		px: number;
+		py: number;
+		ps: number;
+	};
+
+	type Pulse = {
+		t: number;
+		speed: number;
+		reverse: boolean;
+	};
+
+	type Link = {
+		from: number;
+		to: number;
+		depth: number;
+		pulses: Pulse[];
+	};
+
+	type Particle = {
+		x: number;
+		y: number;
+		vx: number;
+		vy: number;
+		r: number;
+		baseAlpha: number;
+	};
+
+	let { data, title = 'Konzept-Map' }: Props = $props();
+
+	let canvas: HTMLCanvasElement;
 
 	// Flatten data tree for SEO fallback
-	function flattenForSEO(node, depth = 0) {
-		const items = [{ name: node.name, depth }];
+	function flattenForSEO(node: MindMapNode, depth = 0): SeoNode[] {
+		const items: SeoNode[] = [{ name: node.name, depth }];
 		if (node.children) {
 			for (const child of node.children) {
 				items.push(...flattenForSEO(child, depth + 1));
@@ -16,7 +66,7 @@
 		return items;
 	}
 
-	const seoNodes = data ? flattenForSEO(data) : [];
+	let seoNodes = $derived(data ? flattenForSEO(data) : []);
 	let hoveredName = $state('');
 	// Respect prefers-reduced-motion for accessibility
 	const prefersReducedMotion = typeof window !== 'undefined'
@@ -26,8 +76,12 @@
 
 	onMount(() => {
 		if (!canvas || !data) return;
+		const canvasEl = canvas;
+		const rootData = data;
+		const ctx = canvasEl.getContext('2d');
+		if (!ctx) return;
 
-		let animFrame;
+		let animFrame = 0;
 		let rotX = -0.25;
 		let rotY = 0;
 		let zoom = 1;
@@ -37,10 +91,11 @@
 		let prevHoveredIdx = -1;
 
 		// ── Build flat node + link lists ─────────────────────────────────────────
-		const nodes = [];
-		const links = [];
+		const nodes: FlatNode[] = [];
+		const links: Link[] = [];
+		const cascadeTimeouts = new Set<number>();
 
-		function flatten(node, parentIdx, depth, theta, thetaSpread) {
+		function flatten(node: MindMapNode, parentIdx: number, depth: number, theta: number, thetaSpread: number) {
 			const idx = nodes.length;
 			const radii = [0, 160, 280, 370];
 			const r = radii[Math.min(depth, 3)];
@@ -65,7 +120,7 @@
 			}
 		}
 
-		flatten(data, -1, 0, 0, Math.PI * 2);
+		flatten(rootData, -1, 0, 0, Math.PI * 2);
 
 		// Evenly distribute depth-1 nodes around Y axis
 		const d1 = nodes.filter((n) => n.depth === 1);
@@ -78,7 +133,7 @@
 
 		// ── Particles (screen-space, 2D) ─────────────────────────────────────────
 		const PARTICLE_COUNT = 110;
-		const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
+		const particles: Particle[] = Array.from({ length: PARTICLE_COUNT }, () => ({
 			x: (Math.random() - 0.5) * 800,
 			y: (Math.random() - 0.5) * 500,
 			vx: (Math.random() - 0.5) * 0.3,
@@ -88,7 +143,7 @@
 		}));
 
 		// ── Projection ───────────────────────────────────────────────────────────
-		function project(x, y, z) {
+		function project(x: number, y: number, z: number) {
 			const cy = Math.cos(rotY), sy = Math.sin(rotY);
 			const cx2 = Math.cos(rotX), sx = Math.sin(rotX);
 			const x1 = x * cy + z * sy;
@@ -101,7 +156,7 @@
 		}
 
 		// ── Pulse helpers ────────────────────────────────────────────────────────
-		function spawnPulse(fromIdx, toIdx, reverse = false) {
+		function spawnPulse(fromIdx: number, toIdx: number, reverse = false) {
 			const link = links.find(l =>
 				reverse ? (l.from === toIdx && l.to === fromIdx) || (l.from === fromIdx && l.to === toIdx)
 					: l.from === fromIdx && l.to === toIdx
@@ -115,11 +170,15 @@
 			});
 		}
 
-		function triggerPulseCascade(fromIdx, depth = 0) {
+		function triggerPulseCascade(fromIdx: number, depth = 0) {
 			if (depth > 2) return;
 			links.filter(l => l.from === fromIdx).forEach(l => {
 				spawnPulse(fromIdx, l.to);
-				setTimeout(() => triggerPulseCascade(l.to, depth + 1), 300 + depth * 200);
+				const timeoutId = window.setTimeout(() => {
+					cascadeTimeouts.delete(timeoutId);
+					triggerPulseCascade(l.to, depth + 1);
+				}, 300 + depth * 200);
+				cascadeTimeouts.add(timeoutId);
 			});
 			// Also animate upward to parent
 			const node = nodes[fromIdx];
@@ -135,10 +194,9 @@
 
 		// ── Draw ─────────────────────────────────────────────────────────────────
 		function draw() {
-			if (!canvas) return;
-			const ctx = canvas.getContext('2d');
-			const W = canvas.width;
-			const H = canvas.height;
+			if (!ctx) return;
+			const W = canvasEl.width;
+			const H = canvasEl.height;
 			const cx = W / 2;
 			const cy2 = H / 2;
 
@@ -151,8 +209,8 @@
 
 			// ── Particles ──
 			const hovNode = hoveredIdx >= 0 ? nodes[hoveredIdx] : null;
-			const targetX = hovNode ? hovNode.px - cx : null;
-			const targetY = hovNode ? hovNode.py - cy2 : null;
+			const targetX = hovNode ? hovNode.px - cx : 0;
+			const targetY = hovNode ? hovNode.py - cy2 : 0;
 
 			for (const p of particles) {
 				if (hovNode !== null) {
@@ -259,7 +317,7 @@
 			for (const n of sortedNodes) {
 				const nx = cx + n.sx;
 				const ny = cy2 + n.sy;
-				const baseR = [10, 7, 5, 3.5][Math.min(n.depth, 3)];
+				const baseR = [10, 7, 5, 3.5][Math.min(n.depth, 3)] ?? 3.5;
 				const r = baseR * Math.max(0.3, n.s) * zoom;
 				const color = NODE_COLORS[Math.min(n.depth, 3)];
 				const isHov = n.idx === hoveredIdx;
@@ -320,30 +378,30 @@
 
 		// ── Resize ───────────────────────────────────────────────────────────────
 		function resize() {
-			canvas.width = canvas.offsetWidth;
-			canvas.height = canvas.offsetHeight;
+			canvasEl.width = canvasEl.offsetWidth;
+			canvasEl.height = canvasEl.offsetHeight;
 		}
 		resize();
 		const ro = new ResizeObserver(resize);
-		ro.observe(canvas);
+		ro.observe(canvasEl);
 
 		// ── Input handlers ────────────────────────────────────────────────────────
-		canvas.addEventListener('mousedown', (e) => {
+		const handleMouseDown = (event: MouseEvent) => {
 			dragging = true;
 			isAutoRotating = false;
-			lastMouse = { x: e.clientX, y: e.clientY };
-		});
+			lastMouse = { x: event.clientX, y: event.clientY };
+		};
 
-		canvas.addEventListener('mousemove', (e) => {
+		const handleMouseMove = (event: MouseEvent) => {
 			if (dragging) {
-				rotY += (e.clientX - lastMouse.x) * 0.006;
-				rotX += (e.clientY - lastMouse.y) * 0.006;
+				rotY += (event.clientX - lastMouse.x) * 0.006;
+				rotX += (event.clientY - lastMouse.y) * 0.006;
 				rotX = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, rotX));
-				lastMouse = { x: e.clientX, y: e.clientY };
+				lastMouse = { x: event.clientX, y: event.clientY };
 			}
-			const rect = canvas.getBoundingClientRect();
-			const mx = e.clientX - rect.left;
-			const my = e.clientY - rect.top;
+			const rect = canvasEl.getBoundingClientRect();
+			const mx = event.clientX - rect.left;
+			const my = event.clientY - rect.top;
 			hoveredIdx = -1;
 			hoveredName = '';
 			for (const n of nodes) {
@@ -360,54 +418,81 @@
 				triggerPulseCascade(hoveredIdx);
 			}
 			prevHoveredIdx = hoveredIdx;
-		});
+		};
 
-		canvas.addEventListener('mouseup', () => { dragging = false; });
-		canvas.addEventListener('mouseleave', () => {
+		const handleMouseUp = () => { dragging = false; };
+		const handleMouseLeave = () => {
 			dragging = false; hoveredIdx = -1; hoveredName = ''; prevHoveredIdx = -1;
-		});
+		};
 
-		canvas.addEventListener('wheel', (e) => {
-			e.preventDefault();
-			zoom *= e.deltaY > 0 ? 0.94 : 1.06;
+		const handleWheel = (event: WheelEvent) => {
+			event.preventDefault();
+			zoom *= event.deltaY > 0 ? 0.94 : 1.06;
 			zoom = Math.max(0.25, Math.min(4, zoom));
-		}, { passive: false });
+		};
 
-		canvas.addEventListener('dblclick', () => {
+		const handleDoubleClick = () => {
 			isAutoRotating = !isAutoRotating;
-		});
+		};
 
 		// Click: pulse burst from clicked node
-		canvas.addEventListener('click', () => {
+		const handleClick = () => {
 			if (hoveredIdx >= 0) {
 				// Spawn pulses on all adjacent links
 				links.filter(l => l.from === hoveredIdx || l.to === hoveredIdx).forEach(l => {
 					l.pulses.push({ t: 0, speed: 0.005 + Math.random() * 0.002, reverse: l.to === hoveredIdx });
 				});
 			}
-		});
+		};
 
 		// Touch
-		canvas.addEventListener('touchstart', (e) => {
+		const handleTouchStart = (event: TouchEvent) => {
+			const touch = event.touches.item(0);
+			if (!touch) return;
 			dragging = true;
 			isAutoRotating = false;
-			lastMouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-		}, { passive: true });
-		canvas.addEventListener('touchmove', (e) => {
+			lastMouse = { x: touch.clientX, y: touch.clientY };
+		};
+		const handleTouchMove = (event: TouchEvent) => {
 			if (!dragging) return;
-			rotY += (e.touches[0].clientX - lastMouse.x) * 0.006;
-			rotX += (e.touches[0].clientY - lastMouse.y) * 0.006;
+			const touch = event.touches.item(0);
+			if (!touch) return;
+			rotY += (touch.clientX - lastMouse.x) * 0.006;
+			rotX += (touch.clientY - lastMouse.y) * 0.006;
 			rotX = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, rotX));
-			lastMouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
-			e.preventDefault();
-		}, { passive: false });
-		canvas.addEventListener('touchend', () => { dragging = false; });
+			lastMouse = { x: touch.clientX, y: touch.clientY };
+			event.preventDefault();
+		};
+		const handleTouchEnd = () => { dragging = false; };
+
+		canvasEl.addEventListener('mousedown', handleMouseDown);
+		canvasEl.addEventListener('mousemove', handleMouseMove);
+		canvasEl.addEventListener('mouseup', handleMouseUp);
+		canvasEl.addEventListener('mouseleave', handleMouseLeave);
+		canvasEl.addEventListener('wheel', handleWheel, { passive: false });
+		canvasEl.addEventListener('dblclick', handleDoubleClick);
+		canvasEl.addEventListener('click', handleClick);
+		canvasEl.addEventListener('touchstart', handleTouchStart, { passive: true });
+		canvasEl.addEventListener('touchmove', handleTouchMove, { passive: false });
+		canvasEl.addEventListener('touchend', handleTouchEnd);
 
 		draw();
 
 		return () => {
 			cancelAnimationFrame(animFrame);
 			ro.disconnect();
+			for (const timeoutId of cascadeTimeouts) window.clearTimeout(timeoutId);
+			cascadeTimeouts.clear();
+			canvasEl.removeEventListener('mousedown', handleMouseDown);
+			canvasEl.removeEventListener('mousemove', handleMouseMove);
+			canvasEl.removeEventListener('mouseup', handleMouseUp);
+			canvasEl.removeEventListener('mouseleave', handleMouseLeave);
+			canvasEl.removeEventListener('wheel', handleWheel);
+			canvasEl.removeEventListener('dblclick', handleDoubleClick);
+			canvasEl.removeEventListener('click', handleClick);
+			canvasEl.removeEventListener('touchstart', handleTouchStart);
+			canvasEl.removeEventListener('touchmove', handleTouchMove);
+			canvasEl.removeEventListener('touchend', handleTouchEnd);
 		};
 	});
 </script>
@@ -418,14 +503,15 @@
 		Mind Map — {data?.name ?? 'Concept Map'}
 	</div>
 
-	<canvas
-		bind:this={canvas}
-		class="mm-canvas"
-		style="cursor: grab;"
-		role="img"
-		aria-label="Interaktive 3D Konzept-Map: {title}"
-		title="Drag to rotate · Scroll to zoom · Double-click to toggle auto-rotate"
-	></canvas>
+	<div class="mm-canvas-frame" role="img" aria-label="Interaktive 3D Konzept-Map: {title}">
+		<canvas
+			bind:this={canvas}
+			class="mm-canvas"
+			style="cursor: grab;"
+			aria-hidden="true"
+			title="Drag to rotate · Scroll to zoom · Double-click to toggle auto-rotate"
+		></canvas>
+	</div>
 
 	<!-- SEO Fallback: sr-only HTML tree for Google indexing (Canvas content is invisible to crawlers) -->
 	<div class="sr-only">
