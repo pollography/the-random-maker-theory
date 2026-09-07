@@ -19,6 +19,7 @@
 	));
 
 	// Ensure ISO 8601 dates with timezone for Schema.org
+	/** @param {string} dateStr */
 	function toISO(dateStr) {
 		if (!dateStr) return '';
 		if (dateStr.includes('T')) return dateStr;
@@ -57,7 +58,9 @@
 		scrollProgress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 	}
 
+	/** @param {string | undefined} src @param {string} alt */
 	function openLightbox(src, alt) {
+		if (!src) return;
 		lightboxSrc = src;
 		lightboxAlt = alt || '';
 		lightboxOpen = true;
@@ -69,19 +72,28 @@
 		document.body.style.overflow = '';
 	}
 
+	/** @param {KeyboardEvent} e */
 	function handleKeydown(e) {
 		if (e.key === 'Escape' && lightboxOpen) closeLightbox();
 	}
 
 	// Make all prose images clickable after content renders
+	/** @param {HTMLElement} node */
 	function initProseImages(node) {
-		const imgs = node.querySelectorAll('img');
-		imgs.forEach((img) => {
+		const listeners = Array.from(node.querySelectorAll('img'), (img) => {
+			const open = () => openLightbox(img.src, img.alt);
 			img.style.cursor = 'zoom-in';
 			img.loading = 'lazy';
 			img.decoding = 'async';
-			img.addEventListener('click', () => openLightbox(img.src, img.alt));
+			img.addEventListener('click', open);
+			return { img, open };
 		});
+
+		return {
+			destroy() {
+				for (const { img, open } of listeners) img.removeEventListener('click', open);
+			}
+		};
 	}
 </script>
 
