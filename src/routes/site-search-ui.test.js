@@ -43,3 +43,11 @@ test('search controls keep 44px targets and responsive layouts', async () => {
 	assert.match(search, /@media \(prefers-reduced-motion: reduce\)/);
 	assert.match(results, /min-height:\s*44px/);
 });
+
+test('homepage editorial bridge clips its background with the shared rounded geometry', async () => {
+	const homepage = await read('src', 'routes', '+page.svelte');
+	const rule = homepage.match(/\.homepage-context\s*\{[^}]+\}/)?.[0] ?? '';
+
+	assert.match(rule, /overflow:\s*hidden/);
+	assert.match(rule, /border-radius:\s*var\(--radius-xl\)/);
+});

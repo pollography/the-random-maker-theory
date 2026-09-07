@@ -246,7 +246,7 @@
 
 	.editorial-posts { display: grid; gap: 20px; }
 	.secondary-posts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 18px; }
-	.homepage-context { position: relative; display: grid; grid-template-columns: minmax(210px, .78fr) minmax(0, 2fr); gap: clamp(26px, 4vw, 52px); margin: 34px auto 0; padding: clamp(26px, 3.4vw, 42px); overflow: hidden; border-block: 1px solid var(--color-border-subtle); background: linear-gradient(112deg, rgba(58, 176, 162, .12) 0%, rgba(21, 21, 21, .74) 46%, rgba(212, 137, 62, .11) 100%); color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1.72; }
+	.homepage-context { position: relative; display: grid; grid-template-columns: minmax(210px, .78fr) minmax(0, 2fr); gap: clamp(26px, 4vw, 52px); margin: 34px auto 0; padding: clamp(26px, 3.4vw, 42px); overflow: hidden; border-block: 1px solid var(--color-border-subtle); border-radius: var(--radius-xl); background: linear-gradient(112deg, rgba(58, 176, 162, .12) 0%, rgba(21, 21, 21, .74) 46%, rgba(212, 137, 62, .11) 100%); color: var(--color-text-muted); font-size: var(--font-size-base); line-height: 1.72; }
 	.context-heading { align-self: start; }
 	.context-title { margin: 0 0 12px; color: var(--color-text); font-family: var(--font-display); font-size: clamp(23px, 3vw, 29px); font-weight: 400; line-height: 1.15; }
 	.context-manifesto { max-width: 14ch; color: var(--color-accent-honey-foreground); font-family: var(--font-display); font-size: clamp(20px, 2.3vw, 27px); font-style: italic; line-height: 1.12; }
