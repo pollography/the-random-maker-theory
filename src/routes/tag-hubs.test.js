@@ -45,6 +45,9 @@ test('five configured core topics own the tag hub and sitemap contracts', () => 
 	assert.match(tagPageSource, /BreadcrumbList/);
 	assert.match(tagPageSource, /CollectionPage/);
 	assert.match(tagPageSource, /Weitere Themen/);
+	assert.match(tagPageSource, /import ArticleSearch/);
+	assert.match(tagPageSource, /topic=\{data\.tag\}/);
+	assert.match(tagPageSource, /\{#if !searchActive\}[\s\S]*?starter-posts/);
 	assert.match(tagPageSource, /\.breadcrumb a, \.tag-back, \.related-topic-links a\s*\{[^}]*display:\s*inline-flex;[^}]*min-height:\s*44px/);
 	assert.match(sitemapSource, /CORE_TOPIC_SLUGS/);
 });
@@ -116,6 +119,7 @@ test('real SSR distinguishes an indexable core hub from a thin tag page', async 
 	assert.match(core.head, new RegExp(`rel="canonical" href="${siteConfig.url}/tags/${coreTopic.slug}"`));
 	assert.match(core.body, /aria-label="Breadcrumb"/);
 	assert.match(core.body, /Hier anfangen/);
+	assert.match(core.body, /Dieses Thema durchsuchen/);
 	assert.match(core.body, /Weitere Themen/);
 	assert.equal(coreArticleSlugs.length, coreData.posts.length);
 	assert.deepEqual(new Set(coreArticleSlugs), new Set(coreData.posts.map((post) => post.slug)));

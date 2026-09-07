@@ -1,11 +1,13 @@
 <script>
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
+	import ArticleSearch from '$lib/components/search/ArticleSearch.svelte';
 	import { siteConfig } from '$lib/config';
 	import { CORE_TOPICS } from '$lib/data/core-topics';
 	import { getTagDescription } from '$lib/data/tagDescriptions';
 	import { tagFAQs } from '$lib/data/tagFAQs';
 
 	let { data } = $props();
+	let searchActive = $state(false);
 	const tagFAQsBySlug = /** @type {Record<string, { q: string; a: string }[]>} */ (tagFAQs);
 	let isCoreTopic = $derived(data.isCoreTopic);
 	let tagInfo = $derived(getTagDescription(data.tag));
@@ -57,6 +59,11 @@
 			acceptedAnswer: { '@type': 'Answer', text: faq.a }
 		}))
 	}) : null);
+
+	/** @param {boolean} active */
+	function setSearchActive(active) {
+		searchActive = active;
+	}
 </script>
 
 <svelte:head>
@@ -116,6 +123,9 @@
 	{/if}
 </section>
 
+<ArticleSearch topic={data.tag} totalCount={data.posts.length} onActiveChange={setSearchActive} />
+
+{#if !searchActive}
 {#if isCoreTopic}
 	<section class="tag-posts starter-posts" aria-labelledby="starter-heading">
 		<div class="section-heading">
@@ -140,14 +150,6 @@
 		</section>
 	{/if}
 
-	<section class="related-topics" aria-labelledby="related-topics-heading">
-		<h2 id="related-topics-heading">Weitere Themen</h2>
-		<nav aria-label="Weitere Kernthemen" class="related-topic-links">
-			{#each relatedTopics as topic (topic.slug)}
-				<a href={`/tags/${topic.slug}`}>{topic.name}</a>
-			{/each}
-		</nav>
-	</section>
 {:else}
 	<section class="tag-posts">
 		<div class="tag-grid">
@@ -155,6 +157,18 @@
 				<BlogCard {post} />
 			{/each}
 		</div>
+	</section>
+{/if}
+{/if}
+
+{#if isCoreTopic}
+	<section class="related-topics" aria-labelledby="related-topics-heading">
+		<h2 id="related-topics-heading">Weitere Themen</h2>
+		<nav aria-label="Weitere Kernthemen" class="related-topic-links">
+			{#each relatedTopics as topic (topic.slug)}
+				<a href={`/tags/${topic.slug}`}>{topic.name}</a>
+			{/each}
+		</nav>
 	</section>
 {/if}
 

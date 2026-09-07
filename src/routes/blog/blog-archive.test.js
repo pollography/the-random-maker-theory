@@ -110,6 +110,15 @@ test('shared archive has one server-rendered article-card loop', async () => {
 	assert.match(archive, /\{#each renderedPosts as post \(post\.slug\)\}/);
 });
 
+test('shared archive searches all articles and pauses the progressive feed while active', async () => {
+	const archive = await read('src', 'lib', 'components', 'blog', 'BlogArchive.svelte');
+
+	assert.match(archive, /import ArticleSearch/);
+	assert.match(archive, /<ArticleSearch\s+\{totalCount\}/);
+	assert.match(archive, /onActiveChange=\{setSearchActive\}/);
+	assert.match(archive, /\{#if !searchActive\}[\s\S]*?<section class="posts-section"[\s\S]*?feed-status/);
+});
+
 test('real server loaders return bounded slices and reject noncanonical or out-of-range pages', async () => {
 	const pageOneLoader = await vite.ssrLoadModule('/src/routes/blog/+page.server.ts');
 	const pagedLoader = await vite.ssrLoadModule('/src/routes/blog/seite/[page]/+page.server.ts');
@@ -177,6 +186,7 @@ test('real SSR archive HTML exposes cards, links, canonicals, FAQ scope, and glo
 	assert.match(first.head, /rel="canonical" href="https:\/\/therandommakertheory\.com\/blog"/);
 	assert.match(second.head, /rel="canonical" href="https:\/\/therandommakertheory\.com\/blog\/seite\/2"/);
 	assert.match(first.body, /Häufige Fragen zum TRMT Blog/);
+	assert.match(first.body, /Blogartikel durchsuchen/);
 	assert.doesNotMatch(second.body, /Häufige Fragen zum TRMT Blog/);
 	assert.equal(firstDocuments.filter((document) => document['@type'] === 'FAQPage').length, 1);
 	assert.equal(secondDocuments.filter((document) => document['@type'] === 'FAQPage').length, 0);

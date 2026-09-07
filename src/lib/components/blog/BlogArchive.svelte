@@ -4,6 +4,7 @@
 	import { CORE_TOPICS } from '$lib/data/core-topics.js';
 	import { pageFAQs } from '$lib/data/pageFAQs';
 	import { createBlogFeedLoader } from '$lib/utils/blog-feed.js';
+	import ArticleSearch from '$lib/components/search/ArticleSearch.svelte';
 	import BlogCard from './BlogCard.svelte';
 
 	/** @type {{ posts: import('$lib/utils/posts').Post[], currentPage: number, totalPages: number, totalCount: number, showFaq: boolean }} */
@@ -14,6 +15,7 @@
 	let loadFailed = $state(false);
 	let liveMessage = $state('');
 	let sentinel = $state();
+	let searchActive = $state(false);
 	const renderedPosts = $derived(currentPage === 1 ? visiblePosts : posts);
 	const visibleCount = $derived(renderedPosts.length);
 
@@ -65,6 +67,11 @@
 
 	function retryFeed() {
 		void loadNextPage();
+	}
+
+	/** @param {boolean} active */
+	function setSearchActive(active) {
+		searchActive = active;
 	}
 
 	onMount(() => {
@@ -150,6 +157,9 @@
 	{/each}
 </nav>
 
+<ArticleSearch {totalCount} onActiveChange={setSearchActive} />
+
+{#if !searchActive}
 <section class="posts-section" aria-busy={isLoading}>
 	{#if renderedPosts.length > 0}
 		<div class="posts-grid">
@@ -188,6 +198,7 @@
 		{/each}
 		{#if currentPage < totalPages}<a href={pageHref(currentPage + 1)}>Weiter</a>{/if}
 	</nav>
+{/if}
 {/if}
 
 {#if showFaq}
