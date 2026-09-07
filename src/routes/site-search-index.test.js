@@ -1,3 +1,4 @@
+// @ts-nocheck
 import assert from 'node:assert/strict';
 import { gzipSync } from 'node:zlib';
 import { after, before, test } from 'node:test';
