@@ -2,6 +2,7 @@
 
 <script>
 	import { page } from '$app/stores';
+	import SiteSearch from '../search/SiteSearch.svelte';
 	import ThemeToggle from '../design-system/ThemeToggle.svelte';
 
 	let scrolled = $state(false);
@@ -59,6 +60,7 @@
 		</nav>
 
 		<div class="header-actions">
+			<SiteSearch />
 			<ThemeToggle variant="icon" />
 			<button
 				bind:this={burgerButton}
