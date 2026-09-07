@@ -138,9 +138,10 @@ Ausserdem: Streaming abhaengig von WLAN oder Cloud-Anbindung. In einer perfekten
 	<p>Das ist kein kleines Feature-Update. Das ist NVIDIA und Apple die sagen: "Die Zukunft von VR ist nicht staerkere Hardware in der Brille, sondern smartes Streaming." Und mit den Enterprise-Partnern die schon an Bord sind, ist das kein Konzept-Paper sondern wird tatsaechlich deployed. BMW baut keine Tonmodelle mehr. Roche simuliert Labore bevor sie existieren. X-Plane schickt dich kabellos ins Cockpit.</p>
 	<p>Ob das auch fuer Consumer relevant wird, haengt vom Preis der naechsten Vision Pro Generation ab. Und davon, ob die WLAN-Infrastruktur in normalen Haushalten die Latenz-Versprechen halten kann. Aber die Technologie ist da. Und die ist echt beeindruckend.</p>
 	<p>Eins ist klar: Spatial Computing ist nicht mehr nur Apples Sache. Mit NVIDIA als GPU-Partner und einem wachsenden Oekosystem an Enterprise-Apps wird die Vision Pro vom teuren Gadget zum ernsthaften Werkzeug. Und das ist spannender als jedes Hardware-Upgrade.</p>
-	<p><MindMap3D data={mindMapData} title="NVIDIA CloudXR + Apple Vision Pro: Das Oekosystem" /></p>
+	<MindMap3D data={mindMapData} title="NVIDIA CloudXR + Apple Vision Pro: Das Oekosystem" />
 </div>
-## Quellen & Links
+
+<h2>Quellen &amp; Links</h2>
 
 - [NVIDIA Blog: RTX-Accelerated Computers Connect to Vision Pro](https://blogs.nvidia.com/blog/nvidia-cloudxr-apple-vision-pro/) -- Offizielle Ankuendigung
 - [9to5Mac: CloudXR for visionOS 26.4](https://9to5mac.com/2026/03/17/nvidia-details-cloudxr-for-visionos-26-4-enabling-immersive-for-autodesk-vred-app/) -- Detailierte technische Analyse

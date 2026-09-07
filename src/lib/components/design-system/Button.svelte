@@ -6,7 +6,13 @@
        <Button variant="danger" disabled>Disabled Danger</Button>
 -->
 
-<script>
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+
+	type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
+	type ButtonSize = 'sm' | 'md' | 'lg';
+	type ButtonType = 'button' | 'reset' | 'submit';
+
 	let {
 		variant = 'primary',
 		size = 'md',
@@ -19,22 +25,34 @@
 		onclick,
 		onfocus,
 		onblur,
+	}: {
+		variant?: ButtonVariant;
+		size?: ButtonSize;
+		disabled?: boolean;
+		type?: ButtonType;
+		icon?: string | null;
+		loading?: boolean;
+		class?: string;
+		children?: Snippet;
+		onclick?: (event: MouseEvent) => void;
+		onfocus?: (event: FocusEvent) => void;
+		onblur?: (event: FocusEvent) => void;
 	} = $props();
 
-	const variantStyles = {
+	const variantStyles: Record<ButtonVariant, string> = {
 		primary: 'bg-honey text-on-accent hover:bg-honey-hover shadow-glow-honey',
 		secondary: 'bg-teal text-on-accent hover:bg-teal-hover shadow-glow-teal',
 		ghost: 'bg-transparent text-text hover:bg-surface-raised border border-border-subtle',
 		danger: 'bg-danger text-on-accent hover:bg-red-700',
 	};
 
-	const sizeStyles = {
+	const sizeStyles: Record<ButtonSize, string> = {
 		sm: 'px-3 py-1.5 text-sm',
 		md: 'px-4 py-2 text-base',
 		lg: 'px-6 py-3 text-lg',
 	};
 
-	const loadingClass = loading ? 'opacity-75 cursor-wait' : '';
+	let loadingClass = $derived(loading ? 'opacity-75 cursor-wait' : '');
 	let buttonClass = $derived(`btn inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-normal disabled:opacity-50 disabled:cursor-not-allowed ${variantStyles[variant]} ${sizeStyles[size]} ${loadingClass} ${className}`);
 </script>
 

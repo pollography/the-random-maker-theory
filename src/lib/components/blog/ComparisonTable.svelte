@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	/**
 	 * ComparisonTable — Affiliate-Vergleichstabelle
 	 *
@@ -25,9 +25,28 @@
 	 * />
 	 */
 
-	let { title = '', disclaimer = '', items = [] } = $props();
+	type ComparisonItem = {
+		name: string;
+		badge?: string;
+		image?: string;
+		price?: string;
+		priceFree?: boolean;
+		rating?: number;
+		pros?: string[];
+		cons?: string[];
+		features?: Record<string, string>;
+		ctaText?: string;
+		ctaUrl?: string;
+		affiliate?: boolean;
+	};
 
-	function renderStars(rating) {
+	let { title = '', disclaimer = '', items = [] }: {
+		title?: string;
+		disclaimer?: string;
+		items?: ComparisonItem[];
+	} = $props();
+
+	function renderStars(rating: number) {
 		const full = Math.floor(rating);
 		const half = rating % 1 >= 0.5;
 		const empty = 5 - full - (half ? 1 : 0);
@@ -48,6 +67,7 @@
 
 <div class="comparison-grid">
 	{#each items as item, i (item.name)}
+		{@const stars = renderStars(item.rating ?? 0)}
 		<div class="tool-card" class:featured={item.badge}>
 			{#if item.badge}
 				<div class="badge">{item.badge}</div>
@@ -62,7 +82,6 @@
 
 			<!-- Rating -->
 			<div class="rating">
-				{@const stars = renderStars(item.rating || 0)}
 				{#each Array(stars.full) as _}
 					<span class="star full">★</span>
 				{/each}

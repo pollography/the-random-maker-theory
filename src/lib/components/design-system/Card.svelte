@@ -1,21 +1,40 @@
 <!-- The Random Maker Theory — Card Component (Svelte 5) -->
 
-<script>
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+
+	type CardVariant = 'default' | 'interactive';
+	type CardClickHandler = (event: MouseEvent) => void;
+
 	let {
 		variant = 'default',
 		href = null,
 		class: className = '',
 		children,
 		onclick,
+	}: {
+		variant?: CardVariant;
+		href?: string | null;
+		class?: string;
+		children?: Snippet;
+		onclick?: CardClickHandler;
 	} = $props();
 </script>
 
 {#if href}
-	<a {href} class="card {variant === 'interactive' ? 'interactive' : ''} {className}" {onclick}>
+	<a {href} class="card {variant === 'interactive' ? 'interactive' : ''} {className}" onclick={onclick}>
 		{@render children?.()}
 	</a>
+{:else if onclick}
+	<button
+		type="button"
+		class="card card-button {variant === 'interactive' ? 'interactive' : ''} {className}"
+		onclick={onclick}
+	>
+		{@render children?.()}
+	</button>
 {:else}
-	<div class="card {className}" {onclick}>
+	<div class="card {className}">
 		{@render children?.()}
 	</div>
 {/if}
@@ -37,6 +56,13 @@
 		transform: translateY(-2px);
 		box-shadow: var(--shadow-elevated), 0 0 20px rgba(212, 137, 62, 0.12);
 		border-color: rgba(212, 137, 62, 0.35);
+	}
+
+	.card-button {
+		width: 100%;
+		font: inherit;
+		text-align: inherit;
+		cursor: pointer;
 	}
 
 	:global([data-theme='light']) .card {

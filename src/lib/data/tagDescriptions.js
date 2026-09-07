@@ -3,6 +3,11 @@
  * Jeder Tag bekommt einen einzigartigen Titel, eine Description (für Meta)
  * und einen Intro-Text (wird auf der Seite angezeigt für Word Count + SEO)
  */
+/**
+ * @typedef {{ title: string, metaDesc: string, intro: string, icon: string }} TagDescription
+ */
+
+/** @type {Record<string, TagDescription>} */
 export const tagDescriptions = {
 	'3d-druck': {
 		title: '3D-Druck',
@@ -158,6 +163,8 @@ export const tagDescriptions = {
 
 /**
  * Fallback für Tags die nicht in der Map sind
+ * @param {string} tag
+ * @returns {TagDescription}
  */
 export function getTagDescription(tag) {
 	if (tagDescriptions[tag]) return tagDescriptions[tag];

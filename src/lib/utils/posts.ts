@@ -4,6 +4,7 @@ export interface Post {
 	seoTitle?: string;
 	titleAccent?: string;
 	date: string;
+	updated?: string;
 	description: string;
 	tags: string[];
 	category: string;
@@ -42,6 +43,7 @@ export async function getPosts(): Promise<Post[]> {
 				seoTitle: metadata.seoTitle,
 				titleAccent: metadata.titleAccent || '',
 				date: metadata.date,
+				updated: metadata.updated,
 				description: metadata.description,
 				tags: metadata.tags || [],
 				category: metadata.category || 'general',
