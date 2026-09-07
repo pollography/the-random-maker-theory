@@ -20,6 +20,8 @@ test('header mounts an accessible, lazy global-search dialog', async () => {
 	assert.match(search, /type="search"[\s\S]*maxlength="160"/);
 	assert.match(search, /aria-label="Suche schließen"/);
 	assert.match(search, /oncancel=/);
+	assert.match(search, /onkeydown=\{handleDialogKeydown\}/);
+	assert.match(search, /event\.key === 'Escape'[\s\S]*?closeSearch\(\)/);
 	assert.match(search, /triggerButton\?\.focus/);
 	assert.match(search, /searchSiteIndex\(index, query, \{ limit: 12 \}\)/);
 	assert.match(results, /aria-live="polite"/);
@@ -34,14 +36,16 @@ test('header mounts an accessible, lazy global-search dialog', async () => {
 });
 
 test('search controls keep 44px targets and responsive layouts', async () => {
-	const [search, results] = await Promise.all([
+	const [search, articleSearch, results] = await Promise.all([
 		read('src', 'lib', 'components', 'search', 'SiteSearch.svelte'),
+		read('src', 'lib', 'components', 'search', 'ArticleSearch.svelte'),
 		read('src', 'lib', 'components', 'search', 'SearchResults.svelte')
 	]);
 
 	assert.match(search, /\.search-trigger\s*\{[^}]*width:\s*44px;[^}]*height:\s*44px/s);
 	assert.match(search, /@media \(max-width: 640px\)/);
 	assert.match(search, /@media \(prefers-reduced-motion: reduce\)/);
+	assert.match(articleSearch, /::-webkit-search-cancel-button\s*\{[^}]*display:\s*none/);
 	assert.match(results, /min-height:\s*44px/);
 });
 

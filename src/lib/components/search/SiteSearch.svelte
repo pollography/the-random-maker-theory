@@ -47,6 +47,14 @@
 	function handleCancel() {
 		query = '';
 	}
+
+	/** @param {KeyboardEvent} event */
+	function handleDialogKeydown(event) {
+		if (event.key === 'Escape') {
+			event.preventDefault();
+			closeSearch();
+		}
+	}
 </script>
 
 <button
@@ -69,6 +77,7 @@
 	aria-labelledby="site-search-title"
 	onclose={handleClose}
 	oncancel={handleCancel}
+	onkeydown={handleDialogKeydown}
 	onclick={(event) => event.target === dialog && closeSearch()}
 >
 	<div class="dialog-shell">

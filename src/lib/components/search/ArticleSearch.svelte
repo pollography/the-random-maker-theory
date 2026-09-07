@@ -99,6 +99,7 @@
 	.input-shell svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-width: 1.8; }
 	.input-shell input { width: 100%; min-height: 54px; padding: 0; border: 0; outline: 0; background: transparent; color: var(--color-text); font: inherit; }
 	.input-shell input::placeholder { color: var(--color-text-dim); }
+	.input-shell input::-webkit-search-cancel-button { display: none; -webkit-appearance: none; }
 	.clear-button { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0 0 2px; border: 0; border-radius: 50%; background: transparent; color: var(--color-text-muted); cursor: pointer; font-size: 1.55rem; }
 	.clear-button:hover, .clear-button:focus-visible { background: var(--color-surface-elevated); color: var(--color-accent-honey-foreground); }
 	.inline-results { grid-column: 1 / -1; padding-top: 4px; }

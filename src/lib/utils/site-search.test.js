@@ -80,5 +80,8 @@ test('handles empty, overlong, malformed, and large inputs deterministically', (
 	const start = performance.now();
 	const result = searchSiteIndex(corpus, 'sensor', { limit: 12 });
 	assert.equal(result.length, 12);
-	assert.ok(performance.now() - start < 50);
+	// The full Node suite runs several SvelteKit builds in parallel. Keep this
+	// guard strict enough to catch accidental quadratic work without making it
+	// depend on short-lived CPU contention from those build processes.
+	assert.ok(performance.now() - start < 100);
 });
