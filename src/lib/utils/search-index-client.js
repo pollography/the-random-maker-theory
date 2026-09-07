@@ -3,12 +3,17 @@ import { isSearchRecord } from './site-search.js';
 const DEFAULT_INDEX_URL = '/search-index.json';
 const DEFAULT_TIMEOUT_MS = 8_000;
 
+/**
+ * @param {{ fetchImpl?: typeof fetch, timeoutMs?: number, url?: string }} options
+ */
 export function createSearchIndexLoader({
-	fetchImpl = (...args) => globalThis.fetch(...args),
+	fetchImpl = globalThis.fetch.bind(globalThis),
 	timeoutMs = DEFAULT_TIMEOUT_MS,
 	url = DEFAULT_INDEX_URL
 } = {}) {
+	/** @type {Promise<any[]> | null} */
 	let cachedPromise = null;
+	/** @type {AbortController | null} */
 	let activeController = null;
 
 	async function load() {

@@ -4,6 +4,7 @@ const SEARCH_TEXT_MAX_LENGTH = 500_000;
 const VALID_TYPES = new Set(['article', 'podcast', 'tool']);
 const VALID_URL = /^\/(blog|podcast|tools)\/[a-z0-9][a-z0-9-/]*$/;
 
+/** @param {unknown} value */
 export function normalizeSearchText(value) {
 	return String(value ?? '')
 		.slice(0, SEARCH_TEXT_MAX_LENGTH)
@@ -16,6 +17,7 @@ export function normalizeSearchText(value) {
 		.trim();
 }
 
+/** @param {unknown} source */
 export function extractSearchDocument(source) {
 	const withoutPrivate = String(source ?? '')
 		.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '\n')
@@ -38,6 +40,7 @@ export function extractSearchDocument(source) {
 	return { headings, bodyTokens };
 }
 
+/** @param {any} value */
 export function isSearchRecord(value) {
 	return Boolean(
 		value
@@ -50,15 +53,16 @@ export function isSearchRecord(value) {
 		&& value.title.length > 0
 		&& typeof value.description === 'string'
 		&& Array.isArray(value.tags)
-		&& value.tags.every((tag) => typeof tag === 'string')
+		&& value.tags.every((/** @type {unknown} */ tag) => typeof tag === 'string')
 		&& typeof value.category === 'string'
 		&& Array.isArray(value.headings)
-		&& value.headings.every((heading) => typeof heading === 'string')
+		&& value.headings.every((/** @type {unknown} */ heading) => typeof heading === 'string')
 		&& typeof value.bodyTokens === 'string'
 		&& typeof value.date === 'string'
 	);
 }
 
+/** @param {any} input */
 export function createSearchRecord(input) {
 	const record = {
 		type: input?.type,
@@ -77,11 +81,17 @@ export function createSearchRecord(input) {
 	return record;
 }
 
+/** @param {any} record @param {string} tag */
 function normalizedTagMatches(record, tag) {
 	const normalizedTag = normalizeSearchText(tag);
-	return record.tags.some((candidate) => normalizeSearchText(candidate) === normalizedTag);
+	return record.tags.some((/** @type {string} */ candidate) => normalizeSearchText(candidate) === normalizedTag);
 }
 
+/**
+ * @param {any[]} records
+ * @param {unknown} query
+ * @param {{ types?: string[], tag?: string | null, limit?: number }} options
+ */
 export function searchSiteIndex(records, query, { types, tag, limit = 12 } = {}) {
 	const normalizedQuery = normalizeSearchText(String(query ?? '').slice(0, SEARCH_QUERY_MAX_LENGTH));
 	if (!normalizedQuery || !Array.isArray(records)) return [];
@@ -113,7 +123,7 @@ export function searchSiteIndex(records, query, { types, tag, limit = 12 } = {})
 				if (body.split(' ').includes(token)) score += 4;
 			}
 
-			const matchedHeading = record.headings.find((heading) =>
+			const matchedHeading = record.headings.find((/** @type {string} */ heading) =>
 				tokens.some((token) => normalizeSearchText(heading).includes(token))
 			);
 			return { ...record, score, excerpt: matchedHeading || record.description };

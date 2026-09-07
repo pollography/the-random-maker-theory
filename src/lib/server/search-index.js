@@ -1,6 +1,6 @@
 import { PUBLIC_SEARCH_TOOLS } from '$lib/data/search-tools.js';
-import { getEpisodes } from '$lib/utils/episodes.ts';
-import { getPosts } from '$lib/utils/posts.ts';
+import { getEpisodes } from '$lib/utils/episodes';
+import { getPosts } from '$lib/utils/posts';
 import { createSearchRecord, extractSearchDocument } from '$lib/utils/site-search.js';
 
 const blogSources = import.meta.glob('/src/content/blog/*.md', {
@@ -14,6 +14,7 @@ const podcastSources = import.meta.glob('/src/content/podcast/*.md', {
 	import: 'default'
 });
 
+/** @param {Record<string, unknown>} sourceModules */
 function indexSourcesBySlug(sourceModules) {
 	const sources = new Map();
 
@@ -28,6 +29,7 @@ function indexSourcesBySlug(sourceModules) {
 	return sources;
 }
 
+/** @param {any} item @param {'article' | 'podcast'} type @param {string} source @param {Record<string, unknown>} extra */
 function recordFromContent(item, type, source, extra = {}) {
 	const document = extractSearchDocument(source);
 	return createSearchRecord({
@@ -60,6 +62,7 @@ export async function buildSiteSearchIndex() {
 		...PUBLIC_SEARCH_TOOLS.map((tool) => createSearchRecord({ ...tool, type: 'tool' }))
 	];
 
+	/** @type {Record<string, number>} */
 	const typeOrder = { article: 0, podcast: 1, tool: 2 };
 	return records.sort((a, b) =>
 		typeOrder[a.type] - typeOrder[b.type]
