@@ -1,6 +1,6 @@
 # Claude Code und Codex kombinieren: Ein Modell baut, das andere prüft — Handoff
 
-Updated: 2026-09-08T05:53:42Z
+Updated: 2026-09-08T06:03:43Z
 
 ## Verified now
 
@@ -12,6 +12,8 @@ Updated: 2026-09-08T05:53:42Z
 - The final similarity scan found 0 matching 8-token windows between article and captions.
 - Desktop and true 390 px mobile previews passed; the mobile document had no horizontal overflow and rendered exactly one H1.
 - `npm run check`, all 173 tests, `npm run build`, `git diff --check`, and dossier validation passed.
+- Draft PR 16 is open and mergeable; both Vercel checks passed at verification.
+- Radar issue 14 links the verified Draft PR and no longer carries `research-needed`.
 
 ## Exact working paths and URLs
 
@@ -19,6 +21,8 @@ Updated: 2026-09-08T05:53:42Z
 - Repository: `D:/AI_Workspaces/Claude_Code/.release-worktrees/trmt-chase-radar-issue-14-20260908`
 - Drafts: `src/content/blog/claude-code-codex-zweitmodell-review.md`
 - Preview: `/preview/claude-code-codex-zweitmodell-review`
+- Radar issue: `https://github.com/pollography/the-random-maker-theory/issues/14`
+- Draft PR: `https://github.com/pollography/the-random-maker-theory/pull/16`
 
 ## Completed changes
 
@@ -28,7 +32,6 @@ Updated: 2026-09-08T05:53:42Z
 
 ## Open, unknown, or blocked
 
-- Draft PR creation and remote check verification remain pending.
 - Human publication approval remains pending.
 
 ## Recorded approvals
@@ -39,4 +42,4 @@ Updated: 2026-09-08T05:53:42Z
 
 ## Next safe action
 
-Create a Draft PR, verify its remote checks, link it to issue 14, and remove `research-needed` only after the Draft PR is confirmed.
+Review Draft PR 16. Merge or publish only after a separate explicit approval.

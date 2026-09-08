@@ -10,7 +10,7 @@
 | Links and assets | PASS | Seven external links returned HTTP 200; all three internal article targets exist; generated image usage records the intentional empty asset set. | N/A for Draft PR. |
 | Desktop/mobile preview | PASS | Desktop preview inspected at 1,265 px. A real 390 px device-metrics run reported `innerWidth`, `clientWidth`, `scrollWidth`, and `bodyScrollWidth` all as 390, exactly one H1, and the preview banner; screenshot inspection showed readable wrapping and the mobile navigation. | N/A for Draft PR. |
 | Targeted tests | PASS | Article-specific test passes 3/3; full suite passes 173/173; `npm run check`, `npm run build`, `git diff --check`, and dossier validation pass. | N/A for Draft PR. |
-| Release scope | PASS | Draft only; no merge, deployment, or publication. | Create Draft PR after all checks pass. |
+| Release scope | PASS | Draft PR 16 is open, mergeable, and had two passing Vercel checks at verification; no merge or publication occurred. Issue 14 links the PR and no longer has `research-needed`. | Human editorial review; merge or publish only after separate approval. |
 
 ## Known baseline failures
 

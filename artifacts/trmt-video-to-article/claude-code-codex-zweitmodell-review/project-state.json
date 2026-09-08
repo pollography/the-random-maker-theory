@@ -3,14 +3,14 @@
   "slug": "claude-code-codex-zweitmodell-review",
   "title": "Claude Code und Codex kombinieren: Ein Modell baut, das andere prüft",
   "created_at": "2026-09-08T05:29:44Z",
-  "updated_at": "2026-09-08T05:53:42Z",
-  "phase": "qa",
+  "updated_at": "2026-09-08T06:03:43Z",
+  "phase": "release",
   "status": "active",
   "publication_status": "draft",
   "source_completeness": "complete",
   "visual_style_status": "not-needed",
-  "current_step": "Create and verify the Draft PR",
-  "next_step": "Link the verified Draft PR to issue 14 and remove research-needed",
+  "current_step": "Await human editorial review of Draft PR 16",
+  "next_step": "Review the draft; merge or publish only after a separate explicit approval",
   "blockers": [],
   "approvals": {
     "article_scope": {
@@ -36,5 +36,5 @@
       "decided_at": null
     }
   },
-  "last_verified_at": "2026-09-08T05:53:42Z"
+  "last_verified_at": "2026-09-08T06:03:43Z"
 }
