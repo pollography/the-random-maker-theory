@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-claude-fable-5-1-vergleich",
+  "source_completeness": "complete_with_documented_video_limit",
+  "sources": [
+    {
+      "id": "radar-video",
+      "kind": "youtube_radar_only",
+      "url": "https://www.youtube.com/watch?v=mRiuhAjnPgI",
+      "published_at": "2026-09-03T20:46:53Z",
+      "captions": "download/transcript.en-orig.json3 and download/video.en-orig.vtt",
+      "visual_inspection": "11 public YouTube storyboard mosaics sampled across the complete 7:34 runtime",
+      "public_article_source": false
+    },
+    {
+      "id": "openai-launch",
+      "kind": "primary_web",
+      "url": "https://openai.com/index/gpt-6-astra/",
+      "use": "release, rollout, task positioning, comparative benchmark tables, Codex context notes"
+    },
+    {
+      "id": "openai-api-model",
+      "kind": "primary_web",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "use": "API id, context, output, cutoff, pricing and tool support"
+    },
+    {
+      "id": "openai-safety",
+      "kind": "primary_web",
+      "url": "https://openai.com/index/safety-overview-gpt-6-astra/",
+      "use": "cyber classification, safeguards, capability-confabulation eval and monitorability limitation"
+    },
+    {
+      "id": "anthropic-fable",
+      "kind": "primary_web",
+      "url": "https://www.anthropic.com/claude/fable",
+      "use": "Fable availability, positioning, technical limits and pricing"
+    }
+  ],
+  "pairings": [
+    {"section": "benchmarks", "sources": ["openai-launch", "anthropic-fable"]},
+    {"section": "prices-and-limits", "sources": ["openai-api-model", "anthropic-fable"]},
+    {"section": "safety", "sources": ["openai-safety", "anthropic-fable"]}
+  ],
+  "missing_or_unavailable": [
+    "Normal YouTube video download returned HTTP 403. Complete captions and official public storyboard mosaics were available and inspected; no fine-grained motion claim was used."
+  ]
+}
