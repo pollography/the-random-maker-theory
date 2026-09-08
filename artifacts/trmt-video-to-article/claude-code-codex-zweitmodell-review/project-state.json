@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "slug": "claude-code-codex-zweitmodell-review",
+  "title": "Claude Code und Codex kombinieren: Ein Modell baut, das andere prüft",
+  "created_at": "2026-09-08T05:29:44Z",
+  "updated_at": "2026-09-08T05:53:42Z",
+  "phase": "qa",
+  "status": "active",
+  "publication_status": "draft",
+  "source_completeness": "complete",
+  "visual_style_status": "not-needed",
+  "current_step": "Create and verify the Draft PR",
+  "next_step": "Link the verified Draft PR to issue 14 and remove research-needed",
+  "blockers": [],
+  "approvals": {
+    "article_scope": {
+      "status": "approved",
+      "scope": [
+        "one standalone German TRMT draft about a bounded Claude Code and Codex builder-reviewer workflow",
+        "current primary-source research and source-private creator analysis",
+        "no public creator attribution and no automatic publication"
+      ],
+      "evidence": "Recurring automation trmt-themenradar-redaktionspipeline authorizes one independently researched draft article for the oldest qualifying issue.",
+      "decided_at": "2026-09-08T05:16:51Z"
+    },
+    "visual_direction": {
+      "status": "rejected",
+      "scope": [],
+      "evidence": "The current text-free Image QA gate cannot name both products without forbidden logo or text dependence; the article does not need an image to explain the workflow.",
+      "decided_at": "2026-09-08T05:33:01Z"
+    },
+    "publication": {
+      "status": "pending",
+      "scope": [],
+      "evidence": null,
+      "decided_at": null
+    }
+  },
+  "last_verified_at": "2026-09-08T05:53:42Z"
+}
