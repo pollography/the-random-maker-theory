@@ -161,6 +161,7 @@ export const blogImageUsage = {
 	"china-open-source-ki-2026-rueckblick": [
 		"/images/blog/china-open-source-ki-2026-rueckblick-1.webp"
 	],
+	"claude-code-codex-zweitmodell-review": [],
 	"claude-code-ultimate-setup-produktivitaet-2026": [
 		"/images/blog/claude-code-ultimate-setup-architecture.webp",
 		"/images/blog/claude-code-ultimate-setup-6-levels.webp",
