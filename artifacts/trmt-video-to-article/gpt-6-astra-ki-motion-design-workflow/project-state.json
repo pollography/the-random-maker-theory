@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "slug": "gpt-6-astra-ki-motion-design-workflow",
+  "title": "GPT-6 Astra für Motion Design: So wird aus einer Idee ein fertiger KI-Clip",
+  "created_at": "2026-09-09T16:28:10Z",
+  "updated_at": "2026-09-09T21:06:00Z",
+  "phase": "complete",
+  "status": "complete",
+  "publication_status": "draft",
+  "source_completeness": "complete",
+  "visual_style_status": "approved",
+  "current_step": "Revised Draft PR 18 is ready for human review",
+  "next_step": "Review title, opening and thumbnail; merge and publication require separate approval",
+  "blockers": [],
+  "approvals": {
+    "article_scope": {
+      "status": "approved",
+      "scope": ["one independent German draft article for issue 17"],
+      "evidence": "recurring automation contract and issue 17 editorial frame",
+      "decided_at": "2026-09-09T16:16:46Z"
+    },
+    "visual_direction": {
+      "status": "approved",
+      "scope": ["current TRMT visual system", "dedicated 16:9 hero", "400x225 thumbnail", "short context anchor and insight line"],
+      "evidence": "direct user feedback that the article must include a recognizable thumbnail",
+      "decided_at": "2026-09-09T20:42:00Z"
+    },
+    "publication": {
+      "status": "pending",
+      "scope": [],
+      "evidence": null,
+      "decided_at": null
+    }
+  },
+  "last_verified_at": "2026-09-09T21:06:00Z"
+}

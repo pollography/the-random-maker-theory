@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-ki-motion-design-workflow",
+  "source_completeness": "complete",
+  "sources": [
+    {
+      "id": "S-001",
+      "type": "video",
+      "locator": "https://www.youtube.com/watch?v=eyDKoGU_vHk",
+      "status": "partial",
+      "paired_source_ids": ["S-002"],
+      "duration_seconds": 521,
+      "notes": "Private topic radar only. Reviewed 242 exact caption segments and 63 chronological 320x180 official storyboard frames. The direct video stream returned HTTP 403, but scoped topic and visible-content review is complete."
+    },
+    {
+      "id": "S-002",
+      "type": "url",
+      "locator": "https://chaseai.io/blog/gpt-6-astra-motion-design-skill",
+      "status": "extracted",
+      "paired_source_ids": ["S-001"],
+      "notes": "Private topic radar only. Full article read via the Jina text route; not a public citation or prose source."
+    },
+    {
+      "id": "S-003",
+      "type": "url",
+      "locator": "https://openai.com/index/gpt-6-astra/",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official OpenAI product and rollout source."
+    },
+    {
+      "id": "S-004",
+      "type": "url",
+      "locator": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official model capabilities and supported-tool source."
+    },
+    {
+      "id": "S-005",
+      "type": "url",
+      "locator": "https://higgsfield.ai/mcp",
+      "status": "available",
+      "paired_source_ids": ["S-006"],
+      "notes": "Official plugin, MCP, credit and model-catalog source."
+    },
+    {
+      "id": "S-006",
+      "type": "url",
+      "locator": "https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-connect-higgsfield-to-ai-agent",
+      "status": "available",
+      "paired_source_ids": ["S-005"],
+      "notes": "Official connection and subscription requirements."
+    },
+    {
+      "id": "S-007",
+      "type": "url",
+      "locator": "https://higgsfield.ai/seedance/2.5",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official vendor claim source for maximum clip duration, sound and references; article keeps a plan and surface caveat."
+    },
+    {
+      "id": "S-008",
+      "type": "url",
+      "locator": "https://modelcontextprotocol.io/specification/2025-06-18/server/tools",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official MCP tool and security-boundary specification."
+    },
+    {
+      "id": "S-009",
+      "type": "url",
+      "locator": "https://higgsfield.ai/terms-of-use-agreement",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official terms source for account responsibility for agent activity."
+    }
+  ],
+  "pairings": [
+    {
+      "source_ids": ["S-001", "S-002"],
+      "reason": "Same private radar topic across video and creator blog."
+    },
+    {
+      "source_ids": ["S-005", "S-006"],
+      "reason": "Official product landing page paired with official setup requirements."
+    }
+  ],
+  "missing_or_unavailable": [
+    {
+      "item": "creator motion-design skill implementation",
+      "effect": "Not used or described. The scoped article explains only the independently supported architecture."
+    },
+    {
+      "item": "direct YouTube video stream",
+      "effect": "yt-dlp returned HTTP 403 after captions and metadata. The complete official storyboard and exact captions still supported the scoped visual review."
+    }
+  ]
+}
