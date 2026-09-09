@@ -5,12 +5,12 @@
 | Source completeness | PASS | 242 exact caption segments, 63 chronological storyboard frames across 08:41, full radar blog and current official primary sources reviewed. | None for the scoped architecture article. |
 | Claim fidelity | PASS | Product, connection, duration, credit and MCP-boundary claims traced in `evidence-ledger.md`; vendor claims are labeled and plan-dependent limits are qualified. | Recheck dynamic product limits before later publication. |
 | Public provenance | PASS | No creator, radar URL, transcript, borrowed prompt, demo or experience claim in public copy. Similarity scan found 0 shared 8-token windows against captions and creator blog. | None. |
-| Article structure | PENDING | Draft was rebuilt from the beginner reader question and now introduces technical terms only after the simple result is clear. | Re-run rendered-page and full-suite checks. |
-| Visual gate | PENDING | Dedicated 16:9 hero and 400-x-225 thumbnail created with context anchor, insight line and visible idea-to-film transformation. | Inspect final files alone and in the rendered desktop/mobile page. |
-| Links and assets | PENDING | Two new WebP files and the generated image maps are present. | Re-run link and asset checks. |
-| Desktop/mobile preview | PENDING | Previous text-only preview passed. | Re-check revised title, hero, first screen, H1 count and overflow. |
-| Targeted tests | PENDING | Regression test was changed first and failed on all three missing requirements; current draft passes 2 of 3 before the final scan block addition. | Run targeted and complete checks. |
-| Release scope | PENDING | Changes remain local on the Draft-PR branch. No merge or publication occurred. | Verify and push only to Draft PR #18. |
+| Article structure | PASS | H1 names product, transformation and result; two-sentence thesis explains the complete outcome; `Kurz gesagt` gives the four roles; Motion Design, Skill, MCP and Beat Sheet are explained in plain language at first use; one Kaffeetassen example carries the workflow. | None for the scoped draft. |
+| Visual gate | PASS | Dedicated 1600-x-900 hero and 400-x-225 thumbnail show `GPT-6 ASTRA`, `VON DER IDEE ZUM KI-CLIP` and the idea-to-camera transformation. The actual thumbnail passed copy, topic, mechanism, crop and hygiene checks. | Human taste review remains welcome. |
+| Links and assets | PASS | Both WebP files exist, dimensions and file budgets are test-enforced, and generated metadata plus article image usage include the new hero pair. | None. |
+| Desktop/mobile preview | PASS | Fresh local desktop and 390-x-844 browser tabs: exactly one H1, hero natural size 1600 x 900, complete beginner summary, no horizontal overflow and no console warnings or errors. | Unauthenticated Vercel page viewing is `UNKNOWN` because deployment protection redirects to SSO; both Vercel deployment checks passed. |
+| Targeted tests | PASS | Red phase: 0 of 3 under the old article. Green phase: 3 of 3. Full suite 173 of 173, `npm run check` 0 errors and 0 warnings, production build PASS. | None. |
+| Release scope | PASS | Draft PR #18 is open, mergeable and still Draft; both Vercel checks passed. No merge or publication occurred. | Human review remains required before merge or release. |
 
 ## Known baseline failures
 

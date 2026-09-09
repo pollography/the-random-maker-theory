@@ -1,11 +1,13 @@
 # GPT-6 Astra für Motion Design: So wird aus einer Idee ein fertiger KI-Clip — Handoff
 
-Updated: 2026-09-09T20:53:50Z
+Updated: 2026-09-09T21:06:00Z
 
 ## Verified now
 
-- Draft PR #18 is being revised after beginner-comprehension and missing-thumbnail feedback.
-- The new hero and 400-x-225 thumbnail exist locally and are referenced by the draft.
+- Draft PR #18 contains the beginner rewrite and dedicated hero/thumbnail on commit `53a5820`.
+- Both Vercel checks passed. The preview deployment itself currently redirects unauthenticated requests to Vercel SSO, so visual review used the identical local production source and remains open in Chrome.
+- Fresh local desktop and 390-pixel checks show one H1, no horizontal overflow, a loaded 1600-x-900 hero and no browser warnings or errors in a clean tab.
+- The recurring automation now requires a beginner-readable title/opening and both 16:9 hero plus 400-x-225 thumbnail before it may open a future Draft PR.
 
 ## Exact working paths and URLs
 
@@ -27,6 +29,7 @@ Updated: 2026-09-09T20:53:50Z
 ## Open, unknown, or blocked
 
 - Publication readiness is pending explicit human review, merge and release approval.
+- Direct unauthenticated viewing of the Vercel preview is blocked by the deployment's SSO protection; the deployment check itself is green.
 - Dynamic vendor pricing, credit limits and model availability must be rechecked if the draft is published later.
 - The direct YouTube media stream returned HTTP 403; exact captions and all 63 official storyboard frames were reviewed instead.
 - The repository baseline currently reports 18 dependency vulnerabilities; this draft adds no dependency.
@@ -39,4 +42,4 @@ Updated: 2026-09-09T20:53:50Z
 
 ## Next safe action
 
-Run the full checks, inspect the revised Vercel preview on desktop and mobile, then update Draft PR #18. Merge and publication remain separate explicit decisions.
+Review the open local preview and Draft PR #18. Merge and publication remain separate explicit decisions.

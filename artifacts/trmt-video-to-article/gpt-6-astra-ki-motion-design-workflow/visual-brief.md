@@ -37,4 +37,4 @@ The chosen image form is OBJECT-LED CARD, because the physical film-production o
 - Hygiene: PASS. No logo, watermark, fake interface, pseudo-text or person.
 - Crop: PASS. Master is 1600 x 900 and derivative is exactly 400 x 225; all semantic elements and copy survive.
 - Web delivery: PASS. Master is 129,412 bytes; thumbnail is 16,834 bytes.
-- Article-context check: pending final rendered preview after push.
+- Article-context check: PASS in fresh local desktop and 390-x-844 rendering with one H1, no overflow and no browser errors. Both Vercel checks passed; direct unauthenticated preview access redirects to Vercel SSO.
