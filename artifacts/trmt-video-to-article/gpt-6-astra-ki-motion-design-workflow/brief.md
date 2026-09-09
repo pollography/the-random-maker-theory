@@ -19,4 +19,3 @@
 - Confirmed decisions: genau ein Artikel; Route besitzt die H1; erste Textpassage ist eine Hauptthese aus maximal zwei Sätzen; scanbare Zwischenüberschriften und native TRMT-Blöcke; `draft: true`.
 - Explicit exclusions: keine Nennung des Radar-Creators oder seiner Quellen im öffentlichen Artikel; keine Übersetzung, enge Paraphrase, übernommenen Prompts, Screenshots, Demos oder Eigenerfahrungsbehauptungen; keine Veröffentlichung.
 - Open author decisions: keine. Visuelles Ergebnis ist bewusst text-only, weil kein text- und logofreies Konzept die Produktspezifik im Blindtest tragen würde.
-

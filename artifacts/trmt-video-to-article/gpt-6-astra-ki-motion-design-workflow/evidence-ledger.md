@@ -21,4 +21,3 @@
 ## Author-needed slots
 
 - Keine. Eigene Praxiserfahrung wird nicht behauptet; ein echter Produktionslauf bleibt außerhalb dieses Draft-Scopes.
-

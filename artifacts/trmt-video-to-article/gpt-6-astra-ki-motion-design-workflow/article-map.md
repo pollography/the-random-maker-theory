@@ -17,4 +17,3 @@
 - Kein zweiter Installationsartikel: Der konkrete externe Skill war nicht als unabhängige Primärquelle verfügbar.
 - Kein neuer Toolvergleich: Dafür existiert bereits `/blog/ki-video-tools-2026-sora-runway-kling`.
 - Keine Demo-Nacherzählung: Das würde fremde Tests und Hooks zum Artikelgerüst machen.
-

@@ -20,4 +20,3 @@
 - Candidates: V-001 bis V-003
 - Selected direction: kein Bild. Der Artikel nutzt vorhandene native Scanbausteine wie Evidence Strip, Tabelle, Takeaway und Decision Grid.
 - Approval evidence: Automationsvertrag für Issue #17 erlaubt "kein Bild", wenn kein textfreies Motiv das aktuelle Image-QA-Gate besteht.
-

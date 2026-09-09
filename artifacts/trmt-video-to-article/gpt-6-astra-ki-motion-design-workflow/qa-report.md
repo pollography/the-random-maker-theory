@@ -21,4 +21,3 @@
 
 - Draft readiness: PASS
 - Publication readiness: PENDING explicit human review, merge and release decision
-
