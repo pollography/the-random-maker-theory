@@ -1,13 +1,11 @@
-# GPT-6 Astra für Motion Design: Der Einzeiler ist nicht der Workflow — Handoff
+# GPT-6 Astra für Motion Design: So wird aus einer Idee ein fertiger KI-Clip — Handoff
 
-Updated: 2026-09-09T16:48:00Z
+Updated: 2026-09-09T20:53:50Z
 
 ## Verified now
 
-- Draft PR #18 is open, marked as Draft and mergeable.
-- Vercel deployment and Preview Comments checks passed.
-- Local article tests, full suite, Svelte check, production build, dossier validation, link checks and responsive browser review passed.
-- Issue #17 links the Draft PR and no longer carries `research-needed`.
+- Draft PR #18 is being revised after beginner-comprehension and missing-thumbnail feedback.
+- The new hero and 400-x-225 thumbnail exist locally and are referenced by the draft.
 
 ## Exact working paths and URLs
 
@@ -20,11 +18,11 @@ Updated: 2026-09-09T16:48:00Z
 
 ## Completed changes
 
-- Wrote one independently researched German article draft with a two-sentence opening thesis and route-owned H1.
-- Added scan blocks, comparison table, decision grid, review checklist and an original pre-generation brief.
+- Rebuilt the article around a plain-language Kaffeetassen example and the simple flow `Idee -> Astra plant -> Video-Tool erzeugt -> Mensch entscheidet`.
+- Replaced the abstract caveat-led title with a concrete transformation and reader payoff.
+- Added a dedicated 16:9 TRMT hero and 400-x-225 thumbnail with the verified copy `GPT-6 ASTRA` and `VON DER IDEE ZUM KI-CLIP`.
 - Kept the public article free of radar provenance, creator attribution, borrowed prompts and borrowed experience claims.
-- Recorded a deliberate text-only visual decision after three concepts failed the product-specific blind test.
-- Added article contract tests and the generated empty image-usage map.
+- Added article contract tests and regenerated image metadata plus article image usage.
 
 ## Open, unknown, or blocked
 
@@ -36,9 +34,9 @@ Updated: 2026-09-09T16:48:00Z
 ## Recorded approvals
 
 - Article scope: approved; exact scope: one independent German draft article for issue #17; evidence: recurring automation contract and issue editorial frame
-- Visual direction: approved; exact scope: current TRMT visual system, text-free assets only, no image if the QA gate cannot be passed; evidence: recurring automation contract
+- Visual direction: approved; exact scope: dedicated 16:9 hero and 400-x-225 thumbnail with a short context anchor and insight line; evidence: direct user feedback and current TRMT one-second clarity contract
 - Publication: pending; exact article/asset scope: none; evidence: no merge or publication approval was given
 
 ## Next safe action
 
-Review Draft PR #18. Merge and publication remain separate explicit decisions.
+Run the full checks, inspect the revised Vercel preview on desktop and mobile, then update Draft PR #18. Merge and publication remain separate explicit decisions.

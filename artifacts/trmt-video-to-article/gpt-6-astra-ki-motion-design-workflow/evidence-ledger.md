@@ -1,4 +1,4 @@
-# GPT-6 Astra für Motion Design: Der Einzeiler ist nicht der Workflow — Evidence ledger
+# GPT-6 Astra für Motion Design: So wird aus einer Idee ein fertiger KI-Clip — Evidence ledger
 
 | ID | Claim or step | Evidence state | Source locator | Editorial decision | Notes |
 |---|---|---|---|---|---|

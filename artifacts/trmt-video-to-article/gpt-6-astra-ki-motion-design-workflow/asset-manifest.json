@@ -1,9 +1,37 @@
 {
   "schema_version": 1,
   "project_slug": "gpt-6-astra-ki-motion-design-workflow",
-  "assets": [],
-  "decision": {
-    "status": "not-needed",
-    "reason": "No text-free, logo-free concept passed the 400x225 topic-specific blind test; native article scan components carry the explanatory load."
-  }
+  "assets": [
+    {
+      "id": "ASSET-001",
+      "role": "hero",
+      "path": "static/images/blog/gpt-6-astra-motion-design-1.webp",
+      "status": "final",
+      "prompt_or_capture_source": "visual-brief.md#final-generation-direction",
+      "reference_images": [
+        "C:/Users/Pollo/.codex/skills/pollo-blog/assets/trmt-crafted-editorial-material-reference-v2.webp"
+      ],
+      "one_second_sentence": "GPT-6 Astra führt eine einfache Idee über einen Regieplan zu einem getrennten Video-Tool.",
+      "dimensions": {"width": 1600, "height": 900},
+      "alt_text": "Eine Ideenkarte läuft über Storyboard und Filmklappe zu einer separaten Kamera; darüber steht GPT-6 Astra, von der Idee zum KI-Clip.",
+      "creator": "just.pollo",
+      "license": "Original TRMT publication asset; no third-party screenshot, logo or interface."
+    },
+    {
+      "id": "ASSET-002",
+      "role": "thumbnail",
+      "path": "static/images/blog/gpt-6-astra-motion-design-1-thumb.webp",
+      "status": "final",
+      "prompt_or_capture_source": "Responsive 400x225 derivative of ASSET-001",
+      "reference_images": [
+        "static/images/blog/gpt-6-astra-motion-design-1.webp"
+      ],
+      "one_second_sentence": "GPT-6 Astra: von der Idee zum KI-Clip.",
+      "dimensions": {"width": 400, "height": 225},
+      "alt_text": "",
+      "creator": "just.pollo",
+      "license": "Responsive derivative of the original TRMT hero asset."
+    }
+  ],
+  "editorial_decision": "A dedicated hero and thumbnail replace the earlier text-only exception. Short supporting copy makes the exact product and reader payoff clear at card size."
 }
