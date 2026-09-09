@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "slug": "gpt-6-astra-ki-motion-design-workflow",
+  "title": "GPT-6 Astra für Motion Design: Der Einzeiler ist nicht der Workflow",
+  "created_at": "2026-09-09T16:28:10Z",
+  "updated_at": "2026-09-09T16:44:00Z",
+  "phase": "release",
+  "status": "active",
+  "publication_status": "draft",
+  "source_completeness": "complete",
+  "visual_style_status": "not-needed",
+  "current_step": "Open and verify a Draft PR",
+  "next_step": "Push the isolated branch, open a Draft PR and verify remote checks",
+  "blockers": [],
+  "approvals": {
+    "article_scope": {
+      "status": "approved",
+      "scope": ["one independent German draft article for issue 17"],
+      "evidence": "recurring automation contract and issue 17 editorial frame",
+      "decided_at": "2026-09-09T16:16:46Z"
+    },
+    "visual_direction": {
+      "status": "approved",
+      "scope": ["current TRMT visual system", "text-free assets only", "no image when the QA gate cannot be passed"],
+      "evidence": "recurring automation contract",
+      "decided_at": "2026-09-09T16:16:46Z"
+    },
+    "publication": {
+      "status": "pending",
+      "scope": [],
+      "evidence": null,
+      "decided_at": null
+    }
+  },
+  "last_verified_at": "2026-09-09T16:44:00Z"
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-ki-motion-design-workflow",
+  "assets": [],
+  "decision": {
+    "status": "not-needed",
+    "reason": "No text-free, logo-free concept passed the 400x225 topic-specific blind test; native article scan components carry the explanatory load."
+  }
+}

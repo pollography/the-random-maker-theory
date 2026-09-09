@@ -213,6 +213,7 @@ export const blogImageUsage = {
 		"/images/blog/gemini-notebook-kostenlos-codex-content-workflow-bridge.webp",
 		"/images/blog/gemini-notebook-kostenlos-codex-content-workflow-source-check.webp"
 	],
+	"gpt-6-astra-ki-motion-design-workflow": [],
 	"gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17": [
 		"/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-1.webp",
 		"/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-1-chart.webp",
