@@ -10,7 +10,7 @@
 | Links and assets | PASS | 8 of 8 external sources returned HTTP 200 with a standard browser user agent; 2 of 2 internal article targets exist. Empty image usage map generated. | None. |
 | Desktop/mobile preview | PASS | Local preview at desktop and 390 x 844: exactly one H1, preview banner visible, `scrollWidth == clientWidth`, no console warnings or errors. | None. |
 | Targeted tests | PASS | New article tests 3 of 3; full suite 173 of 173; `npm run check` 0 errors and 0 warnings; production build PASS. | None. |
-| Release scope | PASS | Only draft article, article test, generated empty image map and dossier are in scope. No merge, deployment or publication. | Open Draft PR and keep `draft: true`. |
+| Release scope | PASS | Draft PR #18 is open, marked Draft and mergeable. Vercel deployment and Preview Comments checks passed. No merge or publication occurred. | Human review remains required before merge or release. |
 
 ## Known baseline failures
 
