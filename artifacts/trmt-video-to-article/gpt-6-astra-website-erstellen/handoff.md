@@ -1,6 +1,6 @@
 # Website mit GPT-6 Astra erstellen: Vom Vorbild zum eigenen Entwurf — Handoff
 
-Updated: 2026-09-10T05:48:00Z
+Updated: 2026-09-10T05:50:54Z
 
 ## Verified now
 
@@ -12,6 +12,7 @@ Updated: 2026-09-10T05:48:00Z
 - Full repository checks pass: 173/173 tests, 0 check errors, 0 check warnings, and a successful production build.
 - Desktop and real 390 x 844 mobile previews pass with one H1, responsive hero, no horizontal overflow, and no console errors.
 - Exact normalized eight-token-window comparison against the complete caption track found 0 matching windows.
+- Draft PR #20 is open and both Vercel checks completed successfully. Issue #19 now links the verified PR and the `research-needed` label was removed.
 
 ## Exact working paths and URLs
 
@@ -21,7 +22,10 @@ Updated: 2026-09-10T05:48:00Z
 - Hero: `static/images/blog/gpt-6-astra-website-erstellen-1.webp`
 - Thumbnail: `static/images/blog/gpt-6-astra-website-erstellen-1-thumb.webp`
 - Issue: `https://github.com/pollography/the-random-maker-theory/issues/19`
-- Preview: local production preview verified; Draft PR pending.
+- Draft PR: `https://github.com/pollography/the-random-maker-theory/pull/20`
+- Branch: `codex/chase-radar-issue-19-astra-websites`
+- Verified draft-content commit: `82b8a564858e7f174229abb7f496c883f18acb9b`
+- Preview: local production preview verified; Vercel provider checks are green.
 
 ## Completed changes
 
@@ -43,4 +47,4 @@ Updated: 2026-09-10T05:48:00Z
 
 ## Next safe action
 
-Review the final diff, open one Draft PR, and wait for provider checks. Never merge or publish without separate approval.
+Review Draft PR #20. Never merge or publish without separate approval.

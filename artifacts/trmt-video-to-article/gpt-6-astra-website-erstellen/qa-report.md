@@ -10,7 +10,8 @@
 | Links and assets | PASS | Both internal article routes returned HTTP 200. All five current OpenAI primary pages were readable in the current web readback; direct anonymous curl was blocked with HTTP 403 by three openai.com pages, so availability was verified through the browser/web reader instead. Image metadata was regenerated and the production build resolved the article and assets. | Recheck volatile product availability before publication. |
 | Desktop/mobile preview | PASS | Local production preview checked at 1280 px and a real 390 x 844 browser viewport. Title, hero, thesis, and `Kurz gesagt` render in order; hero is responsive; no horizontal overflow; browser console returned 0 error-level entries. | Remote Vercel preview may still require account access. |
 | Targeted and repository tests | PASS | Red state was 0/3 because the article was absent; green article test is 3/3. Full `node --test` result is 173/173; `npm run check` reports 0 errors and 0 warnings; `npm run build` completed successfully. | None for Draft PR. |
-| Release scope | PASS | Isolated issue-19 worktree; draft-only files; main checkout untouched. | Review final diff before commit and PR. |
+| Release scope | PASS | Isolated issue-19 worktree; draft-only files; main checkout untouched. | None for Draft PR. |
+| Draft PR checks | PASS | Draft PR #20 is open against `main`; both Vercel and Vercel Preview Comments finished successfully. Issue #19 links the PR and no longer carries `research-needed`. | Merge and publication remain separately gated. |
 
 ## Known baseline limits
 

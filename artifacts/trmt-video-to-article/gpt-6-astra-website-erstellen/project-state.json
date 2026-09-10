@@ -3,14 +3,14 @@
   "slug": "gpt-6-astra-website-erstellen",
   "title": "Website mit GPT-6 Astra erstellen: Vom Vorbild zum eigenen Entwurf",
   "created_at": "2026-09-10T05:25:27Z",
-  "updated_at": "2026-09-10T05:48:00Z",
-  "phase": "release",
-  "status": "active",
+  "updated_at": "2026-09-10T05:50:54Z",
+  "phase": "complete",
+  "status": "complete",
   "publication_status": "draft",
   "source_completeness": "partial",
   "visual_style_status": "approved",
-  "current_step": "Open and verify one Draft PR",
-  "next_step": "Wait for provider checks, then record the Draft PR on issue #19",
+  "current_step": "Draft PR #20 is open and verified",
+  "next_step": "Wait for editorial review and explicit publication approval",
   "blockers": [],
   "approvals": {
     "article_scope": {
@@ -41,5 +41,5 @@
       "decided_at": null
     }
   },
-  "last_verified_at": "2026-09-10T05:48:00Z"
+  "last_verified_at": "2026-09-10T05:50:54Z"
 }
