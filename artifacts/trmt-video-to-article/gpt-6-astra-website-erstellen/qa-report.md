@@ -22,4 +22,3 @@
 
 - Draft readiness: PASS
 - Publication readiness: UNKNOWN
-

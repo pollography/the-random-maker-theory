@@ -16,4 +16,3 @@
 
 - No series: one running example and one complete path are easier for a beginner than splitting the method.
 - No separate Images 2.5 article: the image model is supporting context, not a second reader job.
-

@@ -18,4 +18,3 @@
 - Candidates: One object-led base generated under the current profile; text added deterministically after generation.
 - Selected direction: Inspiration cards -> layout press -> one final website board. The proof object remains serious and understandable without a character.
 - Approval evidence: Current recurring-pipeline contract requires a native 16:9 hero plus actual 400 x 225 thumbnail and treats the canonical TRMT visual system as the approved style source.
-

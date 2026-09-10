@@ -19,4 +19,3 @@
 - Confirmed decisions: Route owns the public H1; body begins with a one-to-two-sentence thesis; full novice explanation precedes specialist terms; hero and 400 x 225 thumbnail are mandatory; article remains draft-only.
 - Explicit exclusions: No public creator, video, transcript, adaptation process, copied hook, copied screenshots, invented firsthand experience, automatic merge, deployment, or publication.
 - Open author decisions: Editorial taste and publication approval after Draft-PR review.
-

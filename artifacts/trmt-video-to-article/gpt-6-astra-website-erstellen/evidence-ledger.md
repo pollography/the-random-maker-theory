@@ -21,4 +21,3 @@
 ## Author-needed slots
 
 - Publication approval and the user's final editorial judgment remain required after the Draft PR.
-
