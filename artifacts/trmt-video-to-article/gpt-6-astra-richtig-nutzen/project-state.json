@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "slug": "gpt-6-astra-richtig-nutzen",
+  "title": "GPT-6 Astra richtig nutzen: 5 Fehler, die Zeit und Ergebnisse kosten",
+  "created_at": "2026-09-11T05:20:39Z",
+  "updated_at": "2026-09-11T05:43:30Z",
+  "phase": "qa",
+  "status": "active",
+  "publication_status": "draft",
+  "source_completeness": "complete",
+  "visual_style_status": "approved",
+  "current_step": "Create and verify a Draft PR linked to issue #21",
+  "next_step": "Wait for explicit editorial and publication approval; do not merge",
+  "blockers": [],
+  "approvals": {
+    "article_scope": {
+      "status": "approved",
+      "scope": [
+        "src/content/blog/gpt-6-astra-richtig-nutzen.md",
+        "src/content/blog/gpt-6-astra-richtig-nutzen.test.js",
+        "static/images/blog/gpt-6-astra-richtig-nutzen-1.webp",
+        "static/images/blog/gpt-6-astra-richtig-nutzen-1-thumb.webp",
+        "artifacts/trmt-video-to-article/gpt-6-astra-richtig-nutzen"
+      ],
+      "evidence": "Recurring automation contract for one issue-to-Draft-PR run",
+      "decided_at": "2026-09-11T05:15:44Z"
+    },
+    "visual_direction": {
+      "status": "approved",
+      "scope": [
+        "static/images/blog/gpt-6-astra-richtig-nutzen-1.webp",
+        "static/images/blog/gpt-6-astra-richtig-nutzen-1-thumb.webp"
+      ],
+      "evidence": "Current canonical TRMT visual profile and recurring automation contract",
+      "decided_at": "2026-09-11T05:15:44Z"
+    },
+    "publication": {
+      "status": "pending",
+      "scope": [],
+      "evidence": null,
+      "decided_at": null
+    }
+  },
+  "last_verified_at": "2026-09-11T05:43:30Z"
+}
