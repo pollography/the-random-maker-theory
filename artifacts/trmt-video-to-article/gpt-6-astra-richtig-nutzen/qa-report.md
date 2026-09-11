@@ -21,4 +21,3 @@
 
 - Draft readiness: PASS.
 - Publication readiness: UNKNOWN because publication was neither requested nor approved.
-

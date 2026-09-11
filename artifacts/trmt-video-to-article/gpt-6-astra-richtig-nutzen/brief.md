@@ -19,4 +19,3 @@
 - Confirmed decisions: Route owns the public H1; body starts with a one-to-two-sentence thesis; all terms are defined on first use; current OpenAI claims use primary sources; hero and actual 400 x 225 thumbnail are mandatory.
 - Explicit exclusions: No creator/video/blog attribution in public copy; no translated hook; no copied screenshots; no third-party benchmark numbers or personal tests; no automatic publication.
 - Open author decisions: Final editorial approval and publication timing.
-

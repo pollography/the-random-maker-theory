@@ -18,4 +18,3 @@
 - Candidates: One object-led base generated under the current profile; exact German text added deterministically after generation.
 - Selected direction: Five countable before/after toggle stations around one abstract Astra core. The content promise remains readable in the real thumbnail without relying on a vague metaphor.
 - Approval evidence: The recurring pipeline requires a native 16:9 hero plus actual 400 x 225 thumbnail and treats the canonical TRMT visual system as the approved style source.
-
