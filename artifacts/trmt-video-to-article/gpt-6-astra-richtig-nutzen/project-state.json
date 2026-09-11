@@ -3,14 +3,14 @@
   "slug": "gpt-6-astra-richtig-nutzen",
   "title": "GPT-6 Astra richtig nutzen: 5 Fehler, die Zeit und Ergebnisse kosten",
   "created_at": "2026-09-11T05:20:39Z",
-  "updated_at": "2026-09-11T05:43:30Z",
-  "phase": "qa",
+  "updated_at": "2026-09-11T05:50:57Z",
+  "phase": "release",
   "status": "active",
   "publication_status": "draft",
   "source_completeness": "complete",
   "visual_style_status": "approved",
-  "current_step": "Create and verify a Draft PR linked to issue #21",
-  "next_step": "Wait for explicit editorial and publication approval; do not merge",
+  "current_step": "Await human editorial review of Draft PR #22",
+  "next_step": "Do not merge or publish without explicit approval",
   "blockers": [],
   "approvals": {
     "article_scope": {
@@ -41,5 +41,5 @@
       "decided_at": null
     }
   },
-  "last_verified_at": "2026-09-11T05:43:30Z"
+  "last_verified_at": "2026-09-11T05:50:57Z"
 }

@@ -1,6 +1,6 @@
 # GPT-6 Astra richtig nutzen: 5 Fehler, die Zeit und Ergebnisse kosten — Handoff
 
-Updated: 2026-09-11T05:43:30Z
+Updated: 2026-09-11T05:50:57Z
 
 ## Verified now
 
@@ -10,6 +10,8 @@ Updated: 2026-09-11T05:43:30Z
 - The article contract passes 3/3 and the complete suite passes 173/173.
 - `npm run check` reports 0 errors and 0 warnings; the production build completes with the Vercel adapter.
 - Desktop and mobile local previews each render one H1 with no horizontal overflow, a loaded 16:9 hero and no console errors.
+- Draft PR 22 is open, mergeable and both Vercel checks pass.
+- Radar issue 21 links to the verified Draft PR and no longer carries `research-needed`.
 - The article remains `draft: true`; no merge or publication has been performed or approved.
 
 ## Exact working paths and URLs
@@ -19,7 +21,7 @@ Updated: 2026-09-11T05:43:30Z
 - Draft: `src/content/blog/gpt-6-astra-richtig-nutzen.md`
 - Preview: `http://127.0.0.1:4190/preview/gpt-6-astra-richtig-nutzen`
 - Radar issue: `https://github.com/pollography/the-random-maker-theory/issues/21`
-- Draft PR: pending creation
+- Draft PR: `https://github.com/pollography/the-random-maker-theory/pull/22`
 
 ## Completed changes
 
@@ -30,7 +32,6 @@ Updated: 2026-09-11T05:43:30Z
 
 ## Open, unknown, or blocked
 
-- The Draft PR and its remote checks are still pending.
 - Publication approval is absent; the article must remain a preview-only draft.
 
 ## Recorded approvals
@@ -41,4 +42,4 @@ Updated: 2026-09-11T05:43:30Z
 
 ## Next safe action
 
-Commit only the public draft scope, create a Draft PR linked to issue 21, then require green remote checks before reporting it ready for review.
+Review the local preview and Draft PR 22. Merge or change `draft: true` only after explicit editorial and publication approval.

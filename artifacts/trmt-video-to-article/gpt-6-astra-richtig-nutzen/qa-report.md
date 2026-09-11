@@ -10,7 +10,7 @@
 | Links and assets | PASS | Both internal links and the preview route returned HTTP 200. The 1600 x 900 hero and 400 x 225 thumbnail returned HTTP 200 and are registered in generated metadata. All five official OpenAI source URLs were read back current; three Help Center URLs reject direct scripted requests with 403 but remain readable through normal web access. | Recheck live links after publication. |
 | Desktop/mobile preview | PASS | Fresh local production-preview checks at 1280 x 720 and 390 x 844 found exactly one H1, no page-level horizontal overflow, a loaded 1600 x 900 hero, visible opening thesis and no console warnings or errors. The top, body and article end were visually inspected; lazy related-card images loaded without failures after scrolling. | Repeat against the live URL only after an approved merge. |
 | Targeted tests | PASS | The article contract passed 3/3 and the complete repository suite passed 173/173. `npm run check` reported 0 errors and 0 warnings; `npm run build` completed with the Vercel adapter. | None. |
-| Release scope | PASS | The isolated branch contains one draft article, its contract test, one hero pair, generated image indexes and its dossier. The canonical dirty checkout was not modified; private radar source files remain untracked and outside commit scope. | Keep `draft: true`; do not merge or publish without explicit approval. |
+| Release scope | PASS | Draft PR 22 is open and mergeable with both Vercel checks green. Radar issue 21 links to it and no longer has `research-needed`. The canonical dirty checkout was not modified; private radar source files remain untracked and outside commit scope. | Keep `draft: true`; do not merge or publish without explicit approval. |
 
 ## Known baseline warnings
 
