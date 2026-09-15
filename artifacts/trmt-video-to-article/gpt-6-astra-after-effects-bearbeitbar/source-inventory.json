@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-after-effects-bearbeitbar",
+  "source_completeness": "complete",
+  "sources": [
+    {"id":"SRC-001","type":"video","locator":"https://www.youtube.com/watch?v=C8dWdic-oK4","status":"extracted","sha256":null,"duration_seconds":516,"page_count":null,"paired_source_ids":["SRC-002"],"notes":"Published 2026-09-14. Complete 267-segment English caption track and 36 chronological full-range keyframes checked privately; 854x480 public video, not public article template."},
+    {"id":"SRC-002","type":"url","locator":"https://chaseai.io/blog/gpt-6-astra-after-effects-motion-design","status":"extracted","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-001"],"notes":"Published 2026-09-15T01:02:36Z. Full Jina reader text inspected privately; claims and outline are not a translation source."},
+    {"id":"SRC-003","type":"url","locator":"https://higgsfield.ai/ai-motion-designer","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":[],"notes":"Vendor product page, checked 2026-09-15; ChatGPT plugin route distinguished from local server."},
+    {"id":"SRC-004","type":"url","locator":"https://github.com/higgsfield-ai/fnf-local-pluging-bridge-mcp","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-005"],"notes":"Official public local AE bridge README checked via gh and web 2026-09-15; created 2026-09-10, MIT. Offline success not live AE proof."},
+    {"id":"SRC-005","type":"url","locator":"https://github.com/higgsfield-ai/fnf-local-pluging-bridge-mcp/blob/main/docs/TOOLS.md","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-004"],"notes":"Official 12-tool reference checked via gh API 2026-09-15."},
+    {"id":"SRC-006","type":"url","locator":"https://helpx.adobe.com/after-effects/desktop/work-with-projects/after-effects-projects/projects.html","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":[],"notes":"Adobe project structure checked 2026-09-15."},
+    {"id":"SRC-007","type":"url","locator":"https://helpx.adobe.com/ca/after-effects/desktop/automate-in-after-effects/automate-animation/scripts.html","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":[],"notes":"Adobe script permissions checked 2026-09-15."},
+    {"id":"SRC-008","type":"url","locator":"https://www.adobe.com/de/products/aftereffects/plans.html","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":[],"notes":"German license/trial current 2026-09-15, volatile price omitted."},
+    {"id":"SRC-009","type":"url","locator":"https://help.openai.com/en/articles/20001275/","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":[],"notes":"Astra access and usage current 2026-09-15."},
+    {"id":"SRC-010","type":"url","locator":"https://openai.com/index/gpt-6-astra/","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":[],"notes":"Official Astra launch/model background checked 2026-09-15."}
+  ],
+  "pairings": [{"source_ids":["SRC-001","SRC-002"],"reason":"Radar source video and its companion blog on the same narrower AE topic"},{"source_ids":["SRC-004","SRC-005"],"reason":"Vendor local bridge README and its operation reference"}],
+  "missing_or_unavailable": []
+}
