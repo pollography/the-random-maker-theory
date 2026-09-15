@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-richtig-nutzen",
+  "source_completeness": "complete",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "type": "video",
+      "locator": "https://www.youtube.com/watch?v=5EhrMJ9HIfU",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": 1067,
+      "page_count": null,
+      "paired_source_ids": ["SRC-002", "SRC-003", "SRC-004"],
+      "notes": "Private radar source only. Full 426 x 240 stream obtained with an impersonated HLS client after the normal yt-dlp path returned HTTP 403. Local source SHA-256 during inspection: ffd2cdade0619daeb0a44becbfab9178e0ff9f9c90555c8042d1ecb64830478a. Not committed."
+    },
+    {
+      "id": "SRC-002",
+      "type": "transcript",
+      "locator": "https://www.youtube.com/watch?v=5EhrMJ9HIfU",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": 1067,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001", "SRC-003", "SRC-004"],
+      "notes": "English auto-caption track across the complete timeline, 995 raw VTT cues. Local VTT SHA-256 during inspection: 47da35001aaf8234228cb274b7e21738eb46bb72afd5fe7b65c50f10a1fd772a. Not committed."
+    },
+    {
+      "id": "SRC-003",
+      "type": "image",
+      "locator": "https://www.youtube.com/watch?v=5EhrMJ9HIfU",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": 1067,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001", "SRC-002", "SRC-004"],
+      "notes": "43 scene-change frames plus 13 exact chapter and timeline frames inspected, including 17:45. They show benchmark charts, a Dune House build, browser research, a skill audit, voice orchestration, and official model guidance. Not committed."
+    },
+    {
+      "id": "SRC-004",
+      "type": "url",
+      "locator": "https://chaseai.io/blog/gpt-6-astra-mistakes-and-fixes",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001", "SRC-002", "SRC-003"],
+      "notes": "Paired private radar page, extracted with Scrapling 0.4.15 using --ai-targeted. Local Markdown SHA-256 during inspection: 961434c26c80b9a8ac88b5df4abf9257b84bb57784ffb6a37324cc0409f4c7ff. Not a public article source and not committed."
+    },
+    {
+      "id": "SRC-005",
+      "type": "url",
+      "locator": "https://developers.openai.com/api/docs/guides/latest-model",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-006", "SRC-007", "SRC-008", "SRC-009"],
+      "notes": "Official current Astra model and prompting guidance, accessed 2026-09-11. Used for clarification behavior, skill sensitivity, autonomy, and reviewable-result guidance."
+    },
+    {
+      "id": "SRC-006",
+      "type": "url",
+      "locator": "https://help.openai.com/en/articles/20001516-managing-usage-with-gpt-6-astra-in-work-and-codex",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-005", "SRC-009"],
+      "notes": "Official current usage guidance, accessed 2026-09-11. Supports Low or Medium as the starting point, allowance tradeoff, and no guarantee from higher effort."
+    },
+    {
+      "id": "SRC-007",
+      "type": "url",
+      "locator": "https://help.openai.com/en/articles/20001510-manage-browser-and-computer-use-in-your-enterprise-workspace",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-005"],
+      "notes": "Official definitions and availability boundaries for in-app browser, Browser Use, and Computer Use, accessed 2026-09-11."
+    },
+    {
+      "id": "SRC-008",
+      "type": "url",
+      "locator": "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-005"],
+      "notes": "Official current Work, Codex, and Voice instructions, accessed 2026-09-11. Supports voice task coordination, one active voice conversation, and permission caveats."
+    },
+    {
+      "id": "SRC-009",
+      "type": "url",
+      "locator": "https://openai.com/products/release-notes/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-005", "SRC-006"],
+      "notes": "Official release notes, accessed 2026-09-11. Used for the September 3, 2026 release date and general capability framing."
+    },
+    {
+      "id": "SRC-010",
+      "type": "url",
+      "locator": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-005", "SRC-006"],
+      "notes": "Official model reference, accessed 2026-09-11. Used for model identity and supported reasoning levels."
+    }
+  ],
+  "pairings": [
+    {
+      "source_ids": ["SRC-001", "SRC-002", "SRC-003", "SRC-004"],
+      "reason": "One private radar topic represented by the full video, full captions, visual samples, and paired page."
+    },
+    {
+      "source_ids": ["SRC-005", "SRC-006", "SRC-007", "SRC-008", "SRC-009", "SRC-010"],
+      "reason": "Current OpenAI primary documentation for prompting, effort, tools, voice, release context, and model identity."
+    }
+  ],
+  "missing_or_unavailable": []
+}
