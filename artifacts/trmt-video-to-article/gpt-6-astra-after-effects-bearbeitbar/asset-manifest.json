@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-after-effects-bearbeitbar",
+  "assets": [
+    {
+      "id": "ASSET-001",
+      "role": "hero",
+      "path": "static/images/blog/gpt-6-astra-after-effects-bearbeitbar-1.webp",
+      "status": "final",
+      "prompt_or_capture_source": "visual-brief.md; built-in imagegen base and targeted glyph hygiene edit; compose-title.py exact Inter lettering",
+      "reference_images": ["C:/Users/Pollo/.codex/skills/pollo-blog/assets/trmt-crafted-editorial-material-reference-v2.webp"],
+      "one_second_sentence": "After Effects with Astra can create editable layered animation rather than just a flat video export.",
+      "dimensions": {"width": 1600, "height": 900},
+      "alt_text": "Separat verschiebbare Formebenen auf einer Zeitachse neben einem fertigen Filmstreifen; After Effects mit GPT-6 Astra.",
+      "creator": "just.pollo",
+      "license": "OpenAI-generated editorial image with deterministic own copy; no third-party screenshot/logo; publication rights review still required"
+    },
+    {
+      "id": "ASSET-002",
+      "role": "thumbnail",
+      "path": "static/images/blog/gpt-6-astra-after-effects-bearbeitbar-1-thumb.webp",
+      "status": "final",
+      "prompt_or_capture_source": "ASSET-001 native 16:9 master; compose-title.py exact 400 x 225 responsive export",
+      "reference_images": [],
+      "one_second_sentence": "After Effects with Astra: the animation stays editable.",
+      "dimensions": {"width": 400, "height": 225},
+      "alt_text": "After Effects mit GPT-6 Astra: Animation bleibt änderbar, dargestellt als getrennte Ebenen auf einer Zeitachse.",
+      "creator": "just.pollo",
+      "license": "Same generated/editorial rights review as ASSET-001"
+    }
+  ]
+}
