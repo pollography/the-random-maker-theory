@@ -2,19 +2,29 @@
 	import TagList from '$lib/components/shared/TagList.svelte';
 	import BlogCard from '$lib/components/blog/BlogCard.svelte';
 	import MediaBanner from '$lib/components/blog/MediaBanner.svelte';
+	import Images25Comparison from '$lib/components/blog/Images25Comparison.svelte';
 	import { siteConfig } from '$lib/config';
 	import { blogImageUsage } from '$lib/data/blog-image-usage.generated.js';
 	import { buildImageObjects } from '$lib/utils/image-rights.js';
 	import { getImageSeo } from '$lib/utils/image-seo.js';
 
 	let { data } = $props();
+	let isImages25 = $derived(data.post.slug === 'chatgpt-images-2-5-fotos-bearbeiten');
 	let metaTitle = $derived(data.post.seoTitle || data.post.title);
 	let heroImageSeo = $derived(getImageSeo(
 		data.post.heroImage,
-		'(max-width: 768px) calc(100vw - 32px), 768px'
+		isImages25
+			? '(max-width: 520px) calc(100vw - 16px), (max-width: 1200px) calc(100vw - 32px), 1152px'
+			: '(max-width: 768px) calc(100vw - 32px), 768px'
 	));
 	let articleImages = $derived(buildImageObjects(
-		blogImageUsage[data.post.slug] ?? [data.post.heroImage || '/images/og/default.webp'],
+		isImages25
+			? [
+				data.post.heroImage,
+				'/images/blog/chatgpt-images-2-5-altes-foto-original.webp',
+				'/images/blog/chatgpt-images-2-5-maker-outfit.webp'
+			]
+			: blogImageUsage[data.post.slug] ?? [data.post.heroImage || '/images/og/default.webp'],
 		data.post.title
 	));
 
@@ -169,7 +179,7 @@
 	style="transform: scaleX({scrollProgress / 100}); background: linear-gradient(90deg, var(--color-accent-honey), var(--color-accent-teal));"
 ></div>
 
-<article class="article-container">
+<article class="article-container" class:images25={isImages25}>
 	<!-- Metadata -->
 	<header class="article-header">
 		<div>
@@ -209,7 +219,9 @@
 				src={data.post.heroImage}
 				srcset={heroImageSeo.srcset}
 				sizes={heroImageSeo.sizes}
-				alt={data.post.title}
+				alt={isImages25
+					? 'Illustration einer gezielten Bildbearbeitung: Eine Kamera bleibt das Motiv, während der Hintergrund eines Produktfotos wechselt'
+					: data.post.title}
 				loading="eager"
 				fetchpriority="high"
 				decoding="async"
@@ -219,7 +231,13 @@
 				onclick={() => openLightbox(data.post.heroImage, data.post.title)}
 				onkeydown={(e) => e.key === 'Enter' && openLightbox(data.post.heroImage, data.post.title)}
 			/>
+			{#if isImages25}
+				<p class="images25-hero-caption">Illustration eines Foto-Edits mit neuem Hintergrund. Den eigenen Fototest siehst du darunter.</p>
+			{/if}
 		</div>
+	{/if}
+	{#if isImages25}
+		<Images25Comparison />
 	{/if}
 
 	<!-- Media Banner (Podcast/Video) -->
@@ -288,6 +306,15 @@
 		color: var(--color-text);
 		opacity: 0.95;
 	}
+
+	.images25.article-container { max-width: 76rem; }
+	.images25 .article-header,
+	.images25 .article-content { max-width: 48rem; margin-inline: auto; }
+	.images25 .article-title { font-family: var(--font-sans); font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 770; font-style: normal; letter-spacing: -0.035em; opacity: 1; }
+	.images25 .title-accent { font-style: normal; }
+	.images25 :global(.prose h2) { font-family: var(--font-sans); font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 730; font-style: normal; color: var(--color-text); }
+	.images25 :global(.prose h3) { font-family: var(--font-sans); font-style: normal; }
+	.images25-hero-caption { max-width: 48rem; margin: 0.85rem auto 0; color: var(--color-text-muted); font: 500 0.82rem/1.5 var(--font-sans); }
 
 	.title-accent {
 		color: var(--color-accent-honey);

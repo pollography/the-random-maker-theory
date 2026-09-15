@@ -152,6 +152,9 @@ export const blogImageUsage = {
 	"chatgpt-5-4-was-bedeutet-das-fuer-uns": [
 		"/images/blog/chatgpt-5-4-hero.webp"
 	],
+	"chatgpt-images-2-5-fotos-bearbeiten": [
+		"/images/blog/chatgpt-images-2-5-thumbnail-v3.webp"
+	],
 	"chatgpt-prompts-erstellen-2026": [
 		"/images/blog/chatgpt-prompts-erstellen-2026-1.webp"
 	],

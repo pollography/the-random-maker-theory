@@ -599,6 +599,58 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/chatgpt-images-2-5-altes-foto-original.webp": {
+		"width": 1400,
+		"height": 874,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/chatgpt-images-2-5-altes-foto-original.webp",
+				"width": 1400
+			}
+		]
+	},
+	"/images/blog/chatgpt-images-2-5-maker-outfit.webp": {
+		"width": 1400,
+		"height": 873,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/chatgpt-images-2-5-maker-outfit.webp",
+				"width": 1400
+			}
+		]
+	},
+	"/images/blog/chatgpt-images-2-5-thumbnail-v3-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/chatgpt-images-2-5-thumbnail-v3-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/chatgpt-images-2-5-thumbnail-v3.webp",
+				"width": 1600
+			}
+		]
+	},
+	"/images/blog/chatgpt-images-2-5-thumbnail-v3.webp": {
+		"width": 1600,
+		"height": 900,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/chatgpt-images-2-5-thumbnail-v3-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/chatgpt-images-2-5-thumbnail-v3.webp",
+				"width": 1600
+			}
+		]
+	},
 	"/images/blog/chatgpt-prompts-erstellen-2026-1-thumb.webp": {
 		"width": 800,
 		"height": 450,
