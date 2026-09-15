@@ -3,14 +3,14 @@
   "slug": "gpt-6-astra-after-effects-bearbeitbar",
   "title": "GPT-6 Astra steuert After Effects: Animationen erstellen, die du ändern kannst",
   "created_at": "2026-09-15T16:18:41Z",
-  "updated_at": "2026-09-15T16:18:41Z",
-  "phase": "release",
-  "status": "active",
+  "updated_at": "2026-09-15T16:41:47Z",
+  "phase": "complete",
+  "status": "complete",
   "publication_status": "draft",
   "source_completeness": "complete",
   "visual_style_status": "approved",
-  "current_step": "Local QA complete; exact diff and dossier validation before isolated Draft PR delivery",
-  "next_step": "Create Draft PR, verify it and link issue; keep local preview alive without publication",
+  "current_step": "Draft PR #25 created, issue #23 linked, remote checks passed; local preview kept for review",
+  "next_step": "Await explicit editorial/publication decision and an optional real AE project check; no automatic merge",
   "blockers": [],
   "approvals": {
     "article_scope": {
@@ -32,5 +32,5 @@
       "decided_at": null
     }
   },
-  "last_verified_at": "2026-09-15T16:35:45Z"
+  "last_verified_at": "2026-09-15T16:41:47Z"
 }

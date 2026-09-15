@@ -1,12 +1,13 @@
 # After Effects mit GPT-6 Astra: Animationen als bearbeitbares Projekt — Handoff
 
-Updated: 2026-09-15T16:35:45Z
+Updated: 2026-09-15T16:41:47Z
 
 ## Verified now
 
 - Source and claim ledger completed from the whole video, companion article and independently checked primary references.
 - New German standalone draft, hero and native thumbnail pass local tests, typecheck, production build and desktop/mobile page review.
 - Preview page, hero and thumbnail return HTTP 200 at 127.0.0.1:4189; no browser console errors or duplicate H1.
+- Draft PR #25 is OPEN against main and remains a draft; Vercel checks passed. Issue #23 has the PR link and no longer has the `research-needed` label.
 
 ## Exact working paths and URLs
 
@@ -14,6 +15,7 @@ Updated: 2026-09-15T16:35:45Z
 - Repository: `pollography/the-random-maker-theory`, isolated worktree `D:/AI_Workspaces/Claude_Code/.release-worktrees/trmt-chase-radar-issue-23-20260915`
 - Draft: `src/content/blog/gpt-6-astra-after-effects-bearbeitbar.md`; issue https://github.com/pollography/the-random-maker-theory/issues/23
 - Preview: http://127.0.0.1:4189/preview/gpt-6-astra-after-effects-bearbeitbar
+- Draft PR: https://github.com/pollography/the-random-maker-theory/pull/25
 
 ## Completed changes
 
@@ -22,7 +24,6 @@ Updated: 2026-09-15T16:35:45Z
 
 ## Open, unknown, or blocked
 
-- Remote branch/Draft PR, linked issue transition and remote checks not yet performed.
 - Real AE behavior and publication rights/approval are outside this draft delivery and remain UNKNOWN.
 
 ## Recorded approvals
@@ -33,4 +34,4 @@ Updated: 2026-09-15T16:35:45Z
 
 ## Next safe action
 
-Review exact diff and dossier validation, then commit/push only this worktree branch, create a verified Draft PR, link issue and remove `research-needed` only after deliverable preview remains reachable.
+Review the local rendered draft and its linked PR when convenient. Merge or publish only after an explicit separate editorial/publication decision; do not state that the fictional AE example was run live.

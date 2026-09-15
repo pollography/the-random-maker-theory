@@ -9,8 +9,8 @@
 | Visual gate | PASS for draft | Crafted Editorial hero 1600 x 900 and native 400 x 225 thumbnail: After Effects + GPT-6 Astra + editable animation legible in both actual page and small export, no fake UI or copied logo | Publication rights review still required. |
 | Links and assets | PASS for local draft | Page and both native images returned HTTP 200; generated metadata reflects 1600 x 900 and 400 x 225, native image loaded in browser; primary target locators checked on 2026-09-15 | External pages may change before publication. |
 | Desktop/mobile preview | PASS | Vite production build served on 127.0.0.1:4189; desktop 1275 px and mobile 390 x 844 visual inspections; no document horizontal overflow, one H1, hero loaded, zero console errors; mobile table has internal horizontal scroller | Keep local server running for user review. |
-| Targeted tests | PASS | Three article/image tests; complete `node --test --test-concurrency=1 --test-reporter=dot` exit 0; `npm run check` 0 errors/0 warnings; `npm run build` exit 0 | Remote PR checks still pending until branch created. |
-| Release scope | PASS for Draft PR only | Isolated origin/main worktree and `draft: true`; no merge, CMS mutation or public site deployment | Verify exact staged paths and PR Draft status. |
+| Targeted tests | PASS | Three article/image tests; complete `node --test --test-concurrency=1 --test-reporter=dot` exit 0; `npm run check` 0 errors/0 warnings; `npm run build` exit 0 after pre-commit migration; Vercel PR checks pass | A future publish should revalidate changing external sources. |
+| Release scope | PASS for Draft PR only | Isolated origin/main worktree, exact 16 staged files, `draft: true`; Draft PR #25 is OPEN, `isDraft: true`, base `main`; issue #23 linked and `research-needed` label removed after checks; no merge or public site deployment | Human publication gate unchanged. |
 
 ## Known baseline failures
 
@@ -18,5 +18,5 @@
 
 ## Final boundary
 
-- Draft readiness: PASS locally; remote Draft PR and issue transition still pending.
+- Draft readiness: PASS; https://github.com/pollography/the-random-maker-theory/pull/25 is a verified Draft PR with passing remote checks and a working local preview.
 - Publication readiness: UNKNOWN: no editorial/publication authorization, no real Adobe After Effects run, no public deployment requested.
