@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-blender-3d-website",
+  "source_completeness": "complete",
+  "sources": [
+    {"id":"SRC-001","type":"video","locator":"https://www.youtube.com/watch?v=RhGiG-yZP-c","status":"extracted","sha256":null,"duration_seconds":640,"page_count":null,"paired_source_ids":["SRC-002"],"notes":"Published 2026-09-15. Complete 333-segment English caption track and 130 chronological official-storyboard frames checked privately across 00:00-10:35. Direct video stream returned HTTP 403; no public frame reuse."},
+    {"id":"SRC-002","type":"url","locator":"https://chaseai.io/blog/gpt-6-astra-blender-3d-websites","status":"extracted","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-001"],"notes":"Published 2026-09-16. Full article inspected privately only as topic radar; not an outline or translation source."},
+    {"id":"SRC-003","type":"url","locator":"https://openai.com/index/gpt-6-astra/","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-004"],"notes":"Official launch/capability page checked 2026-09-16."},
+    {"id":"SRC-004","type":"url","locator":"https://help.openai.com/en/articles/20001275/","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-003"],"notes":"Current Astra access and usage article checked 2026-09-16; volatile before publication."},
+    {"id":"SRC-005","type":"url","locator":"https://github.com/ifBars/blender-agent-studio","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-006"],"notes":"MIT repository README checked via gh 2026-09-16; created 2026-07-25, Blender 5.2 LTS listed as tested."},
+    {"id":"SRC-006","type":"url","locator":"https://github.com/ifBars/blender-agent-studio/blob/main/SECURITY.md","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-005"],"notes":"Local execution and untrusted script guidance checked via gh 2026-09-16."},
+    {"id":"SRC-007","type":"url","locator":"https://www.blender.org/about/license/","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":[],"notes":"Official Blender license page checked 2026-09-16."},
+    {"id":"SRC-008","type":"url","locator":"https://docs.blender.org/manual/en/latest/advanced/command_line/arguments.html","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":[],"notes":"Official Blender command-line documentation checked 2026-09-16."},
+    {"id":"SRC-009","type":"url","locator":"https://docs.blender.org/manual/de/latest/addons/scene_gltf2.html","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-010"],"notes":"Official current Blender 5.2 glTF documentation checked 2026-09-16."},
+    {"id":"SRC-010","type":"url","locator":"https://www.khronos.org/gltf/","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-009","SRC-011"],"notes":"Official glTF standard overview checked 2026-09-16."},
+    {"id":"SRC-011","type":"url","locator":"https://threejs.org/manual/#en/loading-3d-models","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-010"],"notes":"Official Three.js glTF loading workflow checked 2026-09-16."},
+    {"id":"SRC-012","type":"url","locator":"https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-013"],"notes":"Browser animation scheduling behavior checked 2026-09-16."},
+    {"id":"SRC-013","type":"url","locator":"https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API","status":"available","sha256":null,"duration_seconds":null,"page_count":null,"paired_source_ids":["SRC-012"],"notes":"Visibility observation API checked 2026-09-16."}
+  ],
+  "pairings": [
+    {"source_ids":["SRC-001","SRC-002"],"reason":"Private topic-radar video and companion article"},
+    {"source_ids":["SRC-005","SRC-006"],"reason":"Blender agent implementation and its security boundary"},
+    {"source_ids":["SRC-009","SRC-010","SRC-011"],"reason":"Authoritative model-export and browser-loading chain"}
+  ],
+  "missing_or_unavailable": ["Direct full-resolution YouTube video stream returned HTTP 403; official storyboard coverage and captions were complete enough for topic inventory, but not a substitute for publication evidence."]
+}
+
