@@ -1,6 +1,6 @@
 # GPT-6 Astra, Blender und 3D-Websites: Handoff
 
-Updated: 2026-09-16T18:37:56+02:00
+Updated: 2026-09-16T18:45:37+02:00
 
 ## Verified now
 
@@ -14,10 +14,11 @@ Updated: 2026-09-16T18:37:56+02:00
 - Repository: `pollography/the-random-maker-theory`, isolated worktree `D:/AI_Workspaces/Claude_Code/.release-worktrees/trmt-chase-radar-issue-26-20260916`
 - Draft: `src/content/blog/gpt-6-astra-blender-3d-website.md`; issue https://github.com/pollography/the-random-maker-theory/issues/26
 - Preview: http://127.0.0.1:4190/preview/gpt-6-astra-blender-3d-website
-- Draft PR: pending
+- Draft PR: blocked before creation because GitHub authentication is invalid
 
 ## Open, unknown, or blocked
 
+- GitHub account `pollography` needs a fresh login. `gh auth status` reports an invalid token, HTTPS push did not complete and SSH has no authorized key. The local commit is intact and the remote branch was not created.
 - Live Blender modeling/export behavior and publication rights/approval are outside this draft delivery and remain UNKNOWN.
 
 ## Recorded approvals
@@ -28,4 +29,4 @@ Updated: 2026-09-16T18:37:56+02:00
 
 ## Next safe action
 
-Create and verify the Draft PR, then link issue #26 and transition its research label. Merge or publish only after an explicit separate decision.
+After GitHub login is restored, push local branch `codex/chase-radar-issue-26-blender-web`, create and verify the Draft PR, then link issue #26 and transition its research label. Merge or publish only after an explicit separate decision.
