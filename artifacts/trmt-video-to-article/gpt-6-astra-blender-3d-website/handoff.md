@@ -1,12 +1,13 @@
 # GPT-6 Astra, Blender und 3D-Websites: Handoff
 
-Updated: 2026-09-16T18:45:37+02:00
+Updated: 2026-09-17T07:23:46+02:00
 
 ## Verified now
 
 - Whole-source topic inventory and independent claim ledger completed.
 - New German standalone draft, exact hero and native thumbnail pass local article tests, full tests, typecheck, production build and desktop/mobile review.
 - Preview page, hero and thumbnail return HTTP 200 at 127.0.0.1:4190; no browser console errors, duplicate H1 or horizontal overflow.
+- Draft PR #27 is open, still marked as draft, mergeable and has passing Vercel checks.
 
 ## Exact working paths and URLs
 
@@ -14,11 +15,10 @@ Updated: 2026-09-16T18:45:37+02:00
 - Repository: `pollography/the-random-maker-theory`, isolated worktree `D:/AI_Workspaces/Claude_Code/.release-worktrees/trmt-chase-radar-issue-26-20260916`
 - Draft: `src/content/blog/gpt-6-astra-blender-3d-website.md`; issue https://github.com/pollography/the-random-maker-theory/issues/26
 - Preview: http://127.0.0.1:4190/preview/gpt-6-astra-blender-3d-website
-- Draft PR: blocked before creation because GitHub authentication is invalid
+- Draft PR: https://github.com/pollography/the-random-maker-theory/pull/27
 
-## Open, unknown, or blocked
+## Open or unknown
 
-- GitHub account `pollography` needs a fresh login. `gh auth status` reports an invalid token, HTTPS push did not complete and SSH has no authorized key. The local commit is intact and the remote branch was not created.
 - Live Blender modeling/export behavior and publication rights/approval are outside this draft delivery and remain UNKNOWN.
 
 ## Recorded approvals
@@ -29,4 +29,4 @@ Updated: 2026-09-16T18:45:37+02:00
 
 ## Next safe action
 
-After GitHub login is restored, push local branch `codex/chase-radar-issue-26-blender-web`, create and verify the Draft PR, then link issue #26 and transition its research label. Merge or publish only after an explicit separate decision.
+Review the local preview and Draft PR. Merge or publish only after an explicit separate decision.
