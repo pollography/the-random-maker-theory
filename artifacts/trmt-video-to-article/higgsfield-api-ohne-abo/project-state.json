@@ -3,14 +3,14 @@
   "slug": "higgsfield-api-ohne-abo",
   "title": "Higgsfield API ohne Abo: KI-Bilder und Videos nur bei Nutzung bezahlen",
   "created_at": "2026-09-17T16:21:40Z",
-  "updated_at": "2026-09-17T16:38:15Z",
-  "phase": "qa",
-  "status": "active",
+  "updated_at": "2026-09-17T16:41:21Z",
+  "phase": "complete",
+  "status": "complete",
   "publication_status": "draft",
   "source_completeness": "complete",
   "visual_style_status": "approved",
-  "current_step": "Run rendered preview and full repository QA",
-  "next_step": "Verify desktop and mobile preview, then create the Draft PR",
+  "current_step": "Verified Draft PR ready for Pollo's review",
+  "next_step": "Await explicit review; do not merge or publish automatically",
   "blockers": [],
   "approvals": {
     "article_scope": {
@@ -32,5 +32,5 @@
       "decided_at": null
     }
   },
-  "last_verified_at": "2026-09-17T16:38:15Z"
+  "last_verified_at": "2026-09-17T16:41:21Z"
 }

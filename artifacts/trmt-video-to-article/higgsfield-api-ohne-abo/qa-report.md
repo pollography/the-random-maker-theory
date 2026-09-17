@@ -9,8 +9,8 @@
 | Visual gate | PASS | Native 1600x900 hero and separate 400x225 thumbnail; exact thumbnail blind test carries topic and benefit; no logo, person, screenshot or fake UI | Publication approval remains separate |
 | Links and assets | PASS | Both image URLs return HTTP 200; browser loaded hero at native 1600x900; frontmatter references both paths | None |
 | Desktop/mobile preview | PASS | Production preview at 1280x720 and 390x844: one H1, no horizontal overflow, hero loaded, thesis and preview banner visible; no console warnings/errors | Keep local server running for review |
-| Targeted tests | PASS | Article tests 3/3; repository tests 178/178; Svelte check 0 errors/0 warnings; production build passed; dossier validation passed; diff check passed | Remote PR checks still required |
-| Release scope | PASS | `draft: true`; isolated worktree from origin/main; no main checkout mutation; no merge or publication | Draft PR and issue handoff pending |
+| Targeted tests | PASS | Article tests 3/3; repository tests 178/178; Svelte check 0 errors/0 warnings; production build passed; dossier validation passed; diff check passed; Vercel checks passed | None for Draft PR |
+| Release scope | PASS | `draft: true`; isolated worktree from origin/main; Draft PR #29 open and mergeable; no main checkout mutation; no merge or publication | Explicit human review remains required |
 
 ## Known baseline failures
 
@@ -19,5 +19,5 @@
 
 ## Final boundary
 
-- Draft readiness: PASS locally; remote Draft-PR checks pending.
+- Draft readiness: PASS; Draft PR https://github.com/pollography/the-random-maker-theory/pull/29 is open, draft, mergeable and green.
 - Publication readiness: PENDING explicit Pollo approval; this run must not merge or publish.

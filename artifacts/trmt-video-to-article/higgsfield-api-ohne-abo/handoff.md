@@ -1,6 +1,6 @@
 # Higgsfield API ohne Abo: KI-Bilder und Videos nur bei Nutzung bezahlen — Handoff
 
-Updated: 2026-09-17T16:38:15Z
+Updated: 2026-09-17T16:41:21Z
 
 ## Verified now
 
@@ -8,6 +8,7 @@ Updated: 2026-09-17T16:38:15Z
 - Public facts independently verified against official Higgsfield help, documentation and SDK repositories.
 - Beginner-first article, 16:9 hero and 400x225 thumbnail completed.
 - Local tests, build, source-independence check and desktop/mobile production preview pass.
+- Draft PR #29 is open, mergeable and has green Vercel checks.
 
 ## Exact working paths and URLs
 
@@ -16,7 +17,7 @@ Updated: 2026-09-17T16:38:15Z
 - Branch: `codex/chase-radar-issue-28-higgsfield-api`
 - Article: `src/content/blog/higgsfield-api-ohne-abo.md`
 - Issue: https://github.com/pollography/the-random-maker-theory/issues/28
-- Draft PR: pending
+- Draft PR: https://github.com/pollography/the-random-maker-theory/pull/29
 - Preview: http://127.0.0.1:4189/preview/higgsfield-api-ohne-abo
 
 ## Completed changes
@@ -28,7 +29,7 @@ Updated: 2026-09-17T16:38:15Z
 
 ## Open, unknown, or blocked
 
-- Remote Draft-PR checks and issue linkage are still pending.
+- Issue #28 linkage and label transition are the only remaining automation steps.
 - Publication remains unapproved and must not occur automatically.
 - No paid API generation was performed, so output quality and latency are deliberately not claimed.
 
@@ -40,4 +41,4 @@ Updated: 2026-09-17T16:38:15Z
 
 ## Next safe action
 
-Commit and push the isolated branch, open a Draft PR, wait for remote checks, then link it in issue #28 and remove `research-needed` only after verification.
+Open the local preview and Draft PR for editorial review. Do not merge or publish without Pollo's explicit approval.
