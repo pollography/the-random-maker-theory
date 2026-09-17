@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "project_slug": "higgsfield-api-ohne-abo",
+  "assets": [
+    {
+      "id": "IMG-001",
+      "path": "static/images/blog/higgsfield-api-ohne-abo-1.webp",
+      "role": "hero",
+      "prompt_or_capture_source": "Current pollo-blog TRMT image QA gate: handcrafted prepaid meter, coin entering, connected still and motion strip emerging, deep petrol and warm cream materials, exact short copy, no logo/person/fake UI.",
+      "reference_images": [],
+      "one_second_sentence": "Eine Münze schaltet gezielt Bild- und Videoproduktion frei.",
+      "dimensions": {"width": 1600, "height": 900},
+      "status": "final",
+      "alt_text": "Ein handgefertigter Prepaid-Meter nimmt eine Münze auf und gibt einen Streifen mit Bild- und Videokadern aus.",
+      "creator": "OpenAI image generation plus deterministic TRMT typography",
+      "license": "Generated specifically for TRMT; no third-party logo, person, screenshot or imitated product interface; publication approval pending."
+    },
+    {
+      "id": "IMG-002",
+      "path": "static/images/blog/higgsfield-api-ohne-abo-1-thumb.webp",
+      "role": "thumbnail",
+      "prompt_or_capture_source": "Simplified 400x225 crop and deterministic composition from IMG-001 with exact copy HIGGSFIELD API / ZAHLEN NUR / BEI NUTZUNG.",
+      "reference_images": ["IMG-001"],
+      "one_second_sentence": "Higgsfield API: zahlen nur bei Nutzung.",
+      "dimensions": {"width": 400, "height": 225},
+      "status": "final",
+      "alt_text": "Thumbnail zur Higgsfield API mit Prepaid-Meter und dem Hinweis: Zahlen nur bei Nutzung.",
+      "creator": "OpenAI image generation plus deterministic TRMT typography",
+      "license": "Generated specifically for TRMT; no third-party logo, person, screenshot or imitated product interface; publication approval pending."
+    }
+  ]
+}

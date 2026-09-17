@@ -221,6 +221,9 @@ export const blogImageUsage = {
 		"/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-1-chart.webp",
 		"/images/blog/gtc-spotlights-nvidia-rtx-pcs-and-dgx-sparks-running-latest--2026-03-17-2.webp"
 	],
+	"higgsfield-api-ohne-abo": [
+		"/images/blog/higgsfield-api-ohne-abo-1.webp"
+	],
 	"home-assistant-dashboard-2026": [
 		"/images/blog/home-assistant-dashboard-2026-1.webp"
 	],
