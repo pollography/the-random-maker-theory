@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "project_slug": "higgsfield-api-ohne-abo",
+  "source_completeness": "complete",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "type": "video",
+      "locator": "https://www.youtube.com/watch?v=VqlRRn3cZx8",
+      "status": "extracted",
+      "duration_seconds": 413,
+      "paired_source_ids": ["SRC-002"],
+      "notes": "English topic-radar source only; 395 timed caption events plus 10 official YouTube storyboard sheets cover the full timeline; no public article reuse."
+    },
+    {
+      "id": "SRC-002",
+      "type": "transcript",
+      "locator": "C:/Users/Pollo/AppData/Local/Temp/trmt-issue-28-watch/captions.en-orig.json3",
+      "status": "extracted",
+      "paired_source_ids": ["SRC-001"],
+      "notes": "395 timed English caption events; private analysis only."
+    },
+    {
+      "id": "SRC-003",
+      "type": "url",
+      "locator": "https://higgsfield.ai/creator-hub/help-center/integrations/what-is-the-higgsfield-api",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official primary help page; core public facts."
+    },
+    {
+      "id": "SRC-004",
+      "type": "url",
+      "locator": "https://higgsfield.ai/higgsfield-api",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official live product catalog and current pricing reference."
+    },
+    {
+      "id": "SRC-005",
+      "type": "url",
+      "locator": "https://higgsfield.ai/creator-hub/help-center/integrations/how-do-i-access-higgsfield-via-cli",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official help page; API versus MCP and CLI distinction."
+    },
+    {
+      "id": "SRC-006",
+      "type": "url",
+      "locator": "https://docs.higgsfield.ai",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official documentation; request flow and estimate endpoint."
+    },
+    {
+      "id": "SRC-007",
+      "type": "url",
+      "locator": "https://github.com/higgsfield-ai/higgsfield-js",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official JavaScript SDK repository; server-side and key handling."
+    },
+    {
+      "id": "SRC-008",
+      "type": "url",
+      "locator": "https://github.com/higgsfield-ai/higgsfield-client",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official Python client repository."
+    },
+    {
+      "id": "SRC-009",
+      "type": "url",
+      "locator": "https://higgsfield.ai/blog/higgsfield-api",
+      "status": "available",
+      "paired_source_ids": [],
+      "notes": "Official launch post; launch context."
+    }
+  ],
+  "pairings": [
+    {
+      "source_ids": ["SRC-001", "SRC-002"],
+      "reason": "The captions and official storyboard sheets form the complete private radar analysis; every public fact is independently checked against SRC-003 through SRC-009."
+    }
+  ],
+  "missing_or_unavailable": [
+    {
+      "item": "full-resolution video file",
+      "reason": "YouTube media request returned HTTP 403",
+      "mitigation": "complete timed captions and official storyboards cover spoken and visible content across the full 413 seconds"
+    },
+    {
+      "item": "own paid API generation",
+      "reason": "not authorized and not needed for explanatory draft",
+      "impact": "quality and latency are not claimed"
+    }
+  ]
+}

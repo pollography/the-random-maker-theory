@@ -1430,6 +1430,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/higgsfield-api-ohne-abo-1-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/higgsfield-api-ohne-abo-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/higgsfield-api-ohne-abo-1.webp",
+				"width": 1600
+			}
+		]
+	},
+	"/images/blog/higgsfield-api-ohne-abo-1.webp": {
+		"width": 1600,
+		"height": 900,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/higgsfield-api-ohne-abo-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/higgsfield-api-ohne-abo-1.webp",
+				"width": 1600
+			}
+		]
+	},
 	"/images/blog/home-assistant-1-thumb.webp": {
 		"width": 600,
 		"height": 338,
