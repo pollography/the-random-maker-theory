@@ -10,7 +10,7 @@
 | Links and assets | PASS for local draft | Page and both images return HTTP 200; generated metadata is 1600 x 900 and 400 x 225; all non-OpenAI public links returned HTTP 200. OpenAI pages were read successfully through the web research route but reject direct curl with 403 | External pages and Astra availability can change before publication. |
 | Desktop/mobile preview | PASS | Vite production build on 127.0.0.1:4190; visual desktop and 390 x 844 checks; one H1, hero 1600 x 900 loaded, no document overflow, no creator text, zero browser warning/error logs | Keep local server running for review. |
 | Targeted tests | PASS | Three article/image tests; complete `node --test --test-concurrency=1 --test-reporter=dot` exit 0; `npm run check` 0 errors/0 warnings; fresh `npm run build` exit 0; draft QA status `ok` | The QA checker retains its generic signature warning because the TRMT style rule forbids the requested dash form. |
-| Release scope | PASS for Draft PR | Isolated worktree from fresh `origin/main` commit `007468d`; Draft PR #27 is open, marked draft, mergeable and its Vercel checks pass; no merge or production deployment occurred | Human editorial and publication review remain separate. |
+| Release scope | PASS for Draft PR | Isolated worktree from fresh `origin/main` commit `007468d`; Draft PR #27 is open, marked draft, mergeable and its Vercel checks pass; issue #26 links the deliverables and no longer has `research-needed`; no merge or production deployment occurred | Human editorial and publication review remain separate. |
 
 ## Known baseline observations
 

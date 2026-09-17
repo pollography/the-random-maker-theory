@@ -1,6 +1,6 @@
 # GPT-6 Astra, Blender und 3D-Websites: Handoff
 
-Updated: 2026-09-17T07:23:46+02:00
+Updated: 2026-09-17T07:25:32+02:00
 
 ## Verified now
 
@@ -8,6 +8,7 @@ Updated: 2026-09-17T07:23:46+02:00
 - New German standalone draft, exact hero and native thumbnail pass local article tests, full tests, typecheck, production build and desktop/mobile review.
 - Preview page, hero and thumbnail return HTTP 200 at 127.0.0.1:4190; no browser console errors, duplicate H1 or horizontal overflow.
 - Draft PR #27 is open, still marked as draft, mergeable and has passing Vercel checks.
+- Issue #26 links the preview and Draft PR; `research-needed` was removed only after both were verified.
 
 ## Exact working paths and URLs
 
