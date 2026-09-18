@@ -9121,6 +9121,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/union-alpha-ist-pareto-1-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/union-alpha-ist-pareto-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/union-alpha-ist-pareto-1.webp",
+				"width": 1600
+			}
+		]
+	},
+	"/images/blog/union-alpha-ist-pareto-1.webp": {
+		"width": 1600,
+		"height": 900,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/union-alpha-ist-pareto-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/union-alpha-ist-pareto-1.webp",
+				"width": 1600
+			}
+		]
+	},
 	"/images/blog/v0-bolt-1-thumb.webp": {
 		"width": 600,
 		"height": 338,
