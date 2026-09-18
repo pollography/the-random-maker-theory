@@ -3,14 +3,14 @@
   "slug": "union-alpha-ist-pareto",
   "title": "Union Alpha heißt jetzt Pareto: Was das Ende des Gratis-Tests für dich bedeutet",
   "created_at": "2026-09-18T16:22:51Z",
-  "updated_at": "2026-09-18T16:37:35Z",
-  "phase": "release",
-  "status": "active",
+  "updated_at": "2026-09-18T16:41:10Z",
+  "phase": "complete",
+  "status": "complete",
   "publication_status": "draft",
   "source_completeness": "complete",
   "visual_style_status": "approved",
-  "current_step": "Create and verify Draft PR",
-  "next_step": "Link the verified Draft PR from issue 31 and keep the local preview open",
+  "current_step": "Draft PR 32 and local preview are ready for human review",
+  "next_step": "Wait for explicit publication approval; recheck volatile price and terms before any merge",
   "blockers": [],
   "approvals": {
     "article_scope": {
@@ -32,5 +32,5 @@
       "decided_at": null
     }
   },
-  "last_verified_at": "2026-09-18T16:37:35Z"
+  "last_verified_at": "2026-09-18T16:41:10Z"
 }

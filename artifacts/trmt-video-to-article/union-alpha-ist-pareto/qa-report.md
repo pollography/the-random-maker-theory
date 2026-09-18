@@ -8,7 +8,7 @@
 | Article structure | PASS | Frontmatter owns the single H1; the body begins with a two-sentence thesis, then beginner TLDR, definitions and one continuous sports-club example. | None. |
 | Visual gate | PASS | Native 1600 x 900 hero and true 400 x 225 thumbnail exist. The 400 x 225 blind test communicates Union Alpha, Pareto and the end of the free phase without logo, copied UI or brand imitation. | None. |
 | Links and assets | PASS | Both image paths resolve, metadata was regenerated and every public citation points to an official product, terms or data page. | None. |
-| Desktop/mobile preview | PASS | Production preview checked on 127.0.0.1:4190. Desktop: 1280 x 720, one H1, no horizontal overflow, complete 1600 x 900 hero. Mobile: true 390 x 844 iframe viewport, one H1, no overflow, complete hero, thesis and preview banner present. Browser console had no warnings or errors. | Reopen after the final Draft PR commit. |
+| Desktop/mobile preview | PASS | Production preview checked on 127.0.0.1:4190. Desktop: 1280 x 720, one H1, no horizontal overflow, complete 1600 x 900 hero. Mobile: true 390 x 844 iframe viewport, one H1, no overflow, complete hero, thesis and preview banner present. Browser console had no warnings or errors. | Reopen after any later content or asset change. |
 | Targeted tests | PASS | Article contract 3/3, dossier validation PASS, full node suite 178/178, svelte-check 0 errors/0 warnings, production build PASS and git diff check PASS. | Re-run after final dossier metadata update. |
 | Release scope | PASS | Only the article, article test, two image assets, generated image maps and its dossier are in scope. Article remains `draft: true`; no merge or publication is authorized. | Draft PR only. |
 

@@ -1,6 +1,6 @@
 # Union Alpha heißt jetzt Pareto: Was das Ende des Gratis-Tests für dich bedeutet — Handoff
 
-Updated: 2026-09-18T16:37:35Z
+Updated: 2026-09-18T16:41:10Z
 
 ## Verified now
 
@@ -19,7 +19,7 @@ Updated: 2026-09-18T16:37:35Z
 - Thumbnail: `static/images/blog/union-alpha-ist-pareto-1-thumb.webp`
 - Radar issue: https://github.com/pollography/the-random-maker-theory/issues/31
 - Preview: http://127.0.0.1:4190/preview/union-alpha-ist-pareto
-- Draft PR: pending creation
+- Draft PR: https://github.com/pollography/the-random-maker-theory/pull/32
 
 ## Completed changes
 
@@ -42,4 +42,4 @@ Updated: 2026-09-18T16:37:35Z
 
 ## Next safe action
 
-Create a Draft PR, verify its checks, link it from issue 31, remove `research-needed`, then keep the local preview open for review.
+Review the local preview first. Publish only after explicit approval, a fresh volatile-source recheck and a separate merge decision.
