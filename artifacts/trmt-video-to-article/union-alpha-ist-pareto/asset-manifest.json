@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "project_slug": "union-alpha-ist-pareto",
+  "assets": [
+    {
+      "id": "IMG-001",
+      "role": "hero",
+      "path": "static/images/blog/union-alpha-ist-pareto-1.webp",
+      "status": "final",
+      "prompt_or_capture_source": "Built-in OpenAI image generation using the current pollo-blog TRMT Image-QA gate; object-led reveal machine with question-mark sleeve and three paper inputs becoming one output; deterministic Segoe UI typography as approved Inter-equivalent.",
+      "reference_images": [],
+      "one_second_sentence": "Die anonyme Hülle fällt, und Union Alpha wird als Pareto sichtbar.",
+      "dimensions": {"width": 1600, "height": 900},
+      "alt_text": "Eine schwarze Fragezeichen-Hülle hebt sich von einem handgebauten Apparat, während drei Papierbahnen zu einer Antwort zusammenlaufen.",
+      "creator": "OpenAI image generation plus deterministic TRMT typography",
+      "license": "Generated specifically for TRMT; no third-party logo, person, screenshot or imitated interface; publication approval pending."
+    },
+    {
+      "id": "IMG-002",
+      "role": "thumbnail",
+      "path": "static/images/blog/union-alpha-ist-pareto-1-thumb.webp",
+      "status": "final",
+      "prompt_or_capture_source": "True 400x225 export of IMG-001 with exact deterministic copy UNION ALPHA / JETZT PARETO / NICHT MEHR GRATIS.",
+      "reference_images": ["IMG-001"],
+      "one_second_sentence": "Union Alpha heißt jetzt Pareto und ist nicht mehr kostenlos.",
+      "dimensions": {"width": 400, "height": 225},
+      "alt_text": "Union Alpha wird als Pareto enthüllt; der kostenlose Test ist beendet.",
+      "creator": "OpenAI image generation plus deterministic TRMT typography",
+      "license": "Generated specifically for TRMT; no third-party logo, person, screenshot or imitated interface; publication approval pending."
+    }
+  ]
+}

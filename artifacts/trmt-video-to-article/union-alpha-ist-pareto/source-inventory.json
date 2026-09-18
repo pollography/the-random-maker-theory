@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "project_slug": "union-alpha-ist-pareto",
+  "source_completeness": "complete",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "type": "video",
+      "locator": "https://www.youtube.com/watch?v=2Gu21Y4hgd8",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": 723,
+      "page_count": null,
+      "paired_source_ids": ["SRC-002"],
+      "notes": "Private topic radar only. Full 326-segment English captions and all 17 official storyboard sheets inspected; no public attribution or copied test result. Caption SHA-256 7F9EC1B9AE63413BFC515BD861DCA05C27711B092E0B1B6D6A6DFF6724A50E8B; storyboard SHA-256 72A90AB975A72FB5DEE93FF570713911C7843AC2FA7956E41A1622FFBCB74D03."
+    },
+    {
+      "id": "SRC-002",
+      "type": "html",
+      "locator": "https://chaseai.io/blog/union-alpha-stealth-model-tested",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001"],
+      "notes": "Paired creator article used only to confirm the radar topic; not a public article source."
+    },
+    {
+      "id": "SRC-003",
+      "type": "url",
+      "locator": "https://openrouter.ai/stealth/union-alpha/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-004"],
+      "notes": "Official current readback: Union Alpha was Pareto by Unbiased; free stealth period ended; 262,144-token context; text and image input, text output."
+    },
+    {
+      "id": "SRC-004",
+      "type": "url",
+      "locator": "https://openrouter.ai/unbiased/pareto",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-003"],
+      "notes": "Official current model card: $2.50/M input, $7.50/M output, $0.25/M cache read, 262,144-token context, released September 17, 2026."
+    },
+    {
+      "id": "SRC-005",
+      "type": "url",
+      "locator": "https://unbiased.ai/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-004"],
+      "notes": "Official provider explanation: Pareto is a blended model that runs multiple models on a request and returns one answer; provider-authored performance claims treated as claims, not independent proof."
+    },
+    {
+      "id": "SRC-006",
+      "type": "url",
+      "locator": "https://openrouter.ai/terms/stealth",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-003"],
+      "notes": "Official Stealth Program EULA, updated September 14, 2026: limited availability, provider disclosure boundary, user-content and sensitive-data rules."
+    },
+    {
+      "id": "SRC-007",
+      "type": "url",
+      "locator": "https://unbiased.ai/terms/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-005"],
+      "notes": "Official current Unbiased terms and data policy: customer content, training consent, security retention exception and beta limitations."
+    }
+  ],
+  "pairings": [
+    {
+      "source_ids": ["SRC-001", "SRC-002"],
+      "reason": "Video and creator companion article describe the same radar event; both remain private topic-discovery inputs."
+    },
+    {
+      "source_ids": ["SRC-003", "SRC-004", "SRC-005", "SRC-006", "SRC-007"],
+      "reason": "Official sources establish the rename, current product, mechanism, price and data boundaries."
+    }
+  ],
+  "missing_or_unavailable": []
+}

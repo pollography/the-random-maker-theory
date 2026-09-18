@@ -525,6 +525,9 @@ export const blogImageUsage = {
 		"/images/blog/ki-bildprompts/121-museum-breakdown.webp",
 		"/images/blog/ki-bildprompts/122-premium-product-ad.webp"
 	],
+	"union-alpha-ist-pareto": [
+		"/images/blog/union-alpha-ist-pareto-1.webp"
+	],
 	"v0-bolt-lovable-websites-ohne-code-2026": [
 		"/images/blog/v0-bolt-1.webp",
 		"/images/blog/v0-bolt-2.webp",
