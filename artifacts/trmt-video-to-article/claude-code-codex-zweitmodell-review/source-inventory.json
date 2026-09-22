@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "project_slug": "claude-code-codex-zweitmodell-review",
+  "source_completeness": "complete",
+  "sources": [
+    {
+      "id": "S-001",
+      "type": "video",
+      "locator": "https://www.youtube.com/watch?v=KgKA0A3qlz0",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": 731,
+      "page_count": null,
+      "paired_source_ids": ["S-002", "S-003"],
+      "notes": "Creator source used privately for topic identification and visible-content review; not a public article source."
+    },
+    {
+      "id": "S-002",
+      "type": "transcript",
+      "locator": "C:/Users/Pollo/AppData/Local/Temp/trmt-watch-KgKA0A3qlz0-20260908/download/video.en-orig.vtt",
+      "status": "extracted",
+      "sha256": "01d5aab574cc6e4b544f87d66eb2f93d7a3ef1d249c18eb74aeafee03a763899",
+      "duration_seconds": 731,
+      "page_count": null,
+      "paired_source_ids": ["S-001"],
+      "notes": "Exact English captions reviewed in full; source-only and excluded from public provenance."
+    },
+    {
+      "id": "S-003",
+      "type": "archive",
+      "locator": "C:/Users/Pollo/AppData/Local/Temp/trmt-watch-KgKA0A3qlz0-20260908/download/storyboard.mhtml",
+      "status": "extracted",
+      "sha256": "32a0073346cc183aaf11301d244db3409839e551a5c1c888860a39b0d5989ee9",
+      "duration_seconds": 731,
+      "page_count": null,
+      "paired_source_ids": ["S-001"],
+      "notes": "All 17 storyboard sheets were inspected; they show the model comparison, repository, route skill, loop stages, and installation section."
+    },
+    {
+      "id": "S-004",
+      "type": "url",
+      "locator": "https://github.com/chaseai-yt/claudex-loop",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Private source analysis only. README, runtime reference, skill definitions, tree, and MIT license inspected on 2026-09-08; no code or prose copied into the article."
+    },
+    {
+      "id": "S-005",
+      "type": "url",
+      "locator": "https://developers.openai.com/codex/noninteractive",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Official current Codex documentation for codex exec, read-only default, explicit sandboxing, structured output, and authentication boundaries."
+    },
+    {
+      "id": "S-006",
+      "type": "url",
+      "locator": "https://developers.openai.com/codex/security",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Official current Codex security documentation."
+    },
+    {
+      "id": "S-007",
+      "type": "url",
+      "locator": "https://code.claude.com/docs/en/headless",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["S-008"],
+      "notes": "Official current Claude Code programmatic-use documentation for -p, output formats, tools, failure behavior, and scripted review patterns."
+    },
+    {
+      "id": "S-008",
+      "type": "url",
+      "locator": "https://code.claude.com/docs/en/cli-reference",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["S-007"],
+      "notes": "Official current Claude Code CLI flags including safe mode, tools, allowedTools, permission mode, and model selection."
+    },
+    {
+      "id": "S-009",
+      "type": "url",
+      "locator": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["S-010"],
+      "notes": "Official current GPT-6 Astra model positioning and availability."
+    },
+    {
+      "id": "S-010",
+      "type": "url",
+      "locator": "https://platform.claude.com/docs/de/models/fable-5-1/overview",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["S-009"],
+      "notes": "Official current Claude Fable 5.1 model positioning and availability."
+    },
+    {
+      "id": "S-011",
+      "type": "url",
+      "locator": "https://aclanthology.org/2025.emnlp-main.86/",
+      "status": "available",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": 20,
+      "paired_source_ids": [],
+      "notes": "Peer-reviewed EMNLP 2025 paper on self-preference bias; used narrowly and not generalized to coding performance."
+    }
+  ],
+  "pairings": [
+    {
+      "source_ids": ["S-001", "S-002", "S-003"],
+      "reason": "Exact creator-source understanding requires captions plus visible storyboard content."
+    },
+    {
+      "source_ids": ["S-005", "S-006", "S-007", "S-008"],
+      "reason": "The public workflow is grounded in current official CLI and security documentation from both providers."
+    },
+    {
+      "source_ids": ["S-009", "S-010"],
+      "reason": "Model-role claims are checked against each provider's current model documentation."
+    }
+  ],
+  "missing_or_unavailable": []
+}
