@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-website-erstellen",
+  "assets": [
+    {
+      "id": "ASSET-001",
+      "role": "hero",
+      "path": "static/images/blog/gpt-6-astra-website-erstellen-1.webp",
+      "status": "final",
+      "prompt_or_capture_source": "Built-in image generation: object-led reference cards pass through a crafted layout press and emerge as one original website board; exact German copy added deterministically with ImageMagick.",
+      "reference_images": [
+        "C:/Users/Pollo/.codex/skills/pollo-blog/assets/trmt-crafted-editorial-material-reference-v2.webp"
+      ],
+      "one_second_sentence": "After one second, the reader understands that GPT-6 Astra turns several website references into one own website design.",
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "alt_text": "Drei Gestaltungsvorbilder laufen durch eine handgebaute Presse und werden zu einem eigenen Website-Entwurf.",
+      "creator": "just.pollo",
+      "license": "AI-generated project asset; internal TRMT material reference used for style only."
+    },
+    {
+      "id": "ASSET-002",
+      "role": "thumbnail",
+      "path": "static/images/blog/gpt-6-astra-website-erstellen-1-thumb.webp",
+      "status": "final",
+      "prompt_or_capture_source": "400 x 225 responsive derivative of ASSET-001, generated from the final 1600 x 900 hero.",
+      "reference_images": [
+        "static/images/blog/gpt-6-astra-website-erstellen-1.webp"
+      ],
+      "one_second_sentence": "After one second, the reader understands that GPT-6 Astra turns several website references into one own website design.",
+      "dimensions": {
+        "width": 400,
+        "height": 225
+      },
+      "alt_text": "",
+      "creator": "just.pollo",
+      "license": "Responsive derivative of ASSET-001."
+    }
+  ]
+}

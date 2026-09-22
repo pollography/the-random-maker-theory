@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-astra-website-erstellen",
+  "source_completeness": "partial",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "type": "video",
+      "locator": "https://www.youtube.com/watch?v=XK6S1hbYv7I",
+      "status": "partial",
+      "sha256": null,
+      "duration_seconds": 1197,
+      "page_count": null,
+      "paired_source_ids": ["SRC-002", "SRC-003"],
+      "notes": "Radar source only. Metadata and captions were available; direct video-stream download returned HTTP 403."
+    },
+    {
+      "id": "SRC-002",
+      "type": "transcript",
+      "locator": "https://www.youtube.com/watch?v=XK6S1hbYv7I",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": 1197,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001", "SRC-003"],
+      "notes": "English auto-captions, 586 timestamped segments across the complete timeline. Local VTT SHA-256 during extraction: d19348f7fb3eb1a272751056bfe4a4a46a0f976dc0d4ac208141dacde2d3c597. Not committed because the source is third-party material."
+    },
+    {
+      "id": "SRC-003",
+      "type": "image",
+      "locator": "https://i.ytimg.com/sb/XK6S1hbYv7I/storyboard3_L3/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": 1197,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001", "SRC-002"],
+      "notes": "14 official storyboard sheets, 3 x 3 frames each, inspected in full chronological order for 126 visual samples. Combined local sheet-hash digest during extraction: 83fbe0e383e3b3ccf1ff077fbad4f3f214d58c3915da8df55a5d7d3c1a51ce1b."
+    },
+    {
+      "id": "SRC-004",
+      "type": "url",
+      "locator": "https://openai.com/index/gpt-6-astra/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-005"],
+      "notes": "OpenAI primary product announcement, accessed 2026-09-10. Website creation, frontend QA, coding, computer use, rollout, and Sites claims checked."
+    },
+    {
+      "id": "SRC-005",
+      "type": "url",
+      "locator": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": ["SRC-004"],
+      "notes": "Official model reference, accessed 2026-09-10. Used only for model identity and documented capabilities."
+    },
+    {
+      "id": "SRC-006",
+      "type": "url",
+      "locator": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "OpenAI primary launch post, published 2026-09-08 and accessed 2026-09-10. Availability, editing, consistency, and bounded latency claims checked."
+    },
+    {
+      "id": "SRC-007",
+      "type": "url",
+      "locator": "https://academy.openai.com/en/public/clubs/champions-ecqup/videos/design-context-and-iteration-with-codex-2026-07-09",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "OpenAI Academy primary guidance on references, design context, and reusable design.md feedback, accessed 2026-09-10."
+    },
+    {
+      "id": "SRC-008",
+      "type": "url",
+      "locator": "https://openai.com/academy/chatgpt-sites/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "OpenAI Academy primary Sites guide, accessed 2026-09-10. Checked scope, review/share process, and limitations."
+    }
+  ],
+  "pairings": [
+    {
+      "source_ids": ["SRC-001", "SRC-002", "SRC-003"],
+      "reason": "One radar video, its full caption track, and official full-timeline storyboard visual samples."
+    },
+    {
+      "source_ids": ["SRC-004", "SRC-005"],
+      "reason": "OpenAI launch announcement and current model reference for the same model."
+    }
+  ],
+  "missing_or_unavailable": [
+    "Direct YouTube video stream: yt-dlp returned HTTP 403 after metadata and captions succeeded.",
+    "Pinned-comment resource repository: not present in public video description and not required for independently sourced public claims."
+  ]
+}

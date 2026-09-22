@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "slug": "gpt-6-astra-website-erstellen",
+  "title": "Website mit GPT-6 Astra erstellen: Vom Vorbild zum eigenen Entwurf",
+  "created_at": "2026-09-10T05:25:27Z",
+  "updated_at": "2026-09-10T05:50:54Z",
+  "phase": "complete",
+  "status": "complete",
+  "publication_status": "draft",
+  "source_completeness": "partial",
+  "visual_style_status": "approved",
+  "current_step": "Draft PR #20 is open and verified",
+  "next_step": "Wait for editorial review and explicit publication approval",
+  "blockers": [],
+  "approvals": {
+    "article_scope": {
+      "status": "approved",
+      "scope": [
+        "src/content/blog/gpt-6-astra-website-erstellen.md",
+        "src/content/blog/gpt-6-astra-website-erstellen.test.js",
+        "static/images/blog/gpt-6-astra-website-erstellen-1.webp",
+        "static/images/blog/gpt-6-astra-website-erstellen-1-thumb.webp",
+        "artifacts/trmt-video-to-article/gpt-6-astra-website-erstellen"
+      ],
+      "evidence": "Recurring automation contract for one issue-to-Draft-PR run",
+      "decided_at": "2026-09-10T05:16:29Z"
+    },
+    "visual_direction": {
+      "status": "approved",
+      "scope": [
+        "static/images/blog/gpt-6-astra-website-erstellen-1.webp",
+        "static/images/blog/gpt-6-astra-website-erstellen-1-thumb.webp"
+      ],
+      "evidence": "Current canonical TRMT visual profile and recurring automation contract",
+      "decided_at": "2026-09-10T05:16:29Z"
+    },
+    "publication": {
+      "status": "pending",
+      "scope": [],
+      "evidence": null,
+      "decided_at": null
+    }
+  },
+  "last_verified_at": "2026-09-10T05:50:54Z"
+}
