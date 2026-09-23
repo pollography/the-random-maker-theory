@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-sol-luna-vergleich",
+  "assets": [
+    {
+      "id": "ASSET-001",
+      "role": "hero",
+      "path": "static/images/blog/gpt-6-sol-luna-vergleich-1.webp",
+      "status": "final",
+      "prompt_or_capture_source": "visual-brief.md generation prompt plus deterministic text layer",
+      "reference_images": [],
+      "one_second_sentence": "GPT-6 Sol handles one complex job while Luna handles many clear repeated jobs.",
+      "dimensions": {"width": 1600, "height": 900},
+      "alt_text": "Eine handgefertigte Sortiermaschine teilt komplexe Einzelaufgaben und viele klare Serienaufgaben auf Sol und Luna auf.",
+      "creator": "just.pollo",
+      "license": "Original AI-assisted TRMT editorial asset created for this article; no third-party logo or source image used."
+    },
+    {
+      "id": "ASSET-002",
+      "role": "thumbnail",
+      "path": "static/images/blog/gpt-6-sol-luna-vergleich-1-thumb.webp",
+      "status": "final",
+      "prompt_or_capture_source": "Independent 400 x 225 export of ASSET-001",
+      "reference_images": [],
+      "one_second_sentence": "GPT-6 Sol handles one complex job while Luna handles many clear repeated jobs.",
+      "dimensions": {"width": 400, "height": 225},
+      "alt_text": "GPT-6 Sol für komplexe Jobs, GPT-6 Luna für viele klare Jobs.",
+      "creator": "just.pollo",
+      "license": "Original AI-assisted TRMT editorial asset created for this article; no third-party logo or source image used."
+    }
+  ]
+}

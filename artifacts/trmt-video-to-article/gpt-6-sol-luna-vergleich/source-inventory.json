@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "project_slug": "gpt-6-sol-luna-vergleich",
+  "source_completeness": "partial",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "type": "video",
+      "locator": "https://www.youtube.com/watch?v=U_sjnF3jvCo",
+      "status": "partial",
+      "sha256": null,
+      "duration_seconds": 355,
+      "page_count": null,
+      "paired_source_ids": ["SRC-002", "SRC-003"],
+      "notes": "Private topic radar only. Direct video-stream retrieval returned HTTP 403; no public claim relies on it."
+    },
+    {
+      "id": "SRC-002",
+      "type": "transcript",
+      "locator": "D:/AI_Workspaces/Claude_Code/_watch/issue-34-sol-luna/download/video.en-orig.vtt",
+      "status": "extracted",
+      "sha256": "14AC63B28684A787E3791E9239FDC93C9E6128624B48883DE354E6E86BD2AAC0",
+      "duration_seconds": 355,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001", "SRC-003"],
+      "notes": "Complete native English captions with 160 segments. Used only to identify claims requiring independent verification."
+    },
+    {
+      "id": "SRC-003",
+      "type": "image",
+      "locator": "D:/AI_Workspaces/Claude_Code/_watch/issue-34-storyboards/storyboard.mhtml",
+      "status": "extracted",
+      "sha256": "5FCDD6444933A1D51564E8BDD3D8D9E6707AB463ABCB3FA494AAFBD8713DCCAA",
+      "duration_seconds": 355,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001", "SRC-002"],
+      "notes": "Nine official YouTube storyboard sheets were inspected. They cover the release page, benchmark charts, pricing, factuality, caching and availability."
+    },
+    {
+      "id": "SRC-004",
+      "type": "url",
+      "locator": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Primary source checked 2026-09-23 for release date, positioning, predecessor prices, caching, availability and benchmark claims."
+    },
+    {
+      "id": "SRC-005",
+      "type": "url",
+      "locator": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Primary model reference checked 2026-09-23 for purpose, standard prices, context, output limit and long-context pricing."
+    },
+    {
+      "id": "SRC-006",
+      "type": "url",
+      "locator": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Primary model reference checked 2026-09-23 for purpose, standard prices, context, output limit and long-context pricing."
+    },
+    {
+      "id": "SRC-007",
+      "type": "url",
+      "locator": "https://developers.openai.com/api/docs/pricing",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Primary pricing reference checked 2026-09-23 for current family pricing and service-tier caveats."
+    },
+    {
+      "id": "SRC-008",
+      "type": "url",
+      "locator": "https://developers.openai.com/api/docs/guides/latest-model",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Primary guidance checked 2026-09-23 for model selection and configurable reasoning."
+    }
+  ],
+  "pairings": [
+    {
+      "source_ids": ["SRC-001", "SRC-002", "SRC-003"],
+      "reason": "Topic-radar video, complete captions and official storyboard coverage belong to the same release overview."
+    }
+  ],
+  "missing_or_unavailable": [
+    "The direct YouTube video stream returned HTTP 403. Complete captions plus official storyboard sheets cover the spoken and visible topic radar; every public fact was independently checked against OpenAI primary sources."
+  ]
+}

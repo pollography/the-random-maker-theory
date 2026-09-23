@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "slug": "gpt-6-sol-luna-vergleich",
+  "title": "GPT-6 Sol oder Luna: Welches Modell spart dir wirklich Geld?",
+  "created_at": "2026-09-23T16:25:21Z",
+  "updated_at": "2026-09-23T16:46:00Z",
+  "phase": "qa",
+  "status": "active",
+  "publication_status": "draft",
+  "source_completeness": "partial",
+  "visual_style_status": "approved",
+  "current_step": "Draft PR #36 created and local production preview verified",
+  "next_step": "Push final handoff snapshot, verify remote checks, link issue #34 and remove research-needed",
+  "blockers": [],
+  "approvals": {
+    "article_scope": {
+      "status": "approved",
+      "scope": ["src/content/blog/gpt-6-sol-luna-vergleich.md"],
+      "evidence": "Recurring automation authorizes one independently researched draft article for the oldest qualifying radar issue.",
+      "decided_at": "2026-09-23T16:16:06Z"
+    },
+    "visual_direction": {
+      "status": "approved",
+      "scope": [
+        "static/images/blog/gpt-6-sol-luna-vergleich-1.webp",
+        "static/images/blog/gpt-6-sol-luna-vergleich-1-thumb.webp"
+      ],
+      "evidence": "Recurring automation requires the current pollo-blog Image-QA gate and simplified thumbnail route; the reusable TRMT Crafted Editorial system is already approved.",
+      "decided_at": "2026-09-23T16:16:06Z"
+    },
+    "publication": {
+      "status": "pending",
+      "scope": [],
+      "evidence": null,
+      "decided_at": null
+    }
+  },
+  "last_verified_at": "2026-09-23T16:46:00Z"
+}
