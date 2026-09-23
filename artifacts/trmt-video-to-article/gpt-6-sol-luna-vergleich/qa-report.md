@@ -10,7 +10,7 @@
 | Links and assets | PASS | Both frontmatter image paths load. The hero reports its native 1600 x 900 size and internal article links resolve in the production preview. | Recheck external links before publication. |
 | Desktop/mobile preview | PASS | Production preview checked at 1280 x 720 and 390 x 844 on `127.0.0.1:4190`. Exactly one H1, no page-level horizontal overflow, readable title, thesis, summary and thumbnail message, and no console warnings or errors. Wide tables stay inside their horizontal scroll surface. | Keep the local preview available for review. |
 | Targeted tests | PASS | Article test: 3/3. Full suite: 178/178. `npm run check`: 0 errors and 0 warnings. `npm run build`: PASS. Dossier validation and eight-word overlap check: PASS. | Re-run after the commit hook and final handoff update. |
-| Release scope | PASS FOR DRAFT ONLY | One draft article, one regression test, one dossier, two images and generated image metadata are in scope. | Keep the PR in Draft state and do not merge. |
+| Release scope | PASS FOR DRAFT ONLY | One draft article, one regression test, one dossier, two images and generated image metadata are in scope. Draft PR #36 is open, mergeable and not published. | Wait for the final remote checks; keep the PR in Draft state and do not merge. |
 
 ## Known baseline failures
 
@@ -19,5 +19,5 @@
 
 ## Final boundary
 
-- Draft readiness: PASS before commit. Local tests, production build and rendered preview passed; repeat the checks after the commit hook and final handoff update.
+- Draft readiness: PASS locally after commit. Tests, production build and rendered preview passed; final remote checks remain pending after the handoff snapshot.
 - Publication readiness: NOT APPROVED. The article remains `draft: true`; volatile claims need a fresh check before any later publication decision.

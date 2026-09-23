@@ -3,14 +3,14 @@
   "slug": "gpt-6-sol-luna-vergleich",
   "title": "GPT-6 Sol oder Luna: Welches Modell spart dir wirklich Geld?",
   "created_at": "2026-09-23T16:25:21Z",
-  "updated_at": "2026-09-23T16:43:00Z",
+  "updated_at": "2026-09-23T16:46:00Z",
   "phase": "qa",
   "status": "active",
   "publication_status": "draft",
   "source_completeness": "partial",
   "visual_style_status": "approved",
-  "current_step": "Commit the locally verified draft",
-  "next_step": "Repeat gates after the commit hook, then create a Draft PR",
+  "current_step": "Draft PR #36 created and local production preview verified",
+  "next_step": "Push final handoff snapshot, verify remote checks, link issue #34 and remove research-needed",
   "blockers": [],
   "approvals": {
     "article_scope": {
@@ -35,5 +35,5 @@
       "decided_at": null
     }
   },
-  "last_verified_at": "2026-09-23T16:43:00Z"
+  "last_verified_at": "2026-09-23T16:46:00Z"
 }
