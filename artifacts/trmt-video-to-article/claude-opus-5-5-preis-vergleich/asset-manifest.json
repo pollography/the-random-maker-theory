@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "project_slug": "claude-opus-5-5-preis-vergleich",
+  "assets": [
+    {
+      "id": "ASSET-001",
+      "role": "hero",
+      "path": "static/images/blog/claude-opus-5-5-preis-vergleich-1.webp",
+      "status": "final",
+      "prompt_or_capture_source": "visual-brief.md generation prompt plus deterministic Inter text layer",
+      "reference_images": [],
+      "one_second_sentence": "After one second, the reader understands that Claude Opus 5.5 aims to complete more demanding coding work for less money than Opus 5.",
+      "dimensions": {"width": 1600, "height": 900},
+      "alt_text": "Eine handgefertigte Waage stellt wenige Münzen einem großen Stapel erledigter Coding-Aufgaben gegenüber.",
+      "creator": "just.pollo",
+      "license": "Original AI-assisted TRMT editorial asset created for this article; no third-party logo or source image used."
+    },
+    {
+      "id": "ASSET-002",
+      "role": "thumbnail",
+      "path": "static/images/blog/claude-opus-5-5-preis-vergleich-1-thumb.webp",
+      "status": "final",
+      "prompt_or_capture_source": "Exact 400 x 225 derivative of ASSET-001",
+      "reference_images": [],
+      "one_second_sentence": "After one second, the reader understands that Claude Opus 5.5 aims to complete more demanding coding work for less money than Opus 5.",
+      "dimensions": {"width": 400, "height": 225},
+      "alt_text": "Claude Opus 5.5: stärker beim Coden und günstiger als Opus 5.",
+      "creator": "just.pollo",
+      "license": "Original AI-assisted TRMT editorial asset created for this article; no third-party logo or source image used."
+    }
+  ]
+}
+
