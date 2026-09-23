@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "slug": "claude-opus-5-5-preis-vergleich",
+  "title": "Claude Opus 5.5 ist da: Mehr Coding-Leistung, weniger Kosten als Opus 5",
+  "created_at": "2026-09-23T05:25:36Z",
+  "updated_at": "2026-09-23T05:55:02Z",
+  "phase": "qa",
+  "status": "active",
+  "publication_status": "draft",
+  "source_completeness": "partial",
+  "visual_style_status": "approved",
+  "current_step": "Draft PR #35 created and initial remote checks passed",
+  "next_step": "Push the final handoff snapshot, verify checks, link issue #33 and remove research-needed",
+  "blockers": [],
+  "approvals": {
+    "article_scope": {
+      "status": "approved",
+      "scope": ["src/content/blog/claude-opus-5-5-preis-vergleich.md"],
+      "evidence": "Recurring automation authorizes one independently researched draft article for the oldest qualifying radar issue.",
+      "decided_at": "2026-09-23T05:16:55Z"
+    },
+    "visual_direction": {
+      "status": "approved",
+      "scope": [
+        "static/images/blog/claude-opus-5-5-preis-vergleich-1.webp",
+        "static/images/blog/claude-opus-5-5-preis-vergleich-1-thumb.webp"
+      ],
+      "evidence": "Recurring automation requires the current pollo-blog Image-QA gate and simplified standard-thumbnail route; the reusable TRMT Crafted Editorial system is already approved.",
+      "decided_at": "2026-09-23T05:16:55Z"
+    },
+    "publication": {
+      "status": "pending",
+      "scope": [],
+      "evidence": null,
+      "decided_at": null
+    }
+  },
+  "last_verified_at": "2026-09-23T05:55:02Z"
+}

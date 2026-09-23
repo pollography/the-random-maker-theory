@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "project_slug": "claude-opus-5-5-preis-vergleich",
+  "source_completeness": "partial",
+  "sources": [
+    {
+      "id": "SRC-001",
+      "type": "video",
+      "locator": "https://www.youtube.com/watch?v=ijPsFZ1EHlI",
+      "status": "partial",
+      "sha256": null,
+      "duration_seconds": 385,
+      "page_count": null,
+      "paired_source_ids": ["SRC-002", "SRC-003"],
+      "notes": "Private topic radar only. Direct video stream returned HTTP 403; no public claim relies on it."
+    },
+    {
+      "id": "SRC-002",
+      "type": "transcript",
+      "locator": "D:/AI_Workspaces/Claude_Code/_watch/issue-33-opus-5-5/download/video.en-orig.vtt",
+      "status": "extracted",
+      "sha256": "B531B0DD8F15B0A88F6A88145AB74CFA271B762E0BEA8CB2E3F80A8CBD1F2189",
+      "duration_seconds": 385,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001", "SRC-003"],
+      "notes": "Complete native English captions. Used only to identify claims requiring independent verification."
+    },
+    {
+      "id": "SRC-003",
+      "type": "image",
+      "locator": "D:/AI_Workspaces/Claude_Code/_watch/issue-33-storyboards/storyboard.mhtml",
+      "status": "extracted",
+      "sha256": "5DBE67EA55DD8F2FC4262A008BC32338F2FE7C265A2BC62073F7BC6BB4AC653E",
+      "duration_seconds": 385,
+      "page_count": null,
+      "paired_source_ids": ["SRC-001", "SRC-002"],
+      "notes": "Nine official 320 x 180 storyboard sheets with 79 timeline samples inspected. They show the official Anthropic release page, benchmark charts, communication examples, safeguards and availability sections."
+    },
+    {
+      "id": "SRC-004",
+      "type": "url",
+      "locator": "https://www.anthropic.com/claude-opus-5-5",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Primary source checked 2026-09-23 for release date, prices, typical-workload estimate, availability, communication, safeguards and benchmark caveats."
+    },
+    {
+      "id": "SRC-005",
+      "type": "url",
+      "locator": "https://www.anthropic.com/claude/fable",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Primary source checked 2026-09-23 for Fable 5.1 purpose and API prices."
+    },
+    {
+      "id": "SRC-006",
+      "type": "url",
+      "locator": "https://openai.com/index/gpt-6-astra/",
+      "status": "extracted",
+      "sha256": null,
+      "duration_seconds": null,
+      "page_count": null,
+      "paired_source_ids": [],
+      "notes": "Primary source checked 2026-09-23 for Astra purpose, API prices and benchmark figures."
+    }
+  ],
+  "pairings": [
+    {
+      "source_ids": ["SRC-001", "SRC-002", "SRC-003"],
+      "reason": "Topic-radar video, complete captions and complete official storyboard coverage belong to the same six-minute release overview."
+    }
+  ],
+  "missing_or_unavailable": [
+    "The direct YouTube video stream returned HTTP 403. Complete captions plus 79 official storyboard samples cover the spoken and visible topic radar; all public facts were independently checked against primary sources."
+  ]
+}
+

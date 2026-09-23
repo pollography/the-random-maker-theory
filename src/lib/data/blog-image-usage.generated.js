@@ -186,6 +186,9 @@ export const blogImageUsage = {
 	"claude-fable-5-1-text-wasserzeichen": [
 		"/images/blog/claude-fable-5-1-text-wasserzeichen-1.webp"
 	],
+	"claude-opus-5-5-preis-vergleich": [
+		"/images/blog/claude-opus-5-5-preis-vergleich-1.webp"
+	],
 	"ein-foto-vier-slash-befehle-ki-bilder": [
 		"/images/blog/ein-foto-vier-slash-befehle-ki-bilder-1.webp",
 		"/images/blog/ein-foto-vier-slash-befehle-ki-bilder-ausgangsbild.webp",

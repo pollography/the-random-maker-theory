@@ -998,6 +998,36 @@ export const imageMetadata = {
 			}
 		]
 	},
+	"/images/blog/claude-opus-5-5-preis-vergleich-1-thumb.webp": {
+		"width": 400,
+		"height": 225,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/claude-opus-5-5-preis-vergleich-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/claude-opus-5-5-preis-vergleich-1.webp",
+				"width": 1600
+			}
+		]
+	},
+	"/images/blog/claude-opus-5-5-preis-vergleich-1.webp": {
+		"width": 1600,
+		"height": 900,
+		"format": "webp",
+		"variants": [
+			{
+				"src": "/images/blog/claude-opus-5-5-preis-vergleich-1-thumb.webp",
+				"width": 400
+			},
+			{
+				"src": "/images/blog/claude-opus-5-5-preis-vergleich-1.webp",
+				"width": 1600
+			}
+		]
+	},
 	"/images/blog/ein-foto-vier-slash-befehle-ki-bilder-1-thumb.webp": {
 		"width": 400,
 		"height": 225,
