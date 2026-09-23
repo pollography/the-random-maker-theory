@@ -3,14 +3,14 @@
   "slug": "claude-opus-5-5-preis-vergleich",
   "title": "Claude Opus 5.5 ist da: Mehr Coding-Leistung, weniger Kosten als Opus 5",
   "created_at": "2026-09-23T05:25:36Z",
-  "updated_at": "2026-09-23T05:49:50Z",
+  "updated_at": "2026-09-23T05:55:02Z",
   "phase": "qa",
   "status": "active",
   "publication_status": "draft",
   "source_completeness": "partial",
   "visual_style_status": "approved",
-  "current_step": "Local QA passed; prepare the isolated Draft PR",
-  "next_step": "Commit, repeat verification, create the Draft PR and verify remote checks",
+  "current_step": "Draft PR #35 created and initial remote checks passed",
+  "next_step": "Push the final handoff snapshot, verify checks, link issue #33 and remove research-needed",
   "blockers": [],
   "approvals": {
     "article_scope": {
@@ -35,5 +35,5 @@
       "decided_at": null
     }
   },
-  "last_verified_at": "2026-09-23T05:49:50Z"
+  "last_verified_at": "2026-09-23T05:55:02Z"
 }

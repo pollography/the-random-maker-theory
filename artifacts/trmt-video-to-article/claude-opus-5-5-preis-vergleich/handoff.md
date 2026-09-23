@@ -1,6 +1,6 @@
 # Claude Opus 5.5 ist da: Mehr Coding-Leistung, weniger Kosten als Opus 5 — Handoff
 
-Updated: 2026-09-23T05:49:50Z
+Updated: 2026-09-23T05:55:02Z
 
 ## Verified now
 
@@ -10,6 +10,7 @@ Updated: 2026-09-23T05:49:50Z
 - Native 16:9 hero and true 400 x 225 thumbnail passed the current TRMT image gate and blind-read at thumbnail size.
 - Local production preview passed at desktop and 390-pixel mobile widths with no page overflow or console errors.
 - Targeted article tests, full suite, Svelte check, production build and dossier validation passed before commit.
+- Draft PR #35 is open, mergeable and intentionally still marked as a draft. Its initial Vercel and preview-comment checks passed.
 
 ## Exact working paths and URLs
 
@@ -18,7 +19,7 @@ Updated: 2026-09-23T05:49:50Z
 - Branch: `codex/chase-radar-issue-33-opus-5-5`
 - Article: `src/content/blog/claude-opus-5-5-preis-vergleich.md`
 - Preview: `http://127.0.0.1:4189/preview/claude-opus-5-5-preis-vergleich`
-- Draft PR: pending creation after the final local commit gate.
+- Draft PR: `https://github.com/pollography/the-random-maker-theory/pull/35`
 
 ## Completed changes
 
@@ -31,7 +32,7 @@ Updated: 2026-09-23T05:49:50Z
 
 - Direct video-stream retrieval returned HTTP 403. Captions and official storyboard sheets were complete enough for topic-radar analysis; this remains explicitly recorded as a partial source boundary.
 - Publication is not approved. The article remains a private draft and volatile claims need a new check before publishing.
-- Draft PR and remote checks are still pending at this handoff snapshot.
+- The final dossier-only handoff commit still needs to be pushed and its remote checks read back before the issue label may be changed.
 
 ## Recorded approvals
 
@@ -41,4 +42,4 @@ Updated: 2026-09-23T05:49:50Z
 
 ## Next safe action
 
-Commit the exact draft scope, repeat all checks after the commit hook, create a Draft PR, wait for remote checks, then link the issue and remove `research-needed` only after the verified PR exists.
+Push this final handoff snapshot, read back successful remote checks, then link issue #33 and remove `research-needed`. Keep the local production preview running for review.
